@@ -1,0 +1,1798 @@
+on_actions = {
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						tag = GRE
+					}
+				}
+				GRE = {
+					load_oob = "GRE_ELWOLF_SPAWN"
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						tag = YUG
+					}
+				}
+				YUG = {
+					load_oob = "YUG_ELWOLF_SPAWN"
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						tag = CHI
+					}
+				}
+				CHI = {
+					load_oob = "CHI_ELWOLF_SPAWN"
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						tag = POL
+					}
+				}
+				every_country = {
+					every_army_leader = {
+						remove_unit_leader_trait = no_grind
+					}
+				}
+				POL = {
+					load_oob = "POL_ELWOLF_SPAWN"
+				}
+				ENG = {
+					add_to_faction = POL
+					country_event = {
+						id = britain.24
+						days = 1
+					}
+				}
+			}
+			#if = {
+			#	limit = {
+			#		tag = SOV
+			#	}
+			#	GER = {
+			#		every_unit_leader = {
+			#			limit = {
+			#				is_character = GER_fedor_von_bock
+			#			}
+			#			add_unit_leader_trait = adaptable
+			#		}
+			#	}
+			#}
+			if = {
+				limit = {
+					FROM = {
+						tag = HOL
+					}
+				}
+				ENG = {
+					add_to_faction = HOL
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						tag = BEL
+					}
+				}
+				ENG = {
+					add_to_faction = BEL
+				}
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					GER = {
+						has_war = no
+					}
+				}
+				every_country = {
+					every_army_leader = {
+						limit = {
+							NOT = { 
+								has_trait = no_grind
+							}
+						}
+						add_unit_leader_trait = no_grind
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = CAN
+						tag = USA
+						tag = MEX
+						tag = BRA
+						tag = ENG
+						tag = FRA
+						tag = NOR
+						tag = SAF
+						tag = RAJ
+						tag = AST
+						tag = NZL
+						tag = IRE
+						tag = SOV
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
+					}
+					add_operation_token = {
+						tag = ENG
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = ENG
+						token = team_army
+					}
+					add_operation_token = {
+						tag = ENG
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = ENG
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = USA
+						}
+					}
+					add_operation_token = {
+						tag = USA
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = USA
+						token = team_army
+					}
+					add_operation_token = {
+						tag = USA
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = USA
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = FRA
+						}
+					}
+					add_operation_token = {
+						tag = FRA
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = FRA
+						token = team_army
+					}
+					add_operation_token = {
+						tag = FRA
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = FRA
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = NOR
+						}
+					}
+					add_operation_token = {
+						tag = NOR
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = NOR
+						token = team_army
+					}
+					add_operation_token = {
+						tag = NOR
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = NOR
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = SOV
+						}
+					}
+					add_operation_token = {
+						tag = SOV
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = SOV
+						token = team_army
+					}
+					add_operation_token = {
+						tag = SOV
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = SOV
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = CAN
+						}
+					}
+					add_operation_token = {
+						tag = CAN
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = CAN
+						token = team_army
+					}
+					add_operation_token = {
+						tag = CAN
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = CAN
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = MEX
+						}
+					}
+					add_operation_token = {
+						tag = MEX
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = MEX
+						token = team_army
+					}
+					add_operation_token = {
+						tag = MEX
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = MEX
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = BRA
+						}
+					}
+					add_operation_token = {
+						tag = BRA
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = BRA
+						token = team_army
+					}
+					add_operation_token = {
+						tag = BRA
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = BRA
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = SAF
+						}
+					}
+					add_operation_token = {
+						tag = SAF
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = SAF
+						token = team_army
+					}
+					add_operation_token = {
+						tag = SAF
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = SAF
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = RAJ
+						}
+					}
+					add_operation_token = {
+						tag = RAJ
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = RAJ
+						token = team_army
+					}
+					add_operation_token = {
+						tag = RAJ
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = RAJ
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = IRE
+						}
+					}
+					add_operation_token = {
+						tag = IRE
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = IRE
+						token = team_army
+					}
+					add_operation_token = {
+						tag = IRE
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = IRE
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = AST
+						}
+					}
+					add_operation_token = {
+						tag = AST
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = AST
+						token = team_army
+					}
+					add_operation_token = {
+						tag = AST
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = AST
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = NZL
+						}
+					}
+					add_operation_token = {
+						tag = NZL
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = NZL
+						token = team_army
+					}
+					add_operation_token = {
+						tag = NZL
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = NZL
+						token = team_airforce
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						AND = {
+							has_tech = mobile_warfare
+							has_tech = superior_firepower
+						}
+						AND = {
+							has_tech = mobile_warfare
+							has_tech = trench_warfare
+						}
+						AND = {
+							has_tech = mobile_warfare
+							has_tech = mass_assault
+						}
+						AND = {
+							has_tech = trench_warfare
+							has_tech = mass_assault
+						}
+						AND = {
+							has_tech = trench_warfare
+							has_tech = superior_firepower
+						}
+						AND = {
+							has_tech = superior_firepower
+							has_tech = mass_assault
+						}
+					}
+				}
+				set_technology = {
+					mobile_warfare = 0
+					superior_firepower = 0
+					trench_warfare = 0
+					mass_assault = 0
+				}
+			}
+			every_country = {
+				limit = {
+					is_playable_country = yes
+					NOT = {
+						OR = {
+							OR = {
+								has_war = yes
+								has_idea = peace_training
+							}
+							AND = {
+								tag = SPR
+								GER = {
+									has_war = yes
+								}
+							}
+						}
+					}
+				}
+				add_ideas = peace_training
+			}
+			SWE = {
+				country_event = {
+					id = elwolfmod.1
+				}
+			}
+		}
+	}
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = free_collabs
+						option = on
+					}
+				}
+				elwolfmod_capitulations_on_actions_collab = yes
+			}
+			elwolfmod_capitulations_on_actions = yes
+		}
+	}
+	on_startup = {
+		effect = {
+			every_country = {
+				every_army_leader = {
+					limit = {
+						NOT = { 
+							has_trait = no_grind
+						}
+					}
+					add_unit_leader_trait = no_grind
+				}
+			}
+			ENG = {
+				remove_resource_rights = 676
+				remove_resource_rights = 291
+			}
+			405 = {
+				add_resource = {
+					type = tungsten
+					amount = 112
+				}
+			}
+			790 = {
+				add_resource = {
+					type = tungsten
+					amount = 200
+				}
+			}
+			every_country = {
+				limit = {
+					is_limited_country = yes
+				}
+				add_ideas = ai_limiter
+			}
+			every_country = {
+				limit = {
+					has_idea = MTG_naval_treaty_adherent
+				}
+				remove_ideas = MTG_naval_treaty_adherent
+			}
+			every_country = {
+				limit = {
+					AND = {
+						is_playable_country = yes
+						NOT = {
+							original_tag = SPR
+							original_tag = FIN
+						}
+					}
+				}
+				add_ideas = elwolfmod_novols
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = GER
+						tag = ITA
+						tag = JAP
+						tag = BUL
+						tag = HUN
+						tag = ROM
+						tag = FIN
+						tag = MAN
+						tag = SIA
+						tag = SPR
+						tag = AUS
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = GER
+						}
+					}
+					add_operation_token = {
+						tag = GER
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = GER
+						token = team_army
+					}
+					add_operation_token = {
+						tag = GER
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = GER
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = ITA
+						}
+					}
+					add_operation_token = {
+						tag = ITA
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = ITA
+						token = team_army
+					}
+					add_operation_token = {
+						tag = ITA
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = ITA
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = BUL
+						}
+					}
+					add_operation_token = {
+						tag = BUL
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = BUL
+						token = team_army
+					}
+					add_operation_token = {
+						tag = BUL
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = BUL
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = ROM
+						}
+					}
+					add_operation_token = {
+						tag = ROM
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = ROM
+						token = team_army
+					}
+					add_operation_token = {
+						tag = ROM
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = ROM
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = HUN
+						}
+					}
+					add_operation_token = {
+						tag = HUN
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = HUN
+						token = team_army
+					}
+					add_operation_token = {
+						tag = HUN
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = HUN
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = SIA
+						}
+					}
+					add_operation_token = {
+						tag = SIA
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = SIA
+						token = team_army
+					}
+					add_operation_token = {
+						tag = SIA
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = SIA
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = JAP
+						}
+					}
+					add_operation_token = {
+						tag = JAP
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = JAP
+						token = team_army
+					}
+					add_operation_token = {
+						tag = JAP
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = JAP
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = MAN
+						}
+					}
+					add_operation_token = {
+						tag = MAN
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = MAN
+						token = team_army
+					}
+					add_operation_token = {
+						tag = MAN
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = MAN
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = SPR
+						}
+					}
+					add_operation_token = {
+						tag = SPR
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = SPR
+						token = team_army
+					}
+					add_operation_token = {
+						tag = SPR
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = SPR
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = FIN
+						}
+					}
+					add_operation_token = {
+						tag = FIN
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = FIN
+						token = team_army
+					}
+					add_operation_token = {
+						tag = FIN
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = FIN
+						token = team_airforce
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							tag = AUS
+						}
+					}
+					add_operation_token = {
+						tag = AUS
+						token = team_civilian
+					}
+					add_operation_token = {
+						tag = AUS
+						token = team_army
+					}
+					add_operation_token = {
+						tag = AUS
+						token = team_navy
+					}
+					add_operation_token = {
+						tag = AUS
+						token = team_airforce
+					}
+				}
+			}
+			# German boost
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = ger_boost
+						option = twelve
+					}
+				}
+				GER = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 12
+					}
+					# from ai trade in vanilla
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = ger_boost
+						option = eight
+					}
+				}
+				GER = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 8
+					}
+					# from ai trade in vanilla
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = ger_boost
+						option = four
+					}
+				}
+				GER = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 4
+					}
+					# from ai trade in vanilla
+				}
+			}
+			# Soviet boost
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = sov_boost
+						option = sixteen
+					}
+				}
+				SOV = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 16
+					}
+					# from ai trade in vanilla
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = sov_boost
+						option = twelve
+					}
+				}
+				SOV = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 12
+					}
+					# from ai trade in vanilla
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = sov_boost
+						option = eight
+					}
+				}
+				SOV = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 8
+					}
+					# from ai trade in vanilla
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = sov_boost
+						option = four
+					}
+				}
+				SOV = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 4
+					}
+					# from ai trade in vanilla
+				}
+			}
+			# Greece dockyards
+			47 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			768 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			769 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			#When adding the extra civs that these minors would go from focus u remove the building slots so have to add them
+			812 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 9
+					instant_build = yes
+				}
+				# add_building_construction = {
+				# 	type = arms_factory
+				# 	level = 3
+				# 	instant_build = yes
+				# }
+				add_extra_state_shared_building_slots = 9
+			}
+			808 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 6
+			}
+			# 11 = {
+			# 	add_building_construction = {
+			# 		type = industrial_complex
+			# 		level = 4
+			# 		instant_build = yes
+			# 	}
+			# 	add_building_construction = {
+			# 		type = arms_factory
+			# 		level = 3
+			# 		instant_build = yes
+			# 	}
+			# 	add_extra_state_shared_building_slots = 7
+			# }
+			107 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 7
+			}
+			47 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 7
+			}
+			605 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 7
+			}
+			7 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 7
+			}
+			6 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 7
+			}
+			8 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 7
+			}
+			4 = {
+				add_extra_state_shared_building_slots = 7
+			}
+			9 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 7
+			}
+			37 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 7
+			}
+			44 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 7
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = japan_closed_eco
+						option = on
+					}
+				}
+				JAP = {
+					add_ideas = SOV_collectivized_society
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = sov_closed_eco
+						option = on
+					}
+				}
+				SOV = {
+					add_ideas = SOV_collectivized_society
+				}
+				561 = {
+					add_extra_state_shared_building_slots = 5
+					add_building_construction = {
+						type = industrial_complex
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = germany_research_slot
+						option = on
+					}
+				}
+				GER = {
+					add_research_slot = 1
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = tradebacks
+						option = on
+					}
+				}
+				every_country = {
+					limit = {
+						is_playable_country = yes
+					}
+					add_ideas = no_tradebacks
+				}
+			}
+			every_country = {
+				limit = {
+					is_playable_country = no
+				}
+				add_ideas = artificial_intelligence
+			}
+			every_country = {
+				limit = {
+					is_playable_country = yes
+				}
+				set_country_flag = BOSPHORUS_STRAIT_BLOCKED_FOR_COUNTRY
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = tradebacks
+						option = not_allies
+					}
+				}
+				every_country = {
+					limit = {
+						AND = {
+							is_playable_country = yes
+							NOT = {
+								tag = USA
+								tag = ENG
+								tag = CAN
+								tag = BRA
+								tag = MEX
+								tag = IRE
+								tag = SAF
+								tag = AST
+								tag = NZL
+								tag = RAJ
+								tag = NOR
+								tag = FRA
+							}
+						}
+					}
+					add_ideas = no_tradebacks
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = sov_no_tradebacks
+						option = on
+					}
+				}
+				SWE = {
+					set_variable = {
+						var = sov_no_tradebacks_icon_value
+						value = 1
+					}
+				}
+				SOV = {
+					add_ideas = sov_no_tradebacks
+				}
+			}
+			if = {
+				limit = {
+					361 = {
+						is_owned_and_controlled_by = WST
+					}
+				}
+				ENG = {
+					add_state_core = 118
+					add_ideas = {
+						elwolfmod_noasia_research
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 8000
+					}
+					add_research_slot = 1
+					126 = {
+						add_building_construction = {
+							type = industrial_complex
+							level = 20
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = arms_factory
+							level = 10
+							instant_build = yes
+						}
+						add_extra_state_shared_building_slots = 30
+					}
+				}
+				WST = {
+					give_resource_rights = {
+						receiver = FRA
+						state = 635
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 375
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 376
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 378
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 391
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 336
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 672
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 379
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 380
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 387
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 382
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 371
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 372
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 373
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 383
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 366
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 373
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 388
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 389
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 368
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 394
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 393
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 261
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 360
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 358
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 357
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 374
+					}
+				}
+				649 = {
+					add_building_construction = {
+						type = naval_base
+						level = 10
+						province = 5023
+						instant_build = yes
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					is_playable_country = yes
+				}
+				add_ideas = {
+					peace_training
+				}
+			}
+			WST = {
+				add_ideas = {
+					ai_limiter
+				}
+			}
+			if = {
+				limit = {
+					limit = {
+						has_game_rule = {
+							rule = sov_boost
+							option = zero
+						}
+					}
+				}
+				SOV = { 
+					country_event = {
+						id = mexico.21 # Mexico returns trotsky
+						days = 396 # Feb 37
+					}
+				}
+			}
+			##### Turning King Edward's abdication into an on_startup event instead of MTTH to help performance####
+			ENG = {
+				country_event = {
+					id = britain.16
+					days = 20
+				}
+				country_event = {
+					id = mtg_britain.1
+					days = 190
+				}
+				country_event = {
+					id = britain.22
+					days = 513
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 12200
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 9600
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 259
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 100
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 180
+					producer = ENG
+					variant_name = "Light Tank Mk. VI"
+				}
+				add_equipment_to_stockpile = {
+					type = train_equipment
+					amount = 300
+				}
+				country_event = {
+					id = DOD_yugoslavia.20
+					days = 912
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = allied_engine_bonus
+							option = on
+						}
+					}
+					add_tech_bonus = {
+						name = elwolf_allied_engine_bonus_name
+						bonus = 1.0
+						uses = 1
+						technology = engines_4
+					}
+				}
+			}
+			GER = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 24900
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 891
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 607
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 349
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_2
+					amount = 720
+					producer = GER
+					variant_name = "Panzer II Ausf. A"
+				}
+				add_equipment_to_stockpile = {
+					type = train_equipment
+					amount = 300
+				}
+				country_event = {
+					id = DOD_yugoslavia.20
+					days = 912
+				}
+			}
+			FRA = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 14400
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 31300
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 766
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 2500
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 217
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_0
+					amount = 480
+					producer = FRA
+					variant_name = "FT mod. 31"
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_0
+					amount = 240
+					producer = FRA
+					variant_name = "FT Char Cannon"
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 480
+					producer = FRA
+					variant_name = "H-35"
+				}
+				add_equipment_to_stockpile = {
+					type = train_equipment
+					amount = 100
+				}
+				country_event = {
+					id = DOD_yugoslavia.20
+					days = 912
+				}
+			}
+			JAP = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 7700
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 31700
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 801
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 880
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 25
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 180
+					producer = JAP
+					variant_name = "Type 95 Ha-Go"
+				}
+			}
+			USA = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 11100
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 344
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 106
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = allied_engine_bonus
+							option = on
+						}
+					}
+					add_tech_bonus = {
+						name = elwolf_allied_engine_bonus_name
+						bonus = 1.0
+						uses = 1
+						technology = engines_4
+					}
+				}
+			}
+			HUN = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 4700
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 11
+				}
+			}
+			ROM = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 9600
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 303
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 70
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 87
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_0
+					amount = 72
+					producer = ROM
+					variant_name = "FT Char Cannon"
+				}
+			}
+			ITA = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 4900
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 20500
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 819
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 212
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 60
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 180
+					producer = ITA
+					variant_name = "L3/35"
+				}
+				country_event = {
+					id = DOD_yugoslavia.20
+					days = 912
+				}
+			}
+			SOV = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 16200
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 61700
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 443
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 1600
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 814
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 1300
+					producer = SOV
+					variant_name = "T-26TU mod. 1933"
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 1000
+					producer = SOV
+					variant_name = "BT-5"
+				}
+				add_equipment_to_stockpile = {
+					type = train_equipment
+					amount = 300
+				}
+			}
+			BUL = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 3138
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 42
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 90
+				}
+			}
+			SIA = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 1800
+				}
+			}
+			MAN = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 3900
+				}
+			}
+			BRA = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 2900
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 75
+				}
+			}
+			MEX = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 5605
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 900
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 55
+				}
+			}
+			IRE = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 276
+				}
+			}
+			CAN = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 2700
+				}
+			}
+			RAJ = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 3600
+				}
+			}
+			AST = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 2300
+				}
+			}
+			NZL = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 700
+				}
+			}
+			SAF = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 815
+				}
+			}
+			FIN = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 2571
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 156
+				}
+			}
+		}
+	}
+}

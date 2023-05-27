@@ -1,0 +1,190 @@
+guiTypes = {
+	containerWindowType = {
+			name = "topbar_resource_toogle_window"
+			
+		buttonType ={
+			name ="toogle_button"
+			#spriteType = "GFX_generic_text_bg_203"
+			spriteType = "GFX_division_designer_button"
+			#spriteType = "GFX_button_transparent"
+			buttonFont = "hoi_18mbs"
+			buttonText = "Topbar Resources"
+			#frame=0
+			#quadTextureSprite = "GFX_military_deployment_add_line_btn"
+			position = { x=270 y=12}
+			Orientation = "UPPER_LEFT"
+			#alwaystransparent = yes
+		}
+	}
+	
+	containerWindowType = {
+		name = "aluminum"
+		position = { x= 970 y = 5}
+		clipping = no
+		size = { width=56 height=30 }
+		Orientation = UPPER_LEFT
+		
+		background = {
+			name = "bg"
+			quadTextureSprite ="GFX_mini_tooltip"
+		}
+
+		iconType = {
+			name = "aluminium_icon"
+			position = { x=2 y=4 }
+			spriteType = "GFX_resources_strip"
+			frame = 2
+			scale=0.8
+			alwaystransparent=yes
+		}		
+		
+		instantTextBoxType = {
+			name ="aluminium_value"
+			position = { x= 24 y = 5 }
+			font = "hoi_18mbs"
+			text = [aluminium_text]
+			format = left
+			maxWidth = 40
+			maxHeight = 24
+			fixedsize = yes
+		}
+	}
+	
+	containerWindowType = {
+		name = "rubber"
+		position = { x= 1028 y = 5}
+		clipping = no
+		size = { width=56 height=30 }
+		Orientation = UPPER_LEFT
+		
+		background = {
+			name = "bg"
+			quadTextureSprite ="GFX_mini_tooltip"
+		}
+
+		iconType = {
+			name = "rubber_icon"
+			position = { x=2 y=4 }
+			spriteType = "GFX_resources_strip"
+			frame = 3
+			scale=0.8
+			alwaystransparent=yes
+		}		
+		
+		instantTextBoxType = {
+			name ="rubber_value"
+			position = { x= 24 y = 5 }
+			font = "hoi_18mbs"
+			text = [rubber_text]
+			format = left
+			maxWidth = 40
+			maxHeight = 24
+			fixedsize = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "tungsten"
+		position = { x= 1086 y = 5}
+		clipping = no
+		size = { width=56 height=30 }
+		Orientation = UPPER_LEFT
+		
+		background = {
+			name = "bg"
+			quadTextureSprite ="GFX_mini_tooltip"
+		}
+
+		iconType = {
+			name = "tungsten_icon"
+			position = { x=2 y=4 }
+			spriteType = "GFX_resources_strip"
+			frame = 4
+			scale=0.8
+			alwaystransparent=yes
+		}		
+		
+		instantTextBoxType = {
+			name ="tungsten_value"
+			position = { x= 24 y = 5 }
+			font = "hoi_18mbs"
+			text = [tungsten_text]
+			format = left
+			maxWidth = 40
+			maxHeight = 24
+			fixedsize = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "steel"
+		position = { x= 1144 y = 5}
+		clipping = no
+		size = { width=56 height=30 }
+		Orientation = UPPER_LEFT
+		
+		background = {
+			name = "bg"
+			quadTextureSprite ="GFX_mini_tooltip"
+		}
+
+		iconType = {
+			name = "steel_icon"
+			position = { x=2 y=4 }
+			spriteType = "GFX_resources_strip"
+			frame = 5
+			scale=0.8
+			alwaystransparent=yes
+		}		
+		
+		instantTextBoxType = {
+			name ="steel_value"
+			position = { x= 24 y = 5 }
+			font = "hoi_18mbs"
+			text = [steel_text]
+			format = left
+			maxWidth = 40
+			maxHeight = 24
+			fixedsize = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "chromium"
+		position = { x= 1202 y = 5}
+		clipping = no
+		size = { width=56 height=30 }
+		Orientation = UPPER_LEFT
+		
+		background = {
+			name = "bg"
+			quadTextureSprite ="GFX_mini_tooltip"
+		}
+
+		iconType = {
+			name = "chromium_icon"
+			position = { x=2 y=4 }
+			spriteType = "GFX_resources_strip"
+			frame = 6
+			scale=0.8
+			alwaystransparent=yes
+		}		
+		
+		instantTextBoxType = {
+			name ="chromium_value"
+			position = { x= 24 y = 5 }
+			font = "hoi_18mbs"
+			text = [chromium_text]
+			format = left
+			maxWidth = 40
+			maxHeight = 24
+			fixedsize = yes
+		}
+	}
+
+}
+
+	
+	
+	
+

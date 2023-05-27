@@ -1,0 +1,238 @@
+sov_no_tradebacks = {
+	name = "Soviets No Tradeback"
+	group = "elwolfmod Rules"
+	icon = "GFX_decision_SOV_socialism_in_one_country"
+	default = {
+		name = off
+		text = "GOff"
+		desc = "No soviet exclusive no-tradeback spirit (Reccomended)"
+	}
+	option = {
+		name = on
+		text = "ROn"
+		desc = "Soviets get their own no-tradeback spirit (no factory resource penalty) until war with Germany (Not Reccomended)"
+	}
+}
+
+sov_boost = {
+	name = "Soviet Factory Boost"
+	group = "elwolfmod Rules"
+	icon = "GFX_decision_SOV_socialism_in_one_country"
+	option = {
+		name = sixteen
+		text = "R16"
+		desc = "16 Civ boost (Not Reccomended)"
+	}
+	option = {
+		name = twelve
+		text = "R12"
+		desc = "12 Civ boost (Not Reccomended)"
+	}
+	option = {
+		name = eight
+		text = "R8"
+		desc = "8 Civ boost (Not Reccomended)"
+	}
+	option = {
+		name = four
+		text = "R4"
+		desc = "4 Civ boost (Not Reccomended)"
+	}
+	default = {
+		name = zero
+		text = "G0"
+		desc = "0 Civ boost (Reccomended)"
+	}
+}
+
+sov_closed_eco = {
+	name = "Soviets Closed Eco"
+	group = "elwolfmod Rules"
+	icon = "GFX_decision_SOV_socialism_in_one_country"
+	default = {
+		name = off
+		text = "GOff"
+		desc = "Soviets start on export focus (Reccomended)"
+	}
+	option = {
+		name = on
+		text = "ROn"
+		desc = "Soviets start the game on closed eco, free trade bonuses, and 5 extra civs (Not Reccomended)"
+	}
+}
+
+allied_engine_bonus = {
+	name = "Allied Engine Bonus"
+	group = "elwolfmod Rules"
+	icon = "GFX_decision_hol_war_on_pacifism"
+	option = {
+		name = off
+		text = "ROff"
+		desc = "No Allied engine bonus (Not Reccomended)"
+	}
+	default = {
+		name = on
+		text = "GOn"
+		desc = "USA and UK and get a 100% research boost to engine 4 (Reccomended)"
+	}
+}
+
+ger_boost = {
+	name = "German Factory Boost"
+	group = "elwolfmod Rules"
+	icon = "GFX_decision_generic_army_support"
+	option = {
+		name = twelve
+		text = "R12"
+		desc = "12 Civ boost (Not Reccomended)"
+	}
+	option = {
+		name = eight
+		text = "R8"
+		desc = "8 Civ boost (Not Reccomended)"
+	}
+	option = {
+		name = four
+		text = "R4"
+		desc = "4 Civ boost (Not Reccomended)"
+	}
+	default = {
+		name = zero
+		text = "G0"
+		desc = "0 Civ boost (Reccomended)"
+	}
+}
+
+german_anti_tank_bonus = {
+	name = "German Anti-Tank Research Bonuses"
+	group = "elwolfmod Rules"
+	icon = "GFX_decision_generic_army_support"
+	option = {
+		name = off
+		text = "ROff"
+		desc = "No German Anti-Tank bonuses (Not Reccomended)"
+	}
+	default = {
+		name = on
+		text = "GOn"
+		desc = "Germany has a decision to give them 2 Anti-Tank 100% research bonuses (Reccomended)"
+	}
+}
+
+japan_closed_eco = {
+	name = "Japan Closed Eco"
+	group = "elwolfmod Rules"
+	icon = "GFX_decision_jap_pacific_guardian"
+	default = {
+		name = off
+		text = "GOff"
+		desc = "Japan starts on limited exports (Reccomended)"
+	}
+	option = {
+		name = on
+		text = "ROn"
+		desc = "Japan start the game on closed eco, free trade bonuses (Not Reccomended)"
+	}
+}
+
+techstealing = {
+	name = "Tech Stealing"
+	group = "elwolfmod Rules"
+	icon = "GFX_decision_generic_research"
+	default = {
+		name = banned
+		text = "GBanned"
+		desc = "No tech stealing operations (Reccomended)"
+	}
+	option = {
+		name = onehundred
+		text = "R100%"
+		desc = "Only tech steal 100%'s (Not Reccomended)"
+	}
+}
+
+max_submarine_tech = {
+	name = "Max Submarine Tech"
+	group = "elwolfmod Rules"
+	icon = "GFX_decision_generic_research"
+	default = {
+		name = sub2
+		text = "G1936"
+		desc = "Submarine 3 and Snorkel 1 banned (Reccomended)"
+	}
+	option = {
+		name = sub3
+		text = "R1940"
+		desc = "Submarine 3 and Snorkel 1 allowed (Not Reccomended)"
+	}
+}
+
+free_collabs = {
+	name = "Free Collabs"
+	group = "elwolfmod Rules"
+	icon = "GFX_decision_eng_trade_unions_support"
+	option = {
+		name = on
+		text = "ROn"
+		desc = "Italy free compliance on greece/yugo and Japan free compliance on China (Not Reccomended)"
+	}
+	default = {
+		name = off
+		text = "GOff"
+		desc = "Countries need to do their own collaboration governments (Reccomended)"
+	}
+}
+
+tradebacks = {
+	name = "Tradeback Idea"
+	group = "elwolfmod Rules"
+	icon = "GFX_decision_eng_trade_unions_support"
+	default = {
+		name = off
+		text = "GOff"
+		desc = "No tradeback idea (Reccomended)"
+	}
+	option = {
+		name = on
+		text = "ROn"
+		desc = "Everyone has a tradeback idea that givens -100% missing resource penalty until September 1939 (Not Reccomended)"
+	}
+	option = {
+		name = not_allies
+		text = "RNot Allies"
+		desc = "Everyone has no tradeback idea except for Allies (Not Reccomended)"
+	}
+}
+
+
+force_attack_last_stand = {
+	name = "Force Attack Last Stand"
+	group = "elwolfmod Rules"
+	icon = "GFX_decision_eng_trade_unions_support"
+	default = {
+		name = on
+		text = "GOn"
+		desc = "Normal like vanilla (Reccomended)"
+	}
+	option = {
+		name = off
+		text = "ROff"
+		desc = "Banned (Not Reccomended)"
+	}
+}
+
+vichy_france = {
+	name = "Vichy France"
+	group = "elwolfmod Rules"
+	icon = "GFX_decision_eng_trade_unions_support"
+	option = {
+		name = forced
+		text = "RForce"
+		desc = "Germany has to make Vichy (Not Reccomended)"
+	}
+	default = {
+		name = banned
+		text = "GBanned"
+		desc = "Germany can't make Vichy (Reccomended)"
+	}
+}

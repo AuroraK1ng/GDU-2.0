@@ -1,0 +1,698 @@
+elwolfmod_vichy_france = {
+
+	GER = {
+		diplomatic_relation = {   
+			country = VIC    
+			relation = guarantee   
+			active = yes 
+		} 
+		transfer_state = 28
+		transfer_state = 17
+		transfer_state = 27
+		transfer_state = 18
+		transfer_state = 24
+		transfer_state = 16
+		transfer_state = 785
+		transfer_state = 15
+		transfer_state = 30
+		transfer_state = 23
+		transfer_state = 14
+		transfer_state = 19
+		transfer_state = 29
+		transfer_state = 806
+	}
+
+	ITA = { 
+		transfer_state = 735 
+		735 = { 
+			add_compliance = 100 
+		}
+		transfer_state = 1 
+		1 = {
+			add_compliance = 100
+		}
+	}
+
+	FRA = {
+		transfer_state = 713
+		set_capital = {
+			state = 539
+		}
+		every_state = {
+			limit = { is_core_of = FRA }
+			teleport_armies = { to_state = 446 }
+		}
+		transfer_units_fraction = {
+			target = event_target:vichy_france
+			size = 0.9
+			stockpile_ratio = 0.7
+			army_ratio = 0.5
+			navy_ratio = 0.85
+			air_ratio = 1.0
+		}
+	}
+
+	VIC = {
+		set_capital = {
+			state = 26
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		set_popularities = {
+			democratic = 22
+			fascism = 76
+			communism = 2
+		}
+
+		create_country_leader = {
+			name = "Philippe Petain"
+			# desc = "POLITICS_CHARLES_DE_GAULLE_DESC"
+			picture = "gfx/leaders/FRA/Portrait_France_Philippe_Petain.dds"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+		}
+
+		every_unit_leader = {
+			limit = {
+				has_id = 101
+			}
+			set_nationality = FRA
+		}
+		add_ideas = FRA_occupation_costs_4
+
+		add_equipment_to_stockpile = {
+			type = motorized_equipment_1
+			amount = 1600
+			producer = VIC
+		}
+
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 10000
+			producer = VIC
+		}
+
+		add_equipment_to_stockpile = {
+			type = convoy_1
+			amount = 100
+			producer = VIC
+		}
+
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 160
+		}
+
+		add_equipment_to_stockpile = { type = medium_tank_chassis_2 amount = 2400 producer = VIC variant_name = "S35" }
+
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			improved_light_tank_chassis = 1			
+			basic_medium_tank_chassis = 1
+			improved_medium_tank_chassis = 1
+
+			trench_warfare = 0
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			concentrated_industry = 1
+			concentrated_industry2 = 1
+			concentrated_industry3 = 1
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			electronic_mechanical_engineering = 1
+			mechanical_computing = 1
+			radio = 1
+
+			mobile_warfare = 1
+			delay = 1
+			elastic_defence = 1
+			armored_spearhead = 1
+			schwerpunk = 1 
+			
+
+			engine_tech_1 = 1
+			engine_tech_2 = 1
+			armor_tech_1 = 1
+			armor_tech_2 = 1
+		}
+
+		army_experience  = 300
+
+		#Mainland france shit
+		transfer_state = 26
+		add_state_core = 26
+		
+		transfer_state = 33 
+		add_state_core = 33 
+		transfer_state = 20
+		add_state_core = 20 
+		transfer_state = 25
+		add_state_core = 25 
+		transfer_state = 31 
+		add_state_core = 31 
+		transfer_state = 22 
+		add_state_core = 22 
+		transfer_state = 32 
+		add_state_core = 32 
+		transfer_state = 21
+		add_state_core = 21
+		transfer_state = 851
+		add_state_core = 851  
+
+		#Algeria
+		transfer_state = 514
+		514 = { add_compliance = 100 }
+		transfer_state = 665
+		665 = { add_compliance = 100 }
+		transfer_state = 458
+		458 = { add_compliance = 100 }
+		transfer_state = 513
+		513 = { add_compliance = 100 }
+		transfer_state = 459
+		459 = { add_compliance = 100 }
+		transfer_state = 461
+		461 = { add_compliance = 100 }
+		transfer_state = 462
+		462 = { add_compliance = 100 }
+		transfer_state = 460
+		460 = { add_compliance = 100 }
+		#Africa Shit
+		# transfer_state = 515
+		# 515 = { add_compliance = 100 }
+		# transfer_state = 782
+		# 782 = { add_compliance = 100 }
+		# transfer_state = 786
+		# 786 = { add_compliance = 100 }
+		# transfer_state = 556
+		# 556 = { add_compliance = 100 }
+		# transfer_state = 778
+		# 778 = { add_compliance = 100 }
+		# transfer_state = 781
+		# 781 = { add_compliance = 100 }
+		# transfer_state = 776
+		# 776 = { add_compliance = 100 }
+		# transfer_state = 777
+		# 777 = { add_compliance = 100 }
+		# transfer_state = 779
+		# 779 = { add_compliance = 100 }
+		# transfer_state = 780
+		# 780 = { add_compliance = 100 }
+		# transfer_state = 272
+		# 272 = { add_compliance = 100 }
+		# transfer_state = 557
+		# 557 = { add_compliance = 100 }
+		#Syria
+		# transfer_state = 553
+		# 553 = { add_compliance = 100 }
+		# transfer_state = 554
+		# 554 = { add_compliance = 100 }
+		# transfer_state = 680
+		# 680 = { add_compliance = 100 }
+		# transfer_state = 677
+		# 677 = { add_compliance = 100 }
+		# transfer_state = 799
+		# 799 = { add_compliance = 100 }
+		# transfer_state = 898
+		# 898 = { add_compliance = 100 }
+		# transfer_state = 899
+		# 899 = { add_compliance = 100 }
+
+		#Island shit
+		# transfer_state = 708
+		# transfer_state = 543
+		# transfer_state = 706
+
+		load_focus_tree = vichy_french_focus
+	}
+
+	FRA = {
+		add_equipment_to_stockpile = {
+			type = convoy_1
+			amount = 200
+			producer = FRA
+		}
+		set_cosmetic_tag = FRA_FREE
+		retire_country_leader = yes
+		add_ideas = FRA_defeatism
+		remove_ideas = FRA_full_employment
+		remove_ideas = FRA_protected_by_the_maginot_line
+		remove_ideas = FRA_victors_of_wwi
+		load_focus_tree = free_french_focus
+		transfer_state = 775
+		transfer_state = 774
+		transfer_state = 660
+		transfer_state = 773
+		transfer_state = 539
+		transfer_state = 772
+		transfer_state = 268
+		transfer_state = 320
+		transfer_state = 635
+		transfer_state = 730
+		create_country_leader = {
+			name = "Charles de Gaulle"
+			desc = "POLITICS_CHARLES_DE_GAULLE_DESC"
+			picture = "Portrait_France_Charles_De_Gaulle.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+		}
+		create_corps_commander = {
+			name = "Philippe Leclerc"
+			picture = "portrait_france_philippe_leclerc.dds"
+			traits = { armor_officer panzer_leader desert_fox ranger trickster }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+		transfer_navy = { target = VIC }
+	}
+}
+
+elwolfmod_capitulations_on_actions = {
+	if = {
+		limit = {
+			original_tag = POL
+			POL = { has_war_with = GER }
+		}
+		ENG = {
+			country_event = { id = britain.9 days = 1 }
+		}
+		SOV = {
+			transfer_state = 784
+			transfer_state = 96
+			transfer_state = 95
+			transfer_state = 94
+			transfer_state = 93
+			transfer_state = 91
+			transfer_state = 89
+			transfer_state = 97
+		}
+	}
+	# France (Vichy check instead of MTTH)
+	if = {
+		limit = {
+			AND = {
+				original_tag = FRA
+				FRA = { has_war_with = GER }
+				has_game_rule = {
+					rule = vichy_france
+					option = forced
+				}
+			}
+		}
+		GER = {
+			country_event = france.14
+		}
+	} else if = {
+		limit = {
+			AND = {
+				original_tag = FRA
+				FRA = { has_war_with = GER }
+				has_game_rule = {
+					rule = vichy_france
+					option = banned
+				}
+			}
+		}
+		FRA = {
+			set_capital = {
+				state = 461
+			}
+		}
+		GER = {
+			country_event = france.69420
+		}
+	}
+
+	# Fix netherlands transfer
+	if = {
+		limit = {
+			original_tag = HOL
+			GER = { has_war_with = HOL }
+			NOT = {
+				JAP = {
+					has_war_with = HOL
+				}
+				361 = { is_owned_and_controlled_by = WST }
+			}
+		}
+		HOL = {
+			transfer_state = 672
+			transfer_state = 334
+			transfer_state = 335
+			transfer_state = 667
+			transfer_state = 673
+			transfer_state = 668
+			transfer_state = 669
+			transfer_state = 309
+			transfer_state = 695
+		}
+	}
+	if = {
+		limit = {
+			original_tag = BEL
+			GER = { has_war_with = BEL }
+			NOT = {
+				361 = { is_owned_and_controlled_by = WST }
+			}
+		}
+		BEL = {
+			transfer_state = 889
+			transfer_state = 888
+			transfer_state = 295
+			transfer_state = 890
+			transfer_state = 538
+			transfer_state = 718
+			transfer_state = 768
+			transfer_state = 769
+		}
+	}
+	if = {
+		limit = {
+			original_tag = YUG
+			ITA = { has_war_with = YUG }
+			ENG = {
+				has_idea = elwolfmod_noasia_research
+			}
+			NOT = {
+				has_game_rule = {
+					rule = free_collabs
+					option = on
+				}
+			}
+		}
+
+		WST = {
+			add_threat = 40
+		}
+	}
+
+	# Yugoslavia
+	if = {
+		limit = { 
+			original_tag = YUG 
+			ITA = { has_war_with = YUG }
+		} 
+		YUG = {
+			transfer_navy = { target = ITA }
+		}
+
+		ITA = {
+			if = {
+				limit = {
+					ENG = {
+						has_idea = elwolfmod_noasia_research
+					}
+				}
+				WST = { add_threat = 40 }
+				add_named_threat = { 
+					threat = 6.3 
+					name = elwolf_yug
+				}
+			} 
+			else = {
+				add_named_threat = { 
+					threat = 6.3 
+					name = elwolf_yug
+				}
+			}
+			
+			transfer_state = 103
+			transfer_state = 102
+			transfer_state = 104
+			transfer_state = 105
+			transfer_state = 109
+			transfer_state = 107
+			transfer_state = 108
+			transfer_state = 802
+			transfer_state = 804
+            transfer_state = 853
+		}
+		BUL = {
+			transfer_state = 106
+			transfer_state = 803
+			if = {
+				limit = { NOT = { has_idea = peace_training } }
+				add_ideas = peace_training
+			}
+		}
+		HUN = {
+			transfer_state = 764
+			transfer_state = 45
+			add_ideas = peace_training
+		}
+	} 
+	# Albania
+	if = {
+		limit = { 
+			original_tag = ALB 
+			ITA = { has_war_with = ALB }
+		} 
+		ITA = {
+			add_named_threat = { 
+				threat = 3.7 
+				name = elwolf_alb
+			}
+			annex_country = {
+				target = ALB
+				transfer_troops = no
+			}
+		}
+	} 
+	# Greece
+	if = {
+		limit = { 
+			original_tag = GRE 
+			OR = {
+				ITA = { has_war_with = GRE }
+				BUL = { has_war_with = GRE }
+			}
+		} 
+		
+		GRE = {
+			transfer_navy = { target = ITA }
+		}
+		BUL = {
+			add_named_threat = { 
+				threat = 3.7 
+				name = elwolf_gre
+			}
+			annex_country = {
+				target = GRE
+				transfer_troops = no
+			}
+		}
+	} 
+	# China
+	if = {
+		limit = { 
+			original_tag = CHI
+			JAP = { has_war_with = CHI }
+		} 
+		CHI = {
+			transfer_navy = { target = JAP }
+		}
+		JAP = {
+			add_named_threat = { 
+				threat = 11.9
+				name = elwolf_chi
+			}
+			annex_country = {
+				target = CHI
+				transfer_troops = no
+			}
+		}
+	}
+
+	# Japan
+	if = {
+		limit = { 
+			original_tag = JAP
+			USA = { has_war_with = JAP }
+		} 
+		JAP = {
+			transfer_navy = { target = USA }
+		}
+		USA = {
+			annex_country = {
+				target = JAP
+				transfer_troops = no
+			}
+		}
+	}
+}
+elwolfmod_capitulations_on_actions_collab = {
+
+	# Yugoslavia
+	if = {
+		limit = { 
+			original_tag = YUG 
+			ITA = { has_war_with = YUG }
+		} 
+		YUG = {
+			transfer_navy = { target = ITA }
+		}
+		ITA = {
+			if = {
+				limit = {
+					ENG = {
+						has_idea = elwolfmod_noasia_research
+					}
+				}
+				WST = { add_threat = 40 }
+				add_named_threat = { 
+					threat = 6.3 
+					name = elwolf_yug
+				}
+			} 
+			else = {
+				add_named_threat = { 
+					threat = 6.3 
+					name = elwolf_yug
+				}
+			}
+			
+			transfer_state = 103
+			transfer_state = 102
+			transfer_state = 104
+			transfer_state = 105
+			transfer_state = 109
+			transfer_state = 107
+			transfer_state = 108
+			transfer_state = 802
+			transfer_state = 804
+            transfer_state = 853
+			every_state = {
+                limit = {
+                    is_core_of = YUG
+                    is_controlled_by = ITA
+                }
+                add_compliance = 100
+		    }
+		}
+		BUL = {
+			transfer_state = 106
+			add_state_core = 106
+			transfer_state = 803
+			add_state_core = 803
+			if = {
+				limit = { NOT = { has_idea = peace_training } }
+				add_ideas = peace_training
+			}
+		}
+		HUN = {
+			transfer_state = 764
+			add_state_core = 764
+			transfer_state = 45
+			add_state_core = 45
+			add_ideas = peace_training
+		}
+	} 
+	# Greece
+	if = {
+		limit = { 
+			original_tag = GRE 
+			ITA = { has_war_with = GRE }
+		} 
+		GRE = {
+			transfer_navy = { target = ITA }
+		}
+		BUL = {
+			add_named_threat = { 
+				threat = 3.7 
+				name = elwolf_gre
+			}
+			annex_country = {
+				target = GRE
+				transfer_troops = no
+			}
+		}
+	} 
+	# China
+	if = {
+		limit = { 
+			original_tag = CHI
+			JAP = { has_war_with = CHI }
+		} 
+		
+		CHI = {
+			transfer_navy = { target = JAP }
+		}
+
+		JAP = {
+			add_named_threat = { 
+				threat = 11.9
+				name = elwolf_chi
+			}
+			annex_country = {
+				target = CHI
+				transfer_troops = no
+			}
+            every_state = {
+                limit = {
+                    is_core_of = CHI
+                    is_controlled_by = JAP
+                }
+                add_compliance = 100
+		    }
+		}
+	}
+}
+
+generic_bonus_1 = {
+	add_tech_bonus = { 
+	name = "Generic 100 Bonus" bonus = 1 uses = 1
+	category = air_equipment category = industry 
+	category = artillery category = naval_equipment	
+	category = motorized_equipment   category =	armor 
+	category = electronics	category = nuclear 
+	category = land_doctrine category = infantry_weapons 
+	category = air_doctrine category = naval_doctrine   
+	category = tp_tech   category = support_tech 
+	}
+}
+
+generic_bonus_3 = {
+	add_tech_bonus = { 
+	name = "Generic 300 Bonus"  bonus = 3 uses = 1
+	category = air_equipment category = industry 
+	category = artillery category = naval_equipment	
+	category = motorized_equipment   category =	armor 
+	category = electronics	category = nuclear 
+	category = land_doctrine category = infantry_weapons 
+	category = air_doctrine category = naval_doctrine   
+	category = tp_tech   category = support_tech 
+	}
+}
+generic_bonus_2y = {
+	add_tech_bonus = { 
+	name = "Generic 2y Bonus"  ahead_reduction = 2 bonus = 1 uses = 1
+	category = air_equipment category = industry 
+	category = artillery category = naval_equipment	
+	category = motorized_equipment   category =	armor 
+	category = electronics	category = nuclear 
+	category = land_doctrine category = infantry_weapons 
+	category = air_doctrine category = naval_doctrine   
+	category = tp_tech   category = support_tech 
+	}
+}
+
+generic_bonus_999 = {
+	add_tech_bonus = { 
+	name = "Generic 99999 Bonus"  bonus = 999.99 uses = 1 
+	category = air_equipment category = industry 
+	category = artillery category = naval_equipment	
+	category = motorized_equipment   category =	armor 
+	category = electronics	category = nuclear 
+	category = land_doctrine category = infantry_weapons 
+	category = air_doctrine category = naval_doctrine   
+	category = tp_tech   category = support_tech 
+	}
+}
+

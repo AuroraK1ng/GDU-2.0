@@ -1,0 +1,119 @@
+﻿division_template = {
+	name = "Infantry Division"		
+	division_names_group = IRE_INF_01
+	# Ireland did not have full divisions until 1941, but their garrison command 
+	#	was division strength by 1939
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "MP"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 0 y = 4 }
+
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+		cavalry = { x = 1 y = 4 }
+
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+		cavalry = { x = 2 y = 3 }
+		cavalry = { x = 2 y = 4 }
+
+		cavalry = { x = 3 y = 0 }
+		cavalry = { x = 3 y = 1 }
+		cavalry = { x = 3 y = 2 }
+		cavalry = { x = 3 y = 3 }
+		cavalry = { x = 3 y = 4 }
+
+		cavalry = { x = 4 y = 0 }
+		cavalry = { x = 4 y = 1 }
+		cavalry = { x = 4 y = 2 }
+		cavalry = { x = 4 y = 3 }
+		cavalry = { x = 4 y = 4 }
+
+	}
+	support = {
+
+	}
+}
+
+division_template = {
+	name = "50W"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
+		infantry = { x = 2 y = 4 }
+
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+		infantry = { x = 3 y = 3 }
+		infantry = { x = 3 y = 4 }
+
+		infantry = { x = 4 y = 0 }
+		infantry = { x = 4 y = 1 }
+		infantry = { x = 4 y = 2 }
+		infantry = { x = 4 y = 3 }
+		infantry = { x = 4 y = 4 }
+
+	}
+	support = {
+
+	}
+}
+
+units = {
+	division= {
+		location = 11293	
+		division_template = "50W"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.01
+	}
+}
+
+## STARTING PRODUCTION ##
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "IRE"
+		}
+		requested_factories = 1
+		progress = 0.75
+		efficiency = 100
+	}
+}

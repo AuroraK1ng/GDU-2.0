@@ -1,0 +1,50 @@
+add_namespace = elwolfmod
+
+country_event = {
+	id = elwolfmod.1
+	title = elwolfmod.1.t
+	desc = elwolfmod.1.d
+
+	picture = GFX_report_event_tanks_mexico_city
+	is_triggered_only = yes
+
+	hidden = yes
+
+	option = {
+		name = elwolfmod.1.a
+
+		every_country = {
+			every_army_leader = {
+				limit = {
+					NOT = { has_trait = cheater }
+					OR = {
+						AND = {
+							has_trait = panzer_expert
+							has_trait = combined_arms_expert
+						}
+						AND = {
+							has_trait = infantry_expert
+							has_trait = ambusher
+						}
+						AND = {
+							has_trait = fortress_buster
+							has_trait = scavenger
+						}
+						AND = {
+							has_trait = adaptable
+							NOT = {
+								OR = {
+									is_character = SOV_georgy_zhukov
+									is_character = SOV_konstantin_rokossovsky
+									is_character = GER_sepp_dietrich
+									is_character = GER_fedor_von_bock
+								}
+							}
+						}
+					}
+				}
+				add_unit_leader_trait = cheater
+			}
+		}
+	}
+}

@@ -1,0 +1,647 @@
+political_actions = {
+
+	move_capital_to_cascablanca = {
+		fire_only_once = yes
+		allowed = {
+			tag = FRA
+		}
+		visible = {
+			tag = FRA
+			NOT = {
+				controls_state = 16
+			}
+		}
+		complete_effect = {
+			set_capital = {
+				state = 461
+			}
+		}
+	}
+
+	move_capital_to_gabon = {
+		fire_only_once = yes
+		allowed = {
+			tag = FRA
+		}
+		visible = {
+			tag = FRA
+			NOT = {
+				controls_state = 16
+			}
+		}
+		complete_effect = {
+			set_capital = {
+				state = 539
+			}
+		}
+	}
+}
+
+operations = {
+	steal_soviet_anti_tank_research = {
+		icon = GFX_decision_generic_tank
+		allowed = {
+			tag = GER
+		}
+		visible = {
+			tag = GER
+			has_game_rule = {
+				rule = german_anti_tank_bonus
+				option = on
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			add_tech_bonus = {
+				name = SOV_soviet_artillery_tech_bonus_name_default
+				bonus = 1
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+	annex_ethiopia = {
+		# icon = generic_operation
+		allowed = {
+			tag = ITA
+		}
+		available = {
+			ETH = {
+				is_ai = yes
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			tag = ITA
+		}
+		targets = {
+			ETH
+		}
+		complete_effect = {
+			ETH = {
+				transfer_units_fraction = {
+					target = ITA
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 0
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			ITA = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 7100
+				}
+				annex_country = {
+					target = ETH
+					transfer_troops = no
+				}
+			}
+			hidden_effect = {
+				ITA_end_the_italo_ethiopian_war = yes
+			}
+			every_state = {
+				limit = {
+					is_core_of = ETH
+					is_controlled_by = ITA
+				}
+				add_compliance = 100
+			}
+			delete_unit_template_and_units = {
+				division_template = "Chitet Sefari"
+				disband = yes				# if yes, equipment will be returned to country equipment. default is no
+			}
+			delete_unit_template_and_units = {
+				division_template = "Kebur Zabagna"
+				disband = yes				# if yes, equipment will be returned to country equipment. default is no
+			}
+		}
+	}
+	annex_siam = {
+		# icon = generic_operation
+		allowed = {
+			tag = JAP
+		}
+		available = {
+			SIA = {
+				is_ai = yes
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			tag = JAP
+		}
+		targets = {
+			SIA
+		}
+		complete_effect = {
+			SIA = {
+				transfer_units_fraction = {
+					target = JAP
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			JAP = {
+				annex_country = {
+					target = SIA
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = SIA
+					is_controlled_by = JAP
+				}
+				add_compliance = 100
+			}
+		}
+	}
+	annex_manchukuo = {
+		# icon = generic_operation
+		allowed = {
+			tag = JAP
+		}
+		available = {
+			MAN = {
+				is_ai = yes
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			tag = JAP
+		}
+		targets = {
+			MAN
+		}
+		complete_effect = {
+			MAN = {
+				transfer_units_fraction = {
+					target = JAP
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			JAP = {
+				annex_country = {
+					target = MAN
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = MAN
+					is_controlled_by = JAP
+				}
+				add_compliance = 100
+			}
+		}
+	}
+	annex_new_zealand = {
+		# icon = generic_operation
+		allowed = {
+			tag = AST
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			NZL = {
+				is_ai = yes
+			}
+		}
+		targets = {
+			NZL
+		}
+		complete_effect = {
+			NZL = {
+				transfer_units_fraction = {
+					target = AST
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			AST = {
+				annex_country = {
+					target = NZL
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = NZL
+					is_controlled_by = AST
+				}
+				add_core_of = AST
+			}
+		}
+	}
+	annex_canada = {
+		# icon = generic_operation
+		allowed = {
+			tag = ENG
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			CAN = {
+				is_ai = yes
+			}
+		}
+		targets = {
+			CAN
+		}
+		complete_effect = {
+			CAN = {
+				transfer_units_fraction = {
+					target = ENG
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			ENG = {
+				annex_country = {
+					target = CAN
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = CAN
+					is_controlled_by = ENG
+				}
+				add_compliance = 50
+			}
+		}
+	}
+	annex_south_africa = {
+		# icon = generic_operation
+		allowed = {
+			tag = ENG
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			SAF = {
+				is_ai = yes
+			}
+		}
+		targets = {
+			SAF
+		}
+		complete_effect = {
+			SAF = {
+				transfer_units_fraction = {
+					target = ENG
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			ENG = {
+				annex_country = {
+					target = SAF
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = SAF
+					is_controlled_by = ENG
+				}
+				add_compliance = 50
+			}
+		}
+	}
+	annex_british_raj = {
+		# icon = generic_operation
+		allowed = {
+			tag = ENG
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			RAJ = {
+				is_ai = yes
+			}
+		}
+		targets = {
+			RAJ
+		}
+		complete_effect = {
+			RAJ = {
+				transfer_units_fraction = {
+					target = ENG
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			ENG = {
+				annex_country = {
+					target = RAJ
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = RAJ
+					is_controlled_by = ENG
+				}
+				add_compliance = 50
+			}
+		}
+	}
+	annex_australia = {
+		# icon = generic_operation
+		allowed = {
+			tag = ENG
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			AST = {
+				is_ai = yes
+			}
+		}
+		targets = {
+			AST
+		}
+		complete_effect = {
+			AST = {
+				transfer_units_fraction = {
+					target = ENG
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			ENG = {
+				annex_country = {
+					target = AST
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = AST
+					is_controlled_by = ENG
+				}
+				add_compliance = 50
+			}
+		}
+	}
+}
+
+FRA_intervention_in_overseas_territories = {
+	FRA_take_north_africa = {
+		visible = {
+			has_completed_focus = FRA_intervention_in_north_africa
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 70
+		remove_effect = {
+			transfer_state = 513
+			transfer_state = 461
+			transfer_state = 462
+			transfer_state = 514
+			transfer_state = 459
+			transfer_state = 460
+			transfer_state = 665
+			transfer_state = 458
+			VIC = {
+				country_event = LaR_france_vichy_notification_events.11
+			}
+			GER = {
+				country_event = LaR_france_vichy_notification_events.11
+			}
+		}
+	}
+	FRA_take_west_africa = {
+		visible = {
+			has_completed_focus = FRA_intervention_in_west_africa
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 70
+		remove_effect = {
+			transfer_state = 515
+			515 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			transfer_state = 782
+			782 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			transfer_state = 786
+			786 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			transfer_state = 557
+			557 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			transfer_state = 272
+			transfer_state = 780
+			transfer_state = 556
+			transfer_state = 779
+			transfer_state = 778
+			transfer_state = 781
+			transfer_state = 776
+			transfer_state = 777
+			transfer_state = 898
+			transfer_state = 899
+			VIC = {
+				country_event = LaR_france_vichy_notification_events.10
+			}
+			GER = {
+				country_event = LaR_france_vichy_notification_events.10
+			}
+			ITA = {
+				country_event = LaR_france_vichy_notification_events.10
+			}
+		}
+	}
+	FRA_take_madagascar = {
+		visible = {
+			has_completed_focus = FRA_intervention_in_madagascar
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 70
+		remove_effect = {
+			transfer_state = 543
+			transfer_state = 708
+			transfer_state = 706
+			transfer_state = 713
+			VIC = {
+				country_event = LaR_france_vichy_notification_events.12
+			}
+			GER = {
+				country_event = LaR_france_vichy_notification_events.12
+			}
+			ITA = {
+				country_event = LaR_france_vichy_notification_events.12
+			}
+		}
+	}
+	FRA_take_syria = {
+		visible = {
+			has_completed_focus = FRA_intervention_in_syria
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 70
+		remove_effect = {
+			transfer_state = 553
+			transfer_state = 554
+			transfer_state = 680
+			transfer_state = 677
+			transfer_state = 799
+			VIC = {
+				country_event = LaR_france_vichy_notification_events.7
+			}
+			GER = {
+				country_event = LaR_france_vichy_notification_events.7
+			}
+			ITA = {
+				country_event = LaR_france_vichy_notification_events.7
+			}
+		}
+	}
+}
+
+SOV_spain = {
+	SOV_assist_republican_spain = {
+		icon = GFX_decision_SOV_secure_the_administration
+		fire_only_once = yes
+		cost = 0
+		available = {
+			has_global_flag = spanish_civil_war
+			not = {
+				has_global_flag = scw_over
+			}
+		}
+		complete_effect = {
+			SOV = {
+				army_experience = 300
+			}
+		}
+	}
+	SOV_steal_gold_reserves = {
+		icon = GFX_decision_SOV_secure_the_administration
+		fire_only_once = yes
+		days_remove = 70
+		cost = 0
+		available = {
+			has_global_flag = spanish_civil_war
+			not = {
+				has_global_flag = scw_over
+			}
+			any_country = {
+				has_focus_tree = spanish_focus
+				has_attache_from = SOV
+			}
+		}
+		modifier = {
+		}
+		remove_effect = {
+			SOV = {
+				add_timed_idea = {
+					idea = SPR_seized_spanish_gold_reserves
+					days = 365
+				}
+			}
+		}
+	}
+}
