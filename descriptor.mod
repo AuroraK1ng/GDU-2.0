@@ -26,4 +26,4 @@ replace_path="history/units/"
 replace_path="common/units/names_divisions"
 replace_path="common/units/names_ships"
 replace_path="events"
-supported_version="1.12.14"
+supported_version="1.12.14"t
