@@ -52,7 +52,13 @@ set_fuel_ratio = 0.8
 
 # Starting tech
 set_technology = {
+	improved_light_artx = 1
+	improved_light_spaax = 1
+	improved_light_tdx = 1
+	interwar_antitank = 1
+	heavy_fighter1x = 1
 	CAS1x = 1
+	naval_bomber1x = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	tech_recon = 1
@@ -158,10 +164,58 @@ set_variable = { var = ger_gateway_to_europe_influence value = 0 }
 
 set_variable = { var = wehrmacht_anger value = 0 }
 set_variable = { var = ss_anger value = 0 }
-set_research_slots = 4
+set_research_slots = 5
 set_convoys = 200
 set_stability = 0.75 
 set_war_support = 0.3
+
+add_equipment_to_stockpile = {
+         type = artillery_equipment_1
+         amount = 2884
+         producer = GER
+}  
+add_equipment_to_stockpile = {
+         type = support_equipment
+         amount = 2180
+         producer = GER
+} 
+
+add_equipment_to_stockpile = {
+         type = infantry_equipment_1
+         amount = 62000
+         producer = GER
+} 
+add_equipment_to_stockpile = {
+         type = motorized_equipment_1
+         amount = 3800
+         producer = GER
+} 
+add_equipment_to_stockpile = {
+         type = light_tank_equipment_2
+         amount = 1801
+         producer = GER
+} 
+add_equipment_to_stockpile = {
+         type = light_tank_equipment_1
+         amount = 1000
+         producer = GER
+} 
+add_equipment_to_stockpile = {
+         type = heavy_tank_equipment_1
+         amount = 10
+         producer = GER
+} 
+add_equipment_to_stockpile = {
+	type = anti_air_equipment_1
+    amount = 2640
+    producer = GER
+}
+add_equipment_to_stockpile = {
+         type = anti_tank_equipment_1
+         amount = 3660
+         producer = GER
+} 
+
 
 add_equipment_to_stockpile = {
          type = fighter_equipment_1
@@ -421,6 +475,10 @@ set_popularities = {
 
 create_faction = Axis
 add_to_faction = GER
+add_to_faction = ROM
+add_to_faction = HUN
+add_to_faction = ITA
+
 
 
 add_ideas = {

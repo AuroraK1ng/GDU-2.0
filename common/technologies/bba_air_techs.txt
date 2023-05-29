@@ -331,12 +331,12 @@ technologies = {
 	 = {
 
 		enable_equipments = {
-			jet_fighter_equipment_1								#added
+										#added
 			
 		}
 		
 		path = {
-			leads_to_tech = jet_fighter2x
+			leads_to_tech = 
 			research_cost_coeff = 1
 		}
 
@@ -359,7 +359,7 @@ technologies = {
 			air_equipment
 			naval_air
 			naval_bomber
-			jet_technology
+			
 		}
 
 		ai_will_do = {
@@ -375,29 +375,7 @@ technologies = {
 		}
 	}
 	
-	jet_fighter2x = {											#added
-
-		enable_equipments = {
-			jet_fighter_equipment_2
-		}
-		
-		research_cost = 2
-		start_year = 1950
-
-		folder = {
-			name = bba_air_techs_folder
-			position = { x = 3 y = 14 }
-		}
-		
-		categories = {
-			light_air
-			jet_technology
-		}
-		
-		ai_will_do = {
-			factor = 0
-		}
-	}
+	
 	
 	CAS1x = {													#added
 
@@ -816,7 +794,7 @@ technologies = {
 		}
 		
 		#path = {
-		#	leads_to_tech = jet_fighter1
+		#	leads_to_tech = 
 		#	research_cost_coeff = 1.2
 		#}
 
@@ -999,12 +977,12 @@ technologies = {
 	 = {
 
 		enable_equipments = {
-			jet_tac_bomber_equipment_1							#added
+										#added
 			
 		}
 		
 		path = {
-			leads_to_tech = jet_tactical_bomber2x
+			leads_to_tech = 
 			research_cost_coeff = 1
 		}
 		
@@ -1022,7 +1000,7 @@ technologies = {
 		
 		categories = {
 			medium_air
-			jet_technology
+			
 			cat_heavy_fighter
 			tactical_bomber
 		}
@@ -1036,29 +1014,7 @@ technologies = {
 		}
 	}
 	
-	jet_tactical_bomber2x = {									#added
-
-		enable_equipments = {
-			jet_tac_bomber_equipment_2
-		}
-		
-		research_cost = 2
-		start_year = 1950
-		folder = {
-			name = bba_air_techs_folder
-			position = { x = 13 y = 14 }
-		}
-		
-		categories = {
-			medium_air
-			jet_technology
-			tactical_bomber
-		}
-		
-		ai_will_do = {
-			factor = 0
-		}
-	}
+	
 	improved_large_airframe = {
 
 		enable_equipments = {
@@ -1142,7 +1098,7 @@ technologies = {
 	 = {
 
 		enable_equipments = {
-			jet_strat_bomber_equipment_1						#added
+								#added
 			
 		}
 		
@@ -1160,7 +1116,7 @@ technologies = {
 		
 		categories = {
 			heavy_air
-			jet_technology
+			
 			cat_strategic_bomber
 		}
 		
