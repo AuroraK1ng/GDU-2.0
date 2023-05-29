@@ -193,36 +193,104 @@ units = {
 ## STARTING PRODUCTION ##
 #########################
 instant_effect = {
-		
+
 	add_equipment_production = {
 		equipment = {
 			type = infantry_equipment_1
 			creator = "USA"
 		}
-		requested_factories = 2
+		requested_factories = 3
 		progress = 0.1
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "USA"
+		}
+		requested_factories = 2
+		progress = 0.3
 		efficiency = 50
 	}
 
 	add_equipment_production = {
 		equipment = {
 			type = support_equipment_1
-			creator = "USA" 
+			creator = "USA"
 		}
 		requested_factories = 1
 		progress = 0.3
 		efficiency = 50
 	}
 
+
+	### Under Construction Notes ###
 	add_equipment_production = {
 		equipment = {
-			type = artillery_equipment_1
+			type = CAS_equipment_1
 			creator = "USA" 
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = heavy_fighter_equipment_1
+			creator = "USA" 
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+	}	
+	
+	add_equipment_production = {
+		equipment = {
+			type = cv_fighter_equipment_1
+			creator = "USA" 
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = cv_nav_bomber_equipment_1
+			creator = "USA" 
+		}
+		requested_factories = 2
+		progress = 0.2
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = cv_cas_equipment_1
+			creator = "USA" 
+		}
+		requested_factories = 0
+		progress = 0.2
+		efficiency = 50
+	}		
+	add_equipment_production = {
+		equipment = {
+			type = anti_air_equipment_1
+			creator = "USA"
 		}
 		requested_factories = 1
 		progress = 0.3
 		efficiency = 50
 	}
+	add_equipment_production = {
+		equipment = {
+			type = gw_armored_car_equipment
+			creator = "USA" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}		
+	# CA: Quincy (New Orleans class, Comm. 9-Jun, 1936)
 
 }
 #####################

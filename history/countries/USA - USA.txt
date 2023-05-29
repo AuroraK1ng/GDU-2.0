@@ -57,6 +57,17 @@ USA = {
 }
 # Starting tech
 set_technology = {
+	interwar_artillery = 1
+		infantry_weapons2 = 1
+		heavy_fighter1x = 1
+		support_weapons = 1
+		support_weapons2 = 1
+		marines = 1
+		CAS1x = 1
+		cv_fighter1x = 1
+		naval_bomber1x = 1
+		cv_naval_bomber1x = 1
+		interwar_antitank = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	tech_recon = 1
@@ -234,13 +245,6 @@ give_guarantee = URG
 	}
 
 	set_technology = {
-		interwar_artillery = 1
-		interwar_antitank = 1
-		infantry_weapons2 = 1
-		support_weapons = 1
-		support_weapons2 = 1
-		marines = 1
-
 		#doctrines
 		#Air
 		air_superiority = 1
@@ -304,7 +308,71 @@ give_guarantee = URG
 
 
 set_convoys = 500
+add_equipment_to_stockpile = {
+         type = artillery_equipment_1
+         amount = 1900
+         producer = USA
+}  
+add_equipment_to_stockpile = {
+         type = support_equipment
+         amount = 1591
+         producer = USA
+} 
+add_equipment_to_stockpile = {
+         type = anti_air_equipment_1
+         amount = 946
+         producer = USA
+} 
+add_equipment_to_stockpile = {
+         type = infantry_equipment_1
+         amount = 20000
+         producer = USA
+}
+add_equipment_to_stockpile = {
+         type = infantry_equipment_0
+         amount = 25000
+         producer = USA
+} 
+add_equipment_to_stockpile = {
+         type = motorized_equipment_1
+         amount = 1118
+         producer = USA
+} 
 
+
+
+
+
+add_equipment_to_stockpile = {
+         type = CAS_equipment_1
+         amount = 100
+         producer = USA
+}
+add_equipment_to_stockpile = {
+         type = tac_bomber_equipment_0
+         amount = 250
+         producer = USA
+}
+add_equipment_to_stockpile = {
+         type = heavy_fighter_equipment_1
+         amount = 100
+         producer = USA
+}
+add_equipment_to_stockpile = {
+         type = nav_bomber_equipment_1
+         amount = 100
+         producer = USA
+}
+add_equipment_to_stockpile = {
+         type = cv_fighter_equipment_1
+         amount = 100
+         producer = USA
+}
+add_equipment_to_stockpile = {
+         type = cv_nav_bomber_equipment_1
+         amount = 100
+         producer = USA
+}
 
 set_politics = {
 	ruling_party = democratic
