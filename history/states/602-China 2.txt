@@ -1,27 +1,21 @@
+
 state={
 	id=602
 	name="STATE_602"
 	resources={
-		tungsten=6.000
+		tungsten=8.000
 	}
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = CHI
 		add_core_of = CHI
-		add_core_of = CHI
 		buildings = {
-			infrastructure = 3 #was: 5
-			industrial_complex = 2
-			arms_factory = 2
-		}
-		1939.1.1 = {
-			buildings = {
-				industrial_complex = 2
-				infrastructure = 3 #was: 6
-				air_base = 1
-				arms_factory = 1
-			}
+			infrastructure = 1
+			industrial_complex = 4
 
+		}
+		victory_points = {
+			7101 10 
 		}
 		victory_points = {
 			7097 5 
@@ -30,11 +24,9 @@ history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 	}
 
 	provinces={
-		1448 1640 4125 4480 7097 7159 7502 7665 9982 9999 10335 10377 10517 11918 12017 12053 12310 12350 12378 12483 13140 13143 
+		1640 4125 7097 7159 5572 4999 2241 2109
 	}
-	manpower=20293700
+	manpower = 28293700
 	buildings_max_level_factor=1.000
 	state_category=town
-
-	local_supplies=0.0 
 }

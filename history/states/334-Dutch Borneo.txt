@@ -1,37 +1,41 @@
-state= {
+
+state={
 	id=334
 	name="STATE_334"
-	manpower = 2168600
 	resources={
-		rubber=75 # was: 138
-		oil=5 # was: 10
+		rubber=80.000
+		oil=12.000
 	}
-	
-	state_category = rural
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
-		owner = HOL
-		add_core_of = SWE
+	history={
+		owner = INS
+		add_core_of = INS
 		victory_points = {
-			10237 1 
+			5327 5 
 		}
-
 		buildings = {
-			infrastructure = 1
-			10237 = {
+			infrastructure = 2
+			5327 = {
 				naval_base = 3
+
 			}
 			1316 = {
 				naval_base = 1
+
 			}
-			10325 = {
+			5228 = {
 				naval_base = 1
+
 			}
+
 		}
-	}
-	provinces={
-		1225 1230 1252 1304 1316 1404 1416 2047 2170 2184 2222 4236 4279 4323 4335 4409 5176 5226 7227 7231 7296 7299 7355 7415 7424 8221 10138 10178 10181 10237 10266 10282 10310 10325 12110 12129 12196 12225 12243 12252 12280 12955 
+
 	}
 
-	local_supplies=0.0 
+	provinces={
+		1316 1404 1416 4279 7227 7296 7415 5389 5327 5276 5247 5228 2471 2388 2328 2299 
+	}
+	manpower=2168600
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

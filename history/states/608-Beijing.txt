@@ -2,37 +2,34 @@
 state={
 	id=608
 	name="STATE_608"
-	manpower = 9648400
-	
-	state_category = large_city
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = CHI
 		add_core_of = CHI
-		add_core_of = CHI
 		buildings = {
-			infrastructure = 3 #was: 5
-			industrial_complex = 2
+			infrastructure = 3
+			arms_factory = 3
+			industrial_complex = 4
 			air_base = 3
-			10068 = {
-				naval_base = 2
+			5495 = {
+				naval_base = 8
+
 			}
+
 		}
 		victory_points = {
-			9843 20
+			5676 20 
 		}
 		victory_points = {
-			10068 1 
+			5495 1 
 		}
 
-		1938.10.25 = {
-			controller = JAP
-		}
 	}
 
 	provinces={
-		1134 4137 4140 6828 9843 9969 10068 11761 12026 
+		1134 4032 4093 4137 4190 6828 7000 5676 5495 2701 2559
 	}
-
-	local_supplies=1.0 
+	manpower = 9648400
+	buildings_max_level_factor=1.000
+	state_category=large_city
 }

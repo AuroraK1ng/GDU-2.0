@@ -2,30 +2,29 @@
 state={
 	id=329
 	name="STATE_329"
-    manpower = 1
+	manpower = 150000
 	resources={
-		chromium=2 # was: 2
+
+		chromium=6
+
 	}
 	
-	state_category = rural
+	state_category = city
 
 	history={
-        owner = WST
+		owner = SOV
 		buildings = {
-			infrastructure = 1
+			infrastructure = 3
 			arms_factory = 1
-			industrial_complex = 1
+			industrial_complex = 4
 		}
-
-
-
-		add_core_of = TAN
+		victory_points = {
+			4858 10
+		}
 		add_core_of = SOV
 	}
 
 	provinces={
-		1676 1877 4680 7703 7731 7804 7819 10597 10627 10646 12610 12625 
+		1676 1877 4680 7703 7731 7804 7819 4895 4858 4823 1940 1924 
 	}
-
-	local_supplies=0.0 
 }

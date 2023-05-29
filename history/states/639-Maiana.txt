@@ -4,13 +4,15 @@ state={
 	name="STATE_639"
 	manpower=1035
 	state_category = small_island
+						resources={
+		oil=2
+		aluminium=2
+	}
 
 	history={
 		owner = ENG
-		add_core_of = SWE
 		buildings = {
-			infrastructure = 2
-			13021 = {
+			1045 = {
 				naval_base = 1
 			}
 			4387 = {
@@ -19,19 +21,18 @@ state={
 			7393 = {
 				naval_base = 1
 			}
-			13020 = {
+			1048 = {
 				naval_base = 1
 			}
+			infrastructure = 1
 		}
 		victory_points = {
-			13021 1 
+			1045 1 
 		}
 
 	}
 
 	provinces={
-		4387 7393 13020 13021 13022 
+		4387 7393 1048 1045 1044 
 	}
-
-	local_supplies=0.0 
 }

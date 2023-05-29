@@ -7,24 +7,29 @@ state={
 	state_category = town
 
 	history={
-		owner = CAN
+		owner = SAF
 		buildings = {
-			infrastructure = 3 #was: 5
+			infrastructure = 3
 			industrial_complex = 2
 			air_base = 1
-			12589 = {
-				naval_base = 4
+			fuel_silo = 1
+			4696 = {
+				naval_base = 2
+			}
+			1948 = {
+				naval_base = 14
 			}
 		}
 		victory_points = {
-			12589 10 
+			1948 10 
 		}
-		add_core_of = CAN
+		victory_points = {
+			4696 1 
+		}
+		add_core_of = SAF
 	}
 
 	provinces={
-		1509 4528 4822 5203 10415 10442 10697 12419 12547 12589 12692 
+		1509 4528 4696 4822 5203 5127 5107 4711 2167 2035 1948 1828 
 	}
-
-	local_supplies=0.0 
 }

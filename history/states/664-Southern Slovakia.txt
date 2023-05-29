@@ -3,7 +3,7 @@ state={
 	name="STATE_664"
 	manpower = 854300
 	resources={
-		steel=13 # was: 20
+		steel=30 # was: 20
 		chromium = 3 # was: 4
 	}
 	
@@ -12,27 +12,18 @@ state={
 	history={
 		owner = CZE
 		buildings = {
-			infrastructure = 3 #was: 6
+			infrastructure = 3
 			industrial_complex = 3
+			fuel_silo = 1
 		}
 		victory_points = {
 			6573 1 
 		}
 		add_core_of = CZE
 		add_claim_by = HUN
-
-		1939.3.14 = {
-			owner = HUN
-			controller = HUN
-			remove_claim_by = HUN
-			add_core_of = CZE
-			add_core_of = CZE
-		}
 	}
 	
 	provinces={
-		3565 3716 6561 6573 9537 11679 
+		3716 6561 6573 5941
 	}
-
-	local_supplies=3.0 
 }

@@ -1,47 +1,85 @@
+
 state={
 	id=523
 	name="STATE_523"
+	resources={
+		rubber=36.000
+		aluminium=19.000
+	}
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
-		add_core_of = SWE
+	history={
 		owner = AST
 		buildings = {
-			infrastructure = 1
-			air_base = 3
-
+			infrastructure = 2
+			air_base = 2
+			1222 = {
+				naval_base = 5
+			}
 			4329 = {
-				naval_base = 3
-
+				naval_base = 6
 			}
-			12237 = {
-				naval_base = 2
-
+			5310 = {
+				naval_base = 5
 			}
-			12154 = {
-				naval_base = 1
-
+			5301 = {
+				naval_base = 5
 			}
-			12240 = {
-				naval_base = 1
-
+			2343 = {
+				naval_base = 5
+			}
+			2429 = {
+				naval_base = 5
+			}
+			2340 = {
+				naval_base = 5
+			}
+			156 = {
+				naval_base = 6
+			}
+			7305 = {
+				naval_base = 6
+			}
+			2181 = {
+				naval_base = 6
 			}
 
 		}
 		victory_points = {
-			4329 3 
+			4329 10 
 		}
 		victory_points = {
-			12237 1 
+			2343 1 
 		}
-
+		victory_points = {
+			2429 1 
+		}
+		victory_points = {
+			2340 1 
+		}
+		victory_points = {
+			1222 1 
+		}
+		victory_points = {
+			5301 1 
+		}
+		victory_points = {
+			4249 1 
+		}
+		victory_points = {
+			77 1 
+		}
+		victory_points = {
+			48 1 
+		}
+		victory_points = {
+			156 10 
+		}
 	}
 
 	provinces={
-		1222 1242 1283 1310 1389 2129 4289 4317 4329 4346 4393 4418 4635 5135 7305 7333 7349 7362 7365 7378 7409 7614 10147 10231 10248 10251 10260 10423 10954 10974 11004 11018 12107 12123 12135 12154 12193 12237 12240 12400 12428 12484 12931 12995 
+		1222 1242 1283 1310 1389 4289 4317 4329 4346 4393 4418 4635 5135 7305 7333 7349 7362 7365 7378 7409 7614 5422 5332 5315 5310 5301 5122 4249 4230 2474 2459 2444 2429 2390 2343 2340 2181 2156 2108 1259 1176 156 155 154 148 147 145 130 125 124 120 114 113 101 96 77 49 48 40 
 	}
 	manpower=1077000
-	buildings_max_level_factor=1
-	state_category="rural"
-
-	local_supplies=0.0 
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

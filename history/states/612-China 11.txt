@@ -1,25 +1,27 @@
+
 state={
 	id=612
 	name="STATE_612"
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
-		owner = MAN
-		add_core_of = MAN
-		add_core_of = MEN
-		add_core_of = MEN
+	history={
+		owner = JAP
+		#owner = MAN
+		#add_core_of = MAN
+		#add_core_of = CHI
+		#add_core_of = PRC
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
+			industrial_complex = 6
+			arms_factory = 2
 
 		}
 
 	}
 
 	provinces={
-		1551 1608 1796 1811 1871 4222 4555 7578 7648 10363 10372 12348 12448 12554 
+		1811 7648 5176
 	}
 	manpower=566000
 	buildings_max_level_factor=1.000
-	state_category=rural
-
-	local_supplies=0.0 
+	state_category=town
 }

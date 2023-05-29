@@ -1,17 +1,33 @@
 state={
 	id=737
 	name="STATE_737"
+	
+	resources={
+		rubber=11
+		oil=13
+	}
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
-		add_core_of = SWE
+	history={
 		owner = AST
 		buildings = {
 			infrastructure = 1
 			air_base = 1
-			7251 = {
-				naval_base = 5
+			1329 = {
+				naval_base = 1
 
 			}
+			4304 = {
+				naval_base = 1
+
+			}	
+			7251 = {
+				naval_base = 2
+
+			}
+			7324 = {
+				naval_base = 1
+
+			}			
 			4352 = {
 				naval_base = 1
 
@@ -20,21 +36,30 @@ history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 				naval_base = 1
 
 			}			
+			7412 = {
+				naval_base = 1
+
+			}
+			2355 = {
+				naval_base = 1
+
+			}
+
 
 		}
 		
 		victory_points = {
-			7251 5 
+			7251 15 
 		}
-		
+		victory_points = {
+			4304 10
+		}		
 	}
 
 	provinces={
-		1286 1301 1329 1361 4304 4332 4352 4421 7251 7324 7339 7352 7412 10166 10206 12222 
+		1286 1301 1329 1361 4304 4332 4352 4421 7251 7324 7339 7352 7412 5399 5358 2355 
 	}
 	manpower=345640
 	buildings_max_level_factor=1
 	state_category="rural"
-
-	local_supplies=0.0 
 }

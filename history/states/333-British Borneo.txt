@@ -4,36 +4,32 @@ state=
 	name="STATE_333"
 	manpower = 889800
 	resources={
-		rubber=40 # was: 72
-		oil=12 # was: 18
+		rubber=50
+		oil=28
 	}
 	
 	state_category = rural
 
-	history=
-{ 1936.1.1.13 = { owner = WST add_core_of = WST }
-		owner = ENG
+	history= {
+		owner = INS
 		victory_points = {
-			7371 1
-		}
-		victory_points = {
-			1208 1
+			7371 5
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			1208 = {
 				naval_base = 1
 			}
 			7371 = {
 				naval_base = 2
 			}
+			1306 = { 
+				naval_base = 2 
+			}
 		}
-		add_core_of = SWE
 	}
 
 	provinces={
-		1208 1306 1335 2117 4216 4282 4338 4396 7358 7371 7387 7443 8091 10143 10199 10212 10240 10269 10285 12171 12186 12228 12283 12905 
+		1208 1306 1335 4282 4338 4396 7371 5367 5272 2412 2397 2351 2297 1371 
 	}
-
-	local_supplies=0.0 
 }

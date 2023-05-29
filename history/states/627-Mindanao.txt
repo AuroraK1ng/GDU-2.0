@@ -5,24 +5,25 @@ state={
 	manpower = 1496508
 	
 	state_category = rural
+				resources={
+		rubber=13
+		aluminium=8
+	}
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = USA
 		buildings = {
 			infrastructure = 2
 			4241 = {
-				naval_base = 1
+				naval_base = 6
 			}
 		}
 		victory_points = {
-			4241 3 
+			4241 80 
 		}
-		add_core_of = SWE
 	}
 
 	provinces={
-		1234 1293 1379 1407 1421 4241 4266 4399 4427 7284 7360 7389 7417 7445 10184 10214 10243 10300 10328 12116 12158 12160 12188 12217 12245 12273 
+		1234 1293 1379 1407 1421 4241 4266 4399 4427 7284 7360 7389 7417 7445 5385 5353 5323 5255 5220 2466 2426 2423 2395 2359 2336 2306 
 	}
-
-	local_supplies=0.0 
 }

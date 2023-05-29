@@ -5,12 +5,14 @@ state={
 	manpower = 180000
 	
 	state_category = small_island
+						resources={
+		oil=1
+	}
 
 	history={
-		owner = ENG
-		add_core_of = SWE
+		owner = NZL
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			4286 = {
 				naval_base = 1
 			}
@@ -19,11 +21,10 @@ state={
 		victory_points = {
 			4286 1 
 		}
+		add_core_of = NZL
 	}
 	
 	provinces={
-		4286 7302 12159 
+		4286 7302 2425 
 	}
-
-	local_supplies=0.0 
 }

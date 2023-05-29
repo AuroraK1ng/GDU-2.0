@@ -2,12 +2,12 @@
 state={
 	id=29
 	name="STATE_29"
-	manpower = 2976400
+	manpower = 4556400
 	
 	state_category = large_city
 	resources={
-		steel=42 # was: 112
-		aluminium=8 # was: 22
+		steel=62 # was: 112
+		aluminium=12 # was: 22
 	}
 
 	history={
@@ -16,30 +16,30 @@ state={
 			575 5
 		}
 		victory_points = {
-			11483 10
+			2973 10
 		}
 		victory_points = {
-			11548 15
+			2903 15
 		}
 		buildings = {
-			infrastructure = 4
-			industrial_complex = 3
+			infrastructure = 2
+			industrial_complex = 4
 			air_base = 10
 			575 = {
-				naval_base = 6
+				bunker = 10
+				naval_base = 6				
 			}
+			2903 = {
+				bunker = 7
+			}
+			447 = {
+				bunker = 7
+			}			
 		}
 		add_core_of = FRA
-		1939.1.1 = {
-			buildings = {
-				industrial_complex = 6
-			}
-		}
 	}
 
 	provinces={
-		575 3476 3536 6504 9500 11483 11548 11606 
+		575 3476 3536 6504 5991 2973 2903 2838 447
 	}
-
-	local_supplies=15.0 
 }

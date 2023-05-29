@@ -1,41 +1,78 @@
 state={
 	id=634
 	name="STATE_634"
-
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+		resources={
+		rubber=25
+		oil=5
+		aluminium=3
+	}
+	history={
 		owner = AST
-		add_core_of = SWE
 		buildings = {
-			infrastructure = 1
+		infrastructure = 1
+			1042 = {
+				naval_base = 1
+
+			}	
+			1085 = {
+				naval_base = 1
+
+			}		
 			1269 = {
-				naval_base = 2
+				naval_base = 1
 
 			}
+			1370 = {
+				naval_base = 1
+
+			}				
+			4292 = {
+				naval_base = 1
+
+			}			
 			4226 = {
 				naval_base = 1
 
 			}
-			10234 = {
+			5329 = {
+				naval_base = 1
+
+			}
+			5238 = {
+				naval_base = 1
+
+			}			
+			7437 = {
+				naval_base = 1
+
+			}			
+			4252 = {
+				naval_base = 1
+
+			}
+			2317 = {
 				naval_base = 1
 
 			}
 
-		}
-		victory_points = {
-			1269 3 
-		}
-		victory_points = {
-			4226 1 
-		}
 
+
+		}
+		victory_points = {
+			1269 40 
+		}
+		victory_points = {
+			4226 20 
+		}
+		victory_points = {
+			5265 20 
+		}
 	}
 
 	provinces={
-		1042 1085 1269 1358 1370 4226 4252 4292 4378 7437 10234 10291 10319 12265 
+		1042 1085 1269 1358 1370 4226 4252 4292 4378 7437 5329 5265 5238 2317 
 	}
 	manpower=150000
 	buildings_max_level_factor=1
 	state_category="small_island"
-
-	local_supplies=0.0 
 }

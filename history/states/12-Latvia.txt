@@ -2,29 +2,38 @@
 state={
 	id=12
 	name="STATE_12"
-	manpower = 408500
+	manpower = 1520500
 	resources={
 		steel=1 # was: 2
 	}
 	
-	state_category = rural
+	state_category = city
 	
 	history={
-		owner = LAT
+		owner = LIT
 		victory_points = {
-			10493 1 #Valmiera
+			6425 5 
+		}
+		victory_points = {
+			310 1 
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			arms_factory = 1
+			industrial_complex = 3
 			air_base = 3
+			6425 = {
+				naval_base = 3
+			}
+			310 = {
+				bunker = 2
+			}
 		}
-		add_core_of = LAT
+		add_core_of = LIT
+		add_core_of = SOV
 	}
 
 	provinces={
-		3388 9317 9501 10493 11302
+		222 310 319 341 3255 3298 3388 6459 7482 6817 6680 6475 6425 5990 5230 5026 3836 3612 3252 
 	}
-
-	local_supplies=0.0 
 }

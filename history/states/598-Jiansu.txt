@@ -2,28 +2,37 @@
 state={
 	id=598
 	name="STATE_598"
-	
-	state_category = town
+	resources={
+		aluminium=12.000
+	}
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = CHI
 		add_core_of = CHI
-		add_core_of = CHI
+		#add_core_of = PRC
+				victory_points = {
+			2511 1 
+		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 3
+			1029 = {
+				naval_base = 3
+				coastal_bunker = 1
+				bunker = 1
+
+			}
 
 		}
 
-		1938.10.25 = {
-			controller = JAP
-		}
+
 	}
 
 	provinces={
-		1001 1029 1076 1121 1161 4001 4005 4031 4082 4123 4148 7025 7142 7181 7200 9953 9956 10095 11973 12055 12067 13144 
+		1001 1029 1076 1161 4001 4010 4031 4082 4148 7085 2511
 	}
 	manpower=23669300
 	buildings_max_level_factor=1.000
-
-	local_supplies=0.0 
+	state_category=town
 }

@@ -4,24 +4,26 @@ state=
 	name="STATE_638"
 	state_category = small_island
 	manpower=75153
+		resources={
+		oil=2
+		aluminium=2
+		rubber =6 
+	}
 	history=
-{ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	{
 		owner = USA
-		add_core_of = SWE
 		buildings = {
-			infrastructure = 3 #was: 5
-			12140 = {
+			infrastructure = 1
+			2441 = {
 				naval_base = 1
 			}
 		}
 		victory_points = {
-			12140 1
+			2441 10
 		 }
 
 	}
 	provinces={
-		12140
+		2441
 	}
-
-	local_supplies=0.0 
 }

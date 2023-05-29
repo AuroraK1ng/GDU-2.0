@@ -5,17 +5,20 @@ state={
 	manpower = 1431624
 	
 	state_category = city
-
+	resources={
+		steel=40
+	}
 	history={
-		add_core_of = ENG
 		owner = ENG
-		victory_points = { 9392 10 }
+		victory_points = { 6179 10 }
 		victory_points = { 6300 1 }
 		buildings = {
-			infrastructure = 4 #was: 7
-			industrial_complex = 1
-			dockyard = 1
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 1
+			dockyard = 2
 			air_base = 3
+			fuel_silo = 3
 			6300 = {
 				naval_base = 5
 			}
@@ -24,8 +27,6 @@ state={
 	}
 
 	provinces={
-		159 6300 9314 9383 9392 11378 
+		159 6300 6540 6200 6179 3200 
 	}
-
-	local_supplies=0.0 
 }

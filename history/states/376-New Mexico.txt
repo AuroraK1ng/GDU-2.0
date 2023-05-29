@@ -4,30 +4,26 @@ state={
 	name="STATE_376"
 	manpower = 423316
 	
-	state_category = rural
+	state_category = large_town
 	
 	resources={
-		oil=14 # was: 20
-		aluminium=30 # was: 52
+		oil=20
+		aluminium=52
 	}
 
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = USA
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 1
+			industrial_complex = 4
+			air_base = 2
 		}
 		add_core_of = USA
-		victory_points = {
-			4975 1
-		}
 	}
 
 	provinces={
-		1972 2102 3867 3883 4975 5044 8070 10642 10645 10867 10914 12552 12684 12720 12791 
+		1972 2102 3867 3883 4975 5044 7776 4834 4824 4461 4335 2031 1841 1745 1653 
 	}
 	
-
-	local_supplies=0.0 
 }

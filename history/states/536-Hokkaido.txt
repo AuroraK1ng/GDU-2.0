@@ -6,24 +6,28 @@ state={
 	
 	state_category = rural
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = JAP
 		add_core_of = JAP
 		buildings = {
 			infrastructure = 2
+			dockyard = 1
+		
+				5102 = {
+				naval_base = 1
+
+			}
 		}
 		victory_points = {
-			10444 15 
+			5102 15 
 		}
 		victory_points = {
-			12421 5 
+			2162 5 
 		}
 
 	}
 
 	provinces={
-		1512 1642 3962 4576 4646 7532 7595 10444 10512 12352 12421 12493 
+		1512 1642 3962 4576 4646 7532 7595 5102 5006 2240 2162 2091 
 	}
-
-	local_supplies=0.0 
 }

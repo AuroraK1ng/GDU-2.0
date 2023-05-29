@@ -1,32 +1,29 @@
+
 state={
 	id=522
 	name="STATE_522"
+	
+	manpower = 367200
+	state_category = rural
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = AST
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
+			infrastructure = 1
+			industrial_complex = 2
 			air_base = 1
 			1652 = {
 				naval_base = 1
 				coastal_bunker = 1
-
 			}
-
 		}
 		victory_points = {
-			1652 10 
+			1652 3 
 		}
 		add_core_of = AST
-
 	}
 
 	provinces={
-		1498 1511 1540 1652 2157 4630 4645 5125 5170 5175 7453 7579 7608 8130 8228 8243 10950 10971 10983 12323 
+		1652 2157 4630 5175 7453 7702 7600 7581 4217 
 	}
-	manpower=317200
-	buildings_max_level_factor=1.000
-	state_category=rural
-	local_supplies=0.000
 }

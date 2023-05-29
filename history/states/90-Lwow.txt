@@ -2,33 +2,26 @@ state={
 	id=90
 	name="STATE_90" # Kielce
 	manpower = 1835700
-	
+
 	state_category = town
-	
+
 	resources={
 		steel=8 # was: 12
 	}
 
 	history={
-		victory_points = {
-			11430 5
-		}
-		victory_points = {
-			3458 5
-		}
-		#victory_points = {
-		#	562 3
-		#}
 		owner = POL
 		buildings = {
 			infrastructure = 3
+			industrial_complex = 3
 		}
 		add_core_of = POL
+		victory_points = {
+			6416 5
+		}
 	}
 
 	provinces={
-		562 3458 3497 3586 6416 11430 11532 
+		562 3458 3497 3586 6416 3054 2916 
 	}
-
-	local_supplies=0.0 
 }

@@ -4,12 +4,15 @@ state={
 	name="STATE_396"
 	manpower = 3238501
 	state_category = large_city
-
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	resources={
+		steel=30.000
+	}
+	history={
 		owner = USA
 		buildings = {
-			infrastructure = 3 #was: 6
+			infrastructure = 3
 			industrial_complex = 5
+			air_base = 2
 		}
 		add_core_of = USA
 		victory_points = {
@@ -19,8 +22,6 @@ history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 	}
 
 	provinces={
-		870 1595 1881 4437 4527 4531 6713 7551 9653 9654 9796 9810 10448 11621 11635 11637 12437 
+		870 1595 1881 4531 5824 5695 2821
 	}
-
-	local_supplies=0.0 
 }

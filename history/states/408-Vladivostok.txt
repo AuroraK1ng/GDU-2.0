@@ -1,22 +1,23 @@
 
-state = {
-	id = 408
-	name = "STATE_408"
+state={
+	id=408
+	name="STATE_408"
 	manpower = 841465
-	resources = {
-		chromium=20 # was: 28
+	resources={
+		chromium=28
 	}
 	
-	state_category = town
+	state_category = large_city
 
 	history={
 		owner = SOV
 		victory_points = {
-			957 15
+			957 1
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
 			dockyard = 1
+			industrial_complex = 5
 			air_base = 5
 			957 = {
 				naval_base = 8
@@ -24,13 +25,9 @@ state = {
 			}
 		}
 		add_core_of = SOV
-		add_core_of = SOV
-		add_core_of = SOV
 	}
 
-	provinces = {
-		664 681 837 957 3695 3723 3739 3753 3787 3811 3977 6684 6686 6715 6833 6838 6961 6989 9639 9641 9762 9895 9926 11624 11626 11629 11643 11745 11750 11765 11777 11879 11904 
+	provinces={
+		664 681 837 957 3695 3739 3787 3811 6838 6961 5724 5644 2819 2818 2689 2641
 	}
-
-	local_supplies = 0.0 
 }

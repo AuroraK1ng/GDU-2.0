@@ -2,54 +2,56 @@
 state={
 	id=633
 	name="STATE_633"
-	manpower=52517
+	manpower=32517
 	
 	state_category = small_island
-
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	resources={
+		oil=1
+		aluminium=1
+		rubber=5 
+	}
+	history={
 		owner = JAP
-		add_core_of = SWE
 		buildings = {
-			infrastructure = 2
-			air_base = 2
-			13040 = {
+			infrastructure = 1
+			air_base = 1
+			999 = {
 				naval_base = 1
 
 			}
-			13041 = {
+			995 = {
+				naval_base = 1
+
+			}
+			991 = {
 				naval_base = 3
 
 			}
-			13043 = {
+			990 = {
 				naval_base = 1
 
 			}
-			13046 = {
+			980 = {
 				naval_base = 1
 
 			}
 			1002 = {
 				naval_base = 1
 			}
-			13039 = {
-				naval_base = 1
-			}
-			13045 = {
+			981 = {
 				naval_base = 1
 			}
 		}
 		victory_points = {
-			13041 3 
+			991 15 
 		}
 		victory_points = {
-			13046 1 
+			980 10 
 		}
 
 	}
 
 	provinces={
-		1002 13039 13040 13041 13042 13043 13044 13045 13046 
+		1002 999 995 991 990 987 985 981 980 
 	}
-
-	local_supplies=0.0 
 }

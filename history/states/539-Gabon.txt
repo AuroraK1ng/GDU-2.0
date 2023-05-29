@@ -1,30 +1,28 @@
+
 state={
 	id=539
 	name="STATE_539"
 
 	history={
 		owner = FRA
-		add_core_of = SWE
-		victory_points = {
-			5139 1 
-		}
+		add_core_of = FRA
+		add_core_of = FRF
+		
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
+			air_base = 1
 			5139 = {
-				naval_base = 1
-
-			}
-
+				naval_base = 15
+				coastal_bunker = 5				
+			}		
 		}
 
 	}
 
 	provinces={
-		5139 8207 10948 13210 
+		5139 7620 4257 787 
 	}
-	manpower=409752
+	manpower=2564000
 	buildings_max_level_factor=1.000
-	state_category=pastoral
-
-	local_supplies=1.0 
+	state_category=town
 }

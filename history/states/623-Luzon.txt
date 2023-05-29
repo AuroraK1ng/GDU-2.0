@@ -6,15 +6,16 @@ state= {
 	state_category = city
 	
 	resources={
-		rubber=1 # was: 2
+		rubber = 70
+		chromium = 12
 	}
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history= {
 		owner = USA
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
-			12213 = {
+			2366 = {
 				naval_base = 1
 			}
 			1415 = {
@@ -26,13 +27,10 @@ history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 			1415 1 
 		}
 		victory_points = {
-			12213 1 
+			2366 1 
 		}
-		add_core_of = SWE
 	}
 	provinces={
-		1388 1415 4101 4214 4233 4350 4368 4423 7325 7439 10167 10241 10252 10280 10298 12213 12253 
+		1388 1415 4101 4214 4233 4350 4368 4423 7325 7439 5398 5325 5309 5278 5257 2366 2327 
 	}
-
-	local_supplies=0.0 
 }

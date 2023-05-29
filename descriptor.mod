@@ -11,6 +11,10 @@ tags={
 	"Graphics"
 }
 name="Blood, sweat and tears"
+replace_path="history/states"
+replace_path="history/countries"
+replace_path="history/units"
+replace_path="map/strategicregions"
 replace_path="common/abilities"
 replace_path="common/ai_strategy"
 replace_path="common/ai_strategy_plans"

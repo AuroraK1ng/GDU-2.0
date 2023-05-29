@@ -3,26 +3,23 @@ state={
 	id=310
 	name="STATE_310"
 	manpower = 47341
+	resources={
+		aluminium=95
+	}
 
-	state_category = pastoral
+	state_category = town
 
 	history={
 		owner = FRA
-		add_core_of = SWE
 		buildings = {
-			infrastructure = 1
-			12885 = {
-				naval_base = 1
+			infrastructure = 2
+			1439 = {
+				naval_base = 2
 			}
-		}
-		victory_points = {
-			12885 1 
 		}
 	}
 
 	provinces={
-		4934 12885 
+		4934 1439
 	}
-
-	local_supplies=0.0 
 }

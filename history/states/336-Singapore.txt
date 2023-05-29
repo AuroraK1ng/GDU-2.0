@@ -7,44 +7,75 @@ state={
 	state_category = large_town
 	
 	resources={
-		rubber=342 # was: 848
-		steel=20 # was: 32
-		tungsten=189 # was: 308
-		aluminium = 15 # was: 25
+		rubber=690
+		tungsten=308
+		aluminium = 25
 	}
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = ENG
 		victory_points = {
-			12299 10
+			2277 75
 		}
 		victory_points = {
 			7329 1 
 		}
 		victory_points = {
-			10297 1 
+			5259 1 
 		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-			air_base = 6
-			12299 = {
-				naval_base = 8
-				coastal_bunker = 3
+			air_base = 8
+			anti_air_building = 5
+			2277 = {
+				naval_base = 10
+				coastal_bunker = 5
+				bunker = 2	
 			}
 			7329 = {
-				naval_base = 1
+				naval_base = 3
 			}
-			10297 = {
+			5259 = {
 				naval_base = 5
 			}
+			7342 = {
+				bunker = 4
+			}
+			4310 = {
+				bunker = 4
+			}
+			7329 = {
+				bunker = 4
+			}
+			2362 = {
+				bunker = 2
+			}
+			1364 = {
+				bunker = 2
+			}
+			5337 = {
+				bunker = 2
+			}
+			2383 = {
+				bunker = 2
+			}
+			4412 = {
+				bunker = 2
+			}
+			2307 = {
+				bunker = 2
+			}
+			4367 = {
+				coastal_bunker = 2
+			}
+			5245 = {
+				coastal_bunker = 2
+			}			
 		}
-		add_core_of = SWE
 	}
 
 	provinces={
-		1291 1348 1364 1376 1392 4310 4355 4367 4384 4412 4424 7329 7342 7399 7427 10227 10297 10313 12113 12144 12199 12215 12255 12271 12299 
+		1291 1348 1364 1376 1392 4310 4355 4367 4384 4412 4424 7329 7342 7399 7427 5337 5259 5245 2469 2438 2383 2362 2325 2307 2277 
 	}
-
-	local_supplies=0.0 
 }

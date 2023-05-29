@@ -4,25 +4,25 @@ state={
 	name="STATE_379"
 	manpower = 91057
 	
-	state_category = rural
+	state_category = town
 	
 	resources={
-		steel=70 # was: 136
-		tungsten=32 # was: 62
-		aluminium=25 # was: 44
+		steel= 35
+		tungsten=30
+		aluminium=44
 	}
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = USA
 		buildings = {
 			infrastructure = 2
+			industrial_complex = 4
+			air_base = 1
 		}
 		add_core_of = USA
 	}
 
 	provinces={
-		1862 4521 4607 4736 4799 4816 7756 7827 7879 10422 10591 12134 12399 12425 
+		1862 4521 4607 4736 4799 4816 7756 7827 7879 5125 4902 2445 2182 2159 
 	}
-
-	local_supplies=0.0 
 }

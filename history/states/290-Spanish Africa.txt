@@ -2,43 +2,14 @@
 state={
 	id=290
 	name="STATE_290"
-	manpower = 744000
+	manpower = 1
+	history = {
+		##owner = ITA
+}
 	
-	
-	state_category = rural
-	
-	resources={
-		steel=23 # was: 20 . Changed to 23 (from 15) due to Portugal Setup
-	}
+	state_category = wasteland
 
-	history={
-		owner = WST
-		add_core_of = WST
-		add_core_of = WST
-		victory_points = {
-			9945 3
-		}
-		victory_points = {
-			12100 2
-		}
-		victory_points = {
-			12087 1
-		}
-		buildings = {
-			infrastructure = 2
-			air_base = 3
-			12100 = {
-				naval_base = 3
-			}
-			9945 = {
-				naval_base = 3
-			}
-		}
+	provinces={
+		5612
 	}
-
-	provinces = {
-		4199 7215 9945 10113 12087 12100 
-	}
-
-	local_supplies = 0.0 
 }

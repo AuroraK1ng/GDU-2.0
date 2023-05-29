@@ -2,23 +2,23 @@ state=
 {
 	id=630
 	name="STATE_630"
-	manpower = 100
+	manpower = 1
 	state_category = tiny_island
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = USA
-		add_core_of = SWE
 		buildings = {
 			infrastructure = 1
-			13051 = {
+			970 = {
 				naval_base = 1
 			}
+		}
+		victory_points = {
+			970 5
 		}
 	}
 	
 	provinces={
-		13051 	
+		970 	
 	}
-
-	local_supplies=0.0 
 }

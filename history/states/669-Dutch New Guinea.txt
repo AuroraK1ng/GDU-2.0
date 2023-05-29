@@ -1,26 +1,85 @@
+
 state={
 	id=669
 	name="STATE_669"
-	manpower = 314300
+	resources={
+		rubber=27.000
+	}
 
-	state_category = pastoral
-
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
-		owner = HOL
-		add_core_of = SWE
+	history={
+		owner = INS
+		add_core_of = INS
 		victory_points = {
-			12371 1 
+			2222 1 
+		}
+		victory_points = {
+			4552 1 
+		}
+		victory_points = {
+			7589 1 
 		}
 		buildings = {
-			infrastructure = 1
-			12371 = {
-				naval_base = 2
+			infrastructure = 2
+			16 = {
+				naval_base = 1
 			}
+			35 = {
+				naval_base = 1
+			}
+			555 = {
+				naval_base = 1
+			}
+			42 = {
+				naval_base = 1
+			}
+			7627 = {
+				naval_base = 1
+			}
+			7529 = {
+				naval_base = 1
+			}
+			5012 = {
+				naval_base = 1
+			}
+
+			1629 = {
+				naval_base = 3
+
+			}
+			4524 = {
+				naval_base = 3
+
+			}
+			2222 = {
+				naval_base = 3
+
+			}
+
+			4593 = {
+				naval_base = 3
+
+			}
+			7542 = {
+				naval_base = 3
+
+			}
+			15 = {
+				naval_base = 5
+
+			}
+			55 = {
+				naval_base = 5
+
+			}
+
 		}
-	}
-	provinces={
-		1546 1602 1617 1629 4468 4509 4524 4552 4593 7269 7487 7512 7529 7542 7570 7585 7627 8235 8250 10369 10396 10436 10505 10990 12315 12371 12386 12457 
+
 	}
 
-	local_supplies=1.0 
+	provinces={
+		1546 1602 1617 1629 4468 4509 4524 4552 4593 7269 7487 7512 7529 7542 7570 7585 7627 7589 7575 5171 5147 5114 5012 4207 2266 2222 2195 2128 555 151 142 136 134 118 103 94 86 74 69 61 56 55 54 51 50 47 46 42 41 36 35 34 33 28 25 24 16 15 13 11 9 
+	}
+	manpower=314300
+	buildings_max_level_factor=1.000
+	state_category=pastoral
 }

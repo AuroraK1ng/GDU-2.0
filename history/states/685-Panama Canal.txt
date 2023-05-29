@@ -5,22 +5,22 @@ state={
 	
 	state_category = enclave
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = USA
-		victory_points = {
-			7617 5 
-		}
 		buildings = {
 			infrastructure = 2
-			air_base = 6
+			air_base = 2
 			7617 = {
-				naval_base = 3
+				naval_base = 2
 			}
+			1633 = {
+				naval_base = 1
+			}			
 		}
-		add_core_of = SWE
+		victory_points = {
+			7617 10 
+		}
 	}
 	
-	provinces={ 7617 }
-
-	local_supplies=0.0 
+	provinces={ 7617 1633  }
 }

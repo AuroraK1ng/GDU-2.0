@@ -3,19 +3,20 @@ state={
 	name="STATE_723"
 	manpower = 547198
 	resources={
-		tungsten=4 # was: 6
+		tungsten=10 # was: 6
 	}
 
 	state_category = rural
 
 
-history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
+	history={
 		owner = NZL
 		buildings = {
-			infrastructure = 3 #was: 5
-			air_base = 1
+			infrastructure = 3
+			dockyard = 2			
+			air_base = 5
 			2197 = {
-				naval_base = 1
+				naval_base = 2
 			}
 		}
 		victory_points = {
@@ -27,8 +28,6 @@ history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		add_core_of = NZL
 	}
 	provinces={
-		2197 2203 2211 4819 5195 7839 8204 8212 8232 8241 10650 12632 12966 12974 12980 12988 
+		2197 2203 2211 4819 5195 7839 7630 7608 7594 7584 4806 1917 1227 1218 1196 1192 
 	}
-
-	local_supplies=0.0 
 }
