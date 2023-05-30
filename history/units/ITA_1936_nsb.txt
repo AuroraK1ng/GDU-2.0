@@ -374,54 +374,78 @@ units = {
 
 
 ####### Starting Production Queue #######
-instant_effect = { 
-	if = { 
+instant_effect = {
+
+	if = {
 		limit = { is_tutorial = no }
 
-		##### Equipments #####
-		add_equipment_production = { 
-			equipment = { 
-				type = infantry_equipment_1 
-				creator = "ITA" 
+		add_equipment_production = {
+			equipment = {
+				type = infantry_equipment_1
+				creator = "ITA"
 			}
-
-			requested_factories = 4 
-			progress = 0.1 
-			efficiency = 50 
+			requested_factories = 10
+			progress = 0.1
+			efficiency = 50
 		}
 
-		add_equipment_production = { 
-			equipment = { 
-				type = support_equipment_1 
-				creator = "ITA" 
+		add_equipment_production = {
+			equipment = {
+				type = artillery_equipment_1
+				creator = "ITA"
 			}
+			requested_factories = 5
+			progress = 0.3
+			efficiency = 50
+		}
+		
+		add_equipment_production = {
+		equipment = {
+			type = anti_tank_equipment_1
+			creator = "ITA" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}		
 
-			requested_factories = 1 
-			progress = 0.3 
-			efficiency = 50 
+		add_equipment_production = {
+			equipment = {
+				type = support_equipment_1
+				creator = "ITA"
+			}
+			requested_factories = 2
+			progress = 0.4
+			efficiency = 50
 		}
 
-		add_equipment_production = { 
-			equipment = { 
-				type = light_tank_chassis_1 
-				creator = "ITA" 
-				version_name = "L3/35"
+		add_equipment_production = {
+			equipment = {
+				type = motorized_equipment_1
+				creator = "ITA"
 			}
-
-			requested_factories = 1 
-			progress = 0.4 
-			efficiency = 50 
+			requested_factories = 1
+			progress = 0.4
+			efficiency = 50
 		}
-
-		add_equipment_production = { 
-			equipment = { 
-				type = motorized_equipment_1 
-				creator = "ITA" 
+		add_equipment_production = {
+			equipment = {
+				type = anti_air_equipment_1
+				creator = "ITA"
 			}
-
-			requested_factories = 2 
-			progress = 0.4 
-			efficiency = 50 
+			requested_factories = 1
+			progress = 0.3
+			efficiency = 50
 		}
+	add_equipment_production = {
+		equipment = {
+			type = gw_armored_car_equipment
+			creator = "ITA" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}	
 	}
+
 }
