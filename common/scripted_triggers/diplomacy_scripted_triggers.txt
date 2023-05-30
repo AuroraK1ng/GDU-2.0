@@ -1,5 +1,4 @@
 DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
- NOT = { ROOT = { has_idea = BRA_untrained_army } }
 	NOT = { date < 1939.9.1 }
 	NOT = { FROM = { tag = CZE } }
 	if = { limit = {ROOT = { tag = EFR   } } FROM = { the_axis = yes }         }
