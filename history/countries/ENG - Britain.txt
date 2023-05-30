@@ -56,13 +56,9 @@ if = {
 }
 
 load_oob = "ENG_Motorized"
-
 set_research_slots = 4
-
 set_stability = 0.6
 set_war_support = 0.1
-add_command_power = 20
-
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -246,7 +242,88 @@ if = {
 
 	add_to_tech_sharing_group = commonwealth_research
 }
+add_equipment_to_stockpile = {
+         type = artillery_equipment_1
+         amount = 10500
+         producer = ENG
+}  
+add_equipment_to_stockpile = {
+         type = support_equipment
+         amount = 3500
+         producer = ENG
+} 
+add_equipment_to_stockpile = {
+         type = anti_tank_equipment_1
+         amount = 2500
+         producer = ENG
+} 
+add_equipment_to_stockpile = {
+         type = infantry_equipment_1
+         amount = 55000
+         producer = ENG
+} 
+add_equipment_to_stockpile = {
+         type = motorized_equipment_1
+         amount = 1500
+         producer = ENG
+} 
 
+add_equipment_to_stockpile = {
+         type = light_tank_equipment_2
+         amount = 1440
+         producer = ENG
+} 
+
+add_equipment_to_stockpile = {
+	type = anti_air_equipment_1
+    amount = 3500
+    producer = ENG
+}
+add_equipment_to_stockpile = {
+	type = cv_nav_bomber_equipment_1
+    amount = 175
+    producer = ENG
+}
+add_equipment_to_stockpile = {
+	type = cv_fighter_equipment_1
+    amount = 75
+    producer = ENG
+}
+add_equipment_to_stockpile = {
+         type = fighter_equipment_1
+         amount = 500
+         producer = ENG
+}
+add_equipment_to_stockpile = {
+         type = fighter_equipment_0
+         amount = 500
+         producer = ENG
+}
+add_equipment_to_stockpile = {
+         type = CAS_equipment_1
+         amount = 300
+         producer = ENG
+}
+add_equipment_to_stockpile = {
+         type = tac_bomber_equipment_0
+         amount = 200
+         producer = ENG
+}
+add_equipment_to_stockpile = {
+         type = tac_bomber_equipment_1
+         amount = 200
+         producer = ENG
+}
+add_equipment_to_stockpile = {
+         type = heavy_fighter_equipment_1
+         amount = 100
+         producer = ENG
+}
+add_equipment_to_stockpile = {
+         type = nav_bomber_equipment_1
+         amount = 100
+         producer = ENG
+}
 1939.1.1 = {
 
 	add_political_power = 1198
