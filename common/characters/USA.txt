@@ -778,8 +778,8 @@ characters={
 		}
 	}
 
-	ernest_king_1={
-		name=ernest_king_1
+	USA_ernest_king={
+		name=USA_ernest_king
 		portraits={
 			navy={
 				small="GFX_idea_ernest_king"
@@ -790,18 +790,17 @@ characters={
 		}
 		advisor={
 			slot = navy_chief
-			idea_token = ernest_king_1
+			idea_token = ernest_king_1 
 			allowed = {
 				original_tag = USA
 			}
 			traits = {
 				anglophobe
-			}	
-			on_remove = { always = no }	
+			}
+			#on_remove = { USA = { add_ideas = chester_nimitz }	}
 			can_be_fired = no
 			cost = 0
-			
-			
+			#visible = { NOT ={ has_idea =  ernest_king } }
 		}
 		
 		navy_leader={
@@ -816,7 +815,7 @@ characters={
 		
 		
 	}
-	ernest_king_2={
+	ernest_king_2= {
 		name=ernest_king_2
 		portraits={
 			navy={

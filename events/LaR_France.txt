@@ -3611,14 +3611,14 @@ country_event = {
 	id = lar_communist_support.1
 	hidden = yes
 	trigger = {
-		has_idea = FRA_communist_cooperation
+		
 		communism > 0.15
 	}
 	fire_only_once = yes
 	immediate = {
 		swap_ideas = {
-			remove_idea = FRA_communist_cooperation
-			add_idea = FRA_communist_cooperation_2
+			remove_idea = 
+			add_idea = _2
 		}
 	}
 	mean_time_to_happen = { days = 5 }

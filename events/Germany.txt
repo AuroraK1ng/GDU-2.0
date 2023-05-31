@@ -1602,8 +1602,8 @@ country_event = {
 		CHI = {
 			country_event = { days = 1 id = china.2 }
 			effect_tooltip = {
-				remove_ideas = german_advisors
-				show_ideas_tooltip = german_advisors
+				
+				
 			}
 		}
 	}
@@ -1639,7 +1639,7 @@ country_event = {
 
 	trigger = {
 		tag = GER
-		CHI = { has_idea = german_advisors }
+		
 		has_opinion = { target = CHI value < -20 }
 	}
 
@@ -1648,7 +1648,7 @@ country_event = {
 	}
 
 	immediate = {
-		CHI = { remove_ideas = german_advisors }
+		
 	}
 
 	option = {
@@ -1670,7 +1670,7 @@ country_event = {
 
 	trigger = {
 		tag = GER
-		CHI = { has_idea = german_advisors }
+		
 		has_war_with = CHI
 	}
 
@@ -1679,7 +1679,7 @@ country_event = {
 	}
 
 	immediate = {
-		CHI = { remove_ideas = german_advisors }
+		
 	}
 
 	option = {
