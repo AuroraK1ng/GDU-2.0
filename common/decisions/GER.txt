@@ -4,20 +4,18 @@ GER_mefo_bills_category = {
 	GER_mefo_bills_mission = {
 
 		allowed = { always = no }
-
+		hidden = yes
 		icon = ger_mefo_bills
 
 		available = {
 			NOT = { has_government = democratic }
-			GER_can_delay_mefo_payment = yes
-			has_political_power > 0
-			hidden_trigger = { always = no }
 		}
 
 		#cost = GER_mefo_bill_counter?10
 
+		selectable_mission = yes
 		days_mission_timeout = 180
-		is_good = yes
+		is_good = no
 		fire_only_once = yes
 
 		cancel_trigger = {
@@ -31,1755 +29,3782 @@ GER_mefo_bills_category = {
 
 		days_remove = GER_extend_mefo_bills_days?0
 		remove_effect = {
-		}
-
-		complete_effect = {
-		}
-
-		timeout_effect = {
 			if = {
 				limit = {
-					has_country_flag = ger_has_cancelled_mefo
+					check_variable = { var = GER_mefo_bill_counter value = 15 compare = less_than }
 				}
-				GER_remove_mefo_bills = yes
-				#1
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 15 compare = less_than }
-					}
-					add_political_power = -20
-					add_timed_idea = { idea = GER_mefo_bills_ended days = 60 }
-				}
-				#2
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 20 compare = equals }
-					}
-					add_political_power = -40
-					add_timed_idea = { idea = GER_mefo_bills_ended days = 80 }
-				}
-				#3
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 30 compare = equals }
-					}
-					add_political_power = -60
-					add_timed_idea = { idea = GER_mefo_bills_ended days = 100 }
-				}
-				#4
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 40 compare = equals }
-					}
-					add_political_power = -80
-					add_timed_idea = { idea = GER_mefo_bills_ended days = 120 }
-				}
-				#5
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 50 compare = equals }
-					}
-					add_political_power = -100
-					add_timed_idea = { idea = GER_mefo_bills_ended days = 140 }
-				}
-				#6
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 60 compare = equals }
-					}
-					add_political_power = -120
-					add_timed_idea = { idea = GER_mefo_bills_ended days = 160 }
-				}
-				#7
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 70 compare = equals }
-					}
-					add_political_power = -140
-					add_timed_idea = { idea = GER_mefo_bills_ended days = 180 }
-				}
-				#8
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 80 compare = equals }
-					}
-					add_political_power = -160
-					add_timed_idea = { idea = GER_mefo_bills_ended days = 200 }
-				}
-				#9
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 90 compare = equals }
-					}
-					add_political_power = -180
-					add_timed_idea = { idea = GER_mefo_bills_ended days = 220 }
-				}
-				#10
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 100 compare = equals }
-					}
-					add_political_power = -200
-					add_timed_idea = { idea = GER_mefo_bills_ended days = 240 }
-				}
-				#11
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 110 compare = equals }
-					}
-					add_political_power = -220
-					add_timed_idea = { idea = GER_mefo_bills_ended days = 260 }
-				}
-				#12
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 120 compare = equals }
-					}
-					add_political_power = -240
-					add_timed_idea = { idea = GER_mefo_bills_ended days = 280 }
-				}
-				#13
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 130 compare = equals }
-					}
-					add_political_power = -260
-					add_timed_idea = { idea = GER_mefo_bills_ended days = 300 }
-				}
-				#14
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 140 compare = equals }
-					}
-					add_political_power = -280
-					add_timed_idea = { idea = GER_mefo_bills_ended days = 320 }
-				}
-				#15
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 150 compare = equals }
-					}
-					add_political_power = -300
-					add_timed_idea = { idea = GER_mefo_bills_ended days = 340 }
-				}
-				#16
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 160 compare = equals }
-					}
-					add_political_power = -320
-					add_timed_idea = { idea = GER_mefo_bills_ended days = 360 }
-				}
-				#17
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 170 compare = equals }
-					}
-					add_political_power = -340
-					add_timed_idea = { idea = GER_mefo_bills_ended days = 380 }
-				}
-				#18
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 180 compare = equals }
-					}
-					add_political_power = -360
-					add_timed_idea = { idea = GER_mefo_bills_ended days = 400 }
-				}
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 180 compare = greater_than }
-					}
-					add_political_power = -380
-					add_timed_idea = { idea = GER_mefo_bills_ended days = 420 }
-				}
+				set_variable = { var = GER_mefo_bill_counter value = 10 }
 			}
-			else = {
-				custom_effect_tooltip = GER_mefo_bills_mission_tt
-				custom_effect_tooltip = GER_mefo_bills_effect_in_days
-				hidden_effect = {
-					set_variable = { GER_extend_mefo_bills_days = days_mission_timeout@GER_mefo_bills_mission }
-					set_country_flag = paid_for_mefo
-				}
-				GER_mefo_bills_level_up = yes
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 15 compare = less_than }
-					}
-					hidden_effect = { set_variable = { var = GER_mefo_bill_counter value = 10 } }
-				}
-				add_to_variable = { var = GER_mefo_bill_counter value = 10 }
+			add_to_variable = { var = GER_mefo_bill_counter value = 10 }
 
-				hidden_effect = {
-					activate_mission = GER_mefo_bills_mission
-				}
+			hidden_effect = {
+				activate_mission = GER_mefo_bills_mission
 			}
 		}
-
-		ai_will_do = {
-			factor = 200
-		}
-	}
-
-	GER_cancel_mefos = {
-
-		icon = ger_mefo_bills
-
-		available = {
-			hidden_trigger = {
-				NOT = { has_country_flag = ger_has_cancelled_mefo }
-				NOT = {
-					OR = {
-						NOT = { GER_has_mefo_bills = yes }
-						has_idea = GER_mefo_bills_ended
-					}
-				}
-			}
-		}
-
-		cost = 0
-
-		fire_only_once = no
-
-		visible = {
-			hidden_trigger = {
-				NOT = { has_country_flag = ger_has_cancelled_mefo }
-				NOT = {
-					OR = {
-						NOT = { GER_has_mefo_bills = yes }
-						has_idea = GER_mefo_bills_ended
-					}
-				}
-			}
-		}
-
-		cancel_if_not_visible = yes
-
-		remove_effect = {
-			set_country_flag = ger_has_cancelled_mefo
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-	}
-
-	GER_renew_mefos = {
-
-		icon = ger_mefo_bills
-
-		available = {
-			hidden_trigger = {
-				has_country_flag = ger_has_cancelled_mefo
-				NOT = {
-					OR = {
-						NOT = { GER_has_mefo_bills = yes }
-						has_idea = GER_mefo_bills_ended
-					}
-				}
-			}
-		}
-
-		cost = 0
-
-		fire_only_once = no
-
-		visible = {
-			hidden_trigger = {
-				has_country_flag = ger_has_cancelled_mefo
-				NOT = {
-					OR = {
-						NOT = { GER_has_mefo_bills = yes }
-						has_idea = GER_mefo_bills_ended
-					}
-				}
-			}
-		}
-
-		cancel_if_not_visible = yes
-
-		remove_effect = {
-			clr_country_flag = ger_has_cancelled_mefo
-		}
-
-		ai_will_do = {
-			factor = 200
-		}
-	}
-}
-
-operations = {
-
-	GER_barbarossa_mission = {
-
-		icon = generic_operation
-
-		allowed = {
-			always = no
-			#added through on_action
-		}
-
-		available = {
-			219 = { is_controlled_by_ROOT_or_ally = yes }
-			195 = { is_controlled_by_ROOT_or_ally = yes }
-			202 = { is_controlled_by_ROOT_or_ally = yes }
-			217 = { is_controlled_by_ROOT_or_ally = yes }
-		}
-
-		days_mission_timeout = 180
-		fire_only_once = yes
-
-		activation = {
-
-		}
-
-		is_good = no
 
 		complete_effect = {
-			add_war_support = 0.1
-			custom_effect_tooltip = barbarossa_mission_tt
+			custom_effect_tooltip = GER_mefo_bills_mission_tt
+			custom_effect_tooltip = GER_mefo_bills_effect_in_days
+			hidden_effect = {
+				set_variable = { GER_extend_mefo_bills_days = days_mission_timeout@GER_mefo_bills_mission }
+			}
 		}
 
 		timeout_effect = {
-
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-}
-
-GER_case_anton_category = {
-
-	GER_case_anton = {
-
-		icon = generic_operation
-
-		available = {
-			original_tag = GER
-			has_war = yes
-			has_government = fascism
-			any_country_with_original_tag = {
-				original_tag_to_check = FRA
-				has_government = fascism
-				OR = {
-					is_subject_of = GER
-					has_focus_tree = vichy_french_focus
-				}
-				NOT = { has_war_with = GER }
-				NOT = { has_country_flag = case_anton }
-				custom_trigger_tooltip = {
-					tooltip = GER_case_anton_tt2
-					count_triggers = {
-						amount = 3 # lost control of ca half french north africa
-						458 = { CONTROLLER = { has_war_with = ROOT } }
-						459 = { CONTROLLER = { has_war_with = ROOT } }
-						460 = { CONTROLLER = { has_war_with = ROOT } }
-						461 = { CONTROLLER = { has_war_with = ROOT } }
-						462 = { CONTROLLER = { has_war_with = ROOT } }
-						513 = { CONTROLLER = { has_war_with = ROOT } }
-						665 = { CONTROLLER = { has_war_with = ROOT } }
-					}
-				}
-			}
-			divisions_in_state = { state = 31 size < 1 }
-			divisions_in_state = { state = 25 size < 1 }
-			divisions_in_state = { state = 22 size < 1 }
-			divisions_in_state = { state = 21 size < 1 }
-			divisions_in_state = { state = 851 size < 1 }
-			divisions_in_state = { state = 32 size < 1 }
-			divisions_in_state = { state = 22 size < 1 }
-			divisions_in_state = { state = 26 size < 1 }
-			divisions_in_state = { state = 33 size < 1 }
-			divisions_in_state = { state = 20 size < 1 }
-			OR = {
-				ITA = { owns_state = 735 }
-				divisions_in_state = { state = 735 size < 1 }
-			}
-		}
-
-		cost = 50
-		fire_only_once = yes
-
-		visible = {
-			original_tag = GER
-			has_government = fascism
-            VIC = {
-				has_government = fascism
-				NOT = { has_war_with = GER }
-				owns_state = 627
-			}
-		}
-		ai_will_do = {
-			factor = 25
-
-			modifier = {
-				factor = 0
-				VIC = { is_ai = no }
-			}
-		}
-		complete_effect = {
-			custom_effect_tooltip = GER_case_anton_tt
+			custom_effect_tooltip = GER_mefo_bills_mission_tt
+			custom_effect_tooltip = GER_mefo_bills_effect_in_days
 			hidden_effect = {
-				random_other_country = {
-					limit = {
-						original_tag = FRA
-						has_government = fascism
-						OR = {
-							is_subject_of = GER
-							has_focus_tree = vichy_french_focus
-						}
-					}
-					set_country_flag = case_anton
-					activate_mission = FRA_case_anton_mission
-				}
+				set_variable = { GER_extend_mefo_bills_days = days_mission_timeout@GER_mefo_bills_mission }
 			}
+			if = {
+				limit = {
+					check_variable = { var = GER_mefo_bill_counter value = 15 compare = less_than }
+				}
+				set_variable = { var = GER_mefo_bill_counter value = 10 }
+			}
+			add_to_variable = { var = GER_mefo_bill_counter value = 10 }
+
+			hidden_effect = {
+				activate_mission = GER_mefo_bills_mission
+			}
+		}
+
+
+		ai_will_do = {
+			factor = 200
 		}
 	}
 }
 
-#Category only allowed for GER
-GER_reichskommissariats = {
 
-	GER_reichskommissariat_norwegen = {
+operations = {
+	
 
-
-		icon = ger_reichskommissariats
-
-
+	GER_integrate_StuG = {
+		ai_will_do = { factor = 0 }
+		cost = 25
+		visible = {
+			date > 1941.1.1
+		}
+		allowed = {
+			original_tag = GER
+		}
 		available = {
 
-			has_completed_focus = GER_form_the_reichskommissariats
-
-			has_government = fascism
-
-			controls_state = 110
-
-			controls_state = 142
-
-			controls_state = 143
-
-			controls_state = 144
-
 		}
-
-
-		cost = 0
-
-
 		fire_only_once = yes
-
-
-		ai_will_do = {
-
-			factor = 0
-
-			modifier = {
-
-				add = 1
-
-				ENG = { has_capitulated = yes }
-
-			}
-
-		}
-
-
-		visible = {
-
-			has_completed_focus = GER_form_the_reichskommissariats
-
-			has_government = fascism
-
-		}
-
-
 		complete_effect = {
 
-			every_state = {
-
-                limit = {
-
-                    is_core_of = NOR
-
-                    is_controlled_by = GER
-
-                }
-
-                add_compliance = 55
-
-		    }
-
-		}
-
-	}
-
-
-	GER_reichskommissariat_niederlande = {
-
-
-		icon = ger_reichskommissariats
-
-
-		available = {
-
-			has_completed_focus = GER_form_the_reichskommissariats
-
-			has_government = fascism
-
-			controls_state = 7
-
-			controls_state = 35
-
-			controls_state = 36
-
-		}
-
-
-		cost = 0
-
-
-		fire_only_once = yes
-
-
-		ai_will_do = {
-
-			factor = 0
-
-			modifier = {
-
-				add = 1
-
-				ENG = { has_capitulated = yes }
-
+			GER = {
+				set_technology = {
+					special_StuG_tech_GER = 1
+				}
 			}
-
-		}
-
-
-		visible = {
-
-			has_completed_focus = GER_form_the_reichskommissariats
-
-			has_government = fascism
-
-		}
-
-
-		complete_effect = {
-
-			every_state = {
-
-                limit = {
-
-                    is_core_of = HOL
-
-                    is_controlled_by = GER
-
-                }
-
-                add_compliance = 55
-
-		    }
-
-		}
-
-	}
-
-
-	GER_reichskommissariat_belgien_nordfrankreich = {
-
-
-		icon = ger_reichskommissariats
-
-
-		available = {
-
-			has_completed_focus = GER_form_the_reichskommissariats
-
-			has_government = fascism
-
-			controls_state = 6
-
-			controls_state = 29
-
-			controls_state = 34
-
-		}
-
-
-		cost = 0
-
-
-		fire_only_once = yes
-
-
-		ai_will_do = {
-
-			factor = 0
-
-			modifier = {
-
-				add = 1
-
-				ENG = { has_capitulated = yes }
-
-			}
-
-		}
-
-
-		visible = {
-
-			has_completed_focus = GER_form_the_reichskommissariats
-
-			has_government = fascism
-
-		}
-
-
-		complete_effect = {
-
-			every_state = {
-
-                limit = {
-
-                    is_core_of = BEL
-
-                    is_controlled_by = GER
-
-                }
-
-                add_compliance = 55
-
-			}
-
-			29 = { add_compliance = 55 }
-
-		}
-
-		
-	}
-
-
-	GER_reichskommissariat_ostland = {
-
-		icon = ger_reichskommissariats
-
-
-		available = {
-
-			has_completed_focus = GER_form_the_reichskommissariats
-
-			has_government = fascism
-
 			
-			controls_state = 97
-
-			controls_state = 94
-
-			controls_state = 95
-
-			controls_state = 96
-
-			controls_state = 194
-
-			controls_state = 204
-
-			controls_state = 206
-
-			controls_state = 207
-
-			controls_state = 241
-
-			controls_state = 11
-
-			controls_state = 784
-
-			controls_state = 189
-
-			controls_state = 12
-
-			controls_state = 190
-
-			controls_state = 13
-
-			controls_state = 191
-
-			controls_state = 814
-
-			controls_state = 815
-
-			controls_state = 809
-
-			controls_state = 808
-
-			controls_state = 810
-
-			controls_state = 813
-
-			controls_state = 812
-
-			controls_state = 811
-
+			
+			
 		}
-
-
-		cost = 0
-
-
-		fire_only_once = yes
-
-
-		visible = {
-
-			has_completed_focus = GER_form_the_reichskommissariats
-
-			has_government = fascism
-
-		}
-
-
-		complete_effect = {
-
-			97 = { add_compliance = 55 }
-
-			94 = { add_compliance = 55 }
-
-			95 = { add_compliance = 55 }
-
-			96 = { add_compliance = 55 }
-
-			194 = { add_compliance = 55 }
-
-			204 = { add_compliance = 55 }
-
-			206 = { add_compliance = 55 }
-
-			207 = { add_compliance = 55 }
-
-			241 = { add_compliance = 55 }
-
-			11 = { add_compliance = 55 }
-
-			784 = { add_compliance = 55 }
-
-			189 = { add_compliance = 55 }
-
-			12 = { add_compliance = 55 }
-
-			190 = { add_compliance = 55 }
-
-			13 = { add_compliance = 55 }
-
-			191 = { add_compliance = 55 }
-
-			814 = { add_compliance = 55 }
-
-			815 = { add_compliance = 55 }
-
-			809 = { add_compliance = 55 }
-
-			808 = { add_compliance = 55 }
-
-			810 = { add_compliance = 55 }
-
-			813 = { add_compliance = 55 }
-
-			812 = { add_compliance = 55 }
-
-			811 = { add_compliance = 55 }
-
-		}
-
-	}
-
-
-	GER_reichskommissariat_ukraine = {
-
-
-		icon = ger_reichskommissariats
-
-
-		available = {
-
-			has_completed_focus = GER_form_the_reichskommissariats
-
-			has_government = fascism
-
-
-			controls_state = 93
-
-			controls_state = 91
-
-			controls_state = 89
-
-			controls_state = 199
-
-			controls_state = 201
-
-			controls_state = 198
-
-			controls_state = 202
-
-			controls_state = 193
-
-			controls_state = 192
-
-			controls_state = 203
-
-			controls_state = 197
-
-			controls_state = 225
-
-			controls_state = 259
-
-			controls_state = 226
-
-			controls_state = 196
-
-			controls_state = 200
-
-			controls_state = 221
-
-			controls_state = 228
-
-			controls_state = 227
-
-		}
-
-
-		cost = 0
-
-
-		fire_only_once = yes
-
-
-		visible = {
-
-			has_completed_focus = GER_form_the_reichskommissariats
-
-			has_government = fascism
-
-		}
-
-
-		complete_effect = {
-
-			93 = { add_compliance = 55 }
-
-			91 = { add_compliance = 55 }
-
-			89 = { add_compliance = 55 }
-
-			199 = { add_compliance = 55 }
-
-			201 = { add_compliance = 55 }
-
-			198 = { add_compliance = 55 }
-
-			202 = { add_compliance = 55 }
-
-			193 = { add_compliance = 55 }
-
-			192 = { add_compliance = 55 }
-
-			203 = { add_compliance = 55 }
-
-			197 = { add_compliance = 55 }
-
-			225 = { add_compliance = 55 }
-
-			259 = { add_compliance = 55 }
-
-			226 = { add_compliance = 55 }
-
-			196 = { add_compliance = 55 }
-
-			200 = { add_compliance = 55 }
-
-			221 = { add_compliance = 55 }
-
-			228 = { add_compliance = 55 }
-
-			227 = { add_compliance = 55 }
-
-		}
-
 	}
 
 }
 
 political_actions = {
 
-	# Reinstate Wilhelm IV into the line of succession
-	reinstate_wilhelm_iv_succession_rights = {
+#bloat
 
-		allowed = {
-			original_tag = GER
-		}
-
-		available = {
-
-		}
-
-		cost = 100
-
+NOR_sudoku = {
+		icon = border_war
+		allowed = {	original_tag = NOR	}
+		available = { controls_state = 110 }
 		fire_only_once = yes
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		visible = {
-			has_war = no
-			has_government = neutrality
-			has_country_flag = backed_down_netherlands_kaiser
-		}
-
-		complete_effect = {
-			add_stability = -0.10
-			add_popularity = { ideology = neutrality popularity = -0.05 }
-			custom_effect_tooltip = reinstate_wilhelm_iv_succession_rights_tt
-			hidden_effect = {
-				set_country_flag = reinstated_wilhelm_iv_succession_rights
-			}
-		}
-	}
-
-	# Agnatic-Cognatic Primogeniture
-	modernize_the_succession_laws = {
-
-		allowed = {
-			original_tag = GER
-		}
-
-		available = {
-
-		}
-
-		cost = 150
-
-		fire_only_once = yes
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		visible = {
-			has_war = no
-			has_government = neutrality
-			has_country_flag = reinstated_wilhelm_iv_succession_rights
-		}
-
-		complete_effect = {
-			add_stability = 0.05
-			custom_effect_tooltip = modernize_the_succession_laws_tt
-			hidden_effect = {
-				set_country_flag = modernized_succession_laws
-			}
-		}
-	}
-
-	recall_von_lettow_vorbeck = {
-
-		allowed = {
-			original_tag = GER
-		}
-		available = {
-			has_civil_war = no
-		}
-		visible = {
-			OR = {
-				has_country_leader = { ruling_only = yes character = GER_wilhelm_ii }
-				has_country_leader = { ruling_only = yes character = GER_wilhelm_iii }
-				has_country_leader = { ruling_only = yes character = GER_victoria }
-			}
-		}
-		cost = 25
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 1
-		}
-		complete_effect = {
-			create_corps_commander = {
-				name = "Paul von Lettow-Vorbeck"
-				gfx = GFX_portrait_ger_von_lettow_vorbeck
-				traits = { trickster war_hero media_personality jungle_rat}
-				skill = 4
-				id = 499
-				attack_skill = 3
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 5
-			}
-		}
-	}
-
-	GER_vichy_alu = {
-
-		icon = generic_operation
-
-		available = {
-			original_tag = GER
-			has_war = yes
-			has_government = fascism
-            VIC = {
-				has_government = fascism
-				NOT = { has_war_with = GER }
-				owns_state = 26
-			}
-		}
-
 		cost = 0
-		fire_only_once = yes
-
-		visible = {
-			original_tag = GER
-			has_war = yes
-			has_government = fascism
-            VIC = {
-				has_government = fascism
-				NOT = { has_war_with = GER }
-				owns_state = 26
-			}
-		}
-
 		complete_effect = {
-			VIC = {
-				give_resource_rights = { receiver = GER state = 20 }
-				give_resource_rights = { receiver = GER state = 32 }
-				give_resource_rights = { receiver = GER state = 22 }
-				give_resource_rights = { receiver = GER state = 21 }
-			}
-		}
-	}
-
-	# Safety regulations
-	GER_sharpen_air_safety_regulations = {
-
-		allowed = {
-			original_tag = GER
-			has_dlc = "Waking the Tiger"
-		}
-
-		available = {
-
-		}
-
-		cost = 50
-
-		fire_only_once = yes
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		visible = {
-			has_government = neutrality
-		}
-
-		complete_effect = {
-			add_timed_idea = { idea = GER_air_safety_regulations days = 1095 }
-			set_global_flag = GER_air_safety_regulations_flag
-		}
-	}
+    GER = { transfer_state = 110 }
+	GER = { transfer_state = 142 }
+	GER = { transfer_state = 143 }
+	GER = { transfer_state = 144 }
+	GER = { transfer_state = 790 }
+	transfer_state = 844
 }
+}  
+			 
+			 
+			
+	
 
-foreign_politics = {
-
-	# Titles Deprivation Act 1917
-	request_restoration_of_british_titles = {
-
+playable_norway = {
+		ai_will_do = { factor = 0 }
+		cost = 0
 		allowed = {
-			original_tag = GER
+			original_tag = NOR
 		}
 
-		available = {
-			ENG = { has_opinion = { target = GER value > 99 } }
-			custom_trigger_tooltip = {
-				tooltip = hindenburg_destroyed_tt
-				NOT = { has_global_flag = hindenburg_destroyed }
-			}
-		}
-
-		cost = 150
-
-		fire_only_once = yes
-
-		ai_will_do = {
-			factor = 0
-		}
+		icon = GFX_decision_ger_reichskommissariats
 
 		visible = {
-			has_war = no
-			has_government = neutrality
-			has_completed_focus = GER_ally_the_shade
-			has_country_flag = modernized_succession_laws
+			country_exists = NOR
+			date > 1936.1.1
+			NOR = { is_ai = no }			
 		}
-
-		complete_effect = {
-			ENG = { country_event = { id = wtt_germany.999 days = 1 } }
-			custom_effect_tooltip = request_restoration_of_british_titles_tt
-			hidden_effect = { set_global_flag = hindenburg_event_in_progress }
-		}
-	}
-
-	GER_request_polish_war_participation = {
-
-		icon = generic_prepare_civil_war
-
-		allowed = {
-			original_tag = GER
-		}
-
-		available = {
-			has_war_with = SOV
-			NOT = { is_in_faction_with = POL }
-		}
-
-		cost = 50
-
 		fire_only_once = yes
-
-		ai_will_do = {
-			factor = 200
-		}
-
-		visible = {
-			has_country_flag = poland_traded_danzig
-			has_completed_focus = GER_tackle_the_communist_threat
-		}
-
 		complete_effect = {
-			POL = { country_event = { id = wtt_germany.65 hours = 6 } }
-		}
+		
+		NOR = { remove_ideas = GDU_neutrality } 
+		
+		
+#		7 = {
+#				add_extra_state_shared_building_slots = 3
+#				add_building_construction = {
+#					type = industrial_complex
+#					level = 3
+#					instant_build = yes }
+#					}
+#					
+#		10 = {
+#				add_extra_state_shared_building_slots = 5
+#				add_building_construction = {
+#					type = industrial_complex
+#					level = 5
+#					instant_build = yes }
+#					}
+#					
+#					8 = {
+#				add_extra_state_shared_building_slots = 2
+#				add_building_construction = {
+#					type = industrial_complex
+#					level = 2
+#					instant_build = yes }
+#					}
+#					
+#					184 = {
+#				add_extra_state_shared_building_slots = 3
+#				add_building_construction = {
+#					type = arms_factory
+#					level = 3
+#					instant_build = yes }
+#					}
+#					45 = {
+#				add_extra_state_shared_building_slots = 3
+#				add_building_construction = {
+#					type = arms_factory
+#					level = 3
+#					instant_build = yes }
+#					}
+#					764 = {
+#				add_extra_state_shared_building_slots = 3
+#				add_building_construction = {
+#					level = 3
+#					instant_build = yes }
+#					}
+#					516 = {
+#				add_extra_state_shared_building_slots = 1
+#				add_building_construction = {
+#					type = industrial_complex
+#					level = 1
+#					instant_build = yes }
+#					}
 
-	}
-}
-
-#Category only allowed for GER
-GER_military_buildup = {
-
-	GER_plan_z = {
-
-		icon = generic_naval
-
-		available = {
-			has_navy_size = {
-				unit = battleship
-				size > 9
-			}
-			has_navy_size = {
-				unit = battle_cruiser
-				size > 2
-			}
-			has_navy_size = {
-				unit = carrier
-				size > 3
-			}
-			has_navy_size = {
-				unit = heavy_cruiser
-				size > 19
-			}
-			has_navy_size = {
-				unit = light_cruiser
-				size > 19
-			}
-			has_navy_size = {
-				unit = destroyer
-				size > 99
-			}
-		}
-
-		fire_only_once = yes
-		days_mission_timeout = 1800
-		is_good = no
-		activation = {
-			has_completed_focus = GER_plan_z
-		}
 
 
-		visible = {
-			has_completed_focus = GER_plan_z
-		}
-
-		complete_effect = {
-			add_war_support = 0.05
-			navy_experience = 150
-		}
-
-
-	}
-
-	GER_jaegernotprogramm = {
-
-		icon = generic_air
-
-		available = {
-			has_war = yes
-			AND = {
-				has_deployed_air_force_size = {
-					type = fighter
-					size < 750
-				}
-				has_equipment = {
-					small_plane_airframe < 250
-				}
-			}
-			NOT = {
-				has_idea = GER_jaegernotprogramm
-			}
-		}
-
-		cost = 50
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 1
-		}
-
-		visible = {
-			has_war = yes
-			AND = {
-				has_deployed_air_force_size = {
-					type = fighter
-					size < 750
-				}
-				has_equipment = {
-					small_plane_airframe < 250
-				}
-			}
-			NOT = {
-				has_idea = GER_jaegernotprogramm
-			}
-		}
-
-		complete_effect = {
-			add_stability = -0.05
-			add_war_support = -0.05
-			add_timed_idea = { idea = GER_jaegernotprogramm days = 90 }
-		}
-	}
-}
-
-special_projects = {
-	GER_begin_heavy_water_production = {
-		allowed = {
-			original_tag = GER
-			has_dlc = "La Resistance"
-		}
-		available = {
-			110 = {
-				CONTROLLER = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
+747 = {
+				add_extra_state_shared_building_slots = 7
+				add_building_construction = {
+					type = industrial_complex
+					level = 7
+					instant_build = yes }
 					}
-				}
-			}
-		}
-		visible = { has_tech = atomic_research }
-		cost = 0
-		ai_will_do = {
-			factor = 5
-		}
-		cancel_trigger = { NOT = { has_global_flag = GER_heavy_water_production_underway } } #can be removed via intelligence ops
-		days_remove = 365
-		remove_effect = {
-			add_tech_bonus = {
-				name = GER_heavy_water
-				category = nuclear
-				uses = 2
-				bonus = 2
-			}
-		}
-		complete_effect = { set_global_flag = GER_heavy_water_production_underway }
+
 	}
-	GER_dismantle_maginot = {
-
-		icon = generic_construction
-
-		available = {
-			#has_war = yes
-			controls_state = 28
-			if = {
-				limit = {
-					FRA = { has_completed_focus = FRA_extend_the_maginot_line }
-				}
-				controls_state = 18
-				controls_state = 29
-			}
+	}
+playable_siam = {
+		ai_will_do = { factor = 0 }
+		cost = 0
+		allowed = {
+			original_tag = SIA
 		}
 
-		cost = 50
-		fire_only_once = yes
+		icon = GFX_decision_ger_reichskommissariats
 
-		ai_will_do = {
-			factor = 0
-		}
 		visible = {
-			#has_war = yes
-			controls_state = 28
-			if = {
-				limit = {
-					FRA = { has_completed_focus = FRA_extend_the_maginot_line }
-				}
-				controls_state = 18
-				controls_state = 29
-			}
+			country_exists = SIA
+			SIA = { is_ai = no }		
 		}
-		days_remove = 180
-		modifier = {
-			civilian_factory_use = 5
-		}
-		remove_effect = {
-			28 = {
-				set_building_level = {
-					type = bunker
+		fire_only_once = yes
+		complete_effect = {
+		
+		SIA = { remove_ideas = GDU_neutrality } 
+		
+		289 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes }
+					
+					}
+		289 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes }
+					}
+					
+		518 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes }
+					}
+					
+					
+		518 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
 					level = 2
-					province = {
-						all_provinces = yes
-						limit_to_border = no
-						level > 2
+					instant_build = yes }
 					}
+					
+		723 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes }
+					}
+					
+					
+		787 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes }
+					}
+					
+					
+		787 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes }
+					}
+	}
+	}
+
+# end of bloat
+
+	mini_GDU = {
+		ai_will_do = { factor = 0 }
+		cost = 0
+		visible = {
+			date < 1936.1.2
+		}
+		allowed = {
+			original_tag = GER
+		}
+		available = {
+			HUN = { is_ai = yes }
+			BUL = { is_ai = yes }
+			SPR = { is_ai = yes }
+			NZL = { is_ai = yes }
+			SAF = { is_ai = yes }
+			CAN = { is_ai = yes }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_global_flag = mini_GDU
+			ROM = {
+				annex_country = { target = BUL transfer_troops = yes }
+				add_research_slot = 1                         #Romania gets its research slot early, doesn't get the focus one, however (similar to UK). This may allow it to research a few more things for some more variety.
+				add_state_core = 77
+				add_state_core = 211
+				add_state_core = 212
+				add_state_core = 48
+				add_state_core = 184
+				add_state_core = 731
+				add_state_core = 106
+			}
+			GER = {
+				annex_country = { target = HUN transfer_troops = yes }
+				add_state_core = 155
+				add_state_core = 154
+				add_state_core = 43
+			}
+			SPR = {
+				give_resource_rights = { receiver = GER state = 169 }
+				give_resource_rights = { receiver = ROM state = 170 }
+				give_resource_rights = { receiver = ITA state = 174 }
+				give_resource_rights = { receiver = ITA state = 171 }
+				give_resource_rights = { receiver = GER state = 169 }
+				give_resource_rights = { receiver = GER state = 169 }
+				give_resource_rights = { receiver = ROM state = 165 }
+				give_resource_rights = { receiver = ITA state = 166 }
+				give_resource_rights = { receiver = ITA state = 172 }
+				give_resource_rights = { receiver = ITA state = 41 }
+				give_resource_rights = { receiver = GER state = 173 }
+
+			}
+			AST = {
+				annex_country = { target = NZL transfer_troops = yes }
+				add_research_slot = 1                         #Australia gets its research slot early, doesn't get the focus one, however (similar to UK). This may allow it to research a few more things for some more variety.
+				add_state_core = 723
+				add_state_core = 284
+			}
+			
+			ENG = {
+				add_research_slot = 1                         #UK gets 1 more research slot since it has to research more stuff with fewer minors. But can't do the "complete commitment" focus to get the extra research slot after the war starts, so effectively UK is getting that research slot early.
+				annex_country = { target = CAN transfer_troops = yes }           # Annex Canada
+				annex_country = { target = SAF transfer_troops = yes }           # Annex South Africa
+				add_ideas = UK_mini_GDU_manpower                                 # Instead of getting cores, UK gets a manpower national spirit for annexing Canada/South Africa. This is so that you don't get sealion bonus in Canada/South Africa
+			}
+					# add some of the infra/mils/civs from Hungary focus tree, though not all (about half)
+			43 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				add_resource = {
+					type = aluminium
+					amount = 16
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}				
+			}
+			155 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}				
+			}
+			154 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}				
+			}			
+			64 = {
+				add_resource = {
+					type = aluminium
+					amount = 6
 				}
 			}
-			if = {
-				limit = {
-					FRA = { has_completed_focus = FRA_extend_the_maginot_line }
+			# add some of the infra/mils/civs from Bulgaria focus tree, though not all (about half)	
+			212 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
 				}
-				18 = {
-					set_building_level = {
-						type = bunker
-						level = 2
-						province = {
-							all_provinces = yes
-							limit_to_border = no
-							level > 2
-						}
-					}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
-				29 = {
-					set_building_level = {
-						type = bunker
-						level = 2
-						province = {
-							all_provinces = yes
-							limit_to_border = no
-							level > 2
-						}
-					}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}				
+			}
+			48 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}					
+			}
+			add_resource = {
+				type = aluminium
+				amount = 6
+				state = 211
+			}
+			add_resource = {
+				type = oil
+				amount = 10
+				state = 211
+			}
+			add_resource = {
+				type = steel
+				amount = 16
+				state = 48
+			}
+			add_resource = {
+				type = tungsten
+				amount = 8
+				state = 48
+			}
+			GER = {            # some extra basic inf equip to make it easier to throw up some extra basic low quality garrisons
+				add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 10000 producer = GER }
+			}
+			ITA = {
+				add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 10000 producer = ITA }
+			}
+			ROM = {
+				add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 5000 producer = ROM }
+			}
+			# Canada focus infra/factories/etc
+			276 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}						
+			}
+			468 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}			
+			}			
+			682 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}				
+			}
+			467 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
 				}
 			}
-			if = {
-				limit = {
-					has_idea = FRA_protected_by_the_maginot_line
+			469 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
 				}
-				remove_ideas = FRA_protected_by_the_maginot_line
+			}
+			473 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}			
+			467 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}				
+			}				
+			682 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}			
+			}
+			470 = {
+				add_resource = {
+					type = oil
+					amount = 15
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}				
+			}
+			471 = {
+				add_resource = {
+					type = oil
+					amount = 15
+				}
+				add_resource = {
+					type = steel
+					amount = 20
+				}				
+			}
+			683 = {
+				add_resource = {
+					type = oil
+					amount = 10
+				}
+				add_resource = {
+					type = chromium
+					amount = 30
+				}				
+			}
+			472 = {
+				add_resource = {
+					type = steel
+					amount = 20
+				}			
+			}
+			682 = {
+				add_resource = {
+					type = steel
+					amount = 50
+				}				
+			}
+			466 = {
+				add_resource = {
+					type = steel
+					amount = 30
+				}						
+			}
+			468 = {
+				add_resource = {
+					type = steel
+					amount = 30
+				}				
+			}	
+			682 = {
+				add_resource = {
+					type = aluminium
+					amount = 100
+				}			
+			}
+			466 = {
+				add_resource = {
+					type = aluminium
+					amount = 30
+				}					
+			}
+			468 = {
+				add_resource = {
+					type = aluminium
+					amount = 30
+				}
+			}			
+			470 = {
+				add_resource = {
+					type = oil
+					amount = 36
+				}
+			}
+			# South Africa focus factories/resources/etc
+			275 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 16
+				}	
+			}
+			# New Zealand focus factories/resources/etc
+			284 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 35
+				}
+				add_resource = {
+					type = oil
+					amount = 20
+				}
+			}
+
+			723 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}			
+			
+			
+			
+		}
+	}
+
+	Spanish_resource_rights = {
+		ai_will_do = { factor = 0 }
+		cost = 0
+		allowed = {
+			original_tag = GER
+		}
+		available = {
+			SPR = { is_ai = yes }
+			date > 1939.1.1
+		}
+		fire_only_once = yes
+		complete_effect = {
+			SPR = {
+				give_resource_rights = { receiver = GER state = 169 }
+				give_resource_rights = { receiver = ROM state = 170 }
+				give_resource_rights = { receiver = ITA state = 174 }
+				give_resource_rights = { receiver = ITA state = 171 }
+				give_resource_rights = { receiver = ROM state = 165 }
+				give_resource_rights = { receiver = ITA state = 166 }
+				give_resource_rights = { receiver = ITA state = 172 }
+				give_resource_rights = { receiver = ITA state = 41 }
+				give_resource_rights = { receiver = GER state = 173 }
 			}
 		}
+	}
+}
+
+operations = {
+
+
+
+	annex_bulgaria = {
+		ai_will_do = { factor = 0 }
+		cost = 0
+		allowed = {
+			original_tag = GER
+			
+		}
+		available = {
+			country_exists = BUL
+			date > 1939.1.1
+			GER = { has_war = yes }
+			BUL = { is_ai = yes }
+		}
+
+		icon = GFX_decision_ger_reichskommissariats
+
+		visible = {
+			always = yes	
+		}
+		fire_only_once = yes
 		complete_effect = {
-			if = {
-				limit = { FRA = { has_completed_focus = FRA_extend_the_maginot_line } }
-				add_timed_idea = { idea = GER_dismantle_maginot days = 270 }
-				else = {
-					add_timed_idea = { idea = GER_dismantle_maginot days = 180 }
+			GER = {
+				add_ideas = annex_bulgaria_idea
+				annex_country = { target = BUL transfer_troops = yes }
+				add_timed_idea = { idea = GDU_minor_annexation_efficiency days = 30 }
+				if = {
+					limit = {
+						has_global_flag = bulgaria_started_ai
+					}
+					add_state_core = 77
+					add_state_core = 211
+					add_state_core = 212
+					add_state_core = 48
+					add_state_core = 184
+					add_state_core = 731
+					add_state_core = 106		
 				}
 			}
 		}
 	}
-	GER_dismantle_czechoslovakian_forts = {
 
-		icon = generic_construction
+	Operation_Panzerfaust = {
+		ai_will_do = { factor = 0 }
+		cost = 0
+		allowed = {	
+			original_tag = GER
+		}
+		available = {	country_exists = HUN
+			date > 1939.1.1
+			GER = { has_war = yes }
+			HUN = { is_ai = yes }
+			 }
+		icon = GFX_decision_ger_reichskommissariats
 
-		available = {
-			#has_war = yes
-			controls_state = 69 # Sudetenland
-			controls_state = 74 # Eastern Sudetenland
-			controls_state = 9 # Bohemia
-			controls_state = 75 # Moravia
+		visible = {
+			always = yes					
+		}
+		fire_only_once = yes
+		complete_effect = {
+			GER = {
+				annex_country = { target = HUN transfer_troops = yes }
+				add_timed_idea = { idea = GDU_minor_annexation_efficiency days = 30 }
+				if = {
+					limit = {
+						has_global_flag = hungary_started_ai
+					}
+					add_state_core = 155
+					add_state_core = 154
+					add_state_core = 43				
+				}
+			}	
+		}
+	}
+
+	Puppet_ROM = {
+		ai_will_do = { factor = 0 }
+		cost = 0
+		allowed = {
+			original_tag = GER
+				
+		}
+		available = { country_exists = ROM
+			date > 1939.1.1
+			GER = { has_war = yes }
+			ROM = { is_ai = yes } 
+			}
+		icon = GFX_decision_ger_reichskommissariats
+
+		fire_only_once = yes
+		visible = {
+			always = yes					
 		}
 
-		cost = 50
+		complete_effect = {
+			ROM = {
+				give_resource_rights = { receiver = GER state = 46 }
+				remove_resource_rights = 53
+			}		
+			GER = {
+				annex_country = { target = ROM transfer_troops = yes }
+				add_timed_idea = { idea = GDU_minor_annexation_efficiency days = 30 }
+				if = {
+					limit = {
+						has_global_flag = romania_started_ai
+					}
+					add_state_core = 78
+					add_state_core = 766
+					add_state_core = 79
+					add_state_core = 80
+					add_state_core = 46
+					add_state_core = 77
+					add_state_core = 76
+					add_state_core = 84
+					add_state_core = 81
+					add_state_core = 82
+					add_state_core = 83			
+				}
+			}
+		}
+	}
+
+	Puppet_Finland = {
+		ai_will_do = { factor = 0 }
+		cost = 0
+		fire_only_once = yes
+		allowed = {
+			original_tag = GER
+		}
+		available = {	not = { has_global_flag = mini_GDU }
+			FIN = { is_ai = yes }
+			country_exists = FIN
+			date > 1940.1.1
+			GER = { has_war = yes }
+			FIN = { is_ai = yes }}
+		icon = GFX_decision_ger_reichskommissariats
+
+		visible = {
+			always = yes					
+		}
+
+		complete_effect = {
+			GER = { puppet = FIN }
+		}
+	}
+
+	GER_case_anton = {
+
+		icon = GFX_decision_ger_reichskommissariats
+
+		allowed={original_tag = ITA}
+
+		available = {
+			has_government = fascism
+			any_country = {
+				original_tag = EFR
+				NOT = { has_country_flag = case_anton }
+			}
+			OR = {
+				EFR = { has_war = yes }
+				date > 1943.1.1
+				AND = {
+					date > 1941.6.1
+					ITA = { surrender_progress > 0.01 }
+				}
+				AND = {
+					date > 1941.1.1
+					ITA = { surrender_progress > 0.25 }
+				}
+				AND = {
+					date > 1942.1.1
+					OR = {
+						any_enemy_country = {
+							controls_state = 19
+						}
+						any_enemy_country = {
+							controls_state = 23
+						}
+						any_enemy_country = {
+							controls_state = 30
+						}
+						any_enemy_country = {
+							controls_state = 14
+						}
+						any_enemy_country = {
+							controls_state = 15
+						}
+						any_enemy_country = {
+							controls_state = 29
+						}
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		days_remove = 7
+
 		fire_only_once = yes
 
-		ai_will_do = {
-			factor = 0
-		}
 		visible = {
-			#has_war = yes
-			controls_state = 69 # Sudetenland
-			controls_state = 74 # Eastern Sudetenland
-			controls_state = 9 # Bohemia
-			controls_state = 75 # Moravia
+			original_tag = ITA
+			has_government = fascism
 		}
-		days_remove = 180
-		modifier = {
-			civilian_factory_use = 3
+		ai_will_do = {
+			factor = 1
 		}
+
+		complete_effect = {
+
+		}
+
 		remove_effect = {
-			69 = {
-				set_building_level = {
-					type = bunker
-					level = 1
-					province = {
-						all_provinces = yes
-						limit_to_border = no
-						level > 1
-					}
-				}
-			}
-			74 = {
-				set_building_level = {
-					type = bunker
-					level = 1
-					province = {
-						all_provinces = yes
-						limit_to_border = no
-						level > 1
-					}
-				}
-			}
-			9 = {
-				set_building_level = {
-					type = bunker
-					level = 1
-					province = {
-						all_provinces = yes
-						limit_to_border = no
-						level > 1
-					}
-				}
-			}
-			75 = {
-				set_building_level = {
-					type = bunker
-					level = 1
-					province = {
-						all_provinces = yes
-						limit_to_border = no
-						level > 1
-					}
-				}
-			}
-			if = {
-				limit = {
-					72 = {
-						controller = {
-							OR = {
-								tag = ROOT
-								is_subject_of = ROOT
-							}
-						}
-					}
-					71 = {
-						controller = {
-							OR = {
-								tag = ROOT
-								is_subject_of = ROOT
-							}
-						}
-					}
-				}
-				72 = {
-					set_building_level = {
-						type = bunker
-						level = 1
-						province = {
-							all_provinces = yes
-							limit_to_border = no
-							level > 1
-						}
-					}
-				}
-				71 = {
-					set_building_level = {
-						type = bunker
-						level = 1
-						province = {
-							all_provinces = yes
-							limit_to_border = no
-							level > 1
-						}
-					}
-				}
-			}
-			if = {
-				limit = {
-					70 = {
-						controller = {
-							OR = {
-								tag = ROOT
-								is_subject_of = ROOT
-							}
-						}
-					}
-				}
-				70 = {
-					set_building_level = {
-						type = bunker
-						level = 1
-						province = {
-							all_provinces = yes
-							limit_to_border = no
-							level > 1
-						}
-					}
-				}
-			}
-			if = {
-				limit = {
-					73 = {
-						controller = {
-							OR = {
-								tag = ROOT
-								is_subject_of = ROOT
-							}
-						}
-					}
-					664 = {
-						controller = {
-							OR = {
-								tag = ROOT
-								is_subject_of = ROOT
-							}
-						}
-					}
-				}
-				73 = {
-					set_building_level = {
-						type = bunker
-						level = 1
-						province = {
-							all_provinces = yes
-							limit_to_border = no
-							level > 1
-						}
-					}
-				}
-				664 = {
-					set_building_level = {
-						type = bunker
-						level = 1
-						province = {
-							all_provinces = yes
-							limit_to_border = no
-							level > 1
-						}
-					}
-				}
-			}
-		}
-		complete_effect = {
-			add_timed_idea = { idea = GER_dismantle_czechoslovakian_forts days = 180 }
-		}
-	}
-}
-
-GER_aid_hun_rom_democratic_civil_war = {
-
-	GER_aid_hun_democratic_civil_war = {
-
-		icon = generic_prepare_civil_war
-
-		available = {
-			HUN = {
-				NOT = { has_government = democratic }
-				NOT = { has_war_with = GER }
-				has_civil_war = yes
-				exists = yes
-				any_enemy_country = {
-					original_tag = HUN
-					has_government = democratic
-				}
-			}
-		}
-
-		cost = 0
-
-		ai_will_do = {
-			factor = 200
-		}
-
-		#Available if democratic civil war
-		visible = {
-			has_completed_focus = GER_align_hungary
-			GER = { has_government = democratic }
-		}
-
-		complete_effect = {
-			if = {
-				limit = {
-					HUN = { is_in_faction_with = GER }
-				}
-				remove_from_faction = HUN
-				random_country = {
-					limit = {
-						original_tag = HUN
-						has_government = democratic
-						has_war_with = HUN
-					}
-					GER = { add_to_faction = PREV }
-				}
-			}
-			random_country = {
-				limit = {
-					original_tag = HUN
-					has_government = democratic
-					has_war_with = HUN
-				}
-				GER = { add_to_war = { targeted_alliance = PREV enemy = HUN hostility_reason = asked_to_join } }
+			GER = {
+				annex_country = { target = EFR transfer_troops = no }
 			}
 		}
 	}
 
-	GER_aid_rom_democratic_civil_war = {
 
-		icon = generic_prepare_civil_war
-
-		available = {
-			ROM = {
-				NOT = { has_government = democratic }
-				NOT = { has_war_with = GER }
-				has_civil_war = yes
-				exists = yes
-				any_enemy_country = {
-					original_tag = ROM
-					has_government = democratic
-				}
-			}
-		}
-
-		cost = 0
-
-		ai_will_do = {
-			factor = 200
-		}
-
-		#Available if democratic civil war
-		visible = {
-			has_completed_focus = GER_align_romania
-			GER = { has_government = democratic }
-		}
-
-		complete_effect = {
-			if = {
-				limit = {
-					ROM = { is_in_faction_with = GER }
-				}
-				remove_from_faction = ROM
-				random_country = {
-					limit = {
-						original_tag = ROM
-						has_government = democratic
-						has_war_with = ROM
-					}
-					GER = { add_to_faction = PREV }
-				}
-			}
-			random_country = {
-				limit = {
-					original_tag = ROM
-					has_government = democratic
-					has_war_with = ROM
-				}
-				GER = { add_to_war = { targeted_alliance = PREV enemy = ROM hostility_reason = asked_to_join } }
-			}
-		}
-	}
-
-}
-
-GER_austro_hungarian_empire = {
-
-	GER_reform_austro_hungarian_empire = {
+	GDU_GER_invade_iran = {
+		icon = GFX_decision_ger_reichskommissariats
 
 		allowed = {
-			OR = {
-				original_tag = AUS
-				original_tag = HUN
-				original_tag = CZE
-			}
+			original_tag = GER
 		}
 
 		available = {
-			AUS = {
-				OR = {
-					has_government = neutrality
-					neutrality > 0.4
-				}
+			any_country = {
+				original_tag = PER
 			}
-			HUN = {
-				OR = {
-					has_government = neutrality
-					neutrality > 0.4
-				}
-			}
-			CZE = {
-				OR = {
-					has_government = neutrality
-					neutrality > 0.4
-				}
+			OR = {
+				controls_state = 291
+				ITA = { controls_state = 291 }
+				ROM = { controls_state = 291 }
+				HUN = { controls_state = 291 }
+				BUL = { controls_state = 291 }
 			}
 		}
 
-		visible = {
-			GER = {
-				has_completed_focus = GER_rekindle_imperial_sentiment
-				has_government = neutrality
-			}
-			AUS = {
-				exists = yes
-			}
-			HUN = {
-				exists = yes
-			}
-			CZE = {
-				exists = yes
-			}
-			NOT = { has_global_flag = GER_reformed_austro_hungarian_empire }
-		}
-
-		cost = 0
 		fire_only_once = yes
 
+		visible = {
+			always = yes
+			
+		}
+
 		ai_will_do = {
-			factor = 200
-			modifier = {
-				factor = 0
-				tag = HUN
-			}
-			modifier = {
-				factor = 0
-				tag = CZE
-			}
+			factor = 1
 		}
 
 		complete_effect = {
-			custom_effect_tooltip = GER_reform_austro_hungarian_empire_tt
-			hidden_effect = { set_global_flag = GER_reformed_austro_hungarian_empire }
-			if = {
-				limit = {
-					tag = AUS
+			declare_war_on = {
+				target = PER
+				type = annex_everything
+			}
+			SOV = {
+				transfer_state = 420
+				transfer_state = 419
+				transfer_state = 418
+				transfer_state = 266
+				transfer_state = 416
+			}
+			ENG = {
+				annex_country = {
+					target = PER
+					transfer_troops = no
 				}
-				HUN = { country_event = { id = wtt_germany.68 hours = 1 } }
-				CZE = { country_event = { id = wtt_germany.68 hours = 3 } }
+			}
+			SOV = { country_event = { id = gduevents.11 days = 1 } }
+			ENG = { country_event = { id = gduevents.12 days = 1 } }
+		}
+	}
+
+
+
+
+
+
+
+	GER_fall_weiss = {
+
+		icon = GFX_decision_ger_reichskommissariats
+		fire_only_once = yes
+
+		allowed = {
+			has_completed_focus = GER_danzig_or_war
+			tag = GER
+		}
+
+		available = {
+			has_completed_focus = GER_danzig_or_war
+		}
+
+		cost = 0
+		ai_will_do = {
+			factor = 10
+
+		}
+
+		visible = {
+			always = yes
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				sound_effect = sp_ger_war
+				GER = { add_dynamic_modifier = { modifier = axis_afrika_modifier_spirit } }
+				ITA = { add_dynamic_modifier = { modifier = axis_afrika_modifier_spirit } }
+				ROM = { add_dynamic_modifier = { modifier = axis_afrika_modifier_spirit } }
+				HUN = { add_dynamic_modifier = { modifier = axis_afrika_modifier_spirit } }
+				BUL = { add_dynamic_modifier = { modifier = axis_afrika_modifier_spirit } }
+				
+				ENG = { add_dynamic_modifier = { modifier = allied_afrika_modifier_spirit } }
+				AST = { add_dynamic_modifier = { modifier = allied_afrika_modifier_spirit } }
+				NZL = { add_dynamic_modifier = { modifier = allied_afrika_modifier_spirit } }
+				SAF = { add_dynamic_modifier = { modifier = allied_afrika_modifier_spirit } }
+				CAN = { add_dynamic_modifier = { modifier = allied_afrika_modifier_spirit } }
+				RAJ = { add_dynamic_modifier = { modifier = allied_afrika_modifier_spirit } }
+				USA = { add_dynamic_modifier = { modifier = allied_afrika_modifier_spirit } }
+				SOV	= { add_dynamic_modifier = { modifier = soviet_afrika_modifier_spirit } }						
+
+			}
+			add_named_threat = { threat = 5 name = GER_danzig_or_war }
+			ROM = {
+				give_resource_rights = { receiver = GER state = 46 }
+			}
+			GER = {
+				give_resource_rights = { receiver = ROM state = 53 }
+				remove_resource_rights = 724
+				remove_ideas = GER_mefo_bills_1
+			}			
+			SIA = {
+				give_resource_rights = { receiver = JAP state = 724 }			
 			}
 			if = {
 				limit = {
-					tag = HUN
+					85 = {
+						controller = {
+							tag = POL
+							has_civil_war = no
+						}
+					}
 				}
-				AUS = { country_event = { id = wtt_germany.68 hours = 1 } }
-				CZE = { country_event = { id = wtt_germany.68 hours = 3 } }
+				add_state_core = 85
+				add_state_core = 86
+				GER = {
+					declare_war_on = {
+						target = POL
+						type = annex_everything
+					}
+					declare_war_on_all_allies = yes
+				}
 			}
-			if = {
-				limit = {
-					tag = CZE
+			ITA = {
+				remove_ideas = GER_mefo_bills_non_germany
+			}
+			SPR = {
+				remove_ideas = GER_mefo_bills_non_germany
+			}
+			HUN = {
+				remove_ideas = GER_mefo_bills_non_germany
+			}
+			BUL = {
+				remove_ideas = GER_mefo_bills_non_germany
+			}
+			ROM = {
+				remove_ideas = GER_mefo_bills_non_germany
+			}			
+			hidden_effect = {
+				set_global_flag = war_is_hell
+				ITA = {
+					country_event = { id = gduevents.55 days = 1 } # this activates the thing that makes strength damage in Africa be lower than elsewhere
+				}				
+				128 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 4
+						instant_build = yes
+					}
 				}
-				HUN = { country_event = { id = wtt_germany.68 hours = 1 } }
-				AUS = { country_event = { id = wtt_germany.68 hours = 3 } }
+				BUL = {
+					remove_ideas = BUL_second_national_catastrophe
+				}
+				CAN = {
+					add_timed_idea = { idea = alli_phoney_war days = 240 }
+					add_ideas = war_economy
+				}
+				SAF = {
+					add_timed_idea = { idea = alli_phoney_war days = 240 }
+					add_ideas = war_economy
+				}
+				RAJ = {
+					add_timed_idea = { idea = alli_phoney_war days = 240 }
+					add_ideas = war_economy
+				}
+				NZL = {
+					add_timed_idea = { idea = alli_phoney_war days = 240 }
+					add_ideas = war_economy
+				}
+				AST = {
+					add_timed_idea = { idea = alli_phoney_war days = 240 }
+					add_ideas = war_economy
+				}
+				ENG = { add_ideas = war_economy }
+				country_event = { id = pfu.18 days = 30 }
+				FRA = {
+					remove_state_core = 17
+					remove_state_core = 28
+				}
+				ENG = { add_to_faction = POL }
+				ENG = { add_to_faction = FRA }
+				if = {
+					limit = { HUN = { is_ai = no } }
+					GER = { add_to_faction = HUN }
+				}
+
+				if = {
+					limit = { ROM = { is_ai = no } }
+					GER = { add_to_faction = ROM }
+				}
+
+				if = {
+					limit = { BUL = { is_ai = no } }
+					GER = { add_to_faction = BUL }
+				}
+				RAJ = {
+					add_timed_idea = { idea = alli_phoney_war days = 240 }
+					add_ideas = war_economy
+				}
+				CAN = {
+					add_timed_idea = { idea = alli_phoney_war days = 240 }
+					add_ideas = war_economy			
+				}
+				SAF = {
+					add_timed_idea = { idea = alli_phoney_war days = 240 }
+					add_ideas = war_economy					
+				}
+				AST = {
+					add_timed_idea = { idea = alli_phoney_war days = 240 }
+					add_ideas = war_economy					
+				}
+				NZL = {
+					add_timed_idea = { idea = alli_phoney_war days = 240 }
+					add_ideas = war_economy					
+				}				
+			}
+
+		}
+	}
+
+
+	GER_fall_gelb = {
+
+		icon = GFX_decision_ger_reichskommissariats
+		fire_only_once = yes
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			has_completed_focus = GER_around_maginot
+			has_completed_focus = GER_mol_rib_pact
+		}
+
+		cost = 0
+		ai_will_do = {
+			factor = 10
+
+		}
+
+		visible = {
+			always = yes
+		}
+
+		complete_effect = {
+			declare_war_on = {
+				target = HOL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BEL
+				type = annex_everything
+			}
+            if = {
+				limit = {
+					ENG = {
+						OR = {
+							divisions_in_state = { size > 4   state = 29 }
+							divisions_in_state = { size > 4   state = 785 }
+							divisions_in_state = { size > 4   state = 18 }
+							divisions_in_state = { size > 4   state = 28 }
+						}
+					}
+				}
+				FRA = { add_timed_idea = { idea = GDU_aided_by_BEF days = 10 } }
+			}
+			else = {
+				FRA = { add_timed_idea = { idea = GDU_abandoned_by_BEF days = 10 } }
+				FRA = { country_event = { id = gduevents.74 } } # lets France know there is no BEF, so they get a debuff.
+				ENG = { country_event = { id = gduevents.75 } } # lets UK know there is no BEF, so France gets a debuff.
 			}
 		}
+
+	}
+
+	GER_weserbung_operation = {
+
+		icon = GFX_decision_ger_reichskommissariats
+		fire_only_once = yes
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			has_completed_focus = GER_weserubung
+			has_completed_focus = GER_mol_rib_pact
+		}
+
+		cost = 0
+		ai_will_do = {
+			factor = 10
+
+		}
+
+		visible = {
+			always = yes
+		}
+
+		complete_effect = {
+			declare_war_on = {
+				target = DEN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = NOR
+				type = annex_everything
+			}
+			hidden_effect = {
+				NOR = { add_war_support = -0.25 }
+			}
+
+		}
+
+	}
+
+	GER_operation_marita = {
+
+		icon = GFX_decision_ger_reichskommissariats
+		fire_only_once = yes
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			has_completed_focus = GER_crush_greece
+			has_completed_focus = GER_mol_rib_pact
+		}
+
+		cost = 0
+		ai_will_do = {
+			factor = 10
+
+		}
+
+		visible = {
+			always = yes
+		}
+
+		complete_effect = {
+			declare_war_on = {
+				target = GRE
+				type = annex_everything
+			}
+		}
+
+	}
+
+	GER_fuhrer_directive_25 = {
+
+		icon = GFX_decision_ger_reichskommissariats
+		fire_only_once = yes
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			has_completed_focus = GER_crush_yugoslavia
+			has_completed_focus = GER_mol_rib_pact
+		}
+
+		cost = 0
+		ai_will_do = {
+			factor = 10
+
+		}
+
+		visible = {
+			always = yes
+		}
+
+		complete_effect = {
+			declare_war_on = {
+				target = YUG
+				type = annex_everything
+			}
+		}
+
+	}
+
+
+
+	GER_case_barbarossa = {
+
+		icon = GFX_decision_ger_reichskommissariats
+		fire_only_once = yes
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			has_completed_focus = GER_ussr_war_goal
+			date > 1941.6.1
+			NOT = { has_war_with = SOV }
+			
+		}
+
+		cost = 0
+		days_remove = 14
+		ai_will_do = {
+			factor = 0
+
+		}
+
+		visible = {
+		always = yes
+		}
+
+		complete_effect = {
+
+			hidden_effect = {
+				add_named_threat = { threat = 100 name = Barbarossa }			
+				SOV = {
+					country_event = { id = gduevents.4 days = 1 } # warns soviets that Barbarossa is coming, suspicious activity on western border
+					country_event = { id = gduevents.46 days = 30 }	# gduevents.46 is scorched earth event, damages 1 level of infra of each Soviet core state not controlled by Soviets
+					country_event = { id = gduevents.46 days = 70 }	
+					country_event = { id = gduevents.46 days = 140 }	
+					country_event = { id = gduevents.46 days = 230 }
+					country_event = { id = gduevents.46 days = 340 }	
+					country_event = { id = gduevents.46 days = 470 }	
+				}
+				ROM = {												# event to transfer states that Romania takes quickly to GER so that you don't have to manually transfer them for GER to build/repair infra/airfields/etc...
+					country_event = { id = gduevents.50 days = 7 } 
+					country_event = { id = gduevents.50 days = 14 }
+					country_event = { id = gduevents.50 days = 21 }
+					country_event = { id = gduevents.50 days = 40 }	
+					country_event = { id = gduevents.50 days = 60 }					
+				}			
+				94 = {
+					add_province_modifier = {
+						static_modifiers = { soviet_hero_fortress }
+						province = {
+							id = 3392 
+						}
+					}
+				}
+
+
+
+			
+			
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with_axis = yes
+					NOT = { tag = GER }
+				}
+				country_event = { id = gduevents.3 }
+			}
+
+
+
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = GER_barbarossa_tooltip
+			GER = {
+				declare_war_on = {
+					target = SOV
+					type = annex_everything
+				}
+			}
+			ITA = {
+				add_to_war = {
+				targeted_alliance = GER
+				enemy = SOV
+				}
+			}
+			HUN = {
+				add_to_war = {
+				targeted_alliance = GER
+				enemy = SOV
+				}
+			}	
+			ROM = {
+				add_to_war = {
+				targeted_alliance = GER
+				enemy = SOV
+				}
+			}	
+			BUL = {
+				add_to_war = {
+				targeted_alliance = GER
+				enemy = SOV
+				}
+			}
+			SPR = {
+				add_to_war = {
+				targeted_alliance = GER
+				enemy = SOV
+				}
+			}
+			FIN = {
+				add_to_war = {
+				targeted_alliance = GER
+				enemy = SOV
+				}
+			}
+			GER = {
+				if = {
+					limit = { GER = { has_idea = ferdinand_schorner}}
+				swap_ideas = {
+					remove_idea = ferdinand_schorner
+					add_idea = ferdinand_schorner_2
+				}						
+				}		
+			}			
+			SOV = {
+				country_event = { id = gduevents.57 days = 60 } # event that makes southwest front and frontline military districts province modifiers go away
+			}
+			GER = { #Check for conquering cities within 1/2/3/4 weeks to add national spirits for supply
+				country_event = { id = gduevents.58 days = 7 }
+				country_event = { id = gduevents.59 days = 14 }
+				country_event = { id = gduevents.60 days = 21 }
+				country_event = { id = gduevents.61 days = 28 }
+			}
+			SPR = { #Check for conquering cities within 1/2/3/4 weeks to add national spirits for supply
+				country_event = { id = gduevents.58 days = 7 }
+				country_event = { id = gduevents.59 days = 14 }
+				country_event = { id = gduevents.60 days = 21 }
+				country_event = { id = gduevents.61 days = 28 }
+			}
+			HUN = { #Check for conquering cities within 1/2/3/4 weeks to add national spirits for supply
+				country_event = { id = gduevents.58 days = 7 }
+				country_event = { id = gduevents.59 days = 14 }
+				country_event = { id = gduevents.60 days = 21 }
+				country_event = { id = gduevents.61 days = 28 }
+			}	
+			ROM = { #Check for conquering cities within 1/2/3/4 weeks to add national spirits for supply
+				country_event = { id = gduevents.58 days = 7 }
+				country_event = { id = gduevents.59 days = 14 }
+				country_event = { id = gduevents.60 days = 21 }
+				country_event = { id = gduevents.61 days = 28 }
+			}	
+			BUL = { #Check for conquering cities within 1/2/3/4 weeks to add national spirits for supply
+				country_event = { id = gduevents.58 days = 7 }
+				country_event = { id = gduevents.59 days = 14 }
+				country_event = { id = gduevents.60 days = 21 }
+				country_event = { id = gduevents.61 days = 28 }
+			}				
+				GER = {
+					remove_resource_rights = 229   # remove German resource rights to Baku oil at start of Barbarossa
+					give_resource_rights = { receiver = SOV state = 229 }
+				}
+				SOV = {
+					give_resource_rights = { receiver = SOV state = 229 }
+					swap_ideas = {
+						remove_idea = soviet_closed_market
+						add_idea = soviet_closed_market2
+					}					
+				}
+			
+		}
+
+	}
+
+	GER_fall_blau = {
+		icon = GFX_decision_ger_reichskommissariats
+		fire_only_once = yes
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			has_completed_focus = GER_fall_blau
+		}
+
+		cost = 0
+		ai_will_do = {
+			factor = 10
+
+		}
+
+		visible = {
+			always = yes
+		}
+
+		complete_effect = {
+			hidden_effect = {
+
+				FIN = {
+					country_event = gduevents.70
+				}
+				JAP = {
+					country_event = gduevents.70
+				}
+				USA = {
+					country_event = gduevents.70
+				}
+				SOV = {
+					country_event = gduevents.70
+				}
+				ENG = {
+					country_event = gduevents.70
+				}
+				CAN = {
+					country_event = gduevents.70
+				}
+				SAF = {
+					country_event = gduevents.70
+				}
+				RAJ = {
+					country_event = gduevents.70
+				}
+				AST = {
+					country_event = gduevents.70
+				}
+				NZL = {
+					country_event = gduevents.70
+				}
+				GER = {
+					country_event = gduevents.70
+				}
+				ITA = {
+					country_event = gduevents.70
+				}
+				SPR = {
+					country_event = gduevents.70
+				}
+				HUN = {
+					country_event = gduevents.70
+				}
+				ROM = {
+					country_event = gduevents.70
+				}
+				BUL = {
+					country_event = gduevents.70
+				}
+			}
+
+			GER = {
+				add_timed_idea = { idea = GDU_Fall_Blau days = 45 }
+			}
+			ITA = {
+				add_timed_idea = { idea = GDU_Fall_Blau days = 45 }
+			}
+			FIN = {
+				add_timed_idea = { idea = GDU_Fall_Blau days = 45 }
+			}
+			SPR = {
+				add_timed_idea = { idea = GDU_Fall_Blau days = 45 }
+			}
+			HUN = {
+				add_timed_idea = { idea = GDU_Fall_Blau days = 45 }
+			}
+			ROM = {
+				add_timed_idea = { idea = GDU_Fall_Blau days = 45 }
+			}			
+			BUL = {
+				add_timed_idea = { idea = GDU_Fall_Blau days = 45 }
+			}
+		}
+	}
+
+
+
+	GDU_GER_seize_syria = {
+		icon = GFX_decision_ger_reichskommissariats
+		allowed = { tag = GER }
+		available = {
+			any_country = {
+				original_tag = EFR
+			}
+			ITA = {
+				controls_state = 446
+				controls_state = 447
+				controls_state = 453
+				controls_state = 454
+			}
+		}
+
+
+		fire_only_once = yes
+
+		visible = {
+			EFR = {
+				controls_state = 553
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			ITA = {
+				transfer_state = 553
+				transfer_state = 677
+				transfer_state = 680
+				transfer_state = 554
+			}
+		}
+
+	}
+}
+
+
+
+Flag = {
+
+	GER_relocate_industry_from_aquitaine = {
+		icon = generic_construction
+		highlight_states = {
+			state = 19
+		}
+		available = {
+			NOT = {
+				19 = { #Aquitaine
+					is_controlled_by  = GER
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+					}
+				}
+			}
+
+		}
+
+		is_good = yes
+
+		allowed = {
+			always = no
+			#added through on_action
+			tag = GER
+		}
+
+		fire_only_once = no
+		days_mission_timeout = 1
+
+		visible = {
+			always = yes
+		}
+
+        timeout_effect = {
+			if = {
+				limit = {
+					19 = { #
+						is_controlled_by = GER
+						arms_factory > 0
+					}
+				}
+				19 = { #
+					remove_building = {
+						type = arms_factory
+						level = 1
+					}
+				}
+				53	= {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								19 = {
+									is_controlled_by = GER
+									arms_factory > 0
+								}
+								19 = {
+									is_controlled_by = GER
+									industrial_complex > 0
+								}
+							}
+						}
+						activate_mission = GER_relocate_industry_from_aquitaine
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					19 = {
+						is_controlled_by = GER
+						industrial_complex > 0
+					}
+				}
+				19 = {
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+				52	= {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								19 = {
+									is_controlled_by = GER
+									arms_factory > 0
+								}
+								19 = {
+									is_controlled_by = GER
+									industrial_complex > 0
+								}
+							}
+						}
+						activate_mission = GER_relocate_industry_from_aquitaine
+					}
+				}
+			}
+
+			custom_effect_tooltip = Germany_exploit_foreign_workers_tt
+			custom_effect_tooltip = GER_relocate_industry_from_aquitaine_tt
+		}
+	}
+
+	GER_relocate_industry_from_poitou = {
+		icon = generic_construction
+		highlight_states = {
+			state = 23
+		}
+		available = {
+			NOT = {
+				23 = { #Poitou
+					is_controlled_by  = GER
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+					}
+				}
+			}
+
+		}
+
+		is_good = yes
+
+		allowed = {
+			always = no
+			#added through on_action
+			tag = GER
+		}
+
+		fire_only_once = no
+		days_mission_timeout = 1
+
+		visible = {
+			always = yes
+		}
+		timeout_effect = {
+				if = {
+					limit = {
+						23 = { #
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					23 = { #
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					50	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									23 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									23 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_poitou
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						23 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					23 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					50	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									23 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									23 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_poitou
+						}
+					}
+				}
+
+				custom_effect_tooltip = Germany_exploit_foreign_workers_tt
+		}
+
+		complete_effect = {
+
+		}
+
+	}
+
+
+	GER_relocate_industry_from_brittany = {
+		icon = generic_construction
+		highlight_states = {
+			state = 14
+		}
+		available = {
+			NOT = {
+				14 = { #Brittany
+					is_controlled_by  = GER
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+					}
+				}
+			}
+
+		}
+
+		is_good = yes
+
+		allowed = {
+			always = no
+			#added through on_action
+			tag = GER
+		}
+
+		fire_only_once = no
+		days_mission_timeout = 1
+
+		visible = {
+			always = yes
+		}
+
+        timeout_effect = {
+				if = {
+					limit = {
+						14 = { #
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					14 = { #
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					838	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									14 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									14 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_brittany
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						14 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					14 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					838	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									23 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									23 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_brittany
+						}
+					}
+				}
+
+				custom_effect_tooltip = Germany_exploit_foreign_workers_tt
+
+			custom_effect_tooltip = GER_relocate_industry_from_brittany_tt
+        }
+
+        complete_effect = {
+
+        }
+
+	}
+
+	GER_relocate_industry_from_loire = {
+		icon = generic_construction
+		highlight_states = {
+			state = 30
+		}
+		available = {
+			NOT = {
+				30 = { #Loire
+					is_controlled_by  = GER
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+					}
+				}
+			}
+
+		}
+
+		is_good = yes
+
+		allowed = {
+			always = no
+			#added through on_action
+			tag = GER
+		}
+
+		fire_only_once = no
+		days_mission_timeout = 1
+
+		visible = {
+			always = yes
+		}
+
+        timeout_effect = {
+				if = {
+					limit = {
+						30 = { #
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					30 = { #
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					54	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									30 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									30 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_loire
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						30 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					30 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					54	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									54 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									54 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_loire
+						}
+					}
+				}
+
+				custom_effect_tooltip = Germany_exploit_foreign_workers_tt
+
+			custom_effect_tooltip = GER_relocate_industry_from_loire_tt
+        }
+
+        complete_effect = {
+
+        }
+
+	}
+
+
+	GER_relocate_industry_from_normandy = {
+		icon = generic_construction
+		highlight_states = {
+			state = 15
+		}
+		available = {
+			NOT = {
+				15 = { #Normandy
+					is_controlled_by  = GER
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+					}
+				}
+			}
+
+		}
+
+		is_good = yes
+
+		allowed = {
+			always = no
+			#added through on_action
+			tag = GER
+		}
+
+		fire_only_once = no
+		days_mission_timeout = 1
+
+		visible = {
+			always = yes
+		}
+
+        timeout_effect = {
+				if = {
+					limit = {
+						15 = { #
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					15 = { #
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					840	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									15 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									15 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_normandy
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						15 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					15 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					840	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									15 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									15 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_normandy
+						}
+					}
+				}
+
+				custom_effect_tooltip = Germany_exploit_foreign_workers_tt
+
+			custom_effect_tooltip = GER_relocate_industry_from_normandy_tt
+        }
+
+        complete_effect = {
+
+        }
+
+	}
+
+
+	GER_relocate_industry_from_centre = {
+		icon = generic_construction
+		highlight_states = {
+			state = 24
+		}
+		available = {
+			NOT = {
+				24 = { #Centre
+					is_controlled_by  = GER
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+					}
+				}
+			}
+
+		}
+
+		is_good = yes
+
+		allowed = {
+			always = no
+			#added through on_action
+			tag = GER
+		}
+
+		fire_only_once = no
+		days_mission_timeout = 1
+
+		visible = {
+			always = yes
+		}
+
+        timeout_effect = {
+				if = {
+					limit = {
+						24 = { #
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					24 = { #
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					55	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									24 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									24 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_centre
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						24 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					24 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					55	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									24 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									24 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_centre
+						}
+					}
+				}
+
+				custom_effect_tooltip = Germany_exploit_foreign_workers_tt
+
+			custom_effect_tooltip = GER_relocate_industry_from_centre_tt
+        }
+
+        complete_effect = {
+
+        }
+
+	}
+
+
+	GER_relocate_industry_from_paris = {
+		icon = generic_construction
+		highlight_states = {
+			state = 16
+		}
+		available = {
+			NOT = {
+				16 = { #Paris
+					is_controlled_by  = GER
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+					}
+				}
+			}
+
+		}
+
+		is_good = yes
+
+		allowed = {
+			always = no
+			#added through on_action
+			tag = GER
+		}
+
+		fire_only_once = no
+		days_mission_timeout = 1
+
+		visible = {
+			always = yes
+		}
+
+        timeout_effect = {
+				if = {
+					limit = {
+						16 = { #
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					16 = { #
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					66	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									16 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									16 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_paris
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						16 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					16 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					841	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									16 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									16 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_paris
+						}
+					}
+				}
+
+				custom_effect_tooltip = Germany_exploit_foreign_workers_tt
+
+			custom_effect_tooltip = GER_relocate_industry_from_paris_tt
+        }
+
+        complete_effect = {
+
+        }
+
+	}
+
+
+
+
+	GER_relocate_industry_from_bourgougne = {
+		icon = generic_construction
+		highlight_states = {
+			state = 27
+		}
+		available = {
+			NOT = {
+				27 = { #Bourgougne
+					is_controlled_by  = GER
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+					}
+				}
+			}
+
+		}
+
+		is_good = yes
+
+		allowed = {
+			always = no
+			#added through on_action
+			tag = GER
+		}
+
+		fire_only_once = no
+		days_mission_timeout = 1
+
+		visible = {
+			always = yes
+		}
+
+        timeout_effect = {
+				if = {
+					limit = {
+						27 = { #
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					27 = { #
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					42	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									27 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									27 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_bourgougne
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						27 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					27 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					42	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									27 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									27 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_bourgougne
+						}
+					}
+				}
+
+				custom_effect_tooltip = Germany_exploit_foreign_workers_tt
+
+			custom_effect_tooltip = GER_relocate_industry_from_bourgougne_tt
+        }
+
+        complete_effect = {
+
+        }
+
+	}
+
+
+	GER_relocate_industry_from_franchecomte = {
+		icon = generic_construction
+		highlight_states = {
+			state = 17
+		}
+		available = {
+			NOT = {
+				17 = { #Franche Comte
+					is_controlled_by  = GER
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+					}
+				}
+			}
+
+		}
+
+		is_good = yes
+
+		allowed = {
+			always = no
+			#added through on_action
+			tag = GER
+		}
+
+		fire_only_once = no
+		days_mission_timeout = 1
+
+		visible = {
+			always = yes
+		}
+
+        timeout_effect = {
+				if = {
+					limit = {
+						17 = { #
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					17 = { #
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					842	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									17 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									17 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_franchecomte
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						17 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					17 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					842	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									17 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									17 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_franchecomte
+						}
+					}
+				}
+
+				custom_effect_tooltip = Germany_exploit_foreign_workers_tt
+
+			custom_effect_tooltip = GER_relocate_industry_from_franchecomte_tt
+        }
+
+        complete_effect = {
+
+        }
+
+	}
+
+
+	GER_relocate_industry_from_champagne = {
+		icon = generic_construction
+		highlight_states = {
+			state = 18
+		}
+		available = {
+			NOT = {
+				18 = { #Champagne
+					is_controlled_by  = GER
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+					}
+				}
+			}
+
+		}
+
+		is_good = yes
+
+		allowed = {
+			always = no
+			#added through on_action
+			tag = GER
+		}
+
+		fire_only_once = no
+		days_mission_timeout = 1
+
+		visible = {
+			always = yes
+		}
+
+        timeout_effect = {
+				if = {
+					limit = {
+						18 = { #
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					18 = { #
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					51	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									18 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									18 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_champagne
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						18 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					18 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					51	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									18 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									18 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_champagne
+						}
+					}
+				}
+
+				custom_effect_tooltip = Germany_exploit_foreign_workers_tt
+
+			custom_effect_tooltip = GER_relocate_industry_from_champagne_tt
+        }
+
+        complete_effect = {
+
+        }
+
+	}
+
+
+	GER_relocate_industry_from_picardy = {
+		icon = generic_construction
+		highlight_states = {
+			state = 785
+		}
+		available = {
+			NOT = {
+				785 = { #Picardy
+					is_controlled_by  = GER
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+					}
+				}
+			}
+
+		}
+
+		is_good = yes
+
+		allowed = {
+			always = no
+			#added through on_action
+			tag = GER
+		}
+
+		fire_only_once = no
+		days_mission_timeout = 1
+
+		visible = {
+			always = yes
+		}
+
+        timeout_effect = {
+				if = {
+					limit = {
+						785 = { #
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					785 = { #
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					57	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									785 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									785 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_picardy
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						785 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					785 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					57	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									785 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									785 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_picardy
+						}
+					}
+				}
+
+				custom_effect_tooltip = Germany_exploit_foreign_workers_tt
+
+			custom_effect_tooltip = GER_relocate_industry_from_picardy_tt
+        }
+
+        complete_effect = {
+
+        }
+
+	}
+
+
+	GER_relocate_industry_from_pasdecalais = {
+		icon = generic_construction
+		highlight_states = {
+			state = 29
+		}
+		available = {
+			NOT = {
+				29 = { #Pas de Calais
+					is_controlled_by  = GER
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+					}
+				}
+			}
+
+		}
+
+		is_good = yes
+
+		allowed = {
+			always = no
+			#added through on_action
+			tag = GER
+		}
+
+		fire_only_once = no
+		days_mission_timeout = 1
+
+		visible = {
+			always = yes
+		}
+
+        timeout_effect = {
+				if = {
+					limit = {
+						29 = { #
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					29 = { #
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					839	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									29 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									29 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_pasdecalais
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						29 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					29 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					839	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									29 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									29 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_pasdecalais
+						}
+					}
+				}
+
+				custom_effect_tooltip = Germany_exploit_foreign_workers_tt
+
+			custom_effect_tooltip = GER_relocate_industry_from_pasdecalais_tt
+        }
+
+        complete_effect = {
+
+        }
+
+	}
+
+
+
+	GER_relocate_industry_from_vlaandern = {
+		icon = generic_construction
+		highlight_states = {
+			state = 6
+		}
+		available = {
+			NOT = {
+				6 = { #Vlaandern
+					is_controlled_by  = GER
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+					}
+				}
+			}
+
+		}
+
+		is_good = yes
+
+		allowed = {
+			always = no
+			#added through on_action
+			tag = GER
+		}
+
+		fire_only_once = no
+		days_mission_timeout = 1
+
+		visible = {
+			always = yes
+		}
+
+        timeout_effect = {
+				if = {
+					limit = {
+						6 = { #
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					6 = { #
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					64	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									6 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									6 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_vlaandern
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						6 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					6 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					835	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									6 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									6 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_vlaandern
+						}
+					}
+				}
+
+				custom_effect_tooltip = Germany_exploit_foreign_workers_tt
+
+			custom_effect_tooltip = GER_relocate_industry_from_vlaandern_tt
+        }
+
+        complete_effect = {
+
+        }
+
+	}
+
+
+	GER_relocate_industry_from_wallonie = {
+		icon = generic_construction
+		highlight_states = {
+			state = 34
+		}
+		available = {
+			NOT = {
+				34 = { #Wallonie
+					is_controlled_by  = GER
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+					}
+				}
+			}
+
+		}
+
+		is_good = yes
+
+		allowed = {
+			always = no
+			#added through on_action
+			tag = GER
+		}
+
+		fire_only_once = no
+		days_mission_timeout = 1
+
+		visible = {
+			always = yes
+		}
+
+        timeout_effect = {
+				if = {
+					limit = {
+						34 = { #
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					34 = { #
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					60	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									34 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									34 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_wallonie
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						34 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					34 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					836	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									34 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									34 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_wallonie
+						}
+					}
+				}
+
+				custom_effect_tooltip = Germany_exploit_foreign_workers_tt
+
+			custom_effect_tooltip = GER_relocate_industry_from_wallonie_tt
+        }
+
+        complete_effect = {
+
+        }
+
+	}
+
+
+
+	GER_relocate_industry_from_holland = {
+		icon = generic_construction
+		highlight_states = {
+			state = 7
+		}
+		available = {
+			NOT = {
+				7 = { #Holland
+					is_controlled_by  = GER
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+					}
+				}
+			}
+
+		}
+
+		is_good = yes
+
+		allowed = {
+			always = no
+			#added through on_action
+			tag = GER
+		}
+
+		fire_only_once = no
+		days_mission_timeout = 1
+
+		visible = {
+			always = yes
+		}
+
+        timeout_effect = {
+				if = {
+					limit = {
+						7 = { #
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					7 = { #
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					61	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									7 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									7 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_holland
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						7 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					7 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					68	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									7 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									7 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_holland
+						}
+					}
+				}
+
+				custom_effect_tooltip = Germany_exploit_foreign_workers_tt
+
+			custom_effect_tooltip = GER_relocate_industry_from_holland_tt
+        }
+
+        complete_effect = {
+
+        }
+
+	}
+
+	GER_relocate_industry_from_brabant = {
+		icon = generic_construction
+		highlight_states = {
+			state = 35
+		}
+		available = {
+			NOT = {
+				35 = { #Brabant
+					is_controlled_by  = GER
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+					}
+				}
+			}
+
+		}
+
+		is_good = yes
+
+		allowed = {
+			always = no
+			#added through on_action
+			tag = GER
+		}
+
+		fire_only_once = no
+		days_mission_timeout = 1
+
+		visible = {
+			always = yes
+		}
+
+        timeout_effect = {
+				if = {
+					limit = {
+						35 = { #
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					35 = { #
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					67	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									35 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									35 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_brabant
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						35 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					35 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					65	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									35 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									35 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_brabant
+						}
+					}
+				}
+
+				custom_effect_tooltip = Germany_exploit_foreign_workers_tt
+
+			custom_effect_tooltip = GER_relocate_industry_from_brabant_tt
+        }
+
+        complete_effect = {
+
+        }
+
+	}
+
+
+	GER_relocate_industry_from_friesland = {
+		icon = generic_construction
+		highlight_states = {
+			state = 36
+		}
+		available = {
+			NOT = {
+				36 = { #Friesland
+					is_controlled_by  = GER
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+					}
+				}
+			}
+
+		}
+
+		is_good = yes
+
+		allowed = {
+			always = no
+			#added through on_action
+			tag = GER
+		}
+
+		fire_only_once = no
+		days_mission_timeout = 1
+
+		visible = {
+			always = yes
+		}
+
+        timeout_effect = {
+				if = {
+					limit = {
+						36 = { #
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					36 = { #
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					62	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									36 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									36 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_friesland
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						36 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					36 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					63	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								OR = {
+									36 = {
+										is_controlled_by = GER
+										arms_factory > 0
+									}
+									36 = {
+										is_controlled_by = GER
+										industrial_complex > 0
+									}
+								}
+							}
+							activate_mission = GER_relocate_industry_from_friesland
+						}
+					}
+				}
+
+				custom_effect_tooltip = Germany_exploit_foreign_workers_tt
+
+			custom_effect_tooltip = GER_relocate_industry_from_friesland_tt
+        }
+
+        complete_effect = {
+
+        }
+
 	}
 }
