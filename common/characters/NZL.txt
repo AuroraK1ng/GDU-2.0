@@ -172,7 +172,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = NZL_keith_j_holyoake
 			ledger = army
@@ -194,7 +194,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = NZL_r_a_cochrane
 			ledger = air
@@ -216,7 +216,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = NZL_arthur_dawes
 			ledger = navy
@@ -249,7 +249,7 @@ characters={
 			traits = {
 				army_chief_defensive_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -272,7 +272,7 @@ characters={
 			traits = {
 				army_chief_offensive_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -295,7 +295,7 @@ characters={
 			traits = {
 				army_chief_maneuver_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -318,7 +318,7 @@ characters={
 			traits = {
 				army_chief_morale_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -344,7 +344,7 @@ characters={
 			traits = {
 				navy_chief_maneuver_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -367,7 +367,7 @@ characters={
 			traits = {
 				navy_chief_naval_aviation_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -390,7 +390,7 @@ characters={
 			traits = {
 				navy_chief_decisive_battle_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -416,7 +416,7 @@ characters={
 			traits = {
 				air_chief_reform_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -439,7 +439,7 @@ characters={
 			traits = {
 				air_chief_ground_support_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -464,15 +464,71 @@ characters={
 				original_tag = NZL
 			}
 			traits = {
-				army_regrouping_2
+			 army_regrouping_2	
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
 		}		
 	}
-
+	NZL_big_bob={
+		name=NZL_big_bob
+		advisor={
+			slot = high_command
+			idea_token = NZL_big_bob
+			ledger = army
+			allowed = {
+				original_tag = NZL
+			}
+			traits = {
+				army_armored_2
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	NZL_bicycle={
+		name=NZL_bicycle
+		advisor={
+			slot = high_command
+			idea_token = NZL_bicycle
+			ledger = army
+			allowed = {
+				original_tag = NZL
+			}
+			traits = {
+				 bicyclesp
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	NZL_arthur_drakeford={
+		name=NZL_arthur_drakeford
+		portraits={
+			army={
+				small="GFX_idea_AST_arthur_drakeford" #small="GFX_idea_generic_army_europe_4"
+			}
+		}
+		advisor={			
+			slot = high_command
+			idea_token = NZL_arthur_drakeford
+			ledger = army
+			allowed = {
+				original_tag = NZL
+				has_dlc = "Together for Victory"
+			}
+			traits = {
+				army_concealment_3
+			}
+			cost = 150
+		}		
+	}
 	NZL_j_c_nichols={
 		name=NZL_j_c_nichols
 		portraits={
@@ -490,7 +546,7 @@ characters={
 			traits = {
 				army_cavalry_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -507,14 +563,14 @@ characters={
 		advisor={
 			slot = high_command
 			idea_token = NZL_h_d_mcgregor
-			ledger = air
+			ledger = army
 			allowed = {
 				original_tag = NZL
 			}
 			traits = {
-				air_airborne_2
+				army_commando_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -531,14 +587,14 @@ characters={
 		advisor={
 			slot = high_command
 			idea_token = NZL_trevor_handley
-			ledger = navy
+			ledger = army
 			allowed = {
 				original_tag = NZL
 			}
 			traits = {
-				navy_naval_air_defense_2
+				army_infantry_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -581,7 +637,7 @@ characters={
 				original_tag  = NZL
 			}
 			traits  = {
-				prince_of_terror 
+				smooth_talking_charmer 
 			}
 		}		
 	}

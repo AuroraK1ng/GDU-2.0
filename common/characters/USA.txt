@@ -113,6 +113,13 @@ characters={
 					}
 					factor  = 0.000
 				}
+				modifier  = {
+					NOT  = {
+						has_dlc = "Man the Guns"
+					}
+					has_idea_with_trait = fascist_demagogue
+					factor  = 0.000
+				}
 			}
 		}
 		country_leader={
@@ -144,6 +151,63 @@ characters={
 				
 				traits = {
 					mobile_warfare_expert
+				}
+		}
+
+		corps_commander={
+			traits={ trait_reckless armor_officer war_hero trickster panzer_leader }
+			skill=5
+			attack_skill=7
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=4
+			legacy_id=0
+		}
+	}
+	USA_wade_babcock={
+		name=USA_wade_babcock
+		advisor={
+			cost = 150
+			
+			slot = high_command
+			idea_token = wade_babcock
+			ledger = army
+				allowed = {
+					original_tag = USA
+				}
+				available = { 
+				date > 1941.6.1
+				GER = { has_idea = tot_economic_mobilisation }
+			}		
+				traits = {
+					USA_Special_Forces_High_Command
+				}
+		}
+
+		
+	}
+	USA_george_s_patton_highcommand={
+		name=USA_george_s_patton
+		portraits={
+			army={
+				large=GFX_portrait_USA_george_s_patton
+			}
+			army={
+				small="GFX_idea_george_patton"
+			}
+		}
+		advisor={
+			cost = 150
+			
+			slot = high_command
+			idea_token = george_s_patton_highcommand
+			ledger = army
+				allowed = {
+					original_tag = USA
+				}
+				
+				traits = {
+				 army_armored_2	
 				}
 		}
 
@@ -212,7 +276,7 @@ characters={
 				traits = {
 					army_chief_offensive_2
 				}
-				cost = 100
+				cost = 150
 				ai_will_do = {
 					factor = 1.000
 				}
@@ -287,7 +351,7 @@ characters={
 				traits = {
 					army_infantry_2
 				}
-				cost = 100
+				cost = 150
 				ai_will_do = {
 					factor = 1.000
 				}
@@ -331,7 +395,7 @@ characters={
 			traits = {
 				army_chief_morale_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -365,12 +429,12 @@ characters={
 				original_tag = USA
 			}
 			available = {
-				has_completed_focus = USA_war_plans_division
+				
 			}
 			traits = {
 				army_chief_planning_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -596,7 +660,7 @@ characters={
 			traits = {
 				army_commando_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -638,7 +702,7 @@ characters={
 			traits = {
 				army_logistics_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -714,8 +778,8 @@ characters={
 		}
 	}
 
-	USA_ernest_king={
-		name=USA_ernest_king
+	ernest_king_1={
+		name=ernest_king_1
 		portraits={
 			navy={
 				small="GFX_idea_ernest_king"
@@ -726,21 +790,22 @@ characters={
 		}
 		advisor={
 			slot = navy_chief
-			idea_token = ernest_king
+			idea_token = ernest_king_1
 			allowed = {
 				original_tag = USA
 			}
 			traits = {
-				navy_chief_reform_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
+				anglophobe
+			}	
+			on_remove = { always = no }	
+			can_be_fired = no
+			cost = 0
+			
+			
 		}
 		
 		navy_leader={
-			traits={ navy_career_officer aviation_enthusiast caustic_personality blockade_runner superior_tactician }
+			traits={ navy_career_officer aviation_enthusiast fly_swatter air_controller fleet_protector ironside torpedo_bomber caustic_personality blockade_runner superior_tactician blue_water_expert }
 			skill=5
 			attack_skill=4
 			defense_skill=3
@@ -748,7 +813,49 @@ characters={
 			coordination_skill=6
 			legacy_id=0
 		}
+		
+		
 	}
+	ernest_king_2={
+		name=ernest_king_2
+		portraits={
+			navy={
+				small="GFX_idea_ernest_king"
+			}
+			army={
+				large=GFX_portrait_USA_ernest_king
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = ernest_king_2
+			allowed = {
+				original_tag = USA
+			}
+			#visible = { always = yes }
+			cost = 150
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			
+			
+		}
+		
+		navy_leader={
+			traits={ navy_career_officer aviation_enthusiast fly_swatter air_controller fleet_protector ironside torpedo_bomber caustic_personality blockade_runner superior_tactician blue_water_expert }
+			skill=5
+			attack_skill=4
+			defense_skill=3
+			maneuvering_skill=3
+			coordination_skill=6
+			legacy_id=0
+		}
+		
+		
+	}
+	
+		
+		
 
 	USA_chester_w_nimitz={
 		name=USA_chester_w_nimitz
@@ -769,7 +876,7 @@ characters={
 			traits = {
 				navy_chief_commerce_raiding_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -816,7 +923,7 @@ characters={
 			traits = {
 				navy_chief_naval_aviation_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -843,7 +950,7 @@ characters={
 			traits = {
 				navy_carrier_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -878,7 +985,7 @@ characters={
 			traits = {
 				navy_naval_air_defense_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -967,7 +1074,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = dewitt_clinton_ramsey
 			ledger = navy
@@ -1028,7 +1135,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100	
+			cost = 150	
 			slot = theorist
 			idea_token = harold_mcclelland
 			ledger = air
@@ -1047,7 +1154,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = robert_oppenheimer
 			ledger = army
@@ -1071,7 +1178,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = robert_goddard
 			ledger = air
@@ -1112,7 +1219,7 @@ characters={
 			traits = {
 				army_chief_drill_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1145,7 +1252,7 @@ characters={
 			traits = {
 				air_chief_reform_3
 			}
-			cost = 200
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1168,7 +1275,7 @@ characters={
 			traits = {
 				air_chief_night_operations_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1191,7 +1298,7 @@ characters={
 			traits = {
 				air_chief_safety_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1204,39 +1311,38 @@ characters={
 			army={
 				small=GFX_portrait_USA_charles_lindbergh_small
 			}
+			civilian={
+				large = GFX_portrait_USA_charles_lindbergh
+			}
 		}
+
 		advisor={
-			slot = high_command
+			slot = air_chief
 			idea_token = USA_charles_lindbergh
 			allowed = {
 				original_tag = USA
 			}
-			available = {
-				has_completed_focus = USA_send_lindbergh_to_germany
+			cost = 150
+			###########NOT WORKING#################
+			equipment_bonus = {
+				small_plane_airframe = {
+					instant = yes
+					fuel_consumption = -0.2
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					fuel_consumption = -0.2
+				}
 			}
-			visible = {
-				has_dlc = "Man the Guns"
-			}
-			cost = 100.000
-			# TODO [AB] add support for equipment bonuses
-			#equipment_bonus = {
-			#	fighter_equipment = {
-			#		instant = yes
-			#		fuel_consumption = -0.100
-			#	}
-			#	heavy_fighter_equipment = {
-			#		instant = yes
-			#		fuel_consumption = -0.100
-			#	}
-			#}
+
 			traits = {
 				air_pilot_training_3
 			}
-			cost = 200
 			ai_will_do = {
 				factor = 1.000
 			}
 		}
+	     
 	}
 
 
@@ -1267,7 +1373,7 @@ characters={
 			traits = {
 				air_strategic_bombing_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1291,7 +1397,7 @@ characters={
 			traits = {
 				air_close_air_support_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1315,7 +1421,7 @@ characters={
 			traits = {
 				air_tactical_bombing_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1339,7 +1445,7 @@ characters={
 			traits = {
 				navy_amphibious_assault_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1420,7 +1526,7 @@ characters={
 			traits  = {
 				economist 
 			}
-			cost  = 0.000
+			cost  = 0
 			do_effect  = {
 			}
 			ai_will_do  = {
@@ -1430,6 +1536,34 @@ characters={
 		allowed_civil_war  = {
 			has_government  = communism 
 		}
+	}
+	USA_stonewall_campbell={
+		name=USA_stonewall_campbell
+		advisor={
+			slot = political_advisor
+			idea_token = stonewall_campbell
+			allowed  = {
+				original_tag  = USA
+			}
+			available  = {
+			
+				date > 1943.6.1
+				GER = { has_idea = tot_economic_mobilisation }	
+			}
+			visible  = {
+				
+			}
+			traits  = {
+				emergency_war_construction1
+			}
+			cost  = 50.0
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 0.000
+			}
+		}
+	
 	}
 
 	USA_whittaker_chambers={
@@ -1485,12 +1619,7 @@ characters={
 				original_tag  = USA
 			}
 			available  = {
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus  = USA_america_first 
-				}
+				
 			}
 			visible  = {
 				has_dlc = "Man the Guns"
@@ -1498,7 +1627,7 @@ characters={
 			traits  = {
 				editor 
 			}
-			cost  = 50.000
+			cost = 50.0
 			do_effect  = {
 			}
 			ai_will_do  = {
@@ -1539,7 +1668,7 @@ characters={
 			traits  = {
 				captain_of_industry 
 			}
-			cost  = 50.000
+			cost = 150
 			do_effect  = {
 			}
 			ai_will_do  = {
@@ -1654,6 +1783,13 @@ characters={
 					NOT  = {
 						has_dlc = "Man the Guns"
 					}
+					factor  = 0.000
+				}
+				modifier  = {
+					NOT  = {
+						has_dlc = "Man the Guns"
+					}
+					has_idea_with_trait = communist_revolutionary
 					factor  = 0.000
 				}
 			}

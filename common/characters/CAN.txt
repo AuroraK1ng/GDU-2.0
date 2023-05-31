@@ -214,7 +214,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = CAN_kenneth_stuart
 			ledger = army
@@ -235,7 +235,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = CAN_george_volkoff
 			ledger = army
@@ -260,7 +260,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = CAN_robert_leckie
 			ledger = air
@@ -314,7 +314,7 @@ characters={
 			traits = {
 				army_chief_offensive_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -337,7 +337,7 @@ characters={
 			traits = {
 				army_chief_defensive_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -363,7 +363,7 @@ characters={
 			traits = {
 				navy_chief_decisive_battle_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -386,7 +386,7 @@ characters={
 			traits = {
 				navy_chief_commerce_raiding_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -410,7 +410,7 @@ characters={
 			traits = {
 				navy_anti_submarine_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -436,7 +436,7 @@ characters={
 			traits = {
 				air_air_superiority_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -459,7 +459,7 @@ characters={
 			traits = {
 				air_chief_safety_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -483,7 +483,7 @@ characters={
 			traits = {
 				air_chief_reform_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -507,7 +507,7 @@ characters={
 			traits = {
 				air_chief_safety_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -532,9 +532,9 @@ characters={
 				original_tag = CAN
 			}
 			traits = {
-				army_artillery_2
+				army_infantry_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -556,9 +556,9 @@ characters={
 				original_tag = CAN
 			}
 			traits = {
-				air_air_superiority_2
+				army_artillery_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -582,7 +582,7 @@ characters={
 			traits = {
 				army_armored_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -606,7 +606,7 @@ characters={
 			traits = {
 				army_commando_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -673,23 +673,6 @@ characters={
 				original_tag = CAN
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-					OR = {
-						has_completed_focus = CAN_strengthen_the_commonwealth_ties 
-						has_completed_focus = CAN_permanent_joint_defense_board 
-					}
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
 			}
 			traits = {
 				democratic_reformer 
@@ -878,7 +861,7 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = CAN_c_d_howe
-			cost = 50.000
+			cost = 150.000
 			allowed = {
 				original_tag = CAN
 				has_dlc = "Together for Victory"

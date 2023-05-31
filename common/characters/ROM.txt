@@ -27,6 +27,29 @@ characters={
 		}
 	}
 
+	ROM_albert_speer={ 
+		name=ROM_albert_speer
+		portraits={
+			army={
+				small="GFX_idea_speer"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = speer
+			allowed = {
+				original_tag = ROM
+			}
+			available = { 
+				date > 1941.6.1
+				GER = { has_idea = tot_economic_mobilisation }
+			}
+			traits = {
+				total_war_organizer 
+			}
+		}		
+	}
+
 	ROM_king_michael={
 		name=ROM_king_michael
 		portraits={
@@ -83,6 +106,7 @@ characters={
 		}
 		country_leader={
 			ideology=fascism_ideology
+			traits={ anti_democrat }
 			expire="1965.1.1.1"
 			id=-1
 		}
@@ -151,7 +175,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = ROM_gheorghe_potopeanu
 			ledger = army
@@ -160,6 +184,26 @@ characters={
 			}
 			traits = {
 				military_theorist
+			}
+		}
+	}
+	ROM_gheorghe_potopeanu_highcommand={
+		name=ROM_gheorghe_potopeanu
+		portraits={
+			army={
+				small="GFX_idea_ROM_gheorghe_potopeanu"
+			}
+		}
+		advisor= {
+			cost = 150
+			slot = high_command
+			idea_token = ROM_gheorghe_potopeanu
+			ledger = army
+			allowed = {
+				original_tag = ROM
+			}
+			traits = {
+				army_regrouping_1
 			}
 		}
 	}
@@ -172,7 +216,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = ROM_emanoil_ionescu
 			ledger = air
@@ -206,7 +250,7 @@ characters={
 			traits = {
 				army_chief_defensive_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -244,7 +288,7 @@ characters={
 			traits = {
 				army_chief_offensive_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -280,7 +324,7 @@ characters={
 			traits = {
 				navy_chief_commerce_raiding_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -304,7 +348,7 @@ characters={
 			traits = {
 				navy_chief_maneuver_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -340,7 +384,7 @@ characters={
 			traits = {
 				air_chief_ground_support_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -363,7 +407,7 @@ characters={
 			traits = {
 				air_chief_reform_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -391,7 +435,7 @@ characters={
 			traits = {
 				army_infantry_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -424,7 +468,7 @@ characters={
 			traits = {
 				army_commando_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -446,9 +490,9 @@ characters={
 				original_tag = ROM
 			}
 			traits = {
-				air_strategic_bombing_2
+				army_armored_3
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -472,7 +516,7 @@ characters={
 			traits = {
 				air_airborne_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -624,7 +668,7 @@ characters={
 					limit = {
 						has_dlc = "Death or Dishonor"
 					}
-					has_completed_focus = ROM_appoint_german_friendly_government 
+					has_completed_focus = ROM_appoint_german_friendly_government
 				}
 				if = {
 					limit = {

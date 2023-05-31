@@ -98,7 +98,7 @@ characters={
 			traits = {
 				army_regrouping_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.500
 			}
@@ -174,7 +174,7 @@ characters={
 			traits = {
 				army_armored_3
 			}
-			cost = 200
+			cost = 150
 			ai_will_do = {
 				factor = 8.000
 			}
@@ -232,7 +232,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 200
+			cost = 150
 			slot = theorist
 			idea_token = heinz_guderian
 			ledger = army
@@ -302,12 +302,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits = { skilled_staffer cavalry_leader armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger organizer }
-			skill=7
-			attack_skill=6
-			defense_skill=7
-			planning_skill=6
-			logistics_skill=6
+			traits={ trait_cautious harsh_leader }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=2
 			legacy_id=9
 		}
 	}
@@ -425,7 +425,7 @@ characters={
 			traits = {
 				air_airborne_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -583,11 +583,11 @@ characters={
 			}
 		}
 		corps_commander={
-			traits = { cavalry_leader brilliant_strategist trait_reckless armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger organizer }
-			skill=7
-			attack_skill=4
-			defense_skill=7
-			planning_skill=6
+			traits={ brilliant_strategist trait_reckless armor_officer politically_connected }
+			skill=4
+			attack_skill=2
+			defense_skill=3
+			planning_skill=4
 			logistics_skill=4
 			legacy_id=24
 		}
@@ -631,7 +631,7 @@ characters={
 			traits = {
 				air_chief_reform_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -724,7 +724,7 @@ characters={
 			traits = {
 				navy_chief_commerce_raiding_3
 			}
-			cost = 200
+			cost = 150
 			ai_will_do = {
 				factor = 0.100
 			}
@@ -761,7 +761,7 @@ characters={
 			traits = {
 				navy_chief_decisive_battle_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 0.100
 			}
@@ -872,7 +872,7 @@ characters={
 			traits = {
 				navy_fleet_logistics_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -928,7 +928,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = von_braun
 			ledger = air
@@ -952,7 +952,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = heisenberg
 			ledger = army
@@ -997,7 +997,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = walther_wever
 			ledger = air
@@ -1016,7 +1016,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = ernst_udet
 			ledger = air
@@ -1037,7 +1037,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = otto_ciliax
 			ledger = navy
@@ -1066,7 +1066,7 @@ characters={
 			traits = {
 				army_chief_organizational_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1092,7 +1092,7 @@ characters={
 			traits = {
 				army_chief_drill_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1115,7 +1115,7 @@ characters={
 			traits = {
 				army_chief_offensive_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1141,7 +1141,7 @@ characters={
 			traits = {
 				army_chief_maneuver_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1185,7 +1185,7 @@ characters={
 			traits = {
 				air_chief_ground_support_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 2.000
 			}
@@ -1211,7 +1211,7 @@ characters={
 			traits = {
 				air_chief_all_weather_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 0.500
 			}
@@ -1246,9 +1246,36 @@ characters={
 			traits = {
 				army_infantry_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 2.000
+			}
+		}
+	}
+	GER_ferdinand_schorner_2 ={
+		name=GER_ferdinand_schorner
+		portraits={
+			army={
+				small="GFX_idea_ferdinand_schorner"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ferdinand_schorner_2
+			ledger = army
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_war_with = SOV
+				
+			}
+			traits = {
+				army_infantry_4
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
 	}
@@ -1270,7 +1297,7 @@ characters={
 			traits = {
 				army_logistics_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.500
 			}
@@ -1297,7 +1324,7 @@ characters={
 			traits = {
 				air_close_air_support_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1321,7 +1348,7 @@ characters={
 			traits = {
 				air_bomber_interception_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1345,7 +1372,7 @@ characters={
 			traits = {
 				navy_naval_air_defense_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1394,7 +1421,7 @@ characters={
 				original_tag = GER
 			}
 			available = {
-				has_completed_focus = GER_west_wall 
+				
 			}
 			traits = {
 				fortification_engineer 
@@ -1418,8 +1445,12 @@ characters={
 			allowed = {
 				original_tag = GER
 			}
+			available = { 
+				date > 1941.6.1
+				GER = { has_idea = tot_economic_mobilisation }
+			}
 			traits = {
-				armaments_organizer 
+				total_war_organizer 
 			}
 		}		
 	}
@@ -1434,15 +1465,12 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = hjalmar_schacht
-			cost = 75.000
+			cost = 150.000
 			allowed = {
 				original_tag = GER
 			}
 			available = {
-				has_completed_focus = GER_four_year_plan 
-				not = {
-					has_completed_focus = GER_demand_sudetenland 
-				}
+				
 			}
 			traits = {
 				captain_of_industry 
@@ -1569,15 +1597,8 @@ characters={
 				original_tag = GER
 			}
 			available = {
-				has_government = fascism 
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
+				
+				
 			}
 			traits = {
 				fascist_demagogue propaganda_expert 
@@ -1604,7 +1625,7 @@ characters={
 			slot = political_advisor
 			idea_token = rudolf_hess
 			allowed = {
-				original_tag = GER
+				
 			}
 			available = {
 				NOT = {
@@ -1633,7 +1654,7 @@ characters={
 			}
 		}
 		allowed_civil_war = {
-			has_government = fascism
+			
 		}
 		advisor={
 			slot = political_advisor
@@ -1642,10 +1663,7 @@ characters={
 				original_tag = GER
 			}
 			available = {
-				OR = {
-					has_government = fascism 
-					has_country_flag = GER_reinstated_nazi_leadership 
-				}
+				
 			}
 			on_add = {
 				custom_effect_tooltip = GER_SS_himmler_recruit
@@ -1670,10 +1688,7 @@ characters={
 				original_tag = GER
 			}
 			available = {
-				OR = {
-					has_government = fascism 
-					has_country_flag = GER_reinstated_nazi_leadership 
-				}
+				
 			}
 			ai_will_do = {
 				factor = 30.000
@@ -1698,10 +1713,7 @@ characters={
 				original_tag = GER
 			}
 			available = {
-				OR = {
-					has_government = fascism 
-					has_country_flag = GER_reinstated_nazi_leadership 
-				}
+				
 			}
 			traits = {
 				backroom_backstabber 
@@ -1798,7 +1810,7 @@ characters={
 				has_dlc = "Waking the Tiger"
 			}
 			available = {
-				has_completed_focus = GER_revive_the_kaiserreich 
+				date > 1943.1.1
 			}
 			traits = {
 				economist 

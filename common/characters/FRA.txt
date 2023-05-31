@@ -159,7 +159,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ career_officer trait_cautious armor_officer panzer_leader }
+			traits={ career_officer trait_cautious armor_officer }
 			skill=4
 			attack_skill=3
 			defense_skill=2
@@ -186,13 +186,13 @@ characters={
 				original_tag = FRA
 			}
 			available = {
-				has_completed_focus = FRA_aggressive_focus
+				
 			}
-			cost = 100.000
+			cost = 150.000
 			traits = {
 				army_chief_offensive_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -228,11 +228,11 @@ characters={
 			available = {
 				has_completed_focus = FRA_defensive_focus
 			}
-			cost = 100.000
+			cost = 150.000
 			traits = {
 				army_chief_defensive_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -266,9 +266,9 @@ characters={
 				original_tag = FRA
 			}
 			traits = {
-				army_chief_maneuver_1
+				army_infantry_1
 			}
-			cost =  50
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -315,7 +315,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = charles_de_gaulle
 			ledger = army
@@ -323,7 +323,10 @@ characters={
 				original_tag = FRA
 			}
 			available = {
-				has_completed_focus = FRA_battle_of_maneuver
+				 OR = {
+				    has_completed_focus = FRA_army_reform
+				    original_tag = "FRF"
+				}
 			}
 			
 			traits = {
@@ -372,7 +375,7 @@ characters={
 			traits = {
 				army_commando_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -400,7 +403,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = henri_giraud
 			ledger = army
@@ -453,7 +456,7 @@ characters={
 			traits = {
 				army_logistics_1
 			}
-			cost =  50
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -544,7 +547,7 @@ characters={
 			traits = {
 				navy_chief_decisive_battle_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -620,7 +623,7 @@ characters={
 			traits = {
 				navy_screen_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -657,7 +660,7 @@ characters={
 			traits = {
 				navy_capital_ship_1
 			}
-			cost =  50
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -712,7 +715,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = jean_decoux
 			ledger = navy
@@ -731,7 +734,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = jean_marie_bergeret
 			ledger = air
@@ -772,7 +775,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = frederic_irene_joliot_curie
 			ledger = army
@@ -813,7 +816,7 @@ characters={
 			traits = {
 				army_chief_offensive_1
 			}
-			cost =  50
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -836,7 +839,7 @@ characters={
 			traits = {
 				army_chief_defensive_1
 			}
-			cost =  50
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -864,7 +867,7 @@ characters={
 			traits = {
 				navy_chief_naval_aviation_1
 			}
-			cost =  50
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -887,7 +890,7 @@ characters={
 			traits = {
 				navy_chief_commerce_raiding_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -913,7 +916,7 @@ characters={
 			traits = {
 				air_chief_ground_support_1
 			}
-			cost =  50
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -936,7 +939,7 @@ characters={
 			traits = {
 				air_chief_all_weather_1
 			}
-			cost =  50
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -959,7 +962,7 @@ characters={
 			traits = {
 				air_chief_reform_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -992,9 +995,9 @@ characters={
 				original_tag = FRA
 			}
 			traits = {
-				air_air_superiority_2
+				army_logistics_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1018,7 +1021,7 @@ characters={
 			traits = {
 				air_tactical_bombing_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1042,7 +1045,7 @@ characters={
 			traits = {
 				navy_fleet_logistics_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1064,9 +1067,9 @@ characters={
 				original_tag = FRA
 			}
 			traits = {
-				air_air_combat_training_2
+				army_regrouping_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1088,9 +1091,9 @@ characters={
 				original_tag = FRA
 			}
 			traits = {
-				army_cavalry_2
+				army_armored_1
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1119,20 +1122,7 @@ characters={
 				original_tag  = FRA
 			}
 			available  = {
-				NOT  = {
-					has_country_leader  = {
-						character  = FRA_philippe_petain
-						ruling_only  = yes 
-					}
-				}
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					NOT  = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}
+				
 			}
 			traits  = {
 				democratic_reformer 
@@ -1216,8 +1206,7 @@ characters={
 				original_tag  = FRA
 			}
 			available  = {
-				has_completed_focus  = FRA_confirm_eastern_commitments 
-				has_government  = democratic 
+				
 			}
 			cost  = 75.000
 			traits  = {
@@ -1274,16 +1263,12 @@ characters={
 				original_tag  = FRA
 			}
 			available  = {
-				has_completed_focus  = FRA_integralism 
-				or  = {
-					has_government  = fascism 
-					has_government  = neutrality 
-				}
+				
 			}
 			visible  = {
 				has_dlc = "La Resistance"
 			}
-			cost  = 75.000
+			cost  = 150.000
 			traits  = {
 				national_integralist 
 			}
@@ -1341,9 +1326,7 @@ characters={
 				original_tag  = FRA
 			}
 			available  = {
-				not  = {
-					has_government  = communism 
-				}
+				
 			}
 			cost  = 150.000
 			traits  = {

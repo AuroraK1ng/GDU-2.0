@@ -17,10 +17,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		country_leader = {
 			ideology = fascism_ideology
 			traits = { il_duce }
@@ -50,10 +46,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		country_leader = {
 			ideology = fascism_ideology
 			traits = { the_grand_council }
@@ -70,10 +62,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		#COUNTRY LEADER ROLE IS GIVEN VIA EVENT (Communist or Democratic)
 	}
 
@@ -83,10 +71,6 @@ characters = {
 			civilian = {
 				large = GFX_portrait_ITA_papa_pio_xi
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		#COUNTRY LEADER ROLE IS GIVEN LATER
@@ -100,10 +84,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		#COUNTRY LEADER ROLE IS GIVEN LATER
 	}
 
@@ -113,10 +93,6 @@ characters = {
 			civilian = {
 				large = GFX_portrait_ITA_antonio_gramsci
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		#COUNTRY LEADER ROLE IS GIVEN LATER
@@ -134,10 +110,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		country_leader = {
 			ideology = socialism
 			traits = { resistance_leader }
@@ -153,10 +125,6 @@ characters = {
 				large = GFX_portrait_ITA_vittorio_emanuele_III
 				small = GFX_portrait_ITA_vittorio_emanuele_III_small #just in case
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		country_leader = {
@@ -190,10 +158,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			cost = 150
 			slot = theorist
@@ -203,7 +167,7 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			available = {
-				has_government = fascism
+				
 			}
 			traits = {
 				grand_battle_plan_expert
@@ -224,6 +188,36 @@ characters = {
 			visible = { has_government = fascism }
 		}
 	}
+	ITA_rodolfo_graziani_highcommand = {
+		name = ITA_rodolfo_graziani
+		portraits = {
+			army = {
+				small = GFX_idea_rodolfo_graziani
+				large = GFX_portrait_ITA_rodolfo_graziani
+			}
+		}
+
+		advisor = {
+			cost = 150
+			slot = army_chief
+			idea_token = rodolfo_graziani_highcommand
+			ledger = army
+			allowed = {
+				ITA_is_italian_tag = yes
+			}
+			available = {
+				
+			}
+			traits = {
+			 army_chief_offensive_1
+			}
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+
+		
 
 	ITA_pietro_badoglio = {
 		name = ITA_pietro_badoglio
@@ -234,10 +228,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = army_chief
 			idea_token = pietro_badoglio
@@ -245,9 +235,9 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			traits = {
-				army_chief_morale_2
+				army_chief_morale_1
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -273,10 +263,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = army_chief
 			idea_token = emilio_de_bono
@@ -286,7 +272,7 @@ characters = {
 			traits = {
 				army_chief_defensive_1
 			}
-			cost = 50
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -315,10 +301,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = air_chief
 			idea_token = italo_balbo
@@ -326,18 +308,13 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			available = {
-				if =  {
-					limit = { 
-						has_dlc = "By Blood Alone"
-					}
-					ITA_is_advisor_available = yes
-				}
+				
 			}
 			
 			traits = {
 				air_chief_all_weather_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -366,10 +343,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			cost = 150
 			slot = theorist
@@ -379,27 +352,46 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			available = {
-				if = {
-					limit = { has_dlc = "By Blood Alone" }
-					OR = {
-						NOT = { has_government = communism }
-						has_completed_focus = ITA_common_ground
-					}
-				}
+				
 			}
 			traits = {
 				mobile_warfare_expert
 			}
 		}
 		
-		corps_commander={
-			traits = {  cavalry_leader armor_officer war_hero panzer_leader trait_engineer infantry_leader trickster organizer desert_fox trait_mountaineer }
-			skill=6
-			attack_skill=6
-			defense_skill=6
-			planning_skill=5
-			logistics_skill=4
-			legacy_id=0
+		corps_commander = {
+			traits = { armor_officer war_hero }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 4
+			legacy_id = 0
+		}
+	}
+	ITA_giovanni_messe_highcommand = {
+		name = ITA_giovanni_messe
+		portraits = {
+			army = {
+				small = GFX_idea_giovanni_messe
+				large = GFX_portrait_ITA_giovanni_messe
+			}
+		}
+
+		advisor = {
+			cost = 150
+			slot = high_command
+			idea_token = giovanni_messe_highcommand
+			ledger = army
+			allowed = {
+				ITA_is_italian_tag = yes
+			}
+			available = {
+				
+			}
+			traits = {
+				army_armored_3
+			}
 		}
 	}
 
@@ -412,10 +404,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = army_chief
 			idea_token = ugo_cavallero
@@ -423,9 +411,9 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			traits = {
-				army_chief_organizational_1 # Was army_chief_maneuver_2 (replaced by Alberto Pariani)
+				army_chief_maneuver_1
 			}
-			cost = 50
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -451,10 +439,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		corps_commander = {
 			traits = { inflexible_strategist career_officer }
 			skill = 1
@@ -473,10 +457,6 @@ characters = {
 				large = GFX_portrait_ITA_ubaldo_soddu
 				small = GFX_portrait_ITA_ubaldo_soddu_small
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		corps_commander = {
@@ -499,10 +479,6 @@ characters = {
 				large = GFX_portrait_ITA_ettore_bastico
 			}
 		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
 		
 		corps_commander = {
 			traits = { infantry_officer career_officer }
@@ -523,10 +499,6 @@ characters = {
 				small = GFX_portrait_ITA_italo_gariboldi_small
 				large = GFX_portrait_ITA_italo_gariboldi
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 		
 		corps_commander = {
@@ -549,10 +521,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = high_command
 			idea_token = vittorio_ambrosio
@@ -561,9 +529,9 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			traits = {
-				army_cavalry_2
+				army_cavalry_1
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -593,10 +561,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = high_command
 			idea_token = alfredo_guzzoni
@@ -610,7 +574,7 @@ characters = {
 			traits = {
 				army_infantry_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 2.000
 			}
@@ -632,13 +596,9 @@ characters = {
 		name = ITA_pietro_pintor
 		portraits = {
 			army = {
-				small = GFX_BBA_idea_ita_pietro_pintor
+				small = GFX_portrait_ITA_pietro_pintor_small
 				large = GFX_portrait_ITA_pietro_pintor
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 		
 		corps_commander = {
@@ -661,10 +621,6 @@ characters = {
 				large = GFX_portrait_ITA_mario_berti
 			}
 		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
 		
 		corps_commander = {
 			traits = { old_guard trait_reckless war_hero } #Always sick really need to do something about it
@@ -685,10 +641,6 @@ characters = {
 				large = GFX_portrait_ITA_carlo_geloso
 			}
 		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
 		
 		corps_commander = {
 			traits = { old_guard trait_engineer }
@@ -708,10 +660,6 @@ characters = {
 				small = GFX_portrait_ITA_giuseppe_tellera_small
 				large = GFX_portrait_ITA_giuseppe_tellera
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 		
 		corps_commander = {
@@ -734,10 +682,6 @@ characters = {
 				large = GFX_portrait_ITA_francesco_zingales
 			}
 		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
 		
 		corps_commander = {
 			traits = { cavalry_leader combined_arms_expert } #Motorized
@@ -759,10 +703,6 @@ characters = {
 				large = GFX_portrait_ITA_ezio_rosi
 			}
 		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
 		
 		corps_commander = {
 			traits = { infantry_officer organizer } #Logistics and Infantry
@@ -779,13 +719,9 @@ characters = {
 		name = ITA_mario_vercellino
 		portraits = {
 			army = {
-				small = GFX_BBA_idea_ita_mario_vercellino
+				small = GFX_portrait_ITA_mario_vercellino_small
 				large = GFX_portrait_ITA_mario_vercellino
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 		
 		corps_commander = {
@@ -803,13 +739,9 @@ characters = {
 		name = ITA_prince_filiberto
 		portraits = {
 			army = {
-				small = GFX_BBA_idea_ita_prince_filiberto
+				small = GFX_portrait_ITA_prince_filiberto_small
 				large = GFX_portrait_ITA_prince_filiberto
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 		
 		corps_commander = {
@@ -834,10 +766,6 @@ characters = {
 				large = GFX_portrait_ITA_prince_adalberto
 			}
 		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
 		
 		corps_commander = {
 			traits = { career_officer } # Infantry
@@ -857,10 +785,6 @@ characters = {
 				small = GFX_portrait_ITA_prince_umberto_small
 				large = GFX_portrait_ITA_prince_umberto
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 		
 		corps_commander = {
@@ -882,10 +806,6 @@ characters = {
 				large = GFX_portrait_ITA_alessandro_pirzio_biroli
 			}
 		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
 		
 		corps_commander = {
 			traits = { harsh_leader } #Resistance stuff if anything
@@ -903,13 +823,9 @@ characters = {
 		name = ITA_carlo_vecchiarelli
 		portraits = {
 			army = {
-				small = GFX_BBA_idea_ita_carlo_vecchiarelli
+				small = GFX_portrait_ITA_carlo_vecchiarelli_small
 				large = GFX_portrait_ITA_carlo_vecchiarelli
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 		
 		corps_commander = {
@@ -931,10 +847,6 @@ characters = {
 				large = GFX_portrait_ITA_mario_robotti
 			}
 		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
 		
 		corps_commander = {
 			traits = { infantry_officer } # Infantry
@@ -954,10 +866,6 @@ characters = {
 				small = GFX_portrait_ITA_ettore_baldasarre_small
 				large = GFX_portrait_ITA_ettore_baldasarre
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 		
 		corps_commander = {
@@ -980,10 +888,6 @@ characters = {
 				large = GFX_portrait_ITA_amedeo_guillet
 			}
 		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
 		
 		corps_commander = {
 			traits = { irregulars_officer desert_fox cavalry_leader skirmisher }  # Irregulars, Cavalry. Comandante Diavolo trait?
@@ -1001,13 +905,9 @@ characters = {
 		name = ITA_annibale_bergonzoli
 		portraits = {
 			army = {
-				small = GFX_BBA_idea_ita_annibale_bergonzoli
+				small = GFX_portrait_ITA_annibale_bergonzoli_small
 				large = GFX_portrait_ITA_annibale_bergonzoli
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 		
 		corps_commander = {
@@ -1033,10 +933,6 @@ characters = {
 				large = GFX_portrait_ITA_hamid_idris_awate
 			}
 		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
 		
 		corps_commander = {
 			traits = { ascari_officer trickster guerilla_fighter reckless desert_fox } # Ascari
@@ -1054,13 +950,9 @@ characters = {
 		name = ITA_ibrahim_farag_mohammed
 		portraits = {
 			army = {
-				small = GFX_BBA_idea_ita_ibrahim_farag_mohammed
+				small = GFX_portrait_ITA_ibrahim_farag_mohammed_small
 				large = GFX_portrait_ITA_ibrahim_farag_mohammed
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 		
 		corps_commander = {
@@ -1100,10 +992,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = navy_chief
 			idea_token = inigo_campioni
@@ -1113,7 +1001,7 @@ characters = {
 			traits = {
 				navy_chief_decisive_battle_1
 			}
-			cost = 50
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -1139,10 +1027,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = high_command
 			idea_token = alberto_da_zara
@@ -1153,20 +1037,20 @@ characters = {
 			traits = {
 				navy_anti_submarine_1
 			}
-			cost = 50
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
 		}
 		
-		navy_leader={
-			traits={ gentlemanly superior_tactician fleet_protector ironside }
-			skill=4
-			attack_skill=3
-			defense_skill=2
-			maneuvering_skill=3
-			coordination_skill=2
-			legacy_id=0
+		navy_leader = {
+			traits = { gentlemanly superior_tactician }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+			legacy_id = 0
 		}
 	}
 
@@ -1180,10 +1064,6 @@ characters = {
 				small = GFX_idea_prince_aimone
 				large = GFX_portrait_ITA_prince_aimone
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 		 
 		navy_leader = {
@@ -1204,10 +1084,6 @@ characters = {
 				large = GFX_portrait_ITA_giuseppe_fioravanzo
 				small = GFX_portrait_ITA_giuseppe_fioravanzo_small
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		advisor = {
@@ -1243,10 +1119,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {	
 			slot = high_command
 			idea_token = carlo_bergamini
@@ -1257,7 +1129,7 @@ characters = {
 			traits = {
 				navy_capital_ship_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -1283,12 +1155,8 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = angelo_iachino
 			ledger = navy
@@ -1296,7 +1164,7 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			available = {
-				has_government = fascism
+				
 			}
 			traits = { naval_theorist }
 		}
@@ -1322,10 +1190,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		navy_leader = {
 			traits = { old_guard_navy bold fleet_protector }
 			skill = 1
@@ -1348,10 +1212,6 @@ characters = {
 				small = GFX_portrait_ITA_junio_valerio_borghese_small
 				large = GFX_portrait_ITA_junio_valerio_borghese
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		navy_leader = {
@@ -1385,10 +1245,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			cost = 150
 			slot = theorist
@@ -1411,12 +1267,8 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = renato_sandalli
 			ledger = air
@@ -1435,12 +1287,8 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = gaetano_crocco
 			ledger = air
@@ -1464,12 +1312,8 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = ITA_romeo_bernotti
 			ledger = navy
@@ -1499,10 +1343,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = army_chief
 			idea_token = ITA_alberto_pariani
@@ -1515,7 +1355,7 @@ characters = {
 			traits = {
 				army_chief_maneuver_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -1535,10 +1375,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = navy_chief
 			idea_token = domenico_cavagnari
@@ -1548,7 +1384,7 @@ characters = {
 			traits = {
 				navy_chief_commerce_raiding_1
 			}
-			cost = 50
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -1563,10 +1399,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = navy_chief
 			idea_token = arturo_riccardi
@@ -1574,12 +1406,12 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			available = {
-				has_government = fascism
+				
 			}
 			traits = {
 				navy_chief_naval_aviation_1
 			}
-			cost = 50
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -1594,10 +1426,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = navy_chief
 			idea_token = ITA_raffaele_de_courten
@@ -1610,7 +1438,7 @@ characters = {
 			traits = {
 				navy_chief_commerce_raiding_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -1630,10 +1458,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {	
 			slot = air_chief
 			idea_token = rino_corso_fougier
@@ -1643,7 +1467,7 @@ characters = {
 			traits = {
 				air_chief_safety_1
 			}
-			cost = 50
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -1658,10 +1482,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = air_chief
 			idea_token = francesco_pricolo
@@ -1671,7 +1491,7 @@ characters = {
 			traits = {
 				air_chief_reform_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -1686,10 +1506,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = air_chief
 			idea_token = ITA_aldo_pellegrini
@@ -1699,7 +1515,7 @@ characters = {
 			traits = {
 				air_chief_ground_support_1
 			}
-			cost = 50
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -1733,10 +1549,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = high_command
 			idea_token = ettore_muti
@@ -1745,12 +1557,12 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			available = {
-				has_government = fascism
+				
 			}
 			traits = {
 				air_tactical_bombing_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -1763,10 +1575,6 @@ characters = {
 			army = {
 				small = GFX_idea_marziale_cerutti
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		advisor = {
@@ -1782,7 +1590,7 @@ characters = {
 			traits = {
 				air_air_combat_training_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -1795,10 +1603,6 @@ characters = {
 			army = {
 				small = GFX_idea_silvio_scaroni
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		advisor = {
@@ -1814,7 +1618,7 @@ characters = {
 			traits = {
 				air_bomber_interception_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -1827,10 +1631,6 @@ characters = {
 			army = {
 				small = GFX_idea_luigi_mascherpa
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		advisor = {
@@ -1846,7 +1646,7 @@ characters = {
 			traits = {
 				navy_naval_air_defense_1
 			}
-			cost = 50
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -1859,10 +1659,6 @@ characters = {
 			army = {
 				small = GFX_portrait_ITA_achille_starace_small
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		advisor = {
@@ -1883,7 +1679,7 @@ characters = {
 			traits = {
 				army_logistics_1 # Blackshirt related trait instead?
 			}
-			cost = 50
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -1903,10 +1699,6 @@ characters = {
 			army = {
 				small = GFX_portrait_ITA_gian_galeazzo_ciano_small
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		advisor = {
@@ -1962,10 +1754,6 @@ characters = {
 			civilian = {
 				large = GFX_portrait_ITA_dino_grandi
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		advisor = {
@@ -2027,10 +1815,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = ITA_giuseppe_bottai
@@ -2080,10 +1864,6 @@ characters = {
 			army = {
 				small = GFX_portrait_ITA_renato_ricci_small
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		advisor = {
@@ -2144,10 +1924,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = high_command
 			idea_token = mario_roatta
@@ -2161,7 +1937,7 @@ characters = {
 			traits = {
 				army_regrouping_1
 			}
-			cost = 50
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -2214,10 +1990,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = ITA_giovanni_marinelli
@@ -2225,7 +1997,7 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			available = {
-				ITA_government_is_somewhat_fascist = yes
+				
 			}
 			traits = {
 				prince_of_terror
@@ -2251,10 +2023,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = ITA_giacomo_acerbo
@@ -2262,7 +2030,7 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			available = {
-				ITA_government_is_really_fascist = yes
+				
 			}
 			traits = {
 				war_industrialist 
@@ -2290,10 +2058,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = ITA_paolo_thaon_di_revel
@@ -2301,7 +2065,7 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			available = {
-				ITA_government_is_somewhat_fascist = yes
+				
 			}
 			traits = {
 				quartermaster_general 
@@ -2330,10 +2094,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = ITA_carlo_favagrossa
@@ -2341,7 +2101,7 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			available = {
-				ITA_government_is_really_fascist = yes
+			
 			}
 			traits = {
 				armaments_organizer
@@ -2370,10 +2130,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = ITA_alberto_beneduce
@@ -2381,16 +2137,7 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			available = {
-				OR = {
-					has_government = fascism
-					has_government = neutrality
-					if = {
-						limit = {
-							has_dlc = "By Blood Alone"
-						}
-						has_completed_focus = ITA_cooperate_with_moderates
-					}
-				}
+				
 			}
 			traits = {
 				captain_of_industry
@@ -2417,10 +2164,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = ITA_guido_jung
@@ -2428,14 +2171,7 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			available = {
-				has_government = fascism
-				NOT = { has_completed_focus = ITA_pact_of_steel }
-				if = {
-					limit = {
-						has_dlc = "By Blood Alone"
-					}
-					NOT = { has_completed_focus = ITA_revoke_the_acerbo_law }
-				}
+				
 			}
 			traits = {
 				financial_expert
@@ -2465,10 +2201,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = ITA_adelchi_serena
@@ -2476,7 +2208,7 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			available = {
-				ITA_government_is_somewhat_fascist = yes
+				
 			}
 			traits = {
 				silent_workhorse
@@ -2505,10 +2237,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = ITA_curzio_malaparte
@@ -2516,19 +2244,7 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "By Blood Alone"
-					}
-					OR = {
-						has_government = fascism
-						has_completed_focus = ITA_utilize_the_blackshirts
-						has_completed_focus = ITA_cooperate_with_moderates
-					}
-				}
-				else = {
-					has_government = fascism
-				}
+				
 			}
 			traits = {
 				editor
@@ -2556,10 +2272,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = ITA_serafino_mazzolini
@@ -2567,7 +2279,7 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			available = {
-				ITA_government_is_really_fascist = yes
+				
 			}
 			traits = {
 				ideological_crusader 
@@ -2596,10 +2308,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = ITA_roberto_farinacci
@@ -2607,7 +2315,7 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			available = {
-				ITA_government_is_really_fascist = yes
+				
 			}
 			traits = {
 				backroom_backstabber 
@@ -2633,10 +2341,6 @@ characters = {
 			army = {
 				small = GFX_idea_carlo_scorza
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		advisor = {
@@ -2698,10 +2402,6 @@ characters = {
 				large = GFX_portrait_ITA_giuseppe_pieche
 			}
 		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
 		
 		field_marshal = {
 			traits = { infantry_officer expert_delegator } #Regno del Sud, Commander of Royal Carabinieri
@@ -2730,10 +2430,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = army_chief
 			idea_token = ITA_giovanni_duca
@@ -2753,7 +2449,7 @@ characters = {
 			traits = {
 				army_chief_drill_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -2786,13 +2482,9 @@ characters = {
 		name = ITA_giuseppe_de_stefanis
 		portraits = {
 			army = {
-				small = GFX_BBA_idea_ita_giuseppe_de_stefanis
+				small = GFX_portrait_ITA_giuseppe_de_stefanis_small
 				large = GFX_portrait_ITA_giuseppe_de_stefanis
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 		
 		corps_commander = {
@@ -2820,10 +2512,6 @@ characters = {
 				large = GFX_portrait_ITA_ugo_luca
 			}
 		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
 		
 		corps_commander = {
 			traits = { infantry_officer urban_assault_specialist }
@@ -2848,10 +2536,6 @@ characters = {
 			army = {
 				small = GFX_portrait_ITA_enrico_fermi_small
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		advisor = {
@@ -2879,6 +2563,28 @@ characters = {
 			}
 		}
 	}
+	ITA_albert_speer={ 
+		name=ITA_albert_speer
+		portraits={
+			army={
+				small="GFX_idea_speer"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = speer
+			allowed = {
+				original_tag = ITA
+			}
+			available = { 
+				date > 1941.6.1
+				GER = { has_idea = tot_economic_mobilisation }
+			}
+			traits = {
+				total_war_organizer 
+			}
+		}		
+	}
 
 	ITA_vittorio_emanuele_orlando = {
 		name = ITA_vittorio_emanuele_orlando
@@ -2886,10 +2592,6 @@ characters = {
 			army = {
 				small = GFX_portrait_ITA_vittorio_emanuele_orlando_small
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		advisor = {
@@ -2934,10 +2636,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = ITA_luigi_einaudi
@@ -2969,10 +2667,6 @@ characters = {
 			army = {
 				small = GFX_portrait_ITA_pietro_d_acquarone_small
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		advisor = {
@@ -3010,10 +2704,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = ITA_alberto_de_stefani
@@ -3045,10 +2735,6 @@ characters = {
 				small = GFX_idea_ivanoe_bonomi
 				large = GFX_portrait_ITA_ivanoe_bonomi
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		advisor = {
@@ -3108,10 +2794,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		country_leader = {
 			ideology = conservatism
 			traits = { master_of_politics }
@@ -3164,10 +2846,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = ITA_mario_scelba
@@ -3204,10 +2882,6 @@ characters = {
 			army = {
 				small = GFX_portrait_ITA_guido_de_rugiero_small
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		advisor = {
@@ -3249,10 +2923,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = ITA_alberto_tarchiani
@@ -3279,10 +2949,6 @@ characters = {
 			army = {
 				small = GFX_portrait_ITA_giuseppe_borea_small
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		advisor = {
@@ -3324,13 +2990,9 @@ characters = {
 		name = ITA_mario_ricci
 		portraits = {
 			army = {
-				small = GFX_BBA_idea_ita_mario_ricci
+				small = GFX_portrait_ITA_mario_ricci_small
 				large = GFX_portrait_ITA_mario_ricci
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 		
 		field_marshal = {
@@ -3358,13 +3020,9 @@ characters = {
 		name = ITA_norma_barbolini
 		portraits = {
 			army = {
-				small = GFX_BBA_idea_ita_norma_barbolini
+				small = GFX_portrait_ITA_norma_barbolini_small
 				large = GFX_portrait_ITA_norma_barbolini
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 		
 		corps_commander = {
@@ -3394,17 +3052,13 @@ characters = {
 		name = ITA_ada_gobetti
 		portraits = {
 			army = {
-				small = GFX_BBA_idea_ita_ada_gobetti
+				small = GFX_portrait_ITA_ada_gobetti_small
 				large = GFX_portrait_ITA_ada_gobetti
 			}
 		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
 		
 		corps_commander = {
-			traits = { militias_officer organizer cautious } #Partisan
+			traits = { militias_officer organizer trait_cautious } #Partisan
 			skill = 2
 			attack_skill = 1
 			defense_skill = 2
@@ -3424,10 +3078,6 @@ characters = {
 				small = GFX_portrait_ITA_pompeo_colajanni_small
 				large = GFX_portrait_ITA_pompeo_colajanni
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 		
 		corps_commander = {
@@ -3459,10 +3109,6 @@ characters = {
 				large = GFX_portrait_ITA_randolfo_pacciardi
 			}
 		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
 		
 		advisor = {
 			slot = high_command
@@ -3472,21 +3118,15 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			available = {
-				OR = {
-					has_government = communism
-					AND = {
-						has_completed_focus = ITA_common_ground
-						has_government = democratic
-					}
-				}
+				
 			}
-			cost = 50
+			cost = 150
 			traits = {
 				army_regrouping_2 
 			}
 
 			ai_will_do = {
-				base = 0.300
+				base = 1.000
 			}
 		}
 
@@ -3517,10 +3157,6 @@ characters = {
 			army = {
 				small = GFX_idea_amadeo_bordiga
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		advisor = {
@@ -3564,10 +3200,6 @@ characters = {
 			civilian = {
 				small = GFX_portrait_ITA_luigi_longo_political_small
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		advisor = {
@@ -3622,10 +3254,6 @@ characters = {
 				large = GFX_portrait_ita_palmiro_togliatti
 				small = GFX_portrait_ITA_palmiro_togliatti_small
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		country_leader = {
@@ -3684,10 +3312,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		country_leader = {
 			ideology = stalinism
 			traits = { staunch_anti_fascist }
@@ -3739,10 +3363,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = ITA_antonio_pesenti
@@ -3775,10 +3395,6 @@ characters = {
 			army = {
 				small = GFX_portrait_ITA_fausto_gullo_small
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		advisor = {
@@ -3815,10 +3431,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = ITA_giulio_paggio
@@ -3845,10 +3457,6 @@ characters = {
 			army = {
 				small = GFX_portrait_ITA_ignazio_silone_small
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		advisor = {
@@ -3889,10 +3497,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		corps_commander = {
 			traits = { }
 			skill = 1
@@ -3912,10 +3516,6 @@ characters = {
 			civilian = {
 				large = GFX_portrait_ETH_abba_jofir
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
 		corps_commander = {
@@ -3939,10 +3539,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		corps_commander = {
 			traits = { hill_fighter }
 			skill = 1
@@ -3962,10 +3558,6 @@ characters = {
 			civilian = {
 				large = GFX_portrait_ETH_seyoum_mengesha
 			}
-		}
-
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 		
 		corps_commander = {

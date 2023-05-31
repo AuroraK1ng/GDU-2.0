@@ -64,14 +64,60 @@ characters={
 		}
 
 		corps_commander={
-			traits={ brilliant_strategist politically_connected trickster trait_engineer organizer infantry_leader panzer_leader trickster }
-			skill=6
-			attack_skill=5
-			defense_skill=6
-			planning_skill=4
+			traits={ brilliant_strategist politically_connected trickster trait_engineer }
+			skill=5
+			attack_skill=4
+			defense_skill=5
+			planning_skill=3
 			logistics_skill=4
 			legacy_id=0
 		}
+	}
+		JAP_tomoyuki_yamashita_highcommand={
+		name=JAP_tomoyuki_yamashita
+		portraits={
+			army={
+				small="GFX_idea_tomoyuki_yamashita"
+				large=GFX_portrait_JAP_tomoyuki_yamashita
+			}
+		}
+		advisor={
+			cost = 150
+			slot = high_command
+			idea_token = tomoyuki_yamashita_hc
+			ledger = army
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				army_commando_1
+			}
+		}
+
+		
+	}
+		JAP_takeichi_nichi={
+		name=JAP_takeichi_nichi
+		portraits={
+			army={
+				small="GFX_idea_JAP_takeichi_nichi"
+				large=GFX_portrait_JAP_takeichi_nichi
+			}
+		}
+		advisor={
+			cost = 150
+			slot = high_command
+			idea_token = takeichi_nichi
+			ledger = army
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				army_armored_1
+			}
+		}
+
+		
 	}
 
 	JAP_hisaichi_terauchi={
@@ -83,7 +129,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = hisaichi_terauchi
 			ledger = army
@@ -124,7 +170,7 @@ characters={
 			traits = {
 				army_concealment_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -188,12 +234,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ career_officer infantry_officer organizer infantry_leader panzer_leader trickster }
-			skill=6
-			attack_skill=6
-			defense_skill=4
-			planning_skill=4
-			logistics_skill=5
+			traits={ career_officer infantry_officer trickster }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=4
 			legacy_id=0
 		}
 	}
@@ -216,7 +262,7 @@ characters={
 			traits = {
 				army_infantry_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 2.500
 				modifier = {
@@ -245,14 +291,14 @@ characters={
 		name=JAP_toshizo_nishio
 		portraits={
 			army={
-				large="gfx/leaders/JAP/Portrait_Japan_Toshizo_Nishio.dds"
-				small="gfx/interface/ideas/idea_JAP_toshizo_nishio.dds"
+				large=GFX_portrait_JAP_toshizo_nishio
+				small=GFX_portrait_JAP_toshizo_nishio_small
 			}
 		}
 		corps_commander={
-			traits = { organizer infantry_leader trait_engineer infantry_expert naval_invader commando trickster trait_mountaineer jungle_rat }
-			skill=8
-			attack_skill=5
+			traits={ brilliant_strategist infantry_officer }
+			skill=3
+			attack_skill=3
 			defense_skill=2
 			planning_skill=3
 			logistics_skill=2
@@ -307,11 +353,11 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ inflexible_strategist trait_reckless JAP_samurai_lineage organizer infantry_leader panzer_leader trickster }
-			skill=4
-			attack_skill=4
-			defense_skill=4
-			planning_skill=3
+			traits={ inflexible_strategist trait_reckless JAP_samurai_lineage }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
 			logistics_skill=2
 			legacy_id=0
 		}
@@ -353,7 +399,7 @@ characters={
 			traits = {
 				air_chief_all_weather_1
 			}
-			cost =  50
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -512,12 +558,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ career_officer politically_connected fortress_buster organizer infantry_leader panzer_leader trickster }
-			skill=6
-			attack_skill=4
-			defense_skill=5
-			planning_skill=5
-			logistics_skill=5
+			traits={ career_officer politically_connected fortress_buster }
+			skill=3
+			attack_skill=1
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
 			legacy_id=0
 		}
 	}
@@ -618,16 +664,16 @@ characters={
 			traits = {
 				army_logistics_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 3.000
 			}
 		}
 		
 		corps_commander={
-			traits = {  commando naval_invader infantry_leader infantry_expert trait_engineer hill_fighter ranger trait_mountaineer }
-			skill=7
-			attack_skill=5
+			traits={ career_officer infantry_officer commando }
+			skill=3
+			attack_skill=3
 			defense_skill=1
 			planning_skill=3
 			logistics_skill=3
@@ -823,7 +869,7 @@ characters={
 			traits = {
 				navy_capital_ship_1
 			}
-			cost =  50
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -952,7 +998,7 @@ characters={
 			}
 		}
 		advisor={
-		cost = 100
+		cost = 150
 		slot = theorist
 		idea_token = minoru_genda
 		ledger = navy
@@ -992,7 +1038,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = hino_kumazo
 			ledger = air
@@ -1011,7 +1057,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = yoshio_nishina
 			ledger = army
@@ -1035,7 +1081,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = hideo_itokawa
 			ledger = air
@@ -1070,7 +1116,7 @@ characters={
 			traits = {
 				army_chief_offensive_1
 			}
-			cost =  50
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1096,7 +1142,7 @@ characters={
 			traits = {
 				army_chief_drill_3
 			}
-			cost = 200
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1119,7 +1165,7 @@ characters={
 			traits = {
 				army_chief_morale_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1144,7 +1190,7 @@ characters={
 			traits = {
 				navy_chief_naval_aviation_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 0.200
 			}
@@ -1167,7 +1213,7 @@ characters={
 			traits = {
 				navy_chief_commerce_raiding_1
 			}
-			cost =  50
+			cost = 150
 			ai_will_do = {
 				factor = 0.200
 			}
@@ -1190,7 +1236,7 @@ characters={
 			traits = {
 				navy_chief_decisive_battle_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 0.200
 			}
@@ -1218,7 +1264,7 @@ characters={
 			traits = {
 				air_chief_night_operations_1
 			}
-			cost =  50
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1241,7 +1287,7 @@ characters={
 			traits = {
 				air_chief_ground_support_1
 			}
-			cost =  50
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1276,7 +1322,7 @@ characters={
 			traits = {
 				air_tactical_bombing_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1300,7 +1346,7 @@ characters={
 			traits = {
 				air_naval_strike_1
 			}
-			cost =  50
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1324,7 +1370,7 @@ characters={
 			traits = {
 				air_air_combat_training_3
 			}
-			cost = 200
+			cost = 150
 			ai_will_do = {
 				factor = 0.800
 			}
@@ -1348,7 +1394,7 @@ characters={
 			traits = {
 				navy_naval_air_defense_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1372,7 +1418,7 @@ characters={
 			traits = {
 				navy_carrier_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}

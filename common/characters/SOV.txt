@@ -188,17 +188,37 @@ characters = {
 			}
 			available = {
 				has_completed_focus = SOV_positive_heroism
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+				
 			}
 			traits = {
 				mass_assault_expert
 			}
 		}		
+	}
+	SOV_georgy_zhukov_highcommand={
+		name=SOV_georgy_zhukov_highcommand
+		portraits={
+			army={
+				small="GFX_idea_georgy_zhukov"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = georgy_zhukov_highcommand
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				has_completed_focus = SOV_defense_of_moscow
+			}
+			traits = {
+				 marshal_of_victory
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 	}
 
 	SOV_konstantin_rokossovsky = {
@@ -212,11 +232,11 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { cavalry_leader brilliant_strategist trait_cautious armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger  organizer}
-			skill = 7
-			attack_skill = 5
-			defense_skill = 8
-			planning_skill = 4
+			traits = { brilliant_strategist trait_cautious armor_officer }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
 			logistics_skill = 4
 			legacy_id = 402
 			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
@@ -227,30 +247,15 @@ characters = {
 			idea_token = konstantin_rokossovsky
 			ledger = army
 			allowed = {
-				original_tag = SOV
-				hidden_trigger = {
-					NOT = {
-						any_other_country = {
-							has_war_with = SOV
-							original_tag = SOV
-							has_unit_leader = 403.000
-						}
-					}
-				}
+				
 			}
 			available = {
-				has_completed_focus = SOV_positive_heroism
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+				
 			}
 			traits = {
-				army_armored_3
+				army_armored_2
 			}
-				cost = 200
+				cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -303,7 +308,7 @@ characters = {
 			traits = {
 				army_regrouping_2
 			}
-				cost = 100
+				cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -319,7 +324,7 @@ characters = {
 			}
 		}
 		advisor = {
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = boris_shaposhnikov
 			ledger = army
@@ -379,27 +384,12 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				custom_trigger_tooltip = {
-					tooltip = SOV_konev_civil_war
-					NOT = {
-						any_other_country = {
-							has_war_with = SOV
-							original_tag = SOV
-							has_unit_leader = 408.000
-						}
-					}
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+				
 			}
 			traits = {
-				army_concealment_2
+				army_infantry_1
 			}
-				cost = 100
+				cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -451,7 +441,7 @@ characters = {
 			traits = {
 				army_chief_reform_2
 			}
-				cost = 100
+				cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -504,7 +494,7 @@ characters = {
 			traits = {
 				army_chief_drill_1
 			}
-				cost = 50
+				cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -631,28 +621,12 @@ characters = {
 				small= "GFX_idea_SOV_leonid_govorov"
 			}
 		}
-		advisor = {
-			slot = army_chief
-			idea_token = SOV_leonid_govorov
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				army_chief_offensive_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		field_marshal = {
-			traits = { skilled_staffer commando cavalry_leader armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger winter_specialist organizer offn
-		 }
-			skill = 7
-			attack_skill = 6
-			defense_skill = 6
-			planning_skill = 6
-			logistics_skill = 5
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
 			legacy_id = 0
 			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
@@ -1127,7 +1101,7 @@ characters = {
 			}
 		}
 		advisor = {
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = sergey_gorshkov
 			ledger = navy
@@ -1194,7 +1168,7 @@ characters = {
 			traits = {
 				navy_capital_ship_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 0.200
 			}
@@ -1249,7 +1223,7 @@ characters = {
 			traits = {
 				navy_amphibious_assault_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 0.200
 			}
@@ -1304,7 +1278,7 @@ characters = {
 			traits = {
 				navy_submarine_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 0.200
 			}
@@ -1340,7 +1314,7 @@ characters = {
 			traits = {
 				air_air_combat_training_2
 			}
-				cost = 100
+				cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1387,7 +1361,7 @@ characters = {
 			traits = {
 				air_close_air_support_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1411,7 +1385,7 @@ characters = {
 			traits = {
 				air_chief_ground_support_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1459,7 +1433,7 @@ characters = {
 			traits = {
 				navy_chief_decisive_battle_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 0.200
 			}
@@ -1483,7 +1457,7 @@ characters = {
 			traits = {
 				navy_chief_reform_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 0.200
 			}
@@ -1507,7 +1481,7 @@ characters = {
 			traits = {
 				air_chief_safety_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1531,7 +1505,7 @@ characters = {
 			traits = {
 				air_chief_all_weather_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1547,7 +1521,7 @@ characters = {
 		}
 
 		advisor = {
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = alexander_golovanov
 			ledger = air
@@ -1575,7 +1549,7 @@ characters = {
 			traits = {
 				navy_chief_commerce_raiding_1
 			}
-			cost = 50
+			cost = 150
 			ai_will_do = {
 				factor = 0.200
 			}
@@ -1591,7 +1565,7 @@ characters = {
 		}
 
 		advisor = {
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = igor_kurchatov
 			ledger = army
@@ -1616,7 +1590,7 @@ characters = {
 		}
 
 		advisor = {
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = sergei_korolev
 			ledger = air
@@ -1648,9 +1622,9 @@ characters = {
 				original_tag = SOV
 			}
 			traits = {
-				air_airborne_1
+				army_commando_1
 			}
-			cost = 50
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1679,7 +1653,7 @@ characters = {
 			traits = {
 				navy_chief_naval_aviation_1
 			}
-				cost = 50
+				cost = 150
 			ai_will_do = {
 				factor = 0.200
 			}
@@ -1703,7 +1677,7 @@ characters = {
 			traits = {
 				army_chief_defensive_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1738,7 +1712,7 @@ characters = {
 			traits = {
 				army_chief_maneuver_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1772,7 +1746,7 @@ characters = {
 			traits = {
 				air_chief_reform_3
 			}
-			cost = 200
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1931,7 +1905,7 @@ characters = {
 			traits = {
 				army_chief_drill_1
 			}
-			cost = 50
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -2120,14 +2094,7 @@ characters = {
 				small = "GFX_idea_nikita_khrushchev"
 			}
 		}
-		allowed_civil_war = {
-			OR = {
-				SOV_advisor_is_aligned_left = yes 
-				SOV_advisor_is_aligned_right = yes 
-				SOV_advisor_is_aligned_centre = yes 
-			}
-			has_government = communism
-		}
+		
 
 		advisor = {
 			slot = political_advisor
@@ -2136,28 +2103,13 @@ characters = {
 				original_tag = SOV
 			}
 			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
+				
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+				
 			}
 			traits = {
-				political_commissar 
+				communist_revolutionary 
 			}
 		}
 	}
@@ -2254,7 +2206,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SOV_genrikh_yagoda
-			removal_cost = -1
+			can_be_fired = no
 			allowed = {
 				original_tag = SOV
 			}
@@ -2305,7 +2257,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SOV_nikolay_yezhov
-			removal_cost = -1
+			can_be_fired = no
 			allowed = {
 				original_tag = SOV
 			}
@@ -2328,15 +2280,9 @@ characters = {
 	}
 
 	SOV_lavrenty_beriya = {
-		#LA RESISTANCE
 		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
-			}
-			allowed_civil_war = {
-				original_tag = SOV
-				has_government = communism
-				NOT = { tag = SOV }
 			}
 			name = SOV_lavrenty_beriya
 			portraits = {
@@ -2352,32 +2298,21 @@ characters = {
 				slot = political_advisor
 				idea_token = SOV_lavrenty_beriya
 				name = SOV_lavrenty_beriya
-				removal_cost = -1
+				
 				allowed = {
 					original_tag = SOV
 				}
 				visible = {
-					NOT = {
-						has_character_flag = SOV_character_purged_flag 
-					}
+					
 				}
 				available = {
-					NOT = { has_idea = SOV_nikolay_yezhov }
-					NOT = { has_idea = SOV_genrikh_yagoda }
-					NOT = { is_country_leader = yes }
+					
 				}
 
 				traits = {
-					head_of_the_nkvd_beriya_initial
+					ideological_crusader
 				}
-				on_add = {
-					ROOT = { add_to_variable = { SOV_paranoia_weekly_modifiers_amount = 2 } }
-					SOV_paranoia_modifier_update_gui_tooltip = yes
-				}
-				on_remove = {
-					ROOT = { subtract_from_variable = { SOV_paranoia_weekly_modifiers_amount = 2 } }
-					SOV_paranoia_modifier_update_gui_tooltip = yes
-				}
+				
 			}
 		}
 		#NO LA RESISTANCE
@@ -2403,7 +2338,7 @@ characters = {
 				slot = political_advisor
 				idea_token = SOV_lavrenty_beriya
 				name = SOV_lavrenty_beriya
-				removal_cost = -1
+				can_be_fired = no
 				allowed = {
 					original_tag = SOV
 				}
@@ -2482,9 +2417,7 @@ characters = {
 				small = "GFX_idea_SOV_vyacheslav_molotov"
 			}
 		}
-		allowed_civil_war = {
-			has_government = communism
-		}
+		
 
 		advisor = {
 			slot = political_advisor
@@ -2493,15 +2426,13 @@ characters = {
 				original_tag = SOV
 			}
 			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
+				
 			}
 			available = {
-				has_completed_focus = SOV_policy_of_individual_security
+				
 			}
 			traits = {
-				pc_for_foreign_affairs_molotov 
+				smooth_talking_charmer
 			}
 		}
 	}
@@ -3630,7 +3561,7 @@ characters = {
 			}
 		}
 		advisor = {
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = SOV_aleksandr_prokofyev_seversky
 			ledger = air
@@ -3671,7 +3602,7 @@ characters = {
 		}
 
 		advisor = {
-			cost = 100
+			cost = 150
 			slot = air_chief
 			idea_token = SOV_vyacheslav_tkachyov
 			allowed = {
@@ -3711,7 +3642,7 @@ characters = {
 		}
 		
 		advisor = {
-			cost = 100
+			cost = 150
 			slot = air_chief
 			idea_token = SOV_yan_nagursky
 			allowed = {
@@ -3751,7 +3682,7 @@ characters = {
 		}
 		
 		advisor = {
-			cost = 100
+			cost = 150
 			slot = high_command
 			idea_token = SOV_vasily_yanchenko
 			ledger = air

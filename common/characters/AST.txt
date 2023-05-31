@@ -226,6 +226,19 @@ characters={
 				small=GFX_portrait_AST_iven_mackay_small
 			}
 		}
+		advisor={
+			cost = 150
+			slot = high_command
+			idea_token = AST_iven_mackay
+			ledger = army
+			allowed = {
+				original_tag = AST
+			}
+			
+			traits = {
+				army_commando_2
+			}
+		}
 	}
 
 
@@ -239,16 +252,16 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = AST_norman_makin
-			ledger = navy
+			ledger = army
 			allowed = {
 				original_tag = AST
 			}
 			
 			traits = {
-				naval_theorist
+				military_theorist
 			}
 		}		
 	}
@@ -261,7 +274,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = AST_james_fairbairn
 			ledger = air
@@ -293,7 +306,7 @@ characters={
 			traits = {
 				army_chief_defensive_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -316,7 +329,7 @@ characters={
 			traits = {
 				army_chief_organizational_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -365,7 +378,7 @@ characters={
 			traits = {
 				navy_chief_reform_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -388,7 +401,7 @@ characters={
 			traits = {
 				navy_chief_decisive_battle_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -414,7 +427,7 @@ characters={
 			traits = {
 				air_chief_safety_3
 			}
-			cost = 200
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -437,7 +450,7 @@ characters={
 			traits = {
 				air_chief_reform_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -462,9 +475,9 @@ characters={
 				original_tag = AST
 			}
 			traits = {
-				army_infantry_3
+				army_infantry_2
 			}
-			cost = 200
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -481,14 +494,14 @@ characters={
 		advisor={
 			slot = high_command
 			idea_token = AST_clive_caldwell
-			ledger = air
+			ledger = army
 			allowed = {
 				original_tag = AST
 			}
 			traits = {
-				air_air_superiority_3
+				army_armored_2
 			}
-			cost = 200
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -513,7 +526,7 @@ characters={
 			traits = {
 				navy_capital_ship_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -537,7 +550,7 @@ characters={
 			traits = {
 				army_artillery_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -554,15 +567,15 @@ characters={
 		advisor={			
 			slot = high_command
 			idea_token = AST_arthur_drakeford
-			ledger = air
+			ledger = army
 			allowed = {
 				original_tag = AST
 				has_dlc = "Together for Victory"
 			}
 			traits = {
-				air_air_combat_training_2
+				army_concealment_3
 			}
-			cost = 100
+			cost = 150
 		}		
 	}
 	
@@ -588,7 +601,7 @@ characters={
 			traits = {
 				army_logistics_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -631,7 +644,7 @@ characters={
 				original_tag = AST
 			}
 			traits = {
-				backroom_backstabber 
+				armaments_organizer
 			}
 		}		
 	}
@@ -650,12 +663,12 @@ characters={
 				original_tag = AST
 				has_dlc = "Together for Victory"
 			}
-			cost = 100.000
+			cost = 150.000
 			traits = {
 				smooth_talking_charmer 
 			}
 			available = {
-				has_completed_focus = AST_never_another_gallipoli 
+				
 			}
 		}		
 	}
@@ -673,7 +686,7 @@ characters={
 			allowed = {
 				original_tag = AST
 			}
-			cost = 100.000
+			cost = 150.000
 			traits = {
 				silent_workhorse 
 			}
@@ -828,26 +841,10 @@ characters={
 				original_tag = AST
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-					or = {
-						has_completed_focus = AST_protect_the_homeland 
-						has_completed_focus = AST_support_the_policy_of_appeasement 
-					}
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
+				
 			}
 			traits = {
-				democratic_reformer 
+				ideological_crusader 
 			}
 			do_effect = {
 				NOT = {
