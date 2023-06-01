@@ -46,7 +46,13 @@ entity = {
 	pdxmesh = "french_city_4_01"
 	scale = 0.2
 }
-
+entity = {
+	name = "building_supply_node"
+	pdxmesh = "supply_station_mesh"
+	default_state = "idle"
+	state = { name = "idle"	animation = "idle" }
+	scale = 2
+}
 entity = {
 	name = "french_city_4_02_entity"
 	pdxmesh = "french_city_4_02"
@@ -179,7 +185,7 @@ entity = {
 entity = {
 	name = "building_dockyard_1"
 	pdxmesh = "building_dockyard_1"
-	scale = 0.7
+	scale = 0.8
 	
 	locator = { name = "damage_locator_01"	position = { 1.7 1.0 -1.7 } }
 	locator = { name = "damage_locator_02"	position = { -0.1 1.0 0.5 } }
@@ -195,7 +201,7 @@ entity = {
 entity = {
 	name = "building_dockyard_2"
 	pdxmesh = "building_dockyard_2"
-	scale = 0.7
+	scale = 0.8
 	
 	locator = { name = "damage_locator_01"	position = { 1.7 1.0 -1.7 } }
 	locator = { name = "damage_locator_02"	position = { -0.1 1.0 0.5 } }
@@ -211,7 +217,7 @@ entity = {
 entity = {
 	name = "building_dockyard_3"
 	pdxmesh = "building_dockyard_3"
-	scale = 0.7
+	scale = 0.8
 	
 	locator = { name = "damage_locator_01"	position = { 1.7 1.0 -1.7 } }
 	locator = { name = "damage_locator_02"	position = { -0.1 1.0 0.5 } }
@@ -228,7 +234,7 @@ entity = {
 entity = {
 	name = "building_air_base"
 	pdxmesh = "building_air_base"	
-	scale = 1.2
+	scale = 1.4
 	
 	locator = { name = "damage_locator_01"	position = { 1.35 0.0 -0.35 } }
 	locator = { name = "damage_locator_02"	position = { -0.8 0.6 0.4 } }
@@ -247,7 +253,7 @@ entity = {
 entity = {
 	name = "building_naval_base_1"
 	pdxmesh = "building_naval_base_1"
-	scale = 0.7
+	scale = 0.8
 	
 	locator = { name = "damage_locator_01"	position = { -0.8 0.4 -3.5 } }
 	locator = { name = "damage_locator_02"	position = { 0.0 0.7 -1.0 } }
@@ -265,7 +271,7 @@ entity = {
 entity = {
 	name = "building_naval_base_2"
 	pdxmesh = "building_naval_base_2"
-	scale = 0.7
+	scale = 0.8
 	
 	locator = { name = "damage_locator_01"	position = { -0.8 0.4 -3.5 } }
 	locator = { name = "damage_locator_02"	position = { 0.0 0.7 -1.0 } }
@@ -283,7 +289,7 @@ entity = {
 entity = {
 	name = "building_naval_base_3"
 	pdxmesh = "building_naval_base_3"
-	scale = 0.7
+	scale = 0.8
 	
 	locator = { name = "damage_locator_01"	position = { -0.8 0.4 -3.5 } }
 	locator = { name = "damage_locator_02"	position = { 0.0 0.7 -1.0 } }
@@ -302,7 +308,7 @@ entity = {
 entity = {
 	name = "building_bunker"
 	pdxmesh = "building_bunker"
-	scale = 0.7
+	
 	default_state = "idle"
 	state = { name = "idle" 
 	}
@@ -311,7 +317,7 @@ entity = {
 entity = {
 	name = "building_bunker_destroyed"
 	pdxmesh = "building_bunker_destroyed"
-	scale = 0.7
+	
 	
 	locator = { name = "damage_locator_01"	position = { 0.0 1.1 -1.0 } }
 	locator = { name = "damage_locator_02"	position = { -1.7 0.1 -1.2 } }
@@ -331,7 +337,7 @@ entity = {
 entity = {
 	name = "building_coastal_bunker"
 	pdxmesh = "building_coastal_bunker"
-	scale = 0.9
+	
 	default_state = "idle"
 	state = { name = "idle" 
 	}
@@ -340,7 +346,7 @@ entity = {
 entity = {
 	name = "building_coastal_bunker_destroyed"
 	pdxmesh = "building_coastal_bunker_destroyed"
-	scale = 0.9
+	
 	
 	locator = { name = "damage_locator_01"	position = { -0.2 0.4 -0.3 } }
 	locator = { name = "damage_locator_02"	position = { 0.9 0.5 0.6 } }
@@ -482,7 +488,7 @@ entity = {
 		event = { time = 0.1 node="damage_locator_02" particle = "building_damaged_particle" }
 	}
 	
-	scale = 1.4
+	scale = 1.6
 }
 
 entity = {
@@ -498,6 +504,76 @@ entity = {
 		event = { time = 0.1 node="damage_locator_02" particle = "building_damaged_particle" }
 	}
 	
-	scale = 1.4
+	scale = 1.7
 
+}
+
+entity = {
+	name = "building_volkshalle"
+	pdxmesh = "building_volkshalle"
+	default_state = "idle"
+	state = { name = "idle" 
+	}
+	
+	scale = 0.5
+}
+
+entity = {
+	name = "building_volkshalleconstructing"
+	pdxmesh = "building_volkshalleconstructing"
+	default_state = "idle"
+	state = { name = "idle" 
+	}
+	
+	scale = 0.5
+}
+
+entity = {
+	name = "building_sovietpalace"
+	pdxmesh = "building_sovietpalace"
+	default_state = "idle"
+	state = { name = "idle" 
+	}
+	
+	scale = 0.7
+}
+
+entity = {
+	name = "building_sovietpalaceconstructing"
+	pdxmesh = "building_sovietpalaceconstructing"
+	default_state = "idle"
+	state = { name = "idle" 
+	}
+	
+	scale = 0.7
+}
+
+entity = {
+	name = "building_pentagon"
+	pdxmesh = "building_pentagon"
+	default_state = "idle"
+	state = { name = "idle" 
+	}
+	
+	scale = 0.7
+}
+
+entity = {
+	name = "building_dachaumemorial"
+	pdxmesh = "building_dachaumemorial"
+	default_state = "idle"
+	state = { name = "idle" 
+	}
+	
+	scale = 0.7
+}
+
+entity = {
+	name = "building_goldengatebridge"
+	pdxmesh = "building_goldengatebridge"
+	default_state = "idle"
+	state = { name = "idle" 
+	}
+	
+	scale = 0.7
 }
