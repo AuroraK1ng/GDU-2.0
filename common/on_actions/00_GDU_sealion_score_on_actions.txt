@@ -1,0 +1,114 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+			ENG = {
+
+                set_variable = { sealion_score = 0 }
+				set_variable = { sub_weight = 1 }
+				set_variable = { screen_weight = 7 }
+				set_variable = { capital_weight = 19 }
+				set_variable = { carrier_weight = 18 }
+            }
+		}
+	}
+
+    on_weekly_ENG = {
+		effect = {
+			#reset the sealion score to re-calculate it each day
+
+			set_variable = { sealion_score = 0 }
+
+			while_loop_effect = {
+				limit = {
+					meta_trigger = {
+						text = {
+							ships_in_area = {
+								type = screen_ship
+								area = 18
+								size > [AMOUNT_SCREEN_SHIP_VAR]
+							}
+						}
+						AMOUNT_SCREEN_SHIP_VAR = "[?amount_screen_ship_var]"
+					}
+				}
+				add_to_temp_variable = { amount_screen_ship_var = 2 }
+			}
+
+			while_loop_effect = {
+				limit = {
+					meta_trigger = {
+						text = {
+							ships_in_area = {
+								type = capital_ship
+								area = 18
+								size > [AMOUNT_CAPITAL_SHIP_VAR]
+							}
+						}
+						AMOUNT_CAPITAL_SHIP_VAR = "[?amount_capital_ship_var]"
+					}
+				}
+				add_to_temp_variable = { amount_capital_ship_var = 2 }
+			}
+
+			while_loop_effect = {
+				limit = {
+					meta_trigger = {
+						text = {
+							ships_in_area = {
+								type = submarine
+								area = 18
+								size > [AMOUNT_SUBMARINE_VAR]
+							}
+						}
+						AMOUNT_SUBMARINE_VAR = "[?amount_submarine_var]"
+					}
+				}
+				add_to_temp_variable = { amount_submarine_var = 2 }
+			}
+
+			while_loop_effect = {
+				limit = {
+					meta_trigger = {
+						text = {
+							ships_in_area = {
+								type = carrier
+								area = 18
+								size > [AMOUNT_SUBMARINE_VAR]
+							}
+						}
+						AMOUNT_SUBMARINE_VAR = "[?amount_carrier_var]"
+					}
+				}
+				add_to_temp_variable = { amount_carrier_var = 2 }
+			}
+
+			multiply_temp_variable = { amount_screen_ship_var = screen_weight }
+			multiply_temp_variable = { amount_capital_ship_var = capital_weight }
+			multiply_temp_variable = { amount_submarine_var = sub_weight }
+			multiply_temp_variable = { amount_carrier_var = carrier_weight }
+
+			add_to_temp_variable = { ship_total_modifier = amount_screen_ship_var }
+			add_to_temp_variable = { ship_total_modifier = amount_capital_ship_var }
+			add_to_temp_variable = { ship_total_modifier = amount_submarine_var }
+			add_to_temp_variable = { ship_total_modifier = amount_carrier_var }
+
+			set_variable = { sealion_score = ship_total_modifier }
+
+
+
+			# divide the Sealion score by 25, which is a normalizing value that makes it relate to reasonable-seeming core attack/defense values and set
+
+			set_temp_variable = { temp2 = sealion_score }
+			divide_temp_variable = { temp2 = 13.33 }
+
+			set_variable = { sealion_score = temp2 }
+
+			clamp_variable = { var = sealion_score min = 0 max = 250 }
+			round_variable = sealion_score
+			set_variable = { sealion_score_modifier = sealion_score }
+			divide_variable = { sealion_score_modifier = 100 }
+		}
+		# assign a core attack and defense bonus based on the sealion score
+	}
+}

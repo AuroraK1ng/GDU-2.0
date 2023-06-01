@@ -1,0 +1,35 @@
+simulate_pop_growth = { ##WIP
+	####################################################################################################################
+	##BEGINNING OF POPULATION GROWTH SIMULATION (POPULATION GROWTH DISABLED)
+	####################################################################################################################
+	#30M Pop and Above
+	every_state={ limit={ state_population > 30000000 } add_manpower = 3000000 }
+	#20M to 30M
+	every_state={ limit={ AND={state_population > 20000000 state_population < 30000000 }} add_manpower = 2000000 }
+	#10M to 20M
+	every_state={ limit={ AND={state_population > 10000000 state_population < 20000000 }} add_manpower = 1000000 }
+	#1M to 10M
+	every_state={ limit={ AND={state_population > 9000000 state_population < 10000000 }} add_manpower = 900000 }
+	every_state={ limit={ AND={state_population > 8000000 state_population < 9000000 }} add_manpower = 800000 }
+	every_state={ limit={ AND={state_population > 7000000 state_population < 8000000 }} add_manpower = 700000 }
+	every_state={ limit={ AND={state_population > 6000000 state_population < 7000000 }} add_manpower = 600000 }
+	every_state={ limit={ AND={state_population > 5000000 state_population < 6000000 }} add_manpower = 500000 }
+	every_state={ limit={ AND={state_population > 4000000 state_population < 5000000 }} add_manpower = 400000 }
+	every_state={ limit={ AND={state_population > 3000000 state_population < 4000000 }} add_manpower = 300000 }
+	every_state={ limit={ AND={state_population > 2000000 state_population < 3000000 }} add_manpower = 200000 }
+	every_state={ limit={ AND={state_population > 1000000 state_population < 2000000 }} add_manpower = 100000 }
+	#50K to 1M
+	every_state={ limit={ AND={state_population > 800000 state_population < 1000000 }} add_manpower = 90000 }
+	every_state={ limit={ AND={state_population > 600000 state_population < 800000 }} add_manpower = 70000 }
+	every_state={ limit={ AND={state_population > 400000 state_population < 600000 }} add_manpower = 50000 }
+	every_state={ limit={ AND={state_population > 200000 state_population < 400000 }} add_manpower = 30000 }
+	every_state={ limit={ AND={state_population > 100000 state_population < 200000 }} add_manpower = 10000 }
+	every_state={ limit={ AND={state_population > 50000 state_population < 100000 }} add_manpower = 7500 }
+	####################################################################################################################
+	##END OF POPULATION GROWTH SIMULATION (POPULATION GROWTH DISABLED)
+	####################################################################################################################
+}
+
+startup_on_actions = {
+	simulate_pop_growth = yes
+}

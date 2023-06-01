@@ -1,0 +1,70 @@
+#This should only be used for AXIS vs ALLIES, or JAPAN vs ALLIES
+declare_war_on_all_allies = {
+	if = {
+		#Make sure we dont declare war on UK a second time
+		limit = { NOT = { has_war_with = ENG } }
+		log = "[?ROOT.GetName] was NOT at war with ENG"
+		declare_war_on = { target = ENG type = annex_everything }
+	}
+	if = {
+		limit = { has_war = yes }
+		ROOT_call_allies_both_sides = yes
+	}
+}
+
+ROOT_call_allies_both_sides = {
+	ROOT_call_all_allies_against_ENG = yes
+	ENG_call_all_allies_against_ROOT = yes
+}
+
+ROOT_call_all_allies_against_ENG = {
+	for_each_scope_loop = {
+		array = ROOT.allies
+
+		if = {
+			limit = { NOT = { original_tag = ITA } }
+			add_to_war = {
+				targeted_alliance = ROOT
+				enemy = ENG
+			}
+		}
+
+	}
+}
+
+ENG_call_all_allies_against_ROOT = {
+	for_each_scope_loop = {
+	    array = ENG.allies
+
+
+		if = {
+			limit = { NOT = { original_tag = USA } }
+			add_to_war = {
+				targeted_alliance = ENG
+				enemy = ROOT
+			}
+		}
+	}
+}
+
+Afrika_Score_Monthly_Tally = { 
+	for_each_scope_loop = {
+		array = global.afrika_states_array
+		if = {
+			limit = {
+				is_controlled_by_axis_country = yes
+			}
+			add_to_variable = { GER.Afrika_score_value = 1 }
+		}
+
+	}
+	for_each_scope_loop = {
+		array = global.afrika_states_array
+		if = {
+			limit = {
+				is_controlled_by_allied_country = yes
+			}
+			add_to_variable = { ENG.Afrika_score_value = 1 }
+		}
+	}
+}
