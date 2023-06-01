@@ -50,7 +50,7 @@ guiTypes = {
 			}
 		}
 	}
-
+	
 	containerWindowType = {
 		name = "div_template_3d_model_entry"
 		position = { x=0 y=0 }
@@ -277,17 +277,17 @@ guiTypes = {
 			
 			gridboxtype = {
 				name = "support_grid"
-				position = { x = 23 y = 57 }
-				size = { width = 85 height = 100%% }
-				slotsize = { width = 82 height = 51 }
+				position = { x = 15 y = 57 }
+				size = { width = 160 height = 100%% }
+				slotsize = { width = 64 height = 42 }
 				format = "UPPER_LEFT"
 			}
 			
 			gridboxtype = {
 				name = "regiments_grid"
-				position = { x = 115 y = 57 }
-				size = { width = 445 height = 100%% }
-				slotsize = { width = 82 height = 51 }
+				position = { x = 144 y = 57 }
+				size = { width = 410 height = 100%% }
+				slotsize = { width = 76 height = 51 }
 				format = "UPPER_LEFT"
 			}
 		}
@@ -368,7 +368,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "equipment_stats"
 				position = { x = 353 y = 55 }
-				size = { width = 172 height = 244 }
+				size = { width = 197 height = 239 }
 				clipping = yes
 				
 				background = {
@@ -427,8 +427,8 @@ guiTypes = {
 					name = "stats_grid"
 					position = { x = 0 y = 0 }
 					size = { width = 100%% height = 100%% }
-					slotsize = { width = 103 height = 62 }
-					max_slots_horizontal = 5
+					slotsize = { width = 83 height = 62 }
+					max_slots_horizontal = 6
 					format = "UPPER_LEFT"
 				}
 			}
@@ -489,6 +489,30 @@ guiTypes = {
 				position = {x=497 y=303}
 			}
 
+		}
+		
+		containerWindowType = {
+			name = "cost"
+			size = { width = 70 height = 29 }
+			position = { x=285 y=505 }
+			
+			background = {
+				name = "cost_bg"
+				quadTextureSprite = "GFX_generic_background"
+				position = { x = 15 y = 0 }
+				alwaystransparent = yes
+			}
+		}
+
+		instantTextboxType = {
+			name = "experience"
+			position = { x = 297 y = 510 }
+			font = "hoi_18mbs"
+			maxWidth = 70
+			maxHeight = 20
+			format = centre
+			text = "DESIGNER_EXPERIENCE"
+			pdx_tooltip = "CURRENT_EXPERIENCE"
 		}
 		
 		ButtonType = {
@@ -1083,7 +1107,7 @@ guiTypes = {
 				verticalScrollbar = "right_vertical_slider"
 				scroll_wheel_factor = 42
 				smooth_scrolling = yes
-				
+							
 				background = {
 					name = "Background"
 					spriteType ="GFX_tiled_window_transparent"
@@ -1149,7 +1173,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "unit_icon"
-			position = { x = 1 y = 10 }
+			position = { x = 1 y = 11 }
 			spriteType = "GFX_locked_icon"
 			Orientation = CENTER_LOWER
 			clicksound = click_default
@@ -1157,7 +1181,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "invisible_icon"
-			position = { x = 1 y = 12 }
+			position = { x = 1 y = 13 }
 			spriteType = "GFX_cost_textbox_inv"
 			Orientation = CENTER_LOWER
 			clicksound = click_default
@@ -1166,7 +1190,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "designer_division_support_slot_entry"
-		position = { x=0 y=0}	
+		position = { x=0 y=9}	
 		size = { width=64 height=53 }
 		clipping = no
 
@@ -1190,7 +1214,7 @@ guiTypes = {
 		buttonType = {
 			name = "unit_icon"
 			spriteType = "GFX_locked_icon"
-			position = {x=2 y=20}
+			position = {x=2 y=12}
 			Orientation = CENTER_LOWER
 			scale = 0.8
 			clicksound = click_default
@@ -1198,7 +1222,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "invisible_icon"
-			position = { x = 2 y = 21 }
+			position = { x = 2 y = 12 }
 			spriteType = "GFX_cost_textbox_inv"
 			Orientation = CENTER_LOWER
 			scale = 0.8
@@ -1272,6 +1296,19 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 85 y = 5 }
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "Maus"
+			maxWidth = 160
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextboxType = {
+			name = "cost"
+			position = { x = 85 y = 41 }
 			textureFile = ""
 			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
@@ -1386,7 +1423,7 @@ guiTypes = {
 			multiline = no
 		}
 	}
-
+	
 	containerWindowType = {
 		name = "designer_adjuster_entry"
 		size = { width = 50 height = 70 }
