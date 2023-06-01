@@ -1,0 +1,325 @@
+# List of names and logos for intelligence agencies
+# available trigger will determine if the logo is in the list of available logos or not
+# names is a list of names. Can be a localization entry, or the name directly. A random name will be picked from them.
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_eth_smie
+	names = { smie }
+	
+	default = { 
+		tag = AOI 
+		is_subject_of = ITA
+	} 
+	available = { 
+		original_tag = AOI
+		is_subject_of = ITA
+	}
+}
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_usa
+	names = { "Office of Strategic Services" }
+	
+	default = { tag = USA }
+	available = { original_tag = USA }
+}
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_uk
+	names = { "MI6" "SIS" }
+	
+	default = { tag = ENG }
+	available = { original_tag = ENG }
+}
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_sov
+	names = { "NKVD" }
+	
+	default = { tag = SOV }
+	available = { original_tag = SOV }
+}
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_fra
+	names = { "Deuxième Bureau" }
+	
+	default = { tag = FRA }
+	available = { original_tag = FRA }
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_can
+	names = { "Royal Canadian Mounted Police" }
+	
+	default = { tag = CAN }
+	available = { 
+		original_tag = CAN 
+	}
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_ger
+	names = { "Abwehr" }
+	
+	default = { tag = GER }
+	available = { original_tag = GER }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_jap
+	names = { "G-2 Department" "Section 3" }
+	
+	default = { tag = JAP }
+	available = { original_tag = JAP }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_ita
+	names = { "Servizio Informazioni Militare" }
+	
+	default = { tag = ITA }
+	available = { original_tag = ITA }
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_hun
+	names = { "2. Vezérkari Főnökség" }
+	
+	default = { tag = HUN }
+	available = { 
+		original_tag = HUN 
+	}
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_nor
+	names = { "E-tjenesten" }
+	
+	default = { tag = NOR }
+	available = { original_tag = NOR }
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_bra
+	names = { "Agência Brasileira de Inteligência" }
+	
+	default = { tag = BRA }
+	available = { original_tag = BRA }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_bul
+	names = { "Natsionalnata Razuznavatelna Sluzhba" }
+
+	available = { always = yes }
+	
+	default = { tag = BUL }
+	available = { original_tag = BUL }
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_saf
+	names = { "South African Police" }
+		
+	default = { tag = SAF }
+	available = {
+		original_tag = SAF		
+	}
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_raj
+	names = { "Research and Analysis Wing" }
+	
+	default = { tag = RAJ }
+	available = { original_tag = RAJ }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_nzl
+	names = { "New Zealand Security Intelligence Service" }
+	
+	default = { tag = NZL }
+	available = { original_tag = NZL }
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_bel
+	names = { "ADIV" "SGRS" }
+	
+	default = { tag = BEL }
+	available = { original_tag = BEL }
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_pol
+	names = { "Dwójka" }
+	
+	available = { always = yes }
+	
+	default = { tag = POL }
+	available = { original_tag = POL }
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_hol
+	names = { "Bureau Inlichtingen" }
+	
+	default = { tag = HOL }
+	available = { original_tag = HOL}
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_rom
+	names = { "Serviciul Special de Informatii" }
+	
+	available = { always = yes }
+	
+	default = { tag = ROM }
+	available = { original_tag = ROM }
+}
+
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_spr
+	names = { "SIM" }
+	
+	available = { always = yes }
+	
+	default = { tag = SPR }
+	available = { original_tag = SPR }
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_gre
+	names = { "Diéfthynsi Eidikís Asfaleías tou Krátous" "I Eidikí" }
+	
+	available = { always = yes }
+	
+	default = { tag = GRE }
+	available = { original_tag = GRE }
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_man
+	names = { "Hoankyoku" }
+	
+	available = { always = yes }
+	
+	default = { tag = MAN }
+	available = { original_tag = MAN }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_fin
+	names = { "PE TIEDOS" }
+	
+	default = { tag = FIN }
+	available = { always = yes }
+}
+
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_fra_vichy
+	names = { "Deuxième Bureau" }
+	default = { tag = EFR }
+	available = { always = yes }
+}
+
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_1
+	names = { "Rooke" }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_2
+	names = { "Tower" }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_3
+	names = { "Snake" }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_4
+	names = { "Stag" }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_5
+	names = { "Golden Lion" }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_6
+	names = { "Arrow" }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_7
+	names = { "Lion Head" }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_8
+	names = { "Golden Eagle" }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_9
+	names = { "Hammer and Sickle" }
+	
+	available = { 
+		has_government = communism
+	}
+	
+	default = { always = yes } 
+}

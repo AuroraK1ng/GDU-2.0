@@ -10,7 +10,7 @@ tags={
 	"Alternative History"
 	"Graphics"
 }
-name="Blood, sweat and tears"
+name="BAZOOKA MOD"
 replace_path="history/states"
 replace_path="history/countries"
 replace_path="history/units"
@@ -33,3 +33,4 @@ replace_path="common/units/names_divisions"
 replace_path="common/units/names_ships"
 replace_path="events"
 supported_version="1.12.14"
+remote_file_id="2983471880"

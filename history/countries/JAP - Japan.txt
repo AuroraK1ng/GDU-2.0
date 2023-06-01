@@ -8,14 +8,14 @@ set_war_support = 0.8
 set_research_slots = 5
 set_fuel_ratio = 1.0
 add_ideas = {
-	state_shintoism
-	limited_exports
+	export_focus 
 	limited_conscription
 	partial_economic_mobilisation
-
 	JAP_zaibatsus
-	JAP_duplicate_research_efforts
 	JAP_militarism
+	GDU_scuffed_acclim
+	GDU_JAP_No_Prewar_TradeBuff
+	JAP_SOV_neutrality
 }
 
 609 = {
@@ -311,18 +311,15 @@ add_equipment_to_stockpile = {
 
 	#adding ministers
 	add_ideas = {
-		JAP_mitsumasa_yonai
-		minoru_genda
-		hajime_sugiyama
-		soemu_toyoda
-		fushimi_hiroyasu
-		kawasaki
-
-		#laws
-		tot_economic_mobilisation
-		service_by_requirement
-		closed_economy
-	}
+	export_focus 
+	limited_conscription
+	partial_economic_mobilisation
+	JAP_zaibatsus
+	JAP_militarism
+	GDU_scuffed_acclim
+	GDU_JAP_No_Prewar_TradeBuff
+	JAP_SOV_neutrality
+}
 	if = {
 		limit = {
 			has_dlc = "Man the Guns"

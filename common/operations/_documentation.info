@@ -163,7 +163,7 @@ operation_test = {
 	}
 
 	#
-	# Determines requirements other than equipment to launch the operation. If the requirements are not met anymore while the operation is running, it is cancelled.
+	# Determines requirements other than equipment to launch the operation
 	# SCOPE_COUNTRY [ ROOT, FROM ]
 	#
 
@@ -210,10 +210,10 @@ operation_test = {
 	}
 	
 	#
-	# Chance for outcome_execute_extra to happen (assuming it exists), otherwise outcome_extra will be executed
+	# Chance for outcome_execute to happen, otherwise outcome_execute_extra happens
 	# 
 	
-	outcome_extra_chance = 50
+	outcome_chance = 50
 	
 	#
 	# List of modifiers that apply to outcome_chance
@@ -257,7 +257,7 @@ operation_test = {
 	# Same as outcome_execute
 	#
 	
-	outcome_extra_execute = {
+	outcome_execute_extra = {
 		# ...
 	}
 
