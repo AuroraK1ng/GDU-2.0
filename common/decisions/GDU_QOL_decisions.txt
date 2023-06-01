@@ -1,0 +1,549 @@
+
+
+	GDU_automatic_unit_deployment = {
+
+		ENG_HomeDefenseArmy_Deployment = {
+
+			icon = GFX_decision_deploy
+
+			ai_will_do = { factor = 0 }
+
+			allowed = {
+				tag = ENG
+			}
+
+			cost = 0
+			fire_only_once = yes
+			available = {
+				has_manpower > 55000
+				date > 1938.1.1
+				date < 1939.5.1
+			}
+			visible = {
+				date > 1936.1.1
+			}
+
+			complete_effect = {
+				ENG = {
+					load_oob = "ENG_HomeDefense_Deployment"
+					add_manpower = -55000
+				}
+			}
+		}
+
+		ENG_Mediterranean_Deployment = {
+
+			icon = GFX_decision_deploy
+
+			ai_will_do = { factor = 0 }
+
+			cost = 0
+			fire_only_once = yes
+			available = {
+				has_manpower > 31000
+				date > 1938.1.1
+				date < 1939.5.1
+			}
+
+			allowed = {
+				tag = ENG
+			}
+
+			visible = {
+				date > 1936.1.1
+			}
+
+			complete_effect = {
+				ENG = {
+					load_oob = "ENG_MedGarrison_Deployment"
+					add_manpower = -31000
+				}
+			}
+		}
+
+		ENG_EastAfrican_Deployment = {
+
+			icon = GFX_decision_deploy
+
+			ai_will_do = { factor = 0 }
+
+			cost = 0
+			fire_only_once = yes
+			available = {
+				has_manpower > 6000
+				date > 1938.1.1
+				date < 1939.5.1
+			}
+
+			allowed = {
+				tag = ENG
+			}
+
+			visible = {
+				date > 1936.1.1
+			}
+
+			complete_effect = {
+				ENG = {
+					load_oob = "ENG_EastAfrican_Deployment"
+					add_manpower = -6000
+				}
+			}
+		}
+
+		USA_Pacific_Deployment = {
+
+			icon = GFX_decision_deploy
+
+			ai_will_do = { factor = 0 }
+
+			cost = 0
+			fire_only_once = yes
+			available = {
+				has_manpower > 36000
+				date > 1940.1.1
+				date < 1940.10.1
+			}
+
+			allowed = {
+				tag = USA
+			}
+
+			visible = {
+				date > 1936.1.1
+			}
+
+			complete_effect = {
+				USA = {
+					load_oob = "USA_PacificGarrison_Deployment"
+					add_manpower = -36000
+				}
+			}
+		}
+
+		ITA_Mediterranean_Deployment = {
+
+			icon = GFX_decision_deploy
+
+			ai_will_do = { factor = 0 }
+
+			cost = 0
+			fire_only_once = yes
+			available = {
+				has_manpower > 89000
+				date > 1938.1.1
+				date < 1939.5.1
+			}
+
+			allowed = {
+				tag = ITA
+			}
+
+			visible = {
+				date > 1936.1.1
+			}
+
+			complete_effect = {
+				ITA = {
+					load_oob = "ITA_MedGarrison_Deployment"
+					add_manpower = -89000
+				}
+			}
+		}
+		ITA_EastAfrican_Deployment = {
+
+			icon = GFX_decision_deploy
+
+			ai_will_do = { factor = 0 }
+
+			cost = 0
+			fire_only_once = yes
+			available = {
+				has_manpower > 22000
+				date > 1938.1.1
+				date < 1939.5.1
+			}
+
+			allowed = {
+				tag = ITA
+			}
+
+			visible = {
+				date > 1936.1.1
+
+			}
+
+			complete_effect = {
+				ITA = {
+					load_oob = "ITA_Ethiopian_Deployment"
+					add_manpower = -22000
+				}
+			}
+		}
+		
+		GER_Atlantikwall_Deployment_1div = {
+
+			icon = GFX_decision_deploy
+
+			ai_will_do = { factor = 0 }
+
+			cost = 0
+			fire_only_once = yes
+			available = {
+				has_manpower > 56000
+				date < 1941.1.1			
+				has_global_flag = fall_of_france
+				19 = { is_fully_controlled_by = GER }
+				23 = { is_fully_controlled_by = GER }
+				30 = { is_fully_controlled_by = GER }
+				14 = { is_fully_controlled_by = GER }
+				15 = { is_fully_controlled_by = GER }
+				785 = { is_fully_controlled_by = GER }
+				29 = { is_fully_controlled_by = GER }
+				6 = { is_fully_controlled_by = GER }
+				7 = { is_fully_controlled_by = GER }
+				36 = { is_fully_controlled_by = GER }
+				56 = { is_fully_controlled_by = GER }
+				833 = { is_fully_controlled_by = GER }
+				58 = { is_fully_controlled_by = GER }
+				834 = { is_fully_controlled_by = GER }
+				99 = { is_fully_controlled_by = GER }
+			}
+
+			allowed = {
+				tag = GER
+			}
+
+			visible = {
+				date > 1936.1.1
+
+			}
+
+			complete_effect = {
+				GER = {
+					load_oob = "GER_Atlantikwall_Deployment"
+					add_manpower = -56000
+				}
+			}
+		}		
+
+		GER_Atlantikwall_Deployment_2div = {
+
+			icon = GFX_decision_deploy
+
+			ai_will_do = { factor = 0 }
+
+			cost = 0
+			fire_only_once = yes
+			available = {
+				has_manpower > 112000
+				date < 1941.1.1			
+				has_global_flag = fall_of_france
+				19 = { is_fully_controlled_by = GER }
+				23 = { is_fully_controlled_by = GER }
+				30 = { is_fully_controlled_by = GER }
+				14 = { is_fully_controlled_by = GER }
+				15 = { is_fully_controlled_by = GER }
+				785 = { is_fully_controlled_by = GER }
+				29 = { is_fully_controlled_by = GER }
+				6 = { is_fully_controlled_by = GER }
+				7 = { is_fully_controlled_by = GER }
+				36 = { is_fully_controlled_by = GER }
+				56 = { is_fully_controlled_by = GER }
+				833 = { is_fully_controlled_by = GER }
+				58 = { is_fully_controlled_by = GER }
+				834 = { is_fully_controlled_by = GER }
+				99 = { is_fully_controlled_by = GER }
+			}
+
+			allowed = {
+				tag = GER
+			}
+
+			visible = {
+				date > 1936.1.1
+			}
+
+			complete_effect = {
+				GER = {
+					load_oob = "GER_Atlantikwall_Deployment"
+					load_oob = "GER_Atlantikwall_Deployment"
+					add_manpower = -112000					
+				}
+			}
+		}		
+
+		GER_Atlantikwall_Deployment_Ports_1div = {
+
+			icon = GFX_decision_deploy
+
+			ai_will_do = { factor = 0 }
+
+			cost = 0
+			fire_only_once = yes
+			available = {
+				has_manpower > 15000
+				date < 1941.1.1			
+				has_global_flag = fall_of_france
+				19 = { is_fully_controlled_by = GER }
+				23 = { is_fully_controlled_by = GER }
+				30 = { is_fully_controlled_by = GER }
+				14 = { is_fully_controlled_by = GER }
+				15 = { is_fully_controlled_by = GER }
+				785 = { is_fully_controlled_by = GER }
+				29 = { is_fully_controlled_by = GER }
+				6 = { is_fully_controlled_by = GER }
+				7 = { is_fully_controlled_by = GER }
+				36 = { is_fully_controlled_by = GER }
+				56 = { is_fully_controlled_by = GER }
+				833 = { is_fully_controlled_by = GER }
+				58 = { is_fully_controlled_by = GER }
+				834 = { is_fully_controlled_by = GER }
+				99 = { is_fully_controlled_by = GER }
+			}
+
+			allowed = {
+				tag = GER
+			}
+
+			visible = {
+				date > 1936.1.1
+			}
+
+			complete_effect = {
+				GER = {
+					load_oob = "GER_Atlantikwall_Deployment_Ports"
+					add_manpower = -15000
+				}
+			}
+		}
+
+		GER_Atlantikwall_Deployment_Ports_2div = {
+
+			icon = GFX_decision_deploy
+
+			ai_will_do = { factor = 0 }
+
+			cost = 0
+			fire_only_once = yes
+			available = {
+				has_manpower > 30000
+				date < 1941.1.1			
+				has_global_flag = fall_of_france
+				19 = { is_fully_controlled_by = GER }
+				23 = { is_fully_controlled_by = GER }
+				30 = { is_fully_controlled_by = GER }
+				14 = { is_fully_controlled_by = GER }
+				15 = { is_fully_controlled_by = GER }
+				785 = { is_fully_controlled_by = GER }
+				29 = { is_fully_controlled_by = GER }
+				6 = { is_fully_controlled_by = GER }
+				7 = { is_fully_controlled_by = GER }
+				36 = { is_fully_controlled_by = GER }
+				56 = { is_fully_controlled_by = GER }
+				833 = { is_fully_controlled_by = GER }
+				58 = { is_fully_controlled_by = GER }
+				834 = { is_fully_controlled_by = GER }
+				99 = { is_fully_controlled_by = GER }
+			}
+
+			allowed = {
+				tag = GER
+			}
+
+			visible = {
+				date > 1936.1.1
+			}
+
+			complete_effect = {
+				GER = {
+					load_oob = "GER_Atlantikwall_Deployment_Ports"
+					load_oob = "GER_Atlantikwall_Deployment_Ports"
+					add_manpower = -30000					
+				}
+			}
+		}
+
+		GER_Atlantikwall_Deployment_Ports_level5plus_1div = {
+
+			icon = GFX_decision_deploy
+
+			ai_will_do = { factor = 0 }
+
+			cost = 0
+			fire_only_once = yes
+			available = {
+				has_manpower > 6000
+				date < 1941.1.1			
+				has_global_flag = fall_of_france
+				19 = { is_fully_controlled_by = GER }
+				23 = { is_fully_controlled_by = GER }
+				30 = { is_fully_controlled_by = GER }
+				14 = { is_fully_controlled_by = GER }
+				15 = { is_fully_controlled_by = GER }
+				785 = { is_fully_controlled_by = GER }
+				29 = { is_fully_controlled_by = GER }
+				6 = { is_fully_controlled_by = GER }
+				7 = { is_fully_controlled_by = GER }
+				36 = { is_fully_controlled_by = GER }
+				56 = { is_fully_controlled_by = GER }
+				833 = { is_fully_controlled_by = GER }
+				58 = { is_fully_controlled_by = GER }
+				834 = { is_fully_controlled_by = GER }
+				99 = { is_fully_controlled_by = GER }
+			}
+
+			allowed = {
+				tag = GER
+			}
+
+			visible = {
+				date > 1936.1.1
+			}
+
+			complete_effect = {
+				GER = {
+					load_oob = "GER_Atlantikwall_Deployment_Ports_level5plus"
+					add_manpower = -6000
+				}
+			}
+		}
+
+		GER_Atlantikwall_Deployment_Ports_level5plus_2div = {
+
+			icon = GFX_decision_deploy
+
+			ai_will_do = { factor = 0 }
+
+			cost = 0
+			fire_only_once = yes
+			available = {
+				has_manpower > 12000
+				date < 1941.1.1			
+				has_global_flag = fall_of_france
+				19 = { is_fully_controlled_by = GER }
+				23 = { is_fully_controlled_by = GER }
+				30 = { is_fully_controlled_by = GER }
+				14 = { is_fully_controlled_by = GER }
+				15 = { is_fully_controlled_by = GER }
+				785 = { is_fully_controlled_by = GER }
+				29 = { is_fully_controlled_by = GER }
+				6 = { is_fully_controlled_by = GER }
+				7 = { is_fully_controlled_by = GER }
+				36 = { is_fully_controlled_by = GER }
+				56 = { is_fully_controlled_by = GER }
+				833 = { is_fully_controlled_by = GER }
+				58 = { is_fully_controlled_by = GER }
+				834 = { is_fully_controlled_by = GER }
+				99 = { is_fully_controlled_by = GER }
+			}
+
+			allowed = {
+				tag = GER
+			}
+
+			visible = {
+				date > 1936.1.1
+			}
+
+			complete_effect = {
+				GER = {
+					load_oob = "GER_Atlantikwall_Deployment_Ports_level5plus"
+					load_oob = "GER_Atlantikwall_Deployment_Ports_level5plus"	
+					add_manpower = -12000					
+				}
+			}
+		}
+		
+		GER_Atlantikwall_Deployment_NextToPorts_1div = {
+
+			icon = GFX_decision_deploy
+
+			ai_will_do = { factor = 0 }
+
+			cost = 0
+			fire_only_once = yes
+			available = {
+				has_manpower > 27000
+				date < 1941.1.1			
+				has_global_flag = fall_of_france
+				19 = { is_fully_controlled_by = GER }
+				23 = { is_fully_controlled_by = GER }
+				30 = { is_fully_controlled_by = GER }
+				14 = { is_fully_controlled_by = GER }
+				15 = { is_fully_controlled_by = GER }
+				785 = { is_fully_controlled_by = GER }
+				29 = { is_fully_controlled_by = GER }
+				6 = { is_fully_controlled_by = GER }
+				7 = { is_fully_controlled_by = GER }
+				36 = { is_fully_controlled_by = GER }
+				56 = { is_fully_controlled_by = GER }
+				833 = { is_fully_controlled_by = GER }
+				58 = { is_fully_controlled_by = GER }
+				834 = { is_fully_controlled_by = GER }
+				99 = { is_fully_controlled_by = GER }
+			}
+
+			allowed = {
+				tag = GER
+			}
+
+			visible = {
+				date > 1936.1.1
+			}
+
+			complete_effect = {
+				GER = {
+					load_oob = "GER_Atlantikwall_Deployment_NextToPorts"
+					add_manpower = -27000
+				}
+			}
+		}
+
+		GER_Atlantikwall_Deployment_NextToPorts_2div = {
+
+			icon = GFX_decision_deploy
+
+			ai_will_do = { factor = 0 }
+
+			cost = 0
+			fire_only_once = yes
+			available = {
+				has_manpower > 54000
+				date < 1941.1.1			
+				has_global_flag = fall_of_france
+				19 = { is_fully_controlled_by = GER }
+				23 = { is_fully_controlled_by = GER }
+				30 = { is_fully_controlled_by = GER }
+				14 = { is_fully_controlled_by = GER }
+				15 = { is_fully_controlled_by = GER }
+				785 = { is_fully_controlled_by = GER }
+				29 = { is_fully_controlled_by = GER }
+				6 = { is_fully_controlled_by = GER }
+				7 = { is_fully_controlled_by = GER }
+				36 = { is_fully_controlled_by = GER }
+				56 = { is_fully_controlled_by = GER }
+				833 = { is_fully_controlled_by = GER }
+				58 = { is_fully_controlled_by = GER }
+				834 = { is_fully_controlled_by = GER }
+				99 = { is_fully_controlled_by = GER }
+			}
+
+			allowed = {
+				tag = GER
+			}
+
+			visible = {
+				date > 1936.1.1
+			}
+
+			complete_effect = {
+				GER = {
+					load_oob = "GER_Atlantikwall_Deployment_NextToPorts"
+					load_oob = "GER_Atlantikwall_Deployment_NextToPorts"
+					add_manpower = -54000
+				}
+			}
+		}		
+		
+	}
