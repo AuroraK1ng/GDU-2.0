@@ -2022,11 +2022,10 @@ activate_mission = GER_relocate_industry_from_friesland
 		}
 		completion_reward = {
 			add_named_threat = { threat = 5 name = GER_war_with_france_threat }
- 			create_wargoal = {
- 				type = take_state_focus
- 				target = FRA
- 				generator = { 28 }
- 			}
+ 			declare_war_on = {
+				target = FRA
+				type = annex_everything
+			}
 		}
 	}
 
