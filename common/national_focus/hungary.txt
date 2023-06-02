@@ -1499,9 +1499,9 @@ focus_tree = {
 				name = HUN_light_fighter_effort
 				bonus = 1.00
 				uses = 1
-				technology = early_fighter
-				technology = fighter1
-				technology = fighter2
+				technology = iw_small_airframe
+				technology = basic_small_airframe
+				technology = improved_small_airframe
 
 			}
 		}
@@ -1543,8 +1543,8 @@ focus_tree = {
 				name = HUN_cas_focus
 				bonus = 1.00
 				uses = 1
-				technology = CAS1
-				technology = CAS2
+				technology = CAS1x
+				technology = CAS2x
 			}
 		}
 	}
@@ -1585,8 +1585,8 @@ focus_tree = {
 				name = HUN_tac_focus
 				bonus = 1.00
 				uses = 1
-				technology = tactical_bomber1
-				technology = tactical_bomber2
+				technology = basic_medium_airframe
+				technology = improved_medium_airframe
 			}
 		}
 	}
@@ -1840,14 +1840,14 @@ focus_tree = {
 				name = HUN_develop_tanks
 				bonus = 0.75
 				uses = 1
-				technology = improved_medium_tank
+				technology = improved_medium_tank_chassis
 			}
 			add_tech_bonus = {
 				name = HUN_develop_tanks
 				bonus = 0.75
 				uses = 2
-				technology = improved_heavy_tank
-				technology = advanced_light_tank
+				technology = improved_heavy_tank_chassis
+				technology = advanced_light_tank_chassis
 			}			
 		}
 	}
@@ -1924,9 +1924,9 @@ focus_tree = {
 				name = HUN_develop_tanks
 				bonus = 2.0
 				uses = 3
-				technology = advanced_medium_tank
-				technology = advanced_heavy_tank
-				technology = advanced_light_tank_a				
+				technology = advanced_medium_tank_chassis
+				technology = advanced_heavy_tank_chassis
+				technology = advanced_light_tank_chassis				
 			}
 		}
 	}

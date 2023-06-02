@@ -2092,22 +2092,22 @@ focus_tree = {
 				name = tank_bonus
 				bonus = 0.75
 				uses = 1
-				technology = improved_medium_tank
+				technology = improved_medium_tank_chassis
 			}
 			add_tech_bonus = {
 				name = tank_bonus
 				bonus = 0.75
 				uses = 2
-				technology = improved_heavy_tank
-				technology = advanced_light_tank
+				technology = improved_heavy_tank_chassis
+				technology = advanced_light_tank_chassis
 			}
 			add_tech_bonus = {
 				name = tank_bonus
 				bonus = 1.25
 				uses = 3
-				technology = advanced_medium_tank
-				technology = advanced_heavy_tank
-				technology = advanced_light_tank_a
+				technology = advanced_medium_tank_chassis
+				technology = advanced_heavy_tank_chassis
+				technology = advanced_light_tank_chassis
 			}
 
 			
@@ -2704,9 +2704,9 @@ focus_tree = {
 				name = CAN_we_have_the_hurricane
 				bonus = 0.5
 				uses = 1
-				technology = early_fighter
-				technology = fighter1
-				technology = fighter2
+				technology = iw_small_airframe
+				technology = basic_small_airframe
+				technology = improved_small_airframe
 			}
 		}
 	}
@@ -3015,10 +3015,10 @@ focus_tree = {
 				name = CAN_fund_fairchilds_development
 				bonus = 1.00
 				uses = 1
-				technology = CAS1
-				technology = CAS2
-				technology = tactical_bomber1
-				technology = tactical_bomber2
+				technology = CAS1x
+				technology = CAS2x
+				technology = basic_medium_airframe
+				technology = improved_medium_airframe
 			}
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = CAN_fairchild_aircraft_ltd
@@ -3064,8 +3064,8 @@ focus_tree = {
 				name = CAN_cookie_carriers
 				bonus = 1.00
 				uses = 1
-				technology = strategic_bomber1
-				technology = strategic_bomber2			
+				technology = basic_large_airframe
+				technology = improved_large_airframe			
 			}
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = CAN_handley_page

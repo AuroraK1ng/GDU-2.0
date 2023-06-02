@@ -2100,21 +2100,21 @@ focus_tree = {
 				name = tank_bonus
 				bonus = 0.25
 				uses = 1
-				technology = improved_medium_tank
+				technology = improved_medium_tank_chassis
 			}
 			add_tech_bonus = {
 				name = tank_bonus
 				bonus = 0.5
 				uses = 2
-				technology = improved_heavy_tank
-				technology = advanced_light_tank
+				technology = improved_heavy_tank_chassis
+				technology = advanced_light_tank_chassis
 			}
 			add_tech_bonus = {
 				name = tank_bonus
 				bonus = 1.0
 				uses = 3
-				technology = advanced_medium_tank
-				technology = advanced_heavy_tank
+				technology = advanced_medium_tank_chassis
+				technology = advanced_heavy_tank_chassis
 									
 			}
 			
@@ -2281,12 +2281,12 @@ focus_tree = {
 				name = USA_fighter_bonus
 				ahead_reduction = 0.5
 				bonus = 0.25
-				technology = fighter2
+				technology = improved_small_airframe
 			}
 			add_tech_bonus = {
 				name = USA_fighter_bonus
 				bonus = 0.25
-				technology = fighter2
+				technology = improved_small_airframe
 			}			
 		}
 	}
@@ -3139,7 +3139,7 @@ focus_tree = {
 				name = fighter3_bonus
 				bonus = 0.5
 				uses = 1
-				technology = fighter3
+				technology = advanced_small_airframe
 			}			
 			add_tech_bonus = {
 				name = jet_fighter_bonus
