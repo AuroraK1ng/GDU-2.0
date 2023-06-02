@@ -33,21 +33,21 @@ DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = { always = no }
 DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = { always = no } 
 DIPLOMACY_REQUEST_LICENSED_PRODUCTION_ENABLE_TRIGGER = {
 	AND = {
-		NOT = {FROM = { has_idea = HOL_modernize_the_air_fleet  } } 
+		NOT = {FROM = {   } } 
 		if = { limit = {FROM = { tag = BRA   } }  GER = { has_country_flag = BRAlicense }  } 
 	}
 	 
 }
 DIPLOMACY_MANAGE_LICENSED_PRODUCTION_EXISTING_ENABLE_TRIGGER = { 
 		AND = {
-			NOT = {FROM = { has_idea = HOL_modernize_the_air_fleet  } } 
+			NOT = {FROM = {   } } 
 			if = { limit = {FROM = { tag = BRA   } }  GER = { has_country_flag = BRAlicense }  } 
 		}
 }
 DIPLOMACY_REQUEST_ACCESS_TO_LICENCE_PRODUCTION_ENABLE_TRIGGER = { 
 	AND = {
 		NOT = { ROOT = {has_completed_focus = SOV_the_permanent_revolution } } 
-		NOT = {FROM = { has_idea = HOL_modernize_the_air_fleet  } } 
+		NOT = {FROM = {    } } 
 		if = { limit = {FROM = { tag = BRA   } }  GER = { has_country_flag = BRAlicense }  }
 	}
 
