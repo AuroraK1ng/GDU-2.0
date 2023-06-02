@@ -1,0 +1,193 @@
+### Zaibatsu by TornadoWatch
+
+GDU_Zaibatsu_category = {
+
+	JAP_Zaibatsu1_decision = {
+
+		icon = generic_air
+
+		allowed = {
+			tag = JAP
+		}
+
+		available = {
+			has_completed_focus = JAP_guide_the_zaibatsus
+			NOT = { has_idea = zaibatsu1 }
+		}
+
+		cost = 75
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_idea = JAP_zaibatsus
+				}
+				remove_ideas = JAP_zaibatsus
+				add_ideas = zaibatsu1
+			}
+			if = {
+				limit = {
+					has_idea = zaibatsu2
+				}
+				remove_ideas = zaibatsu2
+				add_ideas = zaibatsu1
+			}
+			if = {
+				limit = {
+					has_idea = zaibatsu3
+				}
+				remove_ideas = zaibatsu3
+				add_ideas = zaibatsu1
+			}
+			if = {
+				limit = {
+					has_idea = zaibatsu4
+				}
+				remove_ideas = zaibatsu4
+				add_ideas = zaibatsu1
+			}
+		}
+	}
+
+	JAP_Zaibatsu2_decision = {
+
+		icon = generic_decision
+
+		allowed = {
+			tag = JAP
+		}
+
+		available = {
+			has_completed_focus = JAP_guide_the_zaibatsus
+			NOT = { has_idea = zaibatsu2 }
+		}
+
+		cost = 75
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_idea = JAP_zaibatsus
+				}
+				remove_ideas = JAP_zaibatsus
+				add_ideas = zaibatsu2
+			}
+			if = {
+				limit = {
+					has_idea = zaibatsu1
+				}
+				remove_ideas = zaibatsu1
+				add_ideas = zaibatsu2
+			}
+			if = {
+				limit = {
+					has_idea = zaibatsu3
+				}
+				remove_ideas = zaibatsu3
+				add_ideas = zaibatsu2
+			}
+			if = {
+				limit = {
+					has_idea = zaibatsu4
+				}
+				remove_ideas = zaibatsu4
+				add_ideas = zaibatsu2
+			}
+		}
+	}
+
+	JAP_Zaibatsu3_decision = {
+
+		icon = generic_construction
+
+		allowed = {
+			tag = JAP
+		}
+
+		available = {
+			has_completed_focus = JAP_guide_the_zaibatsus
+			NOT = { has_idea = zaibatsu3 }
+		}
+
+		cost = 75
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_idea = JAP_zaibatsus
+				}
+				remove_ideas = JAP_zaibatsus
+				add_ideas = zaibatsu3
+			}
+			if = {
+				limit = {
+					has_idea = zaibatsu1
+				}
+				remove_ideas = zaibatsu1
+				add_ideas = zaibatsu3
+			}
+			if = {
+				limit = {
+					has_idea = zaibatsu2
+				}
+				remove_ideas = zaibatsu2
+				add_ideas = zaibatsu3
+			}
+			if = {
+				limit = {
+					has_idea = zaibatsu4
+				}
+				remove_ideas = zaibatsu4
+				add_ideas = zaibatsu3
+			}
+		}
+	}
+
+	JAP_Zaibatsu4_decision = {
+
+		icon = hol_exchange_intelligence_data
+
+		allowed = {
+			tag = JAP
+		}
+
+		available = {
+			has_completed_focus = JAP_guide_the_zaibatsus
+			NOT = { has_idea = zaibatsu4 }
+		}
+
+		cost = 75
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_idea = JAP_zaibatsus
+				}
+				remove_ideas = JAP_zaibatsus
+				add_ideas = zaibatsu4
+			}
+			if = {
+				limit = {
+					has_idea = zaibatsu1
+				}
+				remove_ideas = zaibatsu1
+				add_ideas = zaibatsu4
+			}
+			if = {
+				limit = {
+					has_idea = zaibatsu2
+				}
+				remove_ideas = zaibatsu2
+				add_ideas = zaibatsu4
+			}
+			if = {
+				limit = {
+					has_idea = zaibatsu3
+				}
+				remove_ideas = zaibatsu3
+				add_ideas = zaibatsu4
+			}
+		}
+	}
+
+}
