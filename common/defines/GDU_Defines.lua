@@ -134,7 +134,7 @@ NDefines.NDiplomacy.LL_TO_PUPPET_AUTONOMY_DAILY_FACTOR = 0.00		-- If overlord le
 NDefines.NDiplomacy.MASTER_BUILD_AUTONOMY_FACTOR = 0.0            -- scales autonomy gain from construction by this
 
 
-NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 20  -- increased from 15 to 35 8/3/2019
+NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 15  -- increased from 15 to 35 8/3/2019
 
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_BASE = 100
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_TRASHHOLD = 0
@@ -213,7 +213,7 @@ NDefines.NBuildings.SUPPLY_PORT_LEVEL_THROUGHPUT = 4   -- supply throughput per 
 
 NDefines.NBuildings.NAVALBASE_REPAIR_MULT = 0.2		-- vanilla is 0.05. Each level of navalbase building repairs X strength and can repair as many ships as its level
 
-NDefines.NTechnology.BASE_RESEARCH_POINTS_SAVED = 45.0  -- increased from 45 to 55 8/3/2019
+NDefines.NTechnology.BASE_RESEARCH_POINTS_SAVED = 20.0  -- increased from 45 to 55 8/3/2019
 NDefines.NTechnology.BASE_TECH_COST = 87
 NDefines.NTechnology.LICENSE_PRODUCTION_TECH_BONUS = 0.00
 NDefines.NTechnology.MAX_TECH_SHARING_BONUS = 0.40  			-- Max technology sharing bonus that can be applied instantly
