@@ -679,12 +679,13 @@ focus_tree = {
 		prerequisite = { focus = ITA_libyan_infrastructure }
 		x = 2
 		y = 7
-		cost = 10
+		cost = 0
 		ai_will_do = {
 			factor = 1
 		}
 		cancel_if_invalid = no
-		available = {
+		available = {		
+			always = no
 			ITA = {
 				controls_state = 446
 				controls_state = 447
@@ -1578,12 +1579,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_tech_bonus = {
-				name = ss_bonus
-				bonus = 1.0
-				uses = 1
-				category = ss_tech
-			}
+			
 			add_tech_bonus = {
 				name = sub_op_bonus
 				bonus = 1.0

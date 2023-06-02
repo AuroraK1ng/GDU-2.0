@@ -96,6 +96,35 @@ news_event = {
 	}
 }
 
+news_event = {
+	id = news.1111
+	title = "news.108.t"
+	desc = "German intelligence ascertained that the British had only two armored brigades of the 2nd Armored Division at El-Ageila, scattered over a broad front in separate detachments and scattered among themselves, while units of the 9th Australian Division, which constituted the main British forces in Western Cyrenaica, were in the Benghazi area. The German command took advantage of such a favorable opportunity and struck the British on March 31, which proved to be a surprise attack. One armored brigade was taken by surprise and completely destroyed."
+	picture = GFX_news_event_italian_tank_desert
+	
+	major = yes
+	fire_only_once = yes
+	trigger = {
+		446 = { is_controlled_by = ITA }
+		447 = { is_controlled_by = ITA }
+		453 = { is_controlled_by = ITA }
+		454 = { is_controlled_by = ITA }
+		
+	}
+	
+	immediate = {
+		hidden_effect = {
+		ITA = {
+		activate_decision = ITA_egyptx
+		}
+		set_global_flag = fall_of_africa
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+}
 
 # Anschluss of Austria
 news_event = {
@@ -736,50 +765,6 @@ news_event = {
 		trigger = { TAG = ENG }
 	}
 }
-
-# The Fall of Cairo (Italy)
-news_event = {
-	id = news.113
-	title = news.109.t
-	desc = news.113.d
-	picture = GFX_news_event_italian_tank_desert
-	
-	major = yes
-	
-	trigger = {
-		446 = { is_controlled_by = ITA }
-		446 = { is_owned_by = ENG }
-		ITA = { has_war_with = ENG }
-		NOT = { has_global_flag = fall_of_cairo_ita }
-	}
-	
-	immediate = {
-		set_global_flag = fall_of_cairo_ita
-	}
-	
-	mean_time_to_happen = {
-		days = 2
-	}
-	
-	option = {
-		name = news.145.a
-		trigger = {
-			NOT = {
-				TAG = ITA
-				TAG = ENG
-			}
-		}
-	}
-	option = {
-		name = news.113.b
-		trigger = { TAG = ITA }
-	}
-	option = {
-		name = news.100.c
-		trigger = { TAG = ENG }
-	}
-}
-
 # The Fall of Paris (Italy)
 news_event = {
 	id = news.114
