@@ -252,71 +252,7 @@ ideas = {
 
 
 			available = {
-				has_war = yes
-				threat > 0.2
-				date > 1941.1.1 
-				NOT = { tag = SPR }
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
-				}
-				if = {
-					limit = {
-						original_tag = GER
-					}
-					NOT = { has_idea = GER_short_war }
-				}
-				if = {
-					limit = {
-						original_tag = ENG
-					}
-					NOT = { has_idea = alli_phoney_war }
-				}
-				if = {
-					limit = {
-						original_tag = SAF
-					}
-					NOT = { has_idea = alli_phoney_war }
-				}
-				if = {
-					limit = {
-						original_tag = RAJ
-					}
-					NOT = { has_idea = alli_phoney_war }
-				}
-				if = {
-					limit = {
-						original_tag = AST
-					}
-					NOT = { has_idea = alli_phoney_war }
-				}
-				if = {
-					limit = {
-						original_tag = NZL
-					}
-					NOT = { has_idea = alli_phoney_war }
-				}
-				if = {
-					limit = {
-						original_tag = HOL
-					}
-					NOT = { has_idea = alli_phoney_war }
-				}
-#				if = {
-#					limit = {
-#						original_tag = IRE
-#					}
-#					NOT = { has_idea = alli_phoney_war }
-#				}
-				if = {
-					limit = {
-						original_tag = CAN
-					}
-					NOT = { has_idea = alli_phoney_war }
-				}
+			always = no
 			}
 
 			ai_will_do = {
