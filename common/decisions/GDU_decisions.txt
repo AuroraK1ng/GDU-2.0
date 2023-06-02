@@ -230,17 +230,10 @@ USA_foreign_politics = {
 		available = {
 			OR = {
 				date > 1941.1.1
-				ENG = { surrender_progress > 0.7 }
+				ENG = { surrender_progress > 0.4 }
 				ENG = { has_capitulated = yes }
-				AND = {
-					CAN = { surrender_progress > 0.0 }
-					NOT = { has_global_flag = mini_GDU }
-					NOT = { 276 = { is_controlled_by = ENG } }
-				}
-				any_of = {
-					array = global.axis_in_americas_state_array
-					var:v = { is_controlled_by_axis_country_except_vichy = yes }
-				}			
+				CAN = { surrender_progress > 0.01 }
+				NOT = { 126 = { is_controlled_by = ENG } }			
 			}
 		}
 
