@@ -1,78 +1,5 @@
 division_template = {
 	name = "Infantry Division"			# 1st - 5th divisions = fully equipped, others = reserve divisions
-	division_names_group = ENG_INF_01
-
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-        infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-        infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
-	}
-	support = {
-       	engineer = { x = 0 y = 0 }
-       	artillery = { x = 0 y = 1 }
-	}
-}
-division_template = {
-	name = "Cavalry Brigade"
-	division_names_group = ENG_CAV_02
-
-	regiments = {
-		cavalry = { x = 0 y = 0 }
-		cavalry = { x = 0 y = 1 }
-		cavalry = { x = 0 y = 2 }
-        cavalry = { x = 0 y = 3 }
-	}
-	support = {
-        recon = { x = 0 y = 0 }
-	}
-}
-division_template = {
-	name = "Tank Brigade"
-	division_names_group = ENG_ARM_02
-	regiments = {
-		light_armor = { x = 0 y = 0 }
-		light_armor = { x = 0 y = 1 }
-		light_armor = { x = 0 y = 2 }
-	}
-}
-division_template = {
-	name = "Colonial Garrison"
-	division_names_group = ENG_COL_01
-	
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-	}
-	priority = 0
-}
-division_template = {
-	name = "Motorised Division"
-
-	regiments = {
-		motorized = { x = 0 y = 0 }
-		motorized = { x = 0 y = 1 }
-		motorized = { x = 0 y = 2 }
-		motorized = { x = 1 y = 0 }
-		motorized = { x = 1 y = 1 }
-		motorized = { x = 1 y = 2 }
-	}
-	support = {
-	 	engineer = { x = 0 y = 0 }
-	    mot_recon = { x = 0 y = 1 }
-	}
-}
-division_template = {
-	name = "50W"
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -80,41 +7,223 @@ division_template = {
 		infantry = { x = 0 y = 2 }
 		infantry = { x = 0 y = 3 }
 		infantry = { x = 0 y = 4 }
-
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 		infantry = { x = 1 y = 2 }
 		infantry = { x = 1 y = 3 }
 		infantry = { x = 1 y = 4 }
-
 		infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
-		infantry = { x = 2 y = 3 }
-		infantry = { x = 2 y = 4 }
+		anti_tank_brigade = { x = 2 y = 1 }
+		artillery_brigade = { x = 2 y = 2 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+		artillery_brigade = { x = 3 y = 2 }
+		artillery_brigade = { x = 3 y = 3 }
+		anti_air_brigade = { x = 4 y = 0 } 
+		anti_air_brigade = { x = 4 y = 1 } 
 
-		infantry = { x = 3 y = 0 }
-		infantry = { x = 3 y = 1 }
-		infantry = { x = 3 y = 2 }
-		infantry = { x = 3 y = 3 }
-		infantry = { x = 3 y = 4 }
-
-		infantry = { x = 4 y = 0 }
-		infantry = { x = 4 y = 1 }
-		infantry = { x = 4 y = 2 }
-		infantry = { x = 4 y = 3 }
-		infantry = { x = 4 y = 4 }
 
 	}
 	support = {
+		engineer = { x = 0 y = 0 } 	# (semi-mot) Engineer bn
+		recon = { x = 0 y = 1 } 		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co #Eng and recon removed and they seem rather OP. Could revisit if balance changes
+		logistics_company { x = 0 y = 2 }
+		artillery = { x = 0 y = 3 }
+	}
+}
 
+division_template = {
+	name = "Tank Brigade"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+	    motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 0 y = 3 }
+		mot_anti_air_brigade = { x = 0 y = 4 }
+
+
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }		
+		mot_anti_air_brigade = { x = 1 y = 4 }
+
+		light_armor = { x = 2 y = 0 }
+		light_armor = { x = 2 y = 1 }
+		light_armor = { x = 2 y = 2 }
+		light_armor = { x = 2 y = 3 }
+		light_armor = { x = 3 y = 0 }
+		light_armor = { x = 3 y = 1 }
+		light_armor = { x = 3 y = 2 }
+		light_armor = { x = 3 y = 3 }
+		light_armor = { x = 4 y = 0 }
+		light_armor = { x = 4 y = 1 }
+		light_armor = { x = 4 y = 2 }
+
+	}
+	support = {
+        engineer = { x = 0 y = 0 }
+        mot_recon = { x = 0 y = 1 }
+		signal_company { x = 0 y = 2 }
+		logistics_company { x = 0 y = 3 }
+		anti_air = { x = 0 y = 4 }
+		anti_tank = { x = 0 y = 5 }
+		artillery = { x = 0 y = 6 }
+	}
+}
+
+division_template = {
+	name = "Armored Division"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+	    motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 0 y = 3 }
+		mot_anti_air_brigade = { x = 0 y = 4 }
+		
+
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }		
+		mot_anti_air_brigade = { x = 1 y = 4 }
+
+		medium_armor = { x = 2 y = 0 }
+		medium_armor = { x = 2 y = 1 }
+		medium_armor = { x = 2 y = 2 }
+		medium_armor = { x = 2 y = 3 }
+		medium_armor = { x = 3 y = 0 }
+		medium_armor = { x = 3 y = 1 }
+		medium_armor = { x = 3 y = 2 }
+		medium_armor = { x = 3 y = 3 }
+		medium_armor = { x = 4 y = 0 }
+		medium_armor = { x = 4 y = 1 }
+		medium_armor = { x = 4 y = 2 }
+
+	}
+	support = {
+        engineer = { x = 0 y = 0 }
+        mot_recon = { x = 0 y = 1 }
+		signal_company { x = 0 y = 2 }
+		logistics_company { x = 0 y = 3 }
+		anti_air = { x = 0 y = 4 }
+		anti_tank = { x = 0 y = 5 }
+		artillery = { x = 0 y = 6 }
+	}
+}
+
+
+division_template = {
+	name = "Garrison Brigade"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+		infantry = { x = 2 y = 0 }
+		anti_tank_brigade = { x = 2 y = 1 }
+		artillery_brigade = { x = 2 y = 2 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+		artillery_brigade = { x = 3 y = 2 }
+		artillery_brigade = { x = 3 y = 3 }
+		anti_air_brigade = { x = 4 y = 0 }
+		anti_air_brigade = { x = 4 y = 1 } 		
+		
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		anti_air = { x = 0 y = 1 }		
+
+	}
+	priority = 0
+}
+
+
+
+division_template = {
+	name = "Desert Infantry Division"
+
+	regiments = {
+		desertinfantry = { x = 0 y = 0 }
+		desertinfantry = { x = 0 y = 1 }
+		desertinfantry = { x = 0 y = 2 }
+		desertinfantry = { x = 0 y = 3 }
+		desertinfantry = { x = 0 y = 4 }
+		desertinfantry = { x = 1 y = 0 }
+		desertinfantry = { x = 1 y = 1 }
+		desertinfantry = { x = 1 y = 2 }
+		desertinfantry = { x = 1 y = 3 }
+		desertinfantry = { x = 1 y = 4 }
+		desertinfantry = { x = 2 y = 0 }
+		anti_tank_brigade = { x = 2 y = 1 }
+		artillery_brigade = { x = 2 y = 2 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+		artillery_brigade = { x = 3 y = 2 }
+		artillery_brigade = { x = 3 y = 3 }
+		anti_air_brigade = { x = 4 y = 0 }
+		anti_air_brigade = { x = 4 y = 1 } 		
+		
+
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 	# (semi-mot) Engineer bn
+		recon = { x = 0 y = 1 } 		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co #Eng and recon removed and they seem rather OP. Could revisit if balance changes
+		logistics_company { x = 0 y = 2 }
+		artillery = { x = 0 y = 3 }
+		anti_air = { x = 0 y = 4 }		
+	}
+}
+
+division_template = {
+	name = "Mountain Infantry Division"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 0 y = 3 }
+		mountaineers = { x = 0 y = 4 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 1 y = 3 }
+		mountaineers = { x = 1 y = 4 }
+		mountaineers = { x = 2 y = 0 }
+		anti_tank_brigade = { x = 2 y = 1 }
+		artillery_brigade = { x = 2 y = 2 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+		artillery_brigade = { x = 3 y = 2 }
+		artillery_brigade = { x = 3 y = 3 }
+		anti_air_brigade = { x = 4 y = 0 } 
+		anti_air_brigade = { x = 4 y = 1 } 		
+
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 	# (semi-mot) Engineer bn
+		recon = { x = 0 y = 1 } 		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co #Eng and recon removed and they seem rather OP. Could revisit if balance changes
+		logistics_company { x = 0 y = 2 }
+		artillery = { x = 0 y = 3 }
+		anti_air = { x = 0 y = 4 }		
 	}
 }
 
 units = {
 	division= {
+		name = "Use this division to select generals' traits"
 		location = 6103
-		division_template = "50W"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.01
 	}
