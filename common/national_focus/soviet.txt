@@ -302,10 +302,11 @@ focus_tree = {
 		continue_if_invalid = yes
 		completion_reward = {
 			custom_effect_tooltip = SOV_defense_of_moscow_capitalmove	
-				if = {
-					limit = { 251 = { is_controlled_by = ROOT } }
-					set_capital = 251
-				}			
+					set_capital = {
+					state = 251
+					}
+				
+				
 			add_ideas = tot_economic_mobilisation
 			add_ideas = SOV_industrial_relocations
 			if = { limit = { has_idea = officers_purged } remove_ideas = officers_purged }
@@ -1239,7 +1240,7 @@ focus_tree = {
 					}
 				}
 			}
-			add_ideas = SOV_georgy_zhukov_highcommand
+			
 			add_ideas = general_winter_idea
 			custom_effect_tooltip = GDU_spacer
 			add_tech_bonus = {

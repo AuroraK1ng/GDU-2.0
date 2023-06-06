@@ -154,14 +154,16 @@ characters={
 	}
 
 	GER_erwin_rommel={
-		name=GER_erwin_rommel
+		name="Erwin Rommel"
 		portraits={
 			army={
-				large=GFX_portrait_GER_erwin_rommel
-				small="GFX_idea_erwin_rommel"
+				small="gfx/interface/ideas/idea_GER_erwin_rommel.dds"
+			}
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Erwin_Rommel.dds"
 			}
 		}
-		advisor={
+			advisor={
 			slot = high_command
 			idea_token = erwin_rommel
 			ledger = army
@@ -174,20 +176,19 @@ characters={
 			traits = {
 				army_armored_3
 			}
-			cost = 150
+			cost = 75
 			ai_will_do = {
 				factor = 8.000
 			}
 		}
-		
-		corps_commander={
-			traits={ trait_reckless media_personality armor_officer war_hero trickster }
-			skill=4
-			attack_skill=4
-			defense_skill=4
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=4
+		corps_commander={ #17/17
+			traits={ organizer trait_engineer  desert_fox hill_fighter urban_assault_specialist panzer_leader panzer_expert }
+			skill=6
+			attack_skill=5
+			defense_skill=2
+			planning_skill=6
+			logistics_skill=6
+			legacy_id=-1
 		}
 	}
 
@@ -212,14 +213,14 @@ characters={
 			}
 		}
 		
-		corps_commander={
-			traits={ brilliant_strategist armor_officer trickster trait_engineer }
-			skill=4
-			attack_skill=2
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=4
-			legacy_id=5
+		corps_commander={ #17/17
+			traits={ brilliant_strategist organizer trait_engineer panzer_leader ranger panzer_expert fortress_buster }
+			skill=6
+			attack_skill=4
+			defense_skill=3
+			planning_skill=5
+			logistics_skill=7
+			legacy_id=-1
 		}
 	}
 
@@ -244,14 +245,14 @@ characters={
 			}
 		}
 		
-		corps_commander={
-			traits={ brilliant_strategist career_officer armor_officer trickster panzer_leader }
-			skill=4
-			attack_skill=2
-			defense_skill=4
-			planning_skill=4
-			logistics_skill=3
-			legacy_id=6
+		corps_commander={ #17/17
+			traits={ brilliant_strategist organizer trait_engineer panzer_leader ranger panzer_expert expert_improviser }
+			skill=6
+			attack_skill=5
+			defense_skill=3
+			planning_skill=5
+			logistics_skill=6
+			legacy_id=-1
 		}
 	}
 
@@ -282,14 +283,14 @@ characters={
 				small=GFX_portrait_GER_ewald_von_kleist_small
 			}
 		}
-		corps_commander={
-			traits={ trait_cautious armor_officer }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=8
+		corps_commander={ #17/17
+			traits={ brilliant_strategist urban_assault_specialist  trait_engineer  ranger combined_arms_expert cavalry_leader expert_improviser }
+			skill=6
+			attack_skill=5
+			defense_skill=3
+			planning_skill=5
+			logistics_skill=6
+			legacy_id=-1
 		}
 	}
 
@@ -301,14 +302,14 @@ characters={
 				small=GFX_portrait_GER_fedor_von_bock_small
 			}
 		}
-		corps_commander={
-			traits={ trait_cautious harsh_leader }
-			skill=4
+		corps_commander={ #17/17
+			traits={ adaptable harsh_leader infantry_leader infantry_expert skilled_staffer  expert_improviser }
+			skill=6
 			attack_skill=4
-			defense_skill=3
-			planning_skill=4
-			logistics_skill=2
-			legacy_id=9
+			defense_skill=2
+			planning_skill=8
+			logistics_skill=5
+			legacy_id=-1
 		}
 	}
 
@@ -339,14 +340,14 @@ characters={
 				small=GFX_portrait_GER_maximilian_von_weichs_small
 			}
 		}
-		corps_commander={
-			traits={ cavalry_officer }
-			skill=4
-			attack_skill=4
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=4
-			legacy_id=11
+		corps_commander={ #17/17
+			traits={ cavalry_leader combined_arms_expert  skilled_staffer hill_fighter ranger  ambusher }
+			skill=6
+			attack_skill=5
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=8
+			legacy_id=-1
 		}
 	}
 
@@ -431,14 +432,14 @@ characters={
 			}
 		}
 		
-		corps_commander={
-			traits={ trait_reckless commando }
-			skill=4
+		corps_commander={ #18/17
+			traits={ trait_reckless infantry_leader infantry_expert commando trait_mountaineer hill_fighter  camouflage_expert guerilla_fighter }
+			skill=6
 			attack_skill=4
-			defense_skill=2
-			planning_skill=4
-			logistics_skill=3
-			legacy_id=16
+			defense_skill=4
+			planning_skill=5
+			logistics_skill=6
+			legacy_id=-1
 		}
 	}
 
@@ -450,14 +451,14 @@ characters={
 				small=GFX_portrait_GER_erwin_von_witzleben_small
 			}
 		}
-		corps_commander={
-			traits={ career_officer infantry_officer }
-			skill=4
-			attack_skill=4
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=4
-			legacy_id=17
+		corps_commander={ #16/17
+			traits={ fake_skilled_staffer old_guard infantry_leader ambusher swamp_fox urban_assault_specialist  guerilla_fighter }
+			skill=6
+			attack_skill=2
+			defense_skill=7
+			planning_skill=5
+			logistics_skill=5
+			legacy_id=-1
 		}
 	}
 
@@ -469,14 +470,14 @@ characters={
 				small=GFX_portrait_GER_hermann_hoth_small
 			}
 		}
-		corps_commander={
-			traits={ trait_reckless armor_officer }
-			skill=3
-			attack_skill=2
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=18
+		corps_commander={ #17/17
+			traits={ brilliant_strategist organizer trait_engineer panzer_leader ranger panzer_expert expert_improviser }
+			skill=6
+			attack_skill=5
+			defense_skill=3
+			planning_skill=5
+			logistics_skill=6
+			legacy_id=-1
 		}
 	}
 
@@ -488,14 +489,14 @@ characters={
 				small=GFX_portrait_GER_johannes_blaskowitz_small
 			}
 		}
-		corps_commander={
-			traits={ infantry_officer }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=19
+		corps_commander={  #17/17
+			traits={ bearer_of_artillery adaptable organizer infantry_expert infantry_leader  ranger  }
+			skill=6
+			attack_skill=4
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=6
+			legacy_id=-1
 		}
 	}
 
@@ -507,14 +508,14 @@ characters={
 				small=GFX_portrait_GER_paul_hausser_small
 			}
 		}
-		corps_commander={
-			traits={ armor_officer politically_connected }
-			skill=4
-			attack_skill=3
+		corps_commander={ #18/17
+			traits={ adaptable cavalry_leader combined_arms_expert  trait_engineer commando naval_invader   }
+			skill=6
+			attack_skill=4
 			defense_skill=3
 			planning_skill=4
-			logistics_skill=3
-			legacy_id=20
+			logistics_skill=8
+			legacy_id=-1
 		}
 	}
 
@@ -545,13 +546,14 @@ characters={
 				small=GFX_portrait_GER_georg_von_kuchler_small
 			}
 		}
-		corps_commander={
-			skill=4
-			attack_skill=3
+		corps_commander={ #17/17
+			traits={ adaptable harsh_leader infantry_expert infantry_leader skilled_staffer  expert_improviser }
+			skill=6
+			attack_skill=5
 			defense_skill=2
-			planning_skill=4
-			logistics_skill=4
-			legacy_id=22
+			planning_skill=8
+			logistics_skill=5
+			legacy_id=-1
 		}
 	}
 
@@ -563,14 +565,14 @@ characters={
 				small=GFX_portrait_GER_alfred_jodl_small
 			}
 		}
-		corps_commander={
-			traits={ career_officer politically_connected }
-			skill=3
-			attack_skill=2
+		corps_commander={ #17/17
+			traits={ adaptable harsh_leader infantry_leader skilled_staffer infantry_expert expert_improviser }
+			skill=6
+			attack_skill=4
 			defense_skill=2
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=23
+			planning_skill=8
+			logistics_skill=5
+			legacy_id=-1
 		}
 	}
 
@@ -582,14 +584,14 @@ characters={
 				small=GFX_portrait_GER_sepp_dietrich_small
 			}
 		}
-		corps_commander={
-			traits={ brilliant_strategist trait_reckless armor_officer politically_connected }
-			skill=4
-			attack_skill=2
+		corps_commander={ #17/17
+			traits={ brilliant_strategist organizer  trait_engineer panzer_leader ranger panzer_expert expert_improviser }
+			skill=6
+			attack_skill=5
 			defense_skill=3
-			planning_skill=4
-			logistics_skill=4
-			legacy_id=24
+			planning_skill=5
+			logistics_skill=6
+			legacy_id=-1
 		}
 	}
 
@@ -601,14 +603,14 @@ characters={
 				small=GFX_portrait_GER_hasso_von_manteuffel_small
 			}
 		}
-		corps_commander={
-			traits={ career_officer trait_cautious armor_officer }
-			skill=4
+		corps_commander={ #17/17
+			traits={ brilliant_strategist panzer_leader trait_mountaineer hill_fighter urban_assault_specialist panzer_expert expert_improviser }
+			skill=6
 			attack_skill=4
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=25
+			defense_skill=4
+			planning_skill=5
+			logistics_skill=6
+			legacy_id=-1
 		}
 	}
 
@@ -657,13 +659,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ trait_cautious infantry_officer trait_engineer }
-			skill=3
-			attack_skill=3
-			defense_skill=1
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=33
+			traits = { trait_engineer fortress_buster infantry_leader trait_cautious fake_skilled_staffer commando camouflage_expert ambusher }
+		skill = 5
+		attack_skill = 4
+		defense_skill = 4 
+		planning_skill = 6
+		logistics_skill = 8
 		}
 	}
 
@@ -675,14 +676,14 @@ characters={
 				small=GFX_portrait_GER_ernsteberhard_hell_small
 			}
 		}
-		corps_commander={
-			traits={ war_hero trait_engineer winter_specialist }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=34
+		corps_commander={  #17/17
+			traits={ trait_engineer panzer_leader winter_specialist panzer_expert ambusher guerilla_fighter }
+			skill=6
+			attack_skill=5
+			defense_skill=3
+			planning_skill=5
+			logistics_skill=6
+			legacy_id=-1
 		}
 	}
 
@@ -694,14 +695,14 @@ characters={
 				small=GFX_portrait_GER_felix_steiner_small
 			}
 		}
-		corps_commander={
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=35
-		}
+		field_marshal = { #13/13
+		traits = { combined_arms_expert cavalry_leader organizer desert_fox logistics_wizard thorough_planner  }
+		skill = 7
+		attack_skill = 6
+		defense_skill = 6
+		planning_skill = 5
+		logistics_skill = 5
+	}
 	}
 
 	GER_karl_donitz={

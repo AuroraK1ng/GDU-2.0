@@ -287,14 +287,14 @@ characters={
 			}
 		}
 		
-		corps_commander={
-			traits={ inflexible_strategist career_officer }
+		field_marshal={ #12.5/12
+			traits={ inflexible_strategist infantry_leader infantry_expert trait_mountaineer adaptable unyielding_defender fortress_buster  }
 			skill=5
 			attack_skill=3
-			defense_skill=5
+			defense_skill=3
 			planning_skill=3
-			logistics_skill=5
-			legacy_id=0
+			logistics_skill=7
+			legacy_id=-1
 		}
 	}
 
@@ -306,14 +306,14 @@ characters={
 				small=GFX_portrait_ENG_neil_ritchie_small
 			}
 		}
-		corps_commander={
-			traits={ inflexible_strategist armor_officer politically_connected }
-			skill=4
-			attack_skill=3
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=0
+		corps_commander={ #15/15
+			traits={ fake_skilled_staffer inflexible_strategist infantry_leader ambusher desert_fox hill_fighter  }
+			skill=5
+			attack_skill=2
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=8
+			legacy_id=-1
 		}
 	}
 
@@ -325,13 +325,14 @@ characters={
 				small=GFX_portrait_ENG_alan_cunningham_small
 			}
 		}
-		corps_commander={
-			skill=4
+		field_marshal={ #
+			traits={  infantry_leader infantry_expert trait_mountaineer hill_fighter logistics_wizard offensive_doctrine   }
+			skill=5
 			attack_skill=4
-			defense_skill=1
+			defense_skill=2
 			planning_skill=4
-			logistics_skill=4
-			legacy_id=0
+			logistics_skill=6
+			legacy_id=-1
 		}
 	}
 
@@ -343,14 +344,14 @@ characters={
 				small=GFX_portrait_ENG_william_slim_small
 			}
 		}
-		corps_commander={
-			traits={ war_hero trickster }
+		corps_commander={ #15/15
+			traits={ infantry_leader infantry_expert trait_mountaineer jungle_rat  expert_improviser }
 			skill=5
 			attack_skill=3
-			defense_skill=3
-			planning_skill=5
+			defense_skill=4
+			planning_skill=4
 			logistics_skill=5
-			legacy_id=0
+			legacy_id=-1
 		}
 	}
 
@@ -362,13 +363,14 @@ characters={
 				small=GFX_portrait_ENG_richard_oconnor_small
 			}
 		}
-		corps_commander={
-			skill=4
-			attack_skill=2
-			defense_skill=4
-			planning_skill=4
-			logistics_skill=3
-			legacy_id=999
+		corps_commander={ #15/15
+			traits={ fake_skilled_staffer infantry_leader ambusher trait_engineer desert_fox  guerilla_fighter }
+			skill=5
+			attack_skill=5
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=7
+			legacy_id=-1
 		}
 	}
 
@@ -579,14 +581,14 @@ characters={
 			}
 		}
 
-		corps_commander={
-			traits={ trait_cautious politically_connected }
-			skill=4
+		corps_commander={#15/15
+			traits={ adaptable trait_cautious trait_engineer panzer_leader panzer_expert }
+			skill=5
 			attack_skill=3
-			defense_skill=3
-			planning_skill=4
-			logistics_skill=3
-			legacy_id=994
+			defense_skill=4
+			planning_skill=8
+			logistics_skill=1
+			legacy_id=-1
 		}
 	}
 
@@ -598,14 +600,14 @@ characters={
 				small=GFX_portrait_ENG_henry_wilson_small
 			}
 		}
-		corps_commander={
-			traits={ old_guard politically_connected }
-			skill=4
-			attack_skill=2
+		corps_commander={ #15/15
+			traits={ bearer_of_artillery organizer old_guard infantry_expert infantry_leader ranger urban_assault_specialist  }
+			skill=5
+			attack_skill=3
 			defense_skill=4
 			planning_skill=4
-			logistics_skill=3
-			legacy_id=0
+			logistics_skill=5
+			legacy_id=-1
 		}
 	}
 
@@ -636,14 +638,14 @@ characters={
 				small=GFX_portrait_ENG_jock_campbell_small
 			}
 		}
-		corps_commander={
-			traits={ armor_officer }
-			skill=4
-			attack_skill=4
+		corps_commander={ #15/15
+			traits={ bearer_of_artillery organizer panzer_leader panzer_expert expert_improviser ranger  }
+			skill=5
+			attack_skill=5
 			defense_skill=3
-			planning_skill=2
-			logistics_skill=4
-			legacy_id=0
+			planning_skill=3
+			logistics_skill=5
+			legacy_id=-1
 		}
 	}
 
@@ -655,15 +657,15 @@ characters={
 				small=GFX_portrait_ENG_oliver_leese_small
 			}
 		}
-		corps_commander={
-			traits={ harsh_leader armor_officer politically_connected }
-			skill=4
-			attack_skill=4
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=4
-			legacy_id=993
-		}
+		corps_commander = { 
+		visible = { any_country =  { has_completed_focus = SOV_preemptive_invasion_of_iran } }  
+    traits = {  panzer_leader panzer_expert trait_mountaineer desert_fox urban_assault_specialist trait_engineer fortress_buster harsh_leader }
+    skill = 7 
+    attack_skill = 6
+    defense_skill = 4
+    planning_skill = 5
+    logistics_skill = 7
+	}
 	}
 
 	ENG_miles_dempsey={

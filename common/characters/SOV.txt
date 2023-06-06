@@ -167,15 +167,15 @@ characters = {
 			}
 		}
 
-		corps_commander = {
-			traits = { media_personality armor_officer war_hero winter_specialist }
-			skill = 5
-			attack_skill = 5
-			defense_skill = 2
-			planning_skill = 4
-			logistics_skill = 5
-			legacy_id = 410
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+		corps_commander = { #18/17   as CORPS COMMANDER; 9.5 + 9  AS FM
+						
+	traits = { trait_engineer fortress_buster ranger fast_planner organisational_leader thorough_planner panzer_leader panzer_expert brilliant_strategist  aggressive_assaulter   winter_specialist winter_expert   }
+	skill = 7
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 8
+	logistics_skill = 8
+			
 		}
 
 		advisor = {
@@ -231,15 +231,15 @@ characters = {
 			}
 		}
 
-		corps_commander = {
-			traits = { brilliant_strategist trait_cautious armor_officer }
-			skill = 4
-			attack_skill = 3
-			defense_skill = 4
-			planning_skill = 2
-			logistics_skill = 4
+		field_marshal = { #13/13
+			traits = {  scavenger fast_planner panzer_leader panzer_expert  trait_cautious brilliant_strategist aggressive_assaulter adaptable   }
+	skill = 6
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 8
 			legacy_id = 402
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+			
 		}
 
 		advisor = {
@@ -270,15 +270,14 @@ characters = {
 				large = "GFX_portrait_SOV_aleksandr_vasilevsky"
 			}
 		}
-		corps_commander = {
-			traits = { armor_officer politically_connected }
-			skill = 4
-			attack_skill = 4
-			defense_skill = 4
-			planning_skill = 3
-			logistics_skill = 2
-			legacy_id = 407
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+		corps_commander = { #17/17
+		traits = {  organizer panzer_leader panzer_expert expert_improviser ranger trait_cautious brilliant_strategist  urban_assault_specialist }
+	skill = 6
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 8
+			
 		}
 
 		advisor = {
@@ -336,15 +335,14 @@ characters = {
 			}
 		}
 
-		corps_commander = {
-			traits = { career_officer trait_cautious }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 2
-			logistics_skill = 3
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+		field_marshal = { #13/13
+		traits = {   infantry_leader scavenger commando expert_delegator  organisational_leader inspirational_leader logistics_wizard expert_improviser  }
+		skill = 6
+    attack_skill = 4
+    defense_skill = 5
+    planning_skill = 1
+    logistics_skill = 9
+			
 		}
 	}
 
@@ -395,15 +393,15 @@ characters = {
 			}
 		}
 
-		corps_commander = {
-			traits = { harsh_leader armor_officer politically_connected }
-			skill = 5
-			attack_skill = 4
-			defense_skill = 5
-			planning_skill = 2
-			logistics_skill = 5
+		field_marshal = { #13/13
+		traits = {  aggressive_assaulter thorough_planner panzer_leader panzer_expert harsh_leader camouflage_expert  }
+	skill = 6
+	attack_skill = 6
+	defense_skill = 1
+	planning_skill = 7
+	logistics_skill = 5
 			legacy_id = 408
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+			
 		}
 	}
 
@@ -447,15 +445,15 @@ characters = {
 			}
 		}
 
-		corps_commander = {
-			traits = { career_officer cavalry_officer politically_connected }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 3
+		corps_commander = { #17/17 #originally has cav leader
+			traits = { panzer_leader panzer_expert hill_fighter trait_mountaineer  expert_improviser trickster }
+	skill = 6
+	attack_skill = 6
+	defense_skill = 3
+	planning_skill = 5
+	logistics_skill = 5
 			legacy_id = 404
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+			
 		}
 	}
 
@@ -581,15 +579,15 @@ characters = {
 				small= "GFX_idea_SOV_ivan_chernyakhovsky"
 			}
 		}
-		corps_commander = {
-			traits = { armor_officer }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+		corps_commander = { #17/17
+		traits = {  organizer panzer_leader panzer_expert expert_improviser ranger trait_cautious brilliant_strategist  urban_assault_specialist }
+	skill = 6
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 8
 			legacy_id = 413
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+			
 		}
 	}
 
@@ -601,15 +599,14 @@ characters = {
 				small= "GFX_idea_SOV_issa_pliyev"
 			}
 		}
-		corps_commander = {
-			traits = { cavalry_officer }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+		corps_commander = { #15/17
+		traits = { fake_skilled_staffer  cavalry_leader combined_arms_expert expert_improviser ranger trait_cautious brilliant_strategist  urban_assault_specialist }
+	skill = 6
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 8
 			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
 	}
 
@@ -621,14 +618,15 @@ characters = {
 				small= "GFX_idea_SOV_leonid_govorov"
 			}
 		}
-		corps_commander = {
-			skill = 3
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 2
+		corps_commander = { #17/17
+		traits = { cavalry_leader  combined_arms_expert ambusher guerilla_fighter fake_skilled_staffer_sov } 
+		skill = 6
+    attack_skill = 2
+    defense_skill = 4
+    planning_skill = 3
+    logistics_skill = 10
 			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+			
 		}
 	}
 

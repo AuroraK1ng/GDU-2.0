@@ -154,16 +154,17 @@ characters={
 				}
 		}
 
-		corps_commander={
-			traits={ trait_reckless armor_officer war_hero trickster panzer_leader }
-			skill=5
-			attack_skill=7
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=4
-			legacy_id=0
+		corps_commander={ 
+				visible = { has_completed_focus = GDU_USA_Torch   }
+	traits = {  trickster panzer_leader panzer_expert trait_reckless  urban_assault_specialist adaptable expert_improviser }
+	skill = 9
+	attack_skill = 9
+	defense_skill = 5
+	planning_skill = 6
+	logistics_skill = 8
 		}
 	}
+	
 	USA_wade_babcock={
 		name=USA_wade_babcock
 		advisor={
@@ -211,15 +212,7 @@ characters={
 				}
 		}
 
-		corps_commander={
-			traits={ trait_reckless armor_officer war_hero trickster panzer_leader }
-			skill=5
-			attack_skill=7
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=4
-			legacy_id=0
-		}
+		
 	}
 
 	USA_omar_bradley={
@@ -246,15 +239,15 @@ characters={
 			}
 		}
 
-		corps_commander={
-			traits={ brilliant_strategist trait_cautious harsh_leader trait_engineer }
-			skill=5
-			attack_skill=3
-			defense_skill=5
-			planning_skill=4
-			logistics_skill=4
-			legacy_id=0
-		}
+		corps_commander={ 
+				visible = {  has_completed_focus = GDU_USA_Torch   }
+	traits = {  trait_engineer fortress_buster fake_skilled_staffer trait_cautious brilliant_strategist ranger harsh_leader infantry_leader infantry_expert }
+	skill = 9
+	attack_skill = 8
+	defense_skill = 6
+	planning_skill = 6
+	logistics_skill = 8
+}
 	}
 
 	USA_dwight_d_eisenhower={
@@ -301,14 +294,14 @@ characters={
 				small=GFX_portrait_USA_geoffrey_keyes_small
 			}
 		}
-		corps_commander={
-			traits={ career_officer armor_officer }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=1
-			legacy_id=0
+		corps_commander={ #15/15
+			traits={ adaptable trait_engineer panzer_leader panzer_expert }
+			skill=5
+			attack_skill=1
+			defense_skill=3
+			planning_skill=8
+			logistics_skill=4
+			legacy_id=-1
 		}
 	}
 
@@ -320,14 +313,14 @@ characters={
 				small=GFX_portrait_USA_lucian_truscott_small
 			}
 		}
-		corps_commander={
-			traits={ cavalry_officer trait_engineer commando }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=0
+		corps_commander={ #15/15
+			traits={ organizer infantry_leader infantry_expert skilled_staffer trait_engineer fortress_buster  }
+			skill=5
+			attack_skill=4
+			defense_skill=2
+			planning_skill=6
+			logistics_skill=4
+			legacy_id=-1
 		}
 	}
 
@@ -357,14 +350,14 @@ characters={
 				}
 		}
 		
-		corps_commander={
-			traits={ trait_reckless infantry_officer }
-			skill=4
-			attack_skill=5
+		field_marshal={ #14.5/12
+			traits={ trait_reckless infantry_leader infantry_expert jungle_rat logistics_wizard thorough_planner  }
+			skill=5
+			attack_skill=2
 			defense_skill=3
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=0
+			planning_skill=6
+			logistics_skill=5
+			legacy_id=-1
 		}
 	}
 
@@ -440,14 +433,14 @@ characters={
 			}
 		}
 
-		corps_commander={
-			traits={ brilliant_strategist career_officer armor_officer }
-			skill=3
-			attack_skill=3
+		field_marshal={ #12/12
+			traits={ bearer_of_artillery brilliant_strategist panzer_leader offensive_doctrine panzer_expert aggressive_assaulter inspirational_leader  }
+			skill=5
+			attack_skill=4
 			defense_skill=3
-			planning_skill=1
-			logistics_skill=2
-			legacy_id=0
+			planning_skill=3
+			logistics_skill=6
+			legacy_id=-1
 		}
 	}
 
@@ -478,14 +471,14 @@ characters={
 				small=GFX_portrait_USA_leslie_mcnair_small
 			}
 		}
-		corps_commander={
-			traits={ old_guard career_officer armor_officer }
-			skill=3
-			attack_skill=1
-			defense_skill=2
-			planning_skill=4
-			logistics_skill=2
-			legacy_id=0
+		field_marshal={ #14/12
+			traits={ old_guard organizer panzer_expert panzer_leader logistics_wizard thorough_planner  }
+			skill=5
+			attack_skill=3
+			defense_skill=1
+			planning_skill=5
+			logistics_skill=7
+			legacy_id=-1
 		}
 	}
 
@@ -534,14 +527,14 @@ characters={
 				small=GFX_portrait_USA_leonard_gerow_small
 			}
 		}
-		corps_commander={
-			traits={ infantry_officer }
-			skill=3
+		corps_commander={ #15/15
+			traits={  infantry_leader hill_fighter desert_fox infantry_expert expert_improviser  }
+			skill=5
 			attack_skill=3
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=0
+			defense_skill=6
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
 		}
 	}
 
@@ -553,14 +546,14 @@ characters={
 				small=GFX_portrait_USA_edward_brooks_small
 			}
 		}
-		corps_commander={
-			traits={ trait_reckless armor_officer }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=0
+		corps_commander={ #15/15
+			traits={ adaptable trait_reckless cavalry_leader combined_arms_expert  trait_engineer  }
+			skill=5
+			attack_skill=1
+			defense_skill=3
+			planning_skill=6
+			logistics_skill=6
+			legacy_id=-1
 		}
 	}
 
@@ -591,14 +584,14 @@ characters={
 				small=GFX_portrait_USA_alexander_patch_small
 			}
 		}
-		corps_commander={
-			traits={ infantry_officer commando }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=0
+		corps_commander={ #15/15
+			traits={ fake_skilled_staffer_sov infantry_leader ambusher skirmisher guerilla_fighter }
+			skill=5
+			attack_skill=5
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
 		}
 	}
 
@@ -610,14 +603,14 @@ characters={
 				small=GFX_portrait_USA_william_simpson_small
 			}
 		}
-		corps_commander={
-			traits={ infantry_officer }
-			skill=3
-			attack_skill=2
-			defense_skill=4
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=0
+		corps_commander={ #14/15
+			traits={ bearer_of_artillery organizer infantry_leader ranger urban_assault_specialist infantry_expert }
+			skill=5
+			attack_skill=3
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=6
+			legacy_id=-1
 		}
 	}
 
@@ -666,14 +659,14 @@ characters={
 			}
 		}
 		
-		corps_commander={
-			traits={ career_officer infantry_officer panzer_leader }
-			skill=4
+		field_marshal={ #12/12
+			traits={ ranger panzer_expert panzer_leader urban_assault_specialist logistics_wizard   expert_improviser guerilla_fighter }
+			skill=5
 			attack_skill=4
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=4
-			legacy_id=0
+			defense_skill=1
+			planning_skill=4
+			logistics_skill=7
+			legacy_id=-1
 		}
 	}
 
@@ -746,14 +739,14 @@ characters={
 				small=GFX_portrait_USA_maurice_rose_small
 			}
 		}
-		corps_commander={
-			traits={ brilliant_strategist trait_reckless armor_officer }
-			skill=3
-			attack_skill=4
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=0
+		corps_commander={ #16/15
+			traits={ brilliant_strategist trait_reckless panzer_expert panzer_leader hill_fighter  ranger urban_assault_specialist  }
+			skill=5
+			attack_skill=3
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=7
+			legacy_id=-1
 		}
 	}
 

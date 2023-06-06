@@ -359,14 +359,14 @@ characters = {
 			}
 		}
 		
-		corps_commander = {
-			traits = { armor_officer war_hero }
-			skill = 4
-			attack_skill = 4
-			defense_skill = 3
-			planning_skill = 2
-			logistics_skill = 4
-			legacy_id = 0
+		corps_commander={ #17/17 #PORTED TO BBA
+			traits={ organizer trait_engineer panzer_leader panzer_expert desert_fox trait_mountaineer hill_fighter  }
+			skill=6
+			attack_skill=4
+			defense_skill=3
+			planning_skill=5
+			logistics_skill=7
+			legacy_id=-1
 		}
 	}
 	ITA_giovanni_messe_highcommand = {
@@ -419,14 +419,14 @@ characters = {
 			}
 		}
 		
-		corps_commander = {
-			traits = { old_guard career_officer trait_cautious organisational_leader }
-			skill = 2
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 3
-			legacy_id = 0
+		corps_commander={ #17/17 #PORTED TO BBA
+			traits={ fake_skilled_staffer_sov old_guard trait_cautious infantry_leader ambusher ranger    camouflage_expert  }
+			skill=6
+			attack_skill=3
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=9
+			legacy_id=-1
 		}
 	}
 
@@ -439,14 +439,14 @@ characters = {
 			}
 		}
 
-		corps_commander = {
-			traits = { inflexible_strategist career_officer }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
+		corps_commander={ #17/17 #PORTED TO BBA
+			traits={ fake_skilled_staffer old_guard inflexible_strategist infantry_leader ambusher trait_engineer guerilla_fighter  skirmisher }
+			skill=6
+			attack_skill=4
+			defense_skill=6
+			planning_skill=4
+			logistics_skill=5
+			legacy_id=-1
 		}
 	}
 
@@ -459,15 +459,14 @@ characters = {
 			}
 		}
 
-		corps_commander = {
-			traits = { career_officer trait_cautious }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-			visible = { has_government = fascism }
+		corps_commander={ #17/17 #PORTED TO BBA
+			traits={ fake_skilled_staffer inflexible_strategist trait_cautious infantry_leader ambusher commando scavenger  skirmisher  }
+			skill=6
+			attack_skill=4
+			defense_skill=6
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=-1
 		}
 	}
 
@@ -480,15 +479,14 @@ characters = {
 			}
 		}
 		
-		corps_commander = {
-			traits = { infantry_officer career_officer }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-			visible = { has_government = fascism }
+		field_marshal={ #12.5/13 #PORTED TO BBA
+			traits={ inflexible_strategist organizer infantry_leader ambusher logistics_wizard unyielding_defender commando guerilla_fighter }
+			skill=6
+			attack_skill=4
+			defense_skill=4
+			planning_skill=1
+			logistics_skill=10
+			legacy_id=-1
 		}
 	}
 
@@ -662,15 +660,14 @@ characters = {
 			}
 		}
 		
-		corps_commander = {
-			traits = { armor_officer } #Representing how he died
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-			visible = { has_government = fascism }
+		corps_commander={ #17/17 #PORTED TO BBA
+			traits={ panzer_leader panzer_expert swamp_fox urban_assault_specialist  ambusher }
+			skill=6
+			attack_skill=2
+			defense_skill=3
+			planning_skill=5
+			logistics_skill=9
+			legacy_id=-1
 		}
 	}
 
@@ -704,14 +701,14 @@ characters = {
 			}
 		}
 		
-		corps_commander = {
-			traits = { infantry_officer organizer } #Logistics and Infantry
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
+		field_marshal={ #12.5/13 
+			traits={ panzer_leader panzer_expert trait_mountaineer hill_fighter urban_assault_specialist  defensive_doctrine  guerilla_fighter }
+			skill=6
+			attack_skill=4
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=10
+			legacy_id=-1
 		}
 	}
 
@@ -868,15 +865,14 @@ characters = {
 			}
 		}
 		
-		corps_commander = {
-			traits = { old_guard trait_engineer fortress_buster trait_reckless } # Infantry
-			skill = 2
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 2
-			legacy_id = 0
-			visible = { has_government = fascism }
+		corps_commander={ #17/17 #PORTED
+			traits={ fake_skilled_staffer_sov old_guard ambusher infantry_leader camouflage_expert commando  }
+			skill=6
+			attack_skill=3
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=8
+			legacy_id=-1
 		}
 	}
 
