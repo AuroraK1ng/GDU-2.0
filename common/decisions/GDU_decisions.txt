@@ -61,6 +61,237 @@ USA_foreign_politics = {
 }
 
 foreign_politics = {
+	GDU_JAP_pearl_harbor = {
+
+		icon = generic_operation
+		fire_only_once = yes
+
+		allowed = {
+			tag = JAP
+		}
+
+		available = {
+			has_completed_focus = JAP_strike_on_the_southern_resource_area
+			NOT = { has_war_with = USA }
+			NOT = { has_war_with = ENG }
+			date > 1941.1.1
+		}
+
+		cost = 0
+
+		days_remove = 1
+
+		ai_will_do = {
+			factor = 0
+
+		}
+
+		visible = {
+			has_completed_focus = JAP_strike_on_the_southern_resource_area
+		}
+
+		complete_effect = {
+					JAP = { remove_ideas = GDU_JAP_No_Prewar_TradeBuff }
+					USA = { country_event = gdunews.6 }
+					# hidden event that removes the US cores on Hawaii etc after the Pearl Harbor debuff has run out. This ensures that USA doesn't get a huge amount of extra core attack/defense helping to defend those in i.e. 1942 from the Home of the Free spirit (which is intended to help USA in the event of an invasion of mainland USA, not an invasion of i.e. Hawaii)
+					USA = { country_event = { id = gduannexations.12 days = 60 } } # hidden event
+					USA = { country_event = { id = usa.65 days = 60 } }
+				declare_war_on = {
+					target = ENG
+					type = annex_everything
+				}
+				USA = {
+					add_to_war = {
+					targeted_alliance = ENG
+					enemy = JAP
+					}
+				}
+				USA = {
+					add_to_war = {
+					targeted_alliance = ENG
+					enemy = GER
+					}
+				}
+					INS = {
+					give_resource_rights = { receiver = ENG state = 738 }
+					give_resource_rights = { receiver = ENG state = 335 }
+					give_resource_rights = { receiver = ENG state = 334 }
+					give_resource_rights = { receiver = ENG state = 667 }
+					give_resource_rights = { receiver = ENG state = 673 }
+					give_resource_rights = { receiver = ENG state = 672 }
+					give_resource_rights = { receiver = ENG state = 668 }
+					give_resource_rights = { receiver = ENG state = 669 }
+				}
+				AST = {
+					add_to_war = {
+					targeted_alliance = ENG
+					enemy = JAP
+					}
+				}
+				INS = {
+					add_to_war = {
+					targeted_alliance = ENG
+					enemy = JAP
+					}
+				}
+				FRA = {
+					add_to_war = {
+					targeted_alliance = ENG
+					enemy = JAP
+					}
+				}
+				CAN = {
+					add_to_war = {
+					targeted_alliance = ENG
+					enemy = JAP
+					}
+				}
+				RAJ = {
+					add_to_war = {
+					targeted_alliance = ENG
+					enemy = JAP
+					}
+				}
+				NZL = {
+					add_to_war = {
+					targeted_alliance = ENG
+					enemy = JAP
+					}
+				}
+				SAF = {
+					add_to_war = {
+					targeted_alliance = ENG
+					enemy = JAP
+					}
+				}
+				333 = { set_demilitarized_zone = no }
+				334 = { set_demilitarized_zone = no }
+				672 = { set_demilitarized_zone = no }
+				673 = { set_demilitarized_zone = no }
+				668 = { set_demilitarized_zone = no }
+				JAP = { transfer_state = 333 transfer_state = 334 transfer_state = 793 transfer_state = 672 transfer_state = 673 transfer_state = 668  }
+				AST = { transfer_state = 721 transfer_state = 738 transfer_state = 669 }
+				AST = { add_ideas = AST_papua }
+				NZL = { add_ideas = AST_papua }
+				685 = {
+					add_province_modifier = {
+						static_modifiers = { panama_defensive }
+						province = {
+							id = 7617 
+							id = 1633
+						}
+					}
+				}
+				JAP = { country_event = { id = gduevents.51 days = 30 } add_timed_idea = { idea = JAP_pizdets_attack days = 250 }
+						334 = {
+								create_unit = {
+								division = "division_template = \"Hohei Shidan\" start_experience_factor = 0.3 start_equipment_factor = 1"
+								owner = JAP
+								count = 2
+								prioritize_location = 1316
+							}	
+								create_unit = {
+								division = "division_template = \"Hohei Shidan\" start_experience_factor = 0.3 start_equipment_factor = 1"
+								owner = JAP
+								count = 2
+								prioritize_location = 5327
+							}
+								create_unit = {
+								division = "division_template = \"Hohei Shidan\" start_experience_factor = 0.3 start_equipment_factor = 1"
+								owner = JAP
+								count = 2
+								prioritize_location = 5228
+							}
+						}
+						333 = {
+								create_unit = {
+								division = "division_template = \"Hohei Shidan\" start_experience_factor = 0.3 start_equipment_factor = 1"
+								owner = JAP
+								count = 2
+								prioritize_location = 1306
+							}
+								create_unit = {
+								division = "division_template = \"Hohei Shidan\" start_experience_factor = 0.3 start_equipment_factor = 1"
+								owner = JAP
+								count = 2
+								prioritize_location = 7371
+							}
+								create_unit = {
+								division = "division_template = \"Hohei Shidan\" start_experience_factor = 0.3 start_equipment_factor = 1"
+								owner = JAP
+								count = 2
+								prioritize_location = 1208
+							}
+						}
+						673 = {
+								create_unit = {
+								division = "division_template = \"Hohei Shidan\" start_experience_factor = 0.3 start_equipment_factor = 1"
+								owner = JAP
+								count = 2
+								prioritize_location = 5417
+							}
+								create_unit = {
+								division = "division_template = \"Hohei Shidan\" start_experience_factor = 0.3 start_equipment_factor = 1"
+								owner = JAP
+								count = 2
+								prioritize_location = 5346
+							}
+								create_unit = {
+								division = "division_template = \"Hohei Shidan\" start_experience_factor = 0.3 start_equipment_factor = 1"
+								owner = JAP
+								count = 2
+								prioritize_location = 5298
+							}
+						}
+						668 = {
+								create_unit = {
+								division = "division_template = \"Hohei Shidan\" start_experience_factor = 0.3 start_equipment_factor = 1"
+								owner = JAP
+								count = 2
+								prioritize_location = 7413
+							}
+								create_unit = {
+								division = "division_template = \"Hohei Shidan\" start_experience_factor = 0.3 start_equipment_factor = 1"
+								owner = JAP
+								count = 2
+								prioritize_location = 1574
+							}
+						}
+						672 = {
+							create_unit = {
+								division = "division_template = \"Hohei Shidan\" start_experience_factor = 0.3 start_equipment_factor = 1"
+								owner = JAP
+								count = 2
+								prioritize_location = 2314
+							}
+							create_unit = {
+								division = "division_template = \"Hohei Shidan\" start_experience_factor = 0.3 start_equipment_factor = 1"
+								owner = JAP
+								count = 2
+								prioritize_location = 4652
+							}
+							create_unit = {
+								division = "division_template = \"Hohei Shidan\" start_experience_factor = 0.3 start_equipment_factor = 1"
+								owner = JAP
+								count = 2
+								prioritize_location = 1648
+							}
+							create_unit = {
+								division = "division_template = \"Hohei Shidan\" start_experience_factor = 0.3 start_equipment_factor = 1"
+								owner = JAP
+								count = 6
+								prioritize_location = 1342
+							}
+						
+						}
+						
+									
+			}
+		}
+
+	}
+
+
 	GDU_ITA_avoidrubberwaste = {
 		icon = generic_civil_support
 
@@ -1538,173 +1769,7 @@ operations = {
 
 foreign_politics = {
 	
-	GDU_JAP_pearl_harbor = {
 
-		icon = generic_operation
-		fire_only_once = yes
-
-		allowed = {
-			tag = JAP
-		}
-
-		available = {
-			has_completed_focus = JAP_strike_on_the_southern_resource_area
-			NOT = { has_war_with = USA }
-			NOT = { has_war_with = ENG }
-			date > 1941.1.1
-		}
-
-		cost = 0
-
-		days_remove = 1
-
-		ai_will_do = {
-			factor = 0
-
-		}
-
-		visible = {
-			has_completed_focus = JAP_strike_on_the_southern_resource_area
-		}
-
-		complete_effect = {
-			333 = { set_demilitarized_zone = no }
-		}
-
-		remove_effect = {
-			custom_effect_tooltip = GDU_Jap_pearlharbor_tt
-			
-			hidden_effect = {
-				add_named_threat = { threat = 20 name = Pearl_Harbor }
-				JAP = { remove_ideas = GDU_JAP_No_Prewar_TradeBuff }
-				USA = { country_event = gdunews.6 }
-					# hidden event that removes the US cores on Hawaii etc after the Pearl Harbor debuff has run out. This ensures that USA doesn't get a huge amount of extra core attack/defense helping to defend those in i.e. 1942 from the Home of the Free spirit (which is intended to help USA in the event of an invasion of mainland USA, not an invasion of i.e. Hawaii)
-				USA = { country_event = { id = gduannexations.12 days = 60 } } # hidden event
-				USA = { country_event = { id = usa.65 days = 60 } }
-
-				
-				if = {
-					limit = {
-						country_exists = AST
-					}
-					AST = {
-						transfer_state = 669
-					}
-				}
-				else = {
-					ENG = {
-						transfer_state = 669
-					}				
-				}
-				
-				JAP = {
-					add_timed_idea = {
-						idea = JAP_pearl_harbor_idea
-						days = 60
-					}
-				}
-				RAJ = {
-					add_timed_idea = {
-						idea = GDU_Raj_ToraToraTora
-						days = 60
-					}
-				}				
-				INS = {
-					give_resource_rights = { receiver = ENG state = 738 }
-					give_resource_rights = { receiver = ENG state = 335 }
-					give_resource_rights = { receiver = ENG state = 334 }
-					give_resource_rights = { receiver = ENG state = 667 }
-					give_resource_rights = { receiver = ENG state = 673 }
-					give_resource_rights = { receiver = ENG state = 672 }
-					give_resource_rights = { receiver = ENG state = 668 }
-					give_resource_rights = { receiver = ENG state = 669 }
-				}
-				if = {
-					limit = {
-						country_exists = AST
-					}
-					AST = {
-						puppet = INS
-					}				
-				}
-				if = {
-					limit = {
-						NOT = {
-							country_exists = AST
-						}
-					}
-					ENG = {
-						puppet = INS
-					}				
-				}
-				declare_war_on = {
-					target = ENG
-					type = annex_everything
-				}
-				USA = {
-					add_to_war = {
-					targeted_alliance = ENG
-					enemy = JAP
-					}
-				}
-				AST = {
-					add_to_war = {
-					targeted_alliance = ENG
-					enemy = JAP
-					}
-				}
-				INS = {
-					add_to_war = {
-					targeted_alliance = ENG
-					enemy = JAP
-					}
-				}
-				FRF = {
-					add_to_war = {
-					targeted_alliance = ENG
-					enemy = JAP
-					}
-				}
-				CAN = {
-					add_to_war = {
-					targeted_alliance = ENG
-					enemy = JAP
-					}
-				}
-				RAJ = {
-					add_to_war = {
-					targeted_alliance = ENG
-					enemy = JAP
-					}
-				}
-				NZL = {
-					add_to_war = {
-					targeted_alliance = ENG
-					enemy = JAP
-					}
-				}
-				SAF = {
-					add_to_war = {
-					targeted_alliance = ENG
-					enemy = JAP
-					}
-				}
-				AST = { add_ideas = AST_papua }
-				NZL = { add_ideas = AST_papua }
-				685 = {
-					add_province_modifier = {
-						static_modifiers = { panama_defensive }
-						province = {
-							id = 7617 
-							id = 1633
-						}
-					}
-				}
-				# This is the event that transfers states to Japanese control in Raj/Australia if there are no allied troops there, if Japan controls the state, and if Raj/Australia have >50% surrender progress. This is to stop Japan from having to take every single tile if UK annexes Raj/Australia.
-				JAP = { country_event = { id = gduevents.51 days = 30 } }				
-			}
-		}
-	}
 }
 
 #GER_foreign_politics = {
