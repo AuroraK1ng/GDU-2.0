@@ -2,9 +2,9 @@ ideas = {
 
 	country = {
 
-		FRF_FRA_inflexible_industry = {
+		FRA_FRA_inflexible_industry = {
 			allowed = {
-				original_tag = FRF
+				original_tag = FRA
 				always = no
 			}
 
@@ -43,10 +43,10 @@ ideas = {
 			
 		}
 
-		FRF_FRA_victors_of_wwi = {
+		FRA_FRA_victors_of_wwi = {
 
 			allowed = {
-				original_tag = FRF
+				original_tag = FRA
 				always = no
 			}
 
@@ -66,10 +66,10 @@ ideas = {
 
 		}
 
-		FRF_FRA_disjointed_government = {
+		FRA_FRA_disjointed_government = {
 
 			allowed = {
-				original_tag = FRF
+				original_tag = FRA
 				always = no
 			}
 
@@ -87,7 +87,7 @@ ideas = {
 			}
 		}
 
-		FRF_FRA_protected_by_the_maginot_line = {
+		FRA_FRA_protected_by_the_maginot_line = {
 
 			allowed = {
 				always = no
@@ -132,10 +132,10 @@ ideas = {
 			}
 		}
 
-		FRF_FRA_infantry_focus = {
+		FRA_FRA_infantry_focus = {
 
 			allowed = {
-				original_tag = FRF
+				original_tag = FRA
 				always = no
 			}
 
@@ -154,10 +154,10 @@ ideas = {
 			}
 		}
 
-		FRF_FRA_fortification_focus = {
+		FRA_FRA_fortification_focus = {
 
 			allowed = {
-				original_tag = FRF
+				original_tag = FRA
 				always = no
 			}
 			
@@ -175,10 +175,10 @@ ideas = {
 			}
 		}
 
-		FRF_FRA_motorized_focus = {
+		FRA_FRA_motorized_focus = {
 
 			allowed = {
-				original_tag = FRF
+				original_tag = FRA
 				always = no
 			}
 
@@ -186,7 +186,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = FRF_FRA_motorized_focus
+			picture = FRA_FRA_motorized_focus
 		
 			removal_cost = -1
 
@@ -199,7 +199,7 @@ ideas = {
 				}
 			}
 		}
-		FRF_FRA_support_the_left_focus = {
+		FRA_FRA_support_the_left_focus = {
 				picture = generic_communism_drift_bonus
 				allowed = {
 					always = no # Added via focus
@@ -213,7 +213,7 @@ ideas = {
 							AND = {
 								NOT = { has_government = communism }
 								any_other_country = {
-									original_tag = FRF
+									original_tag = FRA
 									has_government = communism
 								}
 							}
@@ -226,7 +226,7 @@ ideas = {
 				}
 		}
 
-		FRF_FRA_scw_intervention_republicans_focus = {
+		FRA_FRA_scw_intervention_republicans_focus = {
 			picture = FRA_scw_intervention_republicans_focus
 			allowed = {
 				always = no
@@ -244,7 +244,7 @@ ideas = {
 			}
 		}
 
-		FRF_FRA_national_mobilization_focus = {
+		FRA_FRA_national_mobilization_focus = {
 			allowed = {
 				always = no
 			}
@@ -260,7 +260,7 @@ ideas = {
 				army_morale_factor = 0.10
 			}
 		}
-		FRF_FRA_support_the_centre_focus = {
+		FRA_FRA_support_the_centre_focus = {
 				picture = generic_democratic_drift_bonus
 				allowed = {
 					always = no # Added via focus
@@ -275,7 +275,7 @@ ideas = {
 				}
 		}
 
-		FRF_FRA_strengthen_government_support_focus = {
+		FRA_FRA_strengthen_government_support_focus = {
 				picture = generic_pp_unity_bonus
 				allowed = {
 					always = no # Added via focus
@@ -289,7 +289,7 @@ ideas = {
 					stability_weekly = 0.002
 				}
 		}
-		FRF_FRA_support_the_right_focus = {
+		FRA_FRA_support_the_right_focus = {
 				picture = generic_fascism_drift_bonus
 				allowed = {
 					always = no # Added via focus
@@ -301,7 +301,7 @@ ideas = {
 							AND = {
 								NOT = { has_government = fascism }
 								any_other_country = {
-									original_tag = FRF
+									original_tag = FRA
 									has_government = fascism
 								}
 							}
@@ -313,7 +313,7 @@ ideas = {
 				}
 		}
 
-		FRF_FRA_scw_intervention_nationalists_focus = {
+		FRA_FRA_scw_intervention_nationalists_focus = {
 			picture = FRA_scw_intervention_nationalists_focus
 			allowed = {
 				always = no
@@ -330,7 +330,7 @@ ideas = {
 				send_volunteers_tension = -0.5
 			}
 		}
-		FRF_FRA_army_of_aggression_focus = {
+		FRA_FRA_army_of_aggression_focus = {
 			picture = FRA_army_of_aggression_focus
 			allowed = {
 				always = no
@@ -346,7 +346,7 @@ ideas = {
 			}
 		}
 
-		FRF_FRA_factory_strikes = {
+		FRA_FRA_factory_strikes = {
 			picture = generic_production_bonus
 			allowed = {
 				always = no
@@ -365,7 +365,7 @@ ideas = {
 			}
 		}
 
-		FRF_FRA_matignon_agreements = {
+		FRA_FRA_matignon_agreements = {
 			picture = generic_production_bonus
 			allowed = {
 				always = no
@@ -383,7 +383,7 @@ ideas = {
 			}
 		}
 
-		FRF_FRA_communism_banned = {
+		FRA_FRA_communism_banned = {
 			picture = anti_soviet_pact
 			allowed = {
 				always = no
@@ -407,13 +407,13 @@ ideas = {
 
 
 
-		FRF_FRA_FREE_rene_cassin = {
+		FRA_FRA_FREE_rene_cassin = {
 
 			
 			picture = FRA_FREE_rene_cassin
 		
 			allowed = {
-				original_tag = FRF
+				original_tag = FRA
 			}
 
 			available = {
@@ -437,10 +437,10 @@ ideas = {
 			}
 		}
 
-		FRF_FRA_felix_gouin = {
+		FRA_FRA_felix_gouin = {
 
 			allowed = {
-				original_tag = FRF
+				original_tag = FRA
 			}
 
 			picture = generic_political_advisor_europe_3
@@ -458,10 +458,10 @@ ideas = {
 			}
 		}
 
-		FRF_FRA_charles_tillon = {
+		FRA_FRA_charles_tillon = {
 
 			allowed = {
-				original_tag = FRF
+				original_tag = FRA
 			}
 
 			picture = generic_political_advisor_europe_3
@@ -479,10 +479,10 @@ ideas = {
 			}
 		}
 
-		FRF_FRA_paul_reynaud = {
+		FRA_FRA_paul_reynaud = {
 
 			allowed = {
-				original_tag = FRF
+				original_tag = FRA
 			}
 			available = {
 				NOT = {has_country_flag = free_france}
@@ -507,13 +507,13 @@ ideas = {
 	army_chief = {
 
 
-		FRF_maurice_gamelin = {
+		FRA_maurice_gamelin = {
 
 			
 			picture = maurice_gamelin
 		
 			allowed = {
-				original_tag = FRF
+				original_tag = FRA
 			}
 			available = {
 				NOT = {has_country_flag = free_france}
@@ -528,14 +528,14 @@ ideas = {
 			}
 		}
 
-		FRF_maxime_weygand = {
+		FRA_maxime_weygand = {
 
 			
 			picture = maxime_weygand
 		
 			allowed = {
 					AND = {
-				original_tag = FRF
+				original_tag = FRA
 						NOT = {has_country_flag = become_vichy}
 					}
 
@@ -543,7 +543,7 @@ ideas = {
 			available = {
 				OR = {
 					AND = {
-						original_tag = FRF
+						original_tag = FRA
 						NOT = {has_country_flag = free_france}
 					}
 					original_tag = EFR
@@ -560,12 +560,12 @@ ideas = {
 			}
 		}
 
-		FRF_FRA_henri_marie_auguste_bineau = {
+		FRA_FRA_henri_marie_auguste_bineau = {
 
 			picture = generic_army_europe_3
 
 			allowed = {
-				original_tag = FRF
+				original_tag = FRA
 			}
 			available = {
 				NOT = {has_country_flag = free_france}
@@ -579,12 +579,12 @@ ideas = {
 			}
 		}
 
-		FRF_FRA_pierre_alombert_goget = {
+		FRA_FRA_pierre_alombert_goget = {
 
 			picture = generic_army_europe_1
 
 			allowed = {
-				original_tag = FRF
+				original_tag = FRA
 			}
 			available = {
 				NOT = {has_country_flag = free_france}
@@ -598,13 +598,13 @@ ideas = {
 			}
 		}
 
-		FRF_alphonse_georges = {
+		FRA_alphonse_georges = {
 
 			
 			picture = alphonse_georges
 		
 			allowed = {
-				original_tag = FRF
+				original_tag = FRA
 			}
 			available = {
 				NOT = {has_country_flag = free_france}
@@ -625,12 +625,12 @@ ideas = {
 		designer = yes
 
 		# TECHNOLOGY
-		FRF_renault_fra = {
+		FRA_renault_fra = {
 
 			picture = renault
 
 			allowed = {
-				original_tag = FRF
+				original_tag = FRA
 			}
 			cost = 50
 			research_bonus = {
@@ -647,13 +647,13 @@ ideas = {
 
 		}
 
-		FRF_somua1 = {
+		FRA_somua1 = {
 			
 			picture = somua1
 		
 			allowed = {
 				OR = {
-					original_tag = FRF
+					original_tag = FRA
 					original_tag = EFR
 				}
 			}
@@ -671,13 +671,13 @@ ideas = {
 			}
 		}
 
-		FRF_FRA_AMX = {
+		FRA_FRA_AMX = {
 
 			picture = generic_tank_manufacturer_2
 
 			allowed = {
 				OR = {
-					original_tag = FRF
+					original_tag = FRA
 					original_tag = EFR
 				}
 			}
@@ -710,13 +710,13 @@ ideas = {
 
 		designer = yes
 
-		FRF_somua = {
+		FRA_somua = {
 
 			picture = somua
 
 			allowed = {
 				OR = {
-					original_tag = FRF
+					original_tag = FRA
 					original_tag = EFR
 				}
 			}
@@ -732,13 +732,13 @@ ideas = {
 
 		}
 
-		FRF_mas = {
+		FRA_mas = {
 
 			picture = mas
 
 			allowed = {
 				OR = {
-					original_tag = FRF
+					original_tag = FRA
 					original_tag = EFR
 				}
 			}
@@ -750,13 +750,13 @@ ideas = {
 			traits = { infantry_equipment_manufacturer }
 		}
 
-		FRF_schneider = {
+		FRA_schneider = {
 
 			picture = schneider
 
 			allowed = {
 				OR = {
-					original_tag = FRF
+					original_tag = FRA
 					original_tag = EFR
 				}
 			}
@@ -773,7 +773,7 @@ ideas = {
 
 		designer = yes
 
-		FRF_morane_saulnier = {
+		FRA_morane_saulnier = {
 
 			picture = morane_saulnier
 			
@@ -781,7 +781,7 @@ ideas = {
 
 			allowed = {
 				OR = {
-					original_tag = FRF
+					original_tag = FRA
 					original_tag = EFR
 				}
 			}
@@ -793,13 +793,13 @@ ideas = {
 			traits = { morane_saulnier_aircraft_manufacturer }
 		}
 
-		FRF_bloch = {
+		FRA_bloch = {
 
 			picture = bloch
 
 			allowed = {
 				OR = {
-					original_tag = FRF
+					original_tag = FRA
 					original_tag = EFR
 				}
 			}
@@ -816,7 +816,7 @@ ideas = {
 			traits = { bloch_aircraft_manufacturer }
 		}
 
-		FRF_amiot = {
+		FRA_amiot = {
 
 			picture = amiot
 
@@ -824,7 +824,7 @@ ideas = {
 
 			allowed = {
 				OR = {
-					original_tag = FRF
+					original_tag = FRA
 					original_tag = EFR
 				}
 			}
@@ -837,13 +837,13 @@ ideas = {
 		}
 
 
-		FRF_latecoere = {
+		FRA_latecoere = {
 
 			picture = latecoere
 
 			allowed = {
 				OR = {
-					original_tag = FRF
+					original_tag = FRA
 					original_tag = EFR
 				}
 			}
@@ -855,13 +855,13 @@ ideas = {
 			traits = { latecoere_aircraft_manufacturer }
 		}
 
-		FRF_dewoitine = {
+		FRA_dewoitine = {
 
 			picture = dewoitine
 
 			allowed = {
 				OR = {
-					original_tag = FRF
+					original_tag = FRA
 					original_tag = EFR
 				}
 			}
@@ -878,13 +878,13 @@ ideas = {
 
 		designer = yes
 
-		FRF_fcm = {
+		FRA_fcm = {
 
 			picture = fcm
 
 			allowed = {
 				OR = {
-					original_tag = FRF
+					original_tag = FRA
 					original_tag = EFR
 				}
 			}
@@ -899,7 +899,7 @@ ideas = {
 
 	industrial_concern = {
 
-		FRF_famh = {
+		FRA_famh = {
 
 			picture = famh
 
@@ -917,13 +917,13 @@ ideas = {
 
 
 	theorist = {
-		FRF_charles_de_gaulle = {
+		FRA_charles_de_gaulle = {
 			ledger = army
 
 			picture = charles_de_gaulle
 
 			allowed = {
-				original_tag = FRF
+				original_tag = FRA
 			}
 
 			cost = 150 
@@ -946,13 +946,13 @@ ideas = {
 
 		}
 
-		FRF_henri_giraud = {
+		FRA_henri_giraud = {
 			ledger = army
 
 			picture = henri_giraud
 
 			allowed = {
-				original_tag = FRF
+				original_tag = FRA
 			}
 
 			research_bonus = {
@@ -972,14 +972,14 @@ ideas = {
 			traits = { military_theorist }
 		}
 
-		FRF_louis_kahn = {
+		FRA_louis_kahn = {
 			ledger = navy
 
 			picture = louis_kahn
 
 
 			allowed = {
-				original_tag = FRF
+				original_tag = FRA
 			}
 
 			cost = 150 
@@ -991,18 +991,18 @@ ideas = {
 			traits = { grand_fleet_proponent }
 		}
 
-		FRF_jean_decoux = {
+		FRA_jean_decoux = {
 			ledger = navy
 			
 			picture = jean_decoux
 
 
 			allowed = {
-				original_tag = FRF
+				original_tag = FRA
 			}
 
 			available = {
-				original_tag = FRF
+				original_tag = FRA
 				NOT = {has_country_flag = free_france}
 			}
 			research_bonus = {
@@ -1012,14 +1012,14 @@ ideas = {
 			traits = { naval_theorist }
 		}
 
-		FRF_victor_denain = {
+		FRA_victor_denain = {
 			ledger = air
 
 			picture = victor_denain
 
 			allowed = {
 				OR = {
-					original_tag = FRF
+					original_tag = FRA
 					original_tag = EFR
 				}
 			}
@@ -1027,7 +1027,7 @@ ideas = {
 			available = {
 				OR = {
 					AND = {
-				original_tag = FRF
+				original_tag = FRA
 						NOT = {has_country_flag = free_france}
 					}
 					original_tag = EFR
@@ -1043,7 +1043,7 @@ ideas = {
 			traits = { assault_avaition }
 		}
 
-		FRF_jean_marie_bergeret = {
+		FRA_jean_marie_bergeret = {
 			ledger = air
 
 			picture = jean_marie_bergeret
@@ -1051,7 +1051,7 @@ ideas = {
 			allowed = {
 				OR = {
 					AND = {
-				original_tag = FRF
+				original_tag = FRA
 						NOT = {has_country_flag = free_france}
 					}
 					original_tag = EFR
@@ -1065,17 +1065,17 @@ ideas = {
 			traits = { air_warfare_theorist }
 		}
 
-		FRF_frederic_irene_joliot_curie = {
+		FRA_frederic_irene_joliot_curie = {
 			ledger = air
 
 			picture = frederic_irene_joliot_curie
 
 
 			allowed = {
-				original_tag = FRF
+				original_tag = FRA
 			}
 			available = {
-				original_tag = FRF
+				original_tag = FRA
 				NOT = {has_country_flag = free_france}
 
 			}
