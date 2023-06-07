@@ -250,7 +250,7 @@ NDefines.NMilitary.HOURLY_ORG_MOVEMENT_IMPACT = -0.5
 NDefines.NMilitary.LEADER_SKILL_FACTOR = 0.25
 
 NDefines.NMilitary.ARMY_LEADER_XP_GAIN_PER_UNIT_IN_COMBAT = 0.00
-NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.07
+NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.5
 NDefines.NMilitary.MAX_RELATIVE_COMBAT_DAMAGE_TO_MODIFY_XP = 0.0			-- you gain more XP if you are doing more damage relative to enemy, this is the max relative amount to gain following RATe
 NDefines.NMilitary.XP_DECAY_RATE_PER_HOUR_IN_COMBAT = 0.00				-- you get reduced XP as combat drags
 NDefines.NMilitary.MIN_XP_RATE_TO_DECAY = 0.0
