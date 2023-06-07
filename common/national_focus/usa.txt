@@ -1695,7 +1695,16 @@ focus_tree = {
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
-
+		available = { 
+		OR = {
+		date > 1943.1.1
+		ITA = { 
+		NOT = { has_full_control_of_state = 115 }
+		NOT = { has_full_control_of_state = 114 }
+		NOT = { has_full_control_of_state = 1 }
+		}
+	}
+}
 		x = 0
 		y = 1
 		relative_position_id = GDU_USA_torch
