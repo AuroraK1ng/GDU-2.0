@@ -1,69 +1,137 @@
-DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
-	NOT = { date < 1939.9.1 }
-	NOT = { FROM = { tag = CZE } }
-	if = { limit = {ROOT = { tag = EFR   } } FROM = { the_axis = yes }         }
-	if = { limit = {FROM = { tag = FRA   } }  FRA = { has_country_flag = france_is_kill }  } 
-	if = { limit = {FROM = { tag = BRA   } }  GER = { has_country_flag = BRAlicense }  } 
-	if = { limit = {FROM = { tag = NOR   } }  NOR = { has_country_flag = france_is_kill }  } 
-	if = { limit = { ROOT = { tag = BRA } } GER = { has_country_flag = BRAlicense } }
-	if = { limit = { ROOT = { tag = usa } } USA = { has_country_flag = japanwar } }
-	if = { limit = {FROM = { the_axis = yes  } } 	NOT = { ROOT = { OR = { tag = MAN tag = JAP } } } }
-	if = { limit = {FROM = { normally_played_allies = yes  } } 	NOT = { ROOT = { OR = { tag = MAN tag = JAP } } } }
-	if = { limit = {ROOT = { the_axis = yes  } } 	NOT = { FROM = { OR = { tag = MAN tag = JAP } } } }
-	NOT = { ROOT = { OR = { tag = SOV  AND = { original_tag = FIN SOV = { controls_state = 195 }   } AND = { original_tag = EFR  EFR = { is_in_faction = yes NOT = { has_country_flag = EFR_torch_declared}  }  } tag = AOI } } } #LL potentially breaks many of these nations in balance
-	NOT = { FROM = { OR = { tag = SOV  AND = { original_tag = FIN SOV = { controls_state = 195 }   } AND = { original_tag = EFR  EFR = { is_in_faction = yes NOT = { has_country_flag = EFR_torch_declared}  }  } tag = AOI } } } #LL potentially breaks many of these nations in balance
-}
-DIPLOMACY_WAR_ENABLE_TRIGGER = {always = no }
-DIPLOMACY_GIVESTATECONTROL_ENABLE_TRIGGER = { NOT = { FROM = { tag = FIN } } }
-DIPLOMACY_ASKSTATECONTROL_ENABLE_TRIGGER = { always = no }
-DIPLOMACY_SEND_ATTACHE_ENABLE_TRIGGER = { 
- if = { limit = { ROOT ={ tag = RAJ } } NOT = { FROM = { tag = SOV } } }
-	if = { limit = { ROOT = { OR = { normally_played_allies = yes tag = SOV }}} NOT = { FROM = { OR = { the_axis = yes tag = JAP tag = MAN }}}  }
-	if = { limit = { ROOT = { OR = { the_axis = yes tag = JAP tag = MAN }}} NOT = { FROM = { OR = { normally_played_allies = yes tag = SOV }}}  }
-}
-DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = { always = no }
-DIPLOMACY_SEND_EXP_FORCE_ENABLE_TRIGGER = {
-	NOT = { FROM = { OR = {  AND = { original_tag = EFR  EFR = { is_in_faction = yes NOT = { has_country_flag = EFR_torch_declared}  }  } original_tag = AOI  AND = { original_tag = FIN SOV = { controls_state = 195 }   } } } }
-	NOT = {  AND = { FROM = { has_tech = grand_battle_plan }  ROOT = { NOT = { has_tech = grand_battle_plan } }  }  }    
-	NOT = { ROOT = { tag = AOI }} NOT = { FROM = { tag = AOI}  } 
-}
-DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = { always = no }
-DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER  = { NOT = { AND = { ROOT = { the_axis = yes } FROM = { tag = DDR  } } } NOT = { AND = {ROOT = { OR = {  normally_played_allies =yes tag = SOV } }  FROM = { tag = SPR } }  }  has_global_flag = spanish_civil_war  has_game_rule ={  rule = horst_scw option = horst_scw_on  } OR = {has_idea = YUG_brigadistas_idea   has_idea = FRA_volunteer has_idea = HUN_volunteers has_idea = NZL_2nzef_fra has_idea = NZL_2nzef has_idea = ROM_spain has_idea = SAF_support_spain tag = GER tag = ITA tag = SOV  has_idea = BUL_volunteers_in_spain_nationalist has_idea = AST_citizen_military_forces  }     }
-DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = { always = no } 
-DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = { always = no } 
-DIPLOMACY_REQUEST_LICENSED_PRODUCTION_ENABLE_TRIGGER = {
-	AND = {
-		NOT = {FROM = {   } } 
-		if = { limit = {FROM = { tag = BRA   } }  GER = { has_country_flag = BRAlicense }  } 
-	}
-	 
-}
-DIPLOMACY_MANAGE_LICENSED_PRODUCTION_EXISTING_ENABLE_TRIGGER = { 
-		AND = {
-			NOT = {FROM = {   } } 
-			if = { limit = {FROM = { tag = BRA   } }  GER = { has_country_flag = BRAlicense }  } 
-		}
-}
-DIPLOMACY_REQUEST_ACCESS_TO_LICENCE_PRODUCTION_ENABLE_TRIGGER = { 
-	AND = {
-		NOT = { ROOT = {has_completed_focus = SOV_the_permanent_revolution } } 
-		NOT = {FROM = {    } } 
-		if = { limit = {FROM = { tag = BRA   } }  GER = { has_country_flag = BRAlicense }  }
-	}
+#	Triggers to control if diplomatic actions are enabled:
+#		Format:
+#
+#		<diplomatic action tag>_enabled_trigger = {
+#			<trigger contents>
+#		}
+#
+#		ROOT is the country initiating the diplomatic action.
+#		FROM is the recipient or target of the diplomatic action.
+#
+#		Note:  For cleaner tooltips, it is recommended that you use
+#			if triggers within the enable triggers, and a single
+#			custom_trigger_tooltip trigger within each if trigger.
+#
+#		Example: (Germany is prevented from declaring war on the Soviet Union.)
+#
+#		DIPLOMACY_WAR_ENABLE_TRIGGER = {
+#			if = {
+#				limit = {
+#					tag = GER
+#				}
+#				custom_trigger_tooltip = {
+#					tooltip = PREVENT_GER_WAR_ON_SOV
+#					FROM = {
+#						NOT = {
+#							tag = SOV
+#						}
+#					}
+#				}
+#			}
+#		}
 
+DIPLOMACY_SEND_EXP_FORCE_ENABLE_TRIGGER = {
+		NOT = { tag = JAP }
+		NOT = { FROM = { tag = JAP } }
+		NOT = { tag = GRE }
+		NOT = { FROM = { tag = GRE } }
+		NOT = { tag = POL }
+		NOT = { FROM = { tag = POL } }
+		NOT = { tag = CHI }
+		NOT = { FROM = { tag = CHI } }
+		NOT = { tag = SOV }
+		NOT = { FROM = { tag = SOV } }
+		NOT = { tag = YUG }
+		NOT = { FROM = { tag = YUG } }			
 }
 DIPLOMACY_RETURN_EXP_FORCE_ENABLE_TRIGGER = {
-    NOT = { ROOT = { OR = { AND = { original_tag = EFR  EFR = { is_in_faction = yes NOT = { has_country_flag = EFR_torch_declared}  }  }original_tag = AOI  AND = { original_tag = FIN SOV = { controls_state = 195 }   } }} }
-	NOT = { FROM = { OR = { AND = { original_tag = EFR  EFR = { is_in_faction = yes NOT = { has_country_flag = EFR_torch_declared}  }  }original_tag = AOI   AND = { original_tag = FIN SOV = { controls_state = 195 }   } }} }
+		NOT = { tag = JAP }
+		NOT = { FROM = { tag = JAP } }
+		NOT = { tag = GRE }
+		NOT = { FROM = { tag = GRE } }
+		NOT = { tag = POL }
+		NOT = { FROM = { tag = POL } }
+		NOT = { tag = CHI }
+		NOT = { FROM = { tag = CHI } }
+		NOT = { tag = SOV }
+		NOT = { FROM = { tag = SOV } }
+		NOT = { tag = YUG }
+		NOT = { FROM = { tag = YUG } }
 }
-DIPLOMACY_REQUEST_EXP_FORCE_ENABLE_TRIGGER = {
-	NOT = { date < 1939.11.1 }
-    NOT = { ROOT = { OR = { AND = { original_tag = EFR  EFR = { is_in_faction = yes NOT = { has_country_flag = EFR_torch_declared}  }  } original_tag = AOI AND = { original_tag = FIN SOV = { controls_state = 195 }   }  has_tech = grand_battle_plan   }} }
-	NOT = { FROM = { OR = { AND = { original_tag = EFR  EFR = { is_in_faction = yes NOT = { has_country_flag = EFR_torch_declared}  }  } original_tag = AOI  has_tech = grand_battle_plan }} }
-}	
-DIPLOMACY_EMBARGO_ENABLE_TRIGGER = { 
-	always=  no 
+
+DIPLOMACY_REQUEST_ACCESS_TO_LICENCE_PRODUCTION_ENABLE_TRIGGER = { 
+		NOT = {
+		OR = { 
+			NOT = { is_in_faction_with = FROM }		
+			tag = FRA		
+			FROM = { tag = FRA }
+			tag = GRE		
+			FROM = { tag = GRE }			
+			}
+		}
 }
-DIPLOMACY_REVOKE_EMBARGO_ENABLE_TRIGGER = { 
-	always=  no 
+
+DIPLOMACY_MILACC_ENABLE_TRIGGER = {
+		always = no
+}
+DIPLOMACY_OFFER_MILACC_ENABLE_TRIGGER = {
+		always = no
+}
+
+DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
+		NOT = { tag = SOV }
+		NOT = { tag = FRA }
+		NOT = { tag = GRE }		
+		NOT = {
+			AND = {
+			FROM = { tag = ENG }
+			ENG = { controls_state = 126 }
+			ENG = { controls_state = 447 }
+			ENG = { controls_state = 446 }
+			ENG = { controls_state = 118 }
+			FRA = { controls_state = 16 }
+			FRA = { controls_state = 15 }
+			FRA = { controls_state = 27 }
+			FRA = { controls_state = 22 }
+			}
+		}
+		NOT = {
+			tag = JAP
+		}
+		NOT = { tag = YUG }
+
+			NOT = {
+				AND = {
+					FROM = { tag = SOV }
+					has_idea = USA_LL_to_Soviets_Blocked
+				}
+			}
+			
+								
+}
+	
+
+DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
+		NOT = { FROM = { tag = GRE } }	
+		NOT = { FROM = { tag = SOV } }	
+		NOT = { FROM = { tag = FRA } }
+		NOT = {	FROM = { tag = JAP } }
+		NOT = {	FROM = { tag = ENG } }
+		NOT = {	FROM = { tag = USA } }
+		NOT = {	FROM = { tag = GER } }
+		NOT = {	FROM = { tag = ITA } }
+		NOT = {	FROM = { tag = YUG } }		
+}
+DIPLOMACY_REQUEST_LICENSED_PRODUCTION_ENABLE_TRIGGER = {
+		NOT = {
+		OR = { 
+			NOT = { is_in_faction_with = FROM }		
+			tag = FRA		
+			FROM = { tag = FRA }
+			tag = GRE		
+			FROM = { tag = GRE }
+			tag = YUG		
+			FROM = { tag = YUG }			
+			}
+		}
 }

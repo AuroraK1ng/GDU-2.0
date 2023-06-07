@@ -1837,11 +1837,10 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			create_wargoal = {
-				type = take_state_focus
-				target = GRE
-				generator = { 47 } # Athens
-			}
+			declare_war_on = {
+					target = GRE
+					type = annex_everything
+				}
 		}
 	}
 
