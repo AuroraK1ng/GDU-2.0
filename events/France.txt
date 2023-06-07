@@ -275,23 +275,21 @@ country_event = {
 		add_timed_idea = { idea = FRA_retrain days = 70 }
 		hidden_effect =  {
 			add_political_power = 1200
-			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 8000 producer = FRA }
-			add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 2000 producer = FRA }
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 65000 producer = FRA }
 
-			add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 500 producer = FRA }
-			add_equipment_to_stockpile = { type = anti_air_equipment_2 amount = 150 producer = FRA }
-			
-			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 800 producer = FRA }
-			add_equipment_to_stockpile = { type = artillery_equipment_2 amount = 200 producer = FRA }			
+				add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 4500 producer = FRA }
 
-			add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 500 producer = FRA }
-			add_equipment_to_stockpile = { type = anti_tank_equipment_2 amount = 150 producer = FRA }
+				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 4000 producer = FRA }
 
-			add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 1000 producer = FRA }
-			add_equipment_to_stockpile = { type = support_equipment_1 amount = 1000 producer = FRA }
+				add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 4500 producer = FRA }
 
-			
-			add_equipment_to_stockpile = { type = transport_plane_equipment amount = 5 producer = FRA }	
+				add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 7000 producer = FRA }
+				add_equipment_to_stockpile = { type = support_equipment_1 amount = 5000 producer = FRA }
+
+				add_equipment_to_stockpile = { type = heavy_tank_equipment_1 amount = 300 producer = FRA }
+				add_equipment_to_stockpile = { type = light_tank_equipment_2 amount = 2000 producer = FRA }
+				add_equipment_to_stockpile = { type = medium_tank_equipment_1 amount = 2000 producer = FRA }
+				add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = 500 producer = FRA }
 			
 		}
 		if = {
