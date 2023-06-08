@@ -1920,12 +1920,7 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = inexperienced_army
 			army_experience = 1000
-			add_tech_bonus = {
-				name = USA_louisiana_maneuvers
-				bonus = 0.5
-				uses = 1
-				category = land_doctrine
-			}
+			
 		}
 	}
 	focus = {
@@ -2285,12 +2280,6 @@ focus_tree = {
 			show_ideas_tooltip = harold_mcclelland
 			air_experience = 25
 			add_tech_bonus = {
-				name = USA_air_war_plans_division
-				bonus = 1.0
-				uses = 3
-				category = air_doctrine
-			} # REVISIT May use modifier?
-			add_tech_bonus = {
 				name = USA_fighter_bonus
 				ahead_reduction = 0.5
 				bonus = 0.25
@@ -2463,16 +2452,16 @@ focus_tree = {
 				bonus = 2.5
 				ahead_reduction = 0.5
 				uses = 1
-				technology = heavy_fighter1
-				technology = heavy_fighter2
-				technology = heavy_fighter3
+				technology = heavy_fighter1xx
+				technology = heavy_fighter2xx
+				technology = heavy_fighter3xx
 			}
 			add_tech_bonus = {
 				name = USA_escort_fighters
 				bonus = 2.5
 				uses = 1
-				technology = heavy_fighter2
-				technology = heavy_fighter3
+				technology = heavy_fighter2xx
+				technology = heavy_fighter3xx
 			}			
 		}
 	}
@@ -2502,12 +2491,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = USA_us_army_airforce
-				uses = 10
-				bonus = 3.0
-				category = air_doctrine
-			}
+			
 		add_ideas = USA_us_air_force2			
 		}
 	}
@@ -2537,12 +2521,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = USA_us_army_airforce
-				uses = 1
-				bonus = 1.0
-				category = air_doctrine
-			}
+			
 			add_ideas = USA_us_air_force
 		}
 	}
@@ -3070,12 +3049,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = USA_fund_the_navy
-				uses = 3
-				bonus = 1.0
-				category = naval_doctrine
-			}
+			add_extra_state_shared_building_slots = 5
+						add_building_construction = {
+							type = dockyard
+							level = 5
+							instant_build = yes
+						}
 		}
 	}
 

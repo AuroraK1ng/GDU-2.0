@@ -362,12 +362,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = JAP_strike_south_doctrine
-				bonus = 1.0
-				uses = 2
-				category = naval_doctrine
-			}
+			add_extra_state_shared_building_slots = 8
+						add_building_construction = {
+							type = dockyard
+							level = 8
+							instant_build = yes
+						}
 #			unlock_decision_tooltip = JAP_pressure_france
 		}
 	}
@@ -860,14 +860,9 @@ focus_tree = {
 
 		}
 
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 2
-				category = land_doctrine
-			}
+		
 			army_experience = 30		
-		}
+		
 	}
 
 	focus = {
@@ -2994,12 +2989,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = JAP_fighter_modernization
-				bonus = 1.0
-				uses = 3
-				category = air_doctrine
-			}
+			
 		}
 	}
 
@@ -3460,12 +3450,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = JAP_carrier_warfare_experiments
-				bonus = 1.0
-				uses = 2
-				category = naval_doctrine
-			}
+			
 						add_tech_bonus = {
 				name = JAP_carrier_warfare_experiments
 				bonus = 1.5

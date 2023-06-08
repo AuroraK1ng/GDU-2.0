@@ -47,21 +47,21 @@ is_available_fighter_HUN = {
 is_available_heavy_fighter_HUN = {
 	OR = {
 		AND = {
-			has_tech = heavy_fighter1
+			has_tech = heavy_fighter1xx
 			ROOT = { 
-				NOT = { has_tech = heavy_fighter1}
+				NOT = { has_tech = heavy_fighter1xx}
 			}
 		}
 		AND = {
-			has_tech = heavy_fighter2
+			has_tech = heavy_fighter2xx
 			ROOT = { 
-				NOT = { has_tech = heavy_fighter2}
+				NOT = { has_tech = heavy_fighter2xx}
 			}
 		}
 		AND = {
-			has_tech = heavy_fighter3
+			has_tech = heavy_fighter3xx
 			ROOT = { 
-				NOT = { has_tech = heavy_fighter3}
+				NOT = { has_tech = heavy_fighter3xx}
 			}
 		}
 		AND = {
