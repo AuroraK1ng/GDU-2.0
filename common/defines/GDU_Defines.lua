@@ -150,7 +150,7 @@ NDefines.NCountry.BASE_FUEL_GAIN = 20.0							-- vanilla was 2 --- this is raise
 
 NDefines.NCountry.EVENT_PROCESS_OFFSET = 25 -- Performance enhancer. --TW/WTT
 NDefines.NCountry.VP_TO_SUPPLY_BASE = 1.5
-NDefines.NCountry.SUPPLY_PATH_MAX_DISTANCE = 15
+NDefines.NCountry.SUPPLY_PATH_MAX_DISTANCE = 5
 NDefines.NCountry.SUPPLY_FROM_DAMAGED_INFRA = 0.1                -- damaged infrastructure counts as this in supply calcs
 NDefines.NCountry.SUPPLY_BONUS_FROM_INPUT = 0.6					-- % of supply bonus from input area. Look at this as a possible balancing tool. 
 NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.00
@@ -165,7 +165,7 @@ NDefines.NCountry.BASE_MAX_COMMAND_POWER = 250.0
 NDefines.NCountry.BASE_COMMAND_POWER_GAIN = 0.0015				-- base value for daily command power gain
 NDefines.NCountry.STARTING_COMMAND_POWER = 50.0
 NDefines.NCountry.ATTACHE_XP_SHARE = 0.05
-NDefines.NCountry.BASE_MOBILIZATION_SPEED = 0.1
+NDefines.NCountry.BASE_MOBILIZATION_SPEED = 1
 NDefines.NCountry.NUM_DAYS_TO_FULLY_DELETE_STOCKPILED_EQUIPMENT = 9999
 NDefines.NCountry.MAX_INTELLIGENCE_AIR_DATA_DEVIATION = 0.6 
 NDefines.NCountry.MAX_INTELLIGENCE_MILITARY_DATA_DEVIATION = 0.6 
@@ -263,7 +263,7 @@ NDefines.NMilitary.CONSTANT_XP_RATIO_FOR_MULTIPLE_LEADERS_IN_SAME_COMBAT = 0.0 -
 
 NDefines.NMilitary.MULTIPLE_COMBATS_PENALTY = -0.01               -- defender penalty if attacked from multiple directions
 
-NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 6
+NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 3
 
 NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 1.5
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 1000
