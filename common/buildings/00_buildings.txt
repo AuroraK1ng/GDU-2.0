@@ -155,48 +155,49 @@ buildings = {
 		infrastructure_construction_effect = yes
 	}
 
-	synthetic_refinery = {
+		synthetic_refinery = {
 		show_on_map = 1
-		base_cost = 14000
+		base_cost = 16000
 		icon_frame = 10
 		#local_resources_oil = 1 # May use local_resources_ + any resource name
 		local_resources_rubber = 1 # May use local_resources_ + any resource name
 		refinery = yes
-		max_level = 3 # This is the max unlock level
-		shares_slots = yes
-		value = 5
+		max_level = 4 # This is the max unlock level
+		shares_slots = no
+		value = 10
 		infrastructure_construction_effect = yes
-
+		
+		damage_factor = 0.05
+		
 		show_modifier = yes
-		fuel_gain_from_states = 2.0 #per hour
+		fuel_gain_from_states = 4.1 #per hour
 	}
 
 	fuel_silo = {
 		show_on_map = 1
 		base_cost = 5000
 		icon_frame = 14
-		#max_level = 1
-		shares_slots = yes
-		value = 5
+		max_level = 10
+		shares_slots = no
+		value = 10
 		infrastructure_construction_effect = yes
 		fuel_silo = yes
-
+		
+		damage_factor = 0.05
+		
 		show_modifier = yes
 		max_fuel_building = 100.0 #k
 	}
 
 	radar_station = {
 		show_on_map = 1
-		base_cost = 3375
+		base_cost = 3000
 		icon_frame = 11
 		radar = yes
 		#max_level = 0 # max: 5
 		max_level = 6 # This is the max unlock level
 		damage_factor = 0.5
 		value = 4
-		centered = yes
-		allied_build = yes
-		infrastructure_construction_effect = yes
 	}
 
 	rocket_site = {
