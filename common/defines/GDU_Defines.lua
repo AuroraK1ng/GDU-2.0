@@ -713,3 +713,7 @@ NDefines.NAI.TOO_INSIGNIFICANT_MAX_PENALTY = 999						-- was 350 in vanilla, max
 
 
 NDefines.NCountry.SCORCHED_EARTH_STATE_COST = 100 -- Cost to scorch earth
+
+
+----- railway lost ---- -
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_RAILWAY_DAMAGE_SPILL_FACTOR = 0 
