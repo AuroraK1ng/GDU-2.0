@@ -192,6 +192,7 @@ NDefines.NProduction.EQUIPMENT_BASE_LEND_LEASE_WEIGHT = 2.25
 NDefines.NProduction.LICENSE_EQUIPMENT_BASE_SPEED = -0.20
 NDefines.NProduction.LICENSE_EQUIPMENT_TECH_SPEED_PER_YEAR = -0.000
 NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 1000
+NDefines.NProduction.MAX_MIL_FACTORIES_PER_LINE = 1000
 NDefines.NProduction.DEFAULT_MAX_NAV_FACTORIES_PER_LINE = 1000
  
 NDefines.NProduction.EQUIPMENT_MODULE_ADD_XP_COST = 0.0					-- XP cost for adding a new equipment module in an empty slot when creating an equipment variant.
