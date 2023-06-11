@@ -1,5 +1,5 @@
 sub_units = {
-	signal_company = {
+	military_police = {
 		sprite = infantry
 		map_icon_category = infantry
 		priority = 0
@@ -22,11 +22,27 @@ sub_units = {
 		combat_width = 0
 	
 		#Size Definitions
-		max_strength = 1
-		max_organisation = 45
-		default_morale = 0.3
+		max_strength = -60
+		max_organisation = 140	
+		default_morale = 1.4
+		defense = -2.3
+		breakthrough = -2.3
+		soft_attack = -2.0
+		hard_attack = -1.7
+		experience_loss_factor = 0.50
+		initiative = 0.1
 		manpower = 500
 		training_time = 120
+		plains = {
+			defence = 0.05
+		}
+		forest = {
+			defence = 0.05
+		}
+		urban{
+			defence = 0.10
+		}
+
 
 		#Misc Abilities
 		weight = 0.1
@@ -34,16 +50,16 @@ sub_units = {
 		can_be_parachuted = yes
 		
 		# Important Ability
-		initiative = 0.20
-		
-		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
-		
+		suppression_factor = 2
+
 		essential = {
+			infantry_equipment
 			support_equipment
 		}
-
+		
 		need = {
 			support_equipment = 10
+			infantry_equipment = 25
 		}
 
 	}
