@@ -6,7 +6,7 @@ tags={
 	"Technologies"
 	"Historical"
 	"Gameplay"
-	"Events1"
+	"Events"
 	"Alternative History"
 	"Graphics"
 }
