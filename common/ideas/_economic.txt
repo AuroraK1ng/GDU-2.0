@@ -247,12 +247,162 @@ ideas = {
 				}
    			}
 		}
+																					SOV_WAR = {
+					picture = SOV_transformation_of_nature
+							allowed_to_remove = {
+				always = no }
+allowed = {
+				original_tag = SOV
+				always = no
+			}
 
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			cost = 0
+		
+
+			modifier = {
+production_factory_efficiency_gain_factor = 0.03
+production_factory_start_efficiency_factor = 0.05 
+
+industrial_capacity_factory = -0.08
+				consumer_goods_factor = 0.08
+				production_speed_buildings_factor = -0.20
+				production_speed_arms_factory_factor = 0.35
+				conversion_cost_civ_to_mil_factor = -0.2
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 5
+
+   				modifier = {
+					#High prio on production
+					factor = 20
+					manpower_per_military_factory >  1000
+				}
+   			}
+																													}
+																				GER_TOT_WAR = {
+					picture = hol_caved_to_the_germans
+							allowed_to_remove = {
+				always = no }
+allowed = {
+				original_tag = GER
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			cost = 0
+		
+
+			modifier = {
+
+production_factory_efficiency_gain_factor = -0.06
+production_factory_start_efficiency_factor = 0.1
+offensive_war_stability_factor = -0.2
+stability_weekly = -0.001
+war_support_factor = 1
+
+
+
+
+
+industrial_capacity_factory = 0.11
+				consumer_goods_factor = 0.04
+				production_speed_buildings_factor = 0.35
+				
+				conversion_cost_civ_to_mil_factor = -0.5
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 5
+
+   				modifier = {
+					#High prio on production
+					factor = 20
+					manpower_per_military_factory >  1000
+				}
+   			}
+																											}
 		tot_economic_mobilisation = {
 
 
+
 			available = {
-			date > 1941.6.22
+				NOT = { tag = GER }
+				has_war = yes
+				threat > 0.2
+				date > 1941.1.1 
+				NOT = { tag = SPR }
+				if = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Death or Dishonor"
+					}
+					NOT = { has_idea = HUN_treaty_of_triannon }
+				}
+				if = {
+					limit = {
+						original_tag = GER
+					}
+					NOT = { has_idea = GER_short_war }
+				}
+				if = {
+					limit = {
+						original_tag = ENG
+					}
+					NOT = { has_idea = alli_phoney_war }
+				}
+				if = {
+					limit = {
+						original_tag = SAF
+					}
+					NOT = { has_idea = alli_phoney_war }
+				}
+				if = {
+					limit = {
+						original_tag = RAJ
+					}
+					NOT = { has_idea = alli_phoney_war }
+				}
+				if = {
+					limit = {
+						original_tag = AST
+					}
+					NOT = { has_idea = alli_phoney_war }
+				}
+				if = {
+					limit = {
+						original_tag = NZL
+					}
+					NOT = { has_idea = alli_phoney_war }
+				}
+				if = {
+					limit = {
+						original_tag = HOL
+					}
+					NOT = { has_idea = alli_phoney_war }
+				}
+
+				if = {
+					limit = {
+						original_tag = CAN
+					}
+					NOT = { has_idea = alli_phoney_war }
+				}
 			}
 
 			ai_will_do = {

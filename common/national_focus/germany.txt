@@ -2364,6 +2364,27 @@ add_timed_idea = { idea = CDE days = 365 }
 			unlock_decision_tooltip = GER_fall_blau
 		}
 	}
+		focus = {
+		id = GER_TOTALEN_KRIEG
+		icon = GFX_focus_generic_spread_fascism
+		prerequisite = { focus = GER_fall_blau }	
+		
+		cancel = {
+			NOT = { country_exists = SOV }
+		}
+		x = 0
+		y = 2
+		relative_position_id = GER_ussr_war_goal
+		cost = 1
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_ideas = GER_TOT_WAR
+		}
+	}
 
 
 
