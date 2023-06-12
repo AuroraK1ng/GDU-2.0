@@ -5,7 +5,10 @@ on_actions = {
 		}
 	}	
 	on_startup = {
+
 		effect = {
+every_country = {
+                    add_ideas = { EFI_START } }
 			218 = {
 					add_province_modifier = {
 						static_modifiers = { soviet_hero_city }
