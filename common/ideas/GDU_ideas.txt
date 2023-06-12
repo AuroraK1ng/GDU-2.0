@@ -2885,5 +2885,17 @@ allowed = {
 picture = generic_flexible_foreign_policy
 removal_cost = -1
 		}
+		EFI_START = {
+			cancel = {
+				date > 1936.01.01
+			}
+
+allowed = {
+				always = no				# Added via focus
+			}
+	modifier = {
+production_factory_start_efficiency_factor = 0.5
+
+		}
 	}
 }
