@@ -710,7 +710,10 @@ technologies = {
 			leads_to_tech = advanced_medium_tank_chassis
 			research_cost_coeff = 1
 		}
-
+		path = {
+			leads_to_tech = improved_heavy_tank_chassis
+			research_cost_coeff = 0.6
+		}
 		research_cost = 2
 		start_year = 1940
 
@@ -720,6 +723,13 @@ technologies = {
 		}
 
 		on_research_complete = {
+			add_tech_bonus = {
+			name = tank_bonus1
+			bonus = 3.0
+			ahead_reduction = 1
+			uses = 1
+			technology = improved_heavy_tank_chassis	
+			}
 			if = { #Italian templates
 				limit = {
 					original_tag = ITA
@@ -855,7 +865,10 @@ technologies = {
 			leads_to_tech = main_battle_tank_chassis
 			research_cost_coeff = 1
 		}
-
+		path = {
+			leads_to_tech = advanced_heavy_tank_chassis
+			research_cost_coeff = 0.6
+		}
 		research_cost = 2
 		start_year = 1943
 
@@ -865,6 +878,13 @@ technologies = {
 		}
 
 		on_research_complete = {
+			add_tech_bonus = {
+			name = tank_bonus
+			bonus = 3.0
+			ahead_reduction = 1
+			uses = 1
+			technology = advanced_heavy_tank_chassis	
+			}
 			if = { #Italian templates
 				limit = {
 					original_tag = ITA
