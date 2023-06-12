@@ -31,7 +31,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "horsttool_container"
 		position = {x=1200 y=20}
-		size = { width=650 height=650}
+		size = { width=650 height=550}
 		
 		fade_time = 300
 		fade_type = linear
@@ -45,7 +45,7 @@ guiTypes = {
 		
 		
 		instantTextboxType = {
-			name = "why use lel lennard"
+			name = "BBC"
 			#position = {x=14 y=8}
 			position = {x=163.5 y=30}
 			font = "hoi_24header"
@@ -62,15 +62,9 @@ guiTypes = {
 			spriteType = "GFX_add_pol_idea_button"
 					pdx_tooltip = "ADD_CHEAT"
 			pdx_tooltip_delayed = "ADD_CHEAT_DELAYED"
+			
 		}
-		buttonType = {
-			name = "observer" 
-			position = {x=40 y=200}
-			spriteType = "GFX_observer_button"
-				pdx_tooltip = "OBSERVER"
-			pdx_tooltip_delayed = "OBSERVER_DELAYED"
-			scale = 0.70
-		}
+	
 		buttonType = {
 			name = "whitepeace"	
 			position = {x=110 y=200}
@@ -184,62 +178,7 @@ guiTypes = {
 			scale= 1
 			
 		}
-		buttonType = {
-			name = "cheat13"
-			position = {x=40 y=402}
-			spriteType = "GFX_generic_box_125"
-			scale= 1
-			
-		}
-		buttonType = {
-			name = "cheat14"
-			position = {x=40 y=428}
-			spriteType = "GFX_generic_box_125"
-			scale= 1
-			
-		}
-		buttonType = {
-			name = "cheat15"
-			position = {x=40 y=454}
-			spriteType = "GFX_generic_box_125"
-			scale= 1
-			
-		}
-		buttonType = {
-			name = "cheat16"
-			position = {x=40 y=480}
-			spriteType = "GFX_generic_box_125"
-			scale= 1
-			
-		}
-		buttonType = {
-			name = "cheat17"
-			position = {x=40 y=506}
-			spriteType = "GFX_generic_box_125"
-			scale= 1
-			
-		}
-		buttonType = {
-			name = "cheat18"
-			position = {x=40 y=532}
-			spriteType = "GFX_generic_box_125"
-			scale= 1
-			
-		}
-		buttonType = {
-			name = "cheat19"
-			position = {x=40 y=558}
-			spriteType = "GFX_generic_box_125"
-			scale= 1
-			
-		}
-		buttonType = {
-			name = "cheat20"
-			position = {x=40 y=584}
-			spriteType = "GFX_generic_box_125"
-			scale= 1
-			
-		}
+		
 		instantTextboxType = {
 			name = "cheat1_text"
 			position = {x=45 y=95}
@@ -363,86 +302,7 @@ guiTypes = {
 			format = left
 			alwaystransparent = yes
 		}
-		instantTextboxType = {
-			name = "cheat13_text"
-			position = {x=45 y=407}
-			font = "hoi_18mbs"
-			text = "CHEAT13"
-			maxWidth = 340
-			maxHeight = 23
-			format = left
-			alwaystransparent = yes
-		}
-		instantTextboxType = {
-			name = "cheat14_text"
-			position = {x=45 y=433}
-			font = "hoi_18mbs"
-			text = "CHEAT14"
-			maxWidth = 340
-			maxHeight = 23
-			format = left
-			alwaystransparent = yes
-		}
-		instantTextboxType = {
-			name = "cheat15_text"
-			position = {x=45 y=459}
-			font = "hoi_18mbs"
-			text = "CHEAT15"
-			maxWidth = 340
-			maxHeight = 23
-			format = left
-			alwaystransparent = yes
-		}
-		instantTextboxType = {
-			name = "cheat16_text"
-			position = {x=45 y=485}
-			font = "hoi_18mbs"
-			text = "CHEAT16"
-			maxWidth = 340
-			maxHeight = 23
-			format = left
-			alwaystransparent = yes
-		}
-		instantTextboxType = {
-			name = "cheat17_text"
-			position = {x=45 y=511}
-			font = "hoi_18mbs"
-			text = "CHEAT17"
-			maxWidth = 340
-			maxHeight = 23
-			format = left
-			alwaystransparent = yes
-		}
-		instantTextboxType = {
-			name = "cheat18_text"
-			position = {x=45 y=537}
-			font = "hoi_18mbs"
-			text = "CHEAT18"
-			maxWidth = 340
-			maxHeight = 23
-			format = left
-			alwaystransparent = yes
-		}
-		instantTextboxType = {
-			name = "cheat19_text"
-			position = {x=45 y=562}
-			font = "hoi_18mbs"
-			text = "CHEAT19"
-			maxWidth = 340
-			maxHeight = 23
-			format = left
-			alwaystransparent = yes
-		}
-		instantTextboxType = {
-			name = "cheat20_text"
-			position = {x=45 y=588}
-			font = "hoi_18mbs"
-			text = "CHEAT20"
-			maxWidth = 340
-			maxHeight = 23
-			format = left
-			alwaystransparent = yes
-		}
+		
 		buttonType = {
 			name = "toogle_mark" 
 			position = {x=203 y=35}
