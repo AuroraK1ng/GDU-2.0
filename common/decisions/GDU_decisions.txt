@@ -91,6 +91,9 @@ foreign_politics = {
 		}
 
 		complete_effect = {
+					ENG = {
+					add_to_faction = USA
+					}
 					JAP = { remove_ideas = GDU_JAP_No_Prewar_TradeBuff }
 					USA = { country_event = gdunews.6 }
 					# hidden event that removes the US cores on Hawaii etc after the Pearl Harbor debuff has run out. This ensures that USA doesn't get a huge amount of extra core attack/defense helping to defend those in i.e. 1942 from the Home of the Free spirit (which is intended to help USA in the event of an invasion of mainland USA, not an invasion of i.e. Hawaii)
