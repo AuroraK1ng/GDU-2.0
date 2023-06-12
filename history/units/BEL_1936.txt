@@ -1,6 +1,5 @@
 ﻿division_template = {
 	name = "Division d'Infanterie"		# Same for "Active" and "Reserve" Infantry Divisions
-	division_names_group = BEL_INF_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -19,7 +18,6 @@
 }
 division_template = {
 	name = "Division de Cavalerie"  	# Cavalry Division
-	division_names_group = BEL_CAV_01
 
 	regiments = {
 		cavalry = { x = 0 y = 0 }
@@ -36,7 +34,6 @@ division_template = {
 }
 division_template = {
 	name = "Cavalerie Motorisée"  		# Motorized Cavalry Brigade
-	division_names_group = BEL_MOT_01
 										# Note: motorized cavalry. Most sources have them truck-equipped.
 	regiments = {
 		motorized = { x = 0 y = 0 }
@@ -47,7 +44,6 @@ division_template = {
 }
 division_template = {
 	name = "Division Coloniale"			# Colonial militia, lower experience, equipment
-	division_names_group = BEL_GAR_01 	#TODO make separate namelist for colonial divisions
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -60,22 +56,6 @@ division_template = {
 }
 
 ### OOB ###
-units = {
-	##### L'Armée Belge #####
-	# I Corps d'Armée
-	division= {	# "4ème Division d'Infanterie"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 4
-		}
-		location = 9574  # Hoeselt
-		division_template = "Division d'Infanterie"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-
-	}
-
-}
 
 ### Starting Production ###
 instant_effect = {
