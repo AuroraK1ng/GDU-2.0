@@ -2212,95 +2212,42 @@ land_reinforce_rate = 0.05
 		xor = {
 			infantry_offensive
 		}
-		armored_car = {
-			combat_width = -1		
+		category_army = {
+			supply_consumption_factor = -0.05
+			default_morale = 0.1			
 		}
-		category_special_forces = {
-			supply_consumption_factor = -0.05		
+		logistics_company {
 			desert = {
-				movement = 0.3
-			}
-			desert_africa = {
-				movement = 0.3
-			}				
-		}
-		category_light_infantry = {
-			supply_consumption_factor = -0.05		
-			desert = {
-				movement = 0.4
-			}
-			desert_africa = {
-				movement = 0.4
-			}			
-		}
-		anti_tank_brigade = {
-			desert = {
-				movement = 0.35
-			}
-			desert_africa = {
-				movement = 0.35
-			}			
-		}
-		artillery_brigade = {
-			desert = {
-				movement = 0.35
-			}
-			desert_africa = {
-				movement = 0.35
-			}			
-		}
-		anti_air_brigade = {
-			desert = {
-				movement = 0.35
-			}
-			desert_africa = {
-				movement = 0.35
-			}			
-		}		
-		category_non_support = {
-	        desert = {
                 attack = 0.075
                 defence = 0.075
-				movement = 0.05
+				movement = 0.30
             }
-			mountain = {
-				attack = 0.075
-			}
-			hills = {
-				attack = 0.025
-				defence = 0.025
-			}
-			marsh = {
-				attack = 0.05
-				defence = 0.05
-			}
-			river = {
-				attack = 0.05
-				defence = 0.05
-			}
-
 	        desert_africa = {
                 attack = 0.075
                 defence = 0.075
-				movement = 0.05
+				movement = 0.30
             }
 			mountain_africa = {
 				attack = 0.075
+				defence = 0.075
+				movement = 0.30
 			}
 			hills_africa = {
 				attack = 0.025
 				defence = 0.025
+				movement = 0.30
 			}
 			marsh_africa = {
 				attack = 0.05
 				defence = 0.05
+				movement = 0.30
 			}
 			river_africa = {
 				attack = 0.05
 				defence = 0.05
-			}			
+				movement = 0.30
+			}	
 		}
-		
 		enable_tactic = tactic_blitz
 		enable_tactic = tactic_elastic_defense
 		
@@ -2369,13 +2316,13 @@ land_reinforce_rate = 0.05
 			max_organisation = 5
 		}
 		mechanized = {
-			max_organisation = 5
+			max_organisation = 10
 		}
 		motorized = {
-			max_organisation = 5
+			max_organisation = 10
 		}
 		category_tanks = {
-			max_organisation = 5
+			max_organisation = 10
 			soft_attack = 0.05
 		}
 
@@ -2621,8 +2568,8 @@ land_reinforce_rate = 0.05
 			soft_attack = 0.07
 		}
 		category_special_forces = {
-			max_organisation = 10
-			soft_attack = 0.10
+			max_organisation = 7.5
+			soft_attack = 0.75
 		}
 
 		doctrine = yes	
@@ -2739,9 +2686,6 @@ land_reinforce_rate = 0.05
 	armored_operations = {
 		xp_research_type = army
 		xp_unlock_cost = 200
-		armored_car = {
-			combat_width = -1		
-		}
 
 		category_army {
 			soft_attack = 0.25
@@ -2749,7 +2693,7 @@ land_reinforce_rate = 0.05
 		}
 		
 		category_artillery {
-			soft_attack = -0.2
+			soft_attack = -0.1
 		}
 		
 		category_tanks = {
@@ -2810,49 +2754,32 @@ land_reinforce_rate = 0.05
 		no_supply_grace = 24
 
 		############
-		category_non_support = {
-	        jungle = {
-                attack = 0.1
-                defence = 0.075
-				movement = 0.05
-            }
-			mountain = {
-				attack = 0.075
-				movement = 0.025			
-			}
-			hills = {
-				attack = 0.05
-				defence = 0.025
-				movement = 0.025				
-			}
-			marsh = {
-				attack = 0.05
-				defence = 0.05
-			}
-			river = {
-				attack = 0.075
-				defence = 0.05
-				movement = 0.025				
-			}	
-			
+		logistics_company = {
 	        jungle_africa = {
                 attack = 0.1
-                defence = 0.075
-				movement = 0.05
+                defence = 0.01
+				movement = 0.25
             }
 			mountain_africa = {
-				attack = 0.075
-				movement = 0.025			
+				attack = 0.05
+				defence = 0.05
+				movement = 0.25			
 			}
 			hills_africa = {
 				attack = 0.05
-				defence = 0.025
-				movement = 0.025				
+				defence = 0.05
+				movement = 0.25				
 			}
 			marsh_africa = {
 				attack = 0.05
 				defence = 0.05
-			}			
+				movement = 0.25
+			}		
+			river_africa = {
+				attack = 0.05
+				defence = 0.05
+				movement = 0.25
+			}
 		}
 		category_light_infantry = {
 			supply_consumption_factor = -0.05		
@@ -3025,7 +2952,7 @@ land_reinforce_rate = 0.05
 	infiltration_in_depth = {
 		xp_research_type = army
 		xp_unlock_cost = 200
-		amphibious_invasion_defence = 0.05
+		amphibious_invasion_defence = 0.15
 		
 		out_of_supply_factor = -0.1
 		attrition = -0.20 #take 20% less attrition losses
