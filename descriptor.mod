@@ -10,7 +10,7 @@ tags={
 	"Alternative History"
 	"Graphics"
 }
-name="BAZOOKA MOD"
+name="BST"
 replace_path="history/states"
 replace_path="history/countries"
 replace_path="history/units"
@@ -34,4 +34,3 @@ replace_path="common/units/names_ships"
 replace_path="events"
 picture="thumbnail.png"
 supported_version="1.12.*"
-remote_file_id="2983471880"
