@@ -105,13 +105,13 @@ characters={
 		}
 		
 		field_marshal = { #13/13
-			traits = {  scavenger fast_planner panzer_leader panzer_expert  trait_cautious brilliant_strategist aggressive_assaulter adaptable   }
-	skill = 6
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 8
-			legacy_id = 402
+			traits = {  defensive_doctrine trait_cautious career_officer inflexible_strategist   }
+	skill = 5
+	id = 1
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 5
+	logistics_skill = 4
 			
 		}
 	}
@@ -125,13 +125,13 @@ characters={
 			}
 		}
 		field_marshal={
-			traits={ armor_officer offensive_doctrine }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=2
+			traits = {  offensive_doctrine armor_officer panzer_leader ranger }
+	skill = 5
+	id = 2
+	attack_skill = 6
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
 		}
 	}
 
@@ -144,18 +144,18 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ trait_cautious armor_officer }
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=3
+		traits = { commando infantry_leader urban_assault_specialist media_personality organizer trait_cautious politically_connected career_officer }
+	skill = 4
+	id = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 7
 		}
 	}
 
 	GER_erwin_rommel={
-		name="Erwin Rommel"
+		name="Erwin Rommel NORMAL"
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_erwin_rommel.dds"
@@ -183,13 +183,13 @@ characters={
 			}
 		}
 		corps_commander={ #17/17
-			traits={ organizer trait_engineer   hill_fighter urban_assault_specialist panzer_leader panzer_expert }
-			skill=6
-			attack_skill=5
-			defense_skill=2
-			planning_skill=6
-			logistics_skill=6
-			legacy_id=-1
+			traits = { commando trickster inflexible_strategist panzer_expert trait_reckless war_hero media_personality infantry_officer trait_engineer panzer_leader }
+	skill = 6
+	id = 4689
+	attack_skill = 7
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 2
 		}
 	}
 
@@ -215,13 +215,13 @@ characters={
 		}
 		
 		corps_commander={ #17/17
-			traits={ brilliant_strategist organizer trait_engineer panzer_leader ranger panzer_expert fortress_buster }
-			skill=6
-			attack_skill=4
-			defense_skill=3
-			planning_skill=5
-			logistics_skill=7
-			legacy_id=-1
+			traits = { offensive_doctrine  brilliant_strategist infantry_leader trickster trait_engineer cavalry_officer }
+	skill = 6
+	id = 5
+	attack_skill = 6
+	defense_skill = 6
+	planning_skill = 3
+	logistics_skill = 4
 		}
 	}
 
@@ -247,13 +247,13 @@ characters={
 		}
 		
 		corps_commander={ #17/17
-			traits={ brilliant_strategist organizer trait_engineer panzer_leader ranger panzer_expert expert_improviser }
-			skill=6
-			attack_skill=5
-			defense_skill=3
-			planning_skill=5
-			logistics_skill=6
-			legacy_id=-1
+			traits = { trickster panzer_leader ranger trait_engineer trait_reckless brilliant_strategist career_officer combined_arms_expert infantry_officer media_personality war_hero}
+	skill = 6
+	id = 6
+	attack_skill = 6
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 5
 		}
 	}
 
@@ -266,13 +266,13 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ inflexible_strategist career_officer }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=2
-			legacy_id=7
+			traits = { career_officer skilled_staffer infantry_leader }
+	skill = 5
+	id = 7
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 3
 		}
 	}
 
@@ -285,13 +285,13 @@ characters={
 			}
 		}
 		corps_commander={ #17/17
-			traits={ brilliant_strategist urban_assault_specialist  trait_engineer  ranger combined_arms_expert cavalry_leader expert_improviser }
-			skill=6
-			attack_skill=5
-			defense_skill=3
-			planning_skill=5
-			logistics_skill=6
-			legacy_id=-1
+			traits = { panzer_leader armor_officer career_officer brilliant_strategist}
+	skill = 4
+	id = 8
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
 		}
 	}
 
@@ -304,13 +304,13 @@ characters={
 			}
 		}
 		corps_commander={ #17/17
-			traits={ adaptable harsh_leader infantry_leader infantry_expert skilled_staffer  expert_improviser }
-			skill=6
-			attack_skill=4
-			defense_skill=2
-			planning_skill=8
-			logistics_skill=5
-			legacy_id=-1
+			traits = { offensive_doctrine career_officer old_guard harsh_leader}
+	skill = 5
+	id = 9
+	attack_skill = 4
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 7
 		}
 	}
 
@@ -342,13 +342,13 @@ characters={
 			}
 		}
 		corps_commander={ #17/17
-			traits={ cavalry_leader combined_arms_expert  skilled_staffer hill_fighter ranger  ambusher }
-			skill=6
-			attack_skill=5
-			defense_skill=3
-			planning_skill=4
-			logistics_skill=8
-			legacy_id=-1
+			traits = {cavalry_officer career_officer cavalry_leader organizer}
+	skill = 4
+	id = 11
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 5
+	logistics_skill = 4
 		}
 	}
 
@@ -361,13 +361,13 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ old_guard infantry_officer }
-			skill=3
-			attack_skill=4
-			defense_skill=3
-			planning_skill=1
-			logistics_skill=2
-			legacy_id=13
+			traits = { offensive_doctrine infantry_officer harsh_leader career_officer old_guard}
+	skill = 5
+	id = 13
+	attack_skill = 6
+	defense_skill = 5
+	planning_skill = 4
+	logistics_skill = 5
 		}
 	}
 
@@ -380,13 +380,13 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ trait_cautious armor_officer }
-			skill=3
-			attack_skill=1
-			defense_skill=2
-			planning_skill=4
-			logistics_skill=3
-			legacy_id=14
+			traits = { panzer_leader swamp_fox harsh_leader}
+	skill = 4
+	id = 14
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
 		}
 	}
 
@@ -399,13 +399,13 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ trait_reckless armor_officer politically_connected }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=1
-			logistics_skill=3
-			legacy_id=15
+			traits = {  harsh_leader infantry_officer ranger}
+	skill = 4
+	id = 15
+	attack_skill = 7
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
 		}
 	}
 
@@ -434,13 +434,13 @@ characters={
 		}
 		
 		corps_commander={ #18/17
-			traits={ trait_reckless infantry_leader infantry_expert commando trait_mountaineer hill_fighter  camouflage_expert guerilla_fighter }
-			skill=6
-			attack_skill=4
-			defense_skill=4
-			planning_skill=5
-			logistics_skill=6
-			legacy_id=-1
+			traits = { commando hill_fighter urban_assault_specialist harsh_leader trait_reckless politically_connected }
+	skill = 4
+	id = 16
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 6
 		}
 	}
 
@@ -453,13 +453,13 @@ characters={
 			}
 		}
 		corps_commander={ #16/17
-			traits={ fake_skilled_staffer old_guard infantry_leader ambusher swamp_fox urban_assault_specialist  guerilla_fighter }
-			skill=6
-			attack_skill=2
-			defense_skill=7
-			planning_skill=5
-			logistics_skill=5
-			legacy_id=-1
+			traits = { war_hero infantry_officer  old_guard infantry_leader trait_engineer fortress_buster hill_fighter }
+	skill = 5
+	id = 17
+	attack_skill = 6
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
 		}
 	}
 
@@ -472,13 +472,13 @@ characters={
 			}
 		}
 		corps_commander={ #17/17
-			traits={ brilliant_strategist organizer trait_engineer panzer_leader ranger panzer_expert expert_improviser }
-			skill=6
-			attack_skill=5
-			defense_skill=3
-			planning_skill=5
-			logistics_skill=6
-			legacy_id=-1
+			traits = { panzer_leader harsh_leader trait_reckless brilliant_strategist skilled_staffer trait_engineer urban_assault_specialist}
+	skill = 4
+	id = 18
+	attack_skill = 5
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
 		}
 	}
 
@@ -491,13 +491,13 @@ characters={
 			}
 		}
 		corps_commander={  #17/17
-			traits={ bearer_of_artillery adaptable organizer infantry_expert infantry_leader  ranger  }
-			skill=6
-			attack_skill=4
-			defense_skill=5
-			planning_skill=4
-			logistics_skill=6
-			legacy_id=-1
+				traits = { infantry_leader trait_cautious inflexible_strategist infantry_officer}
+	skill = 4
+	id = 19
+	attack_skill = 2
+	defense_skill = 6
+	planning_skill = 3
+	logistics_skill = 3
 		}
 	}
 
@@ -510,13 +510,13 @@ characters={
 			}
 		}
 		corps_commander={ #18/17
-			traits={ adaptable cavalry_leader combined_arms_expert  trait_engineer commando naval_invader   }
-			skill=6
-			attack_skill=4
-			defense_skill=3
-			planning_skill=4
-			logistics_skill=8
-			legacy_id=-1
+			traits = {  panzer_leader trickster media_personality harsh_leader trait_engineer armor_officer}
+	skill = 5
+	id = 20
+	attack_skill = 6
+	defense_skill = 3
+	planning_skill = 5
+	logistics_skill = 3
 		}
 	}
 
@@ -529,13 +529,13 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ infantry_officer }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=1
-			logistics_skill=3
-			legacy_id=21
+			traits = { ranger politically_connected trait_cautious}
+	skill = 4
+	id = 21
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 5
+	logistics_skill = 4
 		}
 	}
 
@@ -548,13 +548,13 @@ characters={
 			}
 		}
 		corps_commander={ #17/17
-			traits={ adaptable harsh_leader infantry_expert infantry_leader skilled_staffer  expert_improviser }
-			skill=6
-			attack_skill=5
-			defense_skill=2
-			planning_skill=8
-			logistics_skill=5
-			legacy_id=-1
+			traits = { organizer skilled_staffer infantry_officer brilliant_strategist old_guard}
+	skill = 5
+	id = 23
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 5
+	logistics_skill = 2
 		}
 	}
 
@@ -586,13 +586,13 @@ characters={
 			}
 		}
 		corps_commander={ #17/17
-			traits={ brilliant_strategist organizer  trait_engineer panzer_leader ranger panzer_expert expert_improviser }
-			skill=6
-			attack_skill=5
-			defense_skill=3
-			planning_skill=5
-			logistics_skill=6
-			legacy_id=-1
+			traits = { panzer_leader harsh_leader cavalry_officer trait_reckless politically_connected}
+	skill = 3
+	id = 24
+	attack_skill = 5
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
 		}
 	}
 
@@ -605,13 +605,13 @@ characters={
 			}
 		}
 		corps_commander={ #17/17
-			traits={ brilliant_strategist panzer_leader trait_mountaineer hill_fighter urban_assault_specialist panzer_expert expert_improviser }
-			skill=6
-			attack_skill=4
-			defense_skill=4
-			planning_skill=5
-			logistics_skill=6
-			legacy_id=-1
+			traits = { panzer_leader hill_fighter career_officer media_personality infantry_officer old_guard}
+	skill = 4
+	id = 25
+	attack_skill = 2
+	defense_skill = 6
+	planning_skill = 3
+	logistics_skill = 3
 		}
 	}
 
@@ -641,13 +641,13 @@ characters={
 		}
 		
 		corps_commander={
-			traits={ brilliant_strategist trait_cautious war_hero }
-			skill=4
-			attack_skill=2
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=4
-			legacy_id=32
+			traits = { media_personality old_guard trait_cautious career_officer war_hero inflexible_strategist organizer skilled_staffer trait_mountaineer}
+	skill = 6
+	id = 32
+	attack_skill = 4
+	defense_skill = 6
+	planning_skill = 3
+	logistics_skill = 5
 		}
 	}
 
@@ -661,11 +661,14 @@ characters={
 		}
 		corps_commander={
 			traits = { trait_engineer fortress_buster infantry_leader trait_cautious fake_skilled_staffer commando camouflage_expert ambusher }
-		skill = 5
-		attack_skill = 4
-		defense_skill = 4 
-		planning_skill = 6
-		logistics_skill = 8
+		traits = {  fortress_buster trickster hill_fighter trait_engineer infantry_leader organizer career_officer war_hero brilliant_strategist old_guard}
+	skill = 5
+	attack_skill = 5
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 3
+
+	id = 33
 		}
 	}
 
@@ -678,13 +681,13 @@ characters={
 			}
 		}
 		corps_commander={  #17/17
-			traits={ trait_engineer panzer_leader winter_specialist panzer_expert ambusher guerilla_fighter }
-			skill=6
-			attack_skill=5
-			defense_skill=3
-			planning_skill=5
-			logistics_skill=6
-			legacy_id=-1
+			traits = { winter_specialist old_guard war_hero career_officer media_personality harsh_leader cavalry_officer skilled_staffer}
+	skill = 4
+	id = 34
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 5
 		}
 	}
 
@@ -697,12 +700,13 @@ characters={
 			}
 		}
 		field_marshal = { #13/13
-		traits = { combined_arms_expert cavalry_leader organizer  logistics_wizard thorough_planner  }
-		skill = 7
-		attack_skill = 6
-		defense_skill = 6
-		planning_skill = 5
-		logistics_skill = 5
+		traits = { commando panzer_leader infantry_officer harsh_leader war_hero politically_connected substance_abuser}
+    skill = 4
+    id = 35
+    attack_skill = 3
+    defense_skill = 3
+    planning_skill = 4
+    logistics_skill = 3
 	}
 	}
 
@@ -733,13 +737,13 @@ characters={
 		}
 		
 		navy_leader={
-			traits={ navy_career_officer seawolf }
-			skill=5
-			attack_skill=5
-			defense_skill=3
-			maneuvering_skill=3
-			coordination_skill=5
-			legacy_id=26
+			traits = { seawolf superior_tactician spotter blue_water_expert }
+	skill = 7
+	id = 26
+	attack_skill = 7
+	defense_skill = 2
+	maneuvering_skill = 5
+	coordination_skill = 8
 		}
 	}
 
@@ -770,13 +774,13 @@ characters={
 		}
 		
 		navy_leader={
-			traits={ battleship_adherent naval_lineage }
-			skill=4
-			attack_skill=3
-			defense_skill=4
-			maneuvering_skill=3
-			coordination_skill=3
-			legacy_id=27
+			traits = { old_guard_navy gunnery_expert fly_swatter superior_tactician ironside fleet_protector }
+	skill = 6
+	id = 27
+	attack_skill = 5
+	defense_skill = 4
+	maneuvering_skill = 5
+	coordination_skill = 7
 		}
 	}
 
@@ -805,13 +809,13 @@ characters={
 		}
 		
 		navy_leader={
-			traits={ old_guard_navy bold }
-			skill=4
-			attack_skill=4
-			defense_skill=2
-			maneuvering_skill=3
-			coordination_skill=4
-			legacy_id=28
+			traits = { bold fleet_protector blockade_runner ironside blue_water_expert }
+	skill = 4
+	id = 28
+	attack_skill = 5
+	defense_skill = 2
+	maneuvering_skill = 5
+	coordination_skill = 4
 		}
 	}
 
@@ -824,13 +828,13 @@ characters={
 			}
 		}
 		navy_leader={
-			traits={ craven superior_tactician }
-			skill=4
-			attack_skill=3
-			defense_skill=4
-			maneuvering_skill=4
-			coordination_skill=2
-			legacy_id=29
+			traits = { craven superior_tactician seawolf }
+	skill = 4
+	id = 29
+	attack_skill = 3
+	defense_skill = 4
+	maneuvering_skill = 5
+	coordination_skill = 2
 		}
 	}
 
@@ -843,13 +847,13 @@ characters={
 			}
 		}
 		navy_leader={
-			traits={ old_guard_navy bold }
-			skill=4
-			attack_skill=4
-			defense_skill=2
-			maneuvering_skill=3
-			coordination_skill=4
-			legacy_id=30
+			traits = { navy_career_officer bold spotter fly_swatter blue_water_expert }
+	skill = 5
+	id = 30
+	attack_skill = 5
+	defense_skill = 2
+	maneuvering_skill = 5
+	coordination_skill = 5
 		}
 	}
 
@@ -881,13 +885,13 @@ characters={
 		}
 		
 		navy_leader={
-			traits={ gentlemanly navy_career_officer superior_tactician }
-			skill=3
-			attack_skill=4
-			defense_skill=1
-			maneuvering_skill=1
-			coordination_skill=4
-			legacy_id=31
+			traits = { navy_media_personality battleship_adherent superior_tactician ironside blue_water_expert  }
+	skill = 6
+	id = 31
+	attack_skill = 7
+	defense_skill = 5
+	maneuvering_skill = 5
+	coordination_skill = 2
 		}
 	}
 
