@@ -1,0 +1,562 @@
+technologies = {
+	
+	forgotearly_fighter = {
+
+path = { leads_to_tech = forgotCAS1 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotCAS2 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotCAS3 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotcv_CAS1 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotcv_CAS2 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotcv_CAS3 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotcv_early_fighter research_cost_coeff = 1 }
+path = { leads_to_tech = forgotcv_fighter1 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotcv_fighter2 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotcv_fighter3 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotcv_naval_bomber1 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotcv_naval_bomber2 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotcv_naval_bomber3 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotfighter1 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotfighter2 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotfighter3 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotjet_fighter1 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotjet_fighter2 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotnaval_bomber1 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotnaval_bomber2 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotnaval_bomber3 research_cost_coeff = 1 }
+
+		dependencies = {
+			iw_small_airframe = 1
+		}
+
+		enable_equipments = {
+			forgotfighter_equipment_0
+		}
+
+		research_cost = 2
+		start_year = 1933
+		folder = {
+			name = forgotair_techs_folder
+			position = { x = 0 y = 2 }
+		}
+		
+		sub_technologies = {
+			forgotcv_early_fighter
+		}
+	}
+	
+	forgotcv_early_fighter = {
+
+		dependencies = {
+			cv_early_fighter = 1
+		}
+
+		enable_equipments = {
+			forgotcv_fighter_equipment_0
+		}
+	
+		research_cost = 1.0 #Carrier Variant
+		start_year = 1933
+		
+	}
+	
+	forgotfighter1 = {
+
+		dependencies = {
+			basic_small_airframe = 1
+		}
+		
+		enable_equipments = {
+			forgotfighter_equipment_1
+		}
+
+		research_cost = 2
+		start_year = 1936
+
+		folder = {
+			name = forgotair_techs_folder
+			position = { x = 0 y = 4 }
+		}
+		
+		sub_technologies = {
+			forgotcv_fighter1
+		}
+	}
+	
+	forgotcv_fighter1 = {
+
+		dependencies = {
+			cv_fighter1x = 1
+		}
+		
+		enable_equipments = {
+			forgotcv_fighter_equipment_1
+		}
+	
+		research_cost = 1 #Carrier Variant
+		start_year = 1936
+	
+	}
+	
+	forgotfighter2 = {
+
+		dependencies = {
+			improved_small_airframe = 1
+		}
+		
+		enable_equipments = {
+			forgotfighter_equipment_2
+		}
+
+		research_cost = 0.01
+		start_year = 1940
+		
+		folder = {
+			name = forgotair_techs_folder
+			position = { x = 0 y = 6 }
+		}
+		
+		sub_technologies = {
+			forgotcv_fighter2
+		}
+	}
+	
+	forgotcv_fighter2 = {
+
+		dependencies = {
+			cv_fighter2x = 1
+		}
+		
+		enable_equipments = {
+			forgotcv_fighter_equipment_2
+		}
+	
+		research_cost = 0.01 #Carrier Variant
+		start_year = 1939
+
+	}
+		
+	forgotfighter3 = {
+
+		dependencies = {
+			advanced_small_airframe = 1
+		}
+
+		enable_equipments = {
+			forgotfighter_equipment_3
+		}
+
+		research_cost = 0.01
+		start_year = 1944
+
+		folder = {
+			name = forgotair_techs_folder
+			position = { x = 0 y = 8 }
+		}
+		
+		sub_technologies = {
+			forgotcv_fighter3
+		}
+	}
+	
+	forgotcv_fighter3 = {
+
+		dependencies = {
+			cv_fighter3x = 1
+		}
+
+		enable_equipments = {
+			forgotcv_fighter_equipment_3
+		}
+	
+		research_cost = 0.01 #Carrier Variant
+		start_year = 1943
+
+	}
+	forgotCAS1 = {
+
+		dependencies = {
+			CAS1x = 1
+		}
+
+		enable_equipments = {
+			forgotCAS_equipment_1
+		}
+
+		research_cost = 2
+		start_year = 1936
+
+		folder = {
+			name = forgotair_techs_folder
+			position = { x = -4 y = 4 }
+		}
+		
+		sub_technologies = {
+			forgotcv_CAS1
+		}
+
+	}
+	
+	forgotcv_CAS1 = {
+
+		dependencies = {
+			cv_CAS1x = 1
+		}
+
+		enable_equipments = {
+			forgotcv_CAS_equipment_1
+		}
+	
+		research_cost = 1.0 #Carrier Variant
+		start_year = 1936
+
+	}
+	
+	forgotCAS2 = {
+
+		dependencies = {
+			CAS2x = 1
+		}
+
+		enable_equipments = {
+			forgotCAS_equipment_2
+		}
+
+		research_cost = 0.01
+		start_year = 1940
+
+		folder = {
+			name = forgotair_techs_folder
+			position = { x = -4 y = 6 }
+		}
+		
+		sub_technologies = {
+			forgotcv_CAS2
+		}
+
+	}
+	
+	forgotcv_CAS2 = {
+
+		dependencies = {
+			cv_CAS2x = 1
+		}
+
+		enable_equipments = {
+			forgotcv_CAS_equipment_2
+		}
+	
+		research_cost = 0.01 #Carrier Variant
+		start_year = 1939
+
+	}
+	
+	forgotCAS3 = {
+
+		dependencies = {
+			CAS3x = 1
+		}
+
+		enable_equipments = {
+			forgotCAS_equipment_3
+		}
+
+		research_cost = 0.01
+		start_year = 1944
+
+		folder = {
+			name = forgotair_techs_folder
+			position = { x = -4 y = 8 }
+		}
+		
+		sub_technologies = {
+			forgotcv_CAS3
+		}
+
+	}
+	
+	forgotcv_CAS3 = {
+
+		dependencies = {
+			cv_CAS3x = 1
+		}
+
+		enable_equipments = {
+			forgotcv_CAS_equipment_3
+		}
+	
+		research_cost = 0.01 #Carrier Variant
+		start_year = 1943
+
+	}
+
+	forgotnaval_bomber1 = {
+
+		dependencies = {
+			naval_bomber1x = 1
+		}
+
+		enable_equipments = {
+			forgotnav_bomber_equipment_1
+		}
+
+		research_cost = 2
+		start_year = 1936
+		folder = {
+			name = forgotair_techs_folder
+			position = { x = 4 y = 4 }
+		}
+		
+		sub_technologies = {
+			forgotcv_naval_bomber1
+		}
+
+	}
+	
+	forgotcv_naval_bomber1 = {
+
+		dependencies = {
+			cv_naval_bomber1x = 1
+		}
+
+		enable_equipments = {
+			forgotcv_nav_bomber_equipment_1
+		}
+	
+		research_cost = 1.0 #Carrier Variant
+		start_year = 1936
+
+	}
+	
+	forgotnaval_bomber2 = {
+
+		dependencies = {
+			naval_bomber2x = 1
+		}
+
+		enable_equipments = {
+			forgotnav_bomber_equipment_2
+		}
+
+		research_cost = 0.01
+		start_year = 1940
+
+		folder = {
+			name = forgotair_techs_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		sub_technologies = {
+			forgotcv_naval_bomber2
+		}
+
+	}
+	
+	forgotcv_naval_bomber2 = {
+
+		dependencies = {
+			cv_naval_bomber2x = 1
+		}
+
+		enable_equipments = {
+			forgotcv_nav_bomber_equipment_2
+		}
+	
+		research_cost = 0.01 #Carrier Variant
+		start_year = 1939
+
+	}
+	
+	forgotnaval_bomber3 = {
+
+		dependencies = {
+			naval_bomber3x = 1
+		}
+
+		enable_equipments = {
+			forgotnav_bomber_equipment_3
+		}
+
+		research_cost = 0.01
+		start_year = 1944
+
+		folder = {
+			name = forgotair_techs_folder
+			position = { x = 4 y = 8 }
+		}
+		
+		sub_technologies = {
+			forgotcv_naval_bomber3
+		}
+
+	}
+	
+	forgotcv_naval_bomber3 = {
+
+		dependencies = {
+			cv_naval_bomber3x = 1
+		}
+
+		enable_equipments = {
+			forgotcv_nav_bomber_equipment_3
+		}
+	
+		research_cost = 0.01 #Carrier Variant
+		start_year = 1943
+
+	}
+	
+	forgotearly_bomber = {
+
+path = { leads_to_tech = forgotheavy_fighter1 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotheavy_fighter2 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotheavy_fighter3 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotjet_strategic_bomber1 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotjet_tactical_bomber1 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotjet_tactical_bomber2 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotstrategic_bomber1 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotstrategic_bomber2 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotstrategic_bomber3 research_cost_coeff = 1 }
+path = { leads_to_tech = forgottactical_bomber1 research_cost_coeff = 1 }
+path = { leads_to_tech = forgottactical_bomber2 research_cost_coeff = 1 }
+path = { leads_to_tech = forgottactical_bomber3 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotscout_plane1 research_cost_coeff = 1 }
+path = { leads_to_tech = forgotscout_plane2 research_cost_coeff = 1 }
+
+		dependencies = {
+			iw_medium_airframe = 1
+		}
+
+		enable_equipments = {
+			forgottac_bomber_equipment_0
+		}
+
+		research_cost = 2
+		start_year = 1933
+		folder = {
+			name = forgotair_techs_folder
+			position = { x = 2 y = 2 }
+		}
+
+	}
+	
+	forgotheavy_fighter1 = {
+
+		dependencies = {
+			heavy_fighter1x = 1
+		}
+		
+		enable_equipments = {
+			forgotheavy_fighter_equipment_1
+		}
+
+		research_cost = 2
+		start_year = 1936
+		folder = {
+			name = forgotair_techs_folder
+			position = { x = -2 y = 4 }
+		}
+
+	}
+	
+	forgotheavy_fighter2 = {
+
+		dependencies = {
+			heavy_fighter2x = 1
+		}
+		
+		enable_equipments = {
+			forgotheavy_fighter_equipment_2
+		}
+
+		research_cost = 0.01
+		start_year = 1940
+
+		folder = {
+			name = forgotair_techs_folder
+			position = { x = -2 y = 6 }
+		}
+
+	}
+	
+	forgotheavy_fighter3 = {
+
+		dependencies = {
+			heavy_fighter3x = 1
+		}
+
+		enable_equipments = {
+			forgotheavy_fighter_equipment_3
+		}
+
+		research_cost = 0.01
+		start_year = 1944
+
+		folder = {
+			name = forgotair_techs_folder
+			position = { x = -2 y = 8 }
+		}
+
+	}
+	
+	forgottactical_bomber1 = {
+
+		dependencies = {
+			basic_medium_airframe = 1
+		}
+		
+		enable_equipments = {
+			forgottac_bomber_equipment_1
+		}
+
+		research_cost = 2
+		start_year = 1936
+
+		folder = {
+			name = forgotair_techs_folder
+			position = { x = 2 y = 4 }
+		}
+
+	}
+	
+	forgottactical_bomber2 = {
+
+		dependencies = {
+		improved_medium_airframe = 1
+		}
+		
+		enable_equipments = {
+			forgottac_bomber_equipment_2
+		}
+
+		research_cost = 0.01
+		start_year = 1940
+
+
+		folder = {
+			name = forgotair_techs_folder
+			position = { x = 2 y = 6 }
+		}
+
+	}
+	
+	forgottactical_bomber3 = {
+
+		dependencies = {
+			advanced_medium_airframe = 1
+		}
+
+		enable_equipments = {
+			forgottac_bomber_equipment_3
+		}
+
+		research_cost = 0.01
+		start_year = 1944
+
+		folder = {
+			name = forgotair_techs_folder
+			position = { x = 2 y = 8 }
+		}
+
+	}
+
+}
