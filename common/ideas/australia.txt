@@ -790,6 +790,7 @@ high_command = {
 			research_bonus = {
 				armor = 0.15
 			}
+on_add = { hidden_effect = { make_tank_designers_free = yes } }
 
 			cost = 75
 			
@@ -820,6 +821,7 @@ high_command = {
 			research_bonus = {
 				naval_equipment = 0.15
 			}
+on_add = { hidden_effect = { make_naval_designers_free = yes } }
 			
 			traits = { convoy_escort_naval_manufacturer }
 
@@ -841,6 +843,7 @@ high_command = {
 			research_bonus = {
 				naval_equipment = 0.15
 			}
+on_add = { hidden_effect = { make_naval_designers_free = yes } }
 			
 			traits = { pacific_fleet_naval_manufacturer }
 		}
@@ -910,7 +913,8 @@ high_command = {
 			
 			research_bonus = {
 				air_equipment = 0.15
-			}			
+			}
+on_add = { hidden_effect = { make_air_designers_free = yes } }			
 			
 			equipment_bonus = {
 				small_plane_airframe  = {

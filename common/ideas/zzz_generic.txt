@@ -18,7 +18,21 @@ ideas = {
 			}
 		}
 
-
+		free_tank_designer = {
+			allowed = { always = no }
+			removal_cost = -1 
+			modifier = { tank_manufacturer_cost_factor = -1 }
+		}
+		free_air_designer = {
+			allowed = { always = no }
+			removal_cost = -1 
+			modifier = { aircraft_manufacturer_cost_factor = -1 }
+		}
+		free_naval_designer = {
+			allowed = { always = no }
+			removal_cost = -1 
+			modifier = { naval_manufacturer_cost_factor = -1 }
+		}
 		continuous_air_production = {
 			allowed = {
 				always = no
@@ -1064,6 +1078,7 @@ ideas = {
 			research_bonus = {
 				armor = 0.15
 			}
+on_add = { hidden_effect = { make_tank_designers_free = yes } }
 			
 			traits = { tank_manufacturer }
 		}		
@@ -1109,6 +1124,7 @@ ideas = {
 			research_bonus = {
 				naval_equipment = 0.15
 			}
+on_add = { hidden_effect = { make_naval_designers_free = yes } }
 			
 			traits = { naval_manufacturer }
 		}
@@ -1153,6 +1169,7 @@ ideas = {
 			research_bonus = {
 				air_equipment = 0.15
 			}
+on_add = { hidden_effect = { make_air_designers_free = yes } }
 			
 			traits = { light_aircraft_manufacturer }
 		}
@@ -1192,6 +1209,7 @@ ideas = {
 			research_bonus = {
 				air_equipment = 0.15
 			}
+on_add = { hidden_effect = { make_air_designers_free = yes } }
 			
 			traits = { medium_aircraft_manufacturer }
 		}
@@ -1231,6 +1249,7 @@ ideas = {
 			research_bonus = {
 				air_equipment = 0.15
 			}
+on_add = { hidden_effect = { make_air_designers_free = yes } }
 			
 			traits = { heavy_aircraft_manufacturer }
 		}
@@ -1266,6 +1285,7 @@ ideas = {
 			research_bonus = {
 				air_equipment = 0.15
 			}
+on_add = { hidden_effect = { make_air_designers_free = yes } }
 			
 			traits = { naval_aircraft_manufacturer }
 		}
