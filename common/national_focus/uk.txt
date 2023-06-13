@@ -273,18 +273,18 @@ focus_tree = {
 
 		complete_tooltip = {
 			122 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
 			123 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -294,18 +294,18 @@ focus_tree = {
 			army_experience = 1000
 			air_experience = 1000
 			122 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
 			123 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -365,25 +365,25 @@ focus_tree = {
 			army_experience = 200		
 			add_tech_bonus = {
 				name = medium1_bonus
-				bonus = 0.5
+				bonus = 1.5
 				technology = basic_medium_tank_chassis
 			}		
 			add_tech_bonus = {
 				name = UK_tank
-				bonus = 0.50
+				bonus = 1.5
 				uses = 1
 				technology = improved_medium_tank_chassis
 			}
 			add_tech_bonus = {
 				name = UK_tank
-				bonus = 0.6
+				bonus = 1.5
 				uses = 2
 				technology = improved_heavy_tank_chassis
 				technology = advanced_light_tank_chassis
 			}
 			add_tech_bonus = {
 				name = UK_tank
-				bonus = 1.1
+				bonus = 2
 				uses = 3
 				technology = advanced_medium_tank_chassis
 				technology = advanced_heavy_tank_chassis
@@ -435,37 +435,37 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = shadow_scheme_focus_tt
 			134 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = shadow_scheme_1mil
 			}
 			128 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = shadow_scheme_1mil
 			}
 			338 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = shadow_scheme_1mil
 			}
 			132 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = shadow_scheme_1mil
@@ -917,10 +917,10 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = british_austerity_idea
 			131 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}			
@@ -949,8 +949,8 @@ focus_tree = {
 			show_ideas_tooltip = ENG_david_stirling
 			add_tech_bonus = {
 				name = ENG_inf
-				uses = 1
-				bonus = 0.5
+				uses = 2
+				bonus = 1
 				technology = improved_infantry_weapons
 				technology = improved_infantry_weapons_2
 			}
@@ -978,27 +978,27 @@ focus_tree = {
 		continue_if_invalid = yes
 		completion_reward = {
 			122 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 3
+					level = 4
 					instant_build = yes
 				}
 
 			}
 			123 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 3
+					level = 4
 					instant_build = yes
 				}
 			}
 			125 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 3
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -1041,10 +1041,10 @@ focus_tree = {
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = royal_ordinance_focus_2AF }
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -1052,28 +1052,28 @@ focus_tree = {
 		}
 		completion_reward = {
 			125 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = royal_ordinance_focus_2AF
 			}
 			126 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = royal_ordinance_focus_2AF
 			}
 			130 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = royal_ordinance_focus_2AF
@@ -1399,7 +1399,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			navy_experience = 200		
+			navy_experience = 500
+			air_experience = 500
 		}
 	}
 
@@ -1444,7 +1445,7 @@ focus_tree = {
 			factor = 1
 		}
         available = {
-			date > 1942.10.1
+			date > 1942.6.1
 			
 		}
 
@@ -1454,7 +1455,7 @@ focus_tree = {
 			set_technology = { jet_engines = 1 }
 			add_tech_bonus = {
 				name = fighter3_bonus
-				bonus = 0.5
+				bonus = 1
 				uses = 1
 				technology = advanced_small_airframe
 			}			
@@ -1490,22 +1491,22 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			navy_experience = 100
+			navy_experience = 250
 			add_ideas = ENG_expand_the_repair_yards
 			338 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = ENG_naval_rearmament_focus_1dockyard
 			}
 			132 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = ENG_naval_rearmament_focus_1dockyard
@@ -1535,21 +1536,7 @@ focus_tree = {
 				ENG = {
 					has_completed_focus = naval_rearmament_focus
 				}
-			OR = {
-				GER = {
-					has_completed_focus = GER_naval_rearmament
-				}
-				GER = {
-					has_completed_focus = GER_naval_rearmament_alt
-				}				
-				ENG = {
-					has_completed_focus = general_rearmament_focus
-				}
-				GER = {
-					num_of_naval_factories > 19
-				}
-			}
-
+				date > 1938.1.1
 		}
 
 		available_if_capitulated = no
@@ -1563,18 +1550,18 @@ focus_tree = {
 				category = cl_tech
 			}
 			130 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
 			120 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -1705,14 +1692,14 @@ focus_tree = {
 		completion_reward = {
 	
 			129 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
-			navy_experience = 100
+			navy_experience = 200
 
 		}
 	}
@@ -2442,14 +2429,13 @@ focus_tree = {
 				controls_state = 452
 				controls_state = 456				
 				controls_state = 457				
-				
+				controls_state = 452
 			}
 		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-				ITA = { remove_ideas = general_staff_ITA }
 				GER = { remove_ideas = GDU_triumph_egypt }
 				ITA = { remove_ideas = GDU_triumph_egypt }
 				HUN = { remove_ideas = GDU_triumph_egypt }
@@ -3509,19 +3495,19 @@ focus_tree = {
 		}
 		completion_reward = {
 			134 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = kickstart_the_war_industry_2AF
 			}
 			128 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = kickstart_the_war_industry_2AF
@@ -3623,15 +3609,15 @@ focus_tree = {
 			add_stability = 0.1
 			add_tech_bonus = {
 				name = ENG_ART
-				uses = 1
-				bonus = 0.5			
+				uses = 2
+				bonus = 1			
 				technology = artillery1
 				technology = artillery2				
 			}
 			add_tech_bonus = {
 				name = ENG_AT
-				uses = 1
-				bonus = 0.5
+				uses = 2
+				bonus = 1
 				technology = antitank2
 				technology = antitank3			
 			}					
@@ -3714,7 +3700,7 @@ focus_tree = {
 		x = -4
 		y = 3
 		relative_position_id = shadow_scheme_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -3785,7 +3771,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ENG_dday1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -3861,7 +3847,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ENG_dday2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -3937,7 +3923,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ENG_dday3
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4013,7 +3999,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ENG_dday4
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4343,7 +4329,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ENG_dday5
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4369,7 +4355,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ENG_dday6
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4397,7 +4383,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ENG_dday7
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
