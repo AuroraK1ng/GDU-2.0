@@ -703,6 +703,323 @@ technologies = {
 			armor = 3.0
 		}
 	}
+		naval_invasion_tactics_MW = {
+		xp_research_type = army
+		xp_unlock_cost = 20
+		enable_tactic = tactic_advanced_naval_landing
+		enable_tactic = tactic_multi_wave_invasion
+		enable_tactic = tactic_storm_machine_gun_nests
+		enable_tactic = tactic_clear_coastal_bunkers
+		enable_tactic = tactic_basic_naval_invasion_attack
+		doctrine = yes	
+		research_cost = 4.5
+		
+		categories = {
+			land_doctrine
+			cat_mobile_warfare
+		}
+
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 20 }
+		}
+	}
+	naval_invasion_tactics_MA = {
+		xp_research_type = army
+		xp_unlock_cost = 20
+		enable_tactic = tactic_advanced_naval_landing
+		enable_tactic = tactic_multi_wave_invasion
+		enable_tactic = tactic_storm_machine_gun_nests
+		enable_tactic = tactic_clear_coastal_bunkers
+		enable_tactic = tactic_basic_naval_invasion_attack
+		doctrine = yes	
+		research_cost = 4.5
+		
+		categories = {
+			land_doctrine
+			cat_mass_assault
+		}
+
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 20 }
+		}
+	}
+	MW_3rd_Right_1 = {
+		path = {
+			leads_to_tech = MW_3rd_Right_2
+			research_cost_coeff = 1
+		}
+		start_year = 1941
+		max_dig_in = 2
+		xp_research_type = army
+		xp_unlock_cost = 200
+		doctrine = yes	
+		research_cost = 4.5
+		category_light_infantry = {
+			max_organisation = 5		
+			default_morale = 0.15
+			defense = 0.1 
+		}
+		
+		categories = {
+			land_doctrine
+			cat_mobile_warfare
+		}
+
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 2 y = 22 }
+		}
+	}
+	MW_3rd_Right_2 = {
+		path = {
+			leads_to_tech = MW_3rd_Right_3
+			research_cost_coeff = 1
+		}
+		start_year = 1942
+		xp_research_type = army
+		xp_unlock_cost = 200
+		doctrine = yes	
+		research_cost = 4.5
+		anti_tank_brigade = {
+			hard_attack = 0.1
+			max_organisation = 5
+			default_morale = 0.05
+			supply_consumption_factor = -0.01			
+		}
+		artillery_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			max_organisation = 5
+			default_morale = 0.05
+			supply_consumption_factor = -0.01
+		}
+		anti_air_brigade = {
+			hard_attack = 0.25
+			soft_attack = 0.15
+			max_organisation = 5
+			default_morale = 0.1
+			supply_consumption_factor = -0.01			
+		}
+		category_light_infantry = {
+			hard_attack = 0.1
+			default_morale = 0.05
+		}
+		
+		categories = {
+			land_doctrine
+			cat_mobile_warfare
+		}
+
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 2 y = 24 }
+		}
+	}
+	MW_3rd_Right_3 = {
+		path = {
+			research_cost_coeff = 1
+		}
+		start_year = 1943
+		xp_research_type = army
+		xp_unlock_cost = 200
+		doctrine = yes	
+		research_cost = 4.5
+		category_light_infantry = {
+			max_organisation = -3
+			defense = 0.2
+		}
+		motorized = {
+			max_organisation = -3
+			defense = 0.1
+			breakthrough = 0.2
+		}
+		mechanized = {
+			max_organisation = -3
+			defense = 0.1
+			breakthrough = 0.2
+		}
+		
+		categories = {
+			land_doctrine
+			cat_mobile_warfare
+		}
+
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 2 y = 26 }
+		}
+	}
+	MW_3rd_Left_1 = {
+		path = {
+			leads_to_tech = MW_3rd_Left_2
+			research_cost_coeff = 1
+		}
+		start_year = 1941
+		xp_research_type = army
+		xp_unlock_cost = 200
+		doctrine = yes	
+		research_cost = 4.5
+		category_light_infantry = {
+			max_organisation = 5	
+			default_morale = 0.1
+		}
+
+		logistics_company = {
+			fort = {
+			attack = 0.05
+			}
+					
+		}
+		flamethrower_inf = {
+			fort = {
+				attack = 0.05
+			}			
+		}
+		on_research_complete = {
+			custom_effect_tooltip = MW_3rd_Left_1_details
+		}
+		categories = {
+			land_doctrine
+			cat_mobile_warfare
+		}
+
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = -2 y = 22 }
+		}
+	}
+	MW_3rd_Left_2 = {
+		path = {
+			leads_to_tech = MW_3rd_Left_3
+			research_cost_coeff = 1
+		}
+		start_year = 1942
+		xp_research_type = army
+		xp_unlock_cost = 200
+		doctrine = yes	
+		research_cost = 4.5
+		category_light_infantry = {
+			max_organisation = 5
+			breakthrough = 0.1
+		}
+		amphibious_invasion_defence = 0.05
+		amphibious_invasion = 0.05
+
+		categories = {
+			land_doctrine
+			cat_mobile_warfare
+		}
+
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = -2 y = 24 }
+		}
+	}
+	MW_3rd_Left_3 = {
+		path = {
+			research_cost_coeff = 1
+		}
+		start_year = 1943
+		xp_research_type = army
+		xp_unlock_cost = 200
+		doctrine = yes	
+		research_cost = 4.5
+		medium_armor = {
+			amphibious = {
+				attack = 0.05
+			}
+		}
+		medium_sp_anti_air_brigade = {
+			amphibious = {
+				attack = 0.05
+			}
+		}
+		medium_sp_artillery_brigade = {
+			amphibious = {
+				attack = 0.05
+			}
+		}
+		medium_tank_destroyer_brigade = {
+			amphibious = {
+				attack = 0.05
+			}
+		}
+		heavy_armor = {
+			amphibious = {
+				attack = 0.05
+			}
+		}
+		on_research_complete = {
+			custom_effect_tooltip = MW_3rd_Left_3_details
+		}
+		categories = {
+			land_doctrine
+			cat_mobile_warfare
+		}
+
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = -2 y = 26 }
+		}
+	}
+	naval_invasion_tactics_SF = {
+
+		enable_tactic = tactic_advanced_naval_landing
+		enable_tactic = tactic_multi_wave_invasion
+		enable_tactic = tactic_storm_machine_gun_nests
+		enable_tactic = tactic_clear_coastal_bunkers
+		enable_tactic = tactic_basic_naval_invasion_attack
+
+		
+		xp_research_type = army
+		xp_unlock_cost = 20
+		doctrine = yes	
+		research_cost = 4.5
+		categories = {
+			land_doctrine
+			cat_superior_firepower
+		}
+
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 20 }
+		}
+	}
+	naval_invasion_tactics_GBP = {
+
+	enable_tactic = tactic_advanced_naval_landing
+		enable_tactic = tactic_multi_wave_invasion
+		enable_tactic = tactic_storm_machine_gun_nests
+		enable_tactic = tactic_clear_coastal_bunkers
+		enable_tactic = tactic_basic_naval_invasion_attack
+
+		
+		xp_research_type = army
+		xp_unlock_cost = 20
+		doctrine = yes	
+		research_cost = 4.5
+		categories = {
+			land_doctrine
+			cat_grand_battle_plan
+		}
+
+		
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 20 }
+		}
+	}
 	
 	firebrigades = { #Branch focused on mobile warfares
 		xp_research_type = army
@@ -848,6 +1165,20 @@ technologies = {
 	modern_blitzkrieg = {
 		xp_research_type = army
 		xp_unlock_cost = 200
+		path = {
+			leads_to_tech = naval_invasion_tactics_MW		
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = MW_3rd_Right_1		
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = MW_3rd_Left_1			
+			research_cost_coeff = 1
+		}
 		category_all_armor = {
 			max_organisation = 3
 			soft_attack = 0.05
@@ -1063,7 +1394,20 @@ technologies = {
 		xp_unlock_cost = 200
 		#Increased Partisan effect on your land occupied by others
 		resistance_damage_to_garrison_on_our_occupied_states = 0.1 
+		path = {
+			leads_to_tech = naval_invasion_tactics_MW		
+			research_cost_coeff = 1
+		}
 
+		path = {
+			leads_to_tech = MW_3rd_Right_1		
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = MW_3rd_Left_1			
+			research_cost_coeff = 1
+		}
 		category_all_armor = {
 			max_organisation = 3
 			soft_attack = 0.05
@@ -1738,7 +2082,10 @@ land_reinforce_rate = 0.05
 		category_front_line = {
 			max_organisation = 5
 		}
-			
+			path = {
+			leads_to_tech = naval_invasion_tactics_SF
+			research_cost_coeff = 1
+		}
 		#combat advantage when air superior
 		army_bonus_air_superiority_factor = 0.40
 		
@@ -1951,7 +2298,10 @@ land_reinforce_rate = 0.05
 	shock_and_awe = {
 		xp_research_type = army
 		xp_unlock_cost = 200
-		
+		path = {
+			leads_to_tech = naval_invasion_tactics_SF
+			research_cost_coeff = 1
+		}
 		category_all_infantry = {
 			soft_attack = 0.05
 			hard_attack = 0.05
@@ -2294,6 +2644,13 @@ land_reinforce_rate = 0.05
 			motorized_equipment = 1.0
 			cat_mechanized_equipment = 1.0
 		}
+		on_research_complete = {
+			if = {
+				limit = { original_tag = SOV }
+				army_experience = 200
+			}
+            custom_effect_tooltip = semi_motorized_desert_warfare_details
+		}
 	}
 	
 	assault_concentration = {
@@ -2557,6 +2914,10 @@ land_reinforce_rate = 0.05
 	}
 	
 	c3i_theory = {
+		path = {
+			leads_to_tech = naval_invasion_tactics_GBP
+			research_cost_coeff = 1
+		}
 		xp_research_type = army
 		xp_unlock_cost = 200
 		amphibious_invasion_defence = 0.15
@@ -2607,6 +2968,13 @@ land_reinforce_rate = 0.05
 		ai_research_weights = {
 			infantry_weapons = 1.5
 			motorized_equipment = 1.0
+		}
+		on_research_complete = {
+			if = {
+				limit = { original_tag = SOV }
+				army_experience = 200
+			}
+            custom_effect_tooltip = c3i_theory_details
 		}
 	}
 	
@@ -2826,6 +3194,13 @@ land_reinforce_rate = 0.05
 			infantry_weapons = 1.5
 			motorized_equipment = 1.0
 		}
+		on_research_complete = {
+			if = {
+				limit = { original_tag = SOV }
+				army_experience = 200
+			}
+            custom_effect_tooltip = infiltration_assault_details			
+		}
 	}
 	
 	night_assault_tactics = {
@@ -2950,6 +3325,10 @@ land_reinforce_rate = 0.05
 	}
 	
 	infiltration_in_depth = {
+		path = {
+			leads_to_tech = naval_invasion_tactics_GBP
+			research_cost_coeff = 1
+		}
 		xp_research_type = army
 		xp_unlock_cost = 200
 		amphibious_invasion_defence = 0.15
@@ -3007,6 +3386,13 @@ land_reinforce_rate = 0.05
 		ai_research_weights = {
 			infantry_weapons = 1.5
 			motorized_equipment = 1.0
+		}
+		on_research_complete = {
+			if = {
+				limit = { original_tag = SOV }
+				army_experience = 200
+			}
+            custom_effect_tooltip = infiltration_in_depth_details
 		}
 	}
 	
@@ -3585,6 +3971,10 @@ land_reinforce_rate = 0.05
 	}
 	
 	continuous_offensive = {
+		path = {
+			leads_to_tech = naval_invasion_tactics_MA
+			research_cost_coeff = 1
+		}
 		xp_research_type = army
 		xp_unlock_cost = 200
 
@@ -3740,7 +4130,7 @@ land_reinforce_rate = 0.05
 		
 		folder = {
 			name = land_doctrine_folder
-			position = { x = 2 y = 8 }
+			position = { x = 2 y = 9 }
 		}
 		
 		ai_will_do = {
@@ -3787,7 +4177,7 @@ land_reinforce_rate = 0.05
 		
 		folder = {
 			name = land_doctrine_folder
-			position = { x = 2 y = 10 }
+			position = { x = 2 y = 12 }
 		}
 		
 		ai_will_do = {
@@ -3833,7 +4223,7 @@ land_reinforce_rate = 0.05
 		
 		folder = {
 			name = land_doctrine_folder
-			position = { x = 2 y = 12 }
+			position = { x = 2 y = 15 }
 		}
 		
 		ai_will_do = {
@@ -3853,6 +4243,10 @@ land_reinforce_rate = 0.05
 	}
 	
 	guerilla_warfare = {
+		path = {
+			leads_to_tech = naval_invasion_tactics_MA
+			research_cost_coeff = 1
+		}
 		xp_research_type = army
 		xp_unlock_cost = 200
 		out_of_supply_factor = -0.1
@@ -3878,7 +4272,7 @@ land_reinforce_rate = 0.05
 		
 		folder = {
 			name = land_doctrine_folder
-			position = { x = 2 y = 14 }
+			position = { x = 2 y = 18 }
 		}
 		
 		ai_will_do = {
@@ -3907,4 +4301,5 @@ land_reinforce_rate = 0.05
 			always = no
 		}
 	}
+	
 }
