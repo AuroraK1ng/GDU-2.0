@@ -18,8 +18,8 @@ if = {
 starting_train_buffer = 1.5
 add_ideas = GDU_AXIS_TARDE
 set_research_slots = 4
-set_stability = 0.6
-set_war_support = 0.7
+set_stability = 0.65
+set_war_support = 0.85
 add_timed_idea = { idea = peace_training days = 1331 }
 add_timed_idea = { idea = no_tradebacks days = 1331 }
 add_ideas = {
@@ -68,42 +68,42 @@ every_owned_state = { #LIBYAN STATES
 create_field_marshal = {
 	name = "Emilio De Bono AFRICANUS"
 	picture = "AFRICA_portrait_italy_emilio_de_bono.dds"
-	traits = { defensive_doctrine old_guard infantry_officer infantry_leader  politically_connected inflexible_strategist desert_fox}
-	skill = 4
-	attack_skill = 5
-	defense_skill = 1
-	planning_skill = 5
-	logistics_skill = 4
+	traits = { organiser defensive_doctrine old_guard infantry_officer infantry_leader  politically_connected inflexible_strategist desert_fox}
+	skill = 6
+	attack_skill = 6
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 7
 
 }
 create_corps_commander = {
 	name = "Giovanni Messe AFRICANUS"
 	picture = "AFRICA_Portrait_Italy_Giovanni_Messe.dds"
-	traits = { panzer_leader trickster armor_officer media_personality trait_cautious war_hero brilliant_strategist trickster desert_fox  }
-	skill = 5
-	attack_skill = 6
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 4
+	traits = { panzer_leader trickster armor_officer media_personality trait_cautious war_hero brilliant_strategist trickster desert_fox hill_fighter trait_engineer }
+	skill = 6
+	attack_skill = 8
+	defense_skill = 6
+	planning_skill = 6
+	logistics_skill = 7
 }
 create_corps_commander = {
 	name = "Ugo Cavallero AFRICANUS"
 	picture = "AFRICA_Portrait_Italy_Ugo_Cavallero.dds"
-	traits = { organizer career_officer cavalry_officer harsh_leader desert_fox trickster }
-	skill = 4
-	attack_skill = 2
+	traits = { old_guard media_personality infantry_officer infantry_leader  politically_connected inflexible_strategist desert_fox hill_fighter trait_engineer}
+	skill = 6
+	attack_skill = 6
 	defense_skill = 5
 	planning_skill = 5
-	logistics_skill = 2
+	logistics_skill = 8
 }
 create_corps_commander = {
 	name = "Izzo AFRICANUS"
 	picture = "AFRICA_Portrait_ITA_Izzo.tga"
-	traits = { desert_fox cavalry_officer cavalry_leader trait_engineer trickster media_personality}
-	skill = 3
-	attack_skill = 4
-	defense_skill = 1
-	planning_skill = 2
+	traits = { desert_fox cavalry_officer cavalry_leader infantry_officer trait_engineer trickster media_personality}
+	skill = 5
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 4
 	logistics_skill = 3
 }
 #######################################
@@ -1088,15 +1088,15 @@ if = {
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_heavy_battery_2
-				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_anti_air_slot = ship_anti_air_1
 				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 				fixed_ship_radar_slot = empty
 				fixed_ship_engine_slot = heavy_ship_engine_3
 				fixed_ship_secondaries_slot = ship_secondaries_2
 				fixed_ship_armor_slot = ship_armor_bb_2
 				front_1_custom_slot = ship_heavy_battery_2
-				mid_1_custom_slot = ship_airplane_launcher_2
-				mid_2_custom_slot = ship_airplane_launcher_2
+				mid_1_custom_slot = ship_airplane_launcher_1
+				mid_2_custom_slot = ship_airplane_launcher_1
 				rear_1_custom_slot = ship_heavy_battery_2
 			}
 		}

@@ -209,7 +209,7 @@ characters = {
 				
 			}
 			traits = {
-			 army_chief_offensive_1
+			 army_chief_offensive_2
 			}
 			ai_will_do = {
 				base = 1.000
@@ -244,12 +244,12 @@ characters = {
 		}
 
 		field_marshal = {
-			traits = { old_guard offensive_doctrine infantry_leader skilled_staffer  media_personality career_officer brilliant_strategist}
-	skill = 5
-	attack_skill = 5
-	defense_skill = 2
-	planning_skill = 6
-	logistics_skill = 6
+			traits = { old_guard offensive_doctrine panzer_leader skilled_staffer  media_personality career_officer brilliant_strategist}
+	skill = 6
+	attack_skill = 6
+	defense_skill = 5
+	planning_skill = 7
+	logistics_skill = 7
 		}
 	}
 
@@ -269,7 +269,7 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			traits = {
-				army_chief_defensive_1
+				army_chief_defensive_2
 			}
 			cost = 150
 			ai_will_do = {
@@ -278,12 +278,12 @@ characters = {
 		}
 		
 		field_marshal = {
-			traits = { defensive_doctrine old_guard infantry_officer infantry_leader  politically_connected inflexible_strategist}
-	skill = 4
-	attack_skill = 5
-	defense_skill = 1
-	planning_skill = 5
-	logistics_skill = 4
+	traits = { organiser defensive_doctrine old_guard infantry_officer infantry_leader  politically_connected inflexible_strategist hill_fighter}
+	skill = 6
+	attack_skill = 6
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 7
 		}
 	}
 
@@ -319,12 +319,12 @@ characters = {
 		}
 		
 		field_marshal = {
-			traits = { career_officer old_guard infantry_officer infantry_leader urban_assault_specialist hill_fighter skilled_staffer politically_connected trait_engineer}
-	skill = 5
+			traits = { career_officer old_guard infantry_officer infantry_leader trait_mountaineer hill_fighter skilled_staffer politically_connected trait_engineer}
+	skill = 6
 	attack_skill = 5
 	defense_skill = 4
-	planning_skill = 1
-	logistics_skill = 4
+	planning_skill = 4
+	logistics_skill = 6
 		}
 	}
 
@@ -354,12 +354,12 @@ characters = {
 		}
 		
 		corps_commander={ #17/17 #PORTED TO BBA
-			traits = { panzer_leader trickster armor_officer media_personality trait_cautious war_hero brilliant_strategist trickster  }
+	traits = { panzer_leader trickster armor_officer media_personality trait_cautious war_hero brilliant_strategist trickster urban_assault_specialist hill_fighter trait_engineer }
 	skill = 6
-	attack_skill = 7
-	defense_skill = 5
-	planning_skill = 4
-	logistics_skill = 4
+	attack_skill = 8
+	defense_skill = 6
+	planning_skill = 6
+	logistics_skill = 7
 		}
 	}
 	ITA_giovanni_messe_highcommand = {
@@ -414,12 +414,12 @@ characters = {
 		
 		corps_commander={ #17/17 #PORTED TO BBA
 			picture = "Portrait_Italy_Ugo_Cavallero.dds"
-	traits = { organizer career_officer cavalry_officer harsh_leader trickster }
-	skill = 5
-	attack_skill = 3
-	defense_skill = 6
+	traits = { old_guard media_personality infantry_officer infantry_leader  politically_connected inflexible_strategist urban_assault_specialist hill_fighter trait_engineer}
+	skill = 6
+	attack_skill = 6
+	defense_skill = 5
 	planning_skill = 5
-	logistics_skill = 2
+	logistics_skill = 8
 		}
 	}
 
@@ -434,11 +434,11 @@ characters = {
 
 		corps_commander={ #17/17 #PORTED TO BBA
 			traits = { infantry_officer  hill_fighter infantry_leader war_hero inflexible_strategist old_guard naval_invader}
-	skill = 5
-	attack_skill = 5
-	defense_skill = 6
-	planning_skill = 2
-	logistics_skill = 3
+	skill = 6
+	attack_skill = 6
+	defense_skill = 8
+	planning_skill = 5
+	logistics_skill = 6
 		}
 	}
 
@@ -646,7 +646,7 @@ characters = {
 		
 		corps_commander={ #17/17 #PORTED TO BBA
 			traits={ panzer_leader panzer_expert swamp_fox urban_assault_specialist  ambusher }
-			skill=6
+			skill=5
 			attack_skill=2
 			defense_skill=3
 			planning_skill=5
@@ -846,7 +846,7 @@ characters = {
 		
 		corps_commander={ #17/17 #PORTED
 			traits={ fake_skilled_staffer_sov old_guard ambusher infantry_leader camouflage_expert commando  }
-			skill=6
+			skill=5
 			attack_skill=3
 			defense_skill=3
 			planning_skill=4
@@ -974,7 +974,7 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			traits = {
-				navy_chief_decisive_battle_1
+				navy_chief_decisive_battle_2
 			}
 			cost = 150
 			ai_will_do = {
@@ -1141,12 +1141,12 @@ characters = {
 		}
 
 		navy_leader = {
-			traits = { bold navy_career_officer superior_tactician spotter }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 1
-			maneuvering_skill = 3
-			coordination_skill = 1
+			traits = { bold navy_career_officer superior_tactician spotter ironside green_water_expert }
+			skill = 6
+			attack_skill = 8
+			defense_skill = 6
+			maneuvering_skill = 6
+			coordination_skill = 7
 			legacy_id = 0
 			visible = { has_government = fascism }
 		}
