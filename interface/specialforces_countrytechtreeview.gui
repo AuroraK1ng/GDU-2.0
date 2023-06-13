@@ -32,7 +32,296 @@ guiTypes = {
 			name = "Background"
 			quadTextureSprite ="GFX_tiled_plain_bg2"
 		}
+		containerWindowType = {
+			name = "forgotarmour_folder"
+			position = { x=0 y=47 }
+			size = { width = 100%% height = 100%% }
+			margin = { top = 13 left = 13 bottom = 24 right = 25}
+			drag_scroll = { left middle }
+			verticalScrollbar = "right_vertical_slider"
+			horizontalScrollbar = "bottom_horizontal_slider"
 
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_window_2b_border"
+			}
+
+				instantTextBoxType = {
+						name = "I Forgot Designer Explanation"
+						position = { x = 110 y = 20 }
+						textureFile = ""
+						font = "vic_36s"
+						borderSize = {x = 0 y = 4}
+						text = "These 'I Forgot Designer' technologies are a QOL feature giving you a second chance to research an equipment type if you forgot to pick the right designer. You can research these in a day or two to get the designer (except for 1936 and interwar techs)."
+						maxWidth = 1600
+						maxHeight = 70
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+
+			containerWindowType = {
+				name = "techtree_stripes"
+				position = { x= 0 y= 0 }
+				size = {
+					width = 1450 height = 1125
+					min = { width = 100%% height = 100%% }
+				}
+				clipping = no
+
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_techtree_stripes"
+				}
+
+				iconType = {
+					name ="forgotarmortech_bg"
+					spriteType = "GFX_armortech_bg"
+					position = { x=0 y=0 }
+					allwaystransparent = yes
+				}
+
+				containerWindowType = {
+					name = "forgotarmour_year_right"
+					position = { x=10 y=140 }
+					size = { width = 80 height = 100%% }
+					orientation = upper_left
+
+					instantTextBoxType = {
+						name = "forgotarmour_year1"
+						position = { x = 60 y = 2 }
+						textureFile = ""
+						font = "vic_36s"
+						borderSize = {x = 0 y = 4}
+						text = "1918"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+
+					instantTextBoxType = {
+						name = "forgotarmour_year2"
+						position = { x = 60 y = 140 }
+						textureFile = ""
+						font = "vic_36s"
+						borderSize = {x = 0 y = 4}
+						text = "1934"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+
+					instantTextBoxType = {
+						name = "forgotarmour_year3"
+						position = { x = 60 y = 278 }
+						textureFile = ""
+						font = "vic_36s"
+						borderSize = {x = 0 y = 4}
+						text = "1936"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+
+					instantTextBoxType = {
+						name = "forgotarmour_year4"
+						position = { x = 60 y = 420 }
+						textureFile = ""
+						font = "vic_36s"
+						borderSize = {x = 0 y = 4}
+						text = "1939"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+
+					instantTextBoxType = {
+						name = "forgotarmour_year5"
+						position = { x = 60 y = 560 }
+						textureFile = ""
+						font = "vic_36s"
+						borderSize = {x = 0 y = 4}
+						text = "1941"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+
+					instantTextBoxType = {
+						name = "forgotarmour_year6"
+						position = { x = 60 y = 698 }
+						textureFile = ""
+						font = "vic_36s"
+						borderSize = {x = 0 y = 4}
+						text = "1943"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+
+					instantTextBoxType = {
+						name = "forgotarmour_year7"
+						position = { x = 60 y = 838 }
+						textureFile = ""
+						font = "vic_36s"
+						borderSize = {x = 0 y = 4}
+						text = "1945"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+				}
+
+
+				containerWindowType = {
+					name = "forgotarmour_year_left"
+					position = { x=-100 y=140 }
+					size = { width = 80 height = 100%% }
+					orientation = upper_right
+
+					instantTextBoxType = {
+						name = "forgotarmour_year2_left"
+						position = { x = 0 y = 140 }
+						textureFile = ""
+						font = "vic_36s"
+						borderSize = {x = 0 y = 4}
+						text = "1934"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+
+					instantTextBoxType = {
+						name = "forgotarmour_year3_left"
+						position = { x = 0 y = 278 }
+						textureFile = ""
+						font = "vic_36s"
+						borderSize = {x = 0 y = 4}
+						text = "1936"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+
+					instantTextBoxType = {
+						name = "forgotarmour_year4_left"
+						position = { x = 0 y = 420 }
+						textureFile = ""
+						font = "vic_36s"
+						borderSize = {x = 0 y = 4}
+						text = "1939"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+
+					instantTextBoxType = {
+						name = "forgotarmour_year5_left"
+						position = { x = 0 y = 560 }
+						textureFile = ""
+						font = "vic_36s"
+						borderSize = {x = 0 y = 4}
+						text = "1941"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+
+					instantTextBoxType = {
+						name = "forgotarmour_year6_left"
+						position = { x = 0 y = 698 }
+						textureFile = ""
+						font = "vic_36s"
+						borderSize = {x = 0 y = 4}
+						text = "1943"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+
+					instantTextBoxType = {
+						name = "forgotarmour_year7_left"
+						position = { x = 0 y = 838 }
+						textureFile = ""
+						font = "vic_36s"
+						borderSize = {x = 0 y = 4}
+						text = "1945"
+						maxWidth = 80
+						maxHeight = 32
+						format = left
+						Orientation = "UPPER_LEFT"
+					}
+				}
+			}
+
+
+			containerWindowType = {
+				name = "forgotarmour_subtitles"
+				position = { x = 0 y = 172 }
+				size = { width = 600 height = 80% }
+				orientation = center_up
+				origo = center_up
+
+				instantTextBoxType = {
+					name = "forgotarmour_subtitle_heavy"
+					position = { x = 480 y = 55 }
+					textureFile = ""
+					font = "hoi_33"
+					borderSize = {x = 0 y = 4}
+					text = "ARMOUR_TITLE_HEAVY"
+					maxWidth = 200
+					maxHeight = 62
+					format = center
+					Orientation = "UPPER_LEFT"
+				}
+
+				instantTextBoxType = {
+					name = "forgotarmour_subtitle_medium"
+					position = { x = 200 y = 280 }
+					textureFile = ""
+					font = "hoi_33"
+					borderSize = {x = 0 y = 4}
+					text = "ARMOUR_TITLE_MEDIUM"
+					maxWidth = 200
+					maxHeight = 62
+					format = center
+					Orientation = "UPPER_LEFT"
+				}
+
+				instantTextBoxType = {
+					name = "forgotarmour_subtitle_light"
+					position = { x = -84 y = 55  }
+					textureFile = ""
+					font = "hoi_33"
+					borderSize = {x = 0 y = 4}
+					text = "ARMOUR_TITLE_LIGHT"
+					maxWidth = 200
+					maxHeight = 62
+					format = center
+					Orientation = "UPPER_LEFT"
+				}
+			}
+
+
+			gridboxtype = {
+				name = "forgotgwtank_tree"
+				position = { x = 10% y = 172 }
+				size = { width = 80% height = 80% }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+		}
 		containerWindowType = {
 			name = "infantry_folder"
 			position = { x=0 y=47 }
@@ -332,7 +621,7 @@ guiTypes = {
 				format = "LEFT"
 			}
 		}
-
+		
 		containerWindowType = {
 			name = "support_folder"
 			position = { x=0 y=47 }
@@ -3606,7 +3895,13 @@ guiTypes = {
 				frame = 1
 				clicksound = ui_research_tab_infantry
 			}
-
+			buttonType = {
+				name = "forgotarmour_folder_tab"
+				position = { x = 1200 y = 0 }
+				quadTextureSprite = "GFX_armour_folder_tab"
+				frame = 1
+				clicksound = click_default
+			}
 			iconType = {
 				name = "highlight_infantry_folder"
 				spriteType = "GFX_tutorial_research_folder_icon_glow"

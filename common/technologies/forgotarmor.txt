@@ -1,0 +1,1091 @@
+technologies = {
+	### GERMAN TANK NAMES IN COMMENTS SO YOU CAN FIND STUFF MORE EASILY
+	forgotgwtank = { #Leichttraktor
+
+		enable_equipments = {
+			forgotgw_tank_equipment
+		}
+
+		dependencies = {
+			gwtank_chassis = 1
+		}
+
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+			NOT = {	has_template_containing_unit = heavy_armor }
+			NOT = {	has_template_containing_unit = medium_armor }
+		}		
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		path = {
+			leads_to_tech = forgotbasic_light_tank
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotbasic_medium_tank
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotbasic_heavy_tank
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = forgotimproved_light_tank
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotimproved_medium_tank
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotimproved_heavy_tank
+			research_cost_coeff = 1
+		}		
+
+		path = {
+			leads_to_tech = forgotadvanced_light_tank
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotadvanced_light_tank_a
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotadvanced_medium_tank
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotadvanced_heavy_tank
+			research_cost_coeff = 1
+		}		
+
+		path = {
+			leads_to_tech = forgotsuper_heavy_tank
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = forgotbasic_light_td
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotbasic_medium_td
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotbasic_heavy_td
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = forgotimproved_light_td
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotimproved_medium_td
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotimproved_heavy_td
+			research_cost_coeff = 1
+		}		
+
+		path = {
+			leads_to_tech = forgotadvanced_light_td
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotadvanced_light_td_a
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotadvanced_medium_td
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotadvanced_heavy_td
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = forgotsuper_heavy_td
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotadvanced_medium_td_a
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = forgotbasic_light_art
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotbasic_medium_art
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotbasic_heavy_art
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = forgotimproved_light_art
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotimproved_medium_art
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotimproved_heavy_art
+			research_cost_coeff = 1
+		}		
+
+		path = {
+			leads_to_tech = forgotadvanced_light_art
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotadvanced_light_art_a
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotadvanced_medium_art
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotadvanced_heavy_art
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = forgotsuper_heavy_art
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotadvanced_medium_art_a
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotbasic_light_spaa
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotbasic_medium_spaa
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotbasic_heavy_spaa
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = forgotimproved_light_spaa
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotimproved_medium_spaa
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotimproved_heavy_spaa
+			research_cost_coeff = 1
+		}		
+
+		path = {
+			leads_to_tech = forgotadvanced_light_spaa
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotadvanced_light_spaa_a
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotadvanced_medium_spaa
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotadvanced_heavy_spaa
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = forgotsuper_heavy_spaa
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotadvanced_medium_spaa_a
+			research_cost_coeff = 1
+		}		
+
+		path = {
+			
+			research_cost_coeff = 1
+		}
+
+		path = {
+			
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = forgotmotorized_rocket_unit
+			research_cost_coeff = 1
+		}
+
+		research_cost = 0.1
+		start_year = 1918
+		folder = {
+			name = forgotarmour_folder
+			position = { x = 0 y = 0 }
+		}
+
+	}
+
+	forgotmotorized_rocket_unit = {
+
+		enable_subunits = {
+			motorized_rocket_brigade
+		}
+		enable_equipments = {
+			forgotmotorized_rocket_equipment_1
+		}
+
+		dependencies = {
+			motorized_rocket_unit = 1
+		}
+
+		research_cost = 0.1
+		start_year = 1939
+
+
+		folder = {
+			name = forgotarmour_folder
+			position = { x = -8 y = 5 }
+		}
+
+		categories = {
+			mot_rockets
+		}
+	}
+
+	forgotbasic_light_tank = { #Panzer I
+
+		enable_equipments = {
+			forgotlight_tank_equipment_1
+		}
+
+		dependencies = {
+			basic_light_tank_chassis = 1
+		}
+
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		path = {
+			leads_to_tech = forgotimproved_light_tank
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1934
+		folder = {
+			name = forgotarmour_folder
+			position = { x = -4 y = 2 }
+		}
+
+		sub_technologies = {
+			forgotbasic_light_td
+			forgotbasic_light_art
+			forgotbasic_light_spaa
+		}
+
+	}
+
+	forgotbasic_light_td = {
+
+		enable_equipments = {
+			forgotlight_tank_destroyer_equipment_1
+		}
+
+		dependencies = {
+			basic_light_tdx = 1
+		}
+
+		research_cost = 0.5
+		start_year = 1934
+
+	}
+
+	forgotbasic_light_art = {
+
+		enable_equipments = {
+			forgotlight_tank_artillery_equipment_1
+		}
+
+		dependencies = {
+			basic_light_artx = 1
+		}
+
+		research_cost = 0.5
+		start_year = 1934
+
+	}
+
+	forgotbasic_light_spaa = {
+
+		enable_equipments = {
+			forgotlight_tank_aa_equipment_1
+		}
+
+		dependencies = {
+			basic_light_spaax = 1
+		}
+
+		research_cost = 0.5
+		start_year = 1934
+
+	}
+
+	forgotimproved_light_tank = { #Panzer II
+
+		enable_equipments = {
+			forgotlight_tank_equipment_2
+		}
+
+		dependencies = {
+			improved_light_tank_chassis = 1
+		}
+
+		research_cost = 2
+		start_year = 1936
+
+		folder = {
+			name = forgotarmour_folder
+			position = { x = -4 y = 4 }
+		}
+
+		sub_technologies = {
+			forgotimproved_light_td
+			forgotimproved_light_art
+			forgotimproved_light_spaa
+			
+		}
+
+	}
+
+	forgotimproved_light_td = {
+
+		enable_equipments = {
+			forgotlight_tank_destroyer_equipment_2
+		}
+
+		dependencies = {
+			improved_light_tdx = 1
+		}
+
+		research_cost = 0.5
+		start_year = 1936
+
+	}
+
+	forgotimproved_light_art = {
+
+		enable_equipments = {
+			forgotlight_tank_artillery_equipment_2
+		}
+
+		dependencies = {
+			improved_light_artx = 1
+		}
+
+		research_cost = 0.5
+		start_year = 1936
+
+	}
+
+	forgotimproved_light_spaa = {
+
+		enable_equipments = {
+			forgotlight_tank_aa_equipment_2
+		}
+
+		dependencies = {
+			improved_light_spaax = 1
+		}
+
+		research_cost = 0.5
+		start_year = 1936
+
+	}
+	forgotadvanced_light_tank = { #Leopard
+
+		enable_equipments = {
+			forgotlight_tank_equipment_3
+		}
+
+		dependencies = {
+			advanced_light_tank_chassis = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1941
+
+		folder = {
+			name = forgotarmour_folder
+			position = { x = -4 y = 8 }
+		}
+
+		sub_technologies = {
+			forgotadvanced_light_td
+			forgotadvanced_light_art
+			forgotadvanced_light_spaa
+		}
+
+	}
+
+	forgotadvanced_light_td = {
+
+		enable_equipments = {
+			forgotlight_tank_destroyer_equipment_3
+		}
+
+		dependencies = {
+			advanced_light_tdx = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1940
+
+	}
+
+	forgotadvanced_light_art = {
+
+		enable_equipments = {
+			forgotlight_tank_artillery_equipment_3
+		}
+
+		dependencies = {
+			advanced_light_artx = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1940
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+	}
+
+	forgotadvanced_light_spaa = {
+
+		enable_equipments = {
+			forgotlight_tank_aa_equipment_3
+		}
+
+		dependencies = {
+			advanced_light_spaax = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1940
+
+	}
+	forgotbasic_medium_tank = { #Panzer III
+
+		enable_equipments = {
+			forgotmedium_tank_equipment_1
+		}
+
+		dependencies = {
+			basic_medium_tank_chassis = 1
+		}
+
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = medium_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				load_oob = "unlock_tanks_medium"
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		research_cost = 0.01
+		start_year = 1938
+
+		folder = {
+			name = forgotarmour_folder
+			position = { x = 0 y = 5 }
+		}
+
+		sub_technologies = {
+			forgotbasic_medium_td
+			forgotbasic_medium_art
+			forgotbasic_medium_spaa
+			
+		}
+		
+	}
+
+	forgotbasic_medium_td = {
+
+		enable_equipments = {
+			forgotmedium_tank_destroyer_equipment_1
+		}
+
+		dependencies = {
+			basic_medium_tdx = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1937
+
+	}
+
+	forgotbasic_medium_art = {
+
+		enable_equipments = {
+			forgotmedium_tank_artillery_equipment_1
+		}
+
+		dependencies = {
+			basic_medium_artx = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1937
+
+	}
+
+	forgotbasic_medium_spaa = {
+
+		enable_equipments = {
+			forgotmedium_tank_aa_equipment_1
+		}
+
+		dependencies = {
+			basic_medium_spaax = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1937
+
+	}
+
+	forgotimproved_medium_tank = { #Panzer IV
+
+		enable_equipments = {
+			forgotmedium_tank_equipment_2
+		}
+
+		dependencies = {
+			improved_medium_tank_chassis = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1941
+
+		folder = {
+			name = forgotarmour_folder
+			position = { x = 0 y = 8 }
+		}
+
+		sub_technologies = {
+			forgotimproved_medium_td
+			forgotimproved_medium_art
+			forgotimproved_medium_spaa
+		}
+
+	}
+
+	forgotimproved_medium_td = {
+
+		enable_equipments = {
+			forgotmedium_tank_destroyer_equipment_2
+		}
+
+		dependencies = {
+			improved_medium_tdx = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1940
+
+	}
+
+	forgotimproved_medium_art = {
+
+		enable_equipments = {
+			forgotmedium_tank_artillery_equipment_2
+		}
+
+		dependencies = {
+			improved_medium_artx = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1940
+
+	}
+
+	forgotimproved_medium_spaa = {
+
+		enable_equipments = {
+			forgotmedium_tank_aa_equipment_2
+		}
+
+		dependencies = {
+			improved_medium_spaax = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1940
+
+	}
+
+	forgotadvanced_medium_tank = { #Panther
+
+		enable_equipments = {
+			forgotmedium_tank_equipment_3
+		}
+
+		dependencies = {
+			advanced_medium_tank_chassis = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1943
+
+		folder = {
+			name = forgotarmour_folder
+			position = { x = 0 y = 10 }
+		}
+
+		sub_technologies = {
+			forgotadvanced_medium_td
+			forgotadvanced_medium_art
+			forgotadvanced_medium_spaa
+		}
+
+	}
+
+	forgotadvanced_medium_td = {
+
+		enable_equipments = {
+			forgotmedium_tank_destroyer_equipment_3
+		}
+
+		dependencies = {
+			advanced_medium_tdx = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1942
+
+	}
+
+	forgotadvanced_medium_art = {
+
+		enable_equipments = {
+			forgotmedium_tank_artillery_equipment_3
+		}
+
+		dependencies = {
+			advanced_medium_artx = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1942
+	}
+
+	forgotadvanced_medium_spaa = {
+
+		enable_equipments = {
+			forgotmedium_tank_aa_equipment_3
+		}
+
+		dependencies = {
+			advanced_medium_spaax = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1942
+
+	}
+	forgotbasic_heavy_tank = { #Grosstraktor
+
+		enable_equipments = {
+			forgotheavy_tank_equipment_1
+		}
+
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = heavy_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				load_oob = "unlock_tanks_heavy"
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		dependencies = {
+			basic_heavy_tank_chassis = 1
+		}
+
+		research_cost = 2
+		start_year = 1934
+
+		folder = {
+			name = forgotarmour_folder
+			position = { x = 4 y = 2 }
+		}
+
+		sub_technologies = {
+			forgotbasic_heavy_td
+			forgotbasic_heavy_art
+			forgotbasic_heavy_spaa
+		}
+
+	}
+
+	forgotbasic_heavy_td = {
+
+		enable_equipments = {
+			forgotheavy_tank_destroyer_equipment_1
+		}
+
+		dependencies = {
+			basic_heavy_tdx = 1
+		}
+
+		research_cost = 0.5
+		start_year = 1934
+
+	}
+
+	forgotbasic_heavy_art = {
+
+		enable_equipments = {
+			forgotheavy_tank_artillery_equipment_1
+		}
+
+		dependencies = {
+			basic_heavy_artx = 1
+		}
+		
+		research_cost = 0.5
+		start_year = 1934
+
+	}
+
+
+	forgotbasic_heavy_spaa = {
+
+		enable_equipments = {
+			forgotheavy_tank_aa_equipment_1
+		}
+
+		dependencies = {
+			basic_heavy_spaax = 1
+		}
+
+		research_cost = 0.5
+		start_year = 1934
+
+	}
+
+	forgotimproved_heavy_tank = { #Tiger
+
+		enable_equipments = {
+			forgotheavy_tank_equipment_2
+		}
+
+		dependencies = {
+			improved_heavy_tank_chassis = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1941
+
+		folder = {
+			name = forgotarmour_folder
+			position = { x = 4 y = 8 }
+		}
+
+		sub_technologies = {
+			forgotimproved_heavy_td
+			forgotimproved_heavy_art
+			forgotimproved_heavy_spaa
+		}
+
+	}
+
+	forgotimproved_heavy_td = {
+
+		enable_equipments = {
+			forgotheavy_tank_destroyer_equipment_2
+		}
+
+		dependencies = {
+			improved_heavy_tdx = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1940
+
+	}
+
+	forgotimproved_heavy_art = {
+
+		enable_equipments = {
+			forgotheavy_tank_artillery_equipment_2
+		}
+
+		dependencies = {
+			improved_heavy_artx = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1940
+
+	}
+
+
+	forgotimproved_heavy_spaa = {
+
+		enable_equipments = {
+			forgotheavy_tank_aa_equipment_2
+		}
+
+		dependencies = {
+			improved_heavy_spaax = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1940
+
+	}
+
+	forgotadvanced_heavy_tank = { #King Tiger
+
+		enable_equipments = {
+			forgotheavy_tank_equipment_3
+		}
+
+		dependencies = {
+			advanced_heavy_tank_chassis = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1943
+
+		folder = {
+			name = forgotarmour_folder
+			position = { x = 4 y = 10 }
+		}
+
+		sub_technologies = {
+			forgotadvanced_heavy_td
+			forgotadvanced_heavy_art
+			forgotadvanced_heavy_spaa
+		}
+
+	}
+
+	forgotadvanced_heavy_td = {
+
+		enable_equipments = {
+			forgotheavy_tank_destroyer_equipment_3
+		}
+
+		dependencies = {
+			advanced_heavy_tdx = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1942
+
+	}
+
+	forgotadvanced_heavy_art = {
+
+		enable_equipments = {
+			forgotheavy_tank_artillery_equipment_3
+		}
+
+		dependencies = {
+			advanced_heavy_artx = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1942
+
+	}
+
+	forgotadvanced_heavy_spaa = {
+
+		enable_equipments = {
+			forgotheavy_tank_aa_equipment_3
+		}
+
+		dependencies = {
+			advanced_heavy_spaax = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1942
+
+	}
+
+	forgotsuper_heavy_tank = { #Maus
+
+		enable_equipments = {
+			forgotsuper_heavy_tank_equipment_1
+		}
+
+		dependencies = {
+			super_heavy_tank_chassis = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1943
+
+		folder = {
+			name = forgotarmour_folder
+			position = { x = 8 y = 10 }
+		}
+
+		sub_technologies = {
+			forgotsuper_heavy_td
+			forgotsuper_heavy_art
+			forgotsuper_heavy_spaa
+		}
+
+	}
+
+	forgotsuper_heavy_td = {
+
+		enable_equipments = {
+			forgotsuper_heavy_tank_destroyer_equipment_1
+		}
+
+		dependencies = {
+			super_heavy_tdx = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1942
+
+		categories = {
+			armor
+		}
+	}
+
+	forgotsuper_heavy_art = {
+
+		enable_equipments = {
+			forgotsuper_heavy_tank_artillery_equipment_1
+		}
+
+		dependencies = {
+			super_heavy_artx = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1942
+
+	}
+
+	forgotsuper_heavy_spaa = {
+
+		enable_equipments = {
+			forgotsuper_heavy_tank_aa_equipment_1
+		}
+
+		dependencies = {
+			super_heavy_spaax = 1
+		}
+
+		research_cost = 0.01
+		start_year = 1942
+
+	}
+
+}
