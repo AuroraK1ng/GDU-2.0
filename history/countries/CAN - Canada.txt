@@ -426,7 +426,36 @@ if = {
 		}
 	}
 }
-
+create_field_marshal = {
+	name = "Charles Foulkes AFRICANUS"
+	gfx = "AFRICA_GFX_CAN_charles_foulkes"
+	traits = { brilliant_strategist organizer desert_fox infantry_leader old_guard skilled_staffer politically_connected}
+	skill = 5
+		attack_skill = 4
+		defense_skill = 5
+		planning_skill = 2
+		logistics_skill = 6
+}
+create_corps_commander = {
+	name = "Georges Vanier AFRICANUS"
+	picture = "AFRICA_Portrait_CAN_Georges_Vanier.dds"
+	traits = { skilled_staffer old_guard organizer politically_connected desert_fox trait_cautious trait_engineer panzer_leader} 
+	skill = 4
+		attack_skill = 4
+		defense_skill = 3
+		planning_skill = 5
+		logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Kenneth Stuart AFRICANUS"
+	picture = "AFRICA_Portrait_CAN_Kenneth_Stuart.dds"
+	traits = { desert_fox career_officer trickster infantry_leader cavalry_officer panzer_leader  skilled_staffer old_guard trait_cautious brilliant_strategist}
+	skill = 5
+		attack_skill = 9
+		defense_skill = 2
+		planning_skill = 4
+		logistics_skill = 2
+}
 # 1939 Start #
 1939.1.1 = {
 	if = {
