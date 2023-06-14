@@ -1,4 +1,53 @@
-
+GUIDES = {
+FRA_GUIDE = {
+	icon = hol_gateway_to_europe
+	allowed = {
+			original_tag = FRA
+		}
+	available = {
+			original_tag = FRA
+		}
+		cost = 0
+	visible = {
+			tag = FRA
+		}
+	complete_effect = {
+		country_event = { id = gduevents.89 }	
+		}
+	}
+HUN_GUIDE = {
+	icon = hol_gateway_to_europe
+	allowed = {
+			original_tag = HUN
+		}
+	available = {
+			original_tag = HUN
+		}
+		cost = 0
+	visible = {
+			tag = HUN
+		}
+	complete_effect = {
+		country_event = { id = gduevents.90 }	
+		}
+	}
+ROM_GUIDE = {
+	icon = hol_gateway_to_europe
+	allowed = {
+			original_tag = ROM
+		}
+	available = {
+			original_tag = ROM
+		}
+		cost = 0
+	visible = {
+			tag = ROM
+		}
+	complete_effect = {
+		country_event = { id = gduevents.91 }	
+		}
+	}
+}
 USA_foreign_politics = {
 
 	GDU_USA_BombayNavalBase = {
