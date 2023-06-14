@@ -133,7 +133,7 @@ focus_tree = {
 		prerequisite = { focus = GER_rhineland }
 		x = 2
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 12
 		}
@@ -429,10 +429,10 @@ focus_tree = {
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = GER_industrial_effort_2IC }
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -447,10 +447,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = GER_industrial_effort_2IC
@@ -463,10 +463,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = GER_industrial_effort_2IC
@@ -479,10 +479,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = GER_industrial_effort_2IC
@@ -508,10 +508,10 @@ focus_tree = {
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = GER_industrial_effort_2_2IC }
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -527,10 +527,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = GER_industrial_effort_2_2IC
@@ -543,10 +543,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = GER_industrial_effort_2_2IC
@@ -559,10 +559,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = GER_industrial_effort_2_2IC
@@ -873,10 +873,10 @@ activate_mission = GER_relocate_industry_from_friesland
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = GER_german_war_economy }
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -891,10 +891,10 @@ activate_mission = GER_relocate_industry_from_friesland
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = GER_german_war_economy
@@ -907,10 +907,10 @@ activate_mission = GER_relocate_industry_from_friesland
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = GER_german_war_economy
@@ -923,10 +923,10 @@ activate_mission = GER_relocate_industry_from_friesland
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = GER_german_war_economy
@@ -939,10 +939,10 @@ activate_mission = GER_relocate_industry_from_friesland
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = GER_german_war_economy
@@ -955,17 +955,43 @@ activate_mission = GER_relocate_industry_from_friesland
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = GER_german_war_economy
 			}
 		}
 	}
+	
+	
+	focus = {
+		id = Victory_in_France 
+		text = "Victory in France"
+		icon = GFX_GER_red_baron
+		prerequisite = { focus = GER_german_war_economy }
+		x = 1
+		y = 5
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		available {
+			date > 1940.1.1
+			date < 1941.1.1
+		}
+		
+		available_if_capitulated = yes
 
+		completion_reward = {
+			add_timed_idea = {
+				idea = EFR_Reparations days = 365
+			}
+		}
+	}
+	
 	focus = {
 		id = GER_air_innovation
 		icon = GFX_goal_luftwaffe
@@ -1268,38 +1294,38 @@ activate_mission = GER_relocate_industry_from_friesland
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = GER_integrate_war_economies_1 }
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
 			every_state = {
 				limit = { has_state_flag = GER_integrate_war_economies_2 }
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
 			HUN = {
 				every_state = {
 					limit = { has_state_flag = GER_integrate_war_economies_1 }
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 3
 						instant_build = yes
 					}
 				}
 				every_state = {
 					limit = { has_state_flag = GER_integrate_war_economies_2 }
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -1307,19 +1333,19 @@ activate_mission = GER_relocate_industry_from_friesland
 			ROM = {
 				every_state = {
 					limit = { has_state_flag = GER_integrate_war_economies_1 }
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 3
 						instant_build = yes
 					}
 				}
 				every_state = {
 					limit = { has_state_flag = GER_integrate_war_economies_2 }
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -1342,10 +1368,10 @@ activate_mission = GER_relocate_industry_from_friesland
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 3
 						instant_build = yes
 					}
 					set_state_flag = GER_integrate_war_economies_1
@@ -1358,10 +1384,10 @@ activate_mission = GER_relocate_industry_from_friesland
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 3
 						instant_build = yes
 					}
 					set_state_flag = GER_integrate_war_economies_2
@@ -1378,10 +1404,10 @@ activate_mission = GER_relocate_industry_from_friesland
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 3
 						instant_build = yes
 					}
 					set_state_flag = GER_integrate_war_economies_1
@@ -1394,10 +1420,10 @@ activate_mission = GER_relocate_industry_from_friesland
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 3
 						instant_build = yes
 					}
 					set_state_flag = GER_integrate_war_economies_2
@@ -1416,10 +1442,10 @@ activate_mission = GER_relocate_industry_from_friesland
 								include_locked = yes
 							}
 						}
-						add_extra_state_shared_building_slots = 2
+						add_extra_state_shared_building_slots = 3
 						add_building_construction = {
 							type = arms_factory
-							level = 2
+							level = 3
 							instant_build = yes
 						}
 						set_state_flag = GER_integrate_war_economies_1
@@ -1432,10 +1458,10 @@ activate_mission = GER_relocate_industry_from_friesland
 								include_locked = yes
 							}
 						}
-						add_extra_state_shared_building_slots = 2
+						add_extra_state_shared_building_slots = 3
 						add_building_construction = {
 							type = arms_factory
-							level = 2
+							level = 3
 							instant_build = yes
 						}
 						set_state_flag = GER_integrate_war_economies_2
@@ -1455,10 +1481,10 @@ activate_mission = GER_relocate_industry_from_friesland
 								include_locked = yes
 							}
 						}
-						add_extra_state_shared_building_slots = 2
+						add_extra_state_shared_building_slots = 3
 						add_building_construction = {
 							type = arms_factory
-							level = 2
+							level = 3
 							instant_build = yes
 						}
 						set_state_flag = GER_integrate_war_economies_1
@@ -1471,10 +1497,10 @@ activate_mission = GER_relocate_industry_from_friesland
 								include_locked = yes
 							}
 						}
-						add_extra_state_shared_building_slots = 2
+						add_extra_state_shared_building_slots = 3
 						add_building_construction = {
 							type = arms_factory
-							level = 2
+							level = 3
 							instant_build = yes
 						}
 						set_state_flag = GER_integrate_war_economies_2
@@ -2186,35 +2212,17 @@ activate_mission = GER_relocate_industry_from_friesland
 			add_war_support = 0.20
 			remove_ideas = sour_loser
 			add_ideas = triumphant_will
-			add_state_core = 839
-
-hidden_effect = {
-ROM = {
-add_timed_idea = { idea = CDE days = 365 }
-}
-BUL = {
-add_timed_idea = { idea = CDE days = 365 }
-}
-HUN = {
-add_timed_idea = { idea = CDE days = 365 }
-}
-
-
-}
-
-add_timed_idea = { idea = CDE days = 365 }
-			
-55 = { add_building_construction = { type = bunker province = 6488 level = 7 instant_build = yes } }
-55 = { add_building_construction = { type = bunker province = 3574 level = 7 instant_build = yes } }
-838 = { add_building_construction = { type = bunker province = 6568 level = 7 instant_build = yes } }
-838 = { add_building_construction = { type = bunker province = 3530 level = 7 instant_build = yes } }
-838 = { add_building_construction = { type = bunker province = 6488 level = 7 instant_build = yes } }
-55 = { add_building_construction = { type = bunker province = 6444 level = 7 instant_build = yes } }
-51 = { add_building_construction = { type = bunker province = 529 level = 7 instant_build = yes } }
-51 = { add_building_construction = { type = bunker province = 6570 level = 7 instant_build = yes } }
-51 = { add_building_construction = { type = bunker province = 6469 level = 7 instant_build = yes } }
-51 = { add_building_construction = { type = bunker province = 3512 level = 7 instant_build = yes } }
-
+			add_state_core = 839			
+		55 = { add_building_construction = { type = bunker province = 6488 level = 7 instant_build = yes } }
+		55 = { add_building_construction = { type = bunker province = 3574 level = 7 instant_build = yes } }
+		838 = { add_building_construction = { type = bunker province = 6568 level = 7 instant_build = yes } }
+		838 = { add_building_construction = { type = bunker province = 3530 level = 7 instant_build = yes } }
+		838 = { add_building_construction = { type = bunker province = 6488 level = 7 instant_build = yes } }
+		55 = { add_building_construction = { type = bunker province = 6444 level = 7 instant_build = yes } }
+		51 = { add_building_construction = { type = bunker province = 529 level = 7 instant_build = yes } }
+		51 = { add_building_construction = { type = bunker province = 6570 level = 7 instant_build = yes } }
+		51 = { add_building_construction = { type = bunker province = 6469 level = 7 instant_build = yes } }
+		51 = { add_building_construction = { type = bunker province = 3512 level = 7 instant_build = yes } }
 	}
 }
 
@@ -2232,7 +2240,16 @@ add_timed_idea = { idea = CDE days = 365 }
 		cost = 5
 
 		completion_reward = {
-
+			ROM = {
+				add_timed_idea = { idea = wartime_propaganda days = 365 }
+			}
+			BUL = {
+				add_timed_idea = { idea = wartime_propaganda days = 365 }
+			}
+			HUN = {
+				add_timed_idea = { idea = wartime_propaganda days = 365 }
+			}
+			add_timed_idea = { idea = wartime_propaganda days = 365 }			
 		}
 	}
 
@@ -2255,26 +2272,41 @@ add_timed_idea = { idea = CDE days = 365 }
 
 		completion_reward = {
 			sound_effect = artillerieberlin
-			
+			GER = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_2 amount = 100000 producer = GER
+				} 
+				add_equipment_to_stockpile = {
+					type = medium_tank_equipment_3 amount = 10000 producer = GER
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = GER_Trust_Steiner
 		icon = GFX_ger_goal_heavy_tank
-		prerequisite = { focus = GER_hitlerjugend focus = GER_volksturm }
+		prerequisite = { focus = GER_Summon_Steiner }
 
-		cancel = {
-			NOT = { country_exists = SOV }
-		}
-		x = 0
-		y = 5
-		relative_position_id = GER_reequip_INF
-		cost = 5
-
+			cancel = {
+				NOT = { country_exists = SOV }
+			}
+			x = 0
+			y = 5
+			relative_position_id = GER_reequip_INF
+			cost = 5
 		completion_reward = {
-				sound_effect = untergang	
-			
+			sound_effect = untergang
+			create_corps_commander = {
+				name = "Felix Steiner"
+				picture = "portrait_ger_felix_steiner.dds"
+				traits = { trickster panzer_leader ranger trait_engineer substance_abuser career_officer trait_reckless combined_arms_expert urban_assault_specialist}
+				skill = 8
+				attack_skill = 10
+				defense_skill = 10
+				planning_skill = 10
+				logistics_skill = 10
+			}
 		}
 	}
 
@@ -2804,7 +2836,7 @@ add_timed_idea = { idea = CDE days = 365 }
 		mutually_exclusive = { focus = GER_naval_rearmament_alt }		
 		x = 25
 		y = 1
-		cost = 2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2830,7 +2862,7 @@ add_timed_idea = { idea = CDE days = 365 }
 		mutually_exclusive = { focus = GER_naval_rearmament }
 		x = 27
 		y = 1
-		cost = 2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2861,37 +2893,37 @@ add_timed_idea = { idea = CDE days = 365 }
 		completion_reward = {
 			GER = { add_ideas = GER_limited_navy }		
 			56 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = GER_naval_rearmament_1dockyard
 			}
 			833 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = GER_naval_rearmament_1dockyard
 			}
 			58 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = GER_naval_rearmament_1dockyard
 			}
 			834 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = GER_naval_rearmament_1dockyard
@@ -3493,7 +3525,7 @@ add_timed_idea = { idea = CDE days = 365 }
 		completion_reward = {
 			army_experience = 100
 			set_technology = {
-				improved_heavy_tank_chassis = 1
+				improved_medium_tank_chassis = 1
 			}
 
 		202 = {
@@ -3660,7 +3692,7 @@ add_timed_idea = { idea = CDE days = 365 }
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_ideas = GER_foreign_ss1
 			GER = { add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 20000 producer = GER } }
 			hidden_effect = {
 				sound_effect = hitlerjugend
@@ -3686,7 +3718,7 @@ add_timed_idea = { idea = CDE days = 365 }
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_ideas = GER_foreign_ss2
 			GER = { add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 20000 producer = GER } }			
 		}
 	}

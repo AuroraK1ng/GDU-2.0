@@ -230,7 +230,23 @@ ideas = {
 			removal_cost = -1
 		}
 
+		EFR_Reparations = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = EFR_STO
 
+			equipment_bonus = {	
+				improved_small_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}								
+			}
+		}
 
 		GER_reequip_INF_idea = {
 			picture = smallarms_factory
@@ -310,43 +326,43 @@ org_loss_when_moving = 0.10
 			equipment_bonus = {	
 				small_plane_airframe  = {
 					instant = yes
-					build_cost_ic = -0.005
+					build_cost_ic = -0.015
 				}
 				rocket_interceptor_equipment = {
 					instant = yes
-					build_cost_ic = -0.005
+					build_cost_ic = -0.015
 				}
 				medium_plane_fighter_airframe = {
 					instant = yes
-					build_cost_ic = -0.005
+					build_cost_ic = -0.015
 				}					
 				large_plane_airframe  = {
 					instant = yes
-					build_cost_ic = -0.005
+					build_cost_ic = -0.015
 				}				
 				medium_plane_airframe = {
 					instant = yes
-					build_cost_ic = -0.005
+					build_cost_ic = -0.015
 				}
 				large_plane_airframe = {
 					instant = yes
-					build_cost_ic = -0.005
+					build_cost_ic = -0.015
 				}
 				transport_plane_equipment = {
 					instant = yes
-					build_cost_ic = -0.005
+					build_cost_ic = -0.015
 				}
 				guided_missile_equipment = {
 					instant = yes
-					build_cost_ic = -0.005
+					build_cost_ic = -0.015
 				}
 				cv_small_plane_airframe  = {
 					instant = yes
-					build_cost_ic = -0.005
+					build_cost_ic = -0.015
 				}
 				small_plane_naval_bomber_airframe  = {
 					instant = yes
-					build_cost_ic = -0.005
+					build_cost_ic = -0.015
 				}								
 			}
 		}
@@ -363,15 +379,15 @@ org_loss_when_moving = 0.10
 			equipment_bonus = {	
 				armor = {
 					instant = yes
-					build_cost_ic = -0.005
+					build_cost_ic = -0.025
 				}
 				motorized_equipment = {
 					instant = yes
-					build_cost_ic = -0.005
+					build_cost_ic = -0.025
 				}
 				mechanized_equipment = {
 					instant = yes
-					build_cost_ic = -0.005
+					build_cost_ic = -0.025
 				}
 			}
 			
@@ -408,7 +424,7 @@ org_loss_when_moving = 0.10
 			}
 
 			modifier = {
-				production_speed_dockyard_factor = 0.05		
+				production_speed_dockyard_factor = 0.25		
 			}
 
 			picture = generic_coastal_defense_ships
@@ -913,10 +929,10 @@ org_loss_when_moving = 0.10
 			    conscription_factor = 0.025
 				political_power_gain = 1
 				drift_defence_factor = 0.5
-				army_core_defence_factor = 0.3
-				army_core_attack_factor = 0.3
-				army_attack_factor = -0.2
-				army_defence_factor = -0.2			
+				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.15
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05			
 			}		
 			
 		}
@@ -1001,6 +1017,38 @@ org_loss_when_moving = 0.10
 		}
 
 		GER_foreign_ss = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = Waffen_SS
+
+         	modifier = {
+            	conscription = 0.01
+			}
+		}
+		GER_foreign_ss1 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = Waffen_SS
+
+         	modifier = {
+            	conscription = 0.01
+			}
+		}
+		GER_foreign_ss2 = {
 			removal_cost = -1
 			allowed = {
 				always = no # Unlocked via focus

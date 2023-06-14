@@ -105,13 +105,13 @@ characters={
 		}
 		
 		field_marshal = { #13/13
-			traits = {  defensive_doctrine trait_cautious career_officer inflexible_strategist   }
-	skill = 5
+			traits = {  brilliant_strategist trait_cautious career_officer inflexible_strategist politically_connected infantry_leader organizer }
+	skill = 6
 	id = 1
-	attack_skill = 5
-	defense_skill = 5
-	planning_skill = 5
-	logistics_skill = 4
+	attack_skill = 6
+	defense_skill = 8
+	planning_skill = 8
+	logistics_skill = 5
 			
 		}
 	}
@@ -125,13 +125,13 @@ characters={
 			}
 		}
 		field_marshal={
-			traits = {  offensive_doctrine armor_officer panzer_leader ranger }
-	skill = 5
+			traits = { brilliant_strategist offensive_doctrine armor_officer panzer_leader ranger trait_engineer urban_assault_specialist organizer}
+	skill = 8
 	id = 2
-	attack_skill = 6
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 3
+	attack_skill = 7
+	defense_skill = 7
+	planning_skill = 6
+	logistics_skill = 6
 		}
 	}
 
@@ -215,13 +215,13 @@ characters={
 		}
 		
 		corps_commander={ #17/17
-			traits = { offensive_doctrine  brilliant_strategist infantry_leader trickster trait_engineer cavalry_officer }
+			traits = { offensive_doctrine  brilliant_strategist infantry_leader trickster trait_engineer cavalry_officer ranger}
 	skill = 6
 	id = 5
-	attack_skill = 6
-	defense_skill = 6
-	planning_skill = 3
-	logistics_skill = 4
+	attack_skill = 7
+	defense_skill = 7
+	planning_skill = 4
+	logistics_skill = 5
 		}
 	}
 
@@ -247,13 +247,13 @@ characters={
 		}
 		
 		corps_commander={ #17/17
-			traits = { trickster panzer_leader ranger trait_engineer trait_reckless brilliant_strategist career_officer combined_arms_expert infantry_officer media_personality war_hero}
-	skill = 6
+			traits = { trickster panzer_leader ranger trait_engineer trait_reckless brilliant_strategist career_officer combined_arms_expert infantry_officer media_personality war_hero urban_assault_specialist}
+	skill = 8
 	id = 6
-	attack_skill = 6
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 5
+	attack_skill = 9
+	defense_skill = 5
+	planning_skill = 8
+	logistics_skill = 8
 		}
 	}
 
@@ -304,13 +304,13 @@ characters={
 			}
 		}
 		corps_commander={ #17/17
-			traits = { offensive_doctrine career_officer old_guard harsh_leader}
-	skill = 5
+			traits = { brilliant_strategist offensive_doctrine career_officer old_guard harsh_leader substance_abuser}
+	skill = 8
 	id = 9
-	attack_skill = 4
-	defense_skill = 5
-	planning_skill = 3
-	logistics_skill = 7
+	attack_skill = 8
+	defense_skill = 8
+	planning_skill = 8
+	logistics_skill = 8
 		}
 	}
 
@@ -323,12 +323,12 @@ characters={
 			}
 		}
 		field_marshal={
-			traits={ brilliant_strategist trait_cautious politically_connected defensive_doctrine }
-			skill=3
-			attack_skill=2
-			defense_skill=4
-			planning_skill=2
-			logistics_skill=2
+			traits={ brilliant_strategist trait_cautious career_officer inflexible_strategist politically_connected infantry_leader organizer }
+			skill=6
+			attack_skill=5
+			defense_skill=5
+			planning_skill=5
+			logistics_skill=10
 			legacy_id=10
 		}
 	}
@@ -454,10 +454,10 @@ characters={
 		}
 		corps_commander={ #16/17
 			traits = { war_hero infantry_officer  old_guard infantry_leader trait_engineer fortress_buster hill_fighter }
-	skill = 5
+	skill = 6
 	id = 17
 	attack_skill = 6
-	defense_skill = 4
+	defense_skill = 10
 	planning_skill = 3
 	logistics_skill = 3
 		}
@@ -641,10 +641,10 @@ characters={
 		}
 		
 		corps_commander={
-			traits = { media_personality old_guard trait_cautious career_officer war_hero inflexible_strategist organizer skilled_staffer trait_mountaineer}
+			traits = { media_personality old_guard trait_cautious career_officer war_hero inflexible_strategist organizer infantry_leader skilled_staffer trait_mountaineer}
 	skill = 6
 	id = 32
-	attack_skill = 4
+	attack_skill = 7
 	defense_skill = 6
 	planning_skill = 3
 	logistics_skill = 5
@@ -691,24 +691,6 @@ characters={
 		}
 	}
 
-	GER_felix_steiner={
-		name=GER_felix_steiner
-		portraits={
-			army={
-				large="GFX_portrait_ger_felix_steiner"
-				small=GFX_portrait_GER_felix_steiner_small
-			}
-		}
-		field_marshal = { #13/13
-		traits = { commando panzer_leader infantry_officer harsh_leader war_hero politically_connected substance_abuser}
-    skill = 4
-    id = 35
-    attack_skill = 3
-    defense_skill = 3
-    planning_skill = 4
-    logistics_skill = 3
-	}
-	}
 
 	GER_karl_donitz={
 		name=GER_karl_donitz
@@ -1119,7 +1101,7 @@ characters={
 				original_tag = GER
 			}
 			traits = {
-				army_chief_offensive_2
+				army_chief_offensive_3
 			}
 			cost = 150
 			ai_will_do = {
@@ -1145,7 +1127,7 @@ characters={
 				has_completed_focus = GER_army_innovation
 			}
 			traits = {
-				army_chief_maneuver_2
+				army_chief_maneuver_3
 			}
 			cost = 150
 			ai_will_do = {
@@ -1250,7 +1232,7 @@ characters={
 				original_tag = GER
 			}
 			traits = {
-				army_infantry_2
+				army_infantry_3
 			}
 			cost = 150
 			ai_will_do = {
