@@ -217,55 +217,55 @@ focus_tree = {
 				}
 			}
 			206 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = SOV_finish_five_year_plan_2IC
 			}
 			192 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = SOV_finish_five_year_plan_2IC
 			}
 			226 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = SOV_finish_five_year_plan_2IC
 			}
 			202 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = SOV_finish_five_year_plan_2IC
 			}
 			568 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = SOV_finish_five_year_plan_2IC
 			}
 			578 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = SOV_finish_five_year_plan_2IC
@@ -792,8 +792,8 @@ focus_tree = {
 				type = annex_everything
 				target = JAP
 			}
+		}
 	}
-}
 
 	focus = {
 		id = SOV_proclaim_victory_over_fascism
@@ -885,21 +885,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-        available = {
-			date > 1941.10.1
-			
-		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
 			set_technology = { jet_engines = 1 }
-			add_tech_bonus = {
-				name = fighter3_bonus
-				bonus = 0.25
-				uses = 1
-				technology = advanced_small_airframe
-			}			
+			set_technology = { advanced_small_airframe = 1 }			
 			add_tech_bonus = {
 				name = jet_fighter_bonus
 				bonus = 1.5
@@ -930,6 +921,9 @@ focus_tree = {
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		completion_reward = {
+			set_technology = {
+				breakthrough_priority = 1
+			}
 			add_tech_bonus = {
 				name = nkvd_4
 				bonus = 2.0
@@ -1320,19 +1314,6 @@ focus_tree = {
 			
 			add_ideas = general_winter_idea
 			custom_effect_tooltip = GDU_spacer
-			add_tech_bonus = {
-				name = moscow_landdoc_7
-				bonus = 215.00
-				uses = 1
-				technology = volkssturm
-				technology = firebrigades
-				technology = combined_arms
-				technology = forward_observers
-				technology = assault_breakthrough
-				technology = night_assault_tactics
-				technology = breakthrough_priority
-				technology = guerilla_warfare
-			}
 			219 = {
 				custom_effect_tooltip = SOV_defense_of_moscow_forts_GDU
 				hidden_effect = {
@@ -1423,24 +1404,24 @@ focus_tree = {
 				name = "Georgy Zhukov"
 				id = 410
 				picture = "Portrait_Soviet_Gregory_Zhukov.dds"
-				traits = { winter_specialist armor_officer media_personality brilliant_strategist harsh_leader politically_connected panzer_leader trait_engineer}
+				traits = { winter_specialist career_officer media_personality brilliant_strategist harsh_leader politically_connected panzer_leader trait_engineer trait_ranger}
 				skill = 6
 
 
-				attack_skill = 6
-				defense_skill = 4
-				planning_skill = 4
-				logistics_skill = 5
+				attack_skill = 8
+				defense_skill = 5
+				planning_skill = 5
+				logistics_skill = 6
 			}
 
 		create_field_marshal = {
 		name = "Boris Shaposhnikov"
 			picture = "Portrait_Soviet_Boris_Shaposhnikov.dds"
-		traits = { winter_specialist trait_cautious career_officer old_guard infantry_officer organizer defensive_doctrine politically_connected organizer}
+		traits = { winter_specialist trait_cautious career_officer old_guard infantry_officer infantry_leader organizer defensive_doctrine politically_connected organizer}
 		skill = 5
 
-		attack_skill = 2
-		defense_skill = 4
+		attack_skill = 5
+		defense_skill = 5
 		planning_skill = 3
 		logistics_skill = 7
 		}
@@ -1450,14 +1431,14 @@ focus_tree = {
 		id = 408
 			picture = "Portrait_Soviet_Ivan_Konev.dds"
 		traits = { armor_officer harsh_leader politically_connected panzer_leader trait_reckless ranger trickster }
-		skill = 5
+		skill = 6
 
 
 
-		attack_skill = 4
-		defense_skill = 7
-		planning_skill = 5
-		logistics_skill = 4
+		attack_skill = 9
+		defense_skill = 1
+		planning_skill = 9
+		logistics_skill = 1
 		}
 
 		create_corps_commander = {
@@ -1466,10 +1447,10 @@ focus_tree = {
 		traits = { winter_specialist commando infantry_officer politically_connected infantry_leader media_personality war_hero brilliant_strategist }
 		skill = 5
 
-		attack_skill = 4
-		defense_skill = 4
-		planning_skill = 3
-		logistics_skill = 3
+		attack_skill = 6
+		defense_skill = 6
+		planning_skill = 4
+		logistics_skill = 4
 		}
 
 		create_corps_commander = {
@@ -1487,7 +1468,6 @@ focus_tree = {
 
 		create_corps_commander = {
 		name = "Nikolai Berzarin"
-			picture = "Portrait_Soviet_Nikolai_Berzarin.dds"
 		traits = { infantry_officer trait_mountaineer skilled_staffer old_guard trait_cautious }
 		skill = 5
 
@@ -1499,7 +1479,6 @@ focus_tree = {
 
 		create_corps_commander = {
 		name = "Alexander Gorbatov"
-			picture = "Portrait_Soviet_Alexander_Gorbatov.dds"
 		traits = { career_officer cavalry_officer harsh_leader trait_reckless infantry_leader }
 		skill = 5
 
@@ -1512,13 +1491,13 @@ focus_tree = {
 		create_corps_commander = {
 		name = "Dmitry Lelyushenko"
 			picture = "Portrait_Soviet_Dmitri_Danilovich_Lelyushenko.dds"
-		traits = { armor_officer trait_reckless panzer_leader harsh_leader ranger trickster  }
-		skill = 5
+		traits = { armor_officer trait_reckless panzer_leader harsh_leader ranger trickster swamp_fox }
+		skill = 6
 
-		attack_skill = 5
+		attack_skill = 7
 		defense_skill = 4
 		planning_skill = 6
-		logistics_skill = 1
+		logistics_skill = 3
 		}
 		create_corps_commander = {
 		name = "Rodion Malinovsky"
@@ -1558,30 +1537,21 @@ focus_tree = {
 		relative_position_id = SOV_move_industry_to_urals
 		x = 0
 		y = 3
-		cost = 42.9
+		cost = 35
 		ai_will_do = {
 			factor = 100
 		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
         completion_reward = {
+			set_technology = {
+				continuous_offensive = 1
+			}
 			custom_effect_tooltip = SOV_red_army_resurgent_tooltip
 			country_event = gduevents.5
 			swap_ideas = {
 				remove_idea = SOV_war_for_communism
 				add_idea = great_patriotic_war
-			}
-			add_tech_bonus = {
-				name = stalingrad_landdoc_9
-				bonus = 215.00
-				uses = 1
-				technology = modern_blitzkrieg
-				technology = werwolf_guerillas
-				technology = air_land_battle
-				technology = shock_and_awe
-				technology = c3i_theory
-				technology = infiltration_in_depth
-				technology = continuous_offensive
 			}
 			if = {
 				limit = {
@@ -1633,27 +1603,27 @@ focus_tree = {
 		name = "Konstantin Rokossovsky"
 		id = 402
 			picture = "Portrait_Soviet_Konstantin_Rokossovsky.dds"
-		traits = {  armor_officer panzer_leader trait_cautious brilliant_strategist harsh_leader trickster panzer_expert winter_specialist expert_improviser trait_engineer war_hero}
-		skill = 6
+		traits = {  armor_officer panzer_leader trait_cautious brilliant_strategist harsh_leader trickster panzer_expert winter_specialist expert_improviser trait_engineer war_hero trait_ranger}
+		skill = 8
 
-		attack_skill = 6
-		defense_skill = 5
-		planning_skill = 5
-		logistics_skill = 3
+		attack_skill = 8
+		defense_skill = 7
+		planning_skill = 7
+		logistics_skill = 7
 		}
 
 		create_corps_commander = {
 		name = "Aleksandr Vasilevsky"
 		id = 407
 			picture = "Portrait_Soviet_Aleksandr_Vasilevsky.dds"
-		traits = { winter_specialist armor_officer politically_connected trait_cautious harsh_leader skilled_staffer panzer_leader organizer}
-		skill = 6
+		traits = { winter_specialist armor_officer politically_connected trait_cautious harsh_leader skilled_staffer panzer_leader organizer trait_ranger}
+		skill = 8
 
 
-		attack_skill = 4
-		defense_skill = 3
-		planning_skill = 8
-		logistics_skill = 4
+		attack_skill = 5
+		defense_skill = 10
+		planning_skill = 5
+		logistics_skill = 10
 		}
 
 		create_field_marshal = {
@@ -1662,10 +1632,10 @@ focus_tree = {
 		traits = { winter_specialist brilliant_strategist infantry_leader old_guard career_officer ranger skilled_staffer}
 		skill = 6
 
-		attack_skill = 6
+		attack_skill = 7
 		defense_skill = 3
 		planning_skill = 6
-		logistics_skill = 1
+		logistics_skill = 6
 		}
 			}
 		}
@@ -1736,10 +1706,10 @@ focus_tree = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 6
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 6
 						instant_build = yes
 					}
 					set_state_flag = SOV_production_effort_2AF
@@ -1755,10 +1725,10 @@ focus_tree = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 6
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 6
 						instant_build = yes
 					}
 					set_state_flag = SOV_production_effort_2AF
@@ -1788,10 +1758,10 @@ focus_tree = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 6
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 6
 						instant_build = yes
 					}
 					set_state_flag = SOV_production_effort_2AF
@@ -1807,10 +1777,10 @@ focus_tree = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 6
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 6
 						instant_build = yes
 					}
 					set_state_flag = SOV_production_effort_2AF
@@ -1902,7 +1872,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = SOV_finish_five_year_plan
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}
@@ -1994,7 +1964,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		    army_experience = 700
+		    army_experience = 200
 			add_tech_bonus = {
 				bonus = 1.7
 				uses = 1
@@ -2113,8 +2083,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			set_technology = {
+				mechanized_wave = 1
+			}
 			add_research_slot = 1
-		582 = {
+			582 = {
 					add_resource = {
 						type = tungsten
 						amount = 120
@@ -2133,25 +2106,13 @@ focus_tree = {
 				uses = 1
 				technology = advanced_heavy_tank_chassis
 			}		
-			add_tech_bonus = {
-				name = patriotic_landdoc_8
-				bonus = 215.00
-				uses = 1
-				technology = nd_conscription
-				technology = backhand_blow
-				technology = tactical_control
-				technology = advanced_firebases
-				technology = central_planning
-				technology = attritional_containment
-				technology = mechanized_wave
-			}
-}
+		}
 
 		prerequisite = { focus = SOV_defense_of_moscow }
-	bypass = {
+			bypass = {
 				NOT = { country_exists = ger }
 			}
-	}
+		}
 
 	focus = {
 		id = SOV_aviation_cult
@@ -2198,7 +2159,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 25
+			army_experience = 200
 
 			add_tech_bonus = {
 				name = heavy_armor_tank_cult
@@ -2425,7 +2386,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_anti_fascist_diplomacy
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2630,7 +2591,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_anti_fascist_diplomacy
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -3109,7 +3070,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_stalin_constitution
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -3119,13 +3080,13 @@ focus_tree = {
 		complete_tooltip = {
 			add_ideas = nevskoye_design_bureau
 			navy_experience = 250
-			add_offsite_building = { type = dockyard level = 4 }	
+			add_offsite_building = { type = dockyard level = 10 }	
 		}
 
 		completion_reward = {
 			add_ideas = nevskoye_design_bureau
 			navy_experience = 250
-			add_offsite_building = { type = dockyard level = 4 }	
+			add_offsite_building = { type = dockyard level = 10 }	
 		}
 	}
 	### END BRANCH ###
@@ -3204,7 +3165,7 @@ focus_tree = {
 
 		completion_reward = {
 			
-			army_experience = 20
+			army_experience = 10
 		}
 	}
 
@@ -3300,7 +3261,14 @@ focus_tree = {
 
 		available_if_capitulated = yes
 		completion_reward = {
-			
+			set_technology = {
+				pocket_defence = 1
+				defence_in_depth = 1
+				large_front_operations = 1
+				deep_operations = 1
+				operational_concentration = 1
+				vast_offensives = 1
+			}
 			if = {
 				limit = {
 					SOV = { has_war_with = FIN }
@@ -3348,7 +3316,7 @@ focus_tree = {
 			name = "Nikolai Vatutin"
 				picture = "Portrait_Soviet_Nikolai_Fyodorovich_Vatutin.dds"
 			traits = { winter_specialist infantry_officer trait_reckless trait_engineer infantry_leader trickster }
-			skill = 4
+			skill = 5
 
 			attack_skill = 3
 			defense_skill = 4
@@ -3361,10 +3329,10 @@ focus_tree = {
 		traits = { winter_specialist career_officer brilliant_strategist harsh_leader panzer_leader armor_officer trait_reckless cavalry_officer}
 		skill = 4
 
-		attack_skill = 3
-		defense_skill = 4
+		attack_skill = 6
+		defense_skill = 3
 		planning_skill = 3
-		logistics_skill = 4
+		logistics_skill = 3
 		}
 		create_corps_commander = {
 		name = "Nikandr Chibisov"
@@ -3408,25 +3376,24 @@ focus_tree = {
 	skill = 4
 
 
-	attack_skill = 4
+	attack_skill = 5
 	defense_skill = 5
-	planning_skill = 2
-	logistics_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
 	}
 		create_field_marshal = {
 			name = "Vasily Chuikov"
-			picture = "Portrait_Soviet_Vasily_Chuikov.dds"
 			traits = { winter_specialist brilliant_strategist career_officer infantry_leader panzer_leader trait_engineer urban_assault_specialist trait_cautious}
 			skill = 4
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 3
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
 			logistics_skill = 4
 		}
 	}
 
 
-			army_experience = 1200
+			army_experience = 200
 			add_tech_bonus = {
 				name = USSR_MEME_project
 				bonus = 1.00
