@@ -3,7 +3,7 @@
 oob = "USA_1936"
 
 starting_train_buffer = 5
-
+set_convoys = 800
 set_research_slots = 4
 set_stability = 0.75
 set_war_support = 0
@@ -18,8 +18,46 @@ set_variable = { var = quorum_high value = 58 }
 USA_recalc_congress_icon_frames = yes
 # Starting tech
 set_technology = {
+	early_submarine = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		improved_secondary_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		improved_airplane_launcher = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		early_carrier = 1
+		basic_carrier = 1
+		transport = 1
 	forgotgwtank = 1
+	forgotearly_fighter = 1
+	forgotearly_bomber = 1
 	interwar_artillery = 1
+	gwtank_chassis = 1
+	cv_early_fighterx = 1
+	basic_light_tank_chassis = 1
 		infantry_weapons2 = 1
 		heavy_fighter1x = 1
 		support_weapons = 1
@@ -32,6 +70,9 @@ set_technology = {
 		interwar_antitank = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
+	iw_small_airframe = 1
+	basic_small_airframe = 1
+	iw_medium_airframe = 1
 	tech_recon = 1
 	tech_support = 1		
 	tech_engineers = 1
@@ -142,7 +183,6 @@ create_corps_commander = {
 	planning_skill = 4
 	logistics_skill = 8
 }
-set_convoys = 500
 add_equipment_to_stockpile = {
          type = artillery_equipment_1
          amount = 1900
@@ -301,7 +341,7 @@ add_ideas = {
 	home_of_the_free
 	inexperienced_army
 	GDU_refinery_prebuild_disincentive
-	ernest_king_1
+	
 	
 
 }
