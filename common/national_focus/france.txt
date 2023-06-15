@@ -1249,5 +1249,130 @@ focus_tree = {
 			remove_ideas = FRA_political_violence
 			add_war_support = 0.1
 		}
+	}
+		 	focus = {
+		id = DDay_Focus_Priority
+		icon = GFX_Noras_Eng_DDAY_1
+		prerequisite = {   }
+		mutually_exclusive = {   }
+		x = 16
+		y = 7
+		cost = 10
+		available = { has_completed_focus = FRA_IN_FRE
+				date > 1942.1.1 }
+		available_if_capitulated = yes
+		bypass = {
+
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = USA_expand_the_USMC
+				bonus = 1.0
+				uses = 2
+				technology = marines2
+				technology = marines3
+			}
+		add_tech_bonus = {
+				name = USA_amphibious_operations
+				bonus = 1.0
+				uses = 2
+				category = tp_tech 
+			}
+	}
+}
+	focus = {
+		id = DDay_General_Focus
+		icon = GFX_Noras_Eng_DDAY_2
+		prerequisite = { focus = DDay_Focus_Priority }
+		mutually_exclusive = {   }
+		x = 16
+		y = 8
+		cost = 5
+		available = {   }
+		available_if_capitulated = yes
+		bypass = {
+
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+
+		}
+	}
+
+
+	focus = {
+		id = DDay_Amphibious_Atack
+		icon = GFX_Noras_Eng_DDAY_4
+		prerequisite = { focus = DDay_General_Focus }
+		mutually_exclusive = {   }
+		x = 16
+		y = 9
+		cost = 5
+		available = {  }
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		add_tech_bonus = {
+                name = Amphibious_Bonuses
+                bonus = 1.00
+                uses = 1
+                technology = amphibious_mechanized_infantry_2
+		technology = amphibious_mechanized_infantry
+            }
+
+	}
+}
+	focus = {
+		id = DDay_Artillery_Donbass
+		icon = GFX_Noras_Eng_DDAY_3
+		prerequisite = { focus = DDay_Amphibious_Atack }
+		mutually_exclusive = {   }
+		x = 16
+		y = 10
+		cost = 5
+		available = {  }
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		add_tech_bonus = {
+                name = Donbass_Arta_Ebashit
+                bonus = 1.00
+                uses = 6
+                category = artillery
+            } 
+
+	}
+}
+	focus = {
+		id = DDay_Infantry_Focus
+		icon = GFX_Noras_Eng_DDAY_5
+		prerequisite = { focus = DDay_Artillery_Donbass }
+		mutually_exclusive = {   }
+		x = 16
+		y = 11
+		cost = 5
+		available = {  }
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		add_tech_bonus = {
+                name = Artillery_Bonus
+                bonus = 1.00
+                uses = 2
+                category = infantry_weapons
+            } 
+
+		}
 	}	
 }
