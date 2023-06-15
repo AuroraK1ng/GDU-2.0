@@ -93,7 +93,7 @@ NDefines.NResistance.RESISTANCE_TARGET_MODIFIER_POP_VERY_LOW = 0.0
 
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 400 -- these defines are most likely hourly and not daily , rever to 100 and 1 if desyncs during someone lagging for 10 days
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 720
-NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 3
+NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 12
 NDefines.NGame.AIR_LOG_TIMEOUT_HOURS = 24						-- Vanilla was 24
 NDefines.NResistance.GARRISON_LOG_MAX_MONTHS = 0
 
@@ -262,7 +262,7 @@ NDefines.NMilitary.XP_GAIN_PER_OVERRUN_UNIT = 0.00
 NDefines.NMilitary.XP_GAIN_FOR_SHATTERING = 0.00
 NDefines.NMilitary.CONSTANT_XP_RATIO_FOR_MULTIPLE_LEADERS_IN_SAME_COMBAT = 0.0 -- if there are multiple leaders in same combat, each one gets thisratio + (1-thisratio)/num leaders. amount of xp each general gets scales 1 0.75 0.66 etc for 1 2 3 generals
 
-NDefines.NMilitary.MULTIPLE_COMBATS_PENALTY = -0.01               -- defender penalty if attacked from multiple directions
+NDefines.NMilitary.MULTIPLE_COMBATS_PENALTY = -0.25               -- defender penalty if attacked from multiple directions
 
 NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 6
 
@@ -405,10 +405,10 @@ NDefines.NMilitary.FUEL_CAPACITY_DEFAULT_HOURS = 200               -- default ca
 
 NDefines.NMilitary.DECRYPTION_ADVANTAGE_BONUS = 0.025 -- Reducing all combat modifiers across the board
 NDefines.NMilitary.BASE_FORT_PENALTY = -0.12 					   -- fort penalty 
-NDefines.NNavy.SHORE_BOMBARDMENT_CAP = 0.95
+NDefines.NNavy.SHORE_BOMBARDMENT_CAP = 0.45
 
-NDefines.NNavy.HEAVY_GUN_ATTACK_TO_SHORE_BOMBARDMENT							= 0.002  -- vanilla was 0.1 -- heavy gun attack value is divided by this value * 100 and added to shore bombardment modifier 
-NDefines.NNavy.LIGHT_GUN_ATTACK_TO_SHORE_BOMBARDMENT							= 0.0 -- vanilla was 0.05 -- light gun attack value is divided by this value * 100 and added to shore bombardment modifier 
+NDefines.NNavy.HEAVY_GUN_ATTACK_TO_SHORE_BOMBARDMENT							= 0.009 -- vanilla was 0.1 -- heavy gun attack value is divided by this value * 100 and added to shore bombardment modifier 
+NDefines.NNavy.LIGHT_GUN_ATTACK_TO_SHORE_BOMBARDMENT							= 0.003 -- vanilla was 0.05 -- light gun attack value is divided by this value * 100 and added to shore bombardment modifier 
 
 --- FUEL: We lower naval and air while increasing army 
 
