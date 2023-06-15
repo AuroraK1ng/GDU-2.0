@@ -42,7 +42,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.1
+			add_stability = 0.2
 			add_popularity  = {
 				ideology = fascism
 				popularity = 0.2
@@ -83,7 +83,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = JAP_liaison_conference
 			every_army_leader = {
-				add_planning = 1
+				add_planning = 2
 			}
 		}
 	}
@@ -285,7 +285,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = JAP_intervene_in_china
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -311,13 +311,13 @@ focus_tree = {
 			605 = {
 				add_resource = {
 					type = aluminium
-					amount = 8
+					amount = 20
 				}
 			}
 			325 = {
 				add_resource = {
 					type = aluminium
-					amount = 12
+					amount = 30
 				}
 			}
 			if = {
@@ -859,10 +859,9 @@ focus_tree = {
 		complete_tooltip = {
 
 		}
-
-		
-			army_experience = 30		
-		
+			completion_reward = {
+				army_experience = 300		
+			}
 	}
 
 	focus = {
@@ -897,7 +896,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = JAP_small_arms_modernization
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				category = infantry_weapons
 			}
 		}
@@ -976,20 +975,20 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_armored_divisions
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				technology = improved_medium_tank_chassis
 			}
 			add_tech_bonus = {
 				name = JAP_armored_divisions
-				bonus = 0.75
+				bonus = 1.5
 				uses = 2
 				technology = improved_heavy_tank_chassis
 				technology = advanced_light_tank_chassis
 			}
 			add_tech_bonus = {
 				name = JAP_armored_divisions
-				bonus = 1.0
+				bonus = 2.0
 				uses = 3
 				technology = advanced_medium_tank_chassis
 				technology = advanced_heavy_tank_chassis
@@ -1894,7 +1893,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 6
 					instant_build = yes
 				}
 			}
@@ -1913,10 +1912,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 6
 					instant_build = yes
 				}
 				set_state_flag = JAP_zaibatsus_factories
@@ -2058,10 +2057,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -2075,10 +2074,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -2092,10 +2091,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -2109,10 +2108,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -2151,10 +2150,10 @@ focus_tree = {
 
 		completion_reward = {
 			528 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = synthetic_refinery
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -2962,7 +2961,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = JAP_army_expansion_law
 
-		cost = 5
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
@@ -3345,7 +3344,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -3355,7 +3354,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -3379,10 +3378,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = JAP_new_naval_estimates_DY1
@@ -3397,10 +3396,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = JAP_new_naval_estimates_DY2
