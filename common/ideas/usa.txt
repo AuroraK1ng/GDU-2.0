@@ -799,7 +799,8 @@ ideas = {
 			picture = generic_production_bonus
 
 			modifier = {
-				conversion_cost_civ_to_mil_factor= -0.1
+				conversion_cost_civ_to_mil_factor= -0.25
+				production_speed_arms_factory_factor = 0.1
 			}
 		}
 	
@@ -952,7 +953,12 @@ ideas = {
 			}			
 
 			modifier = {
-				decryption_factor = 0.2
+				civilian_intel_to_others = -10.0
+				navy_intel_to_others = -10.0
+				army_intel_to_others = -10.0
+				navy_intel_factor = 0.2
+				civilian_intel_factor = 0.2
+				army_intel_factor = 0.2
 			}
 		}
 
