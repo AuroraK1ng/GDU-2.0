@@ -235,7 +235,7 @@ foreign_politics = {
 					}
 				}
 				JAP = { country_event = { id = gduevents.51 days = 30 } add_timed_idea = { idea = JAP_pizdets_attack days = 250 }
-						
+				USA = { activate_decision = GDU_USA_navy_debaff	}
 				JAP = {	load_oob = JAP_SPAWN }
 									
 			}
@@ -438,6 +438,33 @@ USA_foreign_politics = {
 					enemy = GER
 				}
 				remove_ideas = airandnavy_idea
+			}
+		}
+	}
+		
+	GDU_USA_navy_debaff = {
+		icon = GFX_decision_usa_congress
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			USA = { has_war_with = JAP }
+		}
+
+		cost = 0
+		fire_only_once = yes
+		days_remove = 60
+		visible = {
+			tag = USA
+		}
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+				remove_ideas = USA_POOP
 			}
 		}
 	}
