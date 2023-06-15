@@ -234,8 +234,11 @@ foreign_politics = {
 						}
 					}
 				}
-				JAP = { country_event = { id = gduevents.51 days = 30 } add_timed_idea = { idea = JAP_pizdets_attack days = 250 }
+				JAP = { country_event = { id = gduevents.51 days = 30 } add_timed_idea = { idea = JAP_pizdets_attack days = 90 }
 				USA = { activate_decision = GDU_USA_navy_debaff	}
+				ENG = {
+				annex_country = { target = INS transfer_troops = yes }
+				}
 				JAP = {	load_oob = JAP_SPAWN }
 									
 			}

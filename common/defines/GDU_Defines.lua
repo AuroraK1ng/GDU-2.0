@@ -25,6 +25,7 @@ NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 0
 NDefines.NIntel.DYNAMIC_INTEL_SOURCE_EVENT_MAXIMUMS = { 200, 200, 200, 200 } --Intel from events was 40
 NDefines.NIntel.DYNAMIC_INTEL_SOURCE_EVENT_ABSOLUTE_MAXIMUMS = { 200, 200, 200, 200 } --Intel from events was 50
 
+NDefines.NIntel.DYNAMIC_INTEL_SOURCE_EVENT_MULT_DECAY = 1.0
 
 
 --- Letting people see some stuff on ledger
