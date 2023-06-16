@@ -1,12 +1,11 @@
 technologies = {
 
 	mobile_warfare = {
-		
+		xp_research_cost = 100
+		xp_research_bonus = 0.5
 		doctrine_name = "MOBILE_WARFARE_DOCTRINE"
 		
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		
 		xor = { superior_firepower trench_warfare mass_assault } 
@@ -26,7 +25,7 @@ xp_research_cost = 100
 		org_loss_when_moving = -0.1
 
 		doctrine = yes	
-		research_cost = 2.25
+		research_cost = 0.0
 
 		folder = {
 			name = land_doctrine_folder
@@ -54,10 +53,9 @@ xp_research_cost = 100
 	}
 	
 	delay = {
-
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		
 		category_all_infantry = {
@@ -103,11 +101,10 @@ xp_research_cost = 100
 
 	
 	elastic_defence = {
-
+		xp_research_cost = 100
+		xp_research_bonus = 0.5
 		land_reinforce_rate = 0.02
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 
 		category_tanks = {
@@ -160,10 +157,9 @@ xp_research_cost = 100
 	}
 	
 	mobile_infantry = { #Branch focuses on infantry, included Motorised and Mechanised.
-
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 	
 		xor={
@@ -252,9 +248,9 @@ xp_research_cost = 100
 	}
 	
 	mass_motorization = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		motorized = {
 			max_organisation = 10
@@ -310,9 +306,9 @@ xp_research_cost = 100
 	}
 	
 	mechanised_offensive = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 
 	motorized = {
@@ -440,9 +436,9 @@ xp_research_cost = 100
 	}
 	
 	armored_spearhead = { #Branch focused on Tanks 
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		category_tanks = {
 			max_organisation = 3
@@ -503,9 +499,9 @@ xp_research_cost = 100
 	}
 	
 	schwerpunk = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		category_tanks = {
 			max_organisation = 2
@@ -572,9 +568,9 @@ xp_research_cost = 100
 	}
 	
 	blitzkrieg = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		category_tanks = {
 			max_organisation = 1
@@ -643,9 +639,9 @@ xp_research_cost = 100
 	}
 	
 	kampfgruppe = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		motorized = {
 			default_morale = 0.2
@@ -725,16 +721,14 @@ xp_research_cost = 100
 	}
 		naval_invasion_tactics_MW = {
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
-		xp_unlock_cost = 0
+		xp_unlock_cost = 20
 		enable_tactic = tactic_advanced_naval_landing
 		enable_tactic = tactic_multi_wave_invasion
 		enable_tactic = tactic_storm_machine_gun_nests
 		enable_tactic = tactic_clear_coastal_bunkers
 		enable_tactic = tactic_basic_naval_invasion_attack
 		doctrine = yes	
-		research_cost = 0.0
+		research_cost = 4.5
 		
 		categories = {
 			land_doctrine
@@ -749,16 +743,14 @@ xp_research_cost = 100
 	}
 	naval_invasion_tactics_MA = {
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
-		xp_unlock_cost = 0
+		xp_unlock_cost = 20
 		enable_tactic = tactic_advanced_naval_landing
 		enable_tactic = tactic_multi_wave_invasion
 		enable_tactic = tactic_storm_machine_gun_nests
 		enable_tactic = tactic_clear_coastal_bunkers
 		enable_tactic = tactic_basic_naval_invasion_attack
 		doctrine = yes	
-		research_cost = 0.0
+		research_cost = 4.5
 		
 		categories = {
 			land_doctrine
@@ -772,15 +764,15 @@ xp_research_cost = 100
 		}
 	}
 	MW_3rd_Right_1 = {
+		xp_research_cost = 100
+		xp_research_bonus = 0.5
 		path = {
 			leads_to_tech = MW_3rd_Right_2
 			research_cost_coeff = 1
 		}
-		
+		start_year = 1941
 		max_dig_in = 2
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		doctrine = yes	
 		research_cost = 4.5
@@ -802,14 +794,14 @@ xp_research_cost = 100
 		}
 	}
 	MW_3rd_Right_2 = {
+		xp_research_cost = 100
+		xp_research_bonus = 0.5
 		path = {
 			leads_to_tech = MW_3rd_Right_3
 			research_cost_coeff = 1
 		}
-		
+		start_year = 1942
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		doctrine = yes	
 		research_cost = 4.5
@@ -850,13 +842,13 @@ xp_research_cost = 100
 		}
 	}
 	MW_3rd_Right_3 = {
+		xp_research_cost = 100
+		xp_research_bonus = 0.5
 		path = {
 			research_cost_coeff = 1
 		}
-		
+		start_year = 1943
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		doctrine = yes	
 		research_cost = 4.5
@@ -887,14 +879,14 @@ xp_research_cost = 100
 		}
 	}
 	MW_3rd_Left_1 = {
+		xp_research_cost = 100
+		xp_research_bonus = 0.5
 		path = {
 			leads_to_tech = MW_3rd_Left_2
 			research_cost_coeff = 1
 		}
-		
+		start_year = 1941
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		doctrine = yes	
 		research_cost = 4.5
@@ -929,14 +921,14 @@ xp_research_cost = 100
 		}
 	}
 	MW_3rd_Left_2 = {
+		xp_research_cost = 100
+		xp_research_bonus = 0.5
 		path = {
 			leads_to_tech = MW_3rd_Left_3
 			research_cost_coeff = 1
 		}
-		
+		start_year = 1942
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		doctrine = yes	
 		research_cost = 4.5
@@ -959,13 +951,13 @@ xp_research_cost = 100
 		}
 	}
 	MW_3rd_Left_3 = {
+		xp_research_cost = 100
+		xp_research_bonus = 0.5
 		path = {
 			research_cost_coeff = 1
 		}
-		
+		start_year = 1943
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		doctrine = yes	
 		research_cost = 4.5
@@ -1018,11 +1010,9 @@ xp_research_cost = 100
 
 		
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
-		xp_unlock_cost = 0
+		xp_unlock_cost = 20
 		doctrine = yes	
-		research_cost = 0.0
+		research_cost = 4.5
 		categories = {
 			land_doctrine
 			cat_superior_firepower
@@ -1044,11 +1034,9 @@ xp_research_cost = 100
 
 		
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
-		xp_unlock_cost = 0
+		xp_unlock_cost = 20
 		doctrine = yes	
-		research_cost = 0.0
+		research_cost = 4.5
 		categories = {
 			land_doctrine
 			cat_grand_battle_plan
@@ -1062,9 +1050,9 @@ xp_research_cost = 100
 	}
 	
 	firebrigades = { #Branch focused on mobile warfares
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		xor={
 			volkssturm
@@ -1159,10 +1147,9 @@ xp_research_cost = 100
 	}
 	
 	backhand_blow = {
-
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		enable_tactic = tactic_backhand_blow
 
@@ -1210,9 +1197,9 @@ xp_research_cost = 100
 	}
 	
 	modern_blitzkrieg = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		path = {
 			leads_to_tech = naval_invasion_tactics_MW		
@@ -1289,9 +1276,9 @@ xp_research_cost = 100
 	}
 	
 	volkssturm = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		xor={
 			firebrigades
@@ -1386,9 +1373,9 @@ xp_research_cost = 100
 	}
 	
 	nd_conscription = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		conscription = 0.01
 
@@ -1442,10 +1429,9 @@ xp_research_cost = 100
 	}
 	
 	werwolf_guerillas = {
-
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		#Increased Partisan effect on your land occupied by others
 		resistance_damage_to_garrison_on_our_occupied_states = 0.1 
@@ -1521,11 +1507,11 @@ xp_research_cost = 100
 	}
 	
 	superior_firepower = {
+		xp_research_cost = 100
+		xp_research_bonus = 0.5
 		doctrine_name = "SUPERIOR_FIREPOWER_DOCTRINE"
 		
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		
 		xor = { mobile_warfare trench_warfare mass_assault } 
@@ -1544,7 +1530,7 @@ land_reinforce_rate = 0.05
 		enable_tactic = tactic_barrage
 			
 		doctrine = yes	
-		research_cost = 2.25
+		research_cost = 0.0
 		
 		categories = {
 			land_doctrine
@@ -1573,9 +1559,9 @@ land_reinforce_rate = 0.05
 	}
 	
 	sup_delay = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		category_light_infantry = {
 			max_organisation = 10
@@ -1621,9 +1607,9 @@ xp_research_cost = 100
 	}
 	
 	mobile_defence = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		category_all_infantry = {
 			defense = 0.20
@@ -1675,9 +1661,9 @@ xp_research_cost = 100
 	}
 	
 	intergrated_support = { #This Branch is focused on boosting stuff in the support column 
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		xor={
 			dispersed_support
@@ -1742,9 +1728,9 @@ xp_research_cost = 100
 	}
 	
 	regimental_combat_teams = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		category_support_battalions = {
 			max_organisation = 10
@@ -1805,9 +1791,9 @@ xp_research_cost = 100
 	}
 	
 	dispersed_support = { # Branch is focused on support units as part of the regular brigades
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		xor = {
 			intergrated_support
@@ -1868,9 +1854,9 @@ xp_research_cost = 100
 	}
 	
 	overwhelming_firepower = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		category_line_artillery = {
 			soft_attack = 0.15
@@ -1930,9 +1916,9 @@ xp_research_cost = 100
 	}
 	
 	sup_mechanized_offensive = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		category_all_armor = {
 			breakthrough = 0.10
@@ -1990,9 +1976,9 @@ xp_research_cost = 100
 	}
 	
 	concentrated_fire_plans = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		xor = {
 			centralized_fire_control
@@ -2046,9 +2032,9 @@ xp_research_cost = 100
 	}
 	
 	combined_arms = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		
 		category_all_armor = {
@@ -2102,9 +2088,9 @@ xp_research_cost = 100
 	}
 	
 	tactical_control = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		land_reinforce_rate = 0.05
 	
@@ -2154,9 +2140,9 @@ xp_research_cost = 100
 	}
 	
 	air_land_battle = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		category_front_line = {
 			max_organisation = 5
@@ -2206,9 +2192,9 @@ xp_research_cost = 100
 	}
 	
 	centralized_fire_control = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		xor = {
 			concentrated_fire_plans
@@ -2264,11 +2250,10 @@ xp_research_cost = 100
 	}
 	
 	forward_observers = {
-
+		xp_research_cost = 100
+		xp_research_bonus = 0.5
 		land_reinforce_rate = 0.02
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		category_recon = {
 			recon = 1
@@ -2318,9 +2303,9 @@ xp_research_cost = 100
 	}
 	
 	advanced_firebases = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		
 		category_all_infantry = {
@@ -2381,9 +2366,9 @@ xp_research_cost = 100
 	}
 	
 	shock_and_awe = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		path = {
 			leads_to_tech = naval_invasion_tactics_SF
@@ -2438,11 +2423,11 @@ xp_research_cost = 100
 	
 	
 	trench_warfare = {
+		xp_research_cost = 100
+		xp_research_bonus = 0.5
 		doctrine_name = "GRAND_BATTLEPLAN_DOCTRINE"
 
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		
 		xor = { mobile_warfare superior_firepower mass_assault } 
@@ -2460,7 +2445,7 @@ xp_research_cost = 100
 		}
 
 		doctrine = yes	
-		research_cost = 2.25
+		research_cost = 0.0
 		
 		categories = {
 			land_doctrine
@@ -2490,10 +2475,9 @@ xp_research_cost = 100
 	}
 	
 	grand_battle_plan = {
-	
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		path = {
 			leads_to_tech = prepared_defense 
@@ -2512,7 +2496,7 @@ xp_research_cost = 100
 		}
 
 		doctrine = yes	
-		research_cost = 4.5
+		research_cost = 2.5
 		
 		categories = {
 			land_doctrine
@@ -2549,9 +2533,9 @@ xp_research_cost = 100
 
 	
 	prepared_defense = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 
 		max_dig_in = 5
@@ -2593,9 +2577,9 @@ xp_research_cost = 100
 	}
 	
 	grand_assault = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		category_army = {
 			defense = 0.05
@@ -2652,9 +2636,9 @@ xp_research_cost = 100
 	}
 	
 	grand_mechanized_offensive = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 		xor = {
 			infantry_offensive
@@ -2751,9 +2735,9 @@ xp_research_cost = 100
 	}
 	
 	assault_concentration = {
-		xp_research_type = army
-xp_research_cost = 100
+		xp_research_cost = 100
 		xp_research_bonus = 0.5
+		xp_research_type = army
 		xp_unlock_cost = 0
 
 		category_army = {
@@ -2830,8 +2814,6 @@ xp_research_cost = 100
 	
 	branch_interoperation = {
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		
 		
@@ -2895,8 +2877,6 @@ xp_research_cost = 100
 	
 	assault_breakthrough = {
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		category_support_battalions = {
 			max_organisation = 15
@@ -2957,8 +2937,6 @@ xp_research_cost = 100
 	
 	central_planning = {
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 
 		support_heavy_armor = {
@@ -3024,8 +3002,6 @@ xp_research_cost = 100
 			research_cost_coeff = 1
 		}
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		amphibious_invasion_defence = 0.15
 		no_supply_grace = 72
@@ -3087,8 +3063,6 @@ xp_research_cost = 100
 	
 	infantry_offensive = {
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		xor = {
 			grand_mechanized_offensive
@@ -3162,8 +3136,6 @@ xp_research_cost = 100
 	
 	armored_operations = {
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 
 		category_army {
@@ -3229,8 +3201,6 @@ xp_research_cost = 100
 	infiltration_assault = {
 
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		no_supply_grace = 24
 
@@ -3318,8 +3288,6 @@ xp_research_cost = 100
 	
 	night_assault_tactics = {
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		category_support_battalions = {
 			max_organisation = 5
@@ -3379,8 +3347,6 @@ xp_research_cost = 100
 	
 	attritional_containment = {
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		support_heavy_armor = {
 			max_organisation = 20
@@ -3447,8 +3413,6 @@ xp_research_cost = 100
 			research_cost_coeff = 1
 		}
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		amphibious_invasion_defence = 0.15
 		
@@ -3519,8 +3483,6 @@ xp_research_cost = 100
 		doctrine_name = "MASS_ASSAULT_DOCTRINE"
 		
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		xor = { mobile_warfare superior_firepower trench_warfare } 
 
@@ -3534,7 +3496,7 @@ xp_research_cost = 100
 		minimum_training_level = -0.1
 
 		doctrine = yes	
-		research_cost = 2.25
+		research_cost = 0.0
 		
 		categories = {
 			land_doctrine
@@ -3565,8 +3527,6 @@ xp_research_cost = 100
 	pocket_defence = {
 
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		#reduced pocketed combat penalty and/or reduces the out of supply penalty or increases time before moving to worse penalty
 		no_supply_grace = 216 # more hours before supply penalty changes
@@ -3609,8 +3569,6 @@ xp_research_cost = 100
 	
 	defence_in_depth = {
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 
 		max_dig_in = 5
@@ -3662,8 +3620,6 @@ xp_research_cost = 100
 	
 	large_front_operations = {
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		xor = {
 			peoples_army
@@ -3785,8 +3741,6 @@ xp_research_cost = 100
 		}
 
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		enable_tactic = tactic_blitz
 		enable_tactic = tactic_default_blitz
@@ -3836,8 +3790,6 @@ xp_research_cost = 100
 	
 	operational_concentration = {
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 
 		planning_speed = 0.05
@@ -3905,8 +3857,6 @@ xp_research_cost = 100
 	
 	vast_offensives = {
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 
 		artillery_brigade = {
@@ -3982,8 +3932,6 @@ xp_research_cost = 100
 	
 	breakthrough_priority = {
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 
 		category_all_armor = {
@@ -4051,8 +3999,6 @@ xp_research_cost = 100
 			max_organisation = 2
 		}
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 
 		category_all_armor = {
@@ -4120,8 +4066,6 @@ xp_research_cost = 100
 			research_cost_coeff = 1
 		}
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 
 		category_army = {
@@ -4180,8 +4124,6 @@ xp_research_cost = 100
 		}
 
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		
 		attrition = -0.10 #take 10% less attrition losses
@@ -4252,8 +4194,6 @@ xp_research_cost = 100
 	
 	human_infantry_offensive = {
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 
 		infantry = {
@@ -4300,8 +4240,6 @@ xp_research_cost = 100
 	
 	large_front_offensive = {
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 
 		category_light_infantry = {
@@ -4351,8 +4289,6 @@ xp_research_cost = 100
 
 		
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 
 		conscription = 0.015
@@ -4402,8 +4338,6 @@ xp_research_cost = 100
 			research_cost_coeff = 1
 		}
 		xp_research_type = army
-xp_research_cost = 100
-		xp_research_bonus = 0.5
 		xp_unlock_cost = 0
 		out_of_supply_factor = -0.1
 		category_army = {
