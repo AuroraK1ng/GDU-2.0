@@ -1,36 +1,5 @@
 on_actions = { 
 # ROOT is capitulated country, FROM is winner
-	on_state_control_changed = {
-
-
-		effect = { #Check for Macedonian state modifiers
-			if = {
-				limit = {
-					FROM.FROM = { BUL_is_macedonian_state = yes }
-				}
-				if = {
-					limit = {
-						FROM.FROM = { has_dynamic_modifier = { modifier = widespread_bulgarian_sentiment_01 } }
-						ROOT = { tag = BUL }
-					}
-					FROM.FROM = {
-						remove_dynamic_modifier = { modifier = widespread_bulgarian_sentiment_01 }
-						add_dynamic_modifier = { modifier = widespread_bulgarian_sentiment_02 }
-					}
-				}
-				else_if = {
-					limit = {
-						FROM.FROM = { has_dynamic_modifier = { modifier = widespread_bulgarian_sentiment_02 } }
-						ROOT = { NOT = { tag = BUL } }
-					}
-					FROM.FROM = {
-						remove_dynamic_modifier = { modifier = widespread_bulgarian_sentiment_02 }
-						add_dynamic_modifier = { modifier = widespread_bulgarian_sentiment_01 }
-					}
-				}
-			}
-		}
-	}
 
 	on_ruling_party_change = {
 		# Change 3D Models based on ideology

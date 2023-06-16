@@ -167,10 +167,6 @@ if = { #DLC
 		modifier = BFTB_incongruous_neighbors
 	}
 	add_opinion_modifier = { 
-		target = TUR
-		modifier = BFTB_incongruous_neighbors
-	}
-	add_opinion_modifier = { 
 		target = YUG
 		modifier = BFTB_incongruous_neighbors
 	}
@@ -244,14 +240,6 @@ if = { #DLC
 	if = {
 		limit = {
 			has_dlc = "La Resistance"
-		}
-		create_operative_leader = { #DLC
-			name = "Vladimir Zaimov"
-			GFX = GFX_portrait_bul_vladimir_zaimov
-			traits = { operative_infiltrator operative_commando }
-			bypass_recruitment = no
-			available_to_spy_master = yes
-			nationalities = { BUL }
 		}
 		recruit_character = BUL_stefan_nedev
 	}
