@@ -269,7 +269,7 @@ focus_tree = {
 		prerequisite = { focus = GER_west_wall }
 		available = {
 			date > 1940.8.1
-			GER = { has_full_control_of_state = state = 19 state = 23 state = 14 state = 30 state = 15 state = 785 state = 29 state = 6 state = 7 state = 36 state = 56 state = 833 state = 58 state = 834 state = 99 }
+			GER = { has_full_control_of_state = state = 16 }
 		}
 		cancel_if_invalid = no
 		x = -1
@@ -978,12 +978,11 @@ activate_mission = GER_relocate_industry_from_friesland
 		ai_will_do = {
 			factor = 1
 		}
-		available {
+		available = {
 			date > 1940.1.1
 			date < 1941.1.1
+			GER = { has_war_with = ENG }
 		}
-		
-		available_if_capitulated = yes
 
 		completion_reward = {
 			add_timed_idea = {
@@ -1065,7 +1064,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		completion_reward = {
-			##air_experience = 150
+			air_experience = 250
 			add_tech_bonus = {
 				name = bomber_bonus
 				bonus = 4
@@ -1098,6 +1097,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		completion_reward = {
+			air_experience = 250
 			add_tech_bonus = {
 				name = GER_long_range_escorts
 				bonus = 2.5
@@ -1125,6 +1125,7 @@ activate_mission = GER_relocate_industry_from_friesland
 
 		completion_reward = {
 			navy_experience = 400
+			air_experience = 400
 		}
 	}
 
@@ -1144,7 +1145,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		completion_reward = {
-			##air_experience = 150
+			air_experience = 250
 			add_tech_bonus = {
 				name = bomber_bonus
 				bonus = 2.5
@@ -1210,7 +1211,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		completion_reward = {
-			##air_experience = 50
+			air_experience = 250
 			# Balance research bonus to next tech among radio, radio_detection, decimetric_radar, improved_decimetric_radar, centimetric_radar, improved_centimetric_radar, advanced_centimetric_radar
 			add_tech_bonus = {
 				name = radar_tech_bonus

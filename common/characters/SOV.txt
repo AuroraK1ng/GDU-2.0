@@ -392,17 +392,6 @@ characters = {
 				factor = 1.000
 			}
 		}
-
-		field_marshal = { #13/13
-		traits = {  aggressive_assaulter thorough_planner panzer_leader panzer_expert harsh_leader camouflage_expert  }
-	skill = 6
-	attack_skill = 6
-	defense_skill = 1
-	planning_skill = 7
-	logistics_skill = 5
-			legacy_id = 408
-			
-		}
 	}
 
 	SOV_semyon_timoshenko = {
@@ -1295,10 +1284,11 @@ characters = {
 	}
 
 	SOV_stepan_krasovsky = {
-		name = SOV_stepan_krasovsky
+		name = SOV_ivan_konev
 		portraits = {
 			army = {
-				small = "GFX_idea_stepan_krasovsky"
+				small = "GFX_idea_SOV_ivan_konev"
+				large = "GFX_portrait_SOV_ivan_konev"
 			}
 		}
 
@@ -1310,7 +1300,7 @@ characters = {
 				original_tag = SOV
 			}
 			traits = {
-				air_air_combat_training_2
+				army_infantry_2
 			}
 				cost = 150
 			ai_will_do = {
@@ -1342,10 +1332,11 @@ characters = {
 	}
 
 	SOV_sergey_khudyakov = {
-		name = SOV_sergey_khudyakov
+		name = SOV_konstantin_rokossovsky
 		portraits = {
 			army = {
-				small = "GFX_idea_sergei_khudyakov"
+				small = "GFX_idea_konstantin_rokossovsky"
+				large = GFX_portrait_SOV_konstantin_rokossovsky
 			}
 		}
 
@@ -1357,7 +1348,7 @@ characters = {
 				original_tag = SOV
 			}
 			traits = {
-				air_close_air_support_2
+				army_armored_3
 			}
 			cost = 150
 			ai_will_do = {
@@ -1620,7 +1611,7 @@ characters = {
 				original_tag = SOV
 			}
 			traits = {
-				army_commando_1
+				army_regrouping_2
 			}
 			cost = 150
 			ai_will_do = {

@@ -1836,12 +1836,24 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
 				set_state_flag = SOV_infrastructure_effort_3Inf
 			}
 			652 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = SOV_infrastructure_effort_3Inf
@@ -1852,12 +1864,24 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 				set_state_flag = SOV_infrastructure_effort_3Inf
 			}
 			586 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
 					instant_build = yes
 				}
 				set_state_flag = SOV_infrastructure_effort_3Inf
@@ -1990,7 +2014,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 500
+			air_experience = 1000
 			set_rule = {
 				can_generate_female_aces = yes
 			}
@@ -2129,7 +2153,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 800
+			air_experience = 1000
 
 			add_tech_bonus = {
 				name = air_bonus
@@ -2215,19 +2239,36 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
 			}
 			248 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 3
 					instant_build = yes
-		}
-
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
 			}
 			252 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2325,6 +2366,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			air_experience = 500
 			add_tech_bonus = {
 				bonus = 1.00
 				uses = 2
@@ -3267,7 +3309,6 @@ focus_tree = {
 				large_front_operations = 1
 				deep_operations = 1
 				operational_concentration = 1
-				vast_offensives = 1
 			}
 			if = {
 				limit = {

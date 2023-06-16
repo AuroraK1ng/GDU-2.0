@@ -1118,6 +1118,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			air_experience = 250
 			add_tech_bonus = {
 				name = air_rearmament_cas
 				bonus = 1.0
@@ -1452,6 +1453,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			air_experience = 500
 			set_technology = { jet_engines = 1 }
 			add_tech_bonus = {
 				name = fighter3_bonus
@@ -1536,7 +1538,7 @@ focus_tree = {
 				ENG = {
 					has_completed_focus = naval_rearmament_focus
 				}
-				date > 1938.1.1
+				date > 1937.1.1
 		}
 
 		available_if_capitulated = no
@@ -2124,7 +2126,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 25
+			air_experience = 250
 			add_tech_bonus = {
 				name = radar_focus
 				bonus = 2.0
