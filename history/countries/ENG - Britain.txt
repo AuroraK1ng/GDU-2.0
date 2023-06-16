@@ -31,11 +31,6 @@ if = {
 	limit = { has_dlc = "By Blood Alone" }
 		set_air_oob = "ENG_1936_air_bba"
 		set_technology = {
-			aa_lmg = 1
-			engines_1 = 1
-			engines_2 = 1
-			early_bombs = 1
-			aircraft_construction = 1
 			iw_small_airframe = 1
 			iw_medium_airframe = 1
 			iw_large_airframe = 1
@@ -337,10 +332,6 @@ if = {
 			has_dlc = "Together for Victory"
 			has_dlc = "Man the Guns"
 		}
-	}
-	set_autonomy = {
-		target = MAL
-		autonomous_state = autonomy_integrated_puppet
 	}
 	set_autonomy = {
 		target = RAJ
@@ -721,7 +712,6 @@ recruit_character = ENG_brian_horrocks
 recruit_character = ENG_archibald_wavell
 recruit_character = ENG_james_fownes_somerville
 recruit_character = ENG_henry_harwood
-recruit_character = ENG_claude_auchinleck
 recruit_character = ENG_andrew_cunningham
 recruit_character = ENG_bruce_fraser
 recruit_character = ENG_john_tovey

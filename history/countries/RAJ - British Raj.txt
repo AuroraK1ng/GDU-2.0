@@ -250,24 +250,6 @@ set_convoys = 200
 
 set_cosmetic_tag = RAJ_UK # British Raj
 
-640 = { #Mandalay
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-432 = { #Assam
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-427 = { #Hyderabad
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-436 = { #Jabalpur
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-437 = { #Indore
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-433 = { #Rajahsthan
-	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
 add_equipment_to_stockpile = {
          type = artillery_equipment_1
          amount = 3264
@@ -305,7 +287,7 @@ add_equipment_to_stockpile = {
 } 
 create_corps_commander = {
 	name = "Noel Beresford-Peirse AFRICANUS"
-	gfx = "GFX_RAJ_noel_beresford_peirse_AFRICA"
+	Picture = "Portrait_The_Raj_Noel_Beresford_Peirse_AFRICA.dds"
 	traits = { career_officer trickster old_guard inflexible_strategist infantry_officer Infantry_leader desert_fox}
 	skill = 6
 	attack_skill = 6
@@ -315,7 +297,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Frank Messervy AFRICANUS"
-	gfx = "GFX_RAJ_frank_messervy_AFRICA"
+	picture = "Portrait_The_Raj_Frank_Messervy_AFRICA.dds"
 	traits = {   panzer_leader desert_fox hill_fighter skilled_staffer cavalry_officer media_personality }
 	skill = 4
 	attack_skill = 4
@@ -325,7 +307,7 @@ create_corps_commander = {
 }
 create_field_marshal = {
 	name = "Maharaja Rajendrasinhji Jadeja AFRICANUS"
-	picture = "Portrait_DEH_Maharaja_Rajendrasinhji_Jadeja_AFRICA.dds"
+	picture = "Portrait_DEH_Maharaja_Rajendrasinhji_Jadeja_AFRICAy.dds"
 	traits = { desert_fox infantry_leader career_officer harsh_leader cavalry_leader cavalry_officer}
 	skill = 4
 	attack_skill = 6
