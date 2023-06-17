@@ -154,42 +154,31 @@ focus_tree = {
 		navy_experience = 1000
 
         SOV = {
+		army_experience = 1000					  
         air_experience  = 300
                 }
         GER = {
-	army_experience = 600
         air_experience  = 300
                 }
         ITA = {
-	army_experience = 600
         air_experience  = 300
                 }
-       BUL = {
-        army_experience = 125
-                }`
-        
-		
-		SIA = {
-		army_experience = 125
-		}
-		
+        BUL = {
+			army_experience = 125
+        }
 		SPR = {
-        army_experience = 125
-                }
+			army_experience = 125
+        }
          ROM = {
-	army_experience = 600
         army_experience = 125
                 }
         HUN = {
-	army_experience = 600
         army_experience = 125
                 }
         ENG = {
-	army_experience = 400
         army_experience = 100
                 }
         CAN = {
-	army_experience = 400
         army_experience = 100
                 }
         SAF = {
@@ -199,7 +188,6 @@ focus_tree = {
         army_experience = 100
                 }
         AST = {
-	army_experience = 400
         army_experience = 100
                 }
         NZL = {
@@ -362,14 +350,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			536 = {
-				add_extra_state_shared_building_slots = 8
-				add_building_construction = {
-					type = dockyard
-					level = 8
-					instant_build = yes
-				}
-			}
+			add_tech_bonus = {
+				name = JAP_strike_south_doctrine
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine
+			}									 
 		}
 	}
 
@@ -860,9 +846,14 @@ focus_tree = {
 		complete_tooltip = {
 
 		}
-			completion_reward = {
-				army_experience = 300		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
 			}
+			army_experience = 30
+		}				
 	}
 
 	focus = {
@@ -897,7 +888,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = JAP_small_arms_modernization
 				bonus = 1.0
-				uses = 2
+				uses = 1
 				category = infantry_weapons
 			}
 		}
@@ -1894,7 +1885,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = industrial_complex
-					level = 6
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -1913,10 +1904,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 6
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = JAP_zaibatsus_factories
@@ -2058,10 +2049,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -2075,10 +2066,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -2092,10 +2083,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -2989,7 +2980,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			air_experience = 500
+			add_tech_bonus = {
+				name = JAP_fighter_modernization
+				bonus = 1.0
+				uses = 3
+				category = air_doctrine
+			}			
 		}
 	}
 
@@ -3345,7 +3341,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = dockyard
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -3355,7 +3351,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = dockyard
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -3379,10 +3375,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = JAP_new_naval_estimates_DY1
@@ -3397,10 +3393,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = JAP_new_naval_estimates_DY2
@@ -3450,7 +3446,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = JAP_carrier_warfare_experiments
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine
+			}				
 						add_tech_bonus = {
 				name = JAP_carrier_warfare_experiments
 				bonus = 1.5

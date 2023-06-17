@@ -529,17 +529,23 @@ focus_tree = {
 
 		completion_reward = {
 			add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
 			add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = industrial_complex
-					level = 3
-					instant_build = yes
-				}
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+			add_tech_bonus = {
+				name = RAJ_lessons_of_the_great_war
+				bonus = 1.00
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -579,7 +585,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 100
-			army_experience = 600
+			army_experience = 25
 		}
 	}
 
@@ -1162,7 +1168,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = RAJ_modernizing_army
+				bonus = 1.00
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -1210,7 +1221,12 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 25
-			
+			add_tech_bonus = {
+				name = RAJ_british_pilot_training
+				bonus = 1.00
+				uses = 1
+				category = air_doctrine
+			}
 		}
 	}
 
@@ -1404,7 +1420,12 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 25
-			
+			add_tech_bonus = {
+				name = RAJ_royal_indian_air_force
+				bonus = 1.00
+				uses = 1
+				category = air_doctrine
+			}
 		}
 	}
 
@@ -1946,7 +1967,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = RAJ_royal_indian_navy
+				bonus = 1.00
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 	}
 
@@ -2160,7 +2186,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = RAJ_modernizing_navy
+				bonus = 1.00
+				uses = 2
+				category = naval_doctrine
+			}
 			787 = {
 				add_resource = {
 					type = steel

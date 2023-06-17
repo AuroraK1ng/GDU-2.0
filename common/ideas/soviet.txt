@@ -152,7 +152,7 @@ ideas = {
 				production_speed_buildings_factor = 0.20
 				research_speed_factor = 0.10
 				consumer_goods_factor = -0.05
-				supply_consumption_factor = -0.225
+				supply_consumption_factor = -0.325
 				drift_defence_factor = 0.5
 				global_building_slots_factor = 0.10			
 			}
@@ -327,8 +327,7 @@ ideas = {
 
 			modifier = {
 				production_factory_max_efficiency_factor = 0.2
-				production_factory_efficiency_gain_factor = -0.2
-				land_doctrine_cost_factor = 50				
+				production_factory_efficiency_gain_factor = -0.2 				
 			}
 			
 		}
@@ -385,7 +384,7 @@ ideas = {
 
 			modifier = {
 				industrial_capacity_factory = 0.20
-				mobilization_laws_cost_factor = -0.20
+				mobilization_laws_cost_factor = -0.25
 			}
 		}
 		workers_culture = {
@@ -606,9 +605,11 @@ ideas = {
 
 			modifier = {
 				experience_gain_army_factor = -0.5
-				land_doctrine_cost_factor = 1.10
-				air_doctrine_cost_factor = 0.05
-				naval_doctrine_cost_factor = 0.05
+			}
+			research_bonus = {
+				land_doctrine = -1.10
+				naval_doctrine = -0.05
+				air_doctrine = -0.05
 			}
 
 		}
@@ -629,9 +630,11 @@ ideas = {
 
 			modifier = {
 				experience_gain_army_factor = -0.5
-				land_doctrine_cost_factor = 1.10
-				air_doctrine_cost_factor = 0.07
-				naval_doctrine_cost_factor = 0.07
+			}
+			research_bonus = {
+				land_doctrine = -1.10
+				naval_doctrine = -0.07
+				air_doctrine = -0.07
 			}
 			
 
@@ -652,10 +655,12 @@ ideas = {
 			}
 
 			modifier = {
-				experience_gain_army_factor = -0.5	
-				land_doctrine_cost_factor = 1.10
-				air_doctrine_cost_factor = 0.01
-				naval_doctrine_cost_factor = 0.01			
+				experience_gain_army_factor = -0.5				
+			}
+			research_bonus = {
+				land_doctrine = -1.10
+				naval_doctrine = -0.1
+				air_doctrine = -0.1
 			}
 			
 
@@ -672,12 +677,13 @@ ideas = {
 				has_government = communism
 			}
 
-			
+			research_bonus = {
+				land_doctrine = -1.10
+				naval_doctrine = -0.13
+				air_doctrine = -0.13
+			}
 
-			modifier = {
-				land_doctrine_cost_factor = 1.10
-				air_doctrine_cost_factor = 0.13
-				naval_doctrine_cost_factor = 0.13	
+			modifier = {	
 				army_attack_factor = -0.05
 				army_defence_factor = -0.075
 				army_org_factor = -0.30
@@ -704,11 +710,13 @@ ideas = {
 				has_government = communism
 			}
 
+			research_bonus = {
+				land_doctrine = -1.10
+				naval_doctrine = -0.12
+				air_doctrine = -0.12
+			}			 
 
 			modifier = {
-				land_doctrine_cost_factor = 1.10
-				air_doctrine_cost_factor = 0.12
-				naval_doctrine_cost_factor = 0.12	
 				army_attack_factor = -0.05
 				army_defence_factor = -0.075
 				army_org_factor = -0.30
@@ -734,11 +742,13 @@ ideas = {
 				has_government = communism
 			}
 
+			research_bonus = {
+				land_doctrine = -1.10
+				naval_doctrine = -0.11
+				air_doctrine = -0.11
+			}
 
-			modifier = {
-				land_doctrine_cost_factor = 1.10
-				air_doctrine_cost_factor = 0.11
-				naval_doctrine_cost_factor = 0.11	
+			modifier = {	
 				army_attack_factor = -0.05
 				army_defence_factor = -0.075
 				army_org_factor = -0.30
@@ -764,12 +774,13 @@ ideas = {
 				has_government = communism
 			}
 
-			
+			research_bonus = {
+				land_doctrine = -1.10
+				naval_doctrine = -0.1
+				air_doctrine = -0.1
+			}
 
-			modifier = {
-				land_doctrine_cost_factor = 1.10
-				air_doctrine_cost_factor = 0.1
-				naval_doctrine_cost_factor = 0.1	
+			modifier = {	
 				army_attack_factor = -0.05
 				army_defence_factor = -0.075
 				army_org_factor = -0.30
@@ -795,12 +806,13 @@ ideas = {
 				has_government = communism
 			}
 
-			
+			research_bonus = {
+				land_doctrine = -1.10
+				naval_doctrine = -0.09
+				air_doctrine = -0.09
+			}
 
 			modifier = {
-				land_doctrine_cost_factor = 1.10
-				air_doctrine_cost_factor = 0.09
-				naval_doctrine_cost_factor = 0.09	
 				army_attack_factor = -0.05
 				army_defence_factor = -0.075
 				army_org_factor = -0.30
@@ -826,11 +838,13 @@ ideas = {
 				has_government = communism
 			}
 
+			research_bonus = {
+				land_doctrine = -1.10
+				naval_doctrine = -0.08
+				air_doctrine = -0.08
+			}
 
-			modifier = {
-				land_doctrine_cost_factor = 1.10
-				air_doctrine_cost_factor = 0.08
-				naval_doctrine_cost_factor = 0.08	
+			modifier = {	
 				army_attack_factor = -0.05
 				army_defence_factor = -0.075
 				army_org_factor = -0.30
@@ -855,12 +869,13 @@ ideas = {
 				has_government = communism
 			}
 
-			
+			research_bonus = {
+				land_doctrine = -1.10
+				naval_doctrine = -0.07
+				air_doctrine = -0.07
+			}
 
-			modifier = {
-				land_doctrine_cost_factor = 1.10
-				air_doctrine_cost_factor = 0.07
-				naval_doctrine_cost_factor = 0.07	
+			modifier = {	
 				army_attack_factor = -0.05
 				army_defence_factor = -0.075
 				army_org_factor = -0.30
@@ -885,11 +900,13 @@ ideas = {
 				has_government = communism
 			}
 
+			research_bonus = {
+				land_doctrine = -1.10
+				naval_doctrine = -0.06
+				air_doctrine = -0.06
+			}			 
 
 			modifier = {
-				land_doctrine_cost_factor = 1.10
-				air_doctrine_cost_factor = 0.06
-				naval_doctrine_cost_factor = 0.06
 				max_dig_in = -7
 				army_org_factor = -0.275
 				planning_speed = -0.5
@@ -899,7 +916,6 @@ ideas = {
 				air_intercept_efficiency = -0.2
 				army_armor_speed_factor = 0.1
 				enemy_army_bonus_air_superiority_factor = 0.45
-				pocket_penalty = -0.1
 			}
 	
 			
@@ -917,22 +933,23 @@ ideas = {
 				has_government = communism
 			}
 
-			
+			research_bonus = {
+				land_doctrine = -1.10
+				naval_doctrine = -0.04
+				air_doctrine = -0.04
+			}				  
 
 
-			modifier = {
-				land_doctrine_cost_factor = 1.10
-				air_doctrine_cost_factor = 0.04
-				naval_doctrine_cost_factor = 0.04	
+			modifier = {	
 				max_dig_in = -5
-				army_org_factor = -0.2
+				army_org_factor = -0.25
 				planning_speed = -0.5
-				max_planning = -0.1
-				air_superiority_efficiency = -0.275
-				army_bonus_air_superiority_factor = -0.3
+				max_planning = -0.05
+				air_superiority_efficiency = -0.25
+				army_bonus_air_superiority_factor = -0.25
 				air_intercept_efficiency = -0.2
-				enemy_army_bonus_air_superiority_factor = 0.45
-				pocket_penalty = -0.1
+				enemy_army_bonus_air_superiority_factor = 0.3
+				army_armor_speed_factor = 0.1
 			}
 		
 		}
@@ -950,18 +967,19 @@ ideas = {
 				has_government = communism
 			}
 
-			
+			research_bonus = {
+				land_doctrine = -0.50
+			} 
 
 			modifier = {
 				land_doctrine_cost_factor = 1.10	
-				max_dig_in = -5
+				max_dig_in = -3
 				army_org_factor = -0.1
-				planning_speed = -0.4
-				air_superiority_efficiency = -0.12
-				army_bonus_air_superiority_factor = -0.25
+				planning_speed = -0.3
+				air_superiority_efficiency = -0.10
+				army_bonus_air_superiority_factor = -0.15
 				air_intercept_efficiency = -0.1
-				enemy_army_bonus_air_superiority_factor = 0.3
-				pocket_penalty = -0.05
+				enemy_army_bonus_air_superiority_factor = 0.2
 			}
 		}		
 		
@@ -1481,25 +1499,27 @@ on_add = { hidden_effect = { make_tank_designers_free = yes } }
 					soft_attack = 0.10
 					armor_value = 0.05
 					ap_attack = 0.40
+					build_cost_ic = -0.05	  
 				}				
 				medium_tank_destroyer_chassis= {
 					reliability = 0.15
 					hard_attack = 0.15
 					defense = 0.10
 					armor_value = 0.05
-					ap_attack = 0.40					
+					build_cost_ic = -0.05					
 				}				
 				medium_tank_artillery_chassis= {
 					reliability = 0.15
 					soft_attack = 0.15
 					defense = 0.10
 					armor_value = 0.05
+					build_cost_ic = -0.05	  
 				}
 				medium_tank_aa_chassis= {
 					reliability = 0.15
 					air_attack = 0.15
 					defense = 0.10
-					armor_value = 0.05
+					build_cost_ic = -0.05
 				}						
 				light_tank_chassis= {
 					reliability = 0.15

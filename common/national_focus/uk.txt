@@ -85,7 +85,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		x = 15
 		y = 0
-		cost = 0.1
+		cost = 2
 
 		available = {
 			ENG = { has_capitulated = yes }
@@ -291,8 +291,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 1000
-			air_experience = 1000
 			122 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -320,7 +318,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = limited_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -343,7 +341,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = limited_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -362,7 +360,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 200		
+			army_experience = 50		
 			add_tech_bonus = {
 				name = medium1_bonus
 				bonus = 1.5
@@ -428,44 +426,44 @@ focus_tree = {
 		x = -6
 		y = 1
 		relative_position_id = uk_empire_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
 			custom_effect_tooltip = shadow_scheme_focus_tt
 			134 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 				set_state_flag = shadow_scheme_1mil
 			}
 			128 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 				set_state_flag = shadow_scheme_1mil
 			}
 			338 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 				set_state_flag = shadow_scheme_1mil
 			}
 			132 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 				set_state_flag = shadow_scheme_1mil
@@ -844,7 +842,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = limited_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -917,10 +915,10 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = british_austerity_idea
 			131 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}			
@@ -970,7 +968,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = uk_extra_tech_slot
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1081,6 +1079,73 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = Finish_rearmament
+		text = "Finish Rearmament"
+		available = {
+			    date > 1940.5.01
+		}
+		prerequisite = { focus = royal_ordinance_focus }
+		prerequisite = { focus = royal_dockyard_focus }
+		icon = GFX_Limited_Rearm
+		x = 0
+		y = 3
+		relative_position_id = uk_extra_tech_slot
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		continue_if_invalid = yes
+		bypass = {
+			custom_trigger_tooltip =  {
+				tooltip = production_effort_tt
+				NOT = {
+					any_owned_state = {
+						is_in_home_area = yes
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+				}
+			}
+		}
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = royal_ordinance_focus_2AF }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+
+		}
+		completion_reward = {
+			125 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = royal_ordinance_focus_2AF
+			}
+		125 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = dockyard
+					level = 6
+					instant_build = yes
+				}
+				set_state_flag = royal_ordinance_focus_2AF
+			}
+		}
+	}
+
+	focus = { 
 		id = air_rearmament_focus
 		prerequisite = { focus = general_rearmament_focus }
 		icon = GFX_Royal_Air_Force
@@ -1107,6 +1172,12 @@ focus_tree = {
 		}
 
 		complete_tooltip = {
+			add_tech_bonus = {
+				name = air_rearmament_doctrine
+				bonus = 1.00
+				uses = 3
+				category = air_doctrine
+			}
 			every_state = {
 				limit = { has_state_flag = air_rearmament_focus_2AirBase }
 				add_building_construction = {
@@ -1118,12 +1189,18 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			air_experience = 250
+			add_tech_bonus = {
+				name = air_rearmament_doctrine
+				bonus = 1.00
+				uses = 3
+				category = air_doctrine
+			}
 			add_tech_bonus = {
 				name = air_rearmament_cas
 				bonus = 1.0
 				category = rocketry
 			}
+			air_experience = 25		  
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -1345,6 +1422,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			air_experience = 25		  
 			custom_effect_tooltip = GDU_supermarine_spitfire_tt
 			add_tech_bonus = {
 				name = fighter_command_focus
@@ -1400,8 +1478,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			navy_experience = 500
-			air_experience = 500
+			navy_experience = 250
+			air_experience = 250
 		}
 	}
 
@@ -1453,7 +1531,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 500
+			air_experience = 250
 			set_technology = { jet_engines = 1 }
 			add_tech_bonus = {
 				name = fighter3_bonus
@@ -1493,7 +1571,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			navy_experience = 250
+			navy_experience = 50
 			add_ideas = ENG_expand_the_repair_yards
 			338 = {
 				add_extra_state_shared_building_slots = 3
@@ -1552,18 +1630,18 @@ focus_tree = {
 				category = cl_tech
 			}
 			130 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
 			120 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1750,6 +1828,12 @@ focus_tree = {
 				uses = 2
 				category = bb_tech
 			}
+			add_tech_bonus = {
+				name = uk_waves_focus
+				bonus = 1.0
+				uses = 3
+				category = naval_doctrine
+			}
 		}
 	}
 	focus = {
@@ -1884,6 +1968,7 @@ focus_tree = {
 		}
 
 		complete_tooltip = {
+			air_experience = 25		  
 			if = {
 				limit = { has_country_flag = air_defense_focus_built_max }
 				custom_effect_tooltip = air_defense_focus_tt
@@ -1909,6 +1994,7 @@ focus_tree = {
 				technology = antiair2
 				technology = antiair3				
 			}
+			air_experience = 25		  
 			if = {
 				limit = {
 					NOT = {
@@ -2126,7 +2212,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 250
+			air_experience = 25
 			add_tech_bonus = {
 				name = radar_focus
 				bonus = 2.0
@@ -2183,6 +2269,9 @@ focus_tree = {
 
 		completion_reward = {
 			unlock_decision_tooltip = GDU_eng_countenance		
+			army_experience = 50
+			navy_experience = 25
+			air_experience = 25		  
 			add_ideas = ENG_service_overseas_idea
 		}
 	}
@@ -3075,7 +3164,7 @@ focus_tree = {
 			NZL = {
 				add_opinion_modifier = { target = ENG modifier = aided_industry }
 				126 = {
-					add_extra_state_shared_building_slots = 
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
 						level = 1
@@ -3461,7 +3550,12 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 200
 			add_timed_idea = { idea = eng_blood_toil_tears_idea days = 400 }
-			army_experience = 200
+			add_tech_bonus = {
+				name = ENG_blood_toil_tears
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
 
 		}
 	}
@@ -3479,7 +3573,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ENG_blood_toil_tears
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -3497,19 +3591,19 @@ focus_tree = {
 		}
 		completion_reward = {
 			134 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = kickstart_the_war_industry_2AF
 			}
 			128 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = kickstart_the_war_industry_2AF
@@ -3562,7 +3656,12 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			navy_experience = 600
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = naval_doctrine
+			}
 
 
 
@@ -3642,7 +3741,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ENG_issue_gasmasks
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}

@@ -779,11 +779,31 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = USA_black_chamber
-				bonus = 1.0
-				uses = 2
-				category = electronics
+			122 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+	    	125 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = royal_ordinance_focus_2AF
+			}
+			130 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = royal_ordinance_focus_2AF
 			}
 		}
 	}
@@ -929,7 +949,18 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 		completion_reward = {
-			add_ideas = office_of_strategic_services
+		add_tech_bonus = {
+				name = military_committee
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = military_committee
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine
+			}
 		}
 	}
 
@@ -1081,37 +1112,37 @@ focus_tree = {
 			}
 		}
 		complete_tooltip = {
-			air_experience = 250
+			air_experience = 50
 			navy_experience = 50
-			army_experience = 100
+			army_experience = 10
 			every_state = {
 				limit = { has_state_flag = USA_arsenal_of_democracy_3AF }
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 			}
 		}
 		completion_reward = {
 			navy_experience = 50
-			army_experience = 100
-			air_experience = 250
+			army_experience = 50
+			air_experience = 10
 			391 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = USA_arsenal_of_democracy_3AF
 			}
 			394 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = USA_arsenal_of_democracy_3AF
@@ -1202,7 +1233,7 @@ focus_tree = {
 		#	factor = 1
 		#}
 		complete_tooltip = {
-			army_experience = 100
+			army_experience = 10
 			every_state = {
 				limit = { has_state_flag = USA_military_construction_5MF }
 				add_extra_state_shared_building_slots = 5
@@ -1222,7 +1253,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			army_experience = 100
+			army_experience = 10
 			395 = {
 				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
@@ -1325,9 +1356,9 @@ focus_tree = {
 				}
 				set_state_flag = USA_USACE_projects_3Inf
 			}
-			air_experience = 250
+			air_experience = 50
 			navy_experience = 50
-			army_experience = 100
+			army_experience = 10
 		}
 	}
 
@@ -1873,7 +1904,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 100
+			army_experience = 5
 			add_tech_bonus = {
 				name = special_bonus
 				bonus = 1.0
@@ -1918,8 +1949,13 @@ focus_tree = {
 
 		completion_reward = {
 			remove_ideas = inexperienced_army
-			army_experience = 1000
-			
+			army_experience = 20
+			add_tech_bonus = {
+				name = USA_louisiana_maneuvers
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 	focus = {
@@ -2277,7 +2313,13 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = harold_mcclelland
-			air_experience = 250
+			air_experience = 25
+			add_tech_bonus = {
+				name = USA_air_war_plans_division
+				bonus = 1.0
+				uses = 3
+				category = air_doctrine
+			}					
 			add_tech_bonus = {
 				name = USA_fighter_bonus
 				ahead_reduction = 0.5
@@ -2307,7 +2349,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 800
+			air_experience = 25
 			add_tech_bonus = {
 				name = CAS_effort
 				uses = 1
@@ -2341,7 +2383,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = curtis_lemay
-			air_experience = 250
+			air_experience = 25
 			add_tech_bonus = {
 				name = USA_combined_bomber_offensive
 				bonus = 1.0
@@ -2373,7 +2415,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 250
+			air_experience = 25
 			add_tech_bonus = {
 				name = USA_TAC
 				uses = 1
@@ -2416,7 +2458,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 250
+			air_experience = 25
 			add_ideas = combined_bomber_offensive
 		}
 	}
@@ -2490,7 +2532,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = USA_us_army_airforce
+				uses = 10
+				bonus = 3.0
+				category = air_doctrine
+			}
 		add_ideas = USA_us_air_force2			
 		}
 	}
@@ -2520,7 +2567,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = USA_us_army_airforce
+				uses = 1
+				bonus = 1.0
+				category = air_doctrine
+			}
 			add_ideas = USA_us_air_force
 		}
 	}
@@ -2745,12 +2797,6 @@ focus_tree = {
 				ahead_reduction = 0.5
 				technology = improved_ship_hull_heavy
 			}
-			add_tech_bonus = {
-				name = USA_battleship_primacy
-				bonus = 1.0
-				uses = 1
-				technology = improved_ship_hull_heavy
-			}
 		}
 	}
 
@@ -2852,12 +2898,6 @@ focus_tree = {
 				uses = 1
 				ahead_reduction = 0.5
 				technology = improved_ship_hull_carrier
-			}
-			add_tech_bonus = {
-				name = USA_carrier_primacy
-				bonus = 1.0
-				uses = 1
-				technology = improved_ship_hull_carrier
 			}			
 		}
 	}
@@ -2949,8 +2989,7 @@ focus_tree = {
 				name = dd_bonus
 				bonus = 1.0
 				uses = 2
-				ahead_reduction = 0.5
-				category = dd_tech
+				category = cl_tech
 			}
 			add_tech_bonus = {
 				name = dd_bonus
@@ -3014,14 +3053,8 @@ focus_tree = {
 			add_tech_bonus = {
 				name = USA_fleet_submarines
 				bonus = 1.0
-				uses = 2
+				uses = 1
 				ahead_reduction = 0.5
-				technology = improved_ship_hull_submarine
-			}
-			add_tech_bonus = {
-				name = USA_fleet_submarines
-				bonus = 1.0
-				uses = 2
 				technology = improved_ship_hull_submarine
 			}			
 			if = {
@@ -3048,14 +3081,13 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			378 = {
-			add_extra_state_shared_building_slots = 5
-						add_building_construction = {
-							type = dockyard
-							level = 5
-							instant_build = yes
-						}
-				}
+			add_tech_bonus = {
+				name = USA_fund_the_navy
+				uses = 3
+				bonus = 1.0
+				category = naval_doctrine
+						  
+			}
 		}
 	}
 

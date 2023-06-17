@@ -1553,8 +1553,8 @@ leader_traits = {
 		random = no 
 		consumer_goods_factor = -0.05
 		industry_free_repair_factor = 0.5
-		production_factory_max_efficiency_factor = 0.2445
-		production_factory_efficiency_gain_factor = 0.1945
+		production_factory_max_efficiency_factor = 0.25
+		production_factory_efficiency_gain_factor = 0.2
 		conversion_cost_civ_to_mil_factor = -0.3
 		
 		ai_will_do = { 
@@ -1919,8 +1919,8 @@ leader_traits = {
 	
 	military_theorist = {
 		sprite = 14
-		experience_gain_army = 0.4
-		experience_gain_air = 0.4
+		experience_gain_army = 0.2
+		experience_gain_air = 0.1
 		experience_gain_navy = 0.05		
 
 		ai_will_do = {
@@ -1930,8 +1930,8 @@ leader_traits = {
 
 	mobile_warfare_expert = {
 		sprite = 14
-		experience_gain_army = 0.5
-		experience_gain_air = 0.4
+		experience_gain_army = 0.2
+		experience_gain_air = 0.1
 		experience_gain_navy = 0.05				
 
 		ai_will_do = {
@@ -1941,8 +1941,8 @@ leader_traits = {
 
 	superior_firepower_expert = {
 		sprite = 14
-		experience_gain_army = 0.45
-		experience_gain_air = 0.4
+		experience_gain_army = 0.2
+		experience_gain_air = 0.1
 		experience_gain_navy = 0.05				
 
 		ai_will_do = {
@@ -1952,8 +1952,8 @@ leader_traits = {
 
 	grand_battle_plan_expert = {
 		sprite = 14
-		experience_gain_army = 0.5
-		experience_gain_air = 0.4
+		experience_gain_army = 0.2
+		experience_gain_air = 0.1
 		experience_gain_navy = 0.05				
 
 		ai_will_do = {
@@ -1963,13 +1963,9 @@ leader_traits = {
 
 	mass_assault_expert = {
 		sprite = 14
-		experience_gain_army = 0.5
-		experience_gain_air = 0.4
-		experience_gain_navy = 0.05
-		motorized_attack_factor = 0.08
-		motorized_defence_factor = 0.08
-		mechanized_attack_factor = 0.08
-		mechanized_defence_factor = 0.08				
+		experience_gain_army = 0.2
+		experience_gain_air = 0.1
+		experience_gain_navy = 0.05				
 
 		ai_will_do = {
 			factor = 500
@@ -1979,7 +1975,7 @@ leader_traits = {
 	air_warfare_theorist = {
 		sprite = 14
 		experience_gain_air = 0.2
-		experience_gain_army = 0.2
+		experience_gain_army = 0.1
 		experience_gain_navy = 0.05				
 
 		ai_will_do = {
@@ -2092,13 +2088,11 @@ leader_traits = {
 				maximum_speed = 0.05
 			}		
 		}
-		experience_gain_army = 0.5
+		experience_gain_army = 0.2
 		experience_gain_air = 0.1
 		experience_gain_navy = 0.05
 		motorized_attack_factor = 0.06
-		motorized_defence_factor = 0.06	
-		mechanized_attack_factor = 0.06
-		mechanized_defence_factor = 0.06		
+		motorized_defence_factor = 0.06			
 
 		ai_will_do = {
 			factor = 500
@@ -2529,7 +2523,8 @@ leader_traits = {
 	
 	marshal_of_victory = { # IT'S ZHUKOV 
 		sprite = 7
-		army_attack_factor = 0.125
+		army_attack_factor = 0.1
+		army_defence_factor = 0.025						  
 		experience_gain_army_factor = 0.15
 		
 		ai_will_do = { 
@@ -2540,7 +2535,7 @@ leader_traits = {
 	marshal_of_victory2 = { # IT'S ZHUKOV 
 		sprite = 7
 		army_attack_factor = 0.10
-		army_defence_factor = 0.05		
+		army_defence_factor = 0.025		
 		experience_gain_army_factor = 0.15
 		
 		ai_will_do = { 
@@ -2967,7 +2962,7 @@ leader_traits = {
 	}
 	emergency_war_construction1 = { 
 		sprite = 5
-		production_speed_arms_factory_factor = 0.20
+		production_speed_arms_factory_factor = 0.2
 		global_building_slots_factor = 0.25
 
 		ai_will_do = {

@@ -97,7 +97,7 @@ focus_tree = {
 
 		completion_reward = {
 			157= {
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
 					level = 3
@@ -105,7 +105,7 @@ focus_tree = {
 				}
 			}
 			157 = {
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
 					level = 3
@@ -519,28 +519,28 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			627 = {
+			160 = {
 				add_building_construction = {
 					type = synthetic_refinery
 					level = 2
 					instant_build = yes
 				}
 			}
-			451 = {
+			736 = {
 				add_building_construction = {
 					type = synthetic_refinery
 					level = 2
 					instant_build = yes
 				}
 			}
-			450 = {
+			159 = {
 				add_building_construction = {
 					type = synthetic_refinery
 					level = 2
 					instant_build = yes
 				}
 			}			
-			450 = {
+			159 = {
 				add_resource = {
 					type = rubber
 					amount = 12
@@ -943,7 +943,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 600
+			army_experience = 25
 			2 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -961,7 +961,12 @@ focus_tree = {
 				}
 			}
 
-			
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.00
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -1003,7 +1008,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 600
+			army_experience = 50
 			add_tech_bonus = {
 				name = special_bonus
 				bonus = 1.00
@@ -1011,6 +1016,12 @@ focus_tree = {
 				technology = tech_recon
 				technology = tech_recon2
 				technology = tech_recon3
+			}
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.00
+				uses = 2
+				category = land_doctrine
 			}
 			
 		}
@@ -1151,7 +1162,12 @@ focus_tree = {
 				}
 			}
 
-			
+			add_tech_bonus = {
+				name = naval_doctrine_bonus
+				bonus = 1.00
+				uses = 2
+				category = naval_doctrine
+			}
 				random_owned_controlled_state = {
 				prioritize = { 158 159 161 }
 				limit = {
@@ -1182,14 +1198,19 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 1000
+			air_experience = 100
 			add_tech_bonus = {
 				name = fighter_bonus
 				bonus = 2.00
 				uses = 1
 				technology = improved_small_airframe
 			}	
-			
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 2.00
+				uses = 2
+				category = air_doctrine
+			}
 		}
 	}
 
@@ -1337,7 +1358,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 1000
+			air_experience = 100
 
 			add_tech_bonus = {
 				name = ITA_naval_air_effort
@@ -1374,16 +1395,10 @@ focus_tree = {
 			}
 			navy_experience = 25
 			add_tech_bonus = {
-				name = ITA_atlantic_fleet
-				bonus = 1.0
-				uses = 1
-				category = cv_tech
-			}
-			add_tech_bonus = {
-				name = ITA_atlantic_fleet
-				bonus = 1.0
-				uses = 1
-				category = bb_tech
+				name = naval_doctrine_bonus
+				bonus = 2.00
+				uses = 3
+				category = naval_doctrine
 			}
 			138 = {
 				add_resource = {
@@ -1445,11 +1460,11 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 1000
+			air_experience = 50
 			add_tech_bonus = {
 				name = fighter_bonus
 				bonus = 2.00
-				uses = 1
+				uses = 2
 				technology = advanced_small_airframe
 			}	
 			
@@ -1510,7 +1525,12 @@ focus_tree = {
 				uses = 1
 				category = cl_tech
 			}
-			
+			add_tech_bonus = {
+				name = naval_doctrine_bonus
+				bonus = 1.00
+				uses = 1
+				category = naval_doctrine
+			}
 			138 = {
 				add_resource = {
 					type = steel
@@ -1599,6 +1619,12 @@ focus_tree = {
 				uses = 1
 				category = ss_tech
 			}
+			add_tech_bonus = {
+				name = naval_doctrine_bonus
+				bonus = 1.00
+				uses = 1
+				category = naval_doctrine
+			}
 			138 = {
 				add_resource = {
 					type = steel
@@ -1637,16 +1663,18 @@ focus_tree = {
 				category = ss_tech
 			}
 			add_tech_bonus = {
-				name = ITA_sea_wolves
-				bonus = 1.0
+				name = naval_doctrine_bonus
+				bonus = 1.00
 				uses = 2
-				category = submarine_doctrine
+				category = naval_doctrine
 			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = dockyard
-				level = 2
-				instant_build = yes
+			162 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -1672,7 +1700,7 @@ focus_tree = {
 			add_political_power = 150
 			add_stability = 0.2
 		army_experience = 200
-		air_experience = 250
+		air_experience = 50
 		}
 	}
 
@@ -1830,27 +1858,27 @@ focus_tree = {
 				news_event = { hours = 6 id = news.184 }
 			}
 			2 = {
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
 			64 = {
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}

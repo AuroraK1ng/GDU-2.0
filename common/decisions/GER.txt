@@ -898,6 +898,30 @@ operations = {
 			GER = { puppet = FIN }
 		}
 	}
+	
+	Puppet_Spain = {
+		ai_will_do = { factor = 0 }
+		cost = 0
+		fire_only_once = yes
+		allowed = {
+			original_tag = GER
+		}
+		available = {	not = { has_global_flag = mini_GDU }
+			SPR = { is_ai = yes }
+			country_exists = SPR
+			date > 1940.1.1
+			GER = { has_war = yes }
+			SPR = { is_ai = yes }}
+		icon = GFX_decision_ger_reichskommissariats
+
+		visible = {
+			always = yes					
+		}
+
+		complete_effect = {
+			GER = { puppet = SPR }
+		}
+	}
 
 	GER_case_anton = {
 
