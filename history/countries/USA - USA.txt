@@ -16,6 +16,7 @@ set_variable = { var = quorum_low value = 39 }
 set_variable = { var = quorum_medium value = 49 }
 set_variable = { var = quorum_high value = 58 }
 # Starting tech
+add_timed_idea = { idea = airandnavy_idea days = 1320 }
 set_technology = {
 	early_submarine = 1
 		early_ship_hull_light = 1
@@ -84,6 +85,20 @@ set_technology = {
 	fuel_refining = 1
 	marines = 1
 	basic_train = 1
+}
+add_intel = {
+	target = BUl
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = SPR
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
 }
 add_intel = {
 	target = USA
@@ -429,9 +444,8 @@ recruit_character = USA_joseph_patterson
 recruit_character = USA_henry_stimson
 recruit_character = USA_victor_perlo
 add_timed_idea = { idea = peace_training days = 1800 }
-add_timed_idea = { idea = no_tradebacks days = 1800 }
+add_timed_idea = { idea = no_tradebacks days = 1331 }
 add_ideas = {
-	USA_POOP
 	ernest_king_1
 	undisturbed_isolation
 	great_depression

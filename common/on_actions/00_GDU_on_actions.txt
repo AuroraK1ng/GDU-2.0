@@ -9,12 +9,22 @@ on_actions = {
 		effect = {
 every_country = {
                     add_ideas = { EFI_START }
-					
+				}
+								
 			218 = {
 					add_province_modifier = {
 						static_modifiers = { soviet_hero_city }
 						province = {
 							id = 6136
+						}
+					}
+				}
+				685 = {
+					add_province_modifier = {
+						static_modifiers = { panama_defensive }
+						province = {
+						id = 7617 
+						id = 1633
 						}
 					}
 				}

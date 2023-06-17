@@ -18,8 +18,23 @@ if = {
 set_research_slots = 4
 set_stability = 0.7
 set_war_support = 0.6
+add_timed_idea = { idea = airandnavy_idea days = 1320 }
 add_intel = {
 	target = USA
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = SPR
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = BUl
 	civilian_intel = 200
 	army_intel = 200
 	navy_intel = 200

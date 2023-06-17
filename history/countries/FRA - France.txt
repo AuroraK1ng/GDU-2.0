@@ -50,6 +50,20 @@ if = {
 	}
 }
 add_intel = {
+	target = SPR
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = BUl
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
 	target = USA
 	civilian_intel = 200
 	army_intel = 200
@@ -519,6 +533,7 @@ set_popularities = {
 }
 add_timed_idea = { idea = peace_training days = 1331 }
 add_timed_idea = { idea = no_tradebacks days = 1331 }
+add_timed_idea = { idea = airandnavy_idea days = 1320 }
 add_ideas = {
 	FRA_victors_of_wwi
 	FRA_disjointed_government

@@ -10,7 +10,20 @@ if = {
 }
 
 set_country_flag=host
-
+add_intel = {
+	target = BUl
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = SPR
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
 add_intel = {
 	target = USA
 	civilian_intel = 200
@@ -381,8 +394,9 @@ set_popularities = {
 
 create_faction = Comintern
 add_to_faction = SOV
+add_timed_idea = { idea = airandnavy_idea days = 1960 }
 add_timed_idea = { idea = peace_training days = 1960 }
-add_timed_idea = { idea = no_tradebacks days = 1960 }
+add_timed_idea = { idea = no_tradebacks days = 1331 }
 add_ideas = {
 	trotskyite_plot
 	soviet_closed_market
