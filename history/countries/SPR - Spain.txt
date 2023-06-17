@@ -129,7 +129,7 @@ add_intel = {
 	airforce_intel = 200
 }
 
-set_research_slots = 3
+set_research_slots = 4
 
 add_ideas = {
 	SPA_carlism_1
@@ -339,22 +339,12 @@ create_corps_commander = {
 }
 
 		create_field_marshal = {
-                name = "Francisco Franco"
-                portrait_path = "gfx/leaders/SPA/Portrait_Spain_Francisco_Franco.dds"
-                traits = { offensive_doctrine brilliant_strategist politically_connected war_hero media_personality }
-                skill = 6
-				attack_skill = 5
-				defense_skill = 5
-				planning_skill = 5
-				logistics_skill = 4
-        }
-		create_field_marshal = {
                 name = "Francisco Franco AFRICANUS"
                 portrait_path = "gfx/leaders/SPA/AFRICA_Portrait_Spain_Francisco_Franco.dds"
-                traits = { offensive_doctrine brilliant_strategist politically_connected war_hero media_personality desert_fox }
-                skill = 5
-				attack_skill = 4
-				defense_skill = 4
+                traits = { offensive_doctrine brilliant_strategist politically_connected war_hero media_personality desert_fox organizer }
+                skill = 6
+				attack_skill = 7
+				defense_skill = 5
 				planning_skill = 5
 				logistics_skill = 4
         }		
@@ -371,21 +361,21 @@ create_corps_commander = {
 			create_corps_commander = {
                 name = "Davila Arrondo"
                 picture = "Portrait_SPR_Davila_Arrondo.tga"
-                traits = { panzer_leader armor_officer trait_reckless harsh_leader trickster media_personality trait_engineer }
-                skill = 5
-				attack_skill = 5
-				defense_skill = 4
-				planning_skill = 3
+                traits = { panzer_leader armor_officer trait_reckless harsh_leader trickster media_personality trait_engineer ranger }
+                skill = 6
+				attack_skill = 6
+				defense_skill = 6
+				planning_skill = 4
 				logistics_skill = 4
         }
 			create_corps_commander = {
                 name = "Davila Arrondo AFRICANUS"
                 picture = "AFRICA_Portrait_SPR_Davila_Arrondo.dds"
                 traits = { panzer_leader armor_officer trait_reckless harsh_leader trickster media_personality trait_engineer desert_fox }
-                skill = 4
-				attack_skill = 4
-				defense_skill = 3
-				planning_skill = 3
+                skill = 6
+				attack_skill = 6
+				defense_skill = 6
+				planning_skill = 4
 				logistics_skill = 4
         }		
 			create_corps_commander = {

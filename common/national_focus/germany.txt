@@ -32,7 +32,7 @@ focus_tree = {
 			842 = { set_demilitarized_zone = no }
 			51 = { set_demilitarized_zone = no }
 			add_political_power = 150
-			army_experience = 200
+			army_experience = 250
 			add_named_threat = { threat = 5 name = GER_rhineland }
 			add_named_threat = { threat = 1 name = ITA_Ethiopia }
 			if = {
@@ -41,7 +41,12 @@ focus_tree = {
 					country_event = { id = germany.60 }
 				}
 			}
-						
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.00
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -61,10 +66,15 @@ focus_tree = {
 		completion_reward = {
 			# Balance research bonus for 2 techs under land_doctrine
 
-			army_experience = 800
+			army_experience = 1000
 
 
-			
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.00
+				uses = 2
+				category = land_doctrine
+			}
 
 			add_tech_bonus = {
 				name = land_doc_bonus
@@ -429,10 +439,10 @@ focus_tree = {
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = GER_industrial_effort_2IC }
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -447,10 +457,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = GER_industrial_effort_2IC
@@ -463,10 +473,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = GER_industrial_effort_2IC
@@ -479,10 +489,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = GER_industrial_effort_2IC
@@ -508,10 +518,10 @@ focus_tree = {
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = GER_industrial_effort_2_2IC }
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -527,10 +537,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = GER_industrial_effort_2_2IC
@@ -543,10 +553,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = GER_industrial_effort_2_2IC
@@ -559,10 +569,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = GER_industrial_effort_2_2IC
@@ -773,7 +783,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		x = -2
 		y = 1
 		relative_position_id = GER_autarky
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 12
 		}
@@ -873,10 +883,10 @@ activate_mission = GER_relocate_industry_from_friesland
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = GER_german_war_economy }
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -891,10 +901,10 @@ activate_mission = GER_relocate_industry_from_friesland
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = GER_german_war_economy
@@ -907,10 +917,10 @@ activate_mission = GER_relocate_industry_from_friesland
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = GER_german_war_economy
@@ -923,10 +933,10 @@ activate_mission = GER_relocate_industry_from_friesland
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = GER_german_war_economy
@@ -939,10 +949,10 @@ activate_mission = GER_relocate_industry_from_friesland
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = GER_german_war_economy
@@ -955,10 +965,10 @@ activate_mission = GER_relocate_industry_from_friesland
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = GER_german_war_economy
@@ -1005,7 +1015,6 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 800
 			add_tech_bonus = {
 				name = air_bonus
 				bonus = 1.5
@@ -1064,7 +1073,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 250
+			air_experience = 150
 			add_tech_bonus = {
 				name = bomber_bonus
 				bonus = 4
@@ -1077,8 +1086,12 @@ activate_mission = GER_relocate_industry_from_friesland
 				uses = 1
 				technology = CAS3x
 			}
-						
-			
+			add_tech_bonus = {
+				name = op_dest_bonus
+				bonus = 1.00
+				uses = 2
+				category = air_doctrine
+			}
 		}
 	}
 
@@ -1097,10 +1110,9 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 250
 			add_tech_bonus = {
 				name = GER_long_range_escorts
-				bonus = 2.5
+				bonus = 1.0
 				uses = 1
 				technology = improved_medium_airframe
 			}
@@ -1124,8 +1136,13 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		completion_reward = {
-			navy_experience = 400
-			air_experience = 400
+			air_experience = 150
+			add_tech_bonus = {
+				name = strat_dest_bonus
+				bonus = 1.00
+				uses = 2
+				category = air_doctrine
+			}
 		}
 	}
 
@@ -1145,7 +1162,13 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 250
+			air_experience = 150
+			add_tech_bonus = {
+				name = strat_dest_bonus
+				bonus = 1.00
+				uses = 2
+				category = air_doctrine
+			}		   
 			add_tech_bonus = {
 				name = bomber_bonus
 				bonus = 2.5
@@ -1211,12 +1234,18 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 250
+			air_experience = 50
+			add_tech_bonus = {
+				name = air_sup_bonus
+				bonus = 1.00
+				uses = 3
+				category = air_doctrine
+			}			   
 			# Balance research bonus to next tech among radio, radio_detection, decimetric_radar, improved_decimetric_radar, centimetric_radar, improved_centimetric_radar, advanced_centimetric_radar
 			add_tech_bonus = {
 				name = radar_tech_bonus
-				bonus = 2.00
-				uses = 4
+				bonus = 1.00
+				uses = 3
 				category = radar_tech
 			}
 			if = {
@@ -1247,8 +1276,13 @@ activate_mission = GER_relocate_industry_from_friesland
 
 		completion_reward = {
 			# Balance research bonus to 2 techs in land_doctrine
-			army_experience = 200
-			
+			army_experience = 50
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.00
+				uses = 2
+				category = land_doctrine
+			}
 			add_tech_bonus = {
 				bonus = 1.00
 				uses = 1
@@ -1295,38 +1329,38 @@ activate_mission = GER_relocate_industry_from_friesland
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = GER_integrate_war_economies_1 }
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
 			every_state = {
 				limit = { has_state_flag = GER_integrate_war_economies_2 }
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
 			HUN = {
 				every_state = {
 					limit = { has_state_flag = GER_integrate_war_economies_1 }
-					add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
-						level = 3
+						level = 2
 						instant_build = yes
 					}
 				}
 				every_state = {
 					limit = { has_state_flag = GER_integrate_war_economies_2 }
-					add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
-						level = 3
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1334,19 +1368,19 @@ activate_mission = GER_relocate_industry_from_friesland
 			ROM = {
 				every_state = {
 					limit = { has_state_flag = GER_integrate_war_economies_1 }
-					add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
-						level = 3
+						level = 2
 						instant_build = yes
 					}
 				}
 				every_state = {
 					limit = { has_state_flag = GER_integrate_war_economies_2 }
-					add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
-						level = 3
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1369,10 +1403,10 @@ activate_mission = GER_relocate_industry_from_friesland
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
-						level = 3
+						level = 2
 						instant_build = yes
 					}
 					set_state_flag = GER_integrate_war_economies_1
@@ -1385,10 +1419,10 @@ activate_mission = GER_relocate_industry_from_friesland
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
-						level = 3
+						level = 2
 						instant_build = yes
 					}
 					set_state_flag = GER_integrate_war_economies_2
@@ -1405,10 +1439,10 @@ activate_mission = GER_relocate_industry_from_friesland
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
-						level = 3
+						level = 2
 						instant_build = yes
 					}
 					set_state_flag = GER_integrate_war_economies_1
@@ -1421,10 +1455,10 @@ activate_mission = GER_relocate_industry_from_friesland
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
-						level = 3
+						level = 2
 						instant_build = yes
 					}
 					set_state_flag = GER_integrate_war_economies_2
@@ -1443,10 +1477,10 @@ activate_mission = GER_relocate_industry_from_friesland
 								include_locked = yes
 							}
 						}
-						add_extra_state_shared_building_slots = 3
+						add_extra_state_shared_building_slots = 2
 						add_building_construction = {
 							type = arms_factory
-							level = 3
+							level = 2
 							instant_build = yes
 						}
 						set_state_flag = GER_integrate_war_economies_1
@@ -1459,10 +1493,10 @@ activate_mission = GER_relocate_industry_from_friesland
 								include_locked = yes
 							}
 						}
-						add_extra_state_shared_building_slots = 3
+						add_extra_state_shared_building_slots = 2
 						add_building_construction = {
 							type = arms_factory
-							level = 3
+							level = 2
 							instant_build = yes
 						}
 						set_state_flag = GER_integrate_war_economies_2
@@ -1482,10 +1516,10 @@ activate_mission = GER_relocate_industry_from_friesland
 								include_locked = yes
 							}
 						}
-						add_extra_state_shared_building_slots = 3
+						add_extra_state_shared_building_slots = 2
 						add_building_construction = {
 							type = arms_factory
-							level = 3
+							level = 2
 							instant_build = yes
 						}
 						set_state_flag = GER_integrate_war_economies_1
@@ -1498,10 +1532,10 @@ activate_mission = GER_relocate_industry_from_friesland
 								include_locked = yes
 							}
 						}
-						add_extra_state_shared_building_slots = 3
+						add_extra_state_shared_building_slots = 2
 						add_building_construction = {
 							type = arms_factory
-							level = 3
+							level = 2
 							instant_build = yes
 						}
 						set_state_flag = GER_integrate_war_economies_2
@@ -1753,6 +1787,7 @@ activate_mission = GER_relocate_industry_from_friesland
 					country_event = gduevents.62
 				}
 			}		
+			army_experience = 10			 
 			if = {
 				limit = {
 					country_exists = AUS
@@ -2894,37 +2929,37 @@ activate_mission = GER_relocate_industry_from_friesland
 		completion_reward = {
 			GER = { add_ideas = GER_limited_navy }		
 			56 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = GER_naval_rearmament_1dockyard
 			}
 			833 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = GER_naval_rearmament_1dockyard
 			}
 			58 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = GER_naval_rearmament_1dockyard
 			}
 			834 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = GER_naval_rearmament_1dockyard
@@ -3068,7 +3103,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		prerequisite = { focus = GER_naval_rearmament focus = GER_naval_rearmament_alt }
 		x = 1
 		y = 1
-		cost = 2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -3076,6 +3111,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		complete_tooltip = {
+			navy_experience = 25	   
 
 			add_tech_bonus = {
 				name = dd_bonus
@@ -3092,7 +3128,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		}
 
 		completion_reward = {
-		
+			navy_experience = 25
 			add_tech_bonus = {
 				name = dd_bonus
 				bonus = 2.00
@@ -3137,10 +3173,10 @@ activate_mission = GER_relocate_industry_from_friesland
 					}
 					NOT = { has_state_flag = GER_naval_effort2_2dockyards }
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = GER_naval_effort2_2dockyards
@@ -3163,7 +3199,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-			navy_experience = 200
+			navy_experience = 50
 			add_tech_bonus = {
 				name = bc_bonus
 				bonus = 2
@@ -3179,7 +3215,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		}
 
 		completion_reward = {
-			navy_experience = 100
+			navy_experience = 50
 			add_tech_bonus = {
 				name = bc_bonus
 				bonus = 2
@@ -3215,7 +3251,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		}
 
 		completion_reward = {
-			navy_experience = 100
+			navy_experience = 50
 			add_tech_bonus = {
 				name = cv_bonus
 				bonus = 1.50
@@ -3349,7 +3385,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-			navy_experience = 100
+			navy_experience = 25
 			add_tech_bonus = {
 				name = GER_u_boat_effort
 				bonus = 1.00
@@ -3359,7 +3395,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		}
 
 		completion_reward = {
-			navy_experience = 100
+			navy_experience = 25
 			add_tech_bonus = {
 				name = GER_u_boat_effort
 				bonus = 1.00
@@ -3384,7 +3420,13 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		completion_reward = {
-			navy_experience = 400
+			add_tech_bonus = {
+				name = ti_bonus
+				name = GER_trade_interdiction
+				bonus = 1.25
+				uses = 3
+				category = trade_interdiction_tree
+			}
 		}
 	}
 
@@ -3425,6 +3467,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		completion_reward = {
+			army_experience = 20				   
 					42 = {
 						add_building_construction = {
 							type = anti_air_building
@@ -3524,7 +3567,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 100
+			army_experience = 500
 			set_technology = {
 				improved_medium_tank_chassis = 1
 			}
@@ -3571,7 +3614,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 100
+			army_experience = 500
 			set_technology = {
 				improved_heavy_tank_chassis = 1
 			}
