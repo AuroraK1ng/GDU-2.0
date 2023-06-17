@@ -25,6 +25,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			army_experience = 1000				
 			add_political_power = 10
 			add_ideas = partial_economic_mobilisation
 			hidden_effect = {
@@ -906,6 +907,7 @@ focus_tree = {
 		prerequisite = { focus = SOV_move_industry_to_urals }
 		available = {
 			OR = {
+				date > 1941.6.14	   
 				has_war_with = GER
 				ENG = { surrender_progress > 0.15 }
 				USA = { surrender_progress > 0.15 }
@@ -921,9 +923,6 @@ focus_tree = {
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		completion_reward = {
-			set_technology = {
-				breakthrough_priority = 1
-			}
 			add_tech_bonus = {
 				name = nkvd_4
 				bonus = 2.0
@@ -1314,6 +1313,19 @@ focus_tree = {
 			
 			add_ideas = general_winter_idea
 			custom_effect_tooltip = GDU_spacer
+			add_tech_bonus = {
+				name = moscow_landdoc_7
+				bonus = 215.00
+				uses = 1
+				technology = volkssturm
+				technology = firebrigades
+				technology = combined_arms
+				technology = forward_observers
+				technology = assault_breakthrough
+				technology = night_assault_tactics
+				technology = breakthrough_priority
+				technology = guerilla_warfare
+			}						  
 			219 = {
 				custom_effect_tooltip = SOV_defense_of_moscow_forts_GDU
 				hidden_effect = {
@@ -1468,6 +1480,7 @@ focus_tree = {
 
 		create_corps_commander = {
 		name = "Nikolai Berzarin"
+		picture = "Portrait_Soviet_Nikolai_Berzarin.dds"
 		traits = { infantry_officer trait_mountaineer skilled_staffer old_guard trait_cautious }
 		skill = 5
 
@@ -1479,6 +1492,7 @@ focus_tree = {
 
 		create_corps_commander = {
 		name = "Alexander Gorbatov"
+		picture = "Portrait_Soviet_Alexander_Gorbatov.dds"
 		traits = { career_officer cavalry_officer harsh_leader trait_reckless infantry_leader }
 		skill = 5
 
@@ -1526,6 +1540,7 @@ focus_tree = {
 		prerequisite = { focus = SOV_extra_tech_slot_2 }
 		available = {
 			OR = {
+			date > 1941.6.14									  
 				has_war_with = GER
 				ENG = { surrender_progress > 0.15 }
 				USA = { surrender_progress > 0.15 }
@@ -1544,15 +1559,24 @@ focus_tree = {
 		cancel_if_invalid = no
 		continue_if_invalid = yes
         completion_reward = {
-			set_technology = {
-				continuous_offensive = 1
-			}
 			custom_effect_tooltip = SOV_red_army_resurgent_tooltip
 			country_event = gduevents.5
 			swap_ideas = {
 				remove_idea = SOV_war_for_communism
 				add_idea = great_patriotic_war
 			}
+			add_tech_bonus = {
+				name = stalingrad_landdoc_9
+				bonus = 215.00
+				uses = 1
+				technology = modern_blitzkrieg
+				technology = werwolf_guerillas
+				technology = air_land_battle
+				technology = shock_and_awe
+				technology = c3i_theory
+				technology = infiltration_in_depth
+				technology = continuous_offensive
+			}			   
 			if = {
 				limit = {
 					SOV = { has_idea = GDU_SOV_Danger_To_Heartland }
@@ -1648,7 +1672,7 @@ focus_tree = {
 		x = -3
 		y = 2
 		relative_position_id = SOV_finish_five_year_plan
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}
@@ -1706,10 +1730,10 @@ focus_tree = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 6
+					add_extra_state_shared_building_slots = 5
 					add_building_construction = {
 						type = arms_factory
-						level = 6
+						level = 5
 						instant_build = yes
 					}
 					set_state_flag = SOV_production_effort_2AF
@@ -1725,10 +1749,10 @@ focus_tree = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 6
+					add_extra_state_shared_building_slots = 5
 					add_building_construction = {
 						type = arms_factory
-						level = 6
+						level = 5
 						instant_build = yes
 					}
 					set_state_flag = SOV_production_effort_2AF
@@ -1758,10 +1782,10 @@ focus_tree = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 6
+					add_extra_state_shared_building_slots = 5
 					add_building_construction = {
 						type = arms_factory
-						level = 6
+						level = 5
 						instant_build = yes
 					}
 					set_state_flag = SOV_production_effort_2AF
@@ -1777,10 +1801,10 @@ focus_tree = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 6
+					add_extra_state_shared_building_slots = 5
 					add_building_construction = {
 						type = arms_factory
-						level = 6
+						level = 5
 						instant_build = yes
 					}
 					set_state_flag = SOV_production_effort_2AF
@@ -1988,14 +2012,19 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		    army_experience = 200
+		    army_experience = 700
 			add_tech_bonus = {
 				bonus = 1.7
 				uses = 1
 				name = mech_army_bonus
 				technology = mechanised_infantry
 			}				
-					
+			add_tech_bonus = {
+				bonus = 9.99
+				uses = 1
+				name = katyusha_bonus
+				technology = forgotmotorized_rocket_unit
+			}	
 		}
 	}
 
@@ -2014,7 +2043,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 1000
+			air_experience = 500
 			set_rule = {
 				can_generate_female_aces = yes
 			}
@@ -2091,7 +2120,7 @@ focus_tree = {
 		relative_position_id = SOV_move_industry_to_urals
 		x = 2
 		y = 2
-		cost = 7.15
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2107,9 +2136,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_technology = {
-				mechanized_wave = 1
-			}
 			add_research_slot = 1
 			582 = {
 					add_resource = {
@@ -2130,8 +2156,19 @@ focus_tree = {
 				uses = 1
 				technology = advanced_heavy_tank_chassis
 			}		
+			add_tech_bonus = {
+				name = patriotic_landdoc_8
+				bonus = 215.00
+				uses = 1
+				technology = nd_conscription
+				technology = backhand_blow
+				technology = tactical_control
+				technology = advanced_firebases
+				technology = central_planning
+				technology = attritional_containment
+				technology = mechanized_wave
+			}
 		}
-
 		prerequisite = { focus = SOV_defense_of_moscow }
 			bypass = {
 				NOT = { country_exists = ger }
@@ -2153,7 +2190,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 1000
+			air_experience = 25
 
 			add_tech_bonus = {
 				name = air_bonus
@@ -2366,7 +2403,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 500
 			add_tech_bonus = {
 				bonus = 1.00
 				uses = 2
@@ -3140,7 +3176,7 @@ focus_tree = {
 		relative_position_id = SOV_move_industry_to_urals
 		x = -2
 		y = 2
-		cost = 7.15
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -3206,8 +3242,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
-			army_experience = 10
+			add_tech_bonus = {
+				bonus = 1.00
+				uses = 1
+				category = land_doctrine
+			}
+			army_experience = 20
 		}
 	}
 
@@ -3303,13 +3343,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 		completion_reward = {
-			set_technology = {
-				pocket_defence = 1
-				defence_in_depth = 1
-				large_front_operations = 1
-				deep_operations = 1
-				operational_concentration = 1
-			}
 			if = {
 				limit = {
 					SOV = { has_war_with = FIN }
@@ -3424,6 +3457,7 @@ focus_tree = {
 	}
 		create_field_marshal = {
 			name = "Vasily Chuikov"
+			picture = "Portrait_Soviet_Vasily_Chuikov.dds"
 			traits = { winter_specialist brilliant_strategist career_officer infantry_leader panzer_leader trait_engineer urban_assault_specialist trait_cautious}
 			skill = 4
 			attack_skill = 5
@@ -3434,14 +3468,19 @@ focus_tree = {
 	}
 
 
-			army_experience = 200
+			army_experience = 20
 			add_tech_bonus = {
 				name = USSR_MEME_project
 				bonus = 1.00
 				uses = 1
 				category = nuclear
 			}
-			
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.00
+				uses = 2
+				category = land_doctrine
+			}
 	}
 }	
 
