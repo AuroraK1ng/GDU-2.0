@@ -12,13 +12,13 @@ bookmarks = {
 			ideology = democratic
 			ideas = {
 				FRA_victors_of_wwi
-				FRA_disjointed_government
+				FRA_political_violence
 				FRA_protected_by_the_maginot_line
 			}
 			focuses = {
-				FRA_form_the_popular_front
-				FRA_revive_the_national_bloc
-				FRA_go_with_britain
+				FRA_army_reform
+				FRA_heavy_armor_focus
+				FRA_devalue_the_franc
 			}
 		}
 		"USA"={
@@ -30,10 +30,11 @@ bookmarks = {
 				undisturbed_isolation
 			}
 			focuses = {
-				USA_war_plan_black
+				USA_two_ocean_navy_act 
+				USA_lend_lease_act
+				USA_the_giant_wakes 
 			}
 		}
-
 		"ENG"={
 			history = "ENG_GATHERING_STORM_DESC"
 			ideology = democratic
@@ -43,6 +44,8 @@ bookmarks = {
 				george_v
 			}
 			focuses = {
+				general_rearmament_focus 
+				fighter_command_focus 
 				tizard_mission_focus
 			}
 		}
@@ -50,11 +53,10 @@ bookmarks = {
 		"GER"={
 			history = "GER_GATHERING_STORM_DESC"
 			ideology = fascism
-
 			ideas = {
+				GER_mefo_bills_1 
 				sour_loser
 				general_staff
-				GER_mefo_bills_1
 			}
 			focuses = {
 				GER_anschluss
@@ -66,43 +68,39 @@ bookmarks = {
 			history = "ITA_GATHERING_STORM_DESC"
 			ideology = fascism
 			ideas = {
-				vittorio_emanuele
-				ITA_iri_fake_ns
-				ITA_re_fake_ns
-			}	
+				vittoria_mutilata
+				victor_emmanuel
+			}
 			focuses = {
-				ITA_il_sol_dell_avvenire
-				ITA_a_colonial_empire
-			}		
+				ITA_mare_nostrum
+				ITA_slovenia_dalmatia_claims 
+				ITA_pact_of_steel
+			}
 		}
 		"JAP"={
 			history = "JAP_GATHERING_STORM_DESC"
 			ideology = fascism
 			ideas = {
-				state_shintoism
 				JAP_zaibatsus
 				JAP_militarism
-			}	
+			}
 			focuses = {
-				JAP_the_zero
-				JAP_warrior_spirit
 				JAP_strike_on_the_southern_resource_area
-			}			
+				JAP_intervene_in_china
+				JAP_the_zero
+			}
 		}
-
 		"SOV"={
 			history = "SOV_GATHERING_STORM_DESC"
 			ideology = communism
-
 			ideas = {
-				trotskyite_plot_nsb
-				SOV_second_five_year_plan_fake_1936_ns
-				SOV_politicized_military
+				trotskyite_plot
 			}
 			focuses = {
-				SOV_behead_the_snake
-				SOV_the_centre
-			}	
+				SOV_great_purge
+				SOV_defense_of_stalingrad
+				SOV_proclaim_victory_over_fascism 
+			}
 		}
 
 		"---"={
@@ -120,9 +118,6 @@ bookmarks = {
 				CAN_conscription_crisis
 			}
 			focuses = {
-				CAN_strengthen_the_commonwealth_ties
-				CAN_commit_to_the_war
-				CAN_war_fueled_economy
 			}
 		}
 		"AST"={
@@ -133,9 +128,33 @@ bookmarks = {
 				AST_great_depression_1
 			}
 			focuses = {
-				AST_support_the_policy_of_appeasement
-				AST_rats_of_tobruk
-				AST_fight_work_or_perish
+			}
+		}
+		"NZL"={
+			minor = yes
+			history = "NZL_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				NZL_maori_conscription
+				NZL_the_manpower_act
+				ENG_guided_by_britain_1
+			}
+			focuses = {
+				NZL_bob_semple_tank
+				NZL_strengthen_the_commonwealth
+				NZL_expand_the_university_of_auckland
+			}
+		}
+		"SAF"={
+			minor = yes
+			history = "SAF_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				SAF_ossewabrandwag
+				SAF_history_of_segregation
+			}
+			focuses = {
+				SAF_secure_interests_in_africa
 			}
 		}
 		"RAJ"={
@@ -147,12 +166,10 @@ bookmarks = {
 				RAJ_princely_states
 			}
 			focuses = {
-				RAJ_provincial_elections
 				RAJ_indian_gurkhas
 				RAJ_the_smiling_buddha
 			}
 		}
-
 
 		"HUN"={
 			minor = yes
@@ -162,7 +179,6 @@ bookmarks = {
 				HUN_treaty_of_triannon
 			}
 			focuses = {
-				HUN_proclaim_greater_hungary
 				HUN_secret_rearmament
 				HUN_renounce_the_treaty_of_trianon
 			}
@@ -177,7 +193,6 @@ bookmarks = {
 				neutrality_idea
 			}
 			focuses = {
-				ROM_appoint_german_friendly_government
 				ROM_institute_royal_dictatorship
 				ROM_preserve_greater_romania
 			}
