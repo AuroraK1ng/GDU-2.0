@@ -1082,10 +1082,9 @@ focus_tree = {
 		id = Finish_rearmament
 		text = "Finish Rearmament"
 		available = {
-			    date > 1940.5.01
+			    date > 1940.6.1
 		}
-		prerequisite = { focus = royal_ordinance_focus }
-		prerequisite = { focus = royal_dockyard_focus }
+		prerequisite = { focus = royal_ordinance_focus focus = royal_dockyard_focus}
 		icon = GFX_Limited_Rearm
 		x = 0
 		y = 3

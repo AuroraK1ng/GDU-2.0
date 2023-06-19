@@ -1,7 +1,6 @@
 characters={
 
 	SPR_niceto_alcala_zamora={
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -17,8 +16,6 @@ characters={
 				expire="1965.1.1.1"
 				id=-1
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -33,11 +30,9 @@ characters={
 				expire="1965.1.1.1"
 				id=-1
 			}
-		}
 	}
 
 	SPR_jose_diaz={
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -53,8 +48,6 @@ characters={
 				expire="1965.1.1.1"
 				id=-1
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -69,7 +62,6 @@ characters={
 				expire="1965.1.1.1"
 				id=-1
 			}
-		}
 	}
 
 	SPR_alejandro_lerroux={
@@ -276,7 +268,6 @@ characters={
 	# Unit Leaders
 
 	SPR_vicente_rojo_lluch={
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -296,8 +287,6 @@ characters={
 				logistics_skill=3
 				legacy_id=1102
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -345,11 +334,9 @@ characters={
 				logistics_skill=3
 				legacy_id=1102
 			}
-		}
 	}
 
 	SPR_jose_miaja={
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -369,8 +356,6 @@ characters={
 				logistics_skill=1
 				legacy_id=1103
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -409,7 +394,6 @@ characters={
 					factor = 1.000
 				}
 			}
-		}
 	}
 
 	SPA_emilio_herrera={
@@ -444,7 +428,6 @@ characters={
 	}
 
 	SPR_jose_asensio_torrado={
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -464,8 +447,6 @@ characters={
 				logistics_skill=1
 				legacy_id=1101
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -485,7 +466,6 @@ characters={
 				logistics_skill=1
 				legacy_id=1100
 			}
-		}
 	}
 
 	SPR_valentin_gonzalez={
@@ -627,7 +607,6 @@ characters={
 	}
 
 	SPA_francisco_franco={
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -640,7 +619,7 @@ characters={
 			}
 
 			field_marshal={
-				traits={ offensive_doctrine brilliant_strategist politically_connected war_hero media_personality desert_fox organizer }
+				traits={ offensive_doctrine brilliant_strategist politically_connected war_hero media_personality hill_fighter organizer }
 				skill=6
 				attack_skill=7
 				defense_skill=5
@@ -663,8 +642,6 @@ characters={
 					}
 				}
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -723,7 +700,6 @@ characters={
 				expire="1965.1.1.1"
 				id=-1
 			}
-		}
 	}
 
 	SPR_mohamed_meziane={
@@ -765,7 +741,6 @@ characters={
 	}
 
 	SPA_emilio_mola={ # Falangist/Francoist
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -819,8 +794,6 @@ characters={
 					}
 				}
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -854,11 +827,9 @@ characters={
 					factor = 1.000
 				}
 			}
-		}
 	}
 
 	SPA_juan_yague={ # Falangist
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -891,10 +862,8 @@ characters={
 				}
 				cost = 100
 			}
-		}
 	}
 		SPA_miguel_ponte={ # Falangist
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -926,14 +895,9 @@ characters={
 					army_chief_offensive_2
 				}
 				cost = 100
+				}
 		}
-
-			
-				
-	}
-}
 		SPA_heli_rolando_de_tella={ # Falangist
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -962,14 +926,9 @@ characters={
 					army_chief_defensive_2
 				}
 				cost = 100
+			}
 		}
-
-			
-				
-	}
-}
 		SPA_rafael_garcia_valino={ # Falangist
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -998,14 +957,9 @@ characters={
 					army_chief_organizational_2
 				}
 				cost = 100
-		}
-
 			
-				
-	}
-}
+		}
 		SPA_enrique_canovas_lacruz={ # Falangist
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -1034,14 +988,9 @@ characters={
 					army_regrouping_2
 				}
 				cost = 100
+			}
 		}
-
-			
-				
-	}
-}
 		SPA_wilhelm_ritter_von_thoma={ # Falangist
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -1070,13 +1019,7 @@ characters={
 					army_armored_3
 				}
 				cost = 100
-		}
-
-			
-				
-	}
-}
-		instance = {
+			}
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -1111,8 +1054,6 @@ characters={
 				}
 			}
 		}
-	
-
 	SPA_emilio_esteban_infantes={
 		name=SPA_emilio_esteban_infantes
 		portraits={
@@ -1148,7 +1089,6 @@ characters={
 	}
 
 	SPA_agustin_munoz_grandes={
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -1195,8 +1135,6 @@ characters={
 				logistics_skill=2
 				legacy_id=1113
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -1231,11 +1169,9 @@ characters={
 					factor = 1.000
 				}
 			}
-		}
 	}
 
 	SPA_jose_enrique_varela={
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -1314,8 +1250,6 @@ characters={
 					}
 				}
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -1348,11 +1282,9 @@ characters={
 					military_theorist
 				}
 			}
-		}
 	}
 
 	SPA_miguel_cabanellas={ # Carlist
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -1412,8 +1344,6 @@ characters={
 					}
 				}
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -1446,7 +1376,6 @@ characters={
 					factor = 1.000
 				}
 			}
-		}
 	}
 
 	SPR_jose_millan_astray={
@@ -1469,7 +1398,6 @@ characters={
 	}
 
 	SPR_miguel_buiza_fernandez_palacios={
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -1489,8 +1417,6 @@ characters={
 				coordination_skill=1
 				legacy_id=1117
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -1529,11 +1455,9 @@ characters={
 					factor = 1.000
 				}
 			}
-		}
 	}
 
 	SPA_luis_carrero_blanco={ # Francoist
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -1574,8 +1498,6 @@ characters={
 				coordination_skill=1
 				legacy_id=1118
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -1608,7 +1530,6 @@ characters={
 					factor = 1.000
 				}
 			}
-		}
 	}
 
 	SPA_rafael_garcia_valino={ # Francoist/Carlist
@@ -1745,7 +1666,6 @@ characters={
 	}
 
 	SPA_joaquin_garcia_morato = { # Francoist
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -1777,8 +1697,6 @@ characters={
 				}
 				cost = 100
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -1813,7 +1731,6 @@ characters={
 					factor = 1.000
 				}
 			}
-		}
 	}
 
 	SPA_juan_vigon_suero_diaz = { # Carlist
@@ -1957,7 +1874,6 @@ characters={
 	}
 
 	SPA_ricardo_rada = { # Carlist
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -1995,8 +1911,6 @@ characters={
 				}
 				cost = 100
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -2030,11 +1944,9 @@ characters={
 					factor = 1.000
 				}
 			}
-		}
 	}
 
 	SPR_nicolas_molero = { # Democratic
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -2064,8 +1976,6 @@ characters={
 				}
 				traits = { military_theorist }
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -2101,7 +2011,6 @@ characters={
 					military_theorist
 				}
 			}
-		}
 	}
 
 	SPA_salvador_moreno_fernandez={
@@ -2621,7 +2530,6 @@ characters={
 	}
 
 	SPR_ignacio_hidalgo_de_cisneros = { # Democratic
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -2651,8 +2559,6 @@ characters={
 				traits = { air_chief_safety_2 }
 				cost = 100
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -2690,11 +2596,9 @@ characters={
 					factor = 1.000
 				}
 			}
-		}
 	}
 
 	SPR_andres_garcia_la_calle = { # Democratic
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -2724,8 +2628,6 @@ characters={
 				traits = { air_chief_ground_support_2 }
 				cost = 100
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -2763,7 +2665,6 @@ characters={
 					factor = 1.000
 				}
 			}
-		}
 	}
 
 	SPR_alberto_bayo = { # POUM
@@ -2863,7 +2764,6 @@ characters={
 	}
 
 	SPR_luis_gonzalez_de_ubieta = { # Democratic
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -2893,8 +2793,6 @@ characters={
 				traits = { navy_screen_2 }
 				cost = 100
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -2932,7 +2830,6 @@ characters={
 					factor = 1.000
 				}
 			}
-		}
 	}
 
 	SPR_joakin_egia_unzueta = { # POUM
@@ -3112,7 +3009,6 @@ characters={
 	}
 
 	SPR_antonio_azarola_y_gresillon = { # Democratic
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -3142,8 +3038,6 @@ characters={
 				traits = { navy_screen_2 }
 				cost = 100
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -3182,7 +3076,6 @@ characters={
 					factor = 1.000
 				}
 			}
-		}
 	}
 
 	SPR_jose_rovira = { # POUM
@@ -3526,7 +3419,6 @@ characters={
 	}
 
 	SPR_augusto_barcia_trelles={
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -3566,8 +3458,6 @@ characters={
 					}
 				}
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -3594,11 +3484,9 @@ characters={
 					ideological_crusader 
 				}
 			}
-		}
 	}
 
 	SPR_diego_martinez_barrio={
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -3638,8 +3526,6 @@ characters={
 					}
 				}
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -3669,11 +3555,9 @@ characters={
 					factor = 0.000
 				}
 			}
-		}
 	}
 
 	SPR_dolores_ibarruri={
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -3711,8 +3595,6 @@ characters={
 					}
 				}
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -3750,7 +3632,6 @@ characters={
 					communist_revolutionary 
 				}
 			}
-		}
 	}
 
 	SPR_juan_negrin={
@@ -3894,7 +3775,6 @@ characters={
 	}
 
 	SPR_francisco_largo_caballero={
-		instance = {
 			allowed = {
 				has_dlc = "La Resistance"
 			}
@@ -3934,8 +3814,6 @@ characters={
 					}
 				}
 			}
-		}
-		instance = {
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
 			}
@@ -3962,7 +3840,6 @@ characters={
 					captain_of_industry 
 				}
 			}
-		}
 	}
 
 	SPR_federica_montseny={
