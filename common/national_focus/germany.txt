@@ -2237,9 +2237,8 @@ activate_mission = GER_relocate_industry_from_friesland
 					}
 				}				
 				
-				date > 1945.1.1
+				date > 1944.6.1
 			}
-			date > 1942.6.1
 		}
 
 		completion_reward = {
@@ -2432,6 +2431,9 @@ activate_mission = GER_relocate_industry_from_friesland
 		}
 	}
 		focus = {
+		available = {
+			date > 1942.10.1
+		}
 		id = GER_TOTALEN_KRIEG
 		icon = GFX_focus_generic_spread_fascism
 		prerequisite = { focus = GER_fall_blau }	
@@ -2444,12 +2446,22 @@ activate_mission = GER_relocate_industry_from_friesland
 		relative_position_id = GER_ussr_war_goal
 		cost = 1
 
-		available = {
-
-		}
-
 		completion_reward = {
-			add_ideas = GER_TOT_WAR
+			if = {
+				limit = {
+					has_war_support < 0.7
+				}
+				add_war_support = 0.3
+			}
+			else_if = {
+				limit = {
+					has_idea = tot_economic_mobilisation
+				}
+				add_political_power = 150
+			}
+			else = {
+				add_ideas = tot_economic_mobilisation
+			}
 		}
 	}
 
