@@ -2118,7 +2118,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		x = 0
 		y = 1
 		relative_position_id = GER_reequip_INF
-		cost = 1
+		cost = 5
 
 		available = {
 			OR = {
@@ -2275,21 +2275,17 @@ activate_mission = GER_relocate_industry_from_friesland
 
 		completion_reward = {
 			ROM = {
-				add_timed_idea = { idea = wartime_propaganda days = 365 }
+				add_ideas = GER_foreign_ss
 			}
 			BUL = {
-				add_timed_idea = { idea = wartime_propaganda days = 365 }
+				add_ideas = GER_foreign_ss
 			}
 			HUN = {
-				add_timed_idea = { idea = wartime_propaganda days = 365 }
-			}
-			ITA = {
-				add_timed_idea = { idea = wartime_propaganda days = 365 }
+				add_ideas = GER_foreign_ss
 			}
 			SPR = {
-				add_timed_idea = { idea = wartime_propaganda days = 365 }
-			}
-			add_timed_idea = { idea = wartime_propaganda days = 365 }			
+				add_ideas = GER_foreign_ss
+			}		
 		}
 	}
 
