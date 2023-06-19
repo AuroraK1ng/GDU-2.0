@@ -320,6 +320,7 @@ NDefines.NMilitary.ZERO_ORG_MOVEMENT_MODIFIER = -0.8		   -- vanilla is -0.8. spe
 NDefines.NMilitary.HOURLY_ORG_MOVEMENT_IMPACT = -0.4		   -- vanilla is -0.2. how much org is lost every hour while moving an army.
 
 NDefines.NMilitary.PLAYER_ORDER_PLANNING_DECAY = 0.015
+NDefines.NMilitary.NAVAL_INVASION_PLANNING_BONUS_MALUS = -0.5
 NDefines.NMilitary.PLANNING_DECAY = 0.015
 NDefines.NMilitary.STRATEGIC_SPEED_BASE = 25.0
 NDefines.NMilitary.EFFICIENCY_REGION_CHANGE_DAILY_GAIN_STRATEGIC_BOMBER = 0.018
