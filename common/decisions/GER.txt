@@ -305,6 +305,7 @@ playable_siam = {
 		}
 		allowed = {
 			original_tag = GER
+			not = { has_global_flag = mini_GDU }
 		}
 		available = {
 			HUN = { is_ai = yes }
@@ -339,8 +340,6 @@ playable_siam = {
 				give_resource_rights = { receiver = ROM state = 170 }
 				give_resource_rights = { receiver = ITA state = 174 }
 				give_resource_rights = { receiver = ITA state = 171 }
-				give_resource_rights = { receiver = GER state = 169 }
-				give_resource_rights = { receiver = GER state = 169 }
 				give_resource_rights = { receiver = ROM state = 165 }
 				give_resource_rights = { receiver = ITA state = 166 }
 				give_resource_rights = { receiver = ITA state = 172 }
@@ -731,6 +730,7 @@ playable_siam = {
 		}
 		available = {
 			SPR = { is_ai = yes }
+			not = { has_global_flag = mini_GDU }
 			date > 1939.1.1
 		}
 		fire_only_once = yes
