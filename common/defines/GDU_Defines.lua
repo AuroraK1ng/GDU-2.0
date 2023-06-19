@@ -360,8 +360,8 @@ NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 0.5 -- how many 
 NDefines.NAir.FIELD_EXPERIENCE_SCALE = 0
 NDefines.NAir.AIR_WING_COUNTRY_XP_FROM_TRAINING_FACTORY = 0
 NDefines.NNavy.FIELD_EXPERIENCE_SCALE = 0
-NDefines.NNavy.XP_GAIN_FACTOR = 0
-NDefines.NNavy.TRAINING_DAILY_COUNTRY_EXP_FACTOR = 0
+NDefines.NNavy.XP_GAIN_FACTOR = 0.3
+NDefines.NNavy.TRAINING_DAILY_COUNTRY_EXP_FACTOR = 0.001
 NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_GAIN_DAILY = 0
 
 
@@ -463,7 +463,7 @@ NDefines.NAir.COMBAT_MULTIPLANE_CAP = 1.6
 NDefines.NAir.AIR_COMBAT_FINAL_DAMAGE_SCALE = 0.2  -- 0.015	 % how many max disrupted only planes are allowed to die in a single combat
 
 NDefines.NAir.DISRUPTION_DETECTION_FACTOR = 1.0
-NDefines.NNavy.ENEMY_AIR_SUPERIORITY_IMPACT = -0.85           		-- effect on ship efficiency due to enemy air superiorty
+NDefines.NNavy.ENEMY_AIR_SUPERIORITY_IMPACT = -0.85        		-- effect on ship efficiency due to enemy air superiorty
 NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_STR = 2.0					-- Balancing value to convert damage ( naval_strike_attack * hits ) to Strength reduction.
 NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 8.0					-- Balancing value to convert damage ( naval_strike_attack * hits ) to Organisation reduction.
 
