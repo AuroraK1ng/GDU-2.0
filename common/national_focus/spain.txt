@@ -336,7 +336,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_political_power = 75
 		}
 	}
 
@@ -1288,12 +1288,6 @@ date > 1942.8.1
 
 	focus = {
 		id = SPA_dictator_for_life
-		available = {
-			has_country_leader = {
-				name = "Francisco Franco"
-				ruling_only = yes
-			}
-		}
 		bypass = {
 		}
 		prerequisite = { focus = SPA_adopt_the_26_points }

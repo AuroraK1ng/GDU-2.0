@@ -284,7 +284,7 @@ foreign_politics = {
 			}
 		}
 	}
-}
+
 
 
 	GDU_ITA_avoidrubberwaste = {
@@ -401,8 +401,7 @@ foreign_politics = {
 
 		complete_effect = {
 			GER = { add_to_faction = ITA }	
-		 }
-#				
+		 }				
 		
 		
 		remove_effect = {
@@ -439,20 +438,16 @@ foreign_politics = {
 					targeted_alliance = GER
 					enemy = NZL
 				}				
-			}
-		}		
+			}	
+		}
 	}
 }
-
 USA_foreign_politics = {
-
 	GDU_USA_join_war = {
 		icon = GFX_decision_usa_congress
-
 		allowed = {
 			original_tag = USA
 		}
-
 		available = {
 			OR = {
 				date > 1941.1.1
@@ -462,17 +457,14 @@ USA_foreign_politics = {
 				NOT = { 126 = { is_controlled_by = ENG } }			
 			}
 		}
-
 		cost = 0
 		fire_only_once = yes
-
 		visible = {
 			tag = USA
 		}
 		ai_will_do = {
 			factor = 1
 		}
-
 		complete_effect = {
 			ENG = { add_to_faction = USA }
 			USA = {
@@ -485,12 +477,6 @@ USA_foreign_politics = {
 		}
 	}
 }
-		
-	
-	
-	
-
-
 
 operations = {
 
