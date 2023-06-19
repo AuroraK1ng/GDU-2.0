@@ -616,7 +616,7 @@ add_to_faction = ROM
 add_to_faction = HUN
 
 
-add_timed_idea = { idea = peace_training days = 1331 }
+
 
 
 add_ideas = {
@@ -716,29 +716,6 @@ if = {
 		has_dlc = "Waking the Tiger"
 	}
 	recruit_character = GER_carl_friedrich_goerdeler
-}
-
-if = {
-	limit = {
-		has_dlc = "La Resistance"
-	}
-	create_operative_leader = {
-		name = "Otto Skorzeny"
-		GFX = GFX_portrait_otto_skorenzy
-		traits = { operative_commando }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		nationalities = { GER }
-	}
-
-	create_operative_leader = {
-		name = "Nikolaus Ritter"
-		GFX = GFX_portrait_nikolaus_ritter
-		traits = { operative_safe_cracker }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		nationalities = { GER }
-	}
 }
 
 if = {

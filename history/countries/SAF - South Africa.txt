@@ -156,11 +156,6 @@ set_technology = {
 	forgotgwtank = 1
 	forgotearly_fighter = 1
 	forgotearly_bomber = 1
-	forgotearly_ship_hull_light = 1
-	forgotearly_ship_hull_cruiser = 1
-	forgotearly_ship_hull_heavy = 1
-	forgotearly_ship_hull_submarine = 1
-	forgotearly_ship_hull_carrier = 1
 	air_superiority = 1
 	airfield_construction = 1
 	fort_construction = 1
@@ -214,7 +209,6 @@ set_technology = {
 		mtg_transport = 1
 		improved_secondary_battery = 1
 		basic_fire_control_system = 1
-		cruiser_submarines = 1	
 }
 add_opinion_modifier = { target = SPR modifier = embargo }
 add_opinion_modifier = { target = SPR modifier = sanctions_relations }
@@ -320,7 +314,6 @@ create_country_leader = {
 	desc = "POLITICS_J_B_M_HERTZOG_DESC"
 	picture = "GFX_SAF_james_hertzog"
 	expire = "1965.1.1"
-	ideology = conservatism
 	traits = {
 		#
 	}
@@ -331,7 +324,6 @@ create_country_leader = {
 	desc = "POLITICS_DF_MALAN_DESC"
 	picture = "GFX_SAF_daniel_malan"
 	expire = "1965.1.1"
-	ideology = fascism_ideology
 	traits = {
 		#
 	}
@@ -342,7 +334,6 @@ create_country_leader = {
 	desc = "POLITICS_MOSES_KOTANE_DESC"
 	picture = "GFX_SAF_moses_kotane"
 	expire = "1965.1.1"
-	ideology = marxism
 	traits = {
 		#
 	}
@@ -353,26 +344,14 @@ create_country_leader = {
 	desc = "POLITICS_PIXLEY_SEME_DESC"
 	picture = "gfx/leaders/Africa/Portrait_Africa_Generic_3.dds"
 	expire = "1965.1.1"
-	ideology = centrism
 	traits = {
 		#
 	}
 }
 
 create_corps_commander = {
-	name = "George Edwin Brink"
-	gfx = "GFX_SAF_george_edwin_brink"
-	traits = { old_guard trickster career_officer infantry_officer}
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
 	name = "George Edwin Brink AFRICANUS"
-	gfx = "GFX_SAF_george_edwin_brink_AFRICA"
+	picture = "Portrait_South_Africa_George_Edwin_Brink_AFRICA.dds"
 	traits = { desert_fox old_guard trickster career_officer infantry_officer}
 	skill = 4
 	attack_skill = 5
