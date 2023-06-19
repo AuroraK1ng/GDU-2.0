@@ -180,13 +180,6 @@ recruit_character = NZL_walter_nash
 navy_experience = 0
 set_technology = {
 	forgotgwtank = 1
-	forgotearly_fighter = 1
-	forgotearly_bomber = 1
-	forgotearly_ship_hull_light = 1
-	forgotearly_ship_hull_cruiser = 1
-	forgotearly_ship_hull_heavy = 1
-	forgotearly_ship_hull_submarine = 1
-	forgotearly_ship_hull_carrier = 1
 	air_superiority = 1
 	airfield_construction = 1
 	fort_construction = 1
@@ -335,8 +328,6 @@ create_country_leader = {
 	desc = "POLITICS_MICHAEL_JOSEPH_SAVAGE_DESC"
 	picture = "GFX_NZL_michael_joseph_savage"
 	expire = "1965.1.1"
-	ideology = socialism
-
 }
 
 create_country_leader = {
@@ -344,7 +335,6 @@ create_country_leader = {
 	desc = "POLITICS_SIDNEY_HOLLAND_DESC"
 	picture = "GFX_NZL_sidney_holland"
 	expire = "1965.1.1"
-	ideology = centrism
 }
 
 create_country_leader = {
@@ -352,7 +342,6 @@ create_country_leader = {
 	desc = "POLITICS_JOHN_ORMOND_DESC"
 	picture = "GFX_NZL_john_ormond"
 	expire = "1965.1.1"
-	ideology = fascism_ideology
 }
 
 create_country_leader = {
@@ -360,25 +349,14 @@ create_country_leader = {
 	desc = "POLITICS_JOHN_ORMOND_DESC"
 	picture = "GFX_NZL_elsie_farrelly"
 	expire = "1965.1.1"
-	ideology = marxism
 }
 
 set_convoys = 100
 
-create_field_marshal = {
-	name = "Bernard Freyberg"
-	gfx = "GFX_NZL_bernard_freyberg"
-	traits = { jungle_rat organizer inflexible_strategist skilled_staffer politically_connected media_personality }
-	skill = 6
-	attack_skill = 5
-	defense_skill = 5
-	planning_skill = 4
-	logistics_skill = 5
-}
 
 create_field_marshal = {
 	name = "Bernard Freyberg AFRICANUS"
-	gfx = "GFX_NZL_bernard_freyberg_AFRICA"
+	picture = "Portrait_New_Zealand_Bernard_Freyberg_AFRICA.dds"
 	traits = { jungle_rat organizer inflexible_strategist skilled_staffer politically_connected media_personality }
 	skill = 6
 	attack_skill = 6
@@ -388,19 +366,8 @@ create_field_marshal = {
 }
 
 create_corps_commander = {
-	name = "Robert Row"
-	gfx = "GFX_NZL_robert_row"
-	traits = { naval_invader jungle_rat infantry_leader infantry_officer career_officer war_hero }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
 	name = "Robert Row AFRICANUS"
-	gfx = "GFX_NZL_robert_row_AFRICA"
+	picture = "Portrait_New_Zeeland_Robert_Row_AFRICA.dds"
 	traits = { naval_invader desert_fox infantry_leader infantry_officer career_officer war_hero }
 	skill = 4
 	attack_skill = 5
@@ -410,36 +377,14 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "William Stevens"
-	gfx = "GFX_NZL_william_stevens"
-	traits = { panzer_leader armor_officer trickster trait_cautious career_officer }
-	skill = 4
-	attack_skill = 5
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
 	name = "William Stevens AFRICANUS"
-	gfx = "GFX_NZL_william_stevens_AFRICA"
+	picture = "Portrait_New_Zeeland_William_Stevens_AFRICA.dds"
 	traits = { panzer_leader armor_officer desert_fox trickster trait_cautious career_officer }
 	skill = 4
 	attack_skill = 6
 	defense_skill = 5
 	planning_skill = 2
 	logistics_skill = 3
-}
-
-create_navy_leader = {
-	name = "Edmund Rupert Drummond"
-	gfx = "GFX_NZL_edmund_drummond"
-	traits = { chief_engineer fleet_protector spotter blockade_runner }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	maneuvering_skill = 5
-	coordination_skill = 3
 }
 
 create_navy_leader = {

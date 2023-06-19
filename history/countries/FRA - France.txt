@@ -533,7 +533,7 @@ set_popularities = {
 	neutrality = 15
 	communism = 20
 }
-add_timed_idea = { idea = peace_training days = 1331 }
+
 
 add_timed_idea = { idea = airandnavy_idea days = 1320 }
 add_ideas = {
@@ -600,49 +600,6 @@ recruit_character = FRA_zivony_peshkov
 
 recruit_character = FRA_felix_gouin
 
-
-if = {
-	limit = { has_dlc = "La Resistance" }
-	create_operative_leader = {
-		name = "Jeannie Rousseau"
-		GFX = GFX_portrait_jennie_rousseau
-		traits = { operative_linguist }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		female = yes
-		nationalities = { FRA }
-	}
-
-	create_operative_leader = {
-		name = "Odette Samson"
-		GFX = GFX_portrait_odette_samson
-		traits = { operative_tough }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		female = yes
-		nationalities = { FRA }
-	}
-
-	create_operative_leader = {
-		name = "René Joyeuse"
-		GFX = GFX_portrait_rene_joyeuse
-		traits = { operative_infiltrator }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		nationalities = { FRA }
-	}
-
-	create_operative_leader = {
-		name = "Gilbert Renault"
-		GFX = GFX_portrait_gilbert_renault
-		traits = { }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		nationalities = { FRA }
-	}
-
-	recruit_character = FRA_rene_nicod
-}
 
 ### VARIANTS ###
 # 1936 Start #

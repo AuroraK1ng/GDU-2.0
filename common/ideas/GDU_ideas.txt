@@ -96,8 +96,8 @@ ideas = {
 				army_defence_factor = -0.9
 				no_supply_grace = 1200
 				pocket_penalty	= -0.3
-}
-}
+			}
+		}
 
 
 		GDU_JAP_No_Prewar_TradeBuff = {
@@ -858,7 +858,7 @@ ideas = {
 			
 		}
 
-	  UK_mini_GDU_manpower = {
+		UK_mini_GDU_manpower = {
 			allowed = {
 				always = no
 			}
@@ -870,9 +870,9 @@ ideas = {
 			modifier = {
 				conscription_factor = 0.35
 			}
-	  }
+		}
 	  
-	  FIN_mini_GDU = {
+		FIN_mini_GDU = {
 			allowed = {
 				always = no
 			}
@@ -887,9 +887,9 @@ ideas = {
 				army_core_defence_factor = 6.0
 				industrial_capacity_factory = 1.5			
 			}
-	  }	  
+		}	  
 
-      GDU_minor_annexation_efficiency = {
+		GDU_minor_annexation_efficiency = {
 			
 			allowed = {
 				always = no
@@ -902,7 +902,7 @@ ideas = {
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.1
 			}		
-		}	
+		}
 
 		JAP_nonavyallies = {
 
@@ -2863,35 +2863,46 @@ ideas = {
 				date > 1936.01.01
 			}
 
-allowed = {
+			allowed = {
 				always = no				# Added via focus
 			}
-	modifier = {
-production_factory_start_efficiency_factor = 0.5
-
+			modifier = {
+				production_factory_start_efficiency_factor = 0.5
+			}
 		}
-	}
-	USA_POOP = {
-		allowed = {
+		USA_POOP = {
+			allowed = {
 				always = no				# Added via focus
 			}
-			          targeted_modifier = {
-                tag = USA
-                		
-		army_attack_factor = -0.20
-		army_defence_factor = -0.20
-		army_core_attack_factor = 0.2
-		army_core_defence_factor = 0.2
-		convoy_raiding_efficiency_factor = -0.6
-            }
+			targeted_modifier = {
+                tag = USA          		
+				army_attack_factor = -0.20
+				army_defence_factor = -0.20
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+				convoy_raiding_efficiency_factor = -0.6
+			}
 			picture = usa_us_air_force
-removal_cost = -1
+			removal_cost = -1
 			cancel = {
 				OR = {
-date > 1941.06.21
-
+					date > 1941.06.21
 				}
 			}
-	}
+		}
+		SPR_seized_spanish_gold_reserves = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = spr_seize_the_gold_reserves
+			
+			removal_cost = -1
 	
+			modifier = {
+				consumer_goods_factor = -0.05
+			}		
+		}
+	}
 }
