@@ -629,10 +629,10 @@ NDefines.NNavy.AMPHIBIOUS_LANDING_PENALTY = -0.37								-- amphibious landing p
 
 NDefines.NNavy.LEADER_EXPERIENCE_SCALE = 0.0                      -- making admirals not level up in battles, similarly to generals
 
-NDefines.NNavy.COMBAT_ARMOR_PIERCING_DAMAGE_REDUCTION = -0.90					-- All damage reduction % when target armor is >= then shooter armor piercing.
+NDefines.NNavy.COMBAT_ARMOR_PIERCING_DAMAGE_REDUCTION = -0.75					-- All damage reduction % when target armor is >= then shooter armor piercing.
 
 NDefines.NNavy.GUN_HIT_PROFILES = { -- hit profiles for guns, if target ih profile is lower the gun will have lower accuracy		
-	        275.0,    -- big guns
+	        175.0,    -- big guns
 	        810.0,    -- torpedos
 	        360.0,    -- small guns
 	   }		
@@ -641,7 +641,7 @@ NDefines.NNavy.DEPTH_CHARGES_HIT_PROFILE                                        
 
 NDefines.NNavy.BASE_GUN_COOLDOWNS = { -- number of hours for a gun to be ready after shooting
 		3.3,	-- big guns
-		3.3,	-- torpedos
+		2.7,	-- torpedos
 		1.1,	-- small guns
 	}
 			
