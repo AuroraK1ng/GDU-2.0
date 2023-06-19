@@ -6,11 +6,11 @@ tags={
 	"Technologies"
 	"Historical"
 	"Gameplay"
-	"Events1"
+	"Events"
 	"Alternative History"
 	"Graphics"
 }
-name="GDU 2.0"
+name="GDU 1.12: Gotterdammerung Multiplayer Mod [Beta Test]"
 replace_path="history/states"
 replace_path="history/countries"
 replace_path="history/units"
