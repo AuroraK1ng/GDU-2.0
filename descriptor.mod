@@ -10,7 +10,7 @@ tags={
 	"Alternative History"
 	"Graphics"
 }
-name="BST"
+name="GDU 2.0"
 replace_path="history/states"
 replace_path="history/countries"
 replace_path="history/units"
