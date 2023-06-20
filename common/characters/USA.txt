@@ -64,7 +64,7 @@ characters={
 					limit  = {
 						has_dlc = "Man the Guns"
 					}
-					##has_completed_focus  = USA_suspend_the_presecution 
+					has_completed_focus  = USA_suspend_the_presecution 
 					NOT  = {
 						focus_progress  = {
 							focus  = USA_neutrality_act 
@@ -155,7 +155,7 @@ characters={
 		}
 
 		corps_commander={ 
-				visible = { ##has_completed_focus = GDU_USA_Torch   }
+				visible = { has_completed_focus = GDU_USA_Torch   }
 	traits = {  trickster panzer_leader panzer_expert trait_reckless  urban_assault_specialist adaptable expert_improviser }
 	skill = 9
 	attack_skill = 9
@@ -240,7 +240,7 @@ characters={
 		}
 
 		corps_commander={ 
-				visible = {  ##has_completed_focus = GDU_USA_Torch   }
+				visible = {  has_completed_focus = GDU_USA_Torch   }
 	traits = {  trait_engineer fortress_buster fake_skilled_staffer trait_cautious brilliant_strategist ranger harsh_leader infantry_leader infantry_expert }
 	skill = 9
 	attack_skill = 8
@@ -766,7 +766,7 @@ characters={
 			planning_skill = 3
 			logistics_skill = 3
 			visible = { 
-				##has_completed_focus = USA_intervention_in_asia 
+				has_completed_focus = USA_intervention_in_asia 
 			}
 		}
 	}
@@ -1462,7 +1462,7 @@ characters={
 					limit  = {
 						has_dlc = "Man the Guns"
 					}
-					##has_completed_focus  = USA_reach_out_to_the_ware_group 
+					has_completed_focus  = USA_reach_out_to_the_ware_group 
 				}
 				NOT  = {
 					has_idea  = USA_henry_morgenthau 
@@ -1504,7 +1504,7 @@ characters={
 					limit  = {
 						has_dlc = "Man the Guns"
 					}
-					##has_completed_focus  = USA_reach_out_to_the_ware_group 
+					has_completed_focus  = USA_reach_out_to_the_ware_group 
 				}
 			}
 			visible  = {
@@ -1571,7 +1571,7 @@ characters={
 					limit  = {
 						has_dlc = "Man the Guns"
 					}
-					##has_completed_focus  = USA_reach_out_to_the_ware_group 
+					has_completed_focus  = USA_reach_out_to_the_ware_group 
 				}
 			}
 			visible  = {
@@ -1816,7 +1816,7 @@ characters={
 				original_tag  = USA
 			}
 			available  = {
-				##has_completed_focus  = USA_empower_the_huac 
+				has_completed_focus  = USA_empower_the_huac 
 			}
 			traits  = {
 				anti_communist_crusader 
