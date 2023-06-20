@@ -12,9 +12,9 @@
 			}
 			ship = { name = "HMS Nelson" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "BB1 Heavy" } } }
 			ship = { name = "HMS Rodney" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "BB1 Heavy" } } }
-			ship = { name = "HMS Royal Oak" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "BB1 Light"} } }
-			ship = { name = "HMS Royal Sovereign" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "BB1 Light"} } }
-			ship = { name = "HMS Ramillies" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "BB1 Light"} } }
+			ship = { name = "HMS Royal Oak" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "BB1 Heavy"} } }
+			ship = { name = "HMS Royal Sovereign" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "BB1 Heavy"} } }
+			ship = { name = "HMS Ramillies" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "BB1 Heavy"} } }
 			ship = { name = "HMS Hood" pride_of_the_fleet = yes definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "BB1 Heavy" } } }
 			ship = { name = "HMS Repulse" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "BB1 Heavy" } } }
 			ship = { name = "HMS Renown" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "BB1 Heavy" } } }
@@ -52,8 +52,8 @@
 		task_force = {				
 			name = "Reserve Fleet"			
             location = 3209
-			ship = { name = "HMS Queen Elizabeth" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "BB1 Light" } } }
-			ship = { name = "HMS Valiant" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "BB1 Light" } } }
+			ship = { name = "HMS Queen Elizabeth" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "BB1 Heavy" } } }
+			ship = { name = "HMS Valiant" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "BB1 Heavy" } } }
 			ship = { name = "HMS Frobisher" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ENG version_name = "CA1 Heavy" } } }
 			ship = { name = "HMS Hawkins" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ENG version_name = "CA1 Heavy" } } }
 			ship = { name = "HMS Carlisle" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ENG version_name = "CL1 Light" } } }
@@ -360,9 +360,6 @@
 		task_force = {				
 			name = "East Indies Fleet"
             location = 3209
-			ship = { name = "HMS Hermes" definition = carrier equipment = { ship_hull_carrier_conversion_ca = { amount = 1 owner = ENG version_name = "CV1" } } 
-				
-			}
 			ship = { name = "HMS Danae" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ENG version_name = "CL1 Light" } } }
 			ship = { name = "HMS Durban" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ENG version_name = "CL1 Light" } } }
 			ship = { name = "HMS Despatch" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ENG version_name = "CL1 Light" } } }
@@ -473,7 +470,6 @@
 			ship = { name = "Ajax" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ENG version_name = "SS1" } } }
 			ship = { name = "Archimède" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ENG version_name = "SS1" } } }
 			# 8e Division des Sous-Marins
-			ship = { name = "Surcouf" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = ENG version_name = "Surcouf Class" } } }
 			ship = { name = "Phénix" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ENG version_name = "SS1" } } }
 		}				
 	}
@@ -486,7 +482,7 @@
             location = 3209
 			ship = { name = "Courbet" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "BB2 Heavy" } } }        
 			ship = { name = "Paris" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "BB2 Heavy" } } }
-			ship = { name = "Algérie" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ENG version_name = "Algérie Class" } } }			
+			ship = { name = "Algérie" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ENG version_name = "CL1 Light" } } }			
 			ship = { name = "Foch" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ENG version_name = "CL1 Light" } } }
 			ship = { name = "Dupleix" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ENG version_name = "CL1 Light" } } }
 			ship = { name = "Colbert" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ENG version_name = "CL1 Light" } } }
