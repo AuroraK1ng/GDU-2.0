@@ -1411,19 +1411,17 @@ focus_tree = {
 		custom_effect_tooltip = GDU_spacer
 		custom_effect_tooltip = GDU_defense_of_moscow_tt
 		hidden_effect = {
-			create_field_marshal = {
-				name = "Georgy Zhukov"
-				id = 410
-				picture = "Portrait_Soviet_Gregory_Zhukov.dds"
-				traits = { winter_specialist career_officer media_personality brilliant_strategist harsh_leader politically_connected panzer_leader trait_engineer ranger}
-				skill = 6
-
-
-				attack_skill = 8
-				defense_skill = 5
-				planning_skill = 5
-				logistics_skill = 6
-			}
+		create_field_marshal = {
+			name = "Georgy Zhukov"
+			id = 410
+			picture = "Portrait_Soviet_Gregory_Zhukov.dds"
+			traits = { winter_specialist career_officer media_personality brilliant_strategist harsh_leader politically_connected organizer panzer_leader trait_engineer ranger}
+			skill = 6
+			attack_skill = 8
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 6
+		}
 
 		create_field_marshal = {
 		name = "Boris Shaposhnikov"
@@ -1443,13 +1441,10 @@ focus_tree = {
 			picture = "Portrait_Soviet_Ivan_Konev.dds"
 		traits = { armor_officer harsh_leader politically_connected panzer_leader trait_reckless ranger trickster }
 		skill = 6
-
-
-
-		attack_skill = 9
-		defense_skill = 1
-		planning_skill = 9
-		logistics_skill = 1
+		attack_skill = 7
+		defense_skill = 2
+		planning_skill = 5
+		logistics_skill = 5
 		}
 
 		create_corps_commander = {
@@ -1507,10 +1502,10 @@ focus_tree = {
 		traits = { armor_officer trait_reckless panzer_leader harsh_leader ranger trickster swamp_fox }
 		skill = 6
 
-		attack_skill = 7
-		defense_skill = 4
-		planning_skill = 6
-		logistics_skill = 3
+		attack_skill = 4
+		defense_skill = 7
+		planning_skill = 5
+		logistics_skill = 5
 		}
 		create_corps_commander = {
 		name = "Rodion Malinovsky"

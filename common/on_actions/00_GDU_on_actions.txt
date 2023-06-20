@@ -1,7 +1,34 @@
 on_actions = {
 	on_paradrop = {
 	    effect = {
-			if = {  limit = { OR = { is_owned_by = SPR is_owned_by = FIN state = 118 state = 195 } } ROOT = { PREV = {  teleport_armies = { to_state = FROM } } }	}
+			if = {  
+				limit = { 
+					OR = { 
+					is_owned_by = SPR 
+					is_owned_by = FIN 
+					is_owned_by = GER 
+					is_owned_by = ITA 
+					is_owned_by = ROM 
+					is_owned_by = HUN 
+					is_owned_by = BUL 
+					is_owned_by = USA 
+					is_owned_by = ENG 
+					is_owned_by = SOV 
+					is_owned_by = FRA 
+					is_owned_by = JAP 
+					is_owned_by = CAN 
+					is_owned_by = SAF 
+					is_owned_by = RAJ 
+					is_owned_by = AST 
+					is_owned_by = NZL
+					} 
+				} 
+				ROOT = { 
+					PREV = {  
+						teleport_armies = { to_state = FROM } 
+					} 
+				}	
+			}
 		}
 	}	
 	on_startup = {
