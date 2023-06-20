@@ -26,7 +26,7 @@ NDefines.NIntel.DYNAMIC_INTEL_SOURCE_EVENT_MAXIMUMS = { 200, 200, 200, 200 } --I
 NDefines.NIntel.DYNAMIC_INTEL_SOURCE_EVENT_ABSOLUTE_MAXIMUMS = { 200, 200, 200, 200 } --Intel from events was 50
 
 NDefines.NIntel.DYNAMIC_INTEL_SOURCE_EVENT_MULT_DECAY = 1.0
-
+NDefines.NProduction.BASE_LICENSE_IC_COST = 0
 
 --- Letting people see some stuff on ledger
 NDefines.NGame.GAME_SPEED_SECONDS = { 2.0, 0.5, 0.2, 0.03, 0.0 }	
