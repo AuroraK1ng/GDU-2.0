@@ -93,9 +93,6 @@ country_event = {
 		tag = ENG
 		has_war = yes
 		has_government = democratic
-		NOT = {
-			has_completed_focus = uk_scandinavian_focus
-		}
 		OR = {
 			has_global_flag = fall_of_france
 			FRA = { surrender_progress > 0.1 } 
