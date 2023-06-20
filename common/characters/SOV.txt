@@ -103,15 +103,15 @@ characters = {
 				original_tag = SOV
 			}
 			visible = {
-				##has_completed_focus = SOV_beaten_but_not_defeated
+				has_completed_focus = SOV_beaten_but_not_defeated
 				NOT = {
-					##has_completed_focus = SOV_the_third_rome
+					has_completed_focus = SOV_the_third_rome
 				}
 			}
 			available = {
-				##has_completed_focus = SOV_the_hands_do
+				has_completed_focus = SOV_the_hands_do
 				NOT = {
-					##has_completed_focus = SOV_the_third_rome
+					has_completed_focus = SOV_the_third_rome
 				}
 			}
 			traits = {
@@ -1783,7 +1783,7 @@ characters = {
 			legacy_id = 0
 			visible = {
 				NOT = { has_character_flag = SOV_exiled_flag }
-				##has_completed_focus = SOV_organization_of_the_partisans
+				has_completed_focus = SOV_organization_of_the_partisans
 			}
 		}
 	}
@@ -1807,7 +1807,7 @@ characters = {
 			legacy_id = 0
 			visible = {
 				NOT = { has_character_flag = SOV_exiled_flag }
-				##has_completed_focus = SOV_organization_of_the_partisans
+				has_completed_focus = SOV_organization_of_the_partisans
 			}
 		}
 	}
@@ -1831,7 +1831,7 @@ characters = {
 			legacy_id = 0
 			visible = {
 				NOT = { has_character_flag = SOV_exiled_flag }
-				##has_completed_focus = SOV_restore_cossack_units
+				has_completed_focus = SOV_restore_cossack_units
 			}
 		}
 	}
@@ -1855,7 +1855,7 @@ characters = {
 			legacy_id = 0
 			visible = {
 				NOT = { has_character_flag = SOV_exiled_flag }
-				##has_completed_focus = SOV_the_glory_of_the_red_army
+				has_completed_focus = SOV_the_glory_of_the_red_army
 			}
 		}
 	}
@@ -1906,7 +1906,7 @@ characters = {
 			logistics_skill = 1
 			visible = {
 				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { ##has_completed_focus = SOV_beaten_but_not_defeated }
+				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
 			}
 		}
 	}
@@ -1930,7 +1930,7 @@ characters = {
 			logistics_skill = 1
 			visible = {
 				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { ##has_completed_focus = SOV_beaten_but_not_defeated }
+				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
 			}
 		}
 	}
@@ -1952,7 +1952,7 @@ characters = {
 			logistics_skill = 3
 			visible = {
 				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { ##has_completed_focus = SOV_beaten_but_not_defeated }
+				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
 			}
 		}
 	}
@@ -1974,7 +1974,7 @@ characters = {
 			logistics_skill = 1
 			visible = {
 				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { ##has_completed_focus = SOV_beaten_but_not_defeated }
+				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
 			}
 		}
 	}
@@ -1996,7 +1996,7 @@ characters = {
 			logistics_skill = 2
 			visible = {
 				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { ##has_completed_focus = SOV_beaten_but_not_defeated }
+				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
 			}
 		}
 	}
@@ -2018,7 +2018,7 @@ characters = {
 			logistics_skill = 1
 			visible = {
 				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { ##has_completed_focus = SOV_beaten_but_not_defeated }
+				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
 			}
 		}
 	}
@@ -2174,14 +2174,14 @@ characters = {
 
 		allowed_civil_war = {
 			OR = {
-				##has_completed_focus = SOV_the_plan_for_the_coup #Goes to right oppo if aligned via Plan for the Coup
+				has_completed_focus = SOV_the_plan_for_the_coup #Goes to right oppo if aligned via Plan for the Coup
 				AND = { #If not aligned by Right oppo, then stays with Stalin
 					original_tag = SOV
 					NOT = { tag = SOV }
 					NOT = {
 						any_other_country = {
 							original_tag = SOV
-							##has_completed_focus = SOV_the_plan_for_the_coup
+							has_completed_focus = SOV_the_plan_for_the_coup
 						}
 					}
 				}
@@ -2225,14 +2225,14 @@ characters = {
 
 		allowed_civil_war = {
 			OR = {
-				##has_completed_focus = SOV_the_plan_for_the_coup #Goes to right oppo if aligned via Plan for the Coup
+				has_completed_focus = SOV_the_plan_for_the_coup #Goes to right oppo if aligned via Plan for the Coup
 				AND = { #If not aligned by Right oppo, then stays with Stalin
 					original_tag = SOV
 					NOT = { tag = SOV }
 					NOT = {
 						any_other_country = {
 							original_tag = SOV
-							##has_completed_focus = SOV_the_plan_for_the_coup
+							has_completed_focus = SOV_the_plan_for_the_coup
 						}
 					}
 				}
@@ -2446,7 +2446,7 @@ characters = {
 				}
 			}
 			available = {
-				##has_completed_focus = SOV_policy_of_collective_security 
+				has_completed_focus = SOV_policy_of_collective_security 
 			}
 			traits = {
 				pc_for_foreign_affairs_litvinov 
@@ -2502,8 +2502,8 @@ characters = {
 					has_global_flag = SOV_soviet_civil_war_over
 				}
 				OR = {
-					##has_completed_focus = SOV_integrate_smirnovs_bloc
-					##has_completed_focus = SOV_return_democracy_to_the_party
+					has_completed_focus = SOV_integrate_smirnovs_bloc
+					has_completed_focus = SOV_return_democracy_to_the_party
 				}
 				is_country_leader = no
 				if = {
@@ -2569,8 +2569,8 @@ characters = {
 					has_global_flag = SOV_soviet_civil_war_over
 				}
 				OR = {
-					##has_completed_focus = SOV_integrate_smirnovs_bloc
-					##has_completed_focus = SOV_return_democracy_to_the_party
+					has_completed_focus = SOV_integrate_smirnovs_bloc
+					has_completed_focus = SOV_return_democracy_to_the_party
 				}
 				is_country_leader = no
 				if = {
@@ -2625,8 +2625,8 @@ characters = {
 			}
 			available = {
 				OR = {
-					##has_completed_focus = SOV_integrate_smirnovs_bloc
-					##has_completed_focus = SOV_return_democracy_to_the_party
+					has_completed_focus = SOV_integrate_smirnovs_bloc
+					has_completed_focus = SOV_return_democracy_to_the_party
 				}
 				if = {
 					limit = {
@@ -2662,12 +2662,12 @@ characters = {
 				AND = {
 					tag = SOV
 					SOV_is_left_opposition = yes 
-					##has_completed_focus = SOV_bring_old_trotskyists_back
+					has_completed_focus = SOV_bring_old_trotskyists_back
 				}
 				AND = {
 					tag = SOV
 					SOV_is_right_opposition = yes 
-					##has_completed_focus = SOV_cooperation_against_stalin 
+					has_completed_focus = SOV_cooperation_against_stalin 
 				}
 				AND = {
 					SOV_is_exiles = yes 
@@ -2691,11 +2691,11 @@ characters = {
 				OR = {
 					AND = {
 						SOV_is_left_opposition = yes 
-						##has_completed_focus = SOV_bring_old_trotskyists_back
+						has_completed_focus = SOV_bring_old_trotskyists_back
 					}
 					AND = {
 						SOV_is_right_opposition = yes 
-						##has_completed_focus = SOV_cooperation_against_stalin 
+						has_completed_focus = SOV_cooperation_against_stalin 
 					}
 				}
 				if = {
@@ -2724,12 +2724,12 @@ characters = {
 				AND = {
 					tag = SOV
 					SOV_is_left_opposition = yes 
-					##has_completed_focus = SOV_bring_old_trotskyists_back
+					has_completed_focus = SOV_bring_old_trotskyists_back
 				}
 				AND = {
 					tag = SOV
 					SOV_is_right_opposition = yes 
-					##has_completed_focus = SOV_cooperation_against_stalin 
+					has_completed_focus = SOV_cooperation_against_stalin 
 				}
 				AND = {
 					SOV_is_exiles = yes 
@@ -2754,12 +2754,12 @@ characters = {
 					AND = {
 						tag = SOV
 						SOV_is_left_opposition = yes 
-						##has_completed_focus = SOV_bring_old_trotskyists_back
+						has_completed_focus = SOV_bring_old_trotskyists_back
 					}
 					AND = {
 						tag = SOV
 						SOV_is_right_opposition = yes 
-						##has_completed_focus = SOV_cooperation_against_stalin 
+						has_completed_focus = SOV_cooperation_against_stalin 
 					}
 				}
 				if = {
@@ -2809,7 +2809,7 @@ characters = {
 			available = {
 				OR = {
 					SOV_is_left_opposition = yes
-					##has_completed_focus = SOV_return_democracy_to_the_party
+					has_completed_focus = SOV_return_democracy_to_the_party
 				}
 				if = {
 					limit = {
@@ -2846,7 +2846,7 @@ characters = {
 				SOV_is_right_opposition = yes 
 				AND = {
 					SOV_is_left_opposition = yes 
-					##has_completed_focus = SOV_cooperation_against_stalin 
+					has_completed_focus = SOV_cooperation_against_stalin 
 				}
 				AND = {
 					SOV_is_exiles = yes 
@@ -2872,7 +2872,7 @@ characters = {
 					SOV_is_right_opposition = yes 
 					AND = {
 						SOV_is_left_opposition = yes 
-						##has_completed_focus = SOV_cooperation_against_stalin 
+						has_completed_focus = SOV_cooperation_against_stalin 
 					}
 				}
 				is_country_leader = no
@@ -2906,7 +2906,7 @@ characters = {
 				SOV_is_right_opposition = yes 
 				AND = {
 					SOV_is_left_opposition = yes 
-					##has_completed_focus = SOV_cooperation_against_stalin 
+					has_completed_focus = SOV_cooperation_against_stalin 
 				}
 				AND = {
 					SOV_is_exiles = yes 
@@ -2931,7 +2931,7 @@ characters = {
 					SOV_is_right_opposition = yes 
 					AND = {
 						SOV_is_left_opposition = yes 
-						##has_completed_focus = SOV_cooperation_against_stalin 
+						has_completed_focus = SOV_cooperation_against_stalin 
 					}
 				}
 				is_country_leader = no
@@ -2983,7 +2983,7 @@ characters = {
 			available = {
 				OR = {
 					SOV_is_right_opposition = yes
-					##has_completed_focus = SOV_return_democracy_to_the_party
+					has_completed_focus = SOV_return_democracy_to_the_party
 				}
 				if = {
 					limit = {
@@ -3022,8 +3022,8 @@ characters = {
 			}
 			available = {
 				OR = {
-					##has_completed_focus = SOV_the_need_for_policy_changes 
-					##has_completed_focus = SOV_return_democracy_to_the_party
+					has_completed_focus = SOV_the_need_for_policy_changes 
+					has_completed_focus = SOV_return_democracy_to_the_party
 				}
 				if = {
 					limit = {
@@ -3073,13 +3073,13 @@ characters = {
 				}
 			}
 			available = {
-				##has_completed_focus = SOV_align_the_zinovyevites
+				has_completed_focus = SOV_align_the_zinovyevites
 				OR = {
 					has_global_flag = SOV_soviet_civil_war
 					has_global_flag = SOV_soviet_civil_war_over
 					AND = {
-						##has_completed_focus = SOV_the_plan_for_the_coup
-						##has_completed_focus = SOV_coup_detat
+						has_completed_focus = SOV_the_plan_for_the_coup
+						has_completed_focus = SOV_coup_detat
 					}
 				}
 				if = {
@@ -3136,7 +3136,7 @@ characters = {
 				}
 			}
 			available = {
-				##has_completed_focus = SOV_align_the_zinovyevites
+				has_completed_focus = SOV_align_the_zinovyevites
 				OR = {
 					has_global_flag = SOV_soviet_civil_war
 					has_global_flag = SOV_soviet_civil_war_over
@@ -3172,11 +3172,11 @@ characters = {
 			OR = {
 				AND = {
 					SOV_is_left_opposition = yes 
-					##has_completed_focus = SOV_liberate_ryutin
+					has_completed_focus = SOV_liberate_ryutin
 				}
 				AND = {
 					SOV_is_right_opposition = yes 
-					##has_completed_focus = SOV_liberate_ryutin 
+					has_completed_focus = SOV_liberate_ryutin 
 				}
 				AND = {
 					SOV_is_exiles = yes 
@@ -3198,7 +3198,7 @@ characters = {
 				}
 			}
 			available = {
-				##has_completed_focus = SOV_liberate_ryutin
+				has_completed_focus = SOV_liberate_ryutin
 				OR = {
 					has_global_flag = SOV_soviet_civil_war
 					has_global_flag = SOV_soviet_civil_war_over
@@ -3244,8 +3244,8 @@ characters = {
 			}
 			available = {
 				OR = {
-					##has_completed_focus = SOV_patriarch_of_all_russia
-					##has_completed_focus = SOV_the_declaration
+					has_completed_focus = SOV_patriarch_of_all_russia
+					has_completed_focus = SOV_the_declaration
 				}
 			}
 			traits = {
@@ -3274,10 +3274,10 @@ characters = {
 				original_tag = SOV
 			}
 			visible = {
-				##has_completed_focus = SOV_beaten_but_not_defeated
+				has_completed_focus = SOV_beaten_but_not_defeated
 			}
 			available = {
-				##has_completed_focus = SOV_return_of_the_rocor
+				has_completed_focus = SOV_return_of_the_rocor
 			}
 			traits = {
 				orthodox_rabblerouser
@@ -3306,10 +3306,10 @@ characters = {
 				original_tag = SOV
 			}
 			visible = {
-				##has_completed_focus = SOV_beaten_but_not_defeated
+				has_completed_focus = SOV_beaten_but_not_defeated
 			}
 			available = {
-				##has_completed_focus = SOV_the_declaration
+				has_completed_focus = SOV_the_declaration
 			}
 			traits = {
 				theocratic_diplomat
@@ -3338,10 +3338,10 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				##has_completed_focus = SOV_the_declaration
+				has_completed_focus = SOV_the_declaration
 			}
 			visible = {
-				##has_completed_focus = SOV_beaten_but_not_defeated
+				has_completed_focus = SOV_beaten_but_not_defeated
 			}
 			traits = {
 				driver_of_the_faithful
@@ -3408,7 +3408,7 @@ characters = {
 			visible = {
 				OR = {
 					has_idea = SOV_grigory_semyonov
-					##has_completed_focus = SOV_approach_semyonov
+					has_completed_focus = SOV_approach_semyonov
 				}
 			}
 		}
@@ -3428,13 +3428,13 @@ characters = {
 					custom_trigger_tooltip = {
 					 	tooltip = SOV_grigory_semyonov_man_tt
 					 	SOV_soviet_civil_war_not_started = yes 
-					 	NOT = { SOV = { ##has_completed_focus = SOV_approach_semyonov } }
+					 	NOT = { SOV = { has_completed_focus = SOV_approach_semyonov } }
 					}
 				}
 				
 				if = {
 					limit = { tag = SOV }
-					##has_completed_focus = SOV_approach_semyonov
+					has_completed_focus = SOV_approach_semyonov
 				}
 				if = {
 					limit = {
@@ -3475,7 +3475,7 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				##has_completed_focus = SOV_consolidate_power
+				has_completed_focus = SOV_consolidate_power
 			}
 			traits = {
 				political_chameleon
@@ -3509,7 +3509,7 @@ characters = {
 				}
 			}
 			available = {
-				##has_completed_focus = SOV_reconvene_the_zemsky_sobor
+				has_completed_focus = SOV_reconvene_the_zemsky_sobor
 				if = {
 					limit = {
 						has_character_flag = SOV_exiled_flag
