@@ -67,9 +67,6 @@ RAJ_population_decisions = {
 				set_state_flag = RAJ_industrialized_this_state
 				if = {
 					limit = { ROOT = { has_completed_focus = RAJ_workforce_integration } }
-					add_dynamic_modifier = {
-						modifier = RAJ_industrialized_personnel
-					}
 				}
 				if = {
 					limit = { ROOT = { has_completed_focus = RAJ_land_clearance } }

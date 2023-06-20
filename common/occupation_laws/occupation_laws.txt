@@ -452,10 +452,6 @@ reconciliation = {
 	visible = {
 		original_tag = TUR
 		has_dlc = "Battle for the Bosporus"
-		OR = {
-			has_completed_focus = TUR_a_common_destiny_for_all_of_turkey
-			has_completed_focus = TUR_permit_regional_elections
-		}
 		FROM = { original_tag = KUR }
 	}
 
@@ -479,18 +475,6 @@ colonial_police = {
 
 	visible = {
 		original_tag = ITA
-		#NOT = { has_completed_focus = ITA_regional_development }
-		NOT = { has_country_flag = ITA_colonial_police_improved_flag }
-		OR = {
-			AND = {
-				has_completed_focus = ITA_albanian_fascist_militia
-				FROM = { original_tag = ALB }
-			}
-			AND = {
-				has_completed_focus = ITA_ministry_of_italian_africa
-				FROM = { capital_scope = { is_on_continent = africa } }
-			}
-		}
 	}
 
 	state_modifier = { #CHANGES HERE NEED TO BE APPLIED ALSO IN ITA_fake_colonial_police_law idea
@@ -532,15 +516,6 @@ colonial_police_improved = {
 
 	visible = {
 		original_tag = ITA
-		has_completed_focus = ITA_regional_development
-		NOT = { has_country_flag = ITA_colonial_police_final_flag }
-		OR = {
-			AND = {
-				FROM = { original_tag = ALB }
-				has_completed_focus = ITA_albanian_fascist_militia
-			}
-			FROM = { capital_scope = { is_on_continent = africa } }
-		}
 	}
 
 	state_modifier = {
@@ -584,14 +559,6 @@ colonial_police_final = {
 
 	visible = {
 		original_tag = ITA
-		has_completed_focus = ITA_polizia_dell_africa_italiana
-		OR = {
-			AND = {
-				FROM = { original_tag = ALB }
-				has_completed_focus = ITA_albanian_fascist_militia
-			}
-			FROM = { capital_scope = { is_on_continent = africa } }
-		}
 	}
 
 	state_modifier = {

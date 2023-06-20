@@ -3923,7 +3923,7 @@ BUL_macedonian_revolutionary_organizations = {
 				type = infantry
 				size > 4
 				state = 212
-				border_state = 731
+				border_state = 184
 			}
 			divisions_in_border_state = {
 				type = infantry
@@ -3957,7 +3957,7 @@ BUL_macedonian_revolutionary_organizations = {
 						type = infantry
 						size < 5
 						state = 212
-						border_state = 731
+						border_state = 184
 					}
 				
 				}
@@ -3990,13 +3990,6 @@ BUL_macedonian_revolutionary_organizations = {
 
 		complete_effect = {
 			set_country_flag = BUL_macedonian_affairs_ongoing_flag
-
-			48 = {
-				add_dynamic_modifier = { modifier = skirmishes_against_imro }
-			}
-			212 = {
-				add_dynamic_modifier = { modifier = skirmishes_against_imro }
-			}
 		}
 
 		remove_effect = {
@@ -4005,13 +3998,6 @@ BUL_macedonian_revolutionary_organizations = {
 			remove_ideas = BUL_imro_03
 			add_stability = 0.1
 			add_political_power = 70
-
-			48 = {
-				remove_dynamic_modifier = { modifier = skirmishes_against_imro }
-			}
-			212 = {
-				remove_dynamic_modifier = { modifier = skirmishes_against_imro }
-			}
 		}
 	}
 
@@ -4230,7 +4216,6 @@ BUL_macedonian_revolutionary_organizations = {
 					BUL_is_macedonian_state = yes
 					NOT = { is_controlled_by = ROOT }
 				}
-				add_dynamic_modifier = { modifier = widespread_bulgarian_sentiment_01 }
 				hidden_effect = {
 					controller = { country_event = bftb_bulgaria_imro.2 }
 				}
@@ -4559,57 +4544,6 @@ BUL_macedonian_revolutionary_organizations_foreign = {
 			has_country_flag = BUL_imro_awakened_in_country_flag
 		}
 
-		cancel_trigger = {
-			106 = {
-				has_dynamic_modifier = { modifier = skirmishes_against_imro }
-				OR = {
-					NOT = { is_fully_controlled_by = ROOT }	
-					custom_trigger_tooltip = {
-						tooltip = BUL_destroy_imro_divisions_macedonia_foreign_tt
-						ROOT = {
-							divisions_in_state = {
-								type = infantry
-								size < 9
-								state = 106
-							}
-						}
-					}
-				}		
-			}
-			731 = {
-				has_dynamic_modifier = { modifier = skirmishes_against_imro }
-				OR = {
-					NOT = { is_fully_controlled_by = ROOT }	
-					custom_trigger_tooltip = {
-						tooltip = BUL_destroy_imro_divisions_central_macedonia_foreign_tt
-						ROOT = {
-							divisions_in_state = {
-								type = infantry
-								size < 4
-								state = 731
-							}
-						}
-					}
-				}		
-			}
-			184 = {
-				has_dynamic_modifier = { modifier = skirmishes_against_imro }
-				OR = {
-					NOT = { is_fully_controlled_by = ROOT }	
-					custom_trigger_tooltip = {
-						tooltip = BUL_destroy_imro_divisions_thrace_foreign_tt
-						ROOT = {
-							divisions_in_state = {
-								type = infantry
-								size < 3
-								state = 184
-							}
-						}
-					}
-				}		
-			}
-		}
-
 		cancel_effect = {
 			clr_country_flag = BUL_macedonian_affairs_ongoing_flag
 		}
@@ -4618,14 +4552,6 @@ BUL_macedonian_revolutionary_organizations_foreign = {
 
 		complete_effect = {
 			set_country_flag = BUL_macedonian_affairs_ongoing_flag
-
-			every_controlled_state = {
-				limit = {
-					BUL_is_macedonian_state = yes
-					is_fully_controlled_by = ROOT
-				}
-				add_dynamic_modifier = { modifier = skirmishes_against_imro }
-			}
 		}
 
 		remove_effect = {
@@ -4633,30 +4559,6 @@ BUL_macedonian_revolutionary_organizations_foreign = {
 			clr_country_flag = BUL_repress_imro_flag
 			clr_country_flag = BUL_imro_awakened_in_country_flag
 			add_stability = 0.1
-			if = {
-				limit = {
-					NOT = {
-						any_state = {
-							has_dynamic_modifier = { modifier = skirmishes_against_imro }
-						}
-					}
-				}
-				custom_effect_tooltip = BUL_destroy_imro_foreign_tt
-			}
-			every_controlled_state = {
-				limit = {
-					has_dynamic_modifier = { modifier = skirmishes_against_imro }
-				}
-				remove_dynamic_modifier = { modifier = skirmishes_against_imro }
-				if = {
-					limit = {
-						has_dynamic_modifier = { modifier = widespread_bulgarian_sentiment_01 }
-					}
-					remove_dynamic_modifier = { modifier = widespread_bulgarian_sentiment_01 }
-				}
-				remove_core_of = BUL
-				add_core_of = ROOT
-			}
 		}
 	}
 }

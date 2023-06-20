@@ -441,30 +441,6 @@ country_event = {
 				is_in_faction_with = YUG
 			}
 		}
-		if = {
-			limit = {
-				ITA = {
-					OR = {
-						NOT = { has_completed_focus = ITA_yugoslavia_friend }
-						is_in_faction_with = GER
-					}
-				}
-			}
-			YUG = {
-				add_opinion_modifier = { target = FRA modifier = western_betrayal }
-				country_event = { id = yugoslavia.5 hours = 6 }
-			}
-		}
-		if = {
-			limit = {
-				ITA = {
-					has_completed_focus = ITA_yugoslavia_friend
-					NOT = { is_in_faction_with = GER }
-					NOT = { has_war_with = YUG }
-				}
-			}
-			ITA = { country_event = { id = italy.12 } }
-		}
 	}
 	option = { # Support the Yugoslavs alone
 		name = france.25.b
@@ -538,10 +514,6 @@ country_event = {
 					value = 200
 				}
 			}
-		}
-		if = {
-			limit = { NOT = { has_completed_focus = FRA_little_entente } }
-			add_stability = 0.05
 		}
 	}
 }
