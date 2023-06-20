@@ -1511,15 +1511,6 @@ operations = {
 				targeted_alliance = GER
 				enemy = SOV
 				}
-			}
-			GER = {
-				if = {
-					limit = { GER = { has_idea = ferdinand_schorner}}
-				swap_ideas = {
-					remove_idea = ferdinand_schorner
-					add_idea = ferdinand_schorner_2
-				}						
-				}		
 			}			
 			SOV = {
 				country_event = { id = gduevents.57 days = 60 } # event that makes southwest front and frontline military districts province modifiers go away

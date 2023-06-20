@@ -162,9 +162,6 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			hidden_effect = {
-				add_dynamic_modifier = { modifier = BUL_foreign_industry_dynamic_modifier }
-			}
 			custom_effect_tooltip = BUL_attract_foreign_capitals_dynamic_modifier_tt
 
 			activate_targeted_decision = { target = GER decision = BUL_german_industrial_agreements }
@@ -294,9 +291,6 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			hidden_effect = {
-				remove_dynamic_modifier = { modifier = BUL_foreign_industry_dynamic_modifier }
-			}
 			custom_effect_tooltip = BUL_nationalization_dynamic_modifier_tt
 			add_ideas = BUL_nationalized_industry
 
