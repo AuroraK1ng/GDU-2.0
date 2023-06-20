@@ -5,7 +5,7 @@ NDefines.NAir.AIR_WING_XP_AIR_VS_AIR_COMBAT_GAIN = 0                            
 NDefines.NAir.AIR_WING_XP_GROUND_MISSION_COMPLETED_GAIN = 0                    --Bombers bombing, CAS cassing, NBs nbing, kamikazees kamikazeeing, etc.
 NDefines.NAir.AIR_WING_XP_RECON_MISSION_COMPLETED_GAIN = 0                    --recon mission
 NDefines.NAir.AIR_WING_XP_LOSS_WHEN_KILLED = 0                                    --if a plane dies, the game assumes that a pilot with this amount of xp died and recalcs average. 
-NDefines.NAir.AIR_WING_XP_TRAINING_MAX = 0                            --Max average XP achieved with training.
+NDefines.NAir.AIR_WING_XP_TRAINING_MAX = 2.0                           --Max average XP achieved with training.
 NDefines.NAir.AIR_WING_XP_MAX = 0                                             --Per plane XP.
 NDefines.NAir.AIR_WING_XP_LEVELS = { 0 }                         --Experience needed to progress to the next level
 
@@ -359,11 +359,11 @@ NDefines.NMilitary.LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.09    -- global damag
 NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 0.5 -- how many CAS/TAC can enter a combat depending on enemy width there
 
 NDefines.NAir.FIELD_EXPERIENCE_SCALE = 0
-NDefines.NAir.AIR_WING_COUNTRY_XP_FROM_TRAINING_FACTORY = 0
 NDefines.NNavy.FIELD_EXPERIENCE_SCALE = 0
 NDefines.NNavy.XP_GAIN_FACTOR = 0.3
-NDefines.NNavy.TRAINING_DAILY_COUNTRY_EXP_FACTOR = 0.001
-NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_GAIN_DAILY = 0
+NDefines.NNavy.TRAINING_DAILY_COUNTRY_EXP_FACTOR = 0.2
+NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_GAIN_DAILY = 0.2
+
 
 
 
@@ -428,7 +428,8 @@ NDefines.NMilitary.PLANNING_MAX = 0.17                           	-- can get mor
 NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.01	-- Balancing value to determine the chance of ground AA hitting an attacking airplane, affecting both the effective average damage done by AA to airplanes, and the reduction of damage done by airplanes due to AA support
 NDefines.NMilitary.ANTI_AIR_ATTACK_TO_AMOUNT = 0.0001				-- Balancing value to convert equipment stat anti_air_attack to the random % value of airplanes being hit.
 
-NDefines.NAir.AIR_WING_COUNTRY_XP_FROM_TRAINING_FACTOR = 0.01 
+NDefines.NAir.AIR_WING_COUNTRY_XP_FROM_TRAINING_FACTOR = 0.4
+NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_ACCIDENT_FACTOR = 0.00
 
 -- air xp gain from training doubled from vanilla, since planes cost more so you get a decent amount of air XP from training air wings --Factor on country Air XP gained from wing training
 
