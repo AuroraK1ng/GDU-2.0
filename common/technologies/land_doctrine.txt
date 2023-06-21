@@ -3114,6 +3114,9 @@ land_reinforce_rate = 0.05
 		no_supply_grace = 24
 
 		############
+		logistics_company = {
+			supply_consumption_factor = -0.1
+		}
 		engineer = {
 	        jungle_africa = {
                 attack = 0.1
@@ -3140,9 +3143,6 @@ land_reinforce_rate = 0.05
 				defence = 0.05
 				movement = 0.10
 			}
-		}
-		category_light_infantry = {
-			supply_consumption_factor = -0.05		
 		}
 		
 		path = {
