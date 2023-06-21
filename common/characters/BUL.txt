@@ -1618,6 +1618,7 @@ characters = {
 							BUL_is_monarchist_ferdinand_ai = yes
 							BUL_is_historical_ai = yes
 						}
+						NOT = { ##has_completed_focus = BUL_illusions_of_a_non_partisan_system }
 						democratic < 0.2
 					}
 					modifier = {
@@ -1774,6 +1775,7 @@ characters = {
 						BUL_is_monarchist_ferdinand_ai = yes
 						BUL_is_historical_ai = yes
 					}
+					NOT = { ##has_completed_focus = BUL_illusions_of_a_non_partisan_system }
 					democratic < 0.2
 				}
 				modifier = {
@@ -1877,6 +1879,7 @@ characters = {
 				modifier = {
 					factor = 0
 					BUL_is_historical_ai = yes
+					#NOT = { ##has_completed_focus = BUL_illusions_of_a_non_partisan_system } #Better not to hire him Boris, he'll definitely make it easier for the Fatherland Front later on, even though you won't be there to see it
 				}
 			}
 		}
@@ -1914,7 +1917,7 @@ characters = {
 						BUL_is_monarchist_ferdinand_ai = yes
 						BUL_is_historical_ai = yes
 					}
-					
+					NOT = { ##has_completed_focus = BUL_illusions_of_a_non_partisan_system }
 				}
 			}
 		}
@@ -1951,7 +1954,7 @@ characters = {
 						BUL_is_monarchist_ferdinand_ai = yes
 						BUL_is_historical_ai = yes
 					}
-					
+					NOT = { ##has_completed_focus = BUL_illusions_of_a_non_partisan_system }
 				}
 			}
 		}
@@ -2033,7 +2036,7 @@ characters = {
 		}
 		instance = {
 			allowed = {
-				
+				NOT = {
 					has_dlc = "Battle for the Bosporus"
 				}
 			}
