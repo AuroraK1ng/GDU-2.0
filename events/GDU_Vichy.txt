@@ -15,7 +15,7 @@ country_event = {
 					transfer_state = 25
 					transfer_state = 20
 					transfer_state = 33
-					country_event = { id = gduvichy.2 days = 3 }
+					country_event = { id = gduvichy.2 days = 1 }
 					GER = { add_to_faction = SPR }
 					if = {
 						limit = { SPR = { NOT = { has_war_with = ENG } } }
@@ -181,7 +181,7 @@ country_event = {
 					transfer_state = 461
 					transfer_state = 462
 					transfer_state = 513
-					country_event = { id = gduvichy.3 days = 3 }
+					country_event = { id = gduvichy.3 days = 1 }
 	}
 
 	option = {
@@ -208,7 +208,7 @@ country_event = {
 					transfer_state = 778
 					transfer_state = 781
 
-					country_event = { id = gduvichy.4 days = 3 }
+					country_event = { id = gduvichy.4 days = 1 }
 	}
 
 	option = {
@@ -306,7 +306,7 @@ country_event = {
 				country_event = { id = gduvichy.13 days = 4 }
 				country_event = { id = gduvichy.12 days = 6 }
 				country_event = { id = gduvichy.7 days = 8 }
-				FRA = { news_event = { id = france.20 days = 10 } }
+				FRA = { news_event = { id = france.20 days = 5 } }
 
 	}
 
@@ -588,24 +588,6 @@ country_event = {
 					transfer_state = 768
 					transfer_state = 769
 					load_focus_tree = freefrench_focus
-
-				add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 65000 producer = FRA }
-
-				add_equipment_to_stockpile = { type = train_equipment_1 amount = 100 producer = FRA }
-
-				add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 4500 producer = FRA }
-
-				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 4000 producer = FRA }
-
-				add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 4500 producer = FRA }
-
-				add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 7000 producer = FRA }
-				add_equipment_to_stockpile = { type = support_equipment_1 amount = 5000 producer = FRA }
-
-				add_equipment_to_stockpile = { type = heavy_tank_chassis_1 amount = 300 producer = FRA }
-				add_equipment_to_stockpile = { type = light_tank_chassis_2 amount = 2000 producer = FRA }
-				add_equipment_to_stockpile = { type = medium_tank_chassis_1 amount = 2000 producer = FRA }
-				add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 500 producer = FRA }
 
 				}
 

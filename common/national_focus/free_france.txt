@@ -168,7 +168,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_offsite_building = { type = industrial_complex level = 4 }	
+			add_offsite_building = { type = industrial_complex level = 2 }	
 			custom_effect_tooltip = FRA_revive_civilian_construction 
 			if = { 
 				limit = {
@@ -244,7 +244,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_offsite_building = { type = arms_factory level = 2 }	
+			add_offsite_building = { type = arms_factory level = 1 }	
 			custom_effect_tooltip = FRA_rebuild_military_production 		
 			if = { 
 				limit = {
@@ -403,6 +403,7 @@ focus_tree = {
 		cost = 5
 		
 		available = { 
+			date > 1940.2.1
 			EFR = { exists = yes } 
 		}
 		
