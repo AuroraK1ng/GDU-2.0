@@ -488,8 +488,10 @@ technologies = {
 	paratroopers2 = {
 
 		paratrooper = {
-			max_organisation = 5
+			##max_organisation = 5
 			soft_attack = 0.05
+			defense = 0.05
+			
 		}
 		
 		path = {
@@ -532,7 +534,9 @@ technologies = {
 	paratroopers3 = {
 
 		paratrooper = {
-			max_organisation = 5
+			##max_organisation = 5
+			soft_attack = 0.05
+			defense = 0.05
 		}
 		
 
@@ -621,8 +625,9 @@ technologies = {
 	marines2 = {
 
 		marine = {
-			max_organisation = 5
+			##max_organisation = 5
 			soft_attack = 0.05
+			defense = 0.05
 		}
 		path = {
 			leads_to_tech = marines3
@@ -660,7 +665,9 @@ technologies = {
 	marines3 = {
 
 		marine = {
-			max_organisation = 5
+			##max_organisation = 5
+			soft_attack = 0.05
+			defense = 0.05
 		}
 
 		research_cost = 2.0
@@ -734,8 +741,9 @@ technologies = {
 	tech_mountaineers2 = {
 
 		mountaineers = {
-			max_organisation = 5
+			##max_organisation = 5
 			soft_attack = 0.05
+			defense = 0.05
 		}
 		path = {
 			leads_to_tech = tech_mountaineers3
@@ -763,7 +771,9 @@ technologies = {
 	
 	tech_mountaineers3 = {	
 		mountaineers = {
-			max_organisation = 5
+			##max_organisation = 5
+			soft_attack = 0.05
+			defense = 0.05
 		}
 
 		research_cost = 2.0
@@ -834,8 +844,8 @@ technologies = {
 		}
 
 		category_special_forces = {
-			max_organisation = 5
-			defense = 0.05
+			##max_organisation = 5
+			breakthrough = 0.1
 		}
 
 		special_forces_training_time_factor = 0.1
@@ -970,8 +980,9 @@ technologies = {
 		category_special_forces = {
 			acclimatization_hot_climate_gain_factor = 0.20
 			acclimatization_cold_climate_gain_factor = 0.20
-			max_organisation = 5
+			##max_organisation = 5
 			soft_attack = 0.05
+			breakthrough = 0.15
 		}
 		
 		special_forces_no_supply_grace = 48
@@ -2087,7 +2098,7 @@ technologies = {
 			always = no
 		}
 		irregular_infantry = {
-			max_organisation = 10
+			##max_organisation = 10
 			maximum_speed = 1.25 #TODO_TA for testing only, remove
 		}
 	}
