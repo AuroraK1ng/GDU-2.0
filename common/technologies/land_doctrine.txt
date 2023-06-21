@@ -719,50 +719,9 @@ technologies = {
 			armor = 3.0
 		}
 	}
-		naval_invasion_tactics_MW = {
-		xp_research_type = army
 		
-		enable_tactic = tactic_advanced_naval_landing
-		enable_tactic = tactic_multi_wave_invasion
-		enable_tactic = tactic_storm_machine_gun_nests
-		enable_tactic = tactic_clear_coastal_bunkers
-		enable_tactic = tactic_basic_naval_invasion_attack
-		doctrine = no	
-		research_cost = 0.01
-		
-		categories = {
-			land_doctrine
-			cat_mobile_warfare
-		}
-
-		
-		folder = {
-			name = land_doctrine_folder
-			position = { x = 0 y = 20 }
-		}
 	}
-	naval_invasion_tactics_MA = {
-		xp_research_type = army
-		
-		enable_tactic = tactic_advanced_naval_landing
-		enable_tactic = tactic_multi_wave_invasion
-		enable_tactic = tactic_storm_machine_gun_nests
-		enable_tactic = tactic_clear_coastal_bunkers
-		enable_tactic = tactic_basic_naval_invasion_attack
-		doctrine = no	
-		research_cost = 0.01
-		
-		categories = {
-			land_doctrine
-			cat_mass_assault
-		}
-
-		
-		folder = {
-			name = land_doctrine_folder
-			position = { x = 0 y = 20 }
-		}
-	}
+	
 	MW_3rd_Right_1 = {
 	
 		xor = { MW_3rd_Left_1 }
@@ -1004,54 +963,7 @@ technologies = {
 			position = { x = -2 y = 26 }
 		}
 	}
-	naval_invasion_tactics_SF = {
-
-		enable_tactic = tactic_advanced_naval_landing
-		enable_tactic = tactic_multi_wave_invasion
-		enable_tactic = tactic_storm_machine_gun_nests
-		enable_tactic = tactic_clear_coastal_bunkers
-		enable_tactic = tactic_basic_naval_invasion_attack
-
-		
-		xp_research_type = army
-		
-		doctrine = no	
-		research_cost = 0.01
-		categories = {
-			land_doctrine
-			cat_superior_firepower
-		}
-
-		
-		folder = {
-			name = land_doctrine_folder
-			position = { x = 0 y = 20 }
-		}
-	}
-	naval_invasion_tactics_GBP = {
-
-	enable_tactic = tactic_advanced_naval_landing
-		enable_tactic = tactic_multi_wave_invasion
-		enable_tactic = tactic_storm_machine_gun_nests
-		enable_tactic = tactic_clear_coastal_bunkers
-		enable_tactic = tactic_basic_naval_invasion_attack
-
-		
-		xp_research_type = army
-		
-		doctrine = no	
-		research_cost = 0.01
-		categories = {
-			land_doctrine
-			cat_grand_battle_plan
-		}
-
-		
-		folder = {
-			name = land_doctrine_folder
-			position = { x = 0 y = 20 }
-		}
-	}
+	
 	
 	firebrigades = { #Branch focused on mobile warfares
 		xp_boost_cost = 100
@@ -1206,8 +1118,7 @@ technologies = {
 		xp_research_type = army
 		
 		path = {
-			leads_to_tech = naval_invasion_tactics_MW		
-			research_cost_coeff = 1
+		
 		}
 
 		path = {
@@ -1440,7 +1351,7 @@ technologies = {
 		#Increased Partisan effect on your land occupied by others
 		resistance_damage_to_garrison_on_our_occupied_states = 0.1 
 		path = {
-			leads_to_tech = naval_invasion_tactics_MW		
+			
 			research_cost_coeff = 1
 		}
 
@@ -2044,6 +1955,7 @@ land_reinforce_rate = 0.05
 		category_all_armor = {
 			hard_attack = 0.10
 			soft_attack = 0.10
+			max_organisation = 7
 		}
 		
 		enable_tactic = tactic_breakthrough
@@ -2152,8 +2064,8 @@ land_reinforce_rate = 0.05
 			max_organisation = 5
 		}
 			path = {
-			leads_to_tech = naval_invasion_tactics_SF
-			research_cost_coeff = 1
+			
+			
 		}
 		#combat advantage when air superior
 		army_bonus_air_superiority_factor = 0.40
@@ -2208,7 +2120,7 @@ land_reinforce_rate = 0.05
 			soft_attack = 0.05 
 		}
 		category_artillery = { 
-			soft_attack = 0.05
+			soft_attack = 0.2
 		}
 		path = {
 			leads_to_tech = forward_observers 
@@ -2375,8 +2287,7 @@ land_reinforce_rate = 0.05
 		xp_research_type = army
 		
 		path = {
-			leads_to_tech = naval_invasion_tactics_SF
-			research_cost_coeff = 1
+			
 		}
 		category_all_infantry = {
 			soft_attack = 0.05
@@ -2492,11 +2403,11 @@ land_reinforce_rate = 0.05
 			max_organisation = 10
 		}
 		category_special_forces = {
-			max_organisation = 30
+			max_organisation = 15
 			max_strength = 7.5		
 		}
 		category_army = {
-			default_morale = 0.05
+			default_morale = 0.12
 		}
 
 		doctrine = no	
@@ -3004,8 +2915,7 @@ land_reinforce_rate = 0.05
 	
 	c3i_theory = {
 		path = {
-			leads_to_tech = naval_invasion_tactics_GBP
-			research_cost_coeff = 1
+			
 		}
 		xp_boost_cost = 100
 		xp_research_bonus = 0.5
@@ -3423,8 +3333,7 @@ land_reinforce_rate = 0.05
 	
 	infiltration_in_depth = {
 		path = {
-			leads_to_tech = naval_invasion_tactics_GBP
-			research_cost_coeff = 1
+		
 		}
 		xp_boost_cost = 100
 		xp_research_bonus = 0.5
@@ -4087,8 +3996,7 @@ land_reinforce_rate = 0.05
 	
 	continuous_offensive = {
 		path = {
-			leads_to_tech = naval_invasion_tactics_MA
-			research_cost_coeff = 1
+			
 		}
 		xp_boost_cost = 100
 		xp_research_bonus = 0.5
@@ -4361,8 +4269,7 @@ land_reinforce_rate = 0.05
 	
 	guerilla_warfare = {
 		path = {
-			leads_to_tech = naval_invasion_tactics_MA
-			research_cost_coeff = 1
+		
 		}
 		xp_boost_cost = 100
 		xp_research_bonus = 0.5
