@@ -61,24 +61,10 @@ characters={
 				original_tag  = FRA
 			}
 			available  = {
-				or  = {
-					##has_completed_focus  = FRA_leftist_rhetoric 
-					##has_completed_focus  = FRA_invite_communist_ministers 
-				}
-				not  = {
-					has_country_leader  = {
-						character  = FRA_philippe_petain
-						ruling_only  = yes 
-					}
-				}
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					not  = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}
+				always = no
+			}
+			visible = {
+				always = no
 			}
 			traits  = {
 				communist_revolutionary 
