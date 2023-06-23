@@ -12,10 +12,10 @@ units = {
 			name = "1 Kantai"
             location = 5553
 			#Dai 1 Sentai
-			ship = { name = "Nagato"  pride_of_the_fleet = yes definition = battleship start_experience_factor = 0.5 equipment = { ship_hull_heavy_1 = {amount = 1 owner = JAP version_name = "BB1" } } }
+			ship = { name = "Nagato"  pride_of_the_fleet = yes definition = battleship start_experience_factor = 0.5 equipment = { ship_hull_heavy_1 = {amount = 1 owner = JAP version_name = "BB1 Heavy" } } }
 			ship = { name = "Haruna" definition = battle_cruiser start_experience_factor = 0.5 equipment = { ship_hull_heavy_1 = { amount = 1 owner = JAP version_name = "BB1 Heavy"} } }
-			ship = { name = "Fuso" definition = battleship start_experience_factor = 0.5 equipment = { ship_hull_heavy_1 = { amount = 1 owner = JAP version_name = "BB1"} } }
-			ship = { name = "Yamashiro" definition = battleship start_experience_factor = 0.5 equipment = { ship_hull_heavy_1 = {amount = 1 owner = JAP version_name = "BB1"} } }
+			ship = { name = "Fuso" definition = battleship start_experience_factor = 0.5 equipment = { ship_hull_heavy_1 = { amount = 1 owner = JAP version_name = "BB1 Heavy"} } }
+			ship = { name = "Yamashiro" definition = battleship start_experience_factor = 0.5 equipment = { ship_hull_heavy_1 = {amount = 1 owner = JAP version_name = "BB1 Heavy"} } }
 			#Dai 8 Sentai
 			ship = { name = "Sendai" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = {amount = 1 owner = JAP version_name = "CL2"} } }
 			ship = { name = "Jintsu" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = {amount = 1 owner = JAP version_name = "CL2"} } }
@@ -81,7 +81,7 @@ units = {
 		task_force = {
 			name = "Yokosuka Yobikantai" # Patrol and reserve fleet, including ships under modernization
             location = 5553
-			ship = { name = "Mutsu" definition = battleship start_experience_factor = 0.5 equipment = { ship_hull_heavy_1 = {amount = 1 owner = JAP version_name = "BB1" } } }
+			ship = { name = "Mutsu" definition = battleship start_experience_factor = 0.5 equipment = { ship_hull_heavy_1 = {amount = 1 owner = JAP version_name = "BB1 Heavy" } } }
 			ship = { name = "Takao" definition = heavy_cruiser start_experience_factor = 0.5 equipment = { ship_hull_cruiser_2 = {amount = 1 owner = JAP version_name = "CA2"} } }
 			ship = { name = "Chokai" definition = heavy_cruiser start_experience_factor = 0.5 equipment = { ship_hull_cruiser_2 = {amount = 1 owner = JAP version_name = "CA2"} } }
 			ship = { name = "Maya" definition = heavy_cruiser start_experience_factor = 0.5 equipment = { ship_hull_cruiser_2 = {amount = 1 owner = JAP version_name = "CA2"} } }
@@ -262,8 +262,8 @@ units = {
 		task_force = {
 			name = "Kure Yobikantai" # Patrol and reserve fleet, including ships under modernization
             location = 5553
-			ship = { name = "Ise" definition = battleship start_experience_factor = 0.5 equipment = { ship_hull_heavy_1 = {amount = 1 owner = JAP version_name = "BB1"} } }		
-			ship = { name = "Hyuga" definition = battleship start_experience_factor = 0.5 equipment = { ship_hull_heavy_1 = {amount = 1 owner = JAP version_name = "BB1"} } }
+			ship = { name = "Ise" definition = battleship start_experience_factor = 0.5 equipment = { ship_hull_heavy_1 = {amount = 1 owner = JAP version_name = "BB1 Heavy"} } }		
+			ship = { name = "Hyuga" definition = battleship start_experience_factor = 0.5 equipment = { ship_hull_heavy_1 = {amount = 1 owner = JAP version_name = "BB1 Heavy"} } }
 			ship = { name = "Mogami" definition = light_cruiser equipment = { ship_hull_cruiser_2 = {amount = 1 owner = JAP version_name = "CL2"} } }
 			ship = { name = "Mikuma" definition = light_cruiser equipment = { ship_hull_cruiser_2 = {amount = 1 owner = JAP version_name = "CL2"} } }
 			ship = { name = "Furutaka" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = JAP version_name = "CA1"} } }
@@ -376,7 +376,7 @@ instant_effect =
 				version_name = "BB1 Heavy"
 			}
 			requested_factories = 1
-			progress = 0.2
+			progress = 0.9
 			amount = 1
 		}
 		# CV (x1): "Soryu"
@@ -399,7 +399,7 @@ instant_effect =
 				version_name = "CL2"
 			}
 			requested_factories = 1
-			progress = 0.2
+			progress = 0.9
 			amount = 2
 		}		
 		# CL(CM) (x1): "Okinoshima"
@@ -410,7 +410,7 @@ instant_effect =
 				version_name = "Okinoshima Class"
 			}
 			requested_factories = 1
-			progress = 0.15
+			progress = 0.8
 			amount = 1
 		}		
 		# DD (x5): "Shiratsuyu" "Shigure" "Murasame" "Harusame" "Samidare"

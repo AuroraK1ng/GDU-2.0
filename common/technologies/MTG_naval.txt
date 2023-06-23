@@ -873,8 +873,43 @@ technologies = {
 
 		enable_equipments = {
 			ship_hull_super_heavy_1
+			
+		}
+		
+		enable_equipment_modules = {
+			ship_armor_shbb
 		}
 
+		research_cost = 1.5
+
+		start_year = 1936
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 25
+				tag = JAP
+			}
+		}
+
+		categories = {
+			naval_equipment
+			bb_tech
+			bc_tech
+		}
+	}
+
+	ship_hull_super_heavy_japtech = {
+
+		enable_equipments = {
+			ship_hull_super_heavy_jap
+			
+		}
+		allow {
+			always = no
+		}
+		
 		enable_equipment_modules = {
 			ship_armor_shbb
 		}
