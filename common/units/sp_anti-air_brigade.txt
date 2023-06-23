@@ -26,42 +26,73 @@ sub_units = {
 			light_tank_aa_chassis = 36
 		}
 		manpower = 500
-		max_organisation = 0
+		max_organisation = 31
 		default_morale = 0.1
 		max_strength = 0.6
 		training_time = 180
 		weight = 1
 		supply_consumption = 0.1
 
-		breakthrough = -0.55
 
 		suppression = 0.75
 
 		forest = {
-		    attack = -0.2
-			movement = -0.4
+		    attack = -0.1
+			movement = -0.2
 		}
 		mountain = 	{
-		    attack = -0.1
+		    attack = -0.2
+			defence = -0.1
+			movement = -0.2
 		}
+		gibraltar = 	{
+		    attack = -0.2
+			defence = -0.1
+			movement = -0.2
+		}		
 		jungle = {
-		    attack = -0.3
-			movement = -0.4
+		    attack = -0.1
+			defence = -0.05 
+			movement = -0.2
 		}
 		marsh = {
-		    attack = -0.1 
+		    attack = -0.1
 			movement = -0.1
 		}
 		urban = {
-			attack = -0.4
+			attack = -0.3
 			defence = -0.1
 		}
 		river = { 
-			attack = -0.2 
+			attack = -0.2
 			movement = -0.2
 		}
 		amphibious = { 
-			attack = -0.6
+			attack = -0.4
+		}
+		
+		
+		forest_africa = {
+		    attack = -0.1
+			movement = -0.2
+		}
+		mountain_africa = 	{
+		    attack = -0.2
+			defence = -0.1
+			movement = -0.2
+		}
+		jungle_africa = {
+		    attack = -0.1
+			defence = -0.05 
+			movement = -0.2
+		}
+		marsh_africa = {
+		    attack = -0.1
+			movement = -0.1
+		}
+		urban_africa = {
+			attack = -0.3
+			defence = -0.1
 		}
 	}
 	
@@ -91,45 +122,82 @@ sub_units = {
 			medium_tank_aa_chassis = 36
 		}
 		manpower = 500
-		max_organisation = 0
+		max_organisation = 31
 		default_morale = 0.1
 		max_strength = 0.6
 		training_time = 180
 		weight = 1.25
-		supply_consumption = 0.1
+		supply_consumption = 0.13
 
-		breakthrough = -0.53
+		
 
 		suppression = 0.8
 
 		forest = {
-		    attack = -0.3
-			movement = -0.4
+		    attack = -0.2
+			movement = -0.2
 		}
-		hills = 	{
-		    attack = -0.1
+		hills = {
+		    attack = -0.15
+			defence = -0.05			
 		}
 		mountain = 	{
-		    attack = -0.2
+		    attack = -0.3
+			defence = -0.3
+			movement = -0.45
 		}
+		gibraltar = 	{
+		    attack = -0.3
+			defence = -0.3
+			movement = -0.45
+		}		
 		jungle = {
-		    attack = -0.4
-			movement = -0.4
+		    attack = -0.3
+			defence = -0.15 
+			movement = -0.3
 		}
 		marsh = {
-		    attack = -0.1 
+		    attack = -0.1
 			movement = -0.1
 		}
 		urban = {
-			attack = -0.4
+			attack = -0.3
 			defence = -0.1
 		}
 		river = { 
-			attack = -0.2 
+			attack = -0.2
 			movement = -0.2
 		}
 		amphibious = { 
 			attack = -0.7
+		}
+		
+		
+		forest_africa = {
+		    attack = -0.2
+			movement = -0.2
+		}
+		hills_africa = {
+		    attack = -0.15
+			defence = -0.05 
+		}
+		mountain_africa = 	{
+		    attack = -0.3
+			defence = -0.3
+			movement = -0.45
+		}
+		jungle_africa = {
+		    attack = -0.3
+			defence = -0.15 
+			movement = -0.3
+		}
+		marsh_africa = {
+		    attack = -0.1
+			movement = -0.1
+		}
+		urban_africa = {
+			attack = -0.3
+			defence = -0.1
 		}
 	}
 	
@@ -160,13 +228,12 @@ sub_units = {
 			heavy_tank_aa_chassis = 36
 		}
 		manpower = 500
-		max_organisation = 0
+		max_organisation = 31
 		default_morale = 0.1
 		max_strength = 0.6
 		weight = 1.5
-		supply_consumption = 0.1
+		supply_consumption = 0.15
 
-		breakthrough = -0.35
 
 		suppression = 0.75
 
@@ -178,14 +245,22 @@ sub_units = {
 		    attack = -0.20
 		}
 		mountain = 	{
-		    attack = -0.3
+		    attack = -0.4
+			defence = -0.4 
+			movement = -0.4
 		}
+		gibraltar = 	{
+		    attack = -0.4
+			defence = -0.4
+			movement = -0.4
+		}		
 		jungle = {
 		    attack = -0.6
+			defence = -0.2 
 			movement = -0.4
 		}
 		marsh = {
-		    attack = -0.4 
+		    attack = -0.4
 			movement = -0.2
 		}
 		urban = {
@@ -193,11 +268,41 @@ sub_units = {
 			defence = -0.2
 		}
 		river = { 
-			attack = -0.4 
+			attack = -0.4
 			movement = -0.4
 		}
 		amphibious = { 
 			attack = -0.8 
+		}
+		fort = {
+			attack = 0.1
+		}
+		
+		
+		forest_africa = {
+		    attack = -0.40
+			movement = -0.40
+		}
+		hills_africa = {
+		    attack = -0.20
+		}
+		mountain_africa = 	{
+		    attack = -0.4
+			defence = -0.4 
+			movement = -0.4
+		}
+		jungle_africa = {
+		    attack = -0.6
+			defence = -0.2 
+			movement = -0.4
+		}
+		marsh_africa = {
+		    attack = -0.4
+			movement = -0.2
+		}
+		urban_africa = {
+			attack = -0.5
+			defence = -0.2
 		}
 	}
 	
@@ -226,14 +331,13 @@ sub_units = {
 			super_heavy_tank_aa_chassis = 36
 		}
 		manpower = 500
-		max_organisation = 0
+		max_organisation = 31
 		default_morale = 0.1
 		max_strength = 0.6
 		training_time = 180
 		weight = 1.75
 		supply_consumption = 0.1
 
-		breakthrough = -0.35
 
 		suppression = 0.75
 
@@ -246,18 +350,23 @@ sub_units = {
 		}
 		mountain = 	{
 		    attack = -0.4
+			defence = -0.4			
 		}
+		gibraltar = 	{
+		    attack = -0.4
+			defence = -0.4						
+		}		
 		jungle = {
 		    attack = -0.7
 			movement = -0.4
 		}
 		marsh = {
-		    attack = -0.5 
+		    attack = -0.5
 			movement = -0.2
 		}
 		urban = {
 			attack = -0.6
-			defence = -0.2
+			defence = -0.35
 		}
 		river = { 
 			attack = -0.5
@@ -265,6 +374,30 @@ sub_units = {
 		}
 		amphibious = { 
 			attack = -1.0
+		}
+		
+		
+		forest_africa = {
+		    attack = -0.5
+			movement = -0.4
+		}
+		hills_africa = {
+		    attack = -0.3
+		}
+		mountain_africa = 	{
+		    attack = -0.4
+		}
+		jungle_africa = {
+		    attack = -0.7
+			movement = -0.4
+		}
+		marsh_africa = {
+		    attack = -0.5
+			movement = -0.2
+		}
+		urban_africa = {
+			attack = -0.6
+			defence = -0.35
 		}
 	}
 	
