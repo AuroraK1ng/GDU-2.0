@@ -445,6 +445,7 @@ ideas = {
 			
 			available = {
 			NOT = { tag = JAP }
+			NOT = { tag = SOV }
 			NOT = { has_idea = soviet_closed_market }
 			}
 			
@@ -469,6 +470,7 @@ ideas = {
 			removal_cost = -1
 
 			available = {
+			NOT = { tag = SOV }
 			NOT = { has_idea = soviet_closed_market }
 			NOT = { has_idea = great_depression }
 			NOT = { has_idea = great_depression_2 }
@@ -496,6 +498,7 @@ ideas = {
 
 
 			available = {
+				NOT = { tag = SOV }
 				NOT = { has_idea = soviet_closed_market }
 #				NOT = { tag = POR }
 				OR = {
