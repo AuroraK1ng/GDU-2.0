@@ -29,13 +29,22 @@ sub_units = {
 		}
 		hills = {
 		    attack = -0.20
+			defence = -0.1
 		}
 		mountain = 	{
-		    attack = -0.3
+		    attack = -0.9
+			defence = -0.85 
+			movement = -0.9
 		}
+		gibraltar = 	{
+		    attack = -0.9
+			defence = -0.85 
+			movement = -0.9
+		}		
 		jungle = {
 		    attack = -0.6
-			movement = -0.4
+			defence = -0.2 
+			movement = -0.7
 		}
 		marsh = {
 		    attack = -0.4 
@@ -50,10 +59,39 @@ sub_units = {
 			movement = -0.4
 		}
 		amphibious = { 
-			attack = -0.9
+			attack = -0.9 
 		}
 		fort = {
 			attack = 0.1
+		}
+
+
+		forest_africa = {
+		    attack = -0.40
+			movement = -0.40
+		}
+		hills_africa = {
+		    attack = -0.20
+			defence = -0.05			
+		}
+		mountain_africa = 	{
+		    attack = -0.9
+			defence = -0.85 
+			movement = -0.9
+		}
+		
+		jungle_africa = {
+		    attack = -0.6
+			defence = -0.2 
+			movement = -0.7
+		}
+		marsh_africa = {
+		    attack = -0.4 
+			movement = -0.2
+		}
+		urban_africa = {
+			attack = -0.5
+			defence = -0.2
 		}
 
 		combat_width = 2
