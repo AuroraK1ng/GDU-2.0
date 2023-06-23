@@ -1089,7 +1089,7 @@ guiTypes = {
 					name = "infantry_year2"
 					position = { x = 130 y = 50 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "vic_36"
 					borderSize = { x = 0 y = 0}
 					text = "1918"
 					maxWidth = 170
@@ -1102,7 +1102,7 @@ guiTypes = {
 					name = "infantry_year3"
 					position = { x = 270 y = 50 }
 					textureFile = ""
-					font = "hoi_36header"
+					font = "vic_36"
 					borderSize = { x = 0 y = 0}
 					text = "1936"
 					maxWidth = 170
@@ -1114,7 +1114,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "infantry_year5"
 					position = { x = 410 y = 50 }
-					font = "hoi_36header"
+					font = "vic_36"
 					borderSize = { x = 0 y = 0}
 					text = "1938"
 					maxWidth = 170
@@ -1126,7 +1126,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "infantry_year6"
 					position = { x = 550 y = 50 }
-					font = "hoi_36header"
+					font = "vic_36"
 					borderSize = { x = 0 y = 0}
 					text = "1939"
 					maxWidth = 170
@@ -1138,7 +1138,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "infantry_year7"
 					position = { x = 690 y = 50 }
-					font = "hoi_36header"
+					font = "vic_36"
 					borderSize = { x = 0 y = 0}
 					text = "1940"
 					maxWidth = 170
@@ -1150,7 +1150,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "infantry_year8"
 					position = { x = 830 y = 50 }
-					font = "hoi_36header"
+					font = "vic_36"
 					borderSize = { x = 0 y = 0}
 					text = "1941"
 					maxWidth = 170
@@ -1162,7 +1162,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "infantry_year9"
 					position = { x = 970 y = 50 }
-					font = "hoi_36header"
+					font = "vic_36"
 					borderSize = { x = 0 y = 0}
 					text = "1942"
 					maxWidth = 170
@@ -1174,7 +1174,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "infantry_year10"
 					position = { x = 1110 y = 50 }
-					font = "hoi_36header"
+					font = "vic_36"
 					borderSize = { x = 0 y = 0}
 					text = "1943"
 					maxWidth = 170
@@ -1186,7 +1186,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "infantry_year11"
 					position = { x = 1250 y = 50 }
-					font = "hoi_36header"
+					font = "vic_36"
 					borderSize = { x = 0 y = 0}
 					text = "1944"
 					maxWidth = 170
@@ -1197,7 +1197,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "infantry_year12"
 					position = { x = 1390 y = 50 }
-					font = "hoi_36header"
+					font = "vic_36"
 					borderSize = { x = 0 y = 0}
 					text = "1945"
 					maxWidth = 170
@@ -1208,7 +1208,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "infantry_year13"
 					position = { x = 1530 y = 50 }
-					font = "hoi_36header"
+					font = "vic_36"
 					borderSize = { x = 0 y = 0}
 					text = "1946"
 					maxWidth = 170
@@ -1266,6 +1266,34 @@ guiTypes = {
 			}
 
 			gridboxtype = {
+				name = "desertinfantry_at_tree"
+				position = { x = 140 y = 1150 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
+				name = "jaegers_tree"
+				position = { x = 140 y = 1230 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
+				name = "jungletroops_tree"
+				position = { x = 140 y = 1310 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
+				name = "shocktroops_tree"
+				position = { x = 140 y = 1390 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
 				name = "tech_mountaineers_tree"
 				position = { x = 140 y = 930 }
 				slotsize = { width = 70 height = 70 }
@@ -1274,44 +1302,16 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "paratroopers_tree"
-				position = { x = 140 y = 1035 }
-				slotsize = { width = 70 height = 70 }
-				format = "LEFT"
-			}
-			
-			gridboxtype = {
-				name = "desertinfantry_at_tree"
-				position = { x = 140 y = 1140 }
-				slotsize = { width = 70 height = 70 }
-				format = "LEFT"
-			}
-					
-			gridboxtype = {
-				name = "jaegers_tree"
-				position = { x = 140 y = 1245 }
-				slotsize = { width = 70 height = 70 }
-				format = "LEFT"
-			}
-					
-			gridboxtype = {
-				name = "jungletroops_tree"
-				position = { x = 140 y = 1350 }
-				slotsize = { width = 70 height = 70 }
-				format = "LEFT"
-			}
-					
-			gridboxtype = {
-				name = "shocktroops_tree"
-				position = { x = 140 y = 1455 }
+				position = { x = 140 y = 1015 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 
 			gridboxtype = {
 				name = "tech_special_forces_tree"
-				position = { x = 140 y = 1600 }
+				position =  { x = 1300 y = 875 }
 				slotsize = { width = 70 height = 70 }
-				format = "LEFT"
+				format = "UP"
 			}
 		}
 		
