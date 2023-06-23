@@ -35,30 +35,31 @@ sub_units = {
 		weight = 1
 		supply_consumption = 0.22
 
-		#Tanks are awesome
-		# soft_attack = 0.5
-
-		breakthrough = 0.15
-
-		suppression = 2.5
-
 		forest = {
-		    attack = -0.2
-			movement = -0.4
+		    attack = -0.075
+			movement = -0.2
 		}
 		mountain = 	{
-		    attack = -0.1
+		    attack = -0.4
+			defence = -0.15
+			movement = -0.5
 		}
-		jungle = {
+		gibraltar = 	{
 		    attack = -0.3
-			movement = -0.4
+			defence = -0.15
+			movement = -0.5
+		}		
+		jungle = {
+		    attack = -0.1
+			defence = -0.05 
+			movement = -0.2
 		}
 		marsh = {
 		    attack = -0.1 
 			movement = -0.1
 		}
 		urban = {
-			attack = -0.4
+			attack = -0.3
 			defence = -0.1
 		}
 		river = { 
@@ -67,6 +68,30 @@ sub_units = {
 		}
 		amphibious = { 
 			attack = -0.4
+		}
+		
+		
+		forest_africa = {
+		    attack = -0.075
+			movement = -0.2
+		}
+		mountain_africa = 	{
+		    attack = -0.4
+			defence = -0.15
+			movement = -0.5
+		}
+		jungle_africa = {
+		    attack = -0.1
+			defence = -0.05 
+			movement = -0.2
+		}
+		marsh_africa = {
+		    attack = -0.1 
+			movement = -0.1
+		}
+		urban_africa = {
+			attack = -0.3
+			defence = -0.1
 		}	
 	}
 }
