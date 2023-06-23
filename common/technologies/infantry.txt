@@ -796,8 +796,8 @@ technologies = {
 
 	tech_special_forces = {
 		category_special_forces = {
-			acclimatization_hot_climate_gain_factor = 0.05
-			acclimatization_cold_climate_gain_factor = 0.05
+			acclimatization_hot_climate_gain_factor = 0.2
+			acclimatization_cold_climate_gain_factor = 0.2
 		}
 		
 		#dependencies = {
@@ -807,12 +807,6 @@ technologies = {
 		#		mountaineer = 1
 		#	}
 		#}
-
-		path = {
-			leads_to_tech = advanced_special_forces
-			research_cost_coeff = 1
-		}
-
 		path = {
 			leads_to_tech = improved_special_forces
 			research_cost_coeff = 1
@@ -822,44 +816,7 @@ technologies = {
 		start_year = 1938
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = @1938 }
-		}
-		
-		categories = {
-			mountaineers_tech
-			marine_tech
-			para_tech
-			cat_special_forces_generic
-		}
-		
-		ai_will_do = {
-			factor = 0.7
-		}
-	}
-
-
-	advanced_special_forces = {
-		xor={
-			improved_special_forces
-		}
-
-		category_special_forces = {
-			##max_organisation = 5
-			breakthrough = 0.1
-		}
-
-		special_forces_training_time_factor = 0.1
-		
-		path = {
-			leads_to_tech = extreme_environment_training
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2
-		start_year = 1940
-		folder = {
-			name = infantry_folder
-			position = { x = 3 y = @1940 }
+			position = { x = 5 y = -7 }
 		}
 		
 		categories = {
@@ -875,12 +832,15 @@ technologies = {
 	}
 
 	improved_special_forces = {
-		xor={
-			advanced_special_forces
+
+		category_special_forces = {
+			max_organisation = 5
+			defense = 0.05
 		}
 
 		special_forces_cap = 0.05
 		special_forces_training_time_factor = -0.1
+		
 		
 		path = {
 			leads_to_tech = survival_training
@@ -891,7 +851,7 @@ technologies = {
 		start_year = 1940
 		folder = {
 			name = infantry_folder
-			position = { x = 5 y = @1940 }
+			position = { x = 5 y = -5 }
 		}
 		
 		categories = {
@@ -905,45 +865,14 @@ technologies = {
 			factor = 0.7
 		}
 	}
-
-
-	extreme_environment_training = {
-
-		category_special_forces = {
-			acclimatization_hot_climate_gain_factor = 0.50
-			acclimatization_cold_climate_gain_factor = 0.50
-		}
-		
-		special_forces_no_supply_grace = 48
-		special_forces_training_time_factor = 0.1
-		
-		path = {
-			leads_to_tech = elite_forces
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2
-		start_year = 1942
-		folder = {
-			name = infantry_folder
-			position = { x = 3 y = @1942 }
-		}
-		
-		categories = {
-			mountaineers_tech
-			marine_tech
-			para_tech
-			cat_special_forces_generic
-		}
-		
-		ai_will_do = {
-			factor = 0.7
-		}
-	}
-
-
 	survival_training = {
-
+		mountaineers = { breakthrough = 0.03 }
+		paratrooper = { breakthrough = 0.03 }
+		marine = { breakthrough = 0.03 }
+		jaeger = { breakthrough = 0.03 }
+		jungletroop = { breakthrough = 0.03 }
+		desertinfantry = { breakthrough = 0.03 }
+		shocktroop = { breakthrough = 0.03 }
 		category_special_forces = {
 			acclimatization_hot_climate_gain_factor = 0.20
 			acclimatization_cold_climate_gain_factor = 0.20
@@ -960,7 +889,7 @@ technologies = {
 		start_year = 1942
 		folder = {
 			name = infantry_folder
-			position = { x = 5 y = @1942 }
+			position = { x = 5 y = -3 }
 		}
 		
 		categories = {
@@ -977,21 +906,64 @@ technologies = {
 
 
 	elite_forces = {
-		category_special_forces = {
-			acclimatization_hot_climate_gain_factor = 0.20
-			acclimatization_cold_climate_gain_factor = 0.20
-			##max_organisation = 5
-			soft_attack = 0.05
-			breakthrough = 0.15
+		on_research_complete = {
+			custom_effect_tooltip = special_forces_3b_tt
 		}
-		
-		special_forces_no_supply_grace = 48
+
+		mountaineers = {
+			mountain = {
+				attack = 0.05
+				movement = 0.1
+			}
+		}
+		marine = {
+			river = {
+				attack = 0.05
+				movement = 0.1
+			}
+		}
+		jaeger = {
+			forest = {
+				attack = 0.05
+				movement = 0.1
+			}
+			forest_africa = {
+				attack = 0.05
+				movement = 0.1
+			}			
+		}
+		jungletroop = {
+			jungle = {
+				attack = 0.05
+				movement = 0.1
+			}
+			jungle_africa = {
+				attack = 0.05
+				movement = 0.1
+			}			
+		}
+		desertinfantry = {
+			desert = {
+				attack = 0.05
+				movement = 0.1
+			}
+			desert_africa = {
+				attack = 0.05
+				movement = 0.1
+			}			
+		}
+		shocktroop = {
+			fort = {
+				attack = 0.05
+				movement = 0.1
+			}
+		}
 
 		research_cost = 2
 		start_year = 1944
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = @1944 }
+			position = { x = 5 y = -1 }
 		}
 		
 		categories = {
