@@ -44,6 +44,61 @@ sub_units = {
 		need = {
 			infantry_equipment = 100
 		}
+		desert = {
+			movement = 0.2
+		}
+
+		forest = {
+			movement = 0.10
+		}
+		hills = {
+			movement = 0.1
+		}
+		mountain = {
+			movement = 0.1
+		}
+		gibraltar = {
+			movement = 0.05
+		}		
+		marsh = {
+			movement = 0.05
+		}
+		plains = {
+			movement = 0.30
+		}
+		urban = {
+			movement = 0.2
+		}
+		river = {
+			movement = -0.05
+		}
+		amphibious = {
+			movement = -0.05
+		}
+		
+		
+		desert_africa = {
+			movement = 0.2
+		}
+
+		forest_africa = {
+			movement = 0.10
+		}
+		hills_africa = {
+			movement = 0.1
+		}
+		mountain_africa = {
+			movement = 0.1
+		}
+		marsh_africa = {
+			movement = 0.05
+		}
+		plains_africa = {
+			movement = 0.30
+		}
+		urban_africa = {
+			movement = 0.2
+		}
 	}
 
 	bicycle_battalion = {
@@ -161,14 +216,27 @@ sub_units = {
 			infantry_equipment = 150
 		}
 
+		desert = {
+			movement = 0.2
+		}
+
 		marsh = {
 			attack = 0.3
 		}
 		river = {
-			attack = 0.3
+			attack = 0.4
 		}
 		amphibious = {
 			attack = 0.5
+		}
+		
+		
+		desert_africa = {
+			movement = 0.2
+		}
+
+		marsh_africa = {
+			attack = 0.3
 		}
 	}
 	
@@ -211,20 +279,44 @@ sub_units = {
 		weight = 0.5
 		
 		supply_consumption = 0.05
-		breakthrough = 0.3
+		breakthrough = 0.20
 	
 		need = {
 			infantry_equipment = 140
 		}
 
+		desert = {
+			movement = 0.2
+		}
+
 		hills = {
 			attack = 0.2
-			defence = 0.05
+			defence = 0.1
 			movement = 0.1
 		}
 		mountain = {
-			attack = 0.35
+			attack = 0.3
+			defence = 0.2
+			movement = 0.2
+		}
+		gibraltar = {
+			attack = 0.3
+			defence = 0.2
+			movement = 0.2
+		}
+		amphibious = {
+			attack = 0.2
+		}
+
+
+		hills_africa = {
+			attack = 0.2
 			defence = 0.1
+			movement = 0.1
+		}
+		mountain_africa = {
+			attack = 0.3
+			defence = 0.2
 			movement = 0.2
 		}
 	}
@@ -272,6 +364,17 @@ sub_units = {
 		need = {
 			infantry_equipment = 130
 		}
+		desert = {
+			movement = 0.2
+		}
+
+		desert_africa = {
+			movement = 0.2
+		}
+		
+		amphibious = {
+			attack = 0.2
+		}
 	}
 
 	motorized = {
@@ -298,9 +401,8 @@ sub_units = {
 		combat_width = 2
 		
 		#Size Definitions
-		defense = -0.8
 		max_strength = 25
-		max_organisation = 90
+		max_organisation = 31
 		default_morale = 0.30
 		manpower = 1200
 
@@ -320,11 +422,18 @@ sub_units = {
 
 		forest = {
 			attack = -0.1
-			movement = -0.5
+			movement = -0.35
 		}
 		mountain = {
-			attack = -0.05
+			attack = -0.1
+			defence = -0.1 
+			movement = -0.2 
 		}
+		gibraltar = {
+			attack = -0.1
+			defence = -0.1 
+			movement = -0.2 
+		}		
 		jungle = {
 			attack = -0.2
 			movement = -0.5
@@ -343,6 +452,28 @@ sub_units = {
 		amphibious = {
 			attack = -0.2
 		}
+		
+		
+		forest_africa = {
+			attack = -0.1
+			movement = -0.35
+		}
+		mountain_africa = {
+			attack = -0.1
+			defence = -0.1 
+			movement = -0.2 
+		}
+		jungle_africa = {
+			attack = -0.2
+			movement = -0.5
+		}
+		marsh_africa = {
+			attack = -0.1
+			movement = -0.3
+		}
+		urban_africa = {
+			attack = -0.1
+		}	
 	}
 
 	mechanized = {
@@ -369,13 +500,12 @@ sub_units = {
 		combat_width = 2
 
 		#Offensive Abilities
-		soft_attack = 0.1
-		hard_attack = 4.0
+		soft_attack = 0.2
+		hard_attack = 3.5
 		
 		#Size Definitions
-		defense = -0.5
-		max_strength = 30
-		max_organisation = 85
+		max_strength = 36
+		max_organisation = 38
 		default_morale = 0.3
 		manpower = 1200
 
