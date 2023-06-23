@@ -408,11 +408,8 @@ characters={
 			slot = theorist
 			idea_token = SPA_emilio_herrera
 			ledger = air
-			name = SPA_emilio_herrera
+
 			allowed = {
-				NOT = {
-					has_dlc = "La Resistance"
-				}
 				original_tag = SPR
 			}
 			visible = {
@@ -957,7 +954,7 @@ characters={
 					army_chief_organizational_2
 				}
 				cost = 100
-			
+			}
 		}
 		SPA_enrique_canovas_lacruz={ # Falangist
 			allowed = {
@@ -1105,21 +1102,13 @@ characters={
 				idea_token = SPA_agustin_munoz_grandes
 				ledger = army
 				allowed = {
-					has_dlc = "La Resistance"
 					original_tag = SPR
 				}
 				visible = {
-					NOT = {
-						tag = SPD
-						tag = SPC
-					}
+					original_tag = SPR
 				}
 				available = {
-					NOT = { has_completed_focus = SPA_supremacy_of_the_communion }
-					custom_trigger_tooltip = {
-						tooltip = SPA_not_republican_spain_tt
-						NOT = { tag = SPD }
-					}
+					original_tag = SPR
 				}
 				traits = {
 					mobile_warfare_expert
@@ -1192,32 +1181,11 @@ characters={
 					original_tag = SPR
 				}
 				visible = {
-					NOT = {
-						tag = SPD
-						tag = SPC
-					}
+					original_tag = SPR
 				}
 				available = {
-					if = {
-						limit = {
-							NOT = { has_completed_focus = SPA_supremacy_of_the_communion }
-						}
-						NOT = {
-							has_completed_focus = SPA_eliminate_the_carlists
-						}
-					}
-					if = {
-						limit = {
-							has_completed_focus = SPA_unify_the_nationalist_front
-						}
-						NOT = {
-							has_global_flag = SPR_carlist_uprising_flag
-						}
-					}
-					custom_trigger_tooltip = {
-						tooltip = SPA_not_republican_spain_tt
-						NOT = { tag = SPD }
-					}
+					original_tag = SPR
+					
 				}
 				traits = {
 					military_theorist
@@ -1232,57 +1200,8 @@ characters={
 				planning_skill=3
 				logistics_skill=2
 				legacy_id=1114
-				visible = {
-					OR = {
-						NOT = { has_global_flag = spanish_civil_war }
-						AND = {
-							tag = SPA
-							has_global_flag = spanish_civil_war
-							NOT = {
-								has_global_flag = SPR_carlist_uprising_flag
-							}
-						}
-						AND = {
-							tag = SPB
-							has_global_flag = spanish_civil_war
-							has_global_flag = SPR_carlist_uprising_flag
-						}
-					}
-				}
 			}
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
-			}
-			name=SPA_jose_enrique_varela
-			portraits={
-				army={
-					small="GFX_idea_generic_army_europe_3"
-				}
-			}
-			advisor={
-				cost = 100
-				slot = theorist
-				idea_token = SPA_jose_enrique_varela
-				ledger = army
-				name = SPA_jose_enrique_varela
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
-				}
-				visible = {
-					has_government = fascism
-				}
-				available = {
-					has_government = fascism
-				}
-				
-				traits = {
-					military_theorist
-				}
-			}
-	}
+		}
 
 	SPA_miguel_cabanellas={ # Carlist
 			allowed = {
@@ -2132,10 +2051,7 @@ characters={
 				original_tag = SPR
 			}
 			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
+				
 			}
 			available = {
 			
@@ -4488,6 +4404,6 @@ characters={
 				regional_traditionalist_leader 
 			}
 		}
-	    }
 	}
+}
 
