@@ -98,7 +98,7 @@ guiTypes = {
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 1
-		size = { width=375 height=100%% }
+		size = { width=600 height=100%% }
 		clipping = no
 
 		background = {
@@ -109,12 +109,12 @@ guiTypes = {
 		iconType = {
 			name = "template_header_bg"
 			spriteType = "GFX_subview_header_bg_375x101"
-			position = { x = 1 y = 0 }
+			position = { x = 135 y = 0 }
 		}
 
 		instantTextboxType = {
 			name = "template_title"
-			position = { x = 20 y = 8 }
+			position = { x = 150 y = 8 }
 			maxWidth = 336
 			font = "hoi_36header"
 			text = "DEPLOYMENT_TEMPLATE_LABEL"
@@ -148,7 +148,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "show_decommissioned_templates_window"
-			position = { x=1 y=96 }
+			position = { x=135 y=96 }
 			size = { width=373 height=44 }
 
 			background = {
@@ -180,7 +180,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "open_designer_button"
-			position = { x = 139 y = 56 }
+			position = { x = 235 y = 56 }
 			quadTextureSprite ="GFX_division_designer_button"
 			buttonFont = "hoi_16mbs"
 			buttonText = "DEPLOYMENT_DESIGNER"
@@ -195,7 +195,7 @@ guiTypes = {
 
 			expandButton = {
 				name = "expand_button"
-				position = { x = -65 y = 17 }
+				position = { x = -10 y = 0 }
 				quadTextureSprite ="GFX_foreign_templates_dropdown_button"
 				buttonFont = "Main_14_black"
 				Orientation = "UPPER_RIGHT"
