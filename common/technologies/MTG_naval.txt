@@ -663,6 +663,7 @@ technologies = {
 
 		enable_equipment_modules = {
 			ship_airplane_launcher_2
+			
 		}
 		on_research_complete = {
 			custom_effect_tooltip = airplane_launcher_advice_tt
@@ -933,6 +934,36 @@ technologies = {
 			bc_tech
 		}
 	}
+	ship_hull_heavy_bismarcktech = {
+
+		enable_equipments = {
+			ship_hull_heavy_bismarck
+			
+			
+			
+			
+		}
+		allow {
+			always = no
+		}
+		
+
+		research_cost = 1.5
+
+		start_year = 1940
+
+		ai_will_do = {
+			factor = 1
+
+		}
+
+		categories = {
+			naval_equipment
+			bb_tech
+			bc_tech
+		}
+	}
+	
 
 	improved_ship_hull_heavy = {
 

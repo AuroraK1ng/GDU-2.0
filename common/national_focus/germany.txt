@@ -2989,7 +2989,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = GER_bismarck focus = GER_tirpitz focus = GER_plan_z focus = GER_modular_construction }
+		prerequisite = { focus = GER_bismarck focus = GER_plan_z focus = GER_modular_construction }
 		available_if_capitulated = yes
 
 		cancel_if_invalid = yes
@@ -3276,8 +3276,8 @@ activate_mission = GER_relocate_industry_from_friesland
 	
 	focus = {
 	    id = GER_bismarck
-		prerequisite = {focus = GER_naval_effort}
-		x = 25
+		prerequisite = {focus = GER_naval_effort2}
+		x = 26
 		y = 5
 		icon = GFX_battleship_ger1
 		cost = 5
@@ -3287,101 +3287,136 @@ activate_mission = GER_relocate_industry_from_friesland
 		completion_reward = {
 			create_equipment_variant = {
 				name = "Bismarck Class"
-				type = bismarck_hull_heavy_3
+				type = ship_hull_heavy_bismarck
 				name_group = GER_BB_HISTORICAL
 				parent_version = 0
 				modules = {
-					fixed_ship_battery_slot = ship_heavy_battery_2
+					fixed_ship_battery_slot = ship_heavy_battery_3
 					fixed_ship_anti_air_slot = ship_anti_air_2
 					fixed_ship_fire_control_system_slot = ship_fire_control_system_1
 					fixed_ship_radar_slot = empty
 					fixed_ship_engine_slot = heavy_ship_engine_3
 					fixed_ship_secondaries_slot = ship_secondaries_2
 					fixed_ship_armor_slot = ship_armor_bb_3
-					front_1_custom_slot = ship_heavy_battery_2
-					mid_1_custom_slot = ship_secondaries_2
-					mid_2_custom_slot = ship_secondaries_2
-					mid_3_custom_slot = ship_secondaries_2
-					rear_1_custom_slot = ship_heavy_battery_2
+					front_1_custom_slot = ship_heavy_battery_3
+					mid_1_custom_slot = ship_heavy_battery_3
+					mid_2_custom_slot = ship_heavy_battery_3
+					mid_3_custom_slot = ship_airplane_launcher_2
+					rear_1_custom_slot = ship_heavy_battery_3
 				}
 			}
-				add_equipment_production = {
-					equipment = {
-						type = bismarck_hull_heavy_3
-						creator = "GER" 
-						version_name = "Bismarck Class"
-					}
-					name = "Bismarck" 
-					requested_factories = 1
-					progress = 0.95
-					amount = 1
-				}
+				
+			
+			
+			set_technology = {
+				ship_hull_heavy_bismarcktech = 1
+			}
 			
 			if = {
 				limit = {
-					not = { has_tech = bismarck_hull_heavy }
+					not = { has_tech = improved_heavy_battery }
 				}
 				set_technology = {
-					bismarck_hull_heavy = 1
+					improved_heavy_battery = 1
 				}
+			}
+			if = {
+				limit = {
+					not = { has_tech = basic_heavy_shell}
+				}
+				set_technology = {
+					basic_heavy_shell = 1
+				}
+			}
+			if = {
+				limit = {
+					not = { has_tech = improved_airplane_launcher }
+				}
+				set_technology = {
+					improved_airplane_launcher = 1
+				}
+			}
+
+		
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_heavy_bismarck
+					creator = "GER" 
+					version_name = "Bismarck Class"
+				}
+				name = "Bismarck" 
+				requested_factories = 1
+				progress = 0.95
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_heavy_bismarck
+					creator = "GER" 
+					version_name = "Bismarck Class"
+				}
+				name = "Tirpitz" 
+				requested_factories = 1
+				progress = 0.85
+				amount = 1
 			}
 		}
 	}
 	
-	focus = {
-	    id = GER_tirpitz
-		prerequisite = {focus = GER_naval_effort }
-		x = 27
-		y = 5
-		icon = GFX_battleship_ger1
-		cost = 5
-		available = {
-		    GER = { has_completed_focus = GER_danzig_or_war }
-		}
-		completion_reward = {
-			create_equipment_variant = {
-				name = "Bismarck Class"
-				type = ship_hull_heavy_3
-				name_group = GER_BB_HISTORICAL
-				parent_version = 0
-				modules = {
-					fixed_ship_battery_slot = ship_heavy_battery_2
-					fixed_ship_anti_air_slot = ship_anti_air_2
-					fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-					fixed_ship_radar_slot = empty
-					fixed_ship_engine_slot = heavy_ship_engine_3
-					fixed_ship_secondaries_slot = ship_secondaries_2
-					fixed_ship_armor_slot = ship_armor_bb_3
-					front_1_custom_slot = ship_heavy_battery_2
-					mid_1_custom_slot = ship_secondaries_2
-					mid_2_custom_slot = ship_secondaries_2
-					mid_3_custom_slot = ship_secondaries_2
-					rear_1_custom_slot = ship_heavy_battery_2
-				}
-			}
-			hidden_effect = {
-				add_equipment_production = {
-					equipment = {
-						type = bismarck_hull_heavy_3
-						creator = "GER" 
-						version_name = "Bismarck Class"
-					}
-					name = "Tirpitz" 
-					requested_factories = 1
-					progress = 0.95
-					amount = 1
-				}
-			}
-			if = {
-				limit = {
-					not = { has_tech = bismarck_hull_heavy }
-				}
-				set_technology = {
-					bismarck_hull_heavy = 1
-				}
-			}
-		}
-	}
+	##focus = {
+	##    id = GER_tirpitz
+	##	prerequisite = {focus = GER_naval_effort }
+	##	x = 27
+	##	y = 5
+	##	icon = GFX_battleship_ger1
+	##	cost = 5
+	##	available = {
+	##	    GER = { has_completed_focus = GER_danzig_or_war }
+	##	}
+	##	completion_reward = {
+	##		create_equipment_variant = {
+	##			name = "Bismarck Class"
+	##			type = ship_hull_heavy_3
+	##			name_group = GER_BB_HISTORICAL
+	##			parent_version = 0
+	##			modules = {
+	##				fixed_ship_battery_slot = ship_heavy_battery_2
+	##				fixed_ship_anti_air_slot = ship_anti_air_2
+	##				fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+	##				fixed_ship_radar_slot = empty
+	##				fixed_ship_engine_slot = heavy_ship_engine_3
+	##				fixed_ship_secondaries_slot = ship_secondaries_2
+	##				fixed_ship_armor_slot = ship_armor_bb_3
+	##				front_1_custom_slot = ship_heavy_battery_2
+	##				mid_1_custom_slot = ship_secondaries_2
+	##				mid_2_custom_slot = ship_secondaries_2
+	##				mid_3_custom_slot = ship_secondaries_2
+	##				rear_1_custom_slot = ship_heavy_battery_2
+	##			}
+	##		}
+	##		hidden_effect = {
+	##			add_equipment_production = {
+	##				equipment = {
+	##					type = ship_hull_heavy_3
+	##					creator = "GER" 
+	##					version_name = "Bismarck Class"
+	##				}
+	##				name = "Tirpitz" 
+	##				requested_factories = 1
+	##				progress = 0.95
+	##				amount = 1
+	##			}
+	##		}
+	##		if = {
+	##			limit = {
+	##				not = { has_tech = bismarck_hull_heavy }
+	##			}
+	##			set_technology = {
+	##				bismarck_hull_heavy = 1
+	##			}
+	##		}
+	##	}
+	##}
 
 	focus = {
 		id = GER_u_boat_effort
