@@ -338,7 +338,17 @@ add_equipment_to_stockpile = {
          amount = 3660
          producer = GER
 } 
-
+create_equipment_variant = {
+	name = "Bf 109 E"
+	type = fighter_equipment_1
+	upgrades = {
+		plane_gun_upgrade = 2
+		plane_range_upgrade = 1  
+		plane_engine_upgrade = 2
+		plane_reliability_upgrade = 4
+	}
+	icon = "GFX_GER_fighter1_medium"
+}
 
 add_equipment_to_stockpile = {
          type = fighter_equipment_1
@@ -964,134 +974,5 @@ if = {
 		obsolete = yes
 	}
 
-	}
-
-## 1939 Start ##
-1939.1.1 = {
-	if = {
-		limit = {
-			not = { has_dlc = "Man the Guns" }
-		}
-		# Submarines #
-		# Destroyer #
-		
-	}
-	if = {
-		limit = {
-			has_dlc = "Man the Guns"
-		}
-		create_equipment_variant = {
-			name = "Bismarck Class"
-			type = ship_hull_heavy_2
-			name_group = GER_BB_HISTORICAL
-			parent_version = 0
-			modules = {
-				fixed_ship_battery_slot = ship_heavy_battery_3
-				fixed_ship_anti_air_slot = ship_anti_air_1
-				fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = heavy_ship_engine_2
-				fixed_ship_secondaries_slot = ship_secondaries_2
-				fixed_ship_armor_slot = ship_armor_bb_2
-				front_1_custom_slot = ship_anti_air_1
-				mid_1_custom_slot = ship_airplane_launcher_2
-				mid_2_custom_slot = ship_secondaries_2
-				rear_1_custom_slot = ship_heavy_battery_3
-			}
-		}
-		create_equipment_variant = {
-			name = "Graf Zeppelin Class"
-			type = ship_hull_carrier_1
-			name_group = GER_CV_HISTORICAL
-			parent_version = 0
-			modules = {
-				fixed_ship_deck_slot_1 = ship_deck_space
-				fixed_ship_deck_slot_2 = ship_deck_space
-				fixed_ship_anti_air_slot = ship_anti_air_1
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = carrier_ship_engine_2
-				fixed_ship_secondaries_slot = ship_secondaries_1
-				front_1_custom_slot = ship_deck_space
-			}
-		}
-	}
-	if = {
-		limit = {
-			has_dlc = "No Step Back"
-		}
-	}
-	if = {
-		limit = { NOT = { has_dlc = "By Blood Alone" } }
-		create_equipment_variant = {
-			name = "He 112"
-			type = fighter_equipment_1
-			upgrades = {
-				plane_gun_upgrade = 1
-				plane_range_upgrade = 1  
-				plane_engine_upgrade = 0
-				plane_reliability_upgrade = 2
-			}
-		}
-		create_equipment_variant = {
-			name = "Bf 109 E"
-			type = fighter_equipment_1
-			upgrades = {
-				plane_gun_upgrade = 2
-				plane_range_upgrade = 1  
-				plane_engine_upgrade = 2
-				plane_reliability_upgrade = 4
-			}
-		}
-	}
-	if = {
-		limit = {
-			has_dlc = "By Blood Alone"
-		}
-		create_equipment_variant = {
-			name = "Bf 109 E"
-			type = small_plane_airframe_1
-			modules = {
-				fixed_main_weapon_slot = light_mg_2x
-				fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
-				engine_type_slot = engine_2_1x
-				special_type_slot_1 = empty
-			}
-			icon = "GFX_GER_fighter1_medium"
-		}
-		create_equipment_variant = {
-			name = "Bf 110 C"
-			type = small_plane_airframe_1
-			modules = {
-				fixed_main_weapon_slot = light_mg_4x
-				fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
-				engine_type_slot = engine_2_2x
-				special_type_slot_1 = empty
-			}
-			icon = "GFX_GER_heavy_fighter1_medium"
-		}
-		create_equipment_variant = {
-			name = "He 112"
-			type = small_plane_airframe_1
-			modules = {
-				fixed_main_weapon_slot = light_mg_2x
-				fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
-				engine_type_slot = engine_2_1x
-				special_type_slot_1 = empty
-			}
-			icon = "GFX_GER_light_plane_1_medium"
-		}
-	}
-	# Heavy Cruisers #
-	#create_equipment_variant = {
-	#	name = "CA1"
-	#	type = heavy_cruiser_1
-	#	parent_version = 0
-	#	upgrades = {
-	#		ship_reliability_upgrade = 1
-	#		ship_engine_upgrade = 1
-	#		ship_armor_upgrade = 1
-	#		ship_gun_upgrade = 2
-	#	}
-	#	obsolete = yes
-	#}
 }
+
