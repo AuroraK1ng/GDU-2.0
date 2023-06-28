@@ -2237,7 +2237,7 @@ activate_mission = GER_relocate_industry_from_friesland
 					}
 				}				
 				
-				date > 1944.6.1
+				
 			}
 		}
 
@@ -2432,43 +2432,6 @@ activate_mission = GER_relocate_industry_from_friesland
 			unlock_decision_tooltip = GER_fall_blau
 		}
 	}
-		focus = {
-		available = {
-			date > 1942.10.1
-		}
-		id = GER_TOTALEN_KRIEG
-		icon = GFX_focus_generic_spread_fascism
-		prerequisite = { focus = GER_fall_blau }	
-		
-		cancel = {
-			NOT = { country_exists = SOV }
-		}
-		x = 0
-		y = 2
-		relative_position_id = GER_ussr_war_goal
-		cost = 1
-
-		completion_reward = {
-			if = {
-				limit = {
-					has_war_support < 0.7
-				}
-				add_war_support = 0.3
-			}
-			else_if = {
-				limit = {
-					has_idea = tot_economic_mobilisation
-				}
-				add_political_power = 150
-			}
-			else = {
-				add_ideas = tot_economic_mobilisation
-			}
-		}
-	}
-
-
-
 	focus = { #should already be signed in 39
 		id = GER_mol_rib_pact
 		icon = GFX_SOV_molotov_ribbentrop
