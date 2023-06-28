@@ -150,7 +150,8 @@ NDefines.NCountry.BASE_FUEL_GAIN = 20.0							-- vanilla was 2 --- this is raise
 
 
 NDefines.NCountry.EVENT_PROCESS_OFFSET = 25 -- Performance enhancer. --TW/WTT
-NDefines.NCountry.VP_TO_SUPPLY_BASE = 1.5
+NDefines.NCountry.VP_TO_SUPPLY_BASE = 0.1
+NDefines.NSupply.VP_TO_SUPPLY_BONUS_CONVERSION = 0.01
 NDefines.NCountry.SUPPLY_PATH_MAX_DISTANCE = 10
 NDefines.NCountry.SUPPLY_FROM_DAMAGED_INFRA = 0.1                -- damaged infrastructure counts as this in supply calcs
 NDefines.NCountry.SUPPLY_BONUS_FROM_INPUT = 0.6					-- % of supply bonus from input area. Look at this as a possible balancing tool. 
