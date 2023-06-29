@@ -266,7 +266,7 @@ NDefines.NMilitary.CONSTANT_XP_RATIO_FOR_MULTIPLE_LEADERS_IN_SAME_COMBAT = 0.0 -
 
 NDefines.NMilitary.MULTIPLE_COMBATS_PENALTY = -0.25               -- defender penalty if attacked from multiple directions
 
-NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 6
+NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 7
 
 NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 1.5
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 1000

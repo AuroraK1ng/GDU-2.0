@@ -624,20 +624,7 @@ characters={
 				logistics_skill=4
 				legacy_id=1108
 				visible = {
-					OR = {
-						NOT = { has_global_flag = spanish_civil_war }
-						AND = {
-							tag = SPA
-							has_global_flag = spanish_civil_war
-							NOT = { has_global_flag = SPR_sin_paquito }
-						}
-						AND = {
-							tag = SPD
-							has_global_flag = spanish_civil_war
-							has_global_flag = SPR_sin_paquito
-						}
-					}
-				}
+					
 			}
 			allowed = {
 				NOT = { has_dlc = "La Resistance" }
@@ -662,26 +649,7 @@ characters={
 					original_tag = SPR
 				}
 				available = {
-					custom_trigger_tooltip = {
-						tooltip = spr_franco_unavailable_tooltip
-						OR = {
-							has_government = fascism
-							AND = {
-								NOT = {
-									has_government = communism
-								}
-								NOT = {
-									any_country_with_original_tag = {
-										original_tag_to_check = SPR
-										NOT = {
-											tag = root
-										}
-										has_government = fascism
-									}
-								}
-							}
-						}
-					}
+					
 				}
 				traits = {
 					army_chief_offensive_3
@@ -697,8 +665,8 @@ characters={
 				expire="1965.1.1.1"
 				id=-1
 			}
+		}
 	}
-
 	SPR_mohamed_meziane={
 		name=SPR_mohamed_meziane
 		portraits={
