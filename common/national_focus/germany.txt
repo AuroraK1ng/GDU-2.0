@@ -1659,21 +1659,37 @@ activate_mission = GER_relocate_industry_from_friesland
 			factor = 1
 		}
 
-		available_if_capitulated = yes
+		available_if_capitulated = no
+		available = {
+			date > 1945.1.1
+		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = improved_rocket_engines
-				bonus = 2.50
-				uses = 1
-				technology = improved_rocket_engines
+			if = {
+				limit = {
+					not = { has_tech = atomic_research }
+				}
+				set_technology = {
+					atomic_research = 1
+				}
 			}
-			add_tech_bonus = {
-				name = advanced_rocket_engines
-				uses = 1
-				ahead_reduction = 1
-				technology = advanced_rocket_engines
+			if = {
+				limit = {
+					not = { has_tech = nuclear_reactor }
+				}
+				set_technology = {
+					nuclear_reactor = 1
+				}
 			}
+			if = {
+				limit = {
+					not = { has_tech = nukes }
+				}
+				set_technology = {
+					nukes = 1
+				}
+			}
+			
 			hidden_effect = {
 				sound_effect = wunderwaffe			
 			}
@@ -3831,157 +3847,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		
 		
 
-	focus = {
-		id = GER_flavour_two
-		icon = GFX_goal_generic_CAS
-		prerequisite = { focus = GER_wunderwaffe }
-		mutually_exclusive = { focus = GER_flavour_three }
-		x = -1
-		y = 1
-		relative_position_id = GER_wunderwaffe
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-
-		}
-
-		available = {
-			date > 1944.1.1
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_ideas = dense_combat_stimulants
-			
-		}
-	}
-
-focus = {
-		id = GER_flavour_three
-		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		prerequisite = { focus = GER_wunderwaffe }
-		mutually_exclusive = { focus = GER_flavour_two }
-		x = 1
-		y = 1
-		relative_position_id = GER_wunderwaffe
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-
-		}
-
-		available = {
-			date > 1944.1.1
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-        add_ideas = light_combat_stimulants
-		}
-	}
-
-	focus = {
-		id = GER_flavour_six
-		icon = GFX_goal_generic_build_airforce
-		prerequisite = { focus = GER_flavour_two focus = GER_flavour_three }
-		mutually_exclusive = { focus = GER_flavour_seven }
-		x = -1
-		y = 2
-		relative_position_id = GER_wunderwaffe
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		add_ideas = indoctrination_camps
-
-		}
-	}
-	focus = {
-		id = GER_flavour_seven
-		icon = GFX_GER_arbeitsinsatz
-		prerequisite = { focus = GER_flavour_two focus = GER_flavour_three }
-		mutually_exclusive = { focus = GER_flavour_six }
-		x = 1
-		y = 2
-		relative_position_id = GER_wunderwaffe
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		add_ideas = labour_camps
-
-		SOV = { add_ideas = soviet_reaction }
-
-		}
-	}		
+	
 		
 		
 		
