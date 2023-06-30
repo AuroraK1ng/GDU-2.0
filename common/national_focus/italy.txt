@@ -1830,7 +1830,7 @@ focus_tree = {
 		}
 		x = 12
 		y = 3
-		cost = 10
+		cost = 1
 		ai_will_do = {
 			factor = 10
 
@@ -1857,31 +1857,7 @@ focus_tree = {
 			hidden_effect = {
 				news_event = { hours = 6 id = news.184 }
 			}
-			2 = {
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			64 = {
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
+			
 		}
 	}
 	focus = {
