@@ -217,7 +217,7 @@ NDefines.NBuildings.SUPPLY_PORT_LEVEL_THROUGHPUT = 4   -- supply throughput per 
 
 NDefines.NBuildings.NAVALBASE_REPAIR_MULT = 0.2		-- vanilla is 0.05. Each level of navalbase building repairs X strength and can repair as many ships as its level
 
-NDefines.NTechnology.BASE_RESEARCH_POINTS_SAVED = 20.0  -- increased from 45 to 55 8/3/2019
+NDefines.NTechnology.BASE_RESEARCH_POINTS_SAVED = 45.0  -- increased from 45 to 55 8/3/2019
 NDefines.NTechnology.BASE_TECH_COST = 87
 NDefines.NTechnology.LICENSE_PRODUCTION_TECH_BONUS = 0.00
 NDefines.NTechnology.MAX_TECH_SHARING_BONUS = 0.40  			-- Max technology sharing bonus that can be applied instantly
@@ -254,7 +254,7 @@ NDefines.NMilitary.HOURLY_ORG_MOVEMENT_IMPACT = -0.5
 NDefines.NMilitary.LEADER_SKILL_FACTOR = 0.25
 
 NDefines.NMilitary.ARMY_LEADER_XP_GAIN_PER_UNIT_IN_COMBAT = 0.00
-NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.10
+NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.07
 NDefines.NMilitary.MAX_RELATIVE_COMBAT_DAMAGE_TO_MODIFY_XP = 0.0			-- you gain more XP if you are doing more damage relative to enemy, this is the max relative amount to gain following RATe
 NDefines.NMilitary.XP_DECAY_RATE_PER_HOUR_IN_COMBAT = 0.00				-- you get reduced XP as combat drags
 NDefines.NMilitary.MIN_XP_RATE_TO_DECAY = 0.0
@@ -265,7 +265,7 @@ NDefines.NMilitary.XP_GAIN_PER_OVERRUN_UNIT = 0.00
 NDefines.NMilitary.XP_GAIN_FOR_SHATTERING = 0.00
 NDefines.NMilitary.CONSTANT_XP_RATIO_FOR_MULTIPLE_LEADERS_IN_SAME_COMBAT = 0.0 -- if there are multiple leaders in same combat, each one gets thisratio + (1-thisratio)/num leaders. amount of xp each general gets scales 1 0.75 0.66 etc for 1 2 3 generals
 
-NDefines.NMilitary.MULTIPLE_COMBATS_PENALTY = -0.25               -- defender penalty if attacked from multiple directions
+NDefines.NMilitary.MULTIPLE_COMBATS_PENALTY = -0.35                -- defender penalty if attacked from multiple directions
 
 NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 7
 
@@ -326,7 +326,7 @@ NDefines.NMilitary.NAVAL_INVASION_PLANNING_BONUS_MALUS = -0.5
 NDefines.NMilitary.PLANNING_DECAY = 0.015
 NDefines.NMilitary.STRATEGIC_SPEED_BASE = 25.0
 NDefines.NMilitary.EFFICIENCY_REGION_CHANGE_DAILY_GAIN_STRATEGIC_BOMBER = 0.018
-NDefines.NMilitary.BATALION_CHANGED_EXPERIENCE_DROP =0 --Division experience drop if unit has different battalion when switching templates(vanilla 0.5 but can be circumvented with template editing)
+NDefines.NMilitary.BATALION_CHANGED_EXPERIENCE_DROP =0.2 --Division experience drop if unit has different battalion when switching templates(vanilla 0.5 but can be circumvented with template editing)
 NDefines.NMilitary.ARMOR_VS_AVERAGE = 0.2			                -- how to weight in highest armor & pen vs the division average
 NDefines.NMilitary.PEN_VS_AVERAGE = 1.0
 NDefines.NMilitary.REINFORCE_CHANCE = 0.05
@@ -514,7 +514,7 @@ NDefines.NNavy.SUPREMACY_PER_SHIP_BASE = 0.0
 
 NDefines.NNavy.NAVAL_SUPREMACY_CAN_INVADE = 0.60
 NDefines.NNavy.NAVAL_TRANSFER_BASE_SPEED = 12
-NDefines.NNavy.NAVAL_INVASION_PREPARE_HOURS = 1 -- часы для подготовки вторжения 
+NDefines.NNavy.NAVAL_INVASION_PREPARE_HOURS = 72 
 	
 NDefines.NNavy.NAVAL_MINES_IN_REGION_MAX = 1.0
 NDefines.NNavy.NAVAL_MINES_PLANTING_SPEED_MULT = 0.00001
