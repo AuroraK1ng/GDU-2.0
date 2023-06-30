@@ -977,30 +977,6 @@ activate_mission = GER_relocate_industry_from_friesland
 	
 	
 	focus = {
-		id = Victory_in_France 
-		text = "Victory in France"
-		icon = GFX_GER_red_baron
-		prerequisite = { focus = GER_german_war_economy }
-		x = 1
-		y = 5
-		cost = 1
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			date > 1940.1.1
-			date < 1941.1.1
-			GER = { has_war_with = ENG }
-		}
-
-		completion_reward = {
-			add_timed_idea = {
-				idea = EFR_Reparations days = 365
-			}
-		}
-	}
-	
-	focus = {
 		id = GER_air_innovation
 		icon = GFX_goal_luftwaffe
 		prerequisite = { focus = GER_rhineland }
