@@ -1560,20 +1560,7 @@ characters={
 				original_tag = GER
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-				if = {
-					limit = {
-						has_dlc = "Waking the Tiger"
-					}
-					has_completed_focus = GER_reestablish_free_elections 
-				}
+				always = no
 			}
 			traits = {
 				democratic_reformer 
@@ -1764,7 +1751,7 @@ characters={
 				has_dlc = "Waking the Tiger"
 			}
 			available = {
-				has_completed_focus = GER_oppose_hitler 
+				always = no
 			}
 			traits = {
 				anti_fascist_agent 
@@ -1790,7 +1777,7 @@ characters={
 				has_dlc = "Waking the Tiger"
 			}
 			available = {
-				has_completed_focus = GER_revive_the_kaiserreich 
+				always = no
 			}
 			research_bonus = {
 				cat_trade_interdiction = 0.2
@@ -1845,7 +1832,7 @@ characters={
 				has_dlc = "Waking the Tiger"
 			}
 			available = {
-				has_completed_focus = GER_reestablish_free_elections 
+				always = no
 			}
 			traits = {
 				connected_citizen 
@@ -1871,7 +1858,7 @@ characters={
 				has_dlc = "Waking the Tiger"
 			}
 			available = {
-				has_completed_focus = GER_reestablish_free_elections 
+				always = no 
 			}
 			traits = {
 				liberal_journalist 
