@@ -17,10 +17,7 @@ FRA_instigate_workers_revolution_britain = { ### 1/25
 		}
 	}
 	visible = {
-		has_completed_focus = FRA_carry_the_revolution_north
-		FROM = {
-			tag = ENG
-		}
+		always = no
 	}
 	operatives = 1
 
@@ -166,19 +163,10 @@ FRA_instigate_workers_revolution_italy = { ### 1/25
 		original_tag = FRA
 	}
 	available = { 
-		has_completed_focus = FRA_carry_the_revolution_south
-		ITA = {
-			NOT = {
-				has_war_with = ROOT
-			}
-		}
+		always = no
 	}
 	visible = {
-		has_completed_focus = FRA_carry_the_revolution_south
-		FROM = {
-			tag = ITA
-			NOT = { has_government = communism }
-		}
+		always = no
 	}
 	operatives = 1
 
@@ -292,20 +280,10 @@ FRA_instigate_workers_revolution_spain = { ### 1/25
 		original_tag = FRA
 	}
 	available = { 
-		has_completed_focus = FRA_carry_the_revolution_west
-		SPR = {
-			NOT = {
-				has_war_with = ROOT
-				has_government = communism
-			}
-		}
+		always = no
 	}
 	visible = {
-		has_completed_focus = FRA_carry_the_revolution_west
-		FROM = {
-			tag = SPR
-			NOT = { has_government = communism }
-		}
+		always = no
 	}
 	operatives = 1
 
@@ -417,19 +395,10 @@ FRA_instigate_workers_revolution_germany = { ### 1/25
 		original_tag = FRA
 	}
 	available = { 
-		has_completed_focus = FRA_carry_the_revolution_east
-		GER = {
-			NOT = {
-				has_war_with = ROOT
-			}
-		}
+		always = no
 	}
 	visible = {
-		has_completed_focus = FRA_carry_the_revolution_east
-		FROM = {
-			tag = GER
-			NOT = { has_government = communism }
-		}
+		always = no
 	}
 	operatives = 1
 

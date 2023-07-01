@@ -1679,16 +1679,7 @@ ideas = {
 		}
 
 		available = {
-			has_completed_focus = GRE_fiscal_responsibility
-			NOT = {
-				OR = { 
-					has_government = communism
-					has_country_leader = {
-						name = "Emmanouil Tsouderos"
-						ruling_only = yes
-					}
-				}
-			}
+			always = no
 		}
 		
 		traits = { financial_expert }
@@ -2171,7 +2162,7 @@ theorist = {
 			}
 
 			available = {
-				has_completed_focus = GRE_crack_down_on_foreign_monopolies
+				always = no
 			}
 			
 			research_bonus = {
@@ -2412,7 +2403,7 @@ on_add = { hidden_effect = { make_naval_designers_free = yes } }
 			}
 
 			available = { 
-				has_completed_focus = GRE_lignite_liquefaction
+				always = no
 			}			
 			
 			research_bonus = {
@@ -2436,8 +2427,7 @@ on_add = { hidden_effect = { make_naval_designers_free = yes } }
 			}			
 
 			available = { 
-				has_completed_focus = GRE_cooperate_with_foreign_monopolies
-				NOT = { has_war_with = ENG }
+				always = no
 			}
 
 			cost = 120
@@ -2460,8 +2450,7 @@ on_add = { hidden_effect = { make_naval_designers_free = yes } }
 			}
 
 			available = { 
-				has_completed_focus = GRE_cooperate_with_foreign_monopolies
-				NOT = { has_war_with = GER }
+				always = no
 			}
 
 			cost = 120
@@ -2487,7 +2476,7 @@ on_add = { hidden_effect = { make_naval_designers_free = yes } }
 			}
 
 			available = { 
-				has_completed_focus = GRE_crack_down_on_foreign_monopolies
+				always = no
 			}	
 			
 			research_bonus = {
@@ -2511,7 +2500,7 @@ on_add = { hidden_effect = { make_naval_designers_free = yes } }
 			}
 
 			available = { 
-				has_completed_focus = GRE_crack_down_on_foreign_monopolies
+				always = no
 			}
 			
 			research_bonus = {
@@ -2535,7 +2524,7 @@ on_add = { hidden_effect = { make_naval_designers_free = yes } }
 			}
 
 			available = { 
-				has_completed_focus = GRE_crack_down_on_foreign_monopolies
+				always = no
 			}		
 			
 			research_bonus = {
@@ -2564,7 +2553,7 @@ on_add = { hidden_effect = { make_naval_designers_free = yes } }
 			}
 
 			available = {
-				has_completed_focus = GRE_crack_down_on_foreign_monopolies
+				always = no
 			}
 			
 			research_bonus = {
@@ -2588,7 +2577,7 @@ on_add = { hidden_effect = { make_naval_designers_free = yes } }
 			}
 
 			available = {
-				has_completed_focus = GRE_crack_down_on_foreign_monopolies
+				always = no
 			}
 			
 			research_bonus = {
