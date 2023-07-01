@@ -62,60 +62,7 @@ has_ROOT_at_least_1_div_in_current_state_scope = {
 	}
 }
 
-check_has_focus_tree_to_switch_to_fascism = {
-	NOT = { tag = JAP }
-	NOT = { tag = GER }
-	NOT = { tag = MAN }
-	NOT = { tag = ITA }
-	OR = {
-		NOT = {
-			AND = {
-				tag = SAF
-				has_dlc = "Together for Victory"
-			}
-		}
-		AND = {
-			tag = SAF
-			has_dlc = "Together for Victory"
-			has_completed_focus = SAF_south_africa_first
-		}
-	}
-	NOT = {
-		AND = {
-			tag = RAJ
-			has_dlc = "Together for Victory"
-		}
-	}
-	NOT = {
-		AND = {
-			tag = USA
-			has_dlc = "Man the Guns"
-		}
-	}
-	NOT = {
-		AND = {
-			tag = ENG
-			has_dlc = "Man the Guns"
-		}
-	}
-	NOT = {
-		AND = {
-			tag = FRA
-			has_dlc = "La Resistance"
-		}
-	}
-	NOT = {
-		AND = {
-			original_tag = SPR
-			OR = {
-				has_completed_focus = SPA_the_phalanx_ascendant
-				has_completed_focus = SPA_supremacy_of_the_communion
-				has_completed_focus = SPR_the_popular_front
-			}
-			has_dlc = "La Resistance"
-		}
-	}
-}
+
 
 check_has_focus_tree_to_switch_to_democratic = {
 	NOT = { tag = MAN }
