@@ -1296,21 +1296,15 @@ focus_tree = {
 					NOT = { has_idea = HUN_treaty_of_triannon_2 }
 				}
 				has_idea = HUN_treaty_of_triannon_3
-				AND = {
-					ROM = {
-						OR = {
-							exists = no
-							is_puppet = yes
-						}
-					}
-					FRA = {
-						OR = {
-							exists = no
-							is_puppet = yes
-							NOT = { has_completed_focus = FRA_little_entente }
-						}
+				
+				ROM = {
+					OR = {
+						exists = no
+						is_puppet = yes
 					}
 				}
+					
+				
 			}
 		}
 		cancel_if_invalid = no
