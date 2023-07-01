@@ -98,20 +98,7 @@ characters={
 					original_tag  = HOL
 				}
 				available  = {
-					if  = {
-						limit  = {
-							has_dlc = "Man the Guns"
-						}
-						has_completed_focus  = HOL_unity_through_democracy 
-					}
-					if  = {
-						limit  = {
-							has_dlc = "Man the Guns"
-						}
-						not  = {
-							has_autonomy_state  = autonomy_supervised_state
-						}
-					}
+					always = no
 				}
 				traits  = {
 					democratic_reformer 
@@ -156,14 +143,7 @@ characters={
 					original_tag = HOL
 				}
 				available = {
-					if = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						not = {
-							has_completed_focus = HOL_appoint_new_supreme_commander
-						}
-					}
+					always = no
 				}
 				traits = {
 					army_chief_maneuver_2
@@ -485,12 +465,7 @@ characters={
 					original_tag = HOL
 				}
 				available = {
-					if = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						has_completed_focus = HOL_appoint_new_supreme_commander
-					}
+					always = no
 				}
 				traits = {
 					army_chief_defensive_2
@@ -561,20 +536,7 @@ characters={
 					original_tag  = HOL
 				}
 				available  = {
-					if  = {
-						limit  = {
-							has_dlc = "Man the Guns"
-						}
-						has_completed_focus  = HOL_legacy_of_the_de_zeven_provincien_mutiny 
-					}
-					if  = {
-						limit  = {
-							has_dlc = "Man the Guns"
-						}
-						not  = {
-							has_autonomy_state  = autonomy_supervised_state
-						}
-					}
+					always = no
 				}
 				traits  = {
 					communist_revolutionary 
@@ -670,8 +632,7 @@ characters={
 					has_dlc = "Man the Guns"
 				}
 				available  = {
-					has_government  = communism 
-					has_completed_focus  = HOL_decolonization 
+					always = no
 				}
 				traits  = {
 					colonial_communist 
@@ -737,7 +698,7 @@ characters={
 					has_dlc = "Man the Guns"
 				}
 				available  = {
-					has_completed_focus  = HOL_the_only_man_in_the_dutch_government 
+					always = no
 				}
 				traits  = {
 					adventurous_daredevil 
@@ -779,20 +740,7 @@ characters={
 					original_tag  = HOL
 				}
 				available  = {
-					if  = {
-						limit  = {
-							has_dlc = "Man the Guns"
-						}
-						has_completed_focus  = HOL_volk_en_vaderland 
-					}
-					if  = {
-						limit  = {
-							has_dlc = "Man the Guns"
-						}
-						not  = {
-							has_autonomy_state  = autonomy_supervised_state
-						}
-					}
+					always = no
 				}
 				traits  = {
 					fascist_demagogue 

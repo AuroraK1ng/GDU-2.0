@@ -273,7 +273,7 @@ characters={
 			idea_token = RAJ_homi_j_bhabha
 			ledger = army
 			available = {
-				has_completed_focus = RAJ_institute_of_fundamental_research
+				always = no
 			}
 			allowed = {
 				original_tag = RAJ
@@ -787,20 +787,7 @@ characters={
 				original_tag = RAJ
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = RAJ_all_india_forward_bloc 
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
+				always = no
 			}
 			traits = {
 				communist_revolutionary 
@@ -833,20 +820,7 @@ characters={
 				original_tag = RAJ
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = RAJ_all_india_forward_bloc 
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
+				always = no
 			}
 			traits = {
 				fascist_demagogue 

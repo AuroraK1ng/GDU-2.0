@@ -1153,19 +1153,7 @@ characters={
 				original_tag  = FRA
 			}
 			available  = {
-				or  = {
-					##has_completed_focus  = FRA_right_wing_rhetoric 
-					has_completed_focus  = FRA_utilize_the_leagues 
-					has_focus_tree  = vichy_french_focus
-				}
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					not  = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}
+				always = no
 			}
 			traits  = {
 				fascist_demagogue 

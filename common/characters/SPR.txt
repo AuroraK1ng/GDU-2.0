@@ -211,11 +211,7 @@ characters={
 				}
 			}
 			available = {
-				has_completed_focus = SPA_primo_de_rivera_prisoner_exchange
-				custom_trigger_tooltip = {
-					tooltip = SPA_not_republican_spain_tt
-					NOT = { tag = SPD }
-				}
+				always = no
 			}
 			traits = {
 				falangist_figurehead 
@@ -544,14 +540,7 @@ characters={
 				}
 			}
 			available = {
-				has_completed_focus = SPR_demand_ministerial_positions
-				NOT = {
-					has_completed_focus = SPR_crush_the_revolution
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
+				always = no
 			}
 			traits = { army_logistics_1 }
 			cost =  50

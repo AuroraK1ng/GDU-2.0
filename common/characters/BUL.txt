@@ -1619,25 +1619,7 @@ characters = {
 					leader_of_the_agrarian_union 
 				}
 				ai_will_do = {
-					base = 3.000
-					modifier = {
-						factor = 10
-						OR = {
-							BUL_is_monarchist_ferdinand_ai = yes
-							BUL_is_historical_ai = yes
-						}
-						NOT = { has_completed_focus = BUL_illusions_of_a_non_partisan_system }
-						democratic < 0.2
-					}
-					modifier = {
-						factor = 0.01
-						OR = {
-							BUL_is_monarchist_ferdinand_ai = yes
-							BUL_is_historical_ai = yes
-						}
-						has_completed_focus = BUL_illusions_of_a_non_partisan_system
-						democratic > 0.8
-					}
+					always = no
 				}
 			}
 		}
@@ -1768,30 +1750,7 @@ characters = {
 			traits = {
 				womens_rights_activist 
 			}
-			ai_will_do = {
-				base = 1.000
-				modifier = {
-					factor = 2.000
-					OR = {
-						BUL_is_democratic_socialist_ai = yes 
-						BUL_is_democratic_liberal_ai = yes 
-					}
-				}
-				modifier = {
-					factor = 2
-					OR = {
-						BUL_is_monarchist_ferdinand_ai = yes
-						BUL_is_historical_ai = yes
-					}
-					NOT = { has_completed_focus = BUL_illusions_of_a_non_partisan_system }
-					democratic < 0.2
-				}
-				modifier = {
-					factor = 0.000
-					BUL_is_monarchist_ferdinand_ai = yes 
-					has_completed_focus = BUL_illusions_of_a_non_partisan_system 
-				}
-			}
+			
 		}
 	}
 
@@ -1848,7 +1807,7 @@ characters = {
 				original_tag = BUL
 			}
 			available = {
-				has_completed_focus = BUL_appoint_communist_ministers 
+				always = no
 			}
 			traits = {
 				captain_of_industry 
@@ -1882,14 +1841,7 @@ characters = {
 			traits = {
 				marxist_philosopher 
 			}
-			ai_will_do = {
-				base = 3.000
-				modifier = {
-					factor = 0
-					BUL_is_historical_ai = yes
-					#NOT = { has_completed_focus = BUL_illusions_of_a_non_partisan_system } #Better not to hire him Boris, he'll definitely make it easier for the Fatherland Front later on, even though you won't be there to see it
-				}
-			}
+			
 		}
 		name = BUL_todor_pavlov
 		portraits = {
@@ -1913,21 +1865,7 @@ characters = {
 			traits = {
 				fascist_demagogue 
 			}
-			ai_will_do = {
-				base = 1.000
-				modifier = {
-					factor = 3.000
-					BUL_is_fascist_axis_ai = yes 
-				}
-				modifier = {
-					factor = 0
-					OR = {
-						BUL_is_monarchist_ferdinand_ai = yes
-						BUL_is_historical_ai = yes
-					}
-					NOT = { has_completed_focus = BUL_illusions_of_a_non_partisan_system }
-				}
-			}
+			
 		}
 		name = BUL_ivan_dochev
 		portraits = {
@@ -1954,17 +1892,7 @@ characters = {
 			traits = {
 				statism_adept 
 			}
-			ai_will_do = {
-				base = 3.000
-				modifier = {
-					factor = 0
-					OR = {
-						BUL_is_monarchist_ferdinand_ai = yes
-						BUL_is_historical_ai = yes
-					}
-					NOT = { has_completed_focus = BUL_illusions_of_a_non_partisan_system }
-				}
-			}
+			
 		}
 		name = BUL_aleksandar_tsankov
 		portraits = {
