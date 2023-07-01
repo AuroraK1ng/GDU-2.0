@@ -110,6 +110,298 @@ USA_foreign_politics = {
 }
 
 foreign_politics = {
+	GDU_rebuild_bb_ita = {
+		allowed = {
+			original_tag = ITA
+
+		}
+		available = {	
+			THIS = {
+				has_war = yes
+			}
+			OR = {
+				AND = {
+
+					has_navy_size = {
+						size < 15
+						archetype = ship_hull_heavy
+					}
+					
+					ENG = {
+						has_navy_size = {
+							size > 25
+							archetype = ship_hull_heavy
+						}
+					}
+				}
+				AND = {
+
+					has_navy_size = {
+						size < 10
+						archetype = ship_hull_heavy
+					}
+					
+					ENG = {
+						has_navy_size = {
+							size > 17
+
+							archetype = ship_hull_heavy
+						}
+					}
+				}
+				AND = {
+
+					has_navy_size = {
+						size < 6
+						archetype = ship_hull_heavy
+					}
+					
+					ENG = {
+						has_navy_size = {
+							size > 11
+							archetype = ship_hull_heavy
+						}
+					}
+				}
+
+			}
+
+		}
+		cost = 50
+		fire_only_once = yes
+		visible = {
+				OR = {
+					original_tag = ITA
+				}
+			}
+		days_remove = 210
+		complete_effect = {
+			add_ideas = GDU_rebuild_bb
+		}
+		remove_effect = { 
+			remove_ideas = GDU_rebuild_bb
+		}
+	}
+
+	GDU_rebuild_bb_eng = {
+		allowed = {
+			original_tag = ENG
+
+		}
+		available = {	
+			THIS = {
+				has_war = yes
+			}
+			OR = {
+				AND = {
+
+					has_navy_size = {
+						size < 15
+						archetype = ship_hull_heavy
+					}
+					
+					ITA = {
+						has_navy_size = {
+							size > 25
+							archetype = ship_hull_heavy
+						}
+					}
+				}
+				AND = {
+
+					has_navy_size = {
+						size < 10
+						archetype = ship_hull_heavy
+					}
+					
+					ITA = {
+						has_navy_size = {
+							size > 17
+
+							archetype = ship_hull_heavy
+						}
+					}
+				}
+				AND = {
+
+					has_navy_size = {
+						size < 6
+						archetype = ship_hull_heavy
+					}
+					
+					ITA = {
+						has_navy_size = {
+							size > 11
+							archetype = ship_hull_heavy
+						}
+					}
+				}
+
+			}
+
+		}
+		cost = 50
+		fire_only_once = yes
+		visible = {
+				OR = {
+					original_tag = ENG
+				}
+			}
+		days_remove = 210
+		complete_effect = {
+			add_ideas = GDU_rebuild_bb
+		}
+		remove_effect = { 
+			remove_ideas = GDU_rebuild_bb
+		}
+	}
+
+	GDU_rebuild_bb_usa = {
+		allowed = {
+			original_tag = USA
+
+		}
+		available = {	
+			THIS = {
+				has_war = yes
+			}
+			OR = {
+				AND = {
+
+					has_navy_size = {
+						size < 15
+						archetype = ship_hull_heavy
+					}
+					
+					JAP = {
+						has_navy_size = {
+							size > 25
+							archetype = ship_hull_heavy
+						}
+					}
+				}
+				AND = {
+
+					has_navy_size = {
+						size < 10
+						archetype = ship_hull_heavy
+					}
+					
+					JAP = {
+						has_navy_size = {
+							size > 17
+
+							archetype = ship_hull_heavy
+						}
+					}
+				}
+				AND = {
+
+					has_navy_size = {
+						size < 6
+						archetype = ship_hull_heavy
+					}
+					
+					JAP = {
+						has_navy_size = {
+							size > 11
+							archetype = ship_hull_heavy
+						}
+					}
+				}
+
+			}
+
+		}
+		cost = 50
+		fire_only_once = yes
+		visible = {
+				OR = {
+					original_tag = USA
+				}
+			}
+		days_remove = 180
+		complete_effect = {
+			add_ideas = GDU_rebuild_bb
+		}
+		remove_effect = { 
+			remove_ideas = GDU_rebuild_bb
+		}
+	}
+
+	GDU_rebuild_bb_jap = {
+		allowed = {
+			original_tag = JAP
+
+		}
+		available = {	
+			THIS = {
+				has_war = yes
+			}
+			OR = {
+				AND = {
+
+					has_navy_size = {
+						size < 15
+						archetype = ship_hull_heavy
+					}
+					
+					USA = {
+						has_navy_size = {
+							size > 25
+							archetype = ship_hull_heavy
+						}
+					}
+				}
+				AND = {
+
+					has_navy_size = {
+						size < 10
+						archetype = ship_hull_heavy
+					}
+					
+					USA = {
+						has_navy_size = {
+							size > 17
+
+							archetype = ship_hull_heavy
+						}
+					}
+				}
+				AND = {
+
+					has_navy_size = {
+						size < 6
+						archetype = ship_hull_heavy
+					}
+					
+					USA = {
+						has_navy_size = {
+							size > 11
+							archetype = ship_hull_heavy
+						}
+					}
+				}
+
+			}
+
+		}
+		cost = 50
+		fire_only_once = yes
+		visible = {
+				OR = {
+					original_tag = JAP
+				}
+			}
+		days_remove = 270
+		complete_effect = {
+			add_ideas = GDU_rebuild_bb
+		}
+		remove_effect = { 
+			remove_ideas = GDU_rebuild_bb
+		}
+	}
+
 	GDU_JAP_pearl_harbor = {
 
 		icon = generic_operation
