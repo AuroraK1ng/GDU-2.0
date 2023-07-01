@@ -99,27 +99,7 @@ characters={
 			}
 		}		
 	}
-	SPA_jose_antonio_giron={ 
-		name=SPA_jose_antonio_giron
-		portraits={
-			army={
-				small="GFX_idea_SPA_jose_antonio_giron"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = SPA_jose_antonio_giron
-			allowed = {
-				original_tag = SPR
-			}
-			available = { 
-				
-			}
-			traits = {
-				captain_of_industry
-			}
-		}		
-	}
+
 	SPA_manuel_hedilla={ 
 		name=SPA_manuel_hedilla
 		portraits={
@@ -893,37 +873,6 @@ characters={
 				cost = 100
 			}
 		}
-		SPA_rafael_garcia_valino={ # Falangist
-			allowed = {
-				has_dlc = "La Resistance"
-			}
-			name=SPA_rafael_garcia_valino
-			portraits={
-				army={
-					large="GFX_portrait_SPA_rafael_garcia_valino"
-					small=GFX_portrait_SPA_rafael_garcia_valino_small
-				}
-			}
-			advisor={
-				slot = army_chief
-				idea_token = SPA_rafael_garcia_valino
-				ledger = army
-				allowed = {
-					has_dlc = "La Resistance"
-					original_tag = SPR
-				}
-				visible = {
-					
-				}
-				available = {
-					
-				}
-				traits = {
-					army_chief_organizational_2
-				}
-				cost = 100
-			}
-		}
 		SPA_enrique_canovas_lacruz={ # Falangist
 			allowed = {
 				has_dlc = "La Resistance"
@@ -1478,88 +1427,9 @@ characters={
 		}
 	}
 
-	SPA_heli_rolando_de_tella = { # Francoist/Carlist
-		name=SPA_heli_rolando_de_tella
-		portraits={
-			army={
-				small="GFX_idea_SPA_heli_rolando_de_tella"
-			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = SPA_heli_rolando_de_tella
-			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
+	
 
-			visible = {
-				NOT = {
-					tag = SPD
-					tag = SPC
-				}
-			}
-
-			available = {
-				if = {
-					limit = {
-						NOT = { has_completed_focus = SPA_supremacy_of_the_communion }
-					}
-					NOT = {
-						has_completed_focus = SPA_eliminate_the_carlists
-					}
-				}
-				if = {
-					limit = {
-						has_completed_focus = SPA_unify_the_nationalist_front
-					}
-					NOT = {
-						has_global_flag = SPR_carlist_uprising_flag
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPA_not_republican_spain_tt
-					NOT = { tag = SPD }
-				}
-			}
-			traits = {
-				army_chief_defensive_2
-			}
-			cost = 100
-		}
-	}
-
-	SPA_miguel_ponte = { # Francoist
-		name=SPA_miguel_ponte
-		portraits={
-			army={
-				small="GFX_idea_SPA_miguel_ponte"
-			}
-		}
-		advisor={	
-			slot = army_chief
-			idea_token = SPA_miguel_ponte
-			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPD
-					tag = SPC
-				}
-			}
-			available = {
-				
-			}
-			traits = {
-				army_chief_drill_2
-			}
-			cost = 100
-		}
-	}
+	
 
 	SPA_joaquin_garcia_morato = { # Francoist
 			allowed = {
@@ -1666,71 +1536,8 @@ characters={
 		}
 	}
 
-	SPA_wilhelm_ritter_von_thoma = { # Falangist/Francoist
-		name=SPA_wilhelm_ritter_von_thoma
-		portraits={
-			army={
-				small="GFX_idea_SPA_wilhelm_ritter_von_thoma"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = SPA_wilhelm_ritter_von_thoma
-			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPD
-					tag = SPC
-				}
-			}
-			available = {
-				has_completed_focus = SPA_the_condor_legion
-				custom_trigger_tooltip = {
-					tooltip = SPA_not_republican_spain_tt
-					NOT = { tag = SPD }
-				}
-			}
-			traits = {
-				army_armored_2
-			}
-			cost = 100
-		}
-	}
 
-	SPA_enrique_canovas_lacruz = { # Francoist
-		name=SPA_enrique_canovas_lacruz
-		portraits={
-			army={
-				small="GFX_idea_SPA_enrique_canovas_lacruz"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = SPA_enrique_canovas_lacruz
-			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPD
-					tag = SPC
-				}
-			}
-			available = {
-				
-			}
-			traits = {
-				army_logistics_2
-			}
-			cost = 100
-		}
-	}
+	
 
 	SPR_carlos_masquelet_lacaci={
 		name=SPR_carlos_masquelet_lacaci
@@ -4102,151 +3909,9 @@ characters={
 		}
 	}
 		
-	SPA_manuel_hedilla={
-		name=SPA_manuel_hedilla
-		portraits={
-			army={
-				small="GFX_idea_SPA_manuel_hedilla"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = SPA_manuel_hedilla
-			name = SPA_manuel_hedilla 
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
 
-			visible = {
-				NOT = {
-					tag = SPD
-					tag = SPC
-				}
-			}
+	
 
-			available = {
-				
-			}
-			traits = {
-				falangist_syndicalist 
-			}
-		}
-	}
-
-	SPA_raimundo_fernandez_cuesta={
-		name=SPA_raimundo_fernandez_cuesta
-		portraits={
-			army={
-				small="GFX_idea_SPA_raimundo_fernandez_cuesta"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = SPA_raimundo_fernandez_cuesta
-			name = SPA_raimundo_fernandez_cuesta 
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPD
-					tag = SPC
-				}
-			}
-			available = {
-				
-			}
-			traits = {
-				loyal_falangist 
-			}
-		}
-	}
-
-	SPA_tomas_dominguez_arevalo={
-		name=SPA_tomas_dominguez_arevalo
-		portraits={
-			army={
-				small="GFX_idea_SPA_tomas_dominguez_arevalo"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = SPA_tomas_dominguez_arevalo
-			name = SPA_tomas_dominguez_arevalo 
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPD
-					tag = SPC
-				}
-			}
-			available = {
-				if = {
-					limit = {
-						NOT = { has_completed_focus = SPA_supremacy_of_the_communion }
-					}
-					NOT = {
-						has_completed_focus = SPA_eliminate_the_carlists
-					}
-				}
-				if = {
-					limit = {
-						has_completed_focus = SPA_unify_the_nationalist_front
-					}
-					NOT = {
-						has_global_flag = SPR_carlist_uprising_flag
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPA_not_republican_spain_tt
-					NOT = { tag = SPD }
-				}
-			}
-			traits = {
-				lifelong_carlist 
-			}
-		}
-	}
-
-	SPA_diego_hidalgo_y_duran={
-		name=SPA_diego_hidalgo_y_duran
-		portraits={
-			army={
-				small="GFX_idea_SPA_diego_hidalgo_y_duran"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = SPA_diego_hidalgo_y_duran
-			name = SPA_diego_hidalgo_y_duran 
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPD
-					tag = SPC
-				}
-			}
-			available = {
-				NOT = {
-					has_completed_focus = SPA_the_phalanx_ascendant
-					has_completed_focus = SPA_supremacy_of_the_communion
-					has_completed_focus = SPR_regional_defense_council_of_aragon
-					has_completed_focus = SPR_the_anti_fascist_workers_revolution
-				}
-			}
-			traits = {
-				war_industrialist 
-			}
-		}
-	}
 
 	SPA_ramon_serrano_suner={
 		name=SPA_ramon_serrano_suner
