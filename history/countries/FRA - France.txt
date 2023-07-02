@@ -245,19 +245,19 @@ if = {
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 		set_technology = {
-		early_submarine = 1
+		##early_submarine = 1
 		basic_submarine = 1
-		early_destroyer = 1
-		basic_destroyer = 1
-		early_light_cruiser = 1
-		basic_light_cruiser = 1
-		early_heavy_cruiser = 1
+		##early_destroyer = 1
+		##basic_destroyer = 1
+		##early_light_cruiser = 1
+		##basic_light_cruiser = 1
+		##early_heavy_cruiser = 1
 		basic_heavy_cruiser = 1
-		early_battleship = 1
-		early_battlecruiser = 1
-		basic_battlecruiser = 1
-		early_carrier = 1
-		transport = 1
+		##early_carrier = 1
+		##early_battlecruiser = 1
+		##basic_battlecruiser = 1
+		##early_carrier = 1
+		##transport = 1
 	}
 }
 if = {
@@ -498,8 +498,8 @@ set_politics = {
 	if = {
 		limit = { not = { has_dlc = "Man the Guns" } }
 		set_technology = {
-			basic_battleship = 1
-			basic_battlecruiser = 1
+			##basic_carrier = 1
+			##basic_battlecruiser = 1
 		}
 	}
 	if = {
