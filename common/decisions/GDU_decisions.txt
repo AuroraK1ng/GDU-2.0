@@ -750,8 +750,11 @@ USA_foreign_politics = {
 				date > 1941.1.1
 				ENG = { surrender_progress > 0.4 }
 				ENG = { has_capitulated = yes }
+				AND = {
 				CAN = { surrender_progress > 0.01 }
-				NOT = { 126 = { is_controlled_by = ENG } }			
+				NOT = { 278 = { is_controlled_by = ENG } }					
+				}
+				NOT = { 126 = { is_controlled_by = ENG } }		
 			}
 		}
 		cost = 0
@@ -2225,6 +2228,11 @@ foreign_politics = {
 						type = bunker
 						level = 5
 						province = 5448
+					}
+					set_building_level = {
+						type = bunker
+						level = 5
+						province = 4457
 					}
 				}
 				447 = {
