@@ -124,8 +124,58 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 	
 		add_stats = {
-			lg_attack = 2
+			lg_attack = 1
 			anti_air_attack = 0.5
+			build_cost_ic = 300
+		}
+		multiply_stats = {
+			naval_speed = -0.005
+		}		
+		build_cost_resources = {
+		}
+		add_average_stats = {
+			lg_armor_piercing = 2.0
+		}
+		
+		can_convert_from = {
+			module_category = ship_light_battery
+			convert_cost_ic = 230
+		}
+		critical_parts = { damaged_light_guns }
+	}
+	dp_light_battery_1 = {
+		category = ship_light_battery
+		gfx = ship_light_battery_5
+		sfx = sfx_ui_sd_module_turret
+	
+		add_stats = {
+			lg_attack = 1.5
+			anti_air_attack = 0.75
+			build_cost_ic = 300
+		}
+		multiply_stats = {
+			naval_speed = -0.005
+		}		
+		build_cost_resources = {
+		}
+		add_average_stats = {
+			lg_armor_piercing = 2.0
+		}
+		
+		can_convert_from = {
+			module_category = ship_light_battery
+			convert_cost_ic = 230
+		}
+		critical_parts = { damaged_light_guns }
+	}
+	dp_light_battery_2 = {
+		category = ship_light_battery
+		gfx = ship_light_battery_5
+		sfx = sfx_ui_sd_module_turret
+	
+		add_stats = {
+			lg_attack = 2
+			anti_air_attack = 1
 			build_cost_ic = 300
 		}
 		multiply_stats = {
@@ -617,7 +667,7 @@ equipment_modules = {
 		add_equipment_type = anti_air
 		
 		add_stats = {
-			anti_air_attack = 1.25
+			anti_air_attack = 1
 			build_cost_ic = 90
 		}
 		
@@ -640,7 +690,7 @@ equipment_modules = {
 		add_equipment_type = anti_air
 		
 		add_stats = {
-			anti_air_attack = 2.25
+			anti_air_attack = 2
 			build_cost_ic = 120
 		}
 		
@@ -666,7 +716,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = anti_air
 		add_stats = {
-			anti_air_attack = 3.5
+			anti_air_attack = 2.75
 			build_cost_ic = 150
 		}
 		
@@ -693,7 +743,7 @@ equipment_modules = {
 
 		add_equipment_type = anti_air
 		add_stats = {
-			anti_air_attack = 5
+			anti_air_attack = 3.5
 			build_cost_ic = 190
 		}
 		
@@ -846,8 +896,8 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_sonar
 		
 		multiply_stats = {
-			lg_attack = 0.05
-			hg_attack = 0.05
+			lg_attack = 0.1
+			hg_attack = 0.1
 			anti_air_attack = 0.05
 		}
 		add_stats = {
@@ -870,8 +920,8 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_sonar
 
 		multiply_stats = {
-			lg_attack = 0.1
-			hg_attack = 0.1
+			lg_attack = 0.15
+			hg_attack = 0.15
 			anti_air_attack = 0.1
 		}
 		add_stats = {
