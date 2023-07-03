@@ -294,6 +294,7 @@ focus_tree = {
 
 		available = {
 			OR = {
+				date > 1941.6.14
 				has_war_with = GER
 				ENG = { surrender_progress > 0.25 }
 				USA = { surrender_progress > 0.4 }
@@ -2103,6 +2104,7 @@ focus_tree = {
 
 		available = {
 			OR = {
+				date > 1941.6.14
 				has_war_with = GER
 				ENG = { surrender_progress > 0.15 }
 				USA = { surrender_progress > 0.15 }
@@ -2195,7 +2197,11 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 200
-
+			add_equipment_to_stockpile = {
+				type = motorized_rocket_equipment
+				amount = 1556
+				producer = SOV
+			}
 			add_tech_bonus = {
 				name = heavy_armor_tank_cult
 				bonus = 2.25
@@ -3142,6 +3148,7 @@ focus_tree = {
 		}
 		available = {
 			OR = {
+				date > 1941.6.14
 				has_war_with = GER
 				ENG = { surrender_progress > 0.15 }
 				USA = { surrender_progress > 0.15 }
