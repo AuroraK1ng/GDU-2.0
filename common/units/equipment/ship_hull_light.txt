@@ -47,6 +47,9 @@ equipments = {
 				required = no
 				allowed_module_categories = {
 					ship_torpedo
+					ship_mine_warfare
+					ship_mine_layer
+					ship_anti_air
 					ship_depth_charge
 				}
 			}
@@ -139,10 +142,12 @@ equipments = {
 				required = no
 				allowed_module_categories = {
 					ship_torpedo
-#					ship_mine_warfare
-#					ship_mine_layer
+					ship_mine_warfare
+					ship_mine_layer
 					ship_depth_charge
+					ship_anti_air
 					ship_light_battery
+					dp_light_battery
 				}
 			}
 			rear_1_custom_slot = mid_1_custom_slot
@@ -185,27 +190,33 @@ equipments = {
 				required = no
 				allowed_module_categories = {
 					ship_depth_charge
+					ship_anti_air
 					ship_light_battery
+					dp_light_battery
 				}
 			}
 			mid_1_custom_slot = {
 				required = no
 				allowed_module_categories = {
 					ship_torpedo
-#					ship_mine_warfare
-#					ship_mine_layer
+					ship_mine_warfare
+					ship_mine_layer
 					ship_depth_charge
+					ship_anti_air
 					ship_light_battery
+					dp_light_battery
 				}
 			}
 			rear_1_custom_slot = {
 				required = no
 				allowed_module_categories = {
 					ship_torpedo
-#					ship_mine_warfare
-#					ship_mine_layer
+					ship_mine_warfare
+					ship_mine_layer
 					ship_depth_charge
+					ship_anti_air
 					ship_light_battery
+					dp_light_battery
 				}
 			}
 		}
@@ -217,7 +228,7 @@ equipments = {
 
 		surface_detection = 20
 		surface_visibility = 17
-		naval_speed = 36.01		
+		naval_speed = 36		
 		reliability = 0.90
 		naval_range = 2000
 		max_strength = 50
@@ -420,17 +431,21 @@ equipments = {
 				required = no
 				allowed_module_categories = {
 					ship_depth_charge
+					ship_anti_air
 					ship_light_battery
+					dp_light_battery
 				}
 			}
 			mid_1_custom_slot = {
 				required = no
 				allowed_module_categories = {
 					ship_torpedo
-#					ship_mine_warfare
-#					ship_mine_layer
+					ship_mine_warfare
+					ship_mine_layer
 					ship_depth_charge
+					ship_anti_air
 					ship_light_battery
+					dp_light_battery
 				}
 			}
 			mid_2_custom_slot = mid_1_custom_slot
@@ -438,17 +453,19 @@ equipments = {
 				required = no
 				allowed_module_categories = {
 					ship_torpedo
-#					ship_mine_warfare
-#					ship_mine_layer
+					ship_mine_warfare
+					ship_mine_layer
 					ship_depth_charge
+					ship_anti_air
 					ship_light_battery
+					dp_light_battery
 				}
 			}
 		}
 
 
 		surface_detection = 20
-		naval_speed = 36.44		
+		naval_speed = 36		
 		reliability = 0.92
 		naval_range = 2500
 		max_strength = 60
