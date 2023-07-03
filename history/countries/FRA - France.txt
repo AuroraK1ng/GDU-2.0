@@ -246,7 +246,7 @@ if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 		set_technology = {
 		##early_submarine = 1
-		basic_submarine = 1
+		##basic_submarine = 1
 		##early_destroyer = 1
 		##basic_destroyer = 1
 		##early_light_cruiser = 1
@@ -498,7 +498,7 @@ set_politics = {
 	if = {
 		limit = { not = { has_dlc = "Man the Guns" } }
 		set_technology = {
-			##basic_carrier = 1
+			####basic_carrier = 1
 			##basic_battlecruiser = 1
 		}
 	}
