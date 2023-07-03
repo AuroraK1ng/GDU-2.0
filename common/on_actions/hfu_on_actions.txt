@@ -454,10 +454,10 @@ on_actions = {
 				set_variable = {pow_adjustment = 1}
 				set_variable={pow_base_cost=50}
 			}
-			every_country={
-				limit={	has_country_flag=fuel_system_enabled}
-				add_to_array={GLOBAL.fuel_system_manager=THIS.id}
-			}
+			##every_country={
+			##	limit={	has_country_flag=fuel_system_enabled}
+			##	add_to_array={GLOBAL.fuel_system_manager=THIS.id}
+			##}
 		}
 	}
 	on_daily_SWE={
