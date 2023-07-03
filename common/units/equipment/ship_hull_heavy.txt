@@ -28,11 +28,11 @@ equipments = {
 				allowed_module_categories = { ship_heavy_battery }
 			}
 			fixed_ship_anti_air_slot = {
-				required = yes
+				required = no
 				allowed_module_categories = { ship_anti_air }
 			}
 			fixed_ship_fire_control_system_slot = {
-				required = yes
+				required = no
 				allowed_module_categories = { ship_fire_control_system }
 			}
 			fixed_ship_radar_slot = {
@@ -495,7 +495,7 @@ equipments = {
 		}
 		naval_range = 6000
 		naval_speed = 32
-		max_strength = 600
+		max_strength = 1200
 		reliability = 0.9
 		fuel_consumption = 67
 		
@@ -902,7 +902,7 @@ equipments = {
 			}
 			fixed_ship_anti_air_slot = {
 				required = no
-				allowed_module_categories = { ship_super_heavy_battery }
+				allowed_module_categories = { ship_super_heavy_battery ship_anti_air }
 			}
 			fixed_ship_fire_control_system_slot = {
 				required = yes
@@ -974,7 +974,7 @@ equipments = {
 		}
 		naval_range = 4500
 		naval_speed = 30
-		max_strength = 1000
+		max_strength = 2400
 		fuel_consumption = 75
 		reliability = 0.85
 		build_cost_ic = 65500
