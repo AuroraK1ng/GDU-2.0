@@ -292,18 +292,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			custom_effect_tooltip = BUL_nationalization_dynamic_modifier_tt
-			add_ideas = BUL_nationalized_industry
-
-			#Opinion Modifiers
-			every_country = {
-				limit = {
-					BUL_country_can_influence_bulgaria = yes
-					has_opinion_modifier = BUL_indutrial_investments_in_bulgaria
-				}
-				remove_opinion_modifier = { target = BUL modifier = BUL_indutrial_investments_in_bulgaria }
-
-				BUL = { remove_opinion_modifier = { target = PREV modifier = BUL_indutrial_investments_in_bulgaria } }
-			}		
+			add_ideas = BUL_nationalized_industry	
 
 			every_country = {
 				limit = {
