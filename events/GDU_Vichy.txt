@@ -579,7 +579,7 @@ country_event = {
 						coordination_skill = 3
 					}
 					set_country_flag = free_france
-					set_capital = 539
+					set_capital = { state  = 539}
 					remove_ideas = FRA_matignon_agreements
 					change_tag_from = FRA
 					set_fuel_ratio = 1.0
@@ -772,14 +772,14 @@ country_event = {
 
 				EFR = {
 					transfer_state = 26
-					set_capital = 26
+					set_capital = { state  = 26}
 
 					country_event = { id = gduvichy.6 days = 4 }  # Give Vichy stuff, spacing out the African and Asian colonies to avoid death via much lag #
 
 					add_ideas = idea_EFR_neutrality
 					diplomatic_relation = { country = GER relation = non_aggression_pact }
 
-					set_capital = 26
+					set_capital = { state  = 26}
 
 					set_politics = {
 						ruling_party = fascism
