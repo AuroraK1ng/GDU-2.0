@@ -168,31 +168,7 @@ equipment_modules = {
 		}
 		critical_parts = { damaged_light_guns }
 	}
-	dp_light_battery_2 = {
-		category = ship_light_battery
-		gfx = ship_light_battery_5
-		sfx = sfx_ui_sd_module_turret
-	
-		add_stats = {
-			lg_attack = 2
-			anti_air_attack = 1
-			build_cost_ic = 300
-		}
-		multiply_stats = {
-			naval_speed = -0.005
-		}		
-		build_cost_resources = {
-		}
-		add_average_stats = {
-			lg_armor_piercing = 2.0
-		}
-		
-		can_convert_from = {
-			module_category = ship_light_battery
-			convert_cost_ic = 230
-		}
-		critical_parts = { damaged_light_guns }
-	}
+
 
 
 #  # ###  ##  #   # #   #     ###   ##  ### ### ### ###  #   # 
@@ -1814,7 +1790,7 @@ equipment_modules = {
 
 		add_equipment_type = capital_ship
 		add_stats = {
-			carrier_size = 10
+			carrier_size = 3
 			build_cost_ic = 800
 		}
 		manpower = 500 #outside the add_stats section for code reasons
