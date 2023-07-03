@@ -876,41 +876,7 @@ create_navy_leader = {
 }
 ### VARIANTS ###
 # 1936 Start #
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	### Ship Variants ###
-	create_equipment_variant = {
-		name = "SS1"
-		type = submarine_1
-		upgrades = {
-			ship_reliability_upgrade = 1
-			sub_engine_upgrade = 1
-			sub_stealth_upgrade = 1
-			sub_torpedo_upgrade = 1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "SS1"
-		type = submarine_2
-		upgrades = {
-			ship_reliability_upgrade = 1
-			sub_engine_upgrade = 1
-			sub_stealth_upgrade = 1
-			sub_torpedo_upgrade = 1
-		}
-	}
-	create_equipment_variant = {
-		name = "Leningrad & Minsk Class"
-		type = destroyer_1
-		upgrades = {
-			ship_torpedo_upgrade = 3
-			destroyer_engine_upgrade = 3
-			ship_ASW_upgrade = 3
-			ship_anti_air_upgrade = 3
-		}
-	}
-}
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	# Submarines #
@@ -970,7 +936,7 @@ if = {
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = cruiser_ship_engine_2
 			fixed_ship_armor_slot = ship_armor_cruiser_1
-			fixed_ship_secondaries_slot = dp_ship_secondaries_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
 			mid_1_custom_slot = ship_light_medium_battery_1
 			mid_2_custom_slot = ship_light_medium_battery_1
 			rear_1_custom_slot = ship_light_medium_battery_1
