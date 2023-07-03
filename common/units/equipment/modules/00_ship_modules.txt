@@ -168,7 +168,31 @@ equipment_modules = {
 		}
 		critical_parts = { damaged_light_guns }
 	}
-
+	dp_light_battery_2 = {
+		category = ship_light_battery
+		gfx = ship_light_battery_5
+		sfx = sfx_ui_sd_module_turret
+	
+		add_stats = {
+			lg_attack = 2
+			anti_air_attack = 1
+			build_cost_ic = 300
+		}
+		multiply_stats = {
+			naval_speed = -0.005
+		}		
+		build_cost_resources = {
+		}
+		add_average_stats = {
+			lg_armor_piercing = 2.0
+		}
+		
+		can_convert_from = {
+			module_category = ship_light_battery
+			convert_cost_ic = 230
+		}
+		critical_parts = { damaged_light_guns }
+	}
 
 
 #  # ###  ##  #   # #   #     ###   ##  ### ### ### ###  #   # 
@@ -604,37 +628,14 @@ equipment_modules = {
 		}
 		critical_parts = { damaged_secondaries }
 	}
-	dp_ship_secondaries_1 = {
-		category = ship_dp_secondaries
-		parent = ship_secondaries
-		gfx = ship_secondaries_3
-		sfx = sfx_ui_sd_module_turret
-		add_stats = {
-			lg_attack = 4.5
-			anti_air_attack = 0.5
-			build_cost_ic = 290
-		}
-		
-		add_average_stats = {
-			lg_armor_piercing = 8
-		}
-		multiply_stats = {
-			naval_speed = -0.01
-		}		
-		can_convert_from = {
-			module_category = ship_secondaries
-			convert_cost_ic = 150
-		}
-		critical_parts = { damaged_secondaries }
-	}
-	dp_ship_secondaries_2 = {
+	dp_ship_secondaries = {
 		category = ship_secondaries
 		parent = ship_secondaries_2
 		gfx = ship_secondaries_3
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
-			lg_attack = 5.5
-			anti_air_attack = 1.5
+			lg_attack = 4.5
+			anti_air_attack = 0.5
 			build_cost_ic = 290
 		}
 		
