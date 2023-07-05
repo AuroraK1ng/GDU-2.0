@@ -34,6 +34,9 @@ scripted_gui = {
 			}	
 			effects = {
 				observer_click = {
+					GER = {
+						news_event={id=hosttool.5}
+					}
 					owner = { set_temp_variable = { ROOT.marks = this}	PUE = {change_tag_from =var:marks}	}			
 				}
 			
@@ -63,6 +66,9 @@ scripted_gui = {
 							value=state
 							transfer_state = state
 						}
+						GER = {
+						news_event={id=hosttool.2}
+					}
 										for_each_loop={
 							array=ROOT.marked_states
 							value=state
@@ -113,6 +119,9 @@ scripted_gui = {
 					}
 					else={
 						var:ROOT.target={var:ROOT.taker={
+								GER = {
+								news_event={id=hosttool.3}
+							}
 								annex_country={
 									target=PREV
 									transfer_troops=yes
@@ -148,6 +157,9 @@ scripted_gui = {
 							value=state
 							var:state={add_core_of=var:taker}
 						}
+						GER = {
+						news_event={id=hosttool.4}
+					}
 						ROOT = {
 							for_each_scope_loop={
 								array=marked_states
