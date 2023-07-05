@@ -492,10 +492,12 @@ equipments = {
 		naval_range = 6000
 		naval_speed = 32
 		max_strength = 1200
-		reliability = 0.9
+		reliability = 0.95
+		lg_attack = 25
+		torpedo_attack = 32
 		fuel_consumption = 67
 		
-		build_cost_ic = 32200
+		build_cost_ic = 12200
 		resources = {
 			#oil = 1
 			steel = 1
@@ -871,15 +873,15 @@ equipments = {
 			}
 			fixed_ship_anti_air_slot = {
 				required = no
-				allowed_module_categories = { ship_super_heavy_battery ship_anti_air }
+				allowed_module_categories = { ship_anti_air }
 			}
 			fixed_ship_fire_control_system_slot = {
 				required = no
-				allowed_module_categories = { ship_super_heavy_battery }
+				allowed_module_categories = { ship_fire_control_system }
 			}
 			fixed_ship_radar_slot = {
 				required = no
-				allowed_module_categories = { ship_super_heavy_battery }
+				allowed_module_categories = { ship_radar }
 			}
 			fixed_ship_engine_slot = {
 				required = no
@@ -887,7 +889,7 @@ equipments = {
 			}
 			fixed_ship_secondaries_slot = {
 				required = no
-				allowed_module_categories = { ship_super_heavy_battery }
+				allowed_module_categories = { ship_secondaries ship_dp_secondaries }
 			}
 			fixed_ship_armor_slot = {
 				required = no
@@ -907,7 +909,7 @@ equipments = {
 					ship_anti_air
 					ship_secondaries
 					ship_dp_secondaries
-					ship_super_heavy_battery
+					ship_airplane_launcher
 				}
 			}
 			mid_2_custom_slot = mid_1_custom_slot
@@ -919,7 +921,7 @@ equipments = {
 					ship_secondaries
 					ship_dp_secondaries
 					ship_super_heavy_battery
-					ship_airplane_launcher
+					
 				}
 			}
 			rear_2_custom_slot = {
@@ -929,7 +931,6 @@ equipments = {
 					ship_secondaries
 					ship_dp_secondaries
 					ship_super_heavy_battery
-					ship_airplane_launcher
 				}
 			}
 		}
@@ -943,10 +944,13 @@ equipments = {
 		}
 		naval_range = 4500
 		naval_speed = 30
-		max_strength = 2400
+		max_strength = 3200
 		fuel_consumption = 75
-		reliability = 0.85
-		build_cost_ic = 65500
+		reliability = 0.95
+		lg_attack = 25
+		hg_attack = 25
+		armor_value = 25
+		build_cost_ic = 22500
 		resources = {
 			steel = 5
 			chromium = 1
