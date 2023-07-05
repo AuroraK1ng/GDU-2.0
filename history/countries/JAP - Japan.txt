@@ -8,6 +8,14 @@ set_war_support = 0.8
 set_research_slots = 5
 set_fuel_ratio = 1.0
 
+add_opinion_modifier = { target = SOV modifier = embargo }
+add_opinion_modifier = { target = SOV modifier = sanctions_relations }
+add_opinion_modifier = { target = SOV modifier = large_decrease }
+add_opinion_modifier = { target = SOV modifier = hostile_status }
+
+add_opinion_modifier = { target = ITA modifier = embargo }
+add_opinion_modifier = { target = ITA modifier = sanctions }
+add_opinion_modifier = { target = ITA modifier = minor_sanctions }
 
 add_timed_idea = { idea = airandnavy_idea days = 1775 }
 add_ideas = {

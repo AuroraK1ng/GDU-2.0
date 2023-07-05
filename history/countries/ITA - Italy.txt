@@ -7,6 +7,14 @@ set_naval_oob = "ITA_1936_naval_mtg"
 set_stability = 0.65
 set_war_support = 0.85
 
+add_opinion_modifier = { target = SOV modifier = embargo }
+add_opinion_modifier = { target = SOV modifier = sanctions_relations }
+add_opinion_modifier = { target = SOV modifier = large_decrease }
+add_opinion_modifier = { target = SOV modifier = hostile_status }
+
+add_opinion_modifier = { target = JAP modifier = embargo }
+add_opinion_modifier = { target = JAP modifier = sanctions }
+add_opinion_modifier = { target = JAP modifier = minor_sanctions }
 
 add_timed_idea = { idea = airandnavy_idea days = 1320 }
 add_ideas = {
@@ -73,6 +81,9 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
+
+
 add_intel = {
 	target = USA
 	civilian_intel = 200
