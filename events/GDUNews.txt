@@ -77,67 +77,67 @@ news_event = {
 	}
 }
 ### Note, in order not to have to cut on loc, these news events will be country events.
-country_event = { ### Katyn Massacre 
-	id = gdunews.2002
-	title = gdunews.2.t
-	desc = gdunews.2.d
-	fire_only_once = yes 
-	trigger = {
-		date > 1940.4.2
-		SOV = {
-			owns_state = 94
-		}
-	}
-	option = {
-		every_country = {
-			if = {
-				limit = {
-					has_country_flag = no_news
-				}
-				country_event = {
-					id = gdunews.2
-				}
-			}
-		}
-	}
-}
-country_event = {  ### Katyn Massacre 
-	id = gdunews.2
-	title = gdunews.2.t
-	desc = gdunews.2.d
-	#picture = GFX_news_event_katyn
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: Decision CENmil_clarify_irca"
-	}
-	is_triggered_only = yes 
-	option = {
-		name = gdunews.2.pol
-		trigger = { 
-			tag = POL 
-		}
-	}
-	option = {
-		name = gdunews.2.sov
-		trigger = { 
-			OR = {
-				tag = SOV 
-				is_in_faction_with = SOV
-				has_government = communism
-			}
-		}
-	}
-	option = {
-		name = gdunews.2.general
-		trigger = { 
-			NOT = {
-				tag = POL 
-				tag = SOV 
-				is_in_faction_with = SOV
-				has_government = communism
-			}
-		}
-	}
-}
+#country_event = { ### Katyn Massacre 
+#	id = gdunews.2002
+#	title = gdunews.2.t
+#	desc = gdunews.2.d
+#	fire_only_once = yes 
+#	trigger = {
+#		date > 1940.4.2
+#		SOV = {
+#			owns_state = 94
+#		}
+#	}
+#	option = {
+#		every_country = {
+#			if = {
+#				limit = {
+#					has_country_flag = no_news
+#				}
+#				country_event = {
+#					id = gdunews.2
+#				}
+#			}
+#		}
+#	}
+#}
+#country_event = {  ### Katyn Massacre 
+#	id = gdunews.2
+#	title = gdunews.2.t
+#	desc = gdunews.2.d
+#	#picture = GFX_news_event_katyn
+#	immediate = {
+#		log = "[GetDateText]: [Root.GetName]: Decision CENmil_clarify_irca"
+#	}
+#	is_triggered_only = yes 
+#	option = {
+#		name = gdunews.2.pol
+#		trigger = { 
+#			tag = POL 
+#		}
+#	}
+#	option = {
+#		name = gdunews.2.sov
+#		trigger = { 
+#			OR = {
+#				tag = SOV 
+#				is_in_faction_with = SOV
+#				has_government = communism
+#			}
+#		}
+#	}
+#	option = {
+#		name = gdunews.2.general
+#		trigger = { 
+#			NOT = {
+#				tag = POL 
+#				tag = SOV 
+#				is_in_faction_with = SOV
+#				has_government = communism
+#			}
+#		}
+#	}
+#}
 country_event = {  ### The Pilecki Report   [The Holocaust]
 	id = gdunews.2003
 	hidden = yes 
