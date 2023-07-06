@@ -34,7 +34,12 @@ set_technology = {
 	basic_train = 1
 	fleet_in_being = 1
 }
+add_opinion_modifier = { target = JAP modifier = embargo }
+add_opinion_modifier = { target = JAP modifier = sanctions }
+add_opinion_modifier = { target = JAP modifier = minor_sanctions }
+
 add_timed_idea = { idea = airandnavy_idea days = 1320 }
+
 add_intel = {
 	target = SPR
 	civilian_intel = 200
@@ -303,7 +308,7 @@ add_equipment_to_stockpile = {
 }
 create_corps_commander = {
 	name = "Henry Wynter AFRICANUS"
-	gfx = "AFRICA_GFX_AST_henry_wynter"
+	picture = "AFRICA_Portrait_Australia_Henry_Wynter.dds"
 	traits = { infantry_leader infantry_officer harsh_leader desert_fox infantry_leader organizer  }
 	skill = 4
 	attack_skill = 6
@@ -313,7 +318,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Iven Mackay AFRICANUS"
-	picture = "AFRICA_Portrait_AST_Iven_Mackay.tga"
+	picture = "AFRICA_Portrait_Australia_Iven_Mackay.dds"
 	traits = { desert_fox old_guard infantry_leader skilled_staffer career_officer harsh_leader brilliant_strategist trickster}
 	skill = 4
 	attack_skill = 4
@@ -323,7 +328,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Horace Robertson AFRICANUS"
-	gfx = "AFRICA_GFX_AST_horace_robertson"
+	picture = "AFRICA_Portrait_Australia_Horace_Robertson.dds"
 	traits = { desert_fox infantry_leader cavalry_officer harsh_leader trait_reckless panzer_leader}
 	skill = 5
 	attack_skill = 5

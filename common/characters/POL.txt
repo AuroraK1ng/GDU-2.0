@@ -311,24 +311,6 @@ characters = {
 		}
 	}
 
-	POL_pavel_bermondt_avalov = {
-		name=POL_pavel_bermondt_avalov
-		portraits = {
-			civilian = {
-				large="GFX_portrait_POL_pavel_bermondt_avlov"
-			}
-			army = {
-				large="GFX_portrait_POL_pavel_bermondt_avlov"
-			}
-		}
-		country_leader = {
-			ideology=gen_nazism
-			expire="1965.1.1.1"
-			traits = { POL_cossack_king }
-			id=-1
-		}
-	}
-
 	POL_roman_dmowski = {
 		name=POL_roman_dmowski
 		portraits={
@@ -351,19 +333,6 @@ characters = {
 			}
 			traits = {
 				fascist_demagogue 
-			}
-			ai_will_do = {
-				factor = 0.000
-				modifier = {
-					add = 100.000
-					OR = {
-						has_country_flag = POL_AI_RANDOM_FASCIST 
-						has_game_rule = {
-							rule = POL_ai_behavior 
-							option = FASCIST 
-						}
-					}
-				}
 			}
 		}
 		

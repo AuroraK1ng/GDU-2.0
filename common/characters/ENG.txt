@@ -1018,9 +1018,6 @@ characters={
 				small="GFX_idea_tom_phillips"
 			}
 		}
-		research_bonus = {
-				naval_doctrine = 0.1
-			}
 		advisor={
 			cost = 150
 			slot = theorist
@@ -1040,9 +1037,6 @@ characters={
 				small="GFX_idea_hugh_dowding"
 			}
 		}
-		research_bonus = {
-				air_doctrine = 0.1
-			}
 		advisor={
 			cost = 150
 			slot = theorist
@@ -1883,21 +1877,6 @@ characters={
 			}
 			ai_will_do  = {
 				factor  = 1.000
-			}
-			on_add = {
-				owner = {
-					IF = {
-						limit = {
-							has_power_balance = {
-								id = ETH_centralization_balance
-							}
-						}
-						
-						hidden_effect = {
-							ETH_BOP_decentralization_large_effect = yes
-						}
-					}				
-				}
 			}
 		}
 	}

@@ -8,13 +8,6 @@ characters={
 					large="GFX_portrait_SPR_niceto_alcala_zamora"
 				}
 			}
-			country_leader={
-				ideology=conservatism
-				traits={ indecisive }
-				expire="1965.1.1.1"
-				id=-1
-			}
-			
 			name=SPR_niceto_alcala_zamora
 			portraits={
 				civilian={
@@ -36,13 +29,6 @@ characters={
 					large=GFX_portrait_SPR_jose_diaz
 				}
 			}
-			country_leader={
-				ideology=stalinism
-				traits={ veteran_communist }
-				expire="1965.1.1.1"
-				id=-1
-			}
-			
 			name=SPR_jose_diaz
 			portraits={
 				civilian={
@@ -560,45 +546,42 @@ characters={
 					small=GFX_portrait_SPA_francisco_franco_small
 				}
 			}
-
-			field_marshal={
-				traits={ offensive_doctrine brilliant_strategist politically_connected war_hero media_personality hill_fighter organizer }
-				skill=6
-				attack_skill=7
-				defense_skill=5
-				planning_skill=5
-				logistics_skill=4
-				legacy_id=1108
-				visible = {
-					
+		field_marshal={
+			traits={ offensive_doctrine brilliant_strategist politically_connected war_hero media_personality hill_fighter organizer }
+			skill=6
+			attack_skill=7
+			defense_skill=5
+			planning_skill=5
+			logistics_skill=4
+			legacy_id=1108
+			visible = {	
 			}
-			advisor={
-				slot = army_chief
-				idea_token = SPA_francisco_franco
-				name = SPR_fransisco_franco
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
+		}
+		advisor={
+			slot = army_chief
+			idea_token = SPA_francisco_franco
+			name = SPR_fransisco_franco
+			allowed = {
+				NOT = {
+					has_dlc = "La Resistance"
 				}
-				available = {
-					
-				}
-				traits = {
-					army_chief_offensive_3
-				}
-				cost = 200
-				ai_will_do = {
-					factor = 1.000
-				}
+				original_tag = SPR
 			}
-	
-			country_leader={
-				ideology=fascism_ideology
-				expire="1965.1.1.1"
-				id=-1
+			available = {
+				
 			}
+			traits = {
+				army_chief_offensive_3
+			}
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
 		}
 	}
 	SPR_mohamed_meziane={
@@ -1272,29 +1255,6 @@ characters={
 					small="GFX_idea_generic_navy_europe_1"
 				}
 			}
-			advisor={
-				slot = navy_chief
-				idea_token = SPA_luis_carrero_blanco
-				name = SPA_luis_carrero_blanco
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
-				}
-				visible = {
-					has_government = fascism
-				}
-				available = {
-					has_government = fascism
-				}
-				traits = {
-					navy_chief_old_guard
-				}
-				ai_will_do = {
-					factor = 1.000
-				}
-			}
 	}
 
 	SPA_rafael_garcia_valino={ # Francoist/Carlist
@@ -1563,32 +1523,6 @@ characters={
 			portraits={
 				army={
 					small="GFX_idea_generic_army_europe_3"
-				}
-			}
-			advisor={
-				cost = 100
-				slot = theorist
-				idea_token = SPR_nicolas_molero
-				ledger = army
-				name = SPR_nicolas_molero
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
-				}
-				visible = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-				available = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-				traits = {
-					military_theorist
 				}
 			}
 	}
@@ -2121,34 +2055,6 @@ characters={
 					small="GFX_idea_generic_air_europe_1"
 				}
 			}
-			advisor={
-				slot = air_chief
-				idea_token = SPR_ignacio_hidalgo_cisneros
-				name = SPR_ignacio_hidalgo_cisneros
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
-				}
-				visible = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-				available = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-				traits = {
-					air_chief_safety_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-			}
 	}
 
 	SPR_andres_garcia_la_calle = { # Democratic
@@ -2184,34 +2090,6 @@ characters={
 			portraits={
 				army={
 					small="GFX_idea_generic_air_europe_3"
-				}
-			}
-			advisor={
-				slot = air_chief
-				idea_token = SPR_andres_garcia_calle
-				name = SPR_andres_garcia_calle
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
-				}
-				visible = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-				available = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-				traits = {
-					air_chief_ground_support_3
-				}
-				cost = 200
-				ai_will_do = {
-					factor = 1.000
 				}
 			}
 	}
@@ -2330,34 +2208,6 @@ characters={
 			portraits={
 				army={
 					small="GFX_idea_generic_navy_europe_1"
-				}
-			}
-			advisor={
-				slot = navy_chief
-				idea_token = SPR_luis_gonzalez_de_ubieta
-				name = SPR_luis_gonzalez_de_ubieta
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
-				}
-				visible = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-				available = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-				traits = {
-					navy_chief_naval_aviation_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
 				}
 			}
 	}
@@ -2563,35 +2413,6 @@ characters={
 			portraits={
 				army={
 					small="GFX_idea_generic_navy_europe_2"
-				}
-			}
-			advisor={
-				slot = high_command
-				idea_token = SPR_antonio_azarola_gresillon
-				ledger = navy
-				name = SPR_antonio_azarola_gresillon
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
-				}
-				visible = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-				available = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-				traits = {
-					navy_fleet_logistics_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
 				}
 			}
 	}
@@ -2932,23 +2753,6 @@ characters={
 					small="GFX_idea_generic_army_europe_1"
 				}
 			}
-			advisor={
-				slot = political_advisor
-				idea_token = SPR_augusto_barcia_trelles
-				name = SPR_augusto_barcia_trelles 
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
-					NOT = {
-						has_government = fascism 
-					}
-				}
-				traits = {
-					ideological_crusader 
-				}
-			}
 	}
 
 	SPR_diego_martinez_barrio={
@@ -2985,26 +2789,6 @@ characters={
 			portraits={
 				army={
 					small="GFX_idea_generic_navy_europe_1"
-				}
-			}
-			advisor={
-				slot = political_advisor
-				idea_token = SPR_diego_martinez_barrio
-				name = SPR_diego_martinez_barrio 
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
-					NOT = {
-						has_government = fascism 
-					}
-				}
-				traits = {
-					backroom_backstabber 
-				}
-				ai_will_do = {
-					factor = 0.000
 				}
 			}
 	}
@@ -3047,33 +2831,6 @@ characters={
 				}
 			}
 			gender = female
-			advisor={
-				slot = political_advisor
-				idea_token = SPR_dolores_ibarruri
-				name = SPR_dolores_ibarruri 
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
-					NOT = {
-						has_government = fascism 
-					}
-				}
-				available = {
-					if = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						NOT = {
-							has_autonomy_state = autonomy_supervised_state
-						}
-					}
-				}
-				traits = {
-					communist_revolutionary 
-				}
-			}
 	}
 
 	SPR_juan_negrin={
@@ -3200,23 +2957,6 @@ characters={
 			portraits={
 				army={
 					small="GFX_idea_generic_air_europe_1"
-				}
-			}
-			advisor={
-				slot = political_advisor
-				idea_token = SPR_francisco_largo_caballero
-				name = SPR_francisco_largo_caballero 
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
-					NOT = {
-						has_government = fascism 
-					}
-				}
-				traits = {
-					captain_of_industry 
 				}
 			}
 	}
@@ -3495,7 +3235,7 @@ characters={
 				
 			}
 			traits = {
-				falangist_industrialist 
+				captain_of_industry  
 			}
 		}
 	}

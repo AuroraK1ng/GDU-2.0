@@ -70,31 +70,6 @@ characters={
 					has_government  = communism 
 				}
 			}
-			ai_will_do  = {
-				factor  = 10.000
-				modifier  = {
-					is_historical_focus_on  = yes 
-					has_game_rule  = {
-						rule  = USA_ai_behavior 
-						option  = default 
-					}
-					factor  = 0.000
-				}
-				modifier  = {
-					is_historical_focus_on  = yes 
-					NOT  = {
-						has_dlc = "Man the Guns"
-					}
-					factor  = 0.000
-				}
-				modifier  = {
-					NOT  = {
-						has_dlc = "Man the Guns"
-					}
-					has_idea_with_trait = fascist_demagogue
-					factor  = 0.000
-				}
-			}
 		}
 		country_leader={
 			ideology=marxism
@@ -1743,31 +1718,6 @@ characters={
 			do_effect  = {
 				NOT  = {
 					has_government  = fascism 
-				}
-			}
-			ai_will_do  = {
-				factor  = 10.000
-				modifier  = {
-					is_historical_focus_on  = yes 
-					has_game_rule  = {
-						rule  = USA_ai_behavior 
-						option  = default 
-					}
-					factor  = 0.000
-				}
-				modifier  = {
-					is_historical_focus_on  = yes 
-					NOT  = {
-						has_dlc = "Man the Guns"
-					}
-					factor  = 0.000
-				}
-				modifier  = {
-					NOT  = {
-						has_dlc = "Man the Guns"
-					}
-					has_idea_with_trait = communist_revolutionary
-					factor  = 0.000
 				}
 			}
 		}

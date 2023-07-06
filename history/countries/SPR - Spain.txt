@@ -30,6 +30,42 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+add_opinion_modifier = { target = JAP modifier = embargo }
+add_opinion_modifier = { target = JAP modifier = sanctions }
+add_opinion_modifier = { target = JAP modifier = minor_sanctions }
+
+add_opinion_modifier = { target = ENG modifier = embargo }
+add_opinion_modifier = { target = ENG modifier = sanctions_relations }
+add_opinion_modifier = { target = ENG modifier = large_decrease }
+add_opinion_modifier = { target = ENG modifier = hostile_status }
+add_opinion_modifier = { target = RAJ modifier = embargo }
+add_opinion_modifier = { target = RAJ modifier = sanctions_relations }
+add_opinion_modifier = { target = RAJ modifier = large_decrease }
+add_opinion_modifier = { target = RAJ modifier = hostile_status }
+add_opinion_modifier = { target = CAN modifier = embargo }
+add_opinion_modifier = { target = CAN modifier = sanctions_relations }
+add_opinion_modifier = { target = CAN modifier = large_decrease }
+add_opinion_modifier = { target = CAN modifier = hostile_status }
+add_opinion_modifier = { target = SOV modifier = embargo }
+add_opinion_modifier = { target = SOV modifier = sanctions_relations }
+add_opinion_modifier = { target = SOV modifier = large_decrease }
+add_opinion_modifier = { target = SOV modifier = hostile_status }
+add_opinion_modifier = { target = SAF modifier = embargo }
+add_opinion_modifier = { target = SAF modifier = sanctions_relations }
+add_opinion_modifier = { target = SAF modifier = large_decrease }
+add_opinion_modifier = { target = SAF modifier = hostile_status }
+add_opinion_modifier = { target = AST modifier = embargo }
+add_opinion_modifier = { target = AST modifier = sanctions_relations }
+add_opinion_modifier = { target = AST modifier = large_decrease }
+add_opinion_modifier = { target = AST modifier = hostile_status }
+add_opinion_modifier = { target = NZL modifier = embargo }
+add_opinion_modifier = { target = NZL modifier = sanctions_relations }
+add_opinion_modifier = { target = NZL modifier = large_decrease }
+add_opinion_modifier = { target = NZL modifier = hostile_status }
+add_opinion_modifier = { target = USA modifier = embargo }
+add_opinion_modifier = { target = USA modifier = sanctions_relations }   
+add_opinion_modifier = { target = USA modifier = large_decrease }
+add_opinion_modifier = { target = USA modifier = hostile_status } 
 add_intel = {
 	target = USA
 	civilian_intel = 200
@@ -375,16 +411,6 @@ create_corps_commander = {
 				logistics_skill = 1
         }
 			create_corps_commander = {
-                name = "Miguel Cabanellas Ferrer"
-                picture = "Portrait_SPR_Miguel_Cabanellas_Ferrer.tga"
-                traits = { panzer_leader career_officer cavalry_officer trickster harsh_leader trait_reckless  }
-                skill = 4
-				attack_skill = 4
-				defense_skill = 2
-				planning_skill = 2
-				logistics_skill = 5
-        }
-			create_corps_commander = {
                 name = "Miguel Cabanellas Ferrer AFRICANUS"
                 picture = "AFRICA_Portrait_SPR_Miguel_Cabanellas_Ferrer.dds"
                 traits = { desert_fox infantry_leader career_officer cavalry_officer trickster organizer harsh_leader trait_reckless  }
@@ -492,22 +518,6 @@ if = {
 			rear_1_custom_slot = ship_depth_charge_1
 		}
 	}
-	create_equipment_variant = {
-		name = "Júpiter Class"					# minelayers
-		type = ship_hull_light_2
-		name_group = SPR_DD_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_1
-			fixed_ship_torpedo_slot = empty
-			mid_1_custom_slot = empty
-			rear_1_custom_slot = ship_depth_charge_1
-		}
-	}
 	# Light Cruisers #
 	create_equipment_variant = {
 		name = "República Class"
@@ -581,23 +591,4 @@ if = {
 		}
 	}
 	# Battleships #
-	create_equipment_variant = {
-		name = "España Class"	
-		type = ship_hull_heavy_1
-		name_group = SPR_BB_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_heavy_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_1
-			fixed_ship_secondaries_slot = ship_secondaries_1
-			fixed_ship_armor_slot = ship_armor_bb_1
-			front_1_custom_slot = ship_heavy_battery_1
-			mid_1_custom_slot = ship_secondaries_1
-			mid_2_custom_slot = ship_secondaries_1
-			rear_1_custom_slot = empty
-		}
-	}
 }

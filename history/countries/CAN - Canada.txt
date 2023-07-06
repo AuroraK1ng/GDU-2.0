@@ -31,6 +31,10 @@ if = {
 		set_air_oob = "CAN_1936_air_legacy"
 	}
 }
+add_opinion_modifier = { target = JAP modifier = embargo }
+add_opinion_modifier = { target = JAP modifier = sanctions }
+add_opinion_modifier = { target = JAP modifier = minor_sanctions }
+
 add_timed_idea = { idea = airandnavy_idea days = 1320 }
 add_intel = {
 	target = SPR
@@ -531,7 +535,7 @@ if = {
 }
 create_field_marshal = {
 	name = "Charles Foulkes AFRICANUS"
-	gfx = "AFRICA_GFX_CAN_charles_foulkes"
+	picture = "AFRICA_Portrait_Canada_Charles_Foulkes.dds"
 	traits = { brilliant_strategist organizer desert_fox infantry_leader old_guard skilled_staffer politically_connected}
 	skill = 5
 		attack_skill = 4

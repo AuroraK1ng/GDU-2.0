@@ -16,6 +16,12 @@ set_variable = { var = quorum_low value = 39 }
 set_variable = { var = quorum_medium value = 49 }
 set_variable = { var = quorum_high value = 58 }
 # Starting tech
+
+add_opinion_modifier = { target = JAP modifier = jap_trade }
+add_opinion_modifier = { target = JAP modifier = jap_trade_2 }
+add_opinion_modifier = { target = JAP modifier = jap_trade_3 }
+add_opinion_modifier = { target = JAP modifier = jap_trade_4 }
+
 add_timed_idea = { idea = airandnavy_idea days = 1775 }
 set_technology = {
 	airfield_construction = 1
