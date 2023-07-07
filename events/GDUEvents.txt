@@ -242,7 +242,7 @@ country_event = {
 	option = {
 		name = gduevents.8.a
 		effect_tooltip = {
-			add_equipment_to_stockpile = { type = fighter_equipment amount = 650 producer = USA }
+			add_equipment_to_stockpile = { type = fighter_equipment_2	 amount = 650 producer = USA }
 		}
 	}
 }
@@ -259,7 +259,7 @@ country_event = {
 	option = {
 		name = gduevents.9.a
 		effect_tooltip = {
-			add_equipment_to_stockpile = { type = CAS_equipment amount = 300 producer = USA }
+			add_equipment_to_stockpile = { type = CAS_equipment_2 amount = 300 producer = USA }
 		}
 	}
 }
@@ -276,7 +276,7 @@ country_event = {
 	option = {
 		name = gduevents.10.a
 		effect_tooltip = {
-			add_equipment_to_stockpile = { type = tac_bomber_equipment amount = 200 producer = USA }
+			add_equipment_to_stockpile = { type = tac_bomber_equipment_2 amount = 200 producer = USA }
 		}
 	}
 }
@@ -1397,7 +1397,7 @@ country_event = {
 											JAP = {
 												divisions_in_state = {
 													size > 0
-													state 624
+													state = 624
 												}												
 												all_enemy_country = {
 													divisions_in_state = {

@@ -18,9 +18,9 @@ on_actions = {
 	}
 	on_weekly_SWE={
 		effect={
-			sealion_core_defense=yes
-			update_academy_weekly=yes
-			update_sov_major_city_status = yes
+			#sealion_core_defense=yes
+			#update_academy_weekly=yes
+			#update_sov_major_city_status = yes
 			set_variable={scaled_weekly_manpower=max_manpower_k}
 			multiply_variable={scaled_weekly_manpower=0.001}
 			if = {
@@ -32,100 +32,98 @@ on_actions = {
 				GER = {	
 					change_tag_from = ITA
 				}
-				ITA = {
-					pow_before_annex=yes
-				}
+				#ITA = {
+				#	pow_before_annex=yes
+				#}
 				GER = {	
 					annex_country = {
 						target = ITA
 						transfer_troops = yes
 					}
 					division_template = {
-			name = "SS-Panzergrenadier"
-			regiments = {
-				medium_armor = { x = 0 y = 0 }
-				medium_armor = { x = 0 y = 1 }
-				medium_armor = { x = 0 y = 2 }
-				medium_armor = { x = 0 y = 3 }
-				medium_armor = { x = 1 y = 0 }
-				medium_armor = { x = 1 y = 1 }
-				medium_armor = { x = 1 y = 2 }
-				medium_armor = { x = 1 y = 3 }
-				medium_armor = { x = 2 y = 0 }
-				medium_armor = { x = 2 y = 1 }
-				medium_armor = { x = 2 y = 2 }
-				mechanized = { x = 3 y = 0 }
-				mechanized = { x = 3 y = 1 }
-				mechanized = { x = 3 y = 2 }
-				mechanized = { x = 3 y = 3 }
-				mechanized = { x = 4 y = 0 }
-				mechanized = { x = 4 y = 1 }
-				mechanized = { x = 4 y = 2 }
-				mechanized = { x = 4 y = 3 }
-				mot_anti_air_brigade= { x = 3 y = 4 }
-				mot_anti_air_brigade = { x = 4 y = 4 }
-			}
-			support = {
-				mot_recon = { x = 0 y = 0 }
-				engineer = { x = 0 y = 1 }
-				artillery = { x = 0 y = 2 }
-				logistics_company = { x = 0 y = 3 }
-				signal_company = { x = 0 y = 4 }
-			}
-		}
-		
-								division_template = {
-	name = "Infanterie Division Italien"
-	division_names_group = GER_INF_01
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-		infantry = { x = 0 y = 3 }
-		infantry = { x = 0 y = 4 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-		infantry = { x = 1 y = 3 }
-		infantry = { x = 1 y = 4 }
-		infantry = { x = 1 y = 5 }
-		infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
-		infantry = { x = 2 y = 3 }
-		infantry = { x = 2 y = 4 }
-		artillery_brigade = { x = 3 y = 0 }
-		artillery_brigade = { x = 3 y = 1 }
-		anti_tank_brigade = { x = 3 y = 2 }
-		anti_air_brigade = { x = 3 y = 3 }
-		artillery_brigade = { x = 3 y = 4 }
-	}
-	
-	support = {
-		engineer = { x = 0 y = 0 }
-		artillery = { x = 0 y = 1 }
-		recon = { x = 0 y = 2 }
-		anti_air = { x = 0 y = 3  }
-		anti_tank = { x = 0 y = 4  }
-	}
-}
-				
- 				64= {
-					for_loop_effect = {
-				end = 4
-				create_unit = {
-					division = "name = \"SS-Panzergrenadier\" division_template = \"SS-Panzergrenadier\" start_experience_factor = 2.0"
-					owner = ITA
-				}
-				}
- 					for_loop_effect = {
- 						end = 20
- 						create_unit = {
- 							#prioritize_location =9135
- 							division = "name = \"Infanterie Division Italien\" division_template = \"Infanterie Division Italien\" start_experience_factor = 0.2"
- 							owner = GER
- 						}
- 						}}	
+					name = "SS-Panzergrenadier"
+					regiments = {
+						medium_armor = { x = 0 y = 0 }
+						medium_armor = { x = 0 y = 1 }
+						medium_armor = { x = 0 y = 2 }
+						medium_armor = { x = 0 y = 3 }
+						medium_armor = { x = 1 y = 0 }
+						medium_armor = { x = 1 y = 1 }
+						medium_armor = { x = 1 y = 2 }
+						medium_armor = { x = 1 y = 3 }
+						medium_armor = { x = 2 y = 0 }
+						medium_armor = { x = 2 y = 1 }
+						medium_armor = { x = 2 y = 2 }
+						mechanized = { x = 3 y = 0 }
+						mechanized = { x = 3 y = 1 }
+						mechanized = { x = 3 y = 2 }
+						mechanized = { x = 3 y = 3 }
+						mechanized = { x = 4 y = 0 }
+						mechanized = { x = 4 y = 1 }
+						mechanized = { x = 4 y = 2 }
+						mechanized = { x = 4 y = 3 }
+						mot_anti_air_brigade= { x = 3 y = 4 }
+						mot_anti_air_brigade = { x = 4 y = 4 }
+					}
+						support = {
+							mot_recon = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							artillery = { x = 0 y = 2 }
+							logistics_company = { x = 0 y = 3 }
+							signal_company = { x = 0 y = 4 }
+						}
+					}		
+					division_template = {
+					name = "Infanterie Division Italien"
+					division_names_group = GER_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+						infantry = { x = 1 y = 4 }
+						infantry = { x = 1 y = 5 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+						infantry = { x = 2 y = 3 }
+						infantry = { x = 2 y = 4 }
+						artillery_brigade = { x = 3 y = 0 }
+						artillery_brigade = { x = 3 y = 1 }
+						anti_tank_brigade = { x = 3 y = 2 }
+						anti_air_brigade = { x = 3 y = 3 }
+						artillery_brigade = { x = 3 y = 4 }
+					}
+						support = {
+							engineer = { x = 0 y = 0 }
+							artillery = { x = 0 y = 1 }
+							recon = { x = 0 y = 2 }
+							anti_air = { x = 0 y = 3  }
+							anti_tank = { x = 0 y = 4  }
+						}
+					}				
+					64= {
+						for_loop_effect = {
+						end = 4
+							create_unit = {
+								division = "name = \"SS-Panzergrenadier\" division_template = \"SS-Panzergrenadier\" start_experience_factor = 2.0"
+								owner = ITA
+							}
+						}
+						for_loop_effect = {
+						end = 20
+							create_unit = {
+								#prioritize_location =9135
+								division = "name = \"Infanterie Division Italien\" division_template = \"Infanterie Division Italien\" start_experience_factor = 0.2"
+								owner = GER
+							}
+						}
+					}	
 				}
 			}
 			if = {
@@ -173,17 +171,18 @@ on_actions = {
 				}
 				country_event={id=germany.8541 days=2}
 				set_variable={Global.super_event=2}
-				show_super_event=yes
+				#show_super_event=yes
 			}
 			every_country = {
 				limit= {
 					has_war=yes
 					is_playable_country = yes
 				}
-				refresh_click_effect = yes
+				#refresh_click_effect = yes
 			}
-			update_pacific_war=yes
-			}}
+			#update_pacific_war=yes
+		}
+	}
 	on_startup = {
 	effect= {
 		every_country={
@@ -389,18 +388,18 @@ on_actions = {
 	on_startup={
 		effect ={#funfact you dont need the = here
 			#SWE = {give_resource_rights = {receiver = GER state = 122}}
-			116 = {add_province_modifier = {  static_modifiers = { dont_take_gibraltar }
-					province = {
-						all_provinces = yes
-						}}
-			}
+			#116 = {add_province_modifier = {  static_modifiers = { dont_take_gibraltar }
+			#		province = {
+			#			all_provinces = yes
+			#			}}
+			#}
 			SOV={every_state = {
 					limit= {OR= {is_core_of=SOV state = 680 state = 79 state = 78 state = 80}}
 					add_state_modifier={modifier={local_supplies = 1}}
 				}
 			}
 			GER = {
-				create_arrays_pacific=yes
+				#create_arrays_pacific=yes
 				set_temp_variable={core_pop = 0}
 				for_each_scope_loop ={
 					array=core_states
@@ -756,7 +755,8 @@ on_actions = {
 						tag=NZL
 						tag=FRA
 						tag=SAF
-						}}
+					}
+				}
 				add_offsite_building = { type = arms_factory level = 5 }
 				add_offsite_building = { type = industrial_complex level = 5 }
 				add_offsite_building = { type = dockyard level = 1 }
@@ -769,12 +769,12 @@ on_actions = {
 				add_offsite_building = { type = industrial_complex level = 20 }
 				add_offsite_building = { type = dockyard level = 10 }
 			}
-			if = {limit = {tag=jap}
-				set_variable={Global.super_event=7}
-				show_super_event=yes}
-			if = {limit = {tag=eng}
-				set_variable={Global.super_event=5}
-				show_super_event=yes}
+			#if = {limit = {tag=jap}
+			#	set_variable={Global.super_event=7}
+			#	show_super_event=yes}
+			#if = {limit = {tag=eng}
+			#	set_variable={Global.super_event=5}
+			#	show_super_event=yes}
 		}
 	}
 	on_declare_war={
