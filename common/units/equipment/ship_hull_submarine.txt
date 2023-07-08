@@ -28,7 +28,7 @@ equipments = {
 				allowed_module_categories = { sub_ship_engine }
 			}
 			rear_1_custom_slot = {
-				required = no
+				required = yes
 				allowed_module_categories = {
 					ship_torpedo_sub
 					ship_mine_layer_sub	
@@ -59,10 +59,10 @@ equipments = {
 		anti_air_attack = 0
 		
 		armor_value = 0
-
+		sub_attack = 1
 		
-		surface_detection = 20
-		sub_detection = 0
+		surface_detection = 40
+		sub_detection = 15
 		surface_visibility = 1
 		sub_visibility = 37.5
 		naval_speed = 15
@@ -104,7 +104,7 @@ equipments = {
 			fixed_ship_torpedo_slot = inherit 
 			fixed_ship_engine_slot = inherit
 			rear_1_custom_slot = {
-				required = no
+				required = yes
 				allowed_module_categories = {
 					ship_torpedo_sub
 					ship_radar
@@ -120,10 +120,12 @@ equipments = {
 		naval_speed = 13.35
 		reliability = 0.70
 
+
 		naval_range = 4000
 		reliability = 0.70
 		max_strength = 6.5
-		
+
+		sub_attack = 2
 
 		
 		build_cost_ic = 250
@@ -174,7 +176,8 @@ equipments = {
 		naval_range = 5000
 		
 		max_strength = 8
-
+		
+		sub_attack = 3
 
 		
 		build_cost_ic = 270
@@ -225,6 +228,7 @@ equipments = {
 		
 		max_strength = 9.5
 		
+		sub_attack = 4
 
 		
 		build_cost_ic = 300

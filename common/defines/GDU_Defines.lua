@@ -393,7 +393,7 @@ NDefines.NNavy.SUPPLY_PRIORITY = 2											-- Default convoy priority for supp
 NDefines.NNavy.RESOURCE_LENDLEASE_PRIORITY = 5								-- Default convoy priority for export lend lease              - was 3 in vanilla
 NDefines.NNavy.RESOURCE_EXPORT_PRIORITY = 3									-- Default convoy priority for export trade                   - was 4 in vanilla
 NDefines.NNavy.RESOURCE_ORIGIN_PRIORITY = 4									-- Default convoy priority for resources shipped internally   - was 5 in vanilla
-
+NDefines.NNavy.DETECTION_CHANCE_MULT_BASE = 0.025 -- Vanilla was 0.1, lowered to avoid battles happening consecutively
 
 
 --- Acclimatization defines:
@@ -636,7 +636,7 @@ NDefines.NNavy.COMBAT_ARMOR_PIERCING_DAMAGE_REDUCTION = -0.75					-- All damage 
 
 NDefines.NNavy.GUN_HIT_PROFILES = { -- hit profiles for guns, if target ih profile is lower the gun will have lower accuracy		
 	        175.0,    -- big guns
-	        810.0,    -- torpedos
+	        650.0,    -- torpedos
 	        360.0,    -- small guns
 	   }		
 			

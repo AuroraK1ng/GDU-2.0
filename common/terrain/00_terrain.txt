@@ -415,14 +415,11 @@ categories =  {
 			}
 			navy_fuel_consumption_factor = 0.2
 		}
-		carrier = {
-			units = {
-				attack = -0.2
-				movement = -0.2
-				defence = -0.2
-			}
-			navy_fuel_consumption_factor = 0.2
-		}
+		navy_carrier_air_targetting_factor = -0.25
+		navy_carrier_air_attack_factor -0.25
+		navy_carrier_air_agility_factor -0.25
+		carrier_capacity_penalty_reduction = 0.25
+		sortie_efficiency = -0.25
 		navy_visibility = -0.1
 		naval_accidents_chance = 0.1
 	}
@@ -446,12 +443,11 @@ categories =  {
 				movement = 0.15
 			}
 		}
-		carrier = {
-			units = {
-				movement = -0.2
-				defence = -0.1
-			}
-		}
+		navy_carrier_air_targetting_factor = -0.1
+		navy_carrier_air_attack_factor -0.1
+		navy_carrier_air_agility_factor -0.1
+		carrier_capacity_penalty_reduction = 0.1
+		sortie_efficiency = -0.1
 		naval_accidents_chance = 0.05
 	}
 	water_med = {
@@ -463,20 +459,11 @@ categories =  {
 		
 		submarine = {
 			navy_visibility = 1.0
-			units = {
-				movement = -0.1
-			}
 		}
 		destroyer = {
 			units = {
 				attack = 0.15
 				movement = 0.15
-			}
-		}
-		carrier = {
-			units = {
-				movement = -0.2
-				defence = -0.1
 			}
 		}
 		naval_accidents_chance = 0.05
@@ -508,8 +495,8 @@ categories =  {
 		}
 		light_cruiser = {
 			units = {
-				attack = 0.1
-				defence = 0.1
+				attack = 0.05
+				defence = 0.05
 			}
 		}
 		carrier = {
