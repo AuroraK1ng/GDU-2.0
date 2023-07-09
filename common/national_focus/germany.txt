@@ -2101,6 +2101,176 @@ activate_mission = GER_relocate_industry_from_friesland
 			}
 		}
 	}
+	
+		focus = {
+			id = GER_battle_russia
+			icon = GFX_goal_ger_rasaineinei2
+			relative_position_id = GER_army_innovation
+			prerequisite = { focus = GER_army_innovation_2 }
+			mutually_exclusive = { focus = GER_battle_russia2 }		
+			x = -2
+			y = 4
+			cost = 10
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_war_with = SOV
+			}
+
+			available_if_capitulated = yes
+
+			completion_reward = {
+				army_experience = 500
+				set_technology = {
+					improved_medium_tank_chassis = 1
+				}
+
+				202 = {
+						add_resource = {
+							type = tungsten
+							amount = 48
+						}
+
+				}
+				add_tech_bonus = {
+					name = Rasenai_Panther_bonus
+					bonus = 4
+					uses = 2
+					technology = advanced_medium_tank_chassis
+					technology = advanced_light_tank_chassis
+				}	
+				add_tech_bonus = {
+					name = at_bonus
+					bonus = 1.75
+					uses = 4
+					category = cat_anti_tank
+				}
+			}
+		}
+
+	focus = {
+			id = GER_battle_russia2
+			icon = GFX_goal_ger_rasaineinei2
+			relative_position_id = GER_army_innovation
+			prerequisite = { focus = GER_army_innovation_2 }
+			mutually_exclusive = { focus = GER_battle_russia }				
+			x = 0
+			y = 4
+			cost = 10
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_war_with = SOV
+			}
+
+			available_if_capitulated = yes
+
+			completion_reward = {
+				army_experience = 500
+				set_technology = {
+					improved_heavy_tank_chassis = 1
+				}
+			202 = {
+						add_resource = {
+							type = chromium
+							amount = 36
+						}
+				}
+				add_tech_bonus = {
+					name = Brody_KingTiger_bonus
+					bonus = 3.75
+					uses = 2
+					technology = advanced_heavy_tank_chassis
+					technology = advanced_light_tank_chassis				
+				}					
+				add_tech_bonus = {
+					name = at_bonus
+					bonus = 3
+					uses = 4
+					category = cat_anti_tank
+				}		
+			}
+		}
+	
+	focus = {
+		id = GER_reequip_INF
+		icon = GFX_Generic_German_Soldiers2
+		relative_position_id = GER_battle_russia
+		prerequisite = { focus = GER_battle_russia focus = GER_battle_russia2 }
+		prerequisite = { focus = GER_integrate_war_economies }
+		mutually_exclusive = { focus = GER_reequip_AIR focus = GER_reequip_PZR }
+		x = 1
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+        available = {
+			has_war_with = SOV
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_reequip_INF_idea
+			add_tech_bonus = {
+				name = art3bonus
+				bonus = 1.00
+				uses = 1
+				technology = artillery4
+			}			
+		}
+	}
+
+	focus = {
+		id = GER_reequip_PZR
+		icon = GFX_ger_achtung_panzer
+		relative_position_id = GER_battle_russia
+		prerequisite = { focus = GER_battle_russia focus = GER_battle_russia2 }
+		prerequisite = { focus = GER_integrate_war_economies }		
+		mutually_exclusive = { focus = GER_reequip_AIR focus = GER_reequip_INF }
+		x = -1
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+        available = {
+			has_war_with = SOV
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_reequip_PZR_idea
+		}
+	}
+
+	focus = {
+		id = GER_reequip_AIR
+		icon = GFX_goal_luftwaffe
+		relative_position_id = GER_battle_russia
+		prerequisite = { focus = GER_battle_russia focus = GER_battle_russia2 }
+		prerequisite = { focus = GER_integrate_war_economies }		
+		mutually_exclusive = { focus = GER_reequip_PZR focus = GER_reequip_INF }
+		x = 3
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+        available = {
+			has_war_with = SOV
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_reequip_AIR_idea
+		}
+	}
 
 	focus = {
 		id = GER_Prepare_Endsieg
@@ -3515,177 +3685,6 @@ activate_mission = GER_relocate_industry_from_friesland
 				category = cat_anti_air
 			}			
 
-		}
-	}
-
-
-	focus = {
-		id = GER_battle_russia
-		icon = GFX_goal_ger_rasaineinei2
-		relative_position_id = GER_army_innovation
-		prerequisite = { focus = GER_army_innovation_2 }
-		mutually_exclusive = { focus = GER_battle_russia2 }		
-		x = -2
-		y = 4
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-        available = {
-			has_war_with = SOV
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			army_experience = 500
-			set_technology = {
-				improved_medium_tank_chassis = 1
-			}
-
-		202 = {
-					add_resource = {
-						type = tungsten
-						amount = 48
-					}
-
-			}
-			add_tech_bonus = {
-				name = Rasenai_Panther_bonus
-				bonus = 4
-				uses = 2
-				technology = advanced_medium_tank_chassis
-				technology = advanced_light_tank_chassis
-			}	
-			add_tech_bonus = {
-				name = at_bonus
-				bonus = 1.75
-				uses = 4
-				category = cat_anti_tank
-			}
-			}
-		}
-
-	focus = {
-		id = GER_battle_russia2
-		icon = GFX_goal_ger_rasaineinei2
-		relative_position_id = GER_army_innovation
-		prerequisite = { focus = GER_army_innovation_2 }
-		mutually_exclusive = { focus = GER_battle_russia }				
-		x = 0
-		y = 4
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-        available = {
-			has_war_with = SOV
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			army_experience = 500
-			set_technology = {
-				improved_heavy_tank_chassis = 1
-			}
-		202 = {
-					add_resource = {
-						type = chromium
-						amount = 36
-					}
-			}
-			add_tech_bonus = {
-				name = Brody_KingTiger_bonus
-				bonus = 3.75
-				uses = 2
-				technology = advanced_heavy_tank_chassis
-				technology = advanced_light_tank_chassis				
-			}					
-			add_tech_bonus = {
-				name = at_bonus
-				bonus = 3
-				uses = 4
-				category = cat_anti_tank
-			}		
-			}
-		}
-
-	focus = {
-		id = GER_reequip_INF
-		icon = GFX_Generic_German_Soldiers2
-		relative_position_id = GER_battle_russia
-		prerequisite = { focus = GER_battle_russia focus = GER_battle_russia2 }
-		prerequisite = { focus = GER_integrate_war_economies }
-		mutually_exclusive = { focus = GER_reequip_AIR focus = GER_reequip_PZR }
-		x = 1
-		y = 2
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-        available = {
-			has_war_with = SOV
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = GER_reequip_INF_idea
-			add_tech_bonus = {
-				name = art3bonus
-				bonus = 1.00
-				uses = 1
-				technology = artillery4
-			}			
-		}
-	}
-
-	focus = {
-		id = GER_reequip_PZR
-		icon = GFX_ger_achtung_panzer
-		relative_position_id = GER_battle_russia
-		prerequisite = { focus = GER_battle_russia focus = GER_battle_russia2 }
-		prerequisite = { focus = GER_integrate_war_economies }		
-		mutually_exclusive = { focus = GER_reequip_AIR focus = GER_reequip_INF }
-		x = -1
-		y = 2
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-        available = {
-			has_war_with = SOV
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = GER_reequip_PZR_idea
-		}
-	}
-
-	focus = {
-		id = GER_reequip_AIR
-		icon = GFX_goal_luftwaffe
-		relative_position_id = GER_battle_russia
-		prerequisite = { focus = GER_battle_russia focus = GER_battle_russia2 }
-		prerequisite = { focus = GER_integrate_war_economies }		
-		mutually_exclusive = { focus = GER_reequip_PZR focus = GER_reequip_INF }
-		x = 3
-		y = 2
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-        available = {
-			has_war_with = SOV
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = GER_reequip_AIR_idea
 		}
 	}
 

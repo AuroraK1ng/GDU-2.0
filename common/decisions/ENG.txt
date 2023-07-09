@@ -51,7 +51,7 @@ political_actions = {
 			has_government = democratic
 			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
 			has_war_with = GER
-			is_in_faction_with = FRF
+			is_in_faction_with = FRA
 		}
 
 		cost = 25
@@ -89,7 +89,7 @@ political_actions = {
 			has_government = democratic
 			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
 			has_war_with = GER
-			is_in_faction_with = FRF
+			is_in_faction_with = FRA
 		}
 
 		cost = 25
@@ -124,9 +124,9 @@ political_actions = {
 		}
 
 		visible = {
-			country_exists = FRF
+			country_exists = FRA
 			date > 1940.6.1
-			FRF = { is_ai = yes }
+			FRA = { is_ai = yes }
 
 		}
 		fire_only_once = yes
@@ -258,8 +258,8 @@ political_actions = {
 			original_tag = ENG
 		}
 		visible = {
-			FRF = { is_ai = yes }
-			country_exists = FRF
+			FRA = { is_ai = yes }
+			country_exists = FRA
 			date > 1939.1.1
 			has_global_flag = fall_of_france
 			has_war = yes
@@ -267,7 +267,7 @@ political_actions = {
 		fire_only_once = yes
 		complete_effect = {
 			ENG = {
-				annex_country = { target = FRF transfer_troops = yes }
+				annex_country = { target = FRA transfer_troops = yes }
 				add_ideas=annex_france_idea
 				add_timed_idea = { idea = GDU_minor_annexation_efficiency days = 30 }
 				
