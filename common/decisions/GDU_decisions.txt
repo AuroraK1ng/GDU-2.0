@@ -110,6 +110,105 @@ USA_foreign_politics = {
 }
 
 foreign_politics = {
+	GDU_pay_fine = {
+		allowed = {
+			has_country_flag = cheater_leader
+		}
+		available = {	
+			has_country_flag = cheater_leader
+
+		}
+		visible = {
+			has_country_flag = cheater_leader
+		}
+		days_remove = 50
+		complete_effect = {
+			custom_effect_tooltip = GDU_pay_fine_tt
+			add_ideas = GDU_fine
+			every_unit_leader = {
+				if = {
+					limit = {
+						has_trait = cheater
+					}
+					remove_trait = {
+						trait = cheater
+					}	
+					
+				}
+				if = {
+					limit = {
+						has_trait = ambusher
+					}
+					remove_trait = {
+						trait = ambusher
+					}
+				}
+				if = {
+					limit = {
+						has_trait = combined_arms_expert
+					}
+					remove_trait = {
+						trait = combined_arms_expert
+					}
+				}
+				if = {
+					limit = {
+						has_trait = scavenger
+					}
+					remove_trait = {
+						trait = scavenger
+					}
+				}
+				if = {
+					limit = {
+						has_trait = offensive_doctrine
+					}
+					remove_trait = {
+						trait = offensive_doctrine
+					}
+				}
+				if = {
+					limit = {
+						has_trait = aggressive_assaulter
+					}
+					remove_trait = {
+						trait = aggressive_assaulter
+					}
+				}
+				if = {
+					limit = {
+						has_trait = lancer
+					}
+					remove_trait = {
+						trait = lancer
+					}
+				}
+				if = {
+					limit = {
+						has_trait = fast_planner
+					}
+					remove_trait = {
+						trait = fast_planner
+					}
+				}
+				if = {
+					limit = {
+						has_trait = lone_wolf
+					}
+					remove_trait = {
+						trait = lone_wolf
+					}
+				}
+				
+			}
+			
+		}
+		remove_effect = { 
+			remove_ideas = GDU_fine
+			clr_country_flag = cheater_leader
+		}
+	}
+
 	GDU_rebuild_bb_ita = {
 		allowed = {
 			original_tag = ITA

@@ -106,3 +106,42 @@ is_playable_country = {
 		original_tag = FRA
 	}
 }
+
+filthy_cheater_leader_traits = {
+	OR = {
+		AND = {
+			has_trait = infantry_expert
+			has_trait = ambusher
+		}
+		AND = {
+			has_trait = panzer_expert
+			has_trait = combined_arms_expert
+		}
+		AND = {
+			has_trait = scavenger
+			has_trait = fortress_buster
+		}
+		AND = {
+			has_trait = offensive_doctrine
+			has_trait = defensive_doctrine
+		}
+		AND = {
+			has_trait = unyielding_defender
+			has_trait = aggressive_assaulter
+		}
+		AND = {
+			has_trait = fast_planner
+			has_trait = thorough_planner
+		}
+		AND = {
+			has_trait = silent_hunter
+			has_trait = lancer
+		}
+		AND = {
+			has_trait = lone_wolf
+			has_trait = concealment_expert
+		}
+		
+	}
+}
+

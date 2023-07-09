@@ -1184,7 +1184,28 @@ every_country = {
 			#
 		}
 	}
-	
+	on_monthly = {
+		effect = {   
+			every_unit_leader = {
+				if = {
+					limit = {
+						filthy_cheater_leader_traits = yes
+						
+					}
+					add_trait = {
+						character = ROOT
+						trait = cheater
+					}	
+					FROM = {
+						set_country_flag = cheater_leader
+					}
+					
+					
+				}
+				
+			}
+		}
+	}
 	#THIS IS THE AIRBASE LIMITER.
 	on_monthly_GER = {
 		effect = {
