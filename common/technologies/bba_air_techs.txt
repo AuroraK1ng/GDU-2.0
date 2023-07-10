@@ -252,10 +252,10 @@ technologies = {
 			
 		}
 		
-		#path = {
-		#	leads_to_tech = 
-		#	research_cost_coeff = 1
-		#}
+		path = {
+			leads_to_tech = modern_small_airframe
+			research_cost_coeff = 1
+		}
 		
 		research_cost = 2
 		start_year = 1944
@@ -308,7 +308,75 @@ technologies = {
 			}
 		}
 	}
+	modern_small_airframe = {
+
+		enable_equipments = {
+			jet_fighter_equipment_1
+		}
+		
+		path = {
+			leads_to_tech = jet_fighter2x
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			jet_engines = 1
+		}
+		
+		research_cost = 2
+		start_year = 1945
+
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = 3 y = 12 }							#changed x:0>3
+		}
+		
+		categories = {
+			light_air
+			light_fighter
+			cas_bomber
+			air_equipment
+			naval_air
+			naval_bomber
+			jet_technology
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_major = yes
+				factor = 2
+			}
+			modifier = {
+				tag = GER
+				factor = 2
+			}
+		}
+	}
 	
+	jet_fighter2x = {											#added
+
+		enable_equipments = {
+			jet_fighter_equipment_2
+		}
+		
+		research_cost = 2
+		start_year = 1950
+
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = 3 y = 14 }
+		}
+		
+		categories = {
+			light_air
+			jet_technology
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	cv_fighter3x = {											#added
 		allow = {
 			date > 1942.1.1
@@ -445,10 +513,10 @@ technologies = {
 			CAS_equipment_3
 		}
 		
-		#path = {
-		#	leads_to_tech = 
-		#	research_cost_coeff = 1
-		#}
+		path = {
+			leads_to_tech = modern_small_airframe
+			research_cost_coeff = 1
+		}
 		
 		research_cost = 2
 		start_year = 1944
@@ -606,10 +674,10 @@ technologies = {
 			nav_bomber_equipment_3
 		}
 		
-		#path = {
-		#	leads_to_tech = 
-		#	research_cost_coeff = 1
-		#}
+		path = {
+			leads_to_tech = modern_small_airframe
+			research_cost_coeff = 1
+		}
 		
 		research_cost = 2
 		start_year = 1944
