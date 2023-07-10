@@ -467,8 +467,8 @@ NDefines.NAir.AIR_COMBAT_FINAL_DAMAGE_SCALE = 0.2  -- 0.015	 % how many max disr
 
 NDefines.NAir.DISRUPTION_DETECTION_FACTOR = 1.0
 NDefines.NNavy.ENEMY_AIR_SUPERIORITY_IMPACT = -0.85        		-- effect on ship efficiency due to enemy air superiorty
-NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_STR = 2.0					-- Balancing value to convert damage ( naval_strike_attack * hits ) to Strength reduction.
-NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 8.0					-- Balancing value to convert damage ( naval_strike_attack * hits ) to Organisation reduction.
+NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_STR = 1.0					-- Balancing value to convert damage ( naval_strike_attack * hits ) to Strength reduction.
+NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 1.0					-- Balancing value to convert damage ( naval_strike_attack * hits ) to Organisation reduction.
 
 NDefines.NAir.MISSION_COMMAND_POWER_COSTS = {  -- command power cost per plane to create a mission
 		0.0, -- AIR_SUPERIORITY
@@ -488,17 +488,16 @@ NDefines.NAir.MISSION_COMMAND_POWER_COSTS = {  -- command power cost per plane t
 
 NDefines.NNavy.SPOTTING_ENEMY_SPOTTING_MULTIPLIER_FOR_RUNNING_AWAY = 0.10		-- enemy spotting is multiplied by this value to simulate running away
 
-NDefines.NNavy.NAVAL_STRIKE_CARRIER_MULTIPLIER = 20.0              -- damage bonus when planes are in naval combat where their carrier is present (and can thus sortie faster and more effectively)
+NDefines.NNavy.NAVAL_STRIKE_CARRIER_MULTIPLIER = 4.0              -- damage bonus when planes are in naval combat where their carrier is present (and can thus sortie faster and more effectively)
 
 NDefines.NAir.NAVAL_COMBAT_EXTERNAL_PLANES_JOIN_RATIO = 0.15		-- Max planes that can join a combat comparing to the total strength of the ships
 NDefines.NAir.NAVAL_COMBAT_EXTERNAL_PLANES_JOIN_RATIO_PER_DAY = 0.45 -- max extra plane % that can join every day
 NDefines.NAir.NAVAL_COMBAT_EXTERNAL_PLANES_MIN_CAP = 25			-- Min cap for planes that can join naval combat
 
 NDefines.NAir.HOURS_DELAY_AFTER_EACH_COMBAT = 4					-- How many hours needs the wing to be ready for the next combat. Use for tweaking if combats happens too often. (generally used as double because of roundtrip)
-
 NDefines.NAir.NAVAL_STRIKE_DETECTION_BALANCE_FACTOR = 0.08		-- Value used to scale the surface_visibility stats to balance the gameplay, so 100% detection chance still won't spam the strikes.
 
-NDefines.NAir.CARRIER_HOURS_DELAY_AFTER_EACH_COMBAT = 4         	-- how often carrier planes do battle inside naval combat
+NDefines.NAir.CARRIER_HOURS_DELAY_AFTER_EACH_COMBAT = 6         	-- how often carrier planes do battle inside naval combat
 NDefines.NNavy.CARRIER_STACK_PENALTY = 8  							-- The most efficient is 4 carriers in combat. 5+ brings the penalty to the amount of wings in battle.
 NDefines.NNavy.CARRIER_STACK_PENALTY_EFFECT = 0.99 					-- Each carrier above the optimal amount decreases the amount of airplanes being able to takeoff by such %.
 NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CAPITALS = 2.0 	-- this screen ratio to num capital/carriers is needed for full screening beyond screen line
