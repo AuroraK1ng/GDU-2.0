@@ -896,10 +896,10 @@ technologies = {
 			tac_bomber_equipment_3								#added
 		}
 		
-		#path = {
-		#	leads_to_tech = 
-		#	research_cost_coeff = 1
-		#}
+		path = {
+			leads_to_tech = modern_medium_airframe
+			research_cost_coeff = 1
+		}
 
 		research_cost = 2
 		start_year = 1944
@@ -937,53 +937,72 @@ technologies = {
 			}
 		}
 	}
-	
-	iw_large_airframe = {
+	modern_medium_airframe = {
 
 		enable_equipments = {
-			large_plane_airframe_0
-			large_plane_maritime_patrol_plane_airframe_0
+			jet_tac_bomber_equipment_1
 		}
 		
 		path = {
-			leads_to_tech = basic_large_airframe
+			leads_to_tech = jet_tactical_bomber2x
 			research_cost_coeff = 1
+		}
+		
+		dependencies = {
+			jet_engines = 1
 		}
 
 		research_cost = 2
-		start_year = 1926
+		start_year = 1945
+		
 		folder = {
-		name = bba_air_techs_folder
-		position = { x = 9 y = 2 }							#changed x:0>9
+			name = bba_air_techs_folder
+			position = { x = 13 y = 12 }						#changed x:2>13
 		}
 		
 		categories = {
-			heavy_air
-			air_equipment
-			cat_strategic_bomber
+			medium_air
+			jet_technology
+			cat_heavy_fighter
+			tactical_bomber
 		}
 		
 		ai_will_do = {
 			factor = 1
-			
 			modifier = {
-				factor = 5
-				tag = ENG
-			}
-			
-			modifier = {
-				factor = 5
-				tag = USA
+				is_major = yes
+				factor = 4
 			}
 		}
 	}
 	
+	jet_tactical_bomber2x = {									#added
+
+		enable_equipments = {
+			jet_tac_bomber_equipment_2
+		}
+		
+		research_cost = 2
+		start_year = 1950
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = 13 y = 14 }
+		}
+		
+		categories = {
+			medium_air
+			jet_technology
+			tactical_bomber
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	basic_large_airframe = {
 
 		enable_equipments = {
-			strat_bomber_equipment_simple_1							#added
-			large_plane_airframe_1
-			large_plane_maritime_patrol_plane_airframe_1
+			strat_bomber_equipment_1
 		}
 	
 		path = {
@@ -1022,9 +1041,7 @@ technologies = {
 	improved_large_airframe = {
 
 		enable_equipments = {
-			strat_bomber_equipment_simple_2							#added
-			large_plane_airframe_2
-			large_plane_maritime_patrol_plane_airframe_2
+			strat_bomber_equipment_2
 		}
 	
 		path = {
@@ -1063,9 +1080,7 @@ technologies = {
 	advanced_large_airframe = {
 
 		enable_equipments = {
-			strat_bomber_equipment_simple_3							#added
-			large_plane_airframe_3
-			large_plane_maritime_patrol_plane_airframe_3
+			strat_bomber_equipment_3
 		}
 		allow = {
 			date > 1942.1.1
@@ -1099,6 +1114,42 @@ technologies = {
 			modifier = {
 				factor = 5
 				tag = USA
+			}
+		}
+	}
+	modern_large_airframe = {
+
+		enable_equipments = {
+			jet_strat_bomber_equipment_1					
+			
+		}
+		
+		research_cost = 2
+		start_year = 1950
+
+		dependencies = {
+			jet_engines = 1
+		}
+
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = 9 y = 12 }							#changed x:0>17
+		}
+		
+		categories = {
+			heavy_air
+			jet_technology
+			cat_strategic_bomber
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_deployed_air_force_size = {
+					size > 500
+					type = strategic_bomber
+				}
+				factor = 4.5
 			}
 		}
 	}
