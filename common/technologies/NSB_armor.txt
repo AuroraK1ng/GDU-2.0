@@ -279,6 +279,7 @@ technologies = {
 			improved_light_tdx
 			improved_light_artx
 			improved_light_spaax
+			amphibious_tank
 		}
 
 		research_cost = 2
@@ -388,6 +389,65 @@ technologies = {
 		}
 	}
 
+	amphibious_tank = { #SchwimmPanzer II
+
+
+		enable_equipments = {
+			amphibious_tank_equipment_1
+		}
+
+		enable_subunits = {
+			amphibious_armor
+		}
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+		
+		research_cost = 0.5
+		start_year = 1940
+
+		categories = {
+			armor
+			
+		}
+	}
+
+	amphibious_tank_3 = { #Stridsvagn 103
+
+
+		enable_equipments = {
+			amphibious_tank_equipment_3
+		}
+		
+		research_cost = 0.5
+		start_year = 1942
+
+		allow = { 
+			date > 1940.6.1
+		}
+		
+		categories = {
+			armor
+			
+		}
+	}
+
+	amphibious_tank_2 = { #tauchPanzer III
+
+
+		enable_equipments = {
+			amphibious_tank_equipment_2
+		}
+		
+		research_cost = 0.5
+		start_year = 1942
+		
+		categories = {
+			armor
+			
+		}
+	}
 	advanced_light_tank_chassis = { #Leopard
 		allow = { 
 			date > 1939.1.1
@@ -515,6 +575,7 @@ technologies = {
 			basic_medium_tdx
 			basic_medium_artx
 			basic_medium_spaax
+			amphibious_tank_2
 		}
 
 		on_research_complete_limit = {
@@ -683,6 +744,7 @@ technologies = {
 			improved_medium_tdx
 			improved_medium_artx
 			improved_medium_spaax
+			amphibious_tank_3
 		}
 
 		path = {
