@@ -635,13 +635,13 @@ NDefines.NNavy.COMBAT_ARMOR_PIERCING_DAMAGE_REDUCTION = -0.75					-- All damage 
 
 NDefines.NNavy.GUN_HIT_PROFILES = { -- hit profiles for guns, if target ih profile is lower the gun will have lower accuracy		
 	        175.0,    -- big guns
-	        600.0,    -- torpedos
+	        880.0,    -- torpedos
 	        330.0,    -- small guns
 	   }					
 NDefines.NNavy.DEPTH_CHARGES_HIT_PROFILE = 300.0    -- hit profile for depth charges	
 NDefines.NNavy.BASE_GUN_COOLDOWNS = { -- number of hours for a gun to be ready after shooting
 		3.3,	-- big guns
-		2.7,	-- torpedos
+		2,	-- torpedos
 		1.1,	-- small guns
 	}
 			
