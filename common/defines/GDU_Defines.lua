@@ -210,7 +210,7 @@ NDefines.NBuildings.INFRA_TO_SUPPLY_COEFF = 1 -- Testing, 1 in vanilla -- TW/WTT
 NDefines.NBuildings.AIRBASE_CAPACITY_MULT = 100
 NDefines.NBuildings.DESTRUCTION_COOLDOWN_IN_WAR = 120
 NDefines.NBuildings.OWNER_CHANGE_EXTRA_SHARED_SLOTS_FACTOR = 1.0 --Scale factor of extra shared slots when state owner change.
-
+NDefines.NBuildings.MAX_SHARED_SLOTS = 50
 NDefines.NBuildings.SUPPLY_PORT_LEVEL_THROUGHPUT = 4   -- supply throughput per level of naval base
 
 -- speed at which ships are repaired increased:
@@ -231,12 +231,11 @@ NDefines.NPolitics.BASE_LEADER_TRAITS = 6
 NDefines.NMilitary.INFRA_ORG_IMPACT = 0.25				-- scale factor of infra on org regain.
 NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.0125                  -- basic speed control
 NDefines.NMilitary.INFRASTRUCTURE_MOVEMENT_SPEED_IMPACT = -0.02	-- speed penalty per infrastucture below maximum.
-
-
-
-
-
-
+NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 1000		-- how many divisions a corps commander is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.CORPS_COMMANDER_ARMIES_CAP = -1				-- how many armies a corps commander is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 1			-- how many divisions a field marshall is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 10				-- how many armies a field marshall is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 7;
 
 -- stacking penalty to nerf 20w
 
@@ -501,7 +500,7 @@ NDefines.NAir.NAVAL_STRIKE_DETECTION_BALANCE_FACTOR = 0.08		-- Value used to sca
 
 NDefines.NAir.CARRIER_HOURS_DELAY_AFTER_EACH_COMBAT = 4         	-- how often carrier planes do battle inside naval combat
 NDefines.NNavy.CARRIER_STACK_PENALTY = 6  							-- The most efficient is 4 carriers in combat. 5+ brings the penalty to the amount of wings in battle.
-NDefines.NNavy.CARRIER_STACK_PENALTY_EFFECT = 0.09 					-- Each carrier above the optimal amount decreases the amount of airplanes being able to takeoff by such %.
+NDefines.NNavy.CARRIER_STACK_PENALTY_EFFECT = 0.99 					-- Each carrier above the optimal amount decreases the amount of airplanes being able to takeoff by such %.
 NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CAPITALS = 2.0 	-- this screen ratio to num capital/carriers is needed for full screening beyond screen line
 NDefines.NNavy.CAPITAL_RATIO_FOR_FULL_SCREENING_FOR_CARRIERS = 1.0
 
@@ -678,7 +677,7 @@ NDefines.NNavy.NAVY_VISIBILITY_BONUS_ON_RETURN_FOR_REPAIR = 0.01            -- M
 NDefines.NNavy.BASE_POSITIONING = 1.0
 NDefines.NNavy.RELATIVE_SURFACE_DETECTION_TO_POSITIONING_FACTOR = 0.03 -- multiples the surface detection difference between two sides. the side with higher detection will get a bonus of this value
 NDefines.NNavy.MAX_POSITIONING_BONUS_FROM_SURFACE_DETECTION = 0.15 -- will clamp the bonus that you get from detection
-NDefines.NNavy.HIGHER_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR = 0.4  -- penalty if other side has stronger carrier air force 
+NDefines.NNavy.HIGHER_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR = 0.05  -- penalty if other side has stronger carrier air force 
 NDefines.NNavy.MAX_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR = 0.3  -- max penalty from stronger carrier air force
 NDefines.NNavy.MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO = 1.5  		-- maximum penalty to get from larger fleets
 NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR = 1.25 			-- (0.25 -> 0.45) this basically means that if the enemy fleet is 45% the size of your fleet you take maximum positioning penalty from fleet size, about -25% attack, -25% screening, -35% aa. I would avoid increasing the maximum too much since it might to lead to some absurd results
@@ -731,3 +730,48 @@ NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_DIRECT_DISRUPTION_DAMAGE_FACTOR	 =  0
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_TRUCK_MAX_FACTOR = 0 
 ------flit sooply - - -----
 NDefines.NNavy.SUPPLY_NEED_FACTOR = 0.0
+
+--- New Supply defines
+
+NDefines.NMilitary.COMBAT_SUPPLY_LACK_ATTACKER_ATTACK = -0.20
+NDefines.NAI.FIX_SUPPLY_BOTTLENECK_SATURATION_THRESHOLD = 0.75
+NDefines.NSupply.CAPITAL_SUPPLY_BASE = 8.0
+NDefines.NSupply.CAPITAL_SUPPLY_CIVILIAN_FACTORIES = 0.9
+NDefines.NSupply.CAPITAL_SUPPLY_MILITARY_FACTORIES = 0.9
+NDefines.NSupply.CAPITAL_SUPPLY_DOCKYARDS = 0.8
+NDefines.NSupply.CAPITAL_INITIAL_SUPPLY_FLOW = 10.0
+NDefines.NSupply.CAPITAL_STARTING_PENALTY_PER_PROVINCE = 0.25
+NDefines.NSupply.CAPITAL_ADDED_PENALTY_PER_PROVINCE = 0.6
+NDefines.NSupply.NODE_INITIAL_SUPPLY_FLOW = 4.2
+NDefines.NSupply.NAVAL_BASE_INITIAL_SUPPLY_FLOW = 7.0
+NDefines.NSupply.NAVAL_BASE_STARTING_PENALTY_PER_PROVINCE = 0.5
+NDefines.NSupply.NAVAL_BASE_ADDED_PENALTY_PER_PROVINCE = 0.5
+NDefines.NSupply.NODE_FLOW_BONUS_PER_RAIL_LEVEL = 0.70
+NDefines.NSupply.FLOATING_HARBOR_INITIAL_SUPPLY_FLOW = 4.0
+NDefines.NSupply.FLOATING_HARBOR_STARTING_PENALTY_PER_PROVINCE = 0.5
+NDefines.NSupply.FLOATING_HARBOR_ADDED_PENALTY_PER_PROVINCE = 0.6
+NDefines.NSupply.FLOATING_HARBOR_BASE_SUPPLY = 20.0
+NDefines.NSupply.FLOATING_HARBOR_BASE_DURATION = 28
+NDefines.NSupply.FLOATING_HARBOR_MIN_DECAY = 0.1
+NDefines.NSupply.SUPPLY_FLOW_DROP_REDUCTION_AT_MAX_INFRA = 0.60
+NDefines.NSupply.SUPPLY_FLOW_PENALTY_CROSSING_RIVERS = 0.05
+NDefines.NSupply.SUPPLY_FLOW_DIST_LOGISTICS_FALLOFF_K = 1.0
+NDefines.NSupply.SUPPLY_HUB_FULL_MOTORIZATION_BONUS = 3.0
+NDefines.NSupply.SUPPLY_HUB_FULL_MOTORIZATION_TRUCK_COST = 50.0
+NDefines.NSupply.SUPPLY_HUB_MOTORIZATION_MARGINAL_EFFECT_DECAY = 1.0
+NDefines.NSupply.RAILWAY_BASE_FLOW = 8.0
+NDefines.NSupply.RAILWAY_FLOW_PER_LEVEL = 7.0
+NDefines.NSupply.RAILWAY_MIN_FLOW = 5.0
+NDefines.NSupply.NAVAL_BASE_FLOW = 8.0
+NDefines.NSupply.NAVAL_FLOW_PER_LEVEL = 5.0
+NDefines.NSupply.INFRA_TO_SUPPLY = 0.6
+NDefines.NSupply.VP_TO_SUPPLY_BASE = 0.4
+NDefines.NSupply.SUPPLY_FROM_DAMAGED_INFRA = 0.2
+NDefines.NSupply.SUPPLY_BASE_MULT = 0.4
+NDefines.NSupply.RAILWAY_CONVERSION_COOLDOWN = 2
+NDefines.NSupply.RAILWAY_CONVERSION_COOLDOWN_CORE = 1
+NDefines.NSupply.MIN_TRAIN_SUPPLY_FACTOR = 0.2
+NDefines.NSupply.DAYS_TO_START_GIVING_SUPPLY_AFTER_MOVING_SUPPLY_CAPITAL = 4
+NDefines.NSupply.SUPPLY_PATH_MAX_DISTANCE = 10
+NDefines.NSupply.ALERT_VERY_LOW_SUPPLY_LEVEL = 0.5
+NDefines.NSupply.ALERT_LOW_SUPPLY_LEVEL = 0.9
