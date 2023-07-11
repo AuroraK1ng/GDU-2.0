@@ -1,73 +1,80 @@
 upgrades = {
-	
-	tank_gun_upgrade = {
-		max_level = 5
 
-		cost = land				# This determies how much XP it will cost, controlled by defines, there are 3 cost types: air, land and naval
-		soft_attack = 0.04
-		hard_attack = 0.12
-		maximum_speed = -0.01
-		reliability = -0.05
-	}
-	tank_armor_upgrade = {
-		max_level = 5
+	tank_nsb_engine_upgrade = {
+		abbreviation = "eng"
+		max_level = 10 #each level represents ~50HP
 		cost = land
-		defense = 0.05
-		breakthrough = 0.04
-		maximum_speed = -0.01
-		reliability = -0.015
-	}
-	tank_engine_upgrade = {
-		max_level = 5
-		cost = land
-		maximum_speed = 0.04
-	}	
-	tank_reliability_upgrade = {
-		max_level = 5
-		cost = land
-		reliability = 0.06
-	}
-	variant_armor_upgrade = {
-		max_level = 3
-		cost = land
-		defense = 0.0833
-		breakthrough = 0.0667
-		maximum_speed = -0.0167
-		reliability = -0.025
-	}
-	variant_engine_upgrade = {
-		max_level = 3
-		cost = land
-		maximum_speed = 0.0667
-	}	
-	variant_reliability_upgrade = {
-		max_level = 3
-		cost = land
-		reliability = 0.1
-	}	
-	spaa_gun_upgrade = {
-		max_level = 3
 
-		cost = land
-		air_attack = 0.0833
-		maximum_speed = -0.0167
-		reliability = -0.0833
-	}
-	td_gun_upgrade = {
-		max_level = 3
+		level_requirements = {
+			3 = {
+				has_tech = engine_tech_1
+			}
+			6 = {
+				has_tech = engine_tech_2
+			}
+			8 = {
+				has_tech = engine_tech_3
+			}
+			10 = { 
+				has_tech = engine_tech_4
+			}
+		}
 
-		cost = land
-		soft_attack = 0.133
-		hard_attack = 0.133
-		maximum_speed = -0.0167
-		reliability = -0.0833
-	}
-	spg_gun_upgrade = {
-		max_level = 3
+		resource_cost_thresholds = {
+			10 = { #higher level engines do require more strategic resources
+				#chromium = 1
+			}
+		}
 
+		maximum_speed = 0.05
+		add_stats = {
+			build_cost_ic = 0.12
+		}
+	}
+
+	tank_nsb_armor_upgrade = {
+		abbreviation = "arm"
+		max_level = 10 #each level represents ~10mm of armor 
 		cost = land
-		soft_attack = 0.04
-		maximum_speed = -0.0167
-		reliability = -0.0833
+
+		linear_cost = {
+		}
+
+		level_requirements = {
+			3 = {
+				has_tech = armor_tech_1
+			}
+			6 = {
+				has_tech = armor_tech_2
+			}
+			8 = {
+				has_tech = armor_tech_3
+			}
+			10 = { 
+				has_tech = armor_tech_4
+			}
+		}
+
+##		resource_cost_thresholds = { # resource values defined here are TOTAL added cost, not cumulative
+##			5 = { #more armor requires more resources
+##				steel = 1 
+##			}
+##			10 = {
+##				steel = 1
+##				#chromium = 1
+##			}
+##			15 = {
+##				steel = 1
+##				#chromium = 2
+##			}
+##		}
+
+		maximum_speed = -0.02
+		add_stats = {
+			breakthrough = 0.2
+			defense = 0.5
+			build_cost_ic = 0.12
+
+		}
 	}
 }
