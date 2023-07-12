@@ -553,7 +553,7 @@ NDefines.NNavy.SUBMARINE_ESCAPE_RATIOS = { -- subs will escape battle in convoy 
 	
 NDefines.NNavy.COMBAT_DAMAGE_RANDOMNESS = 1.5
 
-NDefines.NNavy.COMBAT_CRITICAL_DAMAGE_MULT = 30.0								-- vanilla was 5 - Multiplier for the critical damage. Scaled down with the ship reliability.
+NDefines.NNavy.COMBAT_CRITICAL_DAMAGE_MULT = 10.0								-- vanilla was 5 - Multiplier for the critical damage. Scaled down with the ship reliability.
 
 
 --- Naval Defines Related to USW and ASW 
