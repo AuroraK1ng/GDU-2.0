@@ -4053,6 +4053,7 @@ land_reinforce_rate = 0.05
 
 		category_all_infantry = {
 			hard_attack = 0.2
+			soft_attack = 0.2
 		}
 		
 		
@@ -4165,11 +4166,12 @@ land_reinforce_rate = 0.05
 		xp_research_type = army
 
 		category_light_infantry = {
-			max_organisation = 10
+			max_organisation = 20
 		}
 
 		artillery_brigade = {
 			breakthrough = 0.10
+			soft_attack = 0.10
 		}
 		
 		
@@ -4212,7 +4214,7 @@ land_reinforce_rate = 0.05
 		xp_research_bonus = 0.5
 		xp_research_type = army
 
-		conscription = 0.015
+		conscription = 0.03
 
 		infantry = {
 			combat_width = -0.4
@@ -4261,10 +4263,10 @@ land_reinforce_rate = 0.05
 		
 		out_of_supply_factor = -0.1
 		category_army = {
-			default_morale = 0.15
+			default_morale = 0.25
 		}
 		
-		supply_consumption_factor = -0.15
+		supply_consumption_factor = -0.2
 		
 
 		#partisan_effect = 0.2
