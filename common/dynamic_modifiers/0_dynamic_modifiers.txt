@@ -1,4 +1,4 @@
-а#	Example:
+#	Example:
 # 
 #	example_dynamic_modifier = {
 #		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
@@ -23,64 +23,64 @@
 #
 #	can be added to countries, states or unit leaders
 #	will only updated daily, unless forced by force_update_dynamic_modifier effect
-
-BUL_foreign_industry_dynamic_modifier = { #Used as National Spirit
-	enable = { always = yes }
-
-	icon = GFX_idea_man_five_year_plan_industry
-
-	political_power_gain = 0.05
-	production_speed_buildings_factor = BUL_foreign_industry_construction_speed_modifier
-	industrial_capacity_factory = -0.02
-	production_factory_efficiency_gain_factor = BUL_foreign_industry_production_efficiency_modifier
-	production_factory_max_efficiency_factor = BUL_foreign_industry_production_efficiency_modifier
-	consumer_goods_factor = BUL_foreign_industry_consumer_goods_modifier
-}
-
-skirmishes_against_imro = {
-	enable = { always = yes }
-
-	icon = GFX_modifiers_bul_macedonian_revolutionaries
-	
-	state_resources_factor = -0.75
-	state_production_speed_buildings_factor = -0.75
-	army_speed_factor_for_controller = -0.25
-	attrition_for_controller = 1
-	local_org_regain = -0.75
-	disable_strategic_redeployment = 1
-}
-widespread_bulgarian_sentiment_01 = {
-	enable = { always = yes }
-
-	icon = GFX_modifiers_bul_arranged_bulgarian_occupation
-	
-	compliance_growth = -0.1
-	resistance_growth = 0.1
-	resistance_target = 0.1
-	resistance_decay = -0.1
-	state_resources_factor = -0.1
-	local_factories = -0.1
-}
-
-widespread_bulgarian_sentiment_02 = {
-	enable = { always = yes }
-
-	icon = GFX_modifiers_bul_arranged_bulgarian_occupation
-	
-	compliance_growth = 0.1
-	resistance_growth = -0.1
-	resistance_target = -0.1
-	resistance_decay = 0.1
-	state_resources_factor = 0.1
-	local_factories = 0.1
-}
-
-BUL_our_duty_in_the_balkans_dynamic_modifier = { #Used as National Spirit
-	enable = { always = yes }
-
-	icon = GFX_idea_generic_fortify_the_borders
-
-	consumer_goods_factor = BUL_our_duty_in_the_balkans_consumer_goods_modifier
-	stability_factor = BUL_our_duty_in_the_balkans_stability_modifier
-	weekly_manpower = 1000
-}
+#
+#BUL_foreign_industry_dynamic_modifier = { #Used as National Spirit
+#	enable = { always = yes }
+#
+#	icon = GFX_idea_man_five_year_plan_industry
+#
+#	political_power_gain = 0.05
+#	production_speed_buildings_factor = BUL_foreign_industry_construction_speed_modifier
+#	industrial_capacity_factory = -0.02
+#	production_factory_efficiency_gain_factor = BUL_foreign_industry_production_efficiency_modifier
+#	production_factory_max_efficiency_factor = BUL_foreign_industry_production_efficiency_modifier
+#	consumer_goods_factor = BUL_foreign_industry_consumer_goods_modifier
+#}
+#
+#skirmishes_against_imro = {
+#	enable = { always = yes }
+#
+#	icon = GFX_modifiers_bul_macedonian_revolutionaries
+#	
+#	state_resources_factor = -0.75
+#	state_production_speed_buildings_factor = -0.75
+#	army_speed_factor_for_controller = -0.25
+#	attrition_for_controller = 1
+#	local_org_regain = -0.75
+#	disable_strategic_redeployment = 1
+#}
+#widespread_bulgarian_sentiment_01 = {
+#	enable = { always = yes }
+#
+#	icon = GFX_modifiers_bul_arranged_bulgarian_occupation
+#	
+#	compliance_growth = -0.1
+#	resistance_growth = 0.1
+#	resistance_target = 0.1
+#	resistance_decay = -0.1
+#	state_resources_factor = -0.1
+#	local_factories = -0.1
+#}
+#
+#widespread_bulgarian_sentiment_02 = {
+#	enable = { always = yes }
+#
+#	icon = GFX_modifiers_bul_arranged_bulgarian_occupation
+#	
+#	compliance_growth = 0.1
+#	resistance_growth = -0.1
+#	resistance_target = -0.1
+#	resistance_decay = 0.1
+#	state_resources_factor = 0.1
+#	local_factories = 0.1
+#}
+#
+#BUL_our_duty_in_the_balkans_dynamic_modifier = { #Used as National Spirit
+#	enable = { always = yes }
+#
+#	icon = GFX_idea_generic_fortify_the_borders
+#
+#	consumer_goods_factor = BUL_our_duty_in_the_balkans_consumer_goods_modifier
+#	stability_factor = BUL_our_duty_in_the_balkans_stability_modifier
+#	weekly_manpower = 1000
+#}
