@@ -50,6 +50,34 @@ ROM_GUIDE = {
 }
 USA_foreign_politics = {
 
+	GDU_USA_RecruitNimitz = {
+		icon = GFX_decision_usa_congress
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			USA = { has_war_with = JAP }
+			date > 1942.6.1
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		visible = {
+			tag = USA
+		}
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			recruit_character = USA_chester_w_nimitz_2
+		}
+
+		
+	}
 	GDU_USA_BombayNavalBase = {
 		icon = GFX_decision_usa_congress
 
