@@ -641,7 +641,7 @@ NDefines.NNavy.DEPTH_CHARGES_HIT_PROFILE = 300.0    -- hit profile for depth cha
 NDefines.NNavy.BASE_GUN_COOLDOWNS = { -- number of hours for a gun to be ready after shooting
 		3.3,	-- big guns
 		2.7,	-- torpedos
-		1.2,	-- small guns
+		1.3,	-- small guns
 	}
 			
 NDefines.NNavy.COMBAT_BASE_HIT_CHANCE = 1.0                                    -- base chance for hit
