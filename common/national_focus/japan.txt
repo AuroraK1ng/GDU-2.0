@@ -154,7 +154,7 @@ focus_tree = {
 		navy_experience = 1000
 
         SOV = {
-		army_experience = 1000					  
+		army_experience = 1000
         air_experience  = 300
                 }
         GER = {
@@ -192,7 +192,7 @@ focus_tree = {
                 }
         NZL = {
         army_experience = 100
-                }			
+                }
 	   transfer_state = 608
        transfer_state = 614
        transfer_state = 597
@@ -355,7 +355,7 @@ focus_tree = {
 				bonus = 1.0
 				uses = 2
 				category = naval_doctrine
-			}									 
+			}
 		}
 	}
 
@@ -403,7 +403,7 @@ focus_tree = {
 
 		cost = 2
 
-		
+
 
 		available = {
 		}
@@ -424,7 +424,7 @@ focus_tree = {
 			add_ideas = The_Manchurian_Project
 		}
 	}
-	
+
 	focus = {
 		id = JAP_expand_manchurian_farms_and_mines
 		icon = GFX_focus_generic_industry_3
@@ -434,8 +434,8 @@ focus_tree = {
 
 		cost = 2
 
-	
-		
+
+
 
 		complete_tooltip = {
 
@@ -455,7 +455,7 @@ focus_tree = {
 						type = steel
 						amount = 8
 					}
-			}	
+			}
 		714 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -469,7 +469,7 @@ focus_tree = {
 						type = steel
 						amount = 8
 					}
-			}	
+			}
 		761 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -484,11 +484,11 @@ focus_tree = {
 						amount = 8
 					}
 			}
-			
-			
+
+
 		}
 	}
-	
+
 	focus = {
 		id = JAP_Begin_Exploitation_of_South_East_Asia
 		icon = GFX_focus_jap_strike_south
@@ -498,11 +498,11 @@ focus_tree = {
 
 		cost = 0
 
-	
+
 		available = {
 			336 = {
 				NOT = { is_controlled_by = ENG }
-				NOT = { is_controlled_by = AST }				
+				NOT = { is_controlled_by = AST }
 			}
 			327 = {
 				NOT = { is_controlled_by = USA }
@@ -513,17 +513,17 @@ focus_tree = {
 			333	= {
 				NOT = { is_controlled_by = ENG }
 				NOT = { is_controlled_by = AST }
-				NOT = { is_controlled_by = INS }				
+				NOT = { is_controlled_by = INS }
 			}
 			334 = {
 				NOT = { is_controlled_by = ENG }
 				NOT = { is_controlled_by = AST }
-				NOT = { is_controlled_by = INS }	
+				NOT = { is_controlled_by = INS }
 			}
 			672 = {
 				NOT = { is_controlled_by = ENG }
 				NOT = { is_controlled_by = AST }
-				NOT = { is_controlled_by = INS }	
+				NOT = { is_controlled_by = INS }
 			}
 			335 = {
 				NOT = { is_controlled_by = ENG }
@@ -548,7 +548,7 @@ focus_tree = {
 						type = steel
 						amount = 8
 					}
-			}		
+			}
 		623 = {
 					add_resource = {
 						type = steel
@@ -566,19 +566,19 @@ focus_tree = {
 						type = steel
 						amount = 8
 					}
-			}	
+			}
 		672 = {
 					add_resource = {
 						type = steel
 						amount = 8
 					}
-			}	
+			}
 		335 = {
 					add_resource = {
 						type = steel
 						amount = 8
 					}
-			}	
+			}
 			336 = {
 				add_resource = {
 					type = aluminium
@@ -629,9 +629,9 @@ focus_tree = {
 			if = {
 				limit = { has_dlc = "Waking the Tiger" }
 				unlock_decision_category_tooltip = prospect_for_resources
-			}		
+			}
 		}
-		
+
 	}
 
 	focus = {
@@ -647,18 +647,18 @@ focus_tree = {
 		cancel_if_invalid = no
 		available_if_capitulated = no
 
-		
+
 
 		available = {
 			288 = {
 				NOT = { is_controlled_by = RAJ }
 				NOT = { is_controlled_by = ENG }
 			}
-			640 = { 
+			640 = {
 				NOT = { is_controlled_by = RAJ }
 				NOT = { is_controlled_by = ENG }
 			}
-	
+
 		}
 
 		complete_tooltip = {
@@ -678,11 +678,11 @@ focus_tree = {
 						amount = 10
 					}
 			}
-		
+
 		}
-		
+
 	}
-	
+
 	focus = {
 		id = JAP_The_Greater_East_Asia_Co-Prosperity_Sphere
 		icon = GFX_focus_usa_focus_on_asia1
@@ -701,12 +701,12 @@ focus_tree = {
 			669 = {
 				NOT = { is_controlled_by = ENG }
 				NOT = { is_controlled_by = AST }
-				NOT = { is_controlled_by = INS }	
+				NOT = { is_controlled_by = INS }
 			}
 			523 = {
 				NOT = { is_controlled_by = ENG }
 				NOT = { is_controlled_by = AST }
-				NOT = { is_controlled_by = INS }	
+				NOT = { is_controlled_by = INS }
 			}
 			336 = {
 				NOT = { is_controlled_by = ENG }
@@ -721,24 +721,24 @@ focus_tree = {
 			333	= {
 				NOT = { is_controlled_by = ENG }
 				NOT = { is_controlled_by = AST }
-				NOT = { is_controlled_by = INS }	
+				NOT = { is_controlled_by = INS }
 			}
 			334 = {
 				NOT = { is_controlled_by = ENG }
 				NOT = { is_controlled_by = AST }
-				NOT = { is_controlled_by = INS }	
+				NOT = { is_controlled_by = INS }
 			}
 			672 = {
 				NOT = { is_controlled_by = ENG }
 				NOT = { is_controlled_by = AST }
-				NOT = { is_controlled_by = INS }	
+				NOT = { is_controlled_by = INS }
 			}
 			335 = {
 				NOT = { is_controlled_by = ENG }
 				NOT = { is_controlled_by = AST }
-				NOT = { is_controlled_by = INS }	
+				NOT = { is_controlled_by = INS }
 			}
-	
+
 		}
 
 		complete_tooltip = {
@@ -746,23 +746,23 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		
+
 		add_ideas = The_East_Asian_Leader
-		
+
 		hidden_effect = {
 				remove_ideas = The_Manchurian_Project
 			}
-		
+
 		}
-		
+
 	}
-	
+
 	focus = {
 		id = JAP_army_expansion_law
 		icon = GFX_jap_officer_hat
 		x = 22
 		y = 0
-		
+
 
 		cost = 5
 
@@ -790,7 +790,7 @@ focus_tree = {
 				category = land_doctrine
 			}
 			army_experience = 30
-		}				
+		}
 	}
 
 	focus = {
@@ -842,7 +842,7 @@ focus_tree = {
 
 		cost = 10
 
-		
+
 
 		available = {
 
@@ -915,7 +915,7 @@ focus_tree = {
 				uses = 3
 				technology = advanced_medium_tank_chassis
 				technology = advanced_heavy_tank_chassis
-				technology = advanced_light_tank_chassis				
+				technology = advanced_light_tank_chassis
 			}
 			add_tech_bonus = {
 				bonus = 2.0
@@ -976,13 +976,13 @@ focus_tree = {
 
 		}
 	}
-	
-	
+
+
 	focus = {
 		id = JAP_attack_SOV_USA
 		icon = GFX_JAP_tsunami2
 		prerequisite = { focus = JAP_Begin_Exploitation_of_South_East_Asia }
-		prerequisite = { focus = JAP_strike_on_the_southern_resource_area }		
+		prerequisite = { focus = JAP_strike_on_the_southern_resource_area }
 		x = -3
 		y = 3
 		relative_position_id = JAP_strike_south_doctrine
@@ -990,7 +990,7 @@ focus_tree = {
 		mutually_exclusive = { focus = JAP_attack_SOV_1of3 }
 		mutually_exclusive = { focus = JAP_attack_SOV_2of3 }
 		mutually_exclusive = { focus = JAP_attack_SOV_3of3 }
-		mutually_exclusive = { focus = JAP_attack_SOV_USA }	
+		mutually_exclusive = { focus = JAP_attack_SOV_USA }
 
 		cost = 10
 
@@ -1008,19 +1008,19 @@ focus_tree = {
 		completion_reward = {
 			JAP = {
 				declare_war_on = {
-					target = SOV 
+					target = SOV
 					type = annex_everything
 				}
-			remove_ideas = JAP_SOV_neutrality	
-			}		
+			remove_ideas = JAP_SOV_neutrality
+			}
 		}
-	}	
-	
+	}
+
 	focus = {
 		id = JAP_attack_SOV_1of3
 		icon = GFX_JAP_tsunami2
 		prerequisite = { focus = JAP_Begin_Exploitation_of_South_East_Asia }
-		prerequisite = { focus = JAP_strike_on_the_southern_resource_area }		
+		prerequisite = { focus = JAP_strike_on_the_southern_resource_area }
 		x = -1
 		y = 3
 		relative_position_id = JAP_strike_south_doctrine
@@ -1028,7 +1028,7 @@ focus_tree = {
 		mutually_exclusive = { focus = JAP_attack_SOV_1of3 }
 		mutually_exclusive = { focus = JAP_attack_SOV_2of3 }
 		mutually_exclusive = { focus = JAP_attack_SOV_3of3 }
-		mutually_exclusive = { focus = JAP_attack_SOV_USA }	
+		mutually_exclusive = { focus = JAP_attack_SOV_USA }
 
 		cost = 10
 
@@ -1037,29 +1037,29 @@ focus_tree = {
 			JAP = { surrender_progress < 0.01 }
 			OR = {
 				AND = {
-					NOT = { 
+					NOT = {
 						275 = {
 							OR = {
 								is_controlled_by = SAF
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
-					NOT = { 
+					NOT = {
 						681 = {
 							OR = {
 								is_controlled_by = SAF
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
-					}					
+					}
 				}
 				AND = {
-					NOT = { 
+					NOT = {
 						439 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1067,7 +1067,7 @@ focus_tree = {
 						443 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1075,7 +1075,7 @@ focus_tree = {
 						429 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1083,7 +1083,7 @@ focus_tree = {
 						423 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1091,17 +1091,17 @@ focus_tree = {
 						430 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
-					}						
+					}
 				}
 				AND = {
-					NOT = { 
+					NOT = {
 						674 = {
 							OR = {
 								is_controlled_by = AST
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1109,7 +1109,7 @@ focus_tree = {
 						285 = {
 							OR = {
 								is_controlled_by = AST
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1117,7 +1117,7 @@ focus_tree = {
 						517 = {
 							OR = {
 								is_controlled_by = AST
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1125,7 +1125,7 @@ focus_tree = {
 						521 = {
 							OR = {
 								is_controlled_by = AST
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1133,7 +1133,7 @@ focus_tree = {
 						522 = {
 							OR = {
 								is_controlled_by = AST
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1142,7 +1142,7 @@ focus_tree = {
 							OR = {
 								is_controlled_by = AST
 								is_controlled_by = ENG
-								is_controlled_by = NZL								
+								is_controlled_by = NZL
 							}
 						}
 					}
@@ -1151,11 +1151,11 @@ focus_tree = {
 							OR = {
 								is_controlled_by = AST
 								is_controlled_by = ENG
-								is_controlled_by = NZL								
+								is_controlled_by = NZL
 							}
 						}
-					}					
-				}					
+					}
+				}
 			}
 		}
 
@@ -1169,19 +1169,19 @@ focus_tree = {
 		completion_reward = {
 			JAP = {
 				declare_war_on = {
-					target = SOV 
+					target = SOV
 					type = annex_everything
 				}
 				remove_ideas = JAP_SOV_neutrality
 			}
 		}
 	}
-	
+
 	focus = {
 		id = JAP_attack_SOV_2of3
 		icon = GFX_JAP_tsunami2
 		prerequisite = { focus = JAP_Begin_Exploitation_of_South_East_Asia }
-		prerequisite = { focus = JAP_strike_on_the_southern_resource_area }		
+		prerequisite = { focus = JAP_strike_on_the_southern_resource_area }
 		x = 1
 		y = 3
 		relative_position_id = JAP_strike_south_doctrine
@@ -1189,7 +1189,7 @@ focus_tree = {
 		mutually_exclusive = { focus = JAP_attack_SOV_1of3 }
 		mutually_exclusive = { focus = JAP_attack_SOV_2of3 }
 		mutually_exclusive = { focus = JAP_attack_SOV_3of3 }
-		mutually_exclusive = { focus = JAP_attack_SOV_USA }	
+		mutually_exclusive = { focus = JAP_attack_SOV_USA }
 
 		cost = 10
 
@@ -1198,27 +1198,27 @@ focus_tree = {
 			JAP = { surrender_progress < 0.01 }
 			OR = {
 				AND = {
-					NOT = { 
+					NOT = {
 						275 = {
 							OR = {
 								is_controlled_by = SAF
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
-					NOT = { 
+					NOT = {
 						681 = {
 							OR = {
 								is_controlled_by = SAF
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
-					}					
-					NOT = { 
+					}
+					NOT = {
 						439 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1226,7 +1226,7 @@ focus_tree = {
 						443 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1234,7 +1234,7 @@ focus_tree = {
 						429 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1242,7 +1242,7 @@ focus_tree = {
 						423 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1250,33 +1250,33 @@ focus_tree = {
 						430 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
-							}
-						}
-					}						
-				}
-				AND = {
-					NOT = { 
-						275 = {
-							OR = {
-								is_controlled_by = SAF
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
-					NOT = { 
+				}
+				AND = {
+					NOT = {
+						275 = {
+							OR = {
+								is_controlled_by = SAF
+								is_controlled_by = ENG
+							}
+						}
+					}
+					NOT = {
 						681 = {
 							OR = {
 								is_controlled_by = SAF
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
-					}					
-					NOT = { 
+					}
+					NOT = {
 						674 = {
 							OR = {
 								is_controlled_by = AST
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1284,7 +1284,7 @@ focus_tree = {
 						285 = {
 							OR = {
 								is_controlled_by = AST
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1292,7 +1292,7 @@ focus_tree = {
 						517 = {
 							OR = {
 								is_controlled_by = AST
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1300,7 +1300,7 @@ focus_tree = {
 						521 = {
 							OR = {
 								is_controlled_by = AST
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1308,7 +1308,7 @@ focus_tree = {
 						522 = {
 							OR = {
 								is_controlled_by = AST
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1317,7 +1317,7 @@ focus_tree = {
 							OR = {
 								is_controlled_by = AST
 								is_controlled_by = ENG
-								is_controlled_by = NZL								
+								is_controlled_by = NZL
 							}
 						}
 					}
@@ -1326,17 +1326,17 @@ focus_tree = {
 							OR = {
 								is_controlled_by = AST
 								is_controlled_by = ENG
-								is_controlled_by = NZL								
+								is_controlled_by = NZL
 							}
 						}
-					}					
+					}
 				}
 				AND = {
-					NOT = { 
+					NOT = {
 						439 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1344,7 +1344,7 @@ focus_tree = {
 						443 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1352,7 +1352,7 @@ focus_tree = {
 						429 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1360,7 +1360,7 @@ focus_tree = {
 						423 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1368,15 +1368,15 @@ focus_tree = {
 						430 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
-					}				
-					NOT = { 
+					}
+					NOT = {
 						674 = {
 							OR = {
 								is_controlled_by = AST
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1384,7 +1384,7 @@ focus_tree = {
 						285 = {
 							OR = {
 								is_controlled_by = AST
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1392,7 +1392,7 @@ focus_tree = {
 						517 = {
 							OR = {
 								is_controlled_by = AST
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1400,7 +1400,7 @@ focus_tree = {
 						521 = {
 							OR = {
 								is_controlled_by = AST
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1408,7 +1408,7 @@ focus_tree = {
 						522 = {
 							OR = {
 								is_controlled_by = AST
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1417,7 +1417,7 @@ focus_tree = {
 							OR = {
 								is_controlled_by = AST
 								is_controlled_by = ENG
-								is_controlled_by = NZL								
+								is_controlled_by = NZL
 							}
 						}
 					}
@@ -1426,11 +1426,11 @@ focus_tree = {
 							OR = {
 								is_controlled_by = AST
 								is_controlled_by = ENG
-								is_controlled_by = NZL								
+								is_controlled_by = NZL
 							}
 						}
-					}					
-				}					
+					}
+				}
 			}
 		}
 
@@ -1444,20 +1444,20 @@ focus_tree = {
 		completion_reward = {
 			JAP = {
 				declare_war_on = {
-					target = SOV 
+					target = SOV
 					type = annex_everything
 				}
-				remove_ideas = JAP_SOV_neutrality				
+				remove_ideas = JAP_SOV_neutrality
 			}
 		}
 	}
-		
-	
+
+
 	focus = {
 		id = JAP_attack_SOV_3of3
 		icon = GFX_JAP_tsunami2
 		prerequisite = { focus = JAP_Begin_Exploitation_of_South_East_Asia }
-		prerequisite = { focus = JAP_strike_on_the_southern_resource_area }		
+		prerequisite = { focus = JAP_strike_on_the_southern_resource_area }
 		x = 3
 		y = 3
 		relative_position_id = JAP_strike_south_doctrine
@@ -1465,7 +1465,7 @@ focus_tree = {
 		mutually_exclusive = { focus = JAP_attack_SOV_1of3 }
 		mutually_exclusive = { focus = JAP_attack_SOV_2of3 }
 		mutually_exclusive = { focus = JAP_attack_SOV_3of3 }
-		mutually_exclusive = { focus = JAP_attack_SOV_USA }	
+		mutually_exclusive = { focus = JAP_attack_SOV_USA }
 
 		cost = 10
 
@@ -1473,27 +1473,27 @@ focus_tree = {
 			date > 1943.1.1
 			JAP = { surrender_progress < 0.01 }
 			AND = {
-					NOT = { 
+					NOT = {
 						275 = {
 							OR = {
 								is_controlled_by = SAF
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
-					NOT = { 
+					NOT = {
 						681 = {
 							OR = {
 								is_controlled_by = SAF
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
-					}					
-					NOT = { 
+					}
+					NOT = {
 						439 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1501,7 +1501,7 @@ focus_tree = {
 						443 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1509,7 +1509,7 @@ focus_tree = {
 						429 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1517,7 +1517,7 @@ focus_tree = {
 						423 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1525,15 +1525,15 @@ focus_tree = {
 						430 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
-					}						
-					NOT = { 
+					}
+					NOT = {
 						674 = {
 							OR = {
 								is_controlled_by = AST
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1541,7 +1541,7 @@ focus_tree = {
 						285 = {
 							OR = {
 								is_controlled_by = AST
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1549,7 +1549,7 @@ focus_tree = {
 						517 = {
 							OR = {
 								is_controlled_by = AST
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1557,7 +1557,7 @@ focus_tree = {
 						521 = {
 							OR = {
 								is_controlled_by = AST
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1565,7 +1565,7 @@ focus_tree = {
 						522 = {
 							OR = {
 								is_controlled_by = AST
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -1574,7 +1574,7 @@ focus_tree = {
 							OR = {
 								is_controlled_by = AST
 								is_controlled_by = ENG
-								is_controlled_by = NZL								
+								is_controlled_by = NZL
 							}
 						}
 					}
@@ -1583,11 +1583,11 @@ focus_tree = {
 							OR = {
 								is_controlled_by = AST
 								is_controlled_by = ENG
-								is_controlled_by = NZL								
+								is_controlled_by = NZL
 							}
 						}
-					}					
-								
+					}
+
 			}
 		}
 
@@ -1601,18 +1601,18 @@ focus_tree = {
 		completion_reward = {
 			JAP = {
 				declare_war_on = {
-					target = SOV 
+					target = SOV
 					type = annex_everything
 				}
-				remove_ideas = JAP_SOV_neutrality			
+				remove_ideas = JAP_SOV_neutrality
 			}
 		}
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 
 	focus = {
 		id = JAP_alliance_with_siam
@@ -1658,7 +1658,7 @@ focus_tree = {
 		id = Victory_in_Papua
 		icon = GFX_focus_jap_strike_south
 		prerequisite = { focus = JAP_Begin_Exploitation_of_South_East_Asia }
-		prerequisite = { focus = JAP_strike_on_the_southern_resource_area }		
+		prerequisite = { focus = JAP_strike_on_the_southern_resource_area }
 		x = 7
 		y = 1
 		relative_position_id = JAP_strike_on_the_southern_resource_area
@@ -1675,16 +1675,16 @@ focus_tree = {
 
 		available = {
 
-			669 = { 
+			669 = {
 				NOT = { is_controlled_by = AST }
 				NOT = { is_controlled_by = ENG }
-				NOT = { is_controlled_by = INS }				
+				NOT = { is_controlled_by = INS }
 			}
 			792 = {
 				NOT = { is_controlled_by = AST }
 				NOT = { is_controlled_by = ENG }
 			}
-			523 = { 
+			523 = {
 				NOT = { is_controlled_by = AST }
 				NOT = { is_controlled_by = ENG }
 			}
@@ -1724,7 +1724,7 @@ focus_tree = {
 	focus = {
 		id = Victory_in_Ast
 		icon = GFX_focus_jap_strike_south
-		prerequisite = { focus = Victory_in_Papua }		
+		prerequisite = { focus = Victory_in_Papua }
 		x = 7
 		y = 2
 		relative_position_id = JAP_strike_on_the_southern_resource_area
@@ -1740,30 +1740,30 @@ focus_tree = {
 		}
 
 		available = {
-			285 = { 
+			285 = {
 				NOT = { is_controlled_by = AST }
-				NOT = { is_controlled_by = ENG }				
+				NOT = { is_controlled_by = ENG }
 			}
 			517 = {
 				NOT = { is_controlled_by = AST }
 				NOT = { is_controlled_by = ENG }
 			}
-			521 = { 
+			521 = {
 				NOT = { is_controlled_by = AST }
 				NOT = { is_controlled_by = ENG }
-			}	
+			}
 			520 = {
 			    NOT = { is_controlled_by = AST }
 				NOT = { is_controlled_by = ENG }
-			}	
+			}
 			522 = {
 			    NOT = { is_controlled_by = AST }
 				NOT = { is_controlled_by = ENG }
-			}	
+			}
 			518 = {
 			    NOT = { is_controlled_by = AST }
 				NOT = { is_controlled_by = ENG }
-			}		
+			}
 		}
 
 		bypass = {
@@ -2468,7 +2468,7 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-			
+
 		}
 
 		completion_reward = {
@@ -2488,7 +2488,7 @@ focus_tree = {
 					}
 					set_state_flag = JAP_expand_manchurian_railways_Inf2
 				}
-			
+
 		}
 	}
 
@@ -2696,13 +2696,13 @@ focus_tree = {
 				bonus = 1.5
 				uses = 1
 				technology = artillery3
-			}		
+			}
 			add_tech_bonus = {
 				name = JAP_modern_artillery
 				bonus = 1.5
 				uses = 1
 				technology = artillery4
-			}		
+			}
 		}
 	}
 
@@ -2711,7 +2711,7 @@ focus_tree = {
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = JAP_armored_divisions }
 		prerequisite = { focus = JAP_bicycle_battalions }
-		
+
 		x = 1
 		y = 1
 		relative_position_id = JAP_armored_divisions
@@ -2739,27 +2739,27 @@ focus_tree = {
 		}
 
 		completion_reward = {
-            
+
             add_tech_bonus = {
 				name = JAP_armored_divisions
-				bonus = 5.0 				
+				bonus = 5.0
 				uses = 1
 				technology = amphibious_tank
 			}
 			add_tech_bonus = {
 				name = JAP_armored_divisions
-				bonus = 4.0 				
+				bonus = 4.0
 				uses = 1
 				technology = amphibious_tank_2
-			}	
+			}
 			add_tech_bonus = {
 				name = JAP_armored_divisions
 				bonus = 2.0
 				uses = 1
 				technology = amphibious_mechanized_infantry
 			}
-			
-  
+
+
 		}
 	}
 
@@ -2885,7 +2885,7 @@ focus_tree = {
 
 		cost = 5
 
-	
+
 
 		available = {
 
@@ -2909,7 +2909,7 @@ focus_tree = {
 				bonus = 1.0
 				uses = 3
 				category = air_doctrine
-			}			
+			}
 		}
 	}
 
@@ -2959,7 +2959,7 @@ focus_tree = {
 
 		cost = 5
 
-	
+
 		available = {
 
 		}
@@ -2993,7 +2993,7 @@ focus_tree = {
 
 		cost = 5
 
-	
+
 
 		available = {
 
@@ -3097,7 +3097,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = JAP_heavy_fighter_effort
 		icon = GFX_goal_generic_air_bomber
@@ -3136,7 +3136,7 @@ focus_tree = {
 				category = cat_heavy_fighter
 			}
 		}
-	}	
+	}
 
 	focus = {
 		id = JAP_unified_fighter_development
@@ -3225,7 +3225,7 @@ focus_tree = {
 
 		cost = 5
 
-		
+
 
 		available = {
 
@@ -3266,7 +3266,7 @@ focus_tree = {
 				uses = 2
 				technology = mtg_landing_craft
 				technology = mtg_tank_landing_craft
-			}			
+			}
 		}
 
 		completion_reward = {
@@ -3312,7 +3312,7 @@ focus_tree = {
 				uses = 2
 				technology = mtg_landing_craft
 				technology = mtg_tank_landing_craft
-			}			
+			}
 		}
 	}
 
@@ -3349,13 +3349,13 @@ focus_tree = {
 				bonus = 1.0
 				uses = 2
 				category = naval_doctrine
-			}				
+			}
 						add_tech_bonus = {
 				name = JAP_carrier_warfare_experiments
 				bonus = 1.5
 				uses = 1
 				category = cv_tech
-			}		
+			}
 			navy_experience = 50
 		}
 	}
@@ -3370,7 +3370,7 @@ focus_tree = {
 
 		cost = 5
 
-		
+
 
 		available = {
 
@@ -3412,7 +3412,7 @@ focus_tree = {
 
 		cost = 5
 
-		
+
 
 		available = {
 
@@ -3435,7 +3435,7 @@ focus_tree = {
 			navy_experience = 50
 		}
 	}
-	
+
 	focus = {
 		id = JAP_naval_bomber_effort
 		icon = GFX_goal_generic_air_bomber
@@ -3474,7 +3474,7 @@ focus_tree = {
 				category = naval_bomber
 			}
 		}
-	}	
+	}
 
 	focus = {
 		id = JAP_modern_escorts
@@ -3612,6 +3612,7 @@ focus_tree = {
 					type = ship_hull_super_heavy_jap
 					name_group = JAP_BB_HISTORICAL
 					parent_version = 0
+					icon = "GFX_JAP_ship_hull_super_heavy_1_medium"
 					modules = {
 						fixed_ship_battery_slot = ship_super_heavy_battery_1
 						fixed_ship_anti_air_slot = ship_anti_air_2
@@ -3732,8 +3733,8 @@ focus_tree = {
 			add_ideas = the_long_lance
 		}
 	}
-	
-	
+
+
 	focus = {
 		id = JAP_nonavyallies
 		icon = GFX_goal_generic_occupy_start_war
@@ -3749,13 +3750,13 @@ focus_tree = {
 		available = {
 			date > 1940.9.1
 			date < 1941.1.1
-			
+
 			OR = {
 				AND = {
 					JAP = { num_of_naval_factories > 100 }
 					USA = { num_of_naval_factories < 50 }
-					ENG = { num_of_naval_factories < 50 }					
-				}				
+					ENG = { num_of_naval_factories < 50 }
+				}
 				AND = {
 					JAP = { num_of_naval_factories > 150 }
 						OR = {
@@ -3766,11 +3767,11 @@ focus_tree = {
 							AND = {
 								USA = { num_of_naval_factories < 75 }
 								ENG = { num_of_naval_factories < 75 }
-							}					
+							}
 							AND = {
 								USA = { num_of_naval_factories < 50 }
 								ENG = { num_of_naval_factories < 100 }
-							}							
+							}
 						}
 				}
 				AND = {
@@ -3791,13 +3792,13 @@ focus_tree = {
 						AND = {
 							USA = { num_of_naval_factories < 75 }
 							ENG = { num_of_naval_factories < 125 }
-						}					
+						}
 						AND = {
 							USA = { num_of_naval_factories < 50 }
 							ENG = { num_of_naval_factories < 150 }
-						}							
+						}
 					}
-				}				
+				}
 			}
 		}
 
@@ -3816,10 +3817,10 @@ focus_tree = {
 		completion_reward = {
 			JAP = { add_ideas = JAP_nonavyallies }
 			USA = { add_ideas = USA_LL_to_Soviets_Blocked }
-			CAN = { add_ideas = USA_LL_to_Soviets_Blocked }			
+			CAN = { add_ideas = USA_LL_to_Soviets_Blocked }
 		}
 	}
-		
+
 	focus = {
 		id = JAP_join_axis
 		icon = GFX_goal_anschluss
@@ -3855,7 +3856,7 @@ focus_tree = {
 						has_navy_size = {
 							size < 21
 							type = screen_ship
-						}						
+						}
 					}
 					ENG = {
 						has_navy_size = {
@@ -3865,7 +3866,7 @@ focus_tree = {
 						has_navy_size = {
 							size < 21
 							type = screen_ship
-						}						
+						}
 					}
 					JAP = {
 						has_navy_size = {
@@ -3875,37 +3876,37 @@ focus_tree = {
 						has_navy_size = {
 							size > 44
 							type = screen_ship
-						}						
-					}					
+						}
+					}
 				}
 				AND = {
 					JAP = { num_of_naval_factories > 100 }
 					327 = {
-						is_controlled_by = JAP								
-					}	
+						is_controlled_by = JAP
+					}
 					336 = {
-						is_controlled_by = JAP								
-					}	
+						is_controlled_by = JAP
+					}
 					334 = {
-						is_controlled_by = JAP								
-					}	
+						is_controlled_by = JAP
+					}
 					672 = {
-						is_controlled_by = JAP								
+						is_controlled_by = JAP
 					}
 					335 = {
-						is_controlled_by = JAP								
-					}						
+						is_controlled_by = JAP
+					}
 					671 = {
-						is_controlled_by = JAP								
-					}					
+						is_controlled_by = JAP
+					}
 					289 = {
-						is_controlled_by = JAP								
-					}			
-					NOT = { 
+						is_controlled_by = JAP
+					}
+					NOT = {
 						444 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -3913,7 +3914,7 @@ focus_tree = {
 						443 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -3921,7 +3922,7 @@ focus_tree = {
 						429 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -3929,7 +3930,7 @@ focus_tree = {
 						423 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -3937,7 +3938,7 @@ focus_tree = {
 						430 = {
 							OR = {
 								is_controlled_by = RAJ
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -3945,7 +3946,7 @@ focus_tree = {
 						410 = {
 							OR = {
 								is_controlled_by = PER
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -3953,7 +3954,7 @@ focus_tree = {
 						412 = {
 							OR = {
 								is_controlled_by = PER
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
@@ -3961,38 +3962,38 @@ focus_tree = {
 						413 = {
 							OR = {
 								is_controlled_by = PER
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 							}
 						}
 					}
 					NOT = {
 						291 = {
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 						}
 					}
 					NOT = {
 						454 = {
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 						}
 					}
 					NOT = {
 						453 = {
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 						}
 					}
 					NOT = {
 						446 = {
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 						}
 					}
 					NOT = {
 						447 = {
-								is_controlled_by = ENG								
+								is_controlled_by = ENG
 						}
-					}					
+					}
 				}
 			}
-			
+
 		}
 
 		bypass = {
@@ -4011,7 +4012,7 @@ focus_tree = {
 			remove_opinion_modifier = { target = JAP modifier = sanctions}
 			remove_opinion_modifier = { target = JAP modifier = minor_sanctions}
 			}
-			
+
 		}
-	}	
+	}
 }

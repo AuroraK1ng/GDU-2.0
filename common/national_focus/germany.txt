@@ -683,14 +683,14 @@ activate_mission = GER_relocate_industry_from_friesland
 					level = 1
 					instant_build = yes
 				}
-			}		
+			}
 			67 = {
 				add_building_construction = {
 					type = synthetic_refinery
 					level = 1
 					instant_build = yes
 				}
-			}					
+			}
 			66 = {
 				add_building_construction = {
 					type = synthetic_refinery
@@ -704,7 +704,7 @@ activate_mission = GER_relocate_industry_from_friesland
 					level = 1
 					instant_build = yes
 				}
-			}				
+			}
 		}
 	}
 
@@ -751,7 +751,7 @@ activate_mission = GER_relocate_industry_from_friesland
 						instant_build = yes
 					}
 				}
-			
+
 		}
 	}
 
@@ -871,7 +871,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = no
 		available = {
 			OR = {
-				has_war_support > 0.49			
+				has_war_support > 0.49
 				GER = { has_idea = war_economy }
 			}
 		}
@@ -974,8 +974,8 @@ activate_mission = GER_relocate_industry_from_friesland
 			}
 		}
 	}
-	
-	
+
+
 	focus = {
 		id = GER_air_innovation
 		icon = GFX_goal_luftwaffe
@@ -1054,7 +1054,7 @@ activate_mission = GER_relocate_industry_from_friesland
 				bonus = 4
 				uses = 1
 				technology = CAS2x
-			}	
+			}
 			add_tech_bonus = {
 				name = bomber_bonus
 				bonus = 4
@@ -1143,13 +1143,13 @@ activate_mission = GER_relocate_industry_from_friesland
 				bonus = 1.00
 				uses = 2
 				category = air_doctrine
-			}		   
+			}
 			add_tech_bonus = {
 				name = bomber_bonus
 				bonus = 2.5
 				uses = 1
 				technology = improved_large_airframe
-			}		
+			}
 		}
 	}
 
@@ -1178,12 +1178,12 @@ activate_mission = GER_relocate_industry_from_friesland
 		}
 		add_tech_bonus = {
 			name = GER_soviet_treaty
-			bonus = 2.00 
+			bonus = 2.00
 			technology = basic_medium_art
 		}
 		add_tech_bonus = {
 			name = GER_soviet_treaty
-			bonus = 2.00 
+			bonus = 2.00
 			technology = basic_medium_spaa
 		}
 		add_tech_bonus = {
@@ -1215,7 +1215,7 @@ activate_mission = GER_relocate_industry_from_friesland
 				bonus = 1.00
 				uses = 3
 				category = air_doctrine
-			}			   
+			}
 			# Balance research bonus to next tech among radio, radio_detection, decimetric_radar, improved_decimetric_radar, centimetric_radar, improved_centimetric_radar, advanced_centimetric_radar
 			add_tech_bonus = {
 				name = radar_tech_bonus
@@ -1278,7 +1278,7 @@ activate_mission = GER_relocate_industry_from_friesland
 				technology = mechanised_infantry
 			}
 
-		
+
 			# REVISIT Might want to add bonuses to Soviet through event, since focus branches from treaty
 		}
 	}
@@ -1665,12 +1665,12 @@ activate_mission = GER_relocate_industry_from_friesland
 					nukes = 1
 				}
 			}
-			
+
 			set_technology = {
 				advanced_large_airframe = 1
 			}
 			hidden_effect = {
-				sound_effect = wunderwaffe			
+				sound_effect = wunderwaffe
 			}
 		}
 	}
@@ -1743,7 +1743,7 @@ activate_mission = GER_relocate_industry_from_friesland
 				}
 			}
 			hidden_effect = {
-				sound_effect = sp_ger_wien 
+				sound_effect = sp_ger_wien
 				ENG = {
 					country_event = gduevents.62
 				}
@@ -1780,8 +1780,8 @@ activate_mission = GER_relocate_industry_from_friesland
 				BUL = {
 					country_event = gduevents.62
 				}
-			}		
-			army_experience = 10			 
+			}
+			army_experience = 10
 			if = {
 				limit = {
 					country_exists = AUS
@@ -2101,13 +2101,13 @@ activate_mission = GER_relocate_industry_from_friesland
 			}
 		}
 	}
-	
+
 		focus = {
 			id = GER_battle_russia
 			icon = GFX_goal_ger_rasaineinei2
 			relative_position_id = GER_army_innovation
 			prerequisite = { focus = GER_army_innovation_2 }
-			mutually_exclusive = { focus = GER_battle_russia2 }		
+			mutually_exclusive = { focus = GER_battle_russia2 }
 			x = -2
 			y = 4
 			cost = 10
@@ -2139,7 +2139,7 @@ activate_mission = GER_relocate_industry_from_friesland
 					uses = 2
 					technology = advanced_medium_tank_chassis
 					technology = advanced_light_tank_chassis
-				}	
+				}
 				add_tech_bonus = {
 					name = at_bonus
 					bonus = 1.75
@@ -2154,7 +2154,7 @@ activate_mission = GER_relocate_industry_from_friesland
 			icon = GFX_goal_ger_rasaineinei2
 			relative_position_id = GER_army_innovation
 			prerequisite = { focus = GER_army_innovation_2 }
-			mutually_exclusive = { focus = GER_battle_russia }				
+			mutually_exclusive = { focus = GER_battle_russia }
 			x = 0
 			y = 4
 			cost = 10
@@ -2183,17 +2183,17 @@ activate_mission = GER_relocate_industry_from_friesland
 					bonus = 3.75
 					uses = 2
 					technology = advanced_heavy_tank_chassis
-					technology = advanced_light_tank_chassis				
-				}					
+					technology = advanced_light_tank_chassis
+				}
 				add_tech_bonus = {
 					name = at_bonus
 					bonus = 3
 					uses = 4
 					category = cat_anti_tank
-				}		
+				}
 			}
 		}
-	
+
 	focus = {
 		id = GER_reequip_INF
 		icon = GFX_Generic_German_Soldiers2
@@ -2220,7 +2220,7 @@ activate_mission = GER_relocate_industry_from_friesland
 				bonus = 1.00
 				uses = 1
 				technology = artillery4
-			}			
+			}
 		}
 	}
 
@@ -2229,7 +2229,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		icon = GFX_ger_achtung_panzer
 		relative_position_id = GER_battle_russia
 		prerequisite = { focus = GER_battle_russia focus = GER_battle_russia2 }
-		prerequisite = { focus = GER_integrate_war_economies }		
+		prerequisite = { focus = GER_integrate_war_economies }
 		mutually_exclusive = { focus = GER_reequip_AIR focus = GER_reequip_INF }
 		x = -1
 		y = 2
@@ -2253,7 +2253,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		icon = GFX_goal_luftwaffe
 		relative_position_id = GER_battle_russia
 		prerequisite = { focus = GER_battle_russia focus = GER_battle_russia2 }
-		prerequisite = { focus = GER_integrate_war_economies }		
+		prerequisite = { focus = GER_integrate_war_economies }
 		mutually_exclusive = { focus = GER_reequip_PZR focus = GER_reequip_INF }
 		x = 3
 		y = 2
@@ -2297,7 +2297,7 @@ activate_mission = GER_relocate_industry_from_friesland
 					any_country={
 						is_in_faction_with_axis = yes
 						controls_state = 16 # Paris
-					}				
+					}
 				}
 
 				NOT = {
@@ -2307,102 +2307,102 @@ activate_mission = GER_relocate_industry_from_friesland
 					}
 				}
 
-				NOT = {				
+				NOT = {
 					any_country={
 						is_in_faction_with_axis = yes
 						controls_state = 10 # Warsaw
 					}
 				}
 
-				NOT = {					
+				NOT = {
 					any_country={
 						is_in_faction_with_axis = yes
 						controls_state = 784 # Wilno
 					}
 				}
 
-				NOT = {					
+				NOT = {
 					any_country={
 						is_in_faction_with_axis = yes
 						controls_state = 206 # Minsk
 					}
 				}
 
-				NOT = {					
+				NOT = {
 					any_country={
 						is_in_faction_with_axis = yes
 						controls_state = 202 # Kiev
 					}
 				}
 
-				NOT = {					
+				NOT = {
 					any_country={
 						is_in_faction_with_axis = yes
 						controls_state = 203 # Cherkasy
 					}
 				}
 
-				NOT = {					
+				NOT = {
 					any_country={
 						is_in_faction_with_axis = yes
 						controls_state = 18 # Champagne
 					}
 				}
 
-				NOT = {					
+				NOT = {
 					any_country={
 						is_in_faction_with_axis = yes
 						controls_state = 34 # Wallonie
 					}
 				}
 
-				NOT = {					
+				NOT = {
 					any_country={
 						is_in_faction_with_axis = yes
 						controls_state = 35 # Brabant
 					}
 				}
 
-				NOT = {					
+				NOT = {
 					any_country={
 						is_in_faction_with_axis = yes
 						controls_state = 16 # Paris
 					}
 				}
 
-				NOT = {					
+				NOT = {
 					any_country={
 						is_in_faction_with_axis = yes
 						controls_state = 24 # Centre
 					}
 				}
 
-				NOT = {					
+				NOT = {
 					any_country={
 						is_in_faction_with_axis = yes
 						controls_state = 20 # Rhone
 					}
 				}
-				NOT = {					
+				NOT = {
 					any_country={
 						is_in_faction_with_axis = yes
 						controls_state = 26 # Auvergne
 					}
 				}
-				NOT = {					
+				NOT = {
 					any_country={
 						is_in_faction_with_axis = yes
 						controls_state = 46 # Muntenia
 					}
 				}
-				NOT = {					
+				NOT = {
 					any_country={
 						is_in_faction_with_axis = yes
 						controls_state = 107 # Serbia
 					}
-				}				
-				
-				
+				}
+
+
 			}
 		}
 
@@ -2411,7 +2411,7 @@ activate_mission = GER_relocate_industry_from_friesland
 			add_war_support = 0.20
 			remove_ideas = sour_loser
 			add_ideas = triumphant_will
-			add_state_core = 839			
+			add_state_core = 839
 		55 = { add_building_construction = { type = bunker province = 6488 level = 7 instant_build = yes } }
 		55 = { add_building_construction = { type = bunker province = 3574 level = 7 instant_build = yes } }
 		838 = { add_building_construction = { type = bunker province = 6568 level = 7 instant_build = yes } }
@@ -2450,7 +2450,7 @@ activate_mission = GER_relocate_industry_from_friesland
 			}
 			SPR = {
 				add_ideas = GER_foreign_ss
-			}		
+			}
 		}
 	}
 
@@ -2460,7 +2460,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		prerequisite = { focus = GER_hitlerjugend focus = GER_volksturm }
 
 		available = {
-			GER = { surrender_progress > 0.1 }		
+			GER = { surrender_progress > 0.1 }
 		}
 
 		cancel = {
@@ -2476,7 +2476,7 @@ activate_mission = GER_relocate_industry_from_friesland
 			GER = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_2 amount = 100000 producer = GER
-				} 
+				}
 				add_equipment_to_stockpile = {
 					type = medium_tank_equipment_3 amount = 10000 producer = GER
 				}
@@ -2569,8 +2569,8 @@ activate_mission = GER_relocate_industry_from_friesland
 	focus = {
 		id = GER_fall_blau
 		icon = GFX_focus_ger_stalingrad
-		prerequisite = { focus = GER_ussr_war_goal }	
-		
+		prerequisite = { focus = GER_ussr_war_goal }
+
 		cancel = {
 			NOT = { country_exists = SOV }
 		}
@@ -2627,7 +2627,7 @@ activate_mission = GER_relocate_industry_from_friesland
 			factor = 10
 		}
 		completion_reward = {
-			# REVISIT Rework event series to fit new design or retain old design			
+			# REVISIT Rework event series to fit new design or retain old design
 			SOV = {
 				country_event = { id = germany.11 days = 1 }
 				custom_effect_tooltip = GER_mol_rib_pact_tt
@@ -2635,7 +2635,7 @@ activate_mission = GER_relocate_industry_from_friesland
 			}
 			SOV = {
 				give_resource_rights = { receiver = GER state = 229 }
-			}				
+			}
 			add_named_threat = { threat = 5 name = GER_mol_rib_pact }
 		}
 	}
@@ -2975,7 +2975,7 @@ activate_mission = GER_relocate_industry_from_friesland
 	focus = {
 		id = GER_naval_rearmament
 		icon = GFX_goal_der_kriegsmarine
-		mutually_exclusive = { focus = GER_naval_rearmament_alt }		
+		mutually_exclusive = { focus = GER_naval_rearmament_alt }
 		x = 25
 		y = 1
 		cost = 5
@@ -2994,10 +2994,10 @@ activate_mission = GER_relocate_industry_from_friesland
 		}
 
 		completion_reward = {
-			GER = { add_ideas = GER_extensive_navy }		
+			GER = { add_ideas = GER_extensive_navy }
 		}
 	}
-	
+
 	focus = {
 		id = GER_naval_rearmament_alt
 		icon = GFX_goal_der_kriegsmarine
@@ -3011,7 +3011,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		available = {
 			not = { GER = { has_completed_focus = GER_air_innovation } }
 			not = { GER = { has_completed_focus = GER_army_innovation } }
-			not = { GER = { has_completed_focus = GER_anschluss } }					
+			not = { GER = { has_completed_focus = GER_anschluss } }
 		}
 		prerequisite = { focus = GER_rhineland }
 		available_if_capitulated = yes
@@ -3033,7 +3033,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		}
 
 		completion_reward = {
-			GER = { add_ideas = GER_limited_navy }		
+			GER = { add_ideas = GER_limited_navy }
 			56 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -3069,9 +3069,9 @@ activate_mission = GER_relocate_industry_from_friesland
 					instant_build = yes
 				}
 				set_state_flag = GER_naval_rearmament_1dockyard
-			}			
+			}
 		}
-	}	
+	}
 
 	focus = {
 		id = GER_prepare_sealion
@@ -3098,24 +3098,24 @@ activate_mission = GER_relocate_industry_from_friesland
 			set_technology = {
 
 			}
-			29 = {	
-				add_building_construction = {
-					type = radar_station
-					level = 3
-				}
-			}	
-			785 = {	
+			29 = {
 				add_building_construction = {
 					type = radar_station
 					level = 3
 				}
 			}
-			6 = {	
+			785 = {
 				add_building_construction = {
 					type = radar_station
 					level = 3
 				}
-			}				
+			}
+			6 = {
+				add_building_construction = {
+					type = radar_station
+					level = 3
+				}
+			}
 		}
 	}
 
@@ -3167,7 +3167,7 @@ activate_mission = GER_relocate_industry_from_friesland
 			show_ideas_tooltip = john_brown_company_GER
 		}
 	}
-	
+
 	focus = {
 		id = GER_prepare_high_castle
 		icon = GFX_goal_der_kriegsmarine
@@ -3178,7 +3178,7 @@ activate_mission = GER_relocate_industry_from_friesland
 			factor = 1
 		}
 		prerequisite = { focus = GER_triumph_britain }
-		prerequisite = { focus = GER_flugzeugtraeger }		
+		prerequisite = { focus = GER_flugzeugtraeger }
 		available_if_capitulated = yes
 
 		cancel_if_invalid = yes
@@ -3187,7 +3187,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		}
 
 		bypass = {
-			
+
 		}
 
 		completion_reward = {
@@ -3198,7 +3198,7 @@ activate_mission = GER_relocate_industry_from_friesland
 				category = tp_tech
 			}
 		}
-	}	
+	}
 
 
 	focus = {
@@ -3217,7 +3217,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-			navy_experience = 25	   
+			navy_experience = 25
 
 			add_tech_bonus = {
 				name = dd_bonus
@@ -3311,7 +3311,7 @@ activate_mission = GER_relocate_industry_from_friesland
 				bonus = 2
 				uses = 1
 				technology = improved_ship_hull_heavy
-			}	
+			}
 			add_tech_bonus = {
 				name = cv_bonus
 				bonus = 1.00
@@ -3327,7 +3327,7 @@ activate_mission = GER_relocate_industry_from_friesland
 				bonus = 2
 				uses = 1
 				technology = improved_ship_hull_heavy
-			}	
+			}
 			add_tech_bonus = {
 				name = cv_bonus
 				bonus = 1.00
@@ -3336,12 +3336,12 @@ activate_mission = GER_relocate_industry_from_friesland
 			}
 		}
 	}
-	
+
 	focus = {
 		id = GER_flugzeugtraeger
 		icon = GFX_ger_carrier
 		prerequisite = { focus = GER_plan_z }
-		prerequisite = { focus = GER_naval_air_effort }		
+		prerequisite = { focus = GER_naval_air_effort }
 		relative_position_id = GER_plan_z
 		x = -1
 		y = 2
@@ -3365,8 +3365,8 @@ activate_mission = GER_relocate_industry_from_friesland
 				technology = improved_ship_hull_carrier
 			}
 		}
-	}	
-	
+	}
+
 	focus = {
 	    id = GER_bismarck
 		prerequisite = {focus = GER_naval_effort2}
@@ -3383,6 +3383,7 @@ activate_mission = GER_relocate_industry_from_friesland
 				type = ship_hull_heavy_bismarck
 				name_group = GER_BB_HISTORICAL
 				parent_version = 0
+				icon = "GFX_GER_improved_ship_hull_heavy_medium"
 				modules = {
 					fixed_ship_battery_slot = ship_heavy_battery_3
 					fixed_ship_anti_air_slot = ship_anti_air_2
@@ -3398,13 +3399,14 @@ activate_mission = GER_relocate_industry_from_friesland
 					rear_1_custom_slot = ship_heavy_battery_3
 				}
 			}
-				
-			
-			
+
+
+
 			set_technology = {
 				ship_hull_heavy_bismarcktech = 1
+				improved_ship_hull_heavy = 1
 			}
-			
+
 			if = {
 				limit = {
 					not = { has_tech = improved_heavy_battery }
@@ -3430,14 +3432,14 @@ activate_mission = GER_relocate_industry_from_friesland
 				}
 			}
 
-		
+
 			add_equipment_production = {
 				equipment = {
 					type = ship_hull_heavy_bismarck
-					creator = "GER" 
+					creator = "GER"
 					version_name = "Bismarck Class"
 				}
-				name = "Argentina-1-Way" 
+				name = "Argentina-1-Way"
 				requested_factories = 1
 				progress = 0.95
 				amount = 1
@@ -3445,17 +3447,17 @@ activate_mission = GER_relocate_industry_from_friesland
 			add_equipment_production = {
 				equipment = {
 					type = ship_hull_heavy_bismarck
-					creator = "GER" 
+					creator = "GER"
 					version_name = "Bismarck Class"
 				}
-				name = "PortStrike Target" 
+				name = "PortStrike Target"
 				requested_factories = 1
 				progress = 0.85
 				amount = 1
 			}
 		}
 	}
-	
+
 	##focus = {
 	##    id = GER_tirpitz
 	##	prerequisite = {focus = GER_naval_effort }
@@ -3491,10 +3493,10 @@ activate_mission = GER_relocate_industry_from_friesland
 	##			add_equipment_production = {
 	##				equipment = {
 	##					type = ship_hull_heavy_3
-	##					creator = "GER" 
+	##					creator = "GER"
 	##					version_name = "Bismarck Class"
 	##				}
-	##				name = "Tirpitz" 
+	##				name = "Tirpitz"
 	##				requested_factories = 1
 	##				progress = 0.95
 	##				amount = 1
@@ -3597,7 +3599,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		icon = GFX_GER_air_defence
 		relative_position_id = GER_army_innovation
 		prerequisite = { focus = GER_army_innovation }
-		prerequisite = { focus = GER_air_innovation }		
+		prerequisite = { focus = GER_air_innovation }
 		x = 1
 		y = 1
 		cost = 5
@@ -3608,7 +3610,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 20				   
+			army_experience = 20
 					42 = {
 						add_building_construction = {
 							type = anti_air_building
@@ -3683,7 +3685,7 @@ activate_mission = GER_relocate_industry_from_friesland
 				bonus = 1.5
 				uses = 6
 				category = cat_anti_air
-			}			
+			}
 
 		}
 	}
@@ -3733,7 +3735,7 @@ activate_mission = GER_relocate_industry_from_friesland
 
 		completion_reward = {
 			add_ideas = GER_foreign_ss2
-			GER = { add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 20000 producer = GER } }			
+			GER = { add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 20000 producer = GER } }
 		}
 	}
 
@@ -3784,19 +3786,19 @@ activate_mission = GER_relocate_industry_from_friesland
 				uses = 1
 				technology = advanced_small_airframe
 			}
-					
-		}
-	}		
-		
-		
 
-	
-		
-		
-		
-		
-		
-		
-		
-		
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
 	}
