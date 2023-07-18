@@ -149,6 +149,26 @@ on_actions = {
 			}
 			if = {
 				limit = {
+					JAP = {
+		  			has_war_with = USA
+
+		 
+		   			surrender_progress > 0.75
+					
+					282={NOT={CONTROLLER = {original_tag=JAP}}}
+					528={NOT={CONTROLLER = {original_tag=JAP}}}
+					529={NOT={CONTROLLER = {original_tag=JAP}}}
+					531={NOT={CONTROLLER = {original_tag=JAP}}}
+					532={NOT={CONTROLLER = {original_tag=JAP}}}
+					}
+					not = { has_global_flag = JAP_peacedeal }
+				}
+				SWE = { 
+				country_event = {id = japan_peace.1 }
+				 }
+			}
+			if = {
+				limit = {
 					date > 1941.1.1
 					JAP = { surrender_progress > 0.97 }
 					country_exists = JAP
