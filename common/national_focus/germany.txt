@@ -987,10 +987,10 @@ activate_mission = GER_relocate_industry_from_friesland
 		ai_will_do = {
 			factor = 1
 		}
-		available = {
+		available = {		
+			always = no
 			date > 1940.1.1
-			date < 1941.1.1
-			GER = { has_war_with = ENG }
+			GER = { has_war_with = ENG }							
 		}
 
 		completion_reward = {
