@@ -39,7 +39,7 @@ guiTypes = {
 			position = {x=95 y=39}
 			spriteType = "GFX_sort_up_down_button_83x29"
 			buttonText = UNIT_LEADER_NAME_SORT
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}
@@ -61,7 +61,7 @@ guiTypes = {
 			name = "sort_skills"
 			position = {x=16 y=39}
 			spriteType = "GFX_sort_skill"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}
@@ -69,7 +69,7 @@ guiTypes = {
 			name = "sort_advisor"
 			position = {x=42 y=39}
 			spriteType = "GFX_sort_adviser"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}
@@ -78,7 +78,7 @@ guiTypes = {
 			position = {x=440 y=39}
 			spriteType = "GFX_sort_up_down_button_83x29"
 			buttonText = UNIT_LEADER_CAPACITY_SORT
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}
@@ -87,7 +87,7 @@ guiTypes = {
 			name = "sort_attack_skill"
 			position = {x=323 y=39}
 			spriteType = "GFX_sort_attack_trait"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}
@@ -96,7 +96,7 @@ guiTypes = {
 			name = "sort_defense_skill"
 			position = {x=349 y=39}
 			spriteType = "GFX_sort_defense_trait"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}
@@ -105,7 +105,7 @@ guiTypes = {
 			name = "sort_planning_skill"
 			position = {x=375 y=39}
 			spriteType = "GFX_sort_planning_trait"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}
@@ -114,7 +114,7 @@ guiTypes = {
 			name = "sort_supply_skill"
 			position = {x=401 y=39}
 			spriteType = "GFX_sort_supply_trait"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}
@@ -147,7 +147,7 @@ guiTypes = {
 			name = "no_leader_button"
 			position = { x = -250 y = -32 }
 			quadTextureSprite ="GFX_button_221x34"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			Orientation = "LOWER_RIGHT"
 			buttonText = "UNASSIGN"
 			pdx_tooltip = "UNASSIGN"
@@ -157,7 +157,7 @@ guiTypes = {
 			name = "new_leader_button"
 			position = { x = -535 y = -32 }
 			quadTextureSprite = "GFX_button_261x34"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			Orientation = "LOWER_RIGHT"
 			buttonText = "UNIT_LEADER_NEW_LEADER"
 		}
@@ -166,7 +166,7 @@ guiTypes = {
 			name = "show_divisional_commanders_button"
 			position = { x = -535 y = -31 }
 			quadTextureSprite = "GFX_button_261x34"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			Orientation = "LOWER_RIGHT"
 			buttonText = "UNIT_LEADER_NEW_LEADER_DIVC"
 		}
@@ -186,7 +186,7 @@ guiTypes = {
 			name = "show_assigned_text"
 			position = { x = 380 y = 10 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "cg_16b"
 			borderSize = {x = 0 y = 0}
 			text = "SHOW_ACTIVE"
 			maxWidth = 100
@@ -241,7 +241,7 @@ guiTypes = {
 			name = "generate_advisor_button"
 			position = {x=13 y=65}	
 			quadTextureSprite ="GFX_give_role_leader_strip"
-			buttonFont = "hoi_16mbs"	
+			buttonfont = "cg_16b"	
 			clicksound = click_default
 			frame = 1
 		}
@@ -264,7 +264,7 @@ guiTypes = {
 			position = {x=414 y=56}	
 			quadTextureSprite ="GFX_leader_selection_button"
 			buttonText = UNIT_LEADER_PROMOTE
-			buttonFont = "hoi_16mbs"	
+			buttonfont = "cg_16b"	
 			clicksound = click_default		
 			frame = 1
 		}
@@ -274,7 +274,7 @@ guiTypes = {
 			position = {x=318 y=56}	
 			quadTextureSprite ="GFX_leader_selection_button"
 			buttonText = UNIT_LEADER_TRAITS
-			buttonFont = "hoi_16mbs"	
+			buttonfont = "cg_16b"	
 			pdx_tooltip = "OPEN_LEADER_DETAILS"	
 			clicksound = click_default
 			frame = 1
@@ -283,7 +283,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "divisions_count"
 			position = {x=424 y=17}
-			font = "hoi_16mbs"
+			font = "cg_16b"
 			maxWidth = 85
 			maxHeight = 23
 			format = centre
@@ -343,7 +343,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "leader_stat_attack"
 			position = {x=308 y=29}
-			font = "hoi_16mbs"
+			font = "cg_16b"
 			maxWidth = 30
 			maxHeight = 23
 			format = center
@@ -359,7 +359,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "leader_stat_defense"
 			position = {x=335 y=29}
-			font = "hoi_16mbs"
+			font = "cg_16b"
 			maxWidth = 30
 			maxHeight = 23
 			format = center
@@ -375,7 +375,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "leader_stat_planning"
 			position = {x=362 y=29}
-			font = "hoi_16mbs"
+			font = "cg_16b"
 			maxWidth = 30
 			maxHeight = 23
 			format = center
@@ -391,7 +391,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "leader_stat_logistics"
 			position = {x=388 y=29}
-			font = "hoi_16mbs"
+			font = "cg_16b"
 			maxWidth = 30
 			maxHeight = 23
 			format = center
@@ -436,7 +436,7 @@ guiTypes = {
 			position = {x=95 y=39}
 			spriteType = "GFX_sort_up_down_button_83x29"
 			buttonText = UNIT_LEADER_NAME_SORT
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}
@@ -458,7 +458,7 @@ guiTypes = {
 			name = "sort_skills"
 			position = {x=16 y=39}
 			spriteType = "GFX_sort_skill"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}
@@ -467,7 +467,7 @@ guiTypes = {
 			name = "sort_advisor"
 			position = {x=42 y=39}
 			spriteType = "GFX_sort_adviser"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}
@@ -477,7 +477,7 @@ guiTypes = {
 			position = {x=440 y=39}
 			spriteType = "GFX_sort_up_down_button_83x29"
 			buttonText = UNIT_LEADER_CAPACITY_SORT
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}
@@ -486,7 +486,7 @@ guiTypes = {
 			name = "sort_attack_skill"
 			position = {x=323 y=39}
 			spriteType = "GFX_sort_attack_trait"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}
@@ -495,7 +495,7 @@ guiTypes = {
 			name = "sort_defense_skill"
 			position = {x=349 y=39}
 			spriteType = "GFX_sort_defense_trait"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}
@@ -504,7 +504,7 @@ guiTypes = {
 			name = "sort_maneuvering_skill"
 			position = {x=375 y=39}
 			spriteType = "GFX_sort_maneuvering_trait"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}
@@ -513,7 +513,7 @@ guiTypes = {
 			name = "sort_coordination_skill"
 			position = {x=401 y=39}
 			spriteType = "GFX_sort_coordination_trait"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}
@@ -546,7 +546,7 @@ guiTypes = {
 			name = "no_leader_button"
 			position = { x = -250 y = -32 }
 			quadTextureSprite ="GFX_button_221x34"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			Orientation = "LOWER_RIGHT"
 			buttonText = "UNASSIGN"
 			pdx_tooltip = "UNASSIGN"
@@ -557,7 +557,7 @@ guiTypes = {
 			name = "new_leader_button"
 			position = { x = -535 y = -32 }
 			quadTextureSprite = "GFX_button_261x34"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			Orientation = "LOWER_RIGHT"
 			buttonText = "UNIT_LEADER_NEW_LEADER"
 			clicksound = click_default
@@ -578,7 +578,7 @@ guiTypes = {
 			name = "show_assigned_text"
 			position = { x = 380 y = 10 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "cg_16b"
 			borderSize = {x = 0 y = 0}
 			text = "SHOW_ACTIVE"
 			maxWidth = 100
@@ -633,7 +633,7 @@ guiTypes = {
 			position = {x=318 y=56}	
 			quadTextureSprite ="GFX_leader_selection_button"
 			buttonText = UNIT_LEADER_TRAITS
-			buttonFont = "hoi_16mbs"	
+			buttonfont = "cg_16b"	
 			pdx_tooltip = "OPEN_LEADER_DETAILS"	
 			clicksound = click_default
 			frame = 1
@@ -643,7 +643,7 @@ guiTypes = {
 			name = "generate_advisor_button"
 			position = {x=13 y=65}	
 			quadTextureSprite ="GFX_give_role_leader_strip"
-			buttonFont = "hoi_16mbs"	
+			buttonfont = "cg_16b"	
 			clicksound = click_default
 			frame = 1
 		}
@@ -651,7 +651,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "divisions_count"
 			position = {x=424 y=17}
-			font = "hoi_16mbs"
+			font = "cg_16b"
 			maxWidth = 85
 			maxHeight = 23
 			format = centre
@@ -718,7 +718,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "leader_stat_attack"
 			position = {x=308 y=29}
-			font = "hoi_16mbs"
+			font = "cg_16b"
 			maxWidth = 30
 			maxHeight = 23
 			format = center
@@ -734,7 +734,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "leader_stat_defense"
 			position = {x=335 y=29}
-			font = "hoi_16mbs"
+			font = "cg_16b"
 			maxWidth = 30
 			maxHeight = 23
 			format = center
@@ -750,7 +750,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "leader_stat_maneuvering"
 			position = {x=362 y=29}
-			font = "hoi_16mbs"
+			font = "cg_16b"
 			maxWidth = 30
 			maxHeight = 23
 			format = center
@@ -766,7 +766,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "leader_stat_coordination"
 			position = {x=388 y=29}
-			font = "hoi_16mbs"
+			font = "cg_16b"
 			maxWidth = 30
 			maxHeight = 23
 			format = center
@@ -807,7 +807,7 @@ guiTypes = {
 			position = {x=95 y=37}
 			spriteType = "GFX_sort_up_down_button_83x29"
 			buttonText = UNIT_LEADER_NAME_SORT
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}
@@ -830,7 +830,7 @@ guiTypes = {
 			position = {x=13 y=37}
 			spriteType = "GFX_sort_up_down_button_83x29"
 			buttonText = UNIT_LEADER_SKILL_SORT
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 		}
 
@@ -881,7 +881,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "resume_mission_txt"
 			position = {x=150 y=564 }
-			font = "hoi_16mbs"
+			font = "cg_16b"
 			format = left
 			text = "OPERATIVE_RESUME_MISSION_AFTER_OPERATION_CHECKBOX_LABEL"
 			pdx_tooltip = "OPERATIVE_RESUME_MISSION_AFTER_OPERATION_TOOLTIP"
@@ -1089,7 +1089,7 @@ guiTypes = {
 			position = {x=14 y=39}
 			spriteType = "GFX_sort_up_down_button_83x29"
 			#buttonText = "DIVISION_COMMANDER_EXPERIENCE_SORT"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}
@@ -1099,7 +1099,7 @@ guiTypes = {
 			position = {x=96 y=39}
 			spriteType = "GFX_sort_up_down_button_83x29"
 			buttonText = "DIVISION_COMMANDER_TYPE_SORT"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}		
@@ -1117,7 +1117,7 @@ guiTypes = {
 			size = { x = 200 y = 28 } 
 			spriteType = "GFX_sort_up_down_button_83x29"
 			buttonText = "DIVISION_COMMANDER_MEDALS_SORT"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}
@@ -1135,7 +1135,7 @@ guiTypes = {
 			size = { x = 200 y = 28 } 
 			spriteType = "GFX_sort_up_down_button_83x29"
 			buttonText = "DIVISION_COMMANDER_TOTAL_EXPERIENCE_SORT"
-			buttonFont = "hoi_16mbs"
+			buttonfont = "cg_16b"
 			clicksound = click_scroll
 			frame = 1
 		}
@@ -1168,7 +1168,7 @@ guiTypes = {
 		#	name = "no_leader_button"
 		#	position = { x = -250 y = -32 }
 		#	quadTextureSprite ="GFX_button_221x34"
-		#	buttonFont = "hoi_16mbs"
+		#	buttonfont = "cg_16b"
 		#	Orientation = "LOWER_RIGHT"
 		#	buttonText = "UNASSIGN"
 		#	pdx_tooltip = "UNASSIGN"
@@ -1178,7 +1178,7 @@ guiTypes = {
 		#	name = "new_leader_button"
 		#	position = { x = -535 y = -32 }
 		#	quadTextureSprite = "GFX_button_261x34"
-		#	buttonFont = "hoi_16mbs"
+		#	buttonfont = "cg_16b"
 		#	Orientation = "LOWER_RIGHT"
 		#	buttonText = "UNIT_LEADER_NEW_LEADER"
 		#}
