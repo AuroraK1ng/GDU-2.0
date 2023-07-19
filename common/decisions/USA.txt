@@ -329,7 +329,6 @@ USA_congress = {
 
 		available = {
 			has_completed_focus = USA_indirect_help
-			ENG = { has_defensive_war = yes }
 			has_equipment = {
 				convoy > 199
 			}
@@ -542,11 +541,8 @@ USA_congress = {
 		available = {
 			has_completed_focus = USA_indirect_help
 			SOV = { 
-				AND = {
-					has_defensive_war = yes 
-					has_equipment = {
-						convoy_1 < 700
-					}
+				has_equipment = {
+					convoy_1 < 700
 				}
 			}
 			has_equipment = {
