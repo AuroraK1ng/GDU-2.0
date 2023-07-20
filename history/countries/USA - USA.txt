@@ -1,20 +1,19 @@
 ﻿capital = 361
 
 oob = "USA_1936"
+
 set_naval_oob = "USA_1936_naval_mtg"
+
 starting_train_buffer = 5
+
 set_convoys = 800
+
 set_research_slots = 5
-set_stability = 0.75
+
+set_stability = 0.8
 set_war_support = 0
-add_command_power = 20
-set_variable = { var = senators_support value = 48 }
-set_variable = { var = senators_total value = 96 }
-set_variable = { var = representatives_support value = 218 }
-set_variable = { var = representatives_total value = 435 }
-set_variable = { var = quorum_low value = 39 }
-set_variable = { var = quorum_medium value = 49 }
-set_variable = { var = quorum_high value = 58 }
+
+
 # Starting tech
 
 add_opinion_modifier = { target = JAP modifier = jap_trade }
@@ -374,15 +373,11 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 99
-	communism = 1
+	democratic = 100
+	 fascism = 0
+	communism = 0
 }
 # DIPLOMACY
-set_autonomy = {
-	target = PHI
-	autonomous_state =  autonomy_puppet
-}
-
 
 recruit_character = USA_william_dudley_pelley
 recruit_character = USA_franklin_delano_roosevelt
@@ -684,4 +679,4 @@ if = {
 }
 
 
-# 1939 Start #
+
