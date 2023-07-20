@@ -319,7 +319,7 @@ playable_siam = {
 			set_global_flag = mini_GDU
 			ROM = {
 				annex_country = { target = BUL transfer_troops = yes }
-				add_research_slot = 1                         #Romania gets its research slot early, doesn't get the focus one, however (similar to UK). This may allow it to research a few more things for some more variety.
+				#add_research_slot = 1   #Romania gets its research slot early, doesn't get the focus one, however (similar to UK). This may allow it to research a few more things for some more variety.
 				add_state_core = 77
 				add_state_core = 211
 				add_state_core = 212
@@ -329,7 +329,7 @@ playable_siam = {
 				add_state_core = 106
 			}
 			GER = {
-				add_research_slot = 1  
+				#add_research_slot = 1  
 				annex_country = { target = HUN transfer_troops = yes }
 				add_state_core = 155
 				add_state_core = 154
@@ -349,13 +349,13 @@ playable_siam = {
 			}
 			AST = {
 				annex_country = { target = NZL transfer_troops = yes }
-				add_research_slot = 1                         #Australia gets its research slot early, doesn't get the focus one, however (similar to UK). This may allow it to research a few more things for some more variety.
+				#add_research_slot = 1  #Australia gets its research slot early, doesn't get the focus one, however (similar to UK). This may allow it to research a few more things for some more variety.
 				add_state_core = 723
 				add_state_core = 284
 			}
 			
 			ENG = {
-				add_research_slot = 1                         #UK gets 1 more research slot since it has to research more stuff with fewer minors. But can't do the "complete commitment" focus to get the extra research slot after the war starts, so effectively UK is getting that research slot early.
+				#add_research_slot = 1 #UK gets 1 more research slot since it has to research more stuff with fewer minors. But can't do the "complete commitment" focus to get the extra research slot after the war starts, so effectively UK is getting that research slot early.
 				annex_country = { target = CAN transfer_troops = yes }           # Annex Canada
 				annex_country = { target = SAF transfer_troops = yes }           # Annex South Africa
 				add_ideas = UK_mini_GDU_manpower                                 # Instead of getting cores, UK gets a manpower national spirit for annexing Canada/South Africa. This is so that you don't get sealion bonus in Canada/South Africa
