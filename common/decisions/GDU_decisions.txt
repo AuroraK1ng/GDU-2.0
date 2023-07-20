@@ -1915,8 +1915,7 @@ foreign_politics = {
 #					transfer_troops = no
 #				}
 #			}
-#			SOV = { country_event = { id = gduevents.11 days = 1 } }
-#			ENG = { country_event = { id = gduevents.12 days = 1 } }
+#			every_country = { country_event = { id = gduevents.11 days = 1 } }
 #		}
 #
 #	}
@@ -2005,7 +2004,7 @@ foreign_politics = {
 					transfer_troops = no
 				}
 			}
-			SOV = { country_event = { id = gduevents.11 days = 1 } }
+			every_country = { country_event = { id = gduevents.11 days = 1 } }
 
 		}
 
@@ -2079,11 +2078,7 @@ USA_foreign_politics = {
 			USA = { add_ideas = GDU_allies_torch }
 			ENG = { add_ideas = GDU_allies_torch }			
 			every_country = {
-				limit = {
-					NOT = { tag = USA }
-					is_in_faction_with = USA
-				}
-				country_event = { id = gduevents.15 }
+			country_event = { id = gduevents.15 }
 			}
 		}
 	}
