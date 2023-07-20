@@ -300,6 +300,7 @@ playable_siam = {
 		ai_will_do = { factor = 0 }
 		cost = 0
 		visible = {
+			NOT = { has_start_date > 1936.1.1.12 }
 			date < 1936.1.2
 		}
 		allowed = {
