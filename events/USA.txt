@@ -820,3 +820,19 @@ country_event = {
 			
 	}
 }
+country_event = {
+	id = usa.66
+	title = "Nimitz is Open"
+	desc = "Now u can take this admiral"
+	picture = GFX_report_event_ast_navy
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = usa.66.a 
+		complete_national_focus = Nimitz
+	}
+}
