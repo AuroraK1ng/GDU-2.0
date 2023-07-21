@@ -1993,7 +1993,6 @@ foreign_politics = {
 			}
 		}
 
-		cost = 25
 
 		visible = {
 			PER = { exists = yes }
@@ -2018,7 +2017,44 @@ foreign_politics = {
 		}
 
 	}
+	GDU_eng_torch_decision = {
+		icon = generic_operation
 
+		available = {
+			has_start_date > 1936.1.1.12 
+			EFR = { exists = yes }
+			OR = {
+			ITA = { NOT = { has_full_control_of_state = 448 has_full_control_of_state = 450 has_full_control_of_state = 451} }
+			date > 1942.4.1
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		allowed = {
+			has_start_date > 1936.1.1.12
+			original_tag = ENG
+		}
+		visible = {
+			has_start_date > 1936.1.1.12
+			original_tag = ENG
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+			country_event = vichy.1
+			EFR = { country_event = vichy.2 }
+			ENG = { add_ideas = GDU_allies_torch }			
+			every_country = {
+			country_event = { id = gduevents.15 }
+			}
+		}
+	}
 	GDU_demolish_elalamein_forts = {
 		icon = generic_operation
 
