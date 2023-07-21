@@ -1855,16 +1855,7 @@ GER_foreign_politics = {
 		}
 
 	}
-}
-		
-
-foreign_politics = {
 	
-
-}
-
-GER_foreign_politics = {
-
 	GDU_GER_invade_iran = {
 		icon = GFX_decision_ger_reichskommissariats
 
@@ -1926,6 +1917,12 @@ GER_foreign_politics = {
 		}
 
 	}
+}
+		
+
+foreign_politics = {
+	
+
 }
 
 foreign_politics = {
@@ -2042,7 +2039,7 @@ foreign_politics = {
 		}
 
 		allowed = {
-			has_start_date > 1936.1.1.12
+			#has_start_date > 1936.1.1.12
 			original_tag = ENG
 		}
 		visible = {
