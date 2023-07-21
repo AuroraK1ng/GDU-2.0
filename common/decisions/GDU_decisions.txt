@@ -1975,14 +1975,22 @@ foreign_politics = {
 				NOT = {
 					454 = { is_fully_controlled_by = ENG }
 				}
-				date > 1940.6.1
+				IF = { 
+  					limit = { NOT = { has_start_date > 1936.1.1.12 } } 
+   					 date > 1940.6.1
+				}
+				else_if = {
+    					limit = {
+       			 	has_start_date > 1936.1.1.12
+   				 	}
+    				date > 1941.10.1
+				}
 			}
 			has_completed_focus = uk_service_focus
 			OR = {
 				444 = { is_controlled_by = RAJ }
 				444 = { is_controlled_by = ENG }				
 			}
-
 		}
 
 		cost = 25
