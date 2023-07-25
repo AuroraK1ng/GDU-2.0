@@ -8,6 +8,7 @@ country_event = {
 
 	trigger = {
 		tag = YUG
+		NOT = { has_start_date > 1936.1.1.12 }
 		JAP = {
 		   #has_war_with = USA
 		   surrender_progress > 0.90

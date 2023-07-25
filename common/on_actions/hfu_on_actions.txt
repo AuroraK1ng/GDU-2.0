@@ -149,6 +149,7 @@ on_actions = {
 			}
 			if = {
 				limit = {
+					NOT = { has_start_date > 1936.1.1.12 }
 					JAP = {
 		  			has_war_with = USA
 
