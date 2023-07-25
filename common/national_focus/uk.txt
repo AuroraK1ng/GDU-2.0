@@ -1085,8 +1085,17 @@ focus_tree = {
 		id = Finish_rearmament
 		text = "Finish Rearmament"
 		available = {
-			    date > 1940.6.1
+			if = { limit = { NOT = { has_start_date > 1936.1.1.12 }  }
+			date > 1940.6.1
+			}
+			else_if = {
+    				limit = {
+       			has_start_date > 1936.1.1.12
+   			}
+    			date > 1941.1.1
+			
 		}
+	}
 		prerequisite = { focus = royal_ordinance_focus focus = royal_dockyard_focus}
 		icon = GFX_Limited_Rearm
 		x = 0
@@ -1144,8 +1153,29 @@ focus_tree = {
 				}
 				set_state_flag = royal_ordinance_focus_2AF
 			}
+			if = { limit = { has_start_date > 1936.1.1.12 }  
+			ENG = { add_ideas = USA_ships_for_victory_idea }
+			125 = {
+				add_extra_state_shared_building_slots = 15
+				add_building_construction = {
+					type = industrial_complex
+					level = 15
+					instant_build = yes
+				}
+				set_state_flag = royal_ordinance_focus_2AF
+			}
+		125 = {
+				add_extra_state_shared_building_slots = 20
+				add_building_construction = {
+					type = dockyard
+					level = 20
+					instant_build = yes
+				}
+				set_state_flag = royal_ordinance_focus_2AF
+			}
 		}
 	}
+}
 
 	focus = { 
 		id = air_rearmament_focus

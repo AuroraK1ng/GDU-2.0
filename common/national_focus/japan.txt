@@ -3050,8 +3050,8 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_bomber_modernization
-				bonus = 1.0
-				uses = 1
+				bonus = 1.5
+				uses = 2
 				category = cas_bomber
 				category = tactical_bomber
 			}
@@ -3131,8 +3131,8 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_heavy_fighter_effort
-				bonus = 1.0
-				uses = 1
+				bonus = 1.5
+				uses = 2
 				category = cat_heavy_fighter
 			}
 		}
@@ -3184,14 +3184,14 @@ focus_tree = {
 		y = 4
 		relative_position_id = JAP_fighter_modernization
 
-		cost = 10
+		cost = 12.9
 
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
-
+			date > 1943.1.1
 		}
 
 		bypass = {
@@ -3207,12 +3207,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = JAP_jet_prototypes
-				bonus = 1.0
-				uses = 2
-				category = jet_technology
-			}
+			set_technology = { cv_fighter3 = 1 }
+			set_technology = { advanced_small_airframe = 1 }
 		}
 	}
 
