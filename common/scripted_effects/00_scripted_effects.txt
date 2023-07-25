@@ -46,4 +46,4 @@ print_variable_log_effect = {
 make_tank_designers_free = { if = { limit = { NOT = { has_country_flag = nation_picked_tank_designer }} 	ROOT = { add_ideas = free_tank_designer set_country_flag = nation_picked_tank_designer }	} }
 make_air_designers_free = { if = { limit = { NOT = { has_country_flag = nation_picked_air_designer }} 	ROOT = { add_ideas = free_air_designer set_country_flag = nation_picked_air_designer }	} }
 make_naval_designers_free = { if = { limit = { NOT = { has_country_flag = nation_picked_naval_designer }} 	ROOT = { add_ideas = free_naval_designer set_country_flag = nation_picked_naval_designer }	} }
-
+make_material_designers_free = { if = { limit = { NOT = { has_country_flag = nation_picked_material_designer }} 	ROOT = { add_ideas = free_material_designer set_country_flag = nation_picked_material_designer }	} }
