@@ -185,7 +185,9 @@ equipment_modules = {
 		abbreviation = "l2m"
 		category = tank_light_turret_type
 		sfx = sfx_ui_sd_module_turret
-
+		forbid_equipment_type = artillery
+		
+		
 		add_stats = {
 			build_cost_ic = 0.25
 			breakthrough = 10
@@ -203,6 +205,8 @@ equipment_modules = {
 		abbreviation = "l3m"
 		category = tank_light_turret_type
 		sfx = sfx_ui_sd_module_turret
+		forbid_equipment_type = artillery
+		
 
 		add_stats = {
 			build_cost_ic = 1
@@ -220,8 +224,8 @@ equipment_modules = {
 		abbreviation = "lfs"
 		category = tank_light_turret_type
 		sfx = sfx_ui_sd_module_turret
+		forbid_equipment_type = armor
 		forbid_equipment_type = anti_air
-		forbid_equipment_type_exact_match = armor
 
 		allowed_module_categories = {
 			main_armament_slot = {
@@ -257,6 +261,8 @@ equipment_modules = {
 		abbreviation = "m2m"
 		category = tank_medium_turret_type
 		sfx = sfx_ui_sd_module_turret
+		forbid_equipment_type = artillery
+		
 
 		allowed_module_categories = {
 			main_armament_slot = {
@@ -278,6 +284,8 @@ equipment_modules = {
 		abbreviation = "m3m"
 		category = tank_medium_turret_type
 		sfx = sfx_ui_sd_module_turret
+		forbid_equipment_type= artillery
+	
 
 		allowed_module_categories = {
 			main_armament_slot = {
@@ -301,7 +309,7 @@ equipment_modules = {
 		category = tank_medium_turret_type
 		sfx = sfx_ui_sd_module_turret
 		forbid_equipment_type = anti_air
-		forbid_equipment_type_exact_match = armor
+		forbid_equipment_type = armor
 
 		allowed_module_categories = {
 			main_armament_slot = {
@@ -337,6 +345,8 @@ equipment_modules = {
 		abbreviation = "h2m"
 		category = tank_heavy_turret_type
 		sfx = sfx_ui_sd_module_turret
+		forbid_equipment_type = artillery
+		
 
 		allowed_module_categories = {
 			main_armament_slot = {
@@ -367,6 +377,8 @@ equipment_modules = {
 		abbreviation = "h3m"
 		category = tank_heavy_turret_type
 		sfx = sfx_ui_sd_module_turret
+		forbid_equipment_type = artillery
+		
 
 		allowed_module_categories = {
 			main_armament_slot = {
@@ -665,7 +677,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		allow_equipment_type = artillery
 		forbid_equipment_type_exact_match = armor
-
+		
 		forbid_equipment_type_exact_match_for_category = {
 			secondary_turret_hmg = artillery
 			secondary_turret_small_cannon = artillery
