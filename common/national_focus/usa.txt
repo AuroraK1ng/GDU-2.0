@@ -182,6 +182,56 @@ focus_tree = {
 			CAN = { remove_ideas = USA_LL_to_Soviets_Blocked }
 		}
 	}
+	
+	focus = {
+		id = Nimitz
+		icon = GFX_Noras_usanonavyallies
+		x = 2
+		y = 0
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			always = no
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			#create_corps_commander = {
+			#name = "C.Nimitz"
+			#id = 7777
+			#portraits={
+			#	army={
+			#		large=GFX_portrait_USA_chester_w_nimitz
+			#	}
+			#	army={
+			#		small="GFX_idea_chester_nimitz"
+			#	}
+			#}
+			#traits = { gunnery_expert battleship_adherent bold superior_tactician spotter ironside inshore_fighter navy_career_officer aviation_enthusiast air_controller blue_water_expert }
+			#skill = 9
+			#attack_skill = 7
+			#defense_skill = 5
+			#maneuvering_skill = 5
+			#coordination_skill = 10	
+			#}
+		}
+	}
 
 	focus = {
 		id = USA_continue_the_new_deal
@@ -1359,9 +1409,8 @@ focus_tree = {
 				}
 				set_state_flag = USA_USACE_projects_3Inf
 			}
-			air_experience = 50
-			navy_experience = 50
-			army_experience = 10
+			air_experience = 500
+			army_experience = 250
 		}
 	}
 
@@ -1729,15 +1778,21 @@ focus_tree = {
 		continue_if_invalid = yes
 		available_if_capitulated = yes
 		available = { 
-		OR = {
-		date > 1943.1.1
-		ITA = { 
-		NOT = { has_full_control_of_state = 115 }
-		NOT = { has_full_control_of_state = 114 }
-		NOT = { has_full_control_of_state = 1 }
+			AND = {
+				USA = {
+					has_full_control_of_state = 629
+					has_full_control_of_state = 685
+				}
+				OR = {
+					date > 1943.1.1
+					ITA = { 
+						NOT = { has_full_control_of_state = 115 }
+						NOT = { has_full_control_of_state = 114 }
+						NOT = { has_full_control_of_state = 1 }
+					}
+				}
+			}
 		}
-	}
-}
 		x = 0
 		y = 1
 		relative_position_id = GDU_USA_torch

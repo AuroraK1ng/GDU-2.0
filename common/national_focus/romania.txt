@@ -179,7 +179,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ROM_trade_treaty_with_germany
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -373,7 +373,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ROM_civil_works
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -636,7 +636,7 @@ focus_tree = {
 		x = 10
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 9
@@ -683,7 +683,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_institute_royal_dictatorship
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -848,7 +848,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_revise_the_constitution
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 9
@@ -975,7 +975,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_flexible_foreign_policy
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1039,7 +1039,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ROM_flexible_foreign_policy
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 9
@@ -1109,7 +1109,7 @@ focus_tree = {
 		x = 15
 		y = 0
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 5
@@ -1273,7 +1273,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_air_superiority
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1610,7 +1610,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ROM_the_zb_53
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -1643,7 +1643,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ROM_the_zb_53
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2054,7 +2054,10 @@ focus_tree = {
 		}
 
 		available = {
-
+			IF = { 
+  					limit = {  has_start_date > 1936.1.1.12 } 
+					date > 1938.1.1
+			}
 		}
 
 		bypass = {
@@ -2086,6 +2089,18 @@ focus_tree = {
 					instant_build = yes
 				}
 				set_state_flag = ROM_expand_the_galati_shipyards_AB
+			}
+				IF = { 
+  					limit = {  has_start_date > 1936.1.1.12 } 
+					46 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 8
+					instant_build = yes
+					}
+				
+				}
 			}
 		}
 	}

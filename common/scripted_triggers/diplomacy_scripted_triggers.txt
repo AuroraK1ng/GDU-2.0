@@ -81,7 +81,8 @@ DIPLOMACY_OFFER_MILACC_ENABLE_TRIGGER = {
 DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 		NOT = { tag = SOV }
 		NOT = { tag = FRA }
-		NOT = { tag = GRE }		
+		NOT = { tag = GRE }
+		NOT = { tag = RAJ }		
 		NOT = {
 			AND = {
 			FROM = { tag = ENG }
@@ -115,6 +116,7 @@ DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
 		NOT = { FROM = { tag = GRE } }	
 		NOT = { FROM = { tag = SOV } }	
 		NOT = { FROM = { tag = FRA } }
+		NOT = { FROM = { tag = RAJ } }
 		NOT = {	FROM = { tag = JAP } }
 		NOT = {	FROM = { tag = ENG } }
 		NOT = {	FROM = { tag = USA } }

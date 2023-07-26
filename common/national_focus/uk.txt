@@ -873,6 +873,10 @@ focus_tree = {
 
 		completion_reward = {
 			add_research_slot = 1
+			IF = { 
+   			limit = { has_start_date > 1936.1.1.12 }
+   			add_research_slot = 1
+			}
 		}
 	}
 
@@ -1081,8 +1085,17 @@ focus_tree = {
 		id = Finish_rearmament
 		text = "Finish Rearmament"
 		available = {
-			    date > 1940.6.1
+			if = { limit = { NOT = { has_start_date > 1936.1.1.12 }  }
+			date > 1940.6.1
+			}
+			else_if = {
+    				limit = {
+       			has_start_date > 1936.1.1.12
+   			}
+    			date > 1941.1.1
+			
 		}
+	}
 		prerequisite = { focus = royal_ordinance_focus focus = royal_dockyard_focus}
 		icon = GFX_Limited_Rearm
 		x = 0
@@ -1140,8 +1153,29 @@ focus_tree = {
 				}
 				set_state_flag = royal_ordinance_focus_2AF
 			}
+			if = { limit = { has_start_date > 1936.1.1.12 }  
+			ENG = { add_ideas = USA_ships_for_victory_idea }
+			125 = {
+				add_extra_state_shared_building_slots = 15
+				add_building_construction = {
+					type = industrial_complex
+					level = 15
+					instant_build = yes
+				}
+				set_state_flag = royal_ordinance_focus_2AF
+			}
+		125 = {
+				add_extra_state_shared_building_slots = 20
+				add_building_construction = {
+					type = dockyard
+					level = 20
+					instant_build = yes
+				}
+				set_state_flag = royal_ordinance_focus_2AF
+			}
 		}
 	}
+}
 
 	focus = { 
 		id = air_rearmament_focus
@@ -1876,6 +1910,13 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+				IF = { 
+  					limit = {  has_start_date > 1936.1.1.12 } 
+			every_state = {
+					limit= {OR= { state = 19 state = 23 state = 14 state = 30 state = 15 state = 785 state = 29 state = 6 state = 7 state = 36 state = 56 state = 833 state = 58 state = 834 state = 99}}
+						remove_dynamic_modifier = { modifier = GER_DDAY_Wall }
+				}
+			}
 			add_ideas = mulberry_harbours_idea
 			USA = { add_ideas = mulberry_harbours_idea }
 			CAN = { add_ideas = mulberry_harbours_idea }
@@ -3046,28 +3087,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		bypass = {
-			AST = {
-				custom_trigger_tooltip = {
-					tooltip = construction_effort_tt
-					all_owned_state = {
-						free_building_slots = {
-							building = industrial_complex
-							size < 1
-							include_locked = yes
-						}
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = naval_effort_tt
-					all_owned_state = {
-						free_building_slots = {
-							building = dockyard
-							size < 1
-							include_locked = yes
-						}
-					}
-				}
-			}
+			
 		}
 
 		complete_tooltip = {
@@ -3105,6 +3125,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			IF = { 
+  					limit = { NOT = { has_start_date > 1936.1.1.12 } }
 			AST = {
 				add_opinion_modifier = { target = ENG modifier = aided_industry }
 				126 = {
@@ -3139,7 +3161,46 @@ focus_tree = {
 				}
 			}
 		}
+			else_if = {
+    				limit = {
+       			has_start_date > 1936.1.1.12
+   			}
+			AST = {
+				add_opinion_modifier = { target = ENG modifier = aided_industry }
+				126 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				126 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = ENG_uk_australia_focus_1IC
+				}
+				126 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = ENG_uk_australia_focus_1IC
+				}
+				add_autonomy_ratio = {
+					value = -0.05
+					localization = uk_australia_focus
+				}
+			}
+		}
 	}
+}
 
 
 	focus = {
@@ -3194,6 +3255,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			IF = { 
+  					limit = { NOT = { has_start_date > 1936.1.1.12 } }
 			NZL = {
 				add_opinion_modifier = { target = ENG modifier = aided_industry }
 				126 = {
@@ -3228,7 +3291,46 @@ focus_tree = {
 				}
 			}
 		}
+		else_if = {
+    				limit = {
+       			has_start_date > 1936.1.1.12
+   			}
+			NZL = {
+				add_opinion_modifier = { target = ENG modifier = aided_industry }
+				126 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				126 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = ENG_uk_new_zealand_focus_1IC
+				}
+				126 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = ENG_uk_new_zealand_focus_1IC
+				}
+				add_autonomy_ratio = {
+					value = -0.05
+					localization = uk_new_zealand_focus
+				}
+			}
+		}
 	}
+}
 
 
 	focus = {

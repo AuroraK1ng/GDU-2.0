@@ -2072,8 +2072,6 @@ leader_traits = {
 		experience_gain_army = 0.2
 		experience_gain_air = 0.1
 		experience_gain_navy = 0.05
-		motorized_attack_factor = 0.06
-		motorized_defence_factor = 0.06			
 
 		ai_will_do = {
 			factor = 500
@@ -2790,9 +2788,10 @@ leader_traits = {
 		sprite = 8
 		army_armor_attack_factor = 0.04
 	    army_armor_defence_factor = 0.04
-		motorized_attack_factor = 0.08
-		motorized_defence_factor = 0.08
-
+		motorized_attack_factor = 0.04
+		motorized_defence_factor = 0.04
+		mechanized_attack_factor = 0.04
+		mechanized_defence_factor = 0.04
 		ai_will_do = {
 			factor = 1
 		}
@@ -2802,9 +2801,10 @@ leader_traits = {
 		sprite = 8
 		army_armor_attack_factor = 0.08
 	    army_armor_defence_factor = 0.08
-		motorized_attack_factor = 0.12
-		motorized_defence_factor = 0.12
-
+		motorized_attack_factor = 0.08
+		motorized_defence_factor = 0.08
+		mechanized_attack_factor = 0.08
+		mechanized_defence_factor = 0.08
 		ai_will_do = {
 			factor = 2
 		}
@@ -2814,9 +2814,10 @@ leader_traits = {
 		sprite = 8
 		army_armor_attack_factor = 0.12
 	    army_armor_defence_factor = 0.12
-		motorized_attack_factor = 0.16
-		motorized_defence_factor = 0.16
-
+		motorized_attack_factor = 0.12
+		motorized_defence_factor = 0.12
+		mechanized_attack_factor = 0.12
+		mechanized_defence_factor = 0.12
 		ai_will_do = {
 			factor = 3
 		}
@@ -2943,8 +2944,7 @@ leader_traits = {
 	}
 	emergency_war_construction1 = { 
 		sprite = 5
-		production_speed_arms_factory_factor = 0.2
-		global_building_slots_factor = 0.25
+		global_building_slots_factor = 1
 
 		ai_will_do = {
 			factor = 3

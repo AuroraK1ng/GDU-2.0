@@ -12,17 +12,15 @@ bookmarks = {
 			ideology = democratic
 			ideas = {
 				FRA_victors_of_wwi
-				FRA_disjointed_government
+				FRA_political_violence
 				FRA_protected_by_the_maginot_line
 			}
 			focuses = {
-				FRA_form_the_popular_front
-				FRA_revive_the_national_bloc
-				FRA_go_with_britain
+				FRA_army_reform
+				FRA_heavy_armor_focus
+				FRA_devalue_the_franc
 			}
 		}
-		
-
 		"ENG"={
 			history = "ENG_GATHERING_STORM_DESC"
 			ideology = democratic
@@ -32,6 +30,8 @@ bookmarks = {
 				george_v
 			}
 			focuses = {
+				general_rearmament_focus 
+				fighter_command_focus 
 				tizard_mission_focus
 			}
 		}
@@ -39,11 +39,10 @@ bookmarks = {
 		"GER"={
 			history = "GER_GATHERING_STORM_DESC"
 			ideology = fascism
-
 			ideas = {
+				GER_mefo_bills_1 
 				sour_loser
 				general_staff
-				GER_mefo_bills_1
 			}
 			focuses = {
 				GER_anschluss
@@ -55,48 +54,29 @@ bookmarks = {
 			history = "ITA_GATHERING_STORM_DESC"
 			ideology = fascism
 			ideas = {
-				vittorio_emanuele
-				ITA_iri_fake_ns
-				ITA_re_fake_ns
-			}	
+				vittoria_mutilata
+				victor_emmanuel
+			}
 			focuses = {
-				ITA_il_sol_dell_avvenire
-				ITA_a_colonial_empire
+				ITA_mare_nostrum
+				ITA_slovenia_dalmatia_claims 
+				ITA_pact_of_steel
 			}
 		}
-		"JAP"={
-			history = "JAP_GATHERING_STORM_DESC"
-			ideology = fascism
-			ideas = {
-				state_shintoism
-				JAP_zaibatsus
-				JAP_militarism
-			}	
-			focuses = {
-				JAP_the_zero
-				JAP_warrior_spirit
-				JAP_strike_on_the_southern_resource_area
-			}			
-		}
-
 		"SOV"={
 			history = "SOV_GATHERING_STORM_DESC"
 			ideology = communism
-
 			ideas = {
-				trotskyite_plot_nsb
-				SOV_second_five_year_plan_fake_1936_ns
-				SOV_politicized_military
+				trotskyite_plot
 			}
 			focuses = {
-				SOV_behead_the_snake
-				SOV_the_centre
-			}	
+				SOV_great_purge
+				SOV_defense_of_stalingrad
+				SOV_proclaim_victory_over_fascism 
+			}
 		}
 
-		"---"={
-			history = "OTHER_GATHERING_STORM_DESC"
-		}
+		
 
 
 		# minors from DLC ####
@@ -109,9 +89,19 @@ bookmarks = {
 				CAN_conscription_crisis
 			}
 			focuses = {
-				CAN_strengthen_the_commonwealth_ties
-				CAN_commit_to_the_war
-				CAN_war_fueled_economy
+				CAN_army_modernization
+			}
+		}
+		"BUL"={
+			minor = yes
+			history = "BUL_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				BUL_second_national_catastrophe
+				BUL_imro_01
+			}
+			focuses = {
+				BUL_power_to_the_tsar
 			}
 		}
 		"SAF"={
@@ -124,12 +114,20 @@ bookmarks = {
 			}
 			focuses = {
 				SAF_secure_interests_in_africa
-				SAF_work_for_all_poor
-				SAF_expand_the_cape_corps
 			}
 		}
-
-
+		"SPR"={
+			minor = yes
+			history = "SPR_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				SPA_carlism_1
+				SPR_national_strikes_3
+			}
+			focuses = {
+				SPA_unify_the_nationalist_front
+			}
+		}
 		"HUN"={
 			minor = yes
 			history = "HUN_GATHERING_STORM_DESC"
@@ -138,7 +136,6 @@ bookmarks = {
 				HUN_treaty_of_triannon
 			}
 			focuses = {
-				HUN_proclaim_greater_hungary
 				HUN_secret_rearmament
 				HUN_renounce_the_treaty_of_trianon
 			}
@@ -153,53 +150,8 @@ bookmarks = {
 				neutrality_idea
 			}
 			focuses = {
-				ROM_appoint_german_friendly_government
 				ROM_institute_royal_dictatorship
 				ROM_preserve_greater_romania
-			}
-		}
-
-
-		"SPR"={
-			minor = yes
-			history = "SPAIN_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				SPR_military_disloyalty
-				SPA_carlism_1
-				SPR_political_violence
-			}
-			focuses = {
-				SPA_caudillo_of_spain
-			}
-		}
-
-		"BUL"={
-			minor = yes
-			history = "BUL_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				BUL_second_national_catastrophe
-				BUL_army_restrictions
-				BUL_imro_01
-			}
-			focuses = {
-				BUL_power_to_the_tsar
-				BUL_restore_the_bulgarian_patriarchate
-				BUL_prussia_of_the_balkans
-			}
-		}
-		"ETH"={
-			minor = yes
-			history = "ETH_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				ETH_conservative_high_command_idea
-				ETH_the_heroes_of_adwa_idea
-				ETH_on_our_own_idea
-			}
-			focuses = {
-				ETH_reach_out_to_the_italians
 			}
 		}
 

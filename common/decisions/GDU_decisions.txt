@@ -207,299 +207,6 @@ foreign_politics = {
 			clr_country_flag = cheater_leader
 		}
 	}
-
-	GDU_rebuild_bb_ita = {
-		allowed = {
-			original_tag = ITA
-
-		}
-		available = {	
-			THIS = {
-				has_war = yes
-			}
-			OR = {
-				AND = {
-
-					has_navy_size = {
-						size < 15
-						archetype = ship_hull_heavy
-					}
-					
-					ENG = {
-						has_navy_size = {
-							size > 25
-							archetype = ship_hull_heavy
-						}
-					}
-				}
-				AND = {
-
-					has_navy_size = {
-						size < 10
-						archetype = ship_hull_heavy
-					}
-					
-					ENG = {
-						has_navy_size = {
-							size > 17
-
-							archetype = ship_hull_heavy
-						}
-					}
-				}
-				AND = {
-
-					has_navy_size = {
-						size < 6
-						archetype = ship_hull_heavy
-					}
-					
-					ENG = {
-						has_navy_size = {
-							size > 11
-							archetype = ship_hull_heavy
-						}
-					}
-				}
-
-			}
-
-		}
-		cost = 50
-		fire_only_once = yes
-		visible = {
-				OR = {
-					original_tag = ITA
-				}
-			}
-		days_remove = 270
-		complete_effect = {
-			add_ideas = GDU_rebuild_bb
-		}
-		remove_effect = { 
-			remove_ideas = GDU_rebuild_bb
-		}
-	}
-
-	GDU_rebuild_bb_eng = {
-		allowed = {
-			original_tag = ENG
-
-		}
-		available = {	
-			THIS = {
-				has_war = yes
-			}
-			OR = {
-				AND = {
-
-					has_navy_size = {
-						size < 15
-						archetype = ship_hull_heavy
-					}
-					
-					ITA = {
-						has_navy_size = {
-							size > 25
-							archetype = ship_hull_heavy
-						}
-					}
-				}
-				AND = {
-
-					has_navy_size = {
-						size < 10
-						archetype = ship_hull_heavy
-					}
-					
-					ITA = {
-						has_navy_size = {
-							size > 17
-
-							archetype = ship_hull_heavy
-						}
-					}
-				}
-				AND = {
-
-					has_navy_size = {
-						size < 6
-						archetype = ship_hull_heavy
-					}
-					
-					ITA = {
-						has_navy_size = {
-							size > 11
-							archetype = ship_hull_heavy
-						}
-					}
-				}
-
-			}
-
-		}
-		cost = 50
-		fire_only_once = yes
-		visible = {
-				OR = {
-					original_tag = ENG
-				}
-			}
-		days_remove = 270
-		complete_effect = {
-			add_ideas = GDU_rebuild_bb
-		}
-		remove_effect = { 
-			remove_ideas = GDU_rebuild_bb
-		}
-	}
-
-	GDU_rebuild_bb_usa = {
-		allowed = {
-			original_tag = USA
-
-		}
-		available = {	
-			THIS = {
-				has_war = yes
-			}
-			OR = {
-				AND = {
-
-					has_navy_size = {
-						size < 15
-						archetype = ship_hull_heavy
-					}
-					
-					JAP = {
-						has_navy_size = {
-							size > 25
-							archetype = ship_hull_heavy
-						}
-					}
-				}
-				AND = {
-
-					has_navy_size = {
-						size < 10
-						archetype = ship_hull_heavy
-					}
-					
-					JAP = {
-						has_navy_size = {
-							size > 17
-
-							archetype = ship_hull_heavy
-						}
-					}
-				}
-				AND = {
-
-					has_navy_size = {
-						size < 6
-						archetype = ship_hull_heavy
-					}
-					
-					JAP = {
-						has_navy_size = {
-							size > 11
-							archetype = ship_hull_heavy
-						}
-					}
-				}
-
-			}
-
-		}
-		cost = 50
-		fire_only_once = yes
-		visible = {
-				OR = {
-					original_tag = USA
-				}
-			}
-		days_remove = 210
-		complete_effect = {
-			add_ideas = GDU_rebuild_bb
-		}
-		remove_effect = { 
-			remove_ideas = GDU_rebuild_bb
-		}
-	}
-
-	GDU_rebuild_bb_jap = {
-		allowed = {
-			original_tag = JAP
-
-		}
-		available = {	
-			THIS = {
-				has_war = yes
-			}
-			OR = {
-				AND = {
-
-					has_navy_size = {
-						size < 15
-						archetype = ship_hull_heavy
-					}
-					
-					USA = {
-						has_navy_size = {
-							size > 25
-							archetype = ship_hull_heavy
-						}
-					}
-				}
-				AND = {
-
-					has_navy_size = {
-						size < 10
-						archetype = ship_hull_heavy
-					}
-					
-					USA = {
-						has_navy_size = {
-							size > 17
-
-							archetype = ship_hull_heavy
-						}
-					}
-				}
-				AND = {
-
-					has_navy_size = {
-						size < 6
-						archetype = ship_hull_heavy
-					}
-					
-					USA = {
-						has_navy_size = {
-							size > 11
-							archetype = ship_hull_heavy
-						}
-					}
-				}
-
-			}
-
-		}
-		cost = 50
-		fire_only_once = yes
-		visible = {
-				OR = {
-					original_tag = JAP
-				}
-			}
-		days_remove = 365
-		complete_effect = {
-			add_ideas = GDU_rebuild_bb
-		}
-		remove_effect = { 
-			remove_ideas = GDU_rebuild_bb
-		}
-	}
-
 	GDU_JAP_pearl_harbor = {
 
 		icon = generic_operation
@@ -542,7 +249,8 @@ foreign_politics = {
 				USA = { country_event = gdunews.6 }
 					# hidden event that removes the US cores on Hawaii etc after the Pearl Harbor debuff has run out. This ensures that USA doesn't get a huge amount of extra core attack/defense helping to defend those in i.e. 1942 from the Home of the Free spirit (which is intended to help USA in the event of an invasion of mainland USA, not an invasion of i.e. Hawaii)
 				USA = { country_event = { id = gduannexations.12 days = 60 } } # hidden event
-				USA = { country_event = { id = usa.65 days = 60 } }
+				USA = { country_event = { id = usa.65 days = 90 } }
+				USA = { country_event = { id = usa.66 days = 540 } }
 
 				
 				if = {
@@ -2106,114 +1814,116 @@ operations = {
 
 }
 
-#GER_foreign_politics = {
-#
-#	GDU_GER_seize_syria = {
-#		icon = GFX_decision_ger_reichskommissariats
-#		allowed = { tag = GER }
-#		available = {
-#			any_country = {
-#				original_tag = EFR
-#			}
-#			ITA = {
-#				controls_state = 446
-#				controls_state = 447
-#				controls_state = 453
-#				controls_state = 454
-#			}
-#		}
-#
-#
-#		fire_only_once = yes
-#
-#		visible = {
-#			EFR = {
-#				controls_state = 553
-#			}
-#
-#		}
-#
-#		ai_will_do = {
-#			factor = 1
-#		}
-#
-#		complete_effect = {
-#			ITA = {
-#				transfer_state = 553
-#				transfer_state = 677
-#				transfer_state = 680
-#				transfer_state = 554
-#			}
-#		}
-#
-#	}
-#}
+GER_foreign_politics = {
+
+	GDU_GER_seize_syria = {
+		icon = GFX_decision_ger_reichskommissariats
+		allowed = { tag = GER }
+		available = {
+			any_country = {
+				original_tag = EFR
+			}
+			ITA = {
+				controls_state = 446
+				controls_state = 447
+				controls_state = 453
+				controls_state = 454
+			}
+		}
+
+
+		fire_only_once = yes
+
+		visible = {
+			EFR = {
+				controls_state = 553
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			ITA = {
+				transfer_state = 553
+				transfer_state = 677
+				transfer_state = 680
+				transfer_state = 554
+			}
+		}
+
+	}
+	
+	GDU_GER_invade_iran = {
+		icon = GFX_decision_ger_reichskommissariats
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			if = {
+    				limit = {
+       			has_start_date > 1936.1.1.12
+   				 		}
+    				date < 1941.10.1
+				}
+			any_country = {
+				original_tag = PER
+			}
+			OR = {
+				controls_state = 291
+				ITA = { controls_state = 291 }
+				ROM = { controls_state = 291 }
+				HUN = { controls_state = 291 }
+				BUL = { controls_state = 291 }
+			}
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			has_war_with = ENG
+			any_country = {
+				original_tag = PER
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			declare_war_on = {
+				target = PER
+				type = annex_everything
+			}
+			SOV = {
+				transfer_state = 420
+				transfer_state = 419
+				transfer_state = 418
+				transfer_state = 266
+				transfer_state = 416
+			}
+			ENG = {
+				annex_country = {
+					target = PER
+					transfer_troops = no
+				}
+			}
+			every_country = { country_event = { id = gduevents.11 days = 1 } }
+		}
+
+	}
+}
 		
 
 foreign_politics = {
 	
 
 }
-
-#GER_foreign_politics = {
-#
-#	GDU_GER_invade_iran = {
-#		icon = GFX_decision_ger_reichskommissariats
-#
-#		allowed = {
-#			original_tag = GER
-#		}
-#
-#		available = {
-#			any_country = {
-#				original_tag = PER
-#			}
-#			OR = {
-#				controls_state = 291
-#				ITA = { controls_state = 291 }
-#				ROM = { controls_state = 291 }
-#				HUN = { controls_state = 291 }
-#				BUL = { controls_state = 291 }
-#			}
-#		}
-#
-#		fire_only_once = yes
-#
-#		visible = {
-#			has_war_with = ENG
-#			any_country = {
-#				original_tag = PER
-#			}
-#		}
-#
-#		ai_will_do = {
-#			factor = 1
-#		}
-#
-#		complete_effect = {
-#			declare_war_on = {
-#				target = PER
-#				type = annex_everything
-#			}
-#			SOV = {
-#				transfer_state = 420
-#				transfer_state = 419
-#				transfer_state = 418
-#				transfer_state = 266
-#				transfer_state = 416
-#			}
-#			ENG = {
-#				annex_country = {
-#					target = PER
-#					transfer_troops = no
-#				}
-#			}
-#			SOV = { country_event = { id = gduevents.11 days = 1 } }
-#			ENG = { country_event = { id = gduevents.12 days = 1 } }
-#		}
-#
-#	}
-#}
 
 foreign_politics = {
 	assume_control_norway = {
@@ -2268,17 +1978,24 @@ foreign_politics = {
 				NOT = {
 					454 = { is_fully_controlled_by = ENG }
 				}
-				date > 1940.6.1
+				IF = { 
+  					limit = { NOT = { has_start_date > 1936.1.1.12 } } 
+   					 date > 1940.6.1
+				}
+				else_if = {
+    					limit = {
+       			 	has_start_date > 1936.1.1.12
+   				 	}
+    				date > 1941.10.1
+				}
 			}
 			has_completed_focus = uk_service_focus
 			OR = {
 				444 = { is_controlled_by = RAJ }
 				444 = { is_controlled_by = ENG }				
 			}
-
 		}
 
-		cost = 25
 
 		visible = {
 			PER = { exists = yes }
@@ -2298,12 +2015,49 @@ foreign_politics = {
 					transfer_troops = no
 				}
 			}
-			SOV = { country_event = { id = gduevents.11 days = 1 } }
+			every_country = { country_event = { id = gduevents.11 days = 1 } }
 
 		}
 
 	}
+	GDU_eng_torch_decision = {
+		icon = generic_operation
 
+		available = {
+			has_start_date > 1936.1.1.12 
+			EFR = { exists = yes }
+			OR = {
+			ITA = { NOT = { has_full_control_of_state = 448 has_full_control_of_state = 450 has_full_control_of_state = 451} }
+			date > 1942.4.1
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		allowed = {
+			#has_start_date > 1936.1.1.12
+			original_tag = ENG
+		}
+		visible = {
+			has_start_date > 1936.1.1.12
+			original_tag = ENG
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+			country_event = vichy.1
+			EFR = { country_event = vichy.2 }
+			ENG = { add_ideas = GDU_allies_torch }			
+			every_country = {
+			country_event = { id = gduevents.15 }
+			}
+		}
+	}
 	GDU_demolish_elalamein_forts = {
 		icon = generic_operation
 
@@ -2372,11 +2126,7 @@ USA_foreign_politics = {
 			USA = { add_ideas = GDU_allies_torch }
 			ENG = { add_ideas = GDU_allies_torch }			
 			every_country = {
-				limit = {
-					NOT = { tag = USA }
-					is_in_faction_with = USA
-				}
-				country_event = { id = gduevents.15 }
+			country_event = { id = gduevents.15 }
 			}
 		}
 	}

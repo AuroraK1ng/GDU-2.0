@@ -109,7 +109,16 @@ USA_foreign_politics = {
 }
 
 USA_congress = {
-
+	USA_cooldown_time = {
+		icon = generic_political_discourse
+		allowed = { original_tag = USA }	
+		visible = {	has_active_mission = USA_cooldown_time	}	
+		available = {	NOT = { country_exists = USA }	}
+		days_mission_timeout = 645
+		activation = {	has_country_flag = USA_great_depression_cooldown	} 
+		fire_only_once = no
+		is_good = yes		
+			}
 	USA_homeland_defense = {
 
 		icon = generic_prepare_civil_war
@@ -320,7 +329,6 @@ USA_congress = {
 
 		available = {
 			has_completed_focus = USA_indirect_help
-			ENG = { has_defensive_war = yes }
 			has_equipment = {
 				convoy > 199
 			}
@@ -533,11 +541,8 @@ USA_congress = {
 		available = {
 			has_completed_focus = USA_indirect_help
 			SOV = { 
-				AND = {
-					has_defensive_war = yes 
-					has_equipment = {
-						convoy_1 < 700
-					}
+				has_equipment = {
+					convoy_1 < 700
 				}
 			}
 			has_equipment = {

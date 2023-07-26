@@ -6,6 +6,7 @@ political_actions = {
 
 		available = {
 			NOT = {
+			original_tag = USA
 			has_country_flag = worker_conditions_running
 			}
 		}
@@ -16,6 +17,7 @@ political_actions = {
 
 		visible = {
 			always = yes
+			NOT = { tag = USA }
 			
 		}
 
@@ -218,7 +220,6 @@ economy_decisions = {
 				TAG = JAP
 				TAG = ENG
 				TAG = FRA
-				TAG = FRF
 				TAG = CAN
 				TAG = SAF
 				TAG = RAJ
@@ -301,7 +302,6 @@ economy_decisions = {
 				TAG = JAP
 				TAG = ENG
 				TAG = FRA
-				TAG = FRF
 				TAG = CAN
 				TAG = SAF
 				TAG = RAJ

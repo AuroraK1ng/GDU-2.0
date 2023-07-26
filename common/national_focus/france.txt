@@ -1102,7 +1102,17 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_reform_the_labour_laws
 		}
-		cost = 0
+		completion_reward = {
+			660 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		cost = 2
 
 		ai_will_do = {
 			factor = 1

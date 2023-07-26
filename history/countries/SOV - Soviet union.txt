@@ -1,13 +1,12 @@
 ﻿capital = 219
 
 oob = "SOV_1936"
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "SOV_1936_naval_mtg"
-	else = {
-		set_naval_oob = "SOV_1936_naval_legacy"
-	}
-}
+
+set_naval_oob = "SOV_1936_naval_mtg"
+
+1936.1.1.13 = {
+ set_research_slots = 3
+ }
 add_opinion_modifier = { target = JAP modifier = embargo }
 add_opinion_modifier = { target = JAP modifier = sanctions }
 add_opinion_modifier = { target = JAP modifier = minor_sanctions }
@@ -16,7 +15,9 @@ add_opinion_modifier = { target = SPR modifier = embargo }
 add_opinion_modifier = { target = SPR modifier = sanctions_relations }
 add_opinion_modifier = { target = SPR modifier = large_decrease }
 add_opinion_modifier = { target = SPR modifier = hostile_status }
+
 set_country_flag=host
+
 add_intel = {
 	target = BUl
 	civilian_intel = 200
@@ -130,7 +131,7 @@ add_intel = {
 	airforce_intel = 200
 }
 
-set_research_slots = 4
+set_research_slots = 3
 navy_experience = 0
 # Starting tech
 set_technology = {
@@ -170,31 +171,18 @@ set_technology = {
 	fuel_silos = 1
 	fuel_refining = 1
 	basic_train = 1
+	armored_car1 = 1
+	basic_cruiser_armor_scheme = 1
 }
 
 add_opinion_modifier = { target = SPR modifier = embargo }
 add_opinion_modifier = { target = SPR modifier = sanctions_relations }
 add_opinion_modifier = { target = SPR modifier = large_decrease }
 add_opinion_modifier = { target = SPR modifier = hostile_status }
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	set_technology = {
-		##early_submarine = 1
-		##basic_submarine = 1
-		##early_destroyer = 1
-		##early_light_cruiser = 1
-		##early_heavy_cruiser = 1
-		##early_carrier = 1
-		##early_battlecruiser = 1
-	}
-}
 
-if = {
-	limit = {
-		has_dlc = "La Resistance"
-	}
-	set_technology = { armored_car1 = 1	}
-}
+
+
+
 
 
 
@@ -215,6 +203,7 @@ if = {
 		mtg_transport = 1
 	}
 }
+
 recruit_character = SOV_nikolay_voznesensky
 recruit_character = SOV_lavrenty_beriya
 recruit_character = SOV_nikita_khrushchyov
@@ -238,9 +227,10 @@ recruit_character = SOV_sergey_korolyov
 recruit_character = SOV_georgy_zhukov_highcommand
 recruit_character = SOV_georgy_zhukov
 
-set_convoys = 900
+set_convoys = 799
 set_stability = 0.5
 set_war_support = 0.8
+
 add_equipment_to_stockpile = {
          type = artillery_equipment_1
          amount = 20260
@@ -399,6 +389,7 @@ set_popularities = {
 
 create_faction = Comintern
 add_to_faction = SOV
+
 add_timed_idea = { idea = airandnavy_idea days = 1960 }
 
 
@@ -408,7 +399,6 @@ add_ideas = {
 	production_targets_idea
 	closed_economy
 	general_winter_idea
-	gaz 
 }
 
 create_country_leader = {

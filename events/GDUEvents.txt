@@ -1108,8 +1108,7 @@ country_event = {
 
 	option = {
 		name = gduevents.39.a
-
-
+		GER = { complete_national_focus = Victory_in_France }
 	}
 
 }
@@ -2768,7 +2767,40 @@ country_event = {
 
 	option = {
 		name = gduevents.62.a
-
+		IF = {
+			limit = { has_start_date > 1936.1.1.12 } 
+		SOV = {
+	  army_experience = 1000
+        air_experience  = 300
+                }
+        GER = {
+        air_experience  = 300
+                }
+        ITA = {
+        air_experience  = 300
+                }
+        BUL = {
+		army_experience = 125
+        }
+	  SPR = {
+		army_experience = 125
+        }
+         ROM = {
+        army_experience = 125
+                }
+        HUN = {
+        army_experience = 125
+                }
+        ENG = {
+        army_experience = 100
+                }
+        CAN = {
+        army_experience = 100
+                }
+        SAF = {
+        army_experience = 100
+                }
+		}
 
 	}
 

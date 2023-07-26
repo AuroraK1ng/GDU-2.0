@@ -300,6 +300,7 @@ playable_siam = {
 		ai_will_do = { factor = 0 }
 		cost = 0
 		visible = {
+			NOT = { has_start_date > 1936.1.1.12 }
 			date < 1936.1.2
 		}
 		allowed = {
@@ -319,7 +320,7 @@ playable_siam = {
 			set_global_flag = mini_GDU
 			ROM = {
 				annex_country = { target = BUL transfer_troops = yes }
-				add_research_slot = 1                         #Romania gets its research slot early, doesn't get the focus one, however (similar to UK). This may allow it to research a few more things for some more variety.
+				#add_research_slot = 1   #Romania gets its research slot early, doesn't get the focus one, however (similar to UK). This may allow it to research a few more things for some more variety.
 				add_state_core = 77
 				add_state_core = 211
 				add_state_core = 212
@@ -329,7 +330,7 @@ playable_siam = {
 				add_state_core = 106
 			}
 			GER = {
-				add_research_slot = 1  
+				#add_research_slot = 1  
 				annex_country = { target = HUN transfer_troops = yes }
 				add_state_core = 155
 				add_state_core = 154
@@ -349,13 +350,13 @@ playable_siam = {
 			}
 			AST = {
 				annex_country = { target = NZL transfer_troops = yes }
-				add_research_slot = 1                         #Australia gets its research slot early, doesn't get the focus one, however (similar to UK). This may allow it to research a few more things for some more variety.
+				#add_research_slot = 1  #Australia gets its research slot early, doesn't get the focus one, however (similar to UK). This may allow it to research a few more things for some more variety.
 				add_state_core = 723
 				add_state_core = 284
 			}
 			
 			ENG = {
-				add_research_slot = 1                         #UK gets 1 more research slot since it has to research more stuff with fewer minors. But can't do the "complete commitment" focus to get the extra research slot after the war starts, so effectively UK is getting that research slot early.
+				#add_research_slot = 1 #UK gets 1 more research slot since it has to research more stuff with fewer minors. But can't do the "complete commitment" focus to get the extra research slot after the war starts, so effectively UK is getting that research slot early.
 				annex_country = { target = CAN transfer_troops = yes }           # Annex Canada
 				annex_country = { target = SAF transfer_troops = yes }           # Annex South Africa
 				add_ideas = UK_mini_GDU_manpower                                 # Instead of getting cores, UK gets a manpower national spirit for annexing Canada/South Africa. This is so that you don't get sealion bonus in Canada/South Africa
@@ -997,66 +998,59 @@ GER_foreign_politics = {
 		}
 	}
 
-
-	GDU_GER_invade_iran = {
-		icon = GFX_decision_ger_reichskommissariats
-
-		allowed = {
-			original_tag = GER
-		}
-
-		available = {
-			any_country = {
-				original_tag = PER
-			}
-			OR = {
-				controls_state = 291
-				ITA = { controls_state = 291 }
-				ROM = { controls_state = 291 }
-				HUN = { controls_state = 291 }
-				BUL = { controls_state = 291 }
-			}
-		}
-
-		fire_only_once = yes
-
-		visible = {
-			always = yes
-			
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		complete_effect = {
-			declare_war_on = {
-				target = PER
-				type = annex_everything
-			}
-			SOV = {
-				transfer_state = 420
-				transfer_state = 419
-				transfer_state = 418
-				transfer_state = 266
-				transfer_state = 416
-			}
-			ENG = {
-				annex_country = {
-					target = PER
-					transfer_troops = no
-				}
-			}
-			SOV = { country_event = { id = gduevents.11 days = 1 } }
-			ENG = { country_event = { id = gduevents.12 days = 1 } }
-		}
-	}
-
-
-
-
-
-
+#	GDU_GER_invade_iran = {
+#		icon = GFX_decision_ger_reichskommissariats
+#
+#		allowed = {
+#			original_tag = GER
+#		}
+#
+#		available = {
+#			any_country = {
+#				original_tag = PER
+#			}
+#			OR = {
+#				controls_state = 291
+#				ITA = { controls_state = 291 }
+#				ROM = { controls_state = 291 }
+#				HUN = { controls_state = 291 }
+#				BUL = { controls_state = 291 }
+#			}
+#		}
+#
+#		fire_only_once = yes
+#
+#		visible = {
+#			always = yes
+#			
+#		}
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		complete_effect = {
+#			declare_war_on = {
+#				target = PER
+#				type = annex_everything
+#			}
+#			SOV = {
+#				transfer_state = 420
+#				transfer_state = 419
+#				transfer_state = 418
+#				transfer_state = 266
+#				transfer_state = 416
+#			}
+#			ENG = {
+#				annex_country = {
+#					target = PER
+#					transfer_troops = no
+#				}
+#			}
+#			SOV = { country_event = { id = gduevents.11 days = 1 } }
+#			ENG = { country_event = { id = gduevents.12 days = 1 } }
+#		}
+#	}
 
 	GER_fall_weiss = {
 
@@ -1661,45 +1655,45 @@ GER_foreign_politics = {
 
 
 
-	GDU_GER_seize_syria = {
-		icon = GFX_decision_ger_reichskommissariats
-		allowed = { tag = GER }
-		available = {
-			any_country = {
-				original_tag = EFR
-			}
-			ITA = {
-				controls_state = 446
-				controls_state = 447
-				controls_state = 453
-				controls_state = 454
-			}
-		}
-
-
-		fire_only_once = yes
-
-		visible = {
-			EFR = {
-				controls_state = 553
-			}
-
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		complete_effect = {
-			ITA = {
-				transfer_state = 553
-				transfer_state = 677
-				transfer_state = 680
-				transfer_state = 554
-			}
-		}
-
-	}
+#	GDU_GER_seize_syria = {
+#		icon = GFX_decision_ger_reichskommissariats
+#		allowed = { tag = GER }
+#		available = {
+#			any_country = {
+#				original_tag = EFR
+#			}
+#			ITA = {
+#				controls_state = 446
+#				controls_state = 447
+#				controls_state = 453
+#				controls_state = 454
+#			}
+#		}
+#
+#
+#		fire_only_once = yes
+#
+#		visible = {
+#			EFR = {
+#				controls_state = 553
+#			}
+#
+#		}
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		complete_effect = {
+#			ITA = {
+#				transfer_state = 553
+#				transfer_state = 677
+#				transfer_state = 680
+#				transfer_state = 554
+#			}
+#		}
+#
+#	}
 }
 
 

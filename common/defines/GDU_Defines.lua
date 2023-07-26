@@ -553,7 +553,7 @@ NDefines.NNavy.SUBMARINE_ESCAPE_RATIOS = { -- subs will escape battle in convoy 
 	
 NDefines.NNavy.COMBAT_DAMAGE_RANDOMNESS = 1.5
 
-NDefines.NNavy.COMBAT_CRITICAL_DAMAGE_MULT = 30.0								-- vanilla was 5 - Multiplier for the critical damage. Scaled down with the ship reliability.
+NDefines.NNavy.COMBAT_CRITICAL_DAMAGE_MULT = 10.0								-- vanilla was 5 - Multiplier for the critical damage. Scaled down with the ship reliability.
 
 
 --- Naval Defines Related to USW and ASW 
@@ -639,9 +639,9 @@ NDefines.NNavy.GUN_HIT_PROFILES = { -- hit profiles for guns, if target ih profi
 	   }					
 NDefines.NNavy.DEPTH_CHARGES_HIT_PROFILE = 300.0    -- hit profile for depth charges	
 NDefines.NNavy.BASE_GUN_COOLDOWNS = { -- number of hours for a gun to be ready after shooting
-		3.3,	-- big guns
-		2.7,	-- torpedos
-		1.1,	-- small guns
+		3.2,	-- big guns
+		2.5,	-- torpedos
+		1.2,	-- small guns
 	}
 			
 NDefines.NNavy.COMBAT_BASE_HIT_CHANCE = 1.0                                    -- base chance for hit
@@ -690,7 +690,7 @@ NDefines.NNavy.POSITIONING_PENALTY_HOURLY_DECAY_FOR_NEWLY_JOINED_SHIPS			= 1.0 -
 
 NDefines.NNavy.DAMAGE_PENALTY_ON_MINIMUM_POSITIONING = 0.45 					-- damage penalty at 0% positioning | 0.75
 NDefines.NNavy.SCREENING_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.35  	-- screening efficiency (screen to capital ratio) at 0% positioning | 0.5
-NDefines.NNavy.AA_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.25  			-- AA penalty at 0% positioning | 0.75
+NDefines.NNavy.AA_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.45  			-- AA penalty at 0% positioning | 0.75
 
 NDefines.NNavy.CONVOY_HIT_PROFILE = 250.0  									-- convoys has this contant hit profile
 NDefines.NNavy.CONVOY_SINKING_SPILLOVER = 1.5                 				-- Damaged convoys roll for if they sink in the end of combat by accumulating the damage. This scales that chance. 

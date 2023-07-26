@@ -1,11 +1,19 @@
 ﻿capital = 2
+
 starting_train_buffer = 1.5
 
-set_research_slots = 5
+set_research_slots = 4
+
 oob = "ITA_1936_nsb"
+
 set_naval_oob = "ITA_1936_naval_mtg"
+
+1936.1.1.13 = {
+ set_research_slots = 4
+ }
+
 set_stability = 0.65
-set_war_support = 0.85
+set_war_support = 0.71
 
 add_opinion_modifier = { target = SOV modifier = embargo }
 add_opinion_modifier = { target = SOV modifier = sanctions_relations }
@@ -17,6 +25,7 @@ add_opinion_modifier = { target = JAP modifier = sanctions }
 add_opinion_modifier = { target = JAP modifier = minor_sanctions }
 
 add_timed_idea = { idea = airandnavy_idea days = 1320 }
+
 add_ideas = {
 	victor_emmanuel
 	vittoria_mutilata
@@ -304,10 +313,9 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	democratic = 20
-	fascism = 73
-	communism = 2
-	neutrality = 5
+	 democratic = 22
+    	fascism = 76
+    	communism = 2
 }
 
 recruit_character = ITA_benito_mussolini

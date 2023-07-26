@@ -1,54 +1,22 @@
 ﻿capital = 126
 
-if = {
-	limit = {
-		NOT = {
-			has_dlc = "No Step Back"
-		}
-	}
-	set_oob = "ENG_1936"
-}
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	set_oob = "ENG_1936_nsb"
-}
+set_oob = "ENG_1936"
+
+set_oob = "ENG_1936_nsb"
+
+set_naval_oob = "ENG_1936_Naval"
+
+set_air_oob = "ENG_1936_air_bba"
+
+set_air_oob = "ENG_1936_air_legacy"
+
+load_oob = "ENG_Motorized"
 
 starting_train_buffer = 4
 
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_naval_oob = "ENG_1936_Naval"
-	else = {
-		set_naval_oob = "ENG_1936_Naval_Legacy"
-	}
-}
 
-if = {
-	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "ENG_1936_air_bba"
-		set_technology = {
-			iw_small_airframe = 1
-			#iw_medium_airframe = 1
-			#iw_large_airframe = 1
-			basic_medium_airframe = 1
-			basic_small_airframe = 1
-		}
-	else = {
-		set_air_oob = "ENG_1936_air_legacy"
-		set_technology = {
-			iw_small_airframe = 1
-			cv_early_fighterx = 1
-			cv_naval_bomber1 = 1
-			naval_bomber1 = 1
-			early_bomber = 1
-			CAS1 = 1
-		}
-	}
-}
+
+
 add_opinion_modifier = { target = JAP modifier = embargo }
 add_opinion_modifier = { target = JAP modifier = sanctions }
 add_opinion_modifier = { target = JAP modifier = minor_sanctions }
@@ -80,7 +48,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-add_timed_idea = { idea = airandnavy_idea days = 1320 }
 add_intel = {
 	target = SOV
 	civilian_intel = 200
@@ -165,16 +132,21 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-load_oob = "ENG_Motorized"
-set_research_slots = 5
-set_stability = 0.6
-set_war_support = 0.1
-set_country_flag=fuel_system_enabled
+set_research_slots = 4
+
+set_stability = 0.65
+
+set_war_support = 0.11
+
+
 # Starting tech
 set_technology = {
 	airfield_construction = 1
+	iw_small_airframe = 1
+	basic_medium_airframe = 1
+	basic_small_airframe = 1
 	fort_construction = 1
-	
+	iw_medium_airframe = 1
 	tech_mountaineers = 1
 	desertinfantry_at = 1
 	infantry_weapons = 1
@@ -209,59 +181,18 @@ set_technology = {
 	fuel_refining = 1
 	electronic_mechanical_engineering = 1
 	radio = 1
+	armored_car1 = 1
+	gwtank_chassis = 1
+	basic_light_tank_chassis = 1
 	radio_detection = 1
 	fuel_silos = 1
 	fuel_refining = 1
-}
-
-if = {
-	limit = {
-		NOT = { has_dlc = "No Step Back" }
-	}
-	set_technology = {
-		gwtank = 1
-		basic_light_tank = 1
-	}
-}
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	set_technology = {
-		gwtank_chassis = 1
-		basic_light_tank_chassis = 1
-	}
-}
-
-if = {
-	limit = {
-		has_dlc = "Battle for the Bosporus"
-	}
-	set_technology = { camelry = 1 }
-}
-if = {
-	limit = {
-		not = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		##early_submarine = 1
-		##early_destroyer = 1
-		##basic_destroyer = 1
-		##early_light_cruiser = 1
-		##early_heavy_cruiser = 1
-		##early_carrier = 1
-		##early_battlecruiser = 1
-		##early_carrier = 1
-		##transport = 1
-	}
 }
 if = {
 	limit = {
 		has_dlc = "Man the Guns"
 	}
 	set_technology = {
-		
-		
 		early_ship_hull_light = 1
 		basic_ship_hull_light = 1
 		early_ship_hull_submarine = 1
@@ -285,22 +216,8 @@ if = {
 		basic_fire_control_system = 1
 		basic_dp_light_battery = 1
 	}
-
-
-	set_global_flag = MTG_second_london_conference
-	set_global_flag = { flag = MTG_naval_treaty_signatories value = 5 }
 }
 
-if = {
-	limit = {
-		has_dlc = "La Resistance"
-	}
-	set_technology = {
-		armored_car1 = 1
-	}
-}
-
-set_variable = { var = eng_gateway_to_europe_influence value = 0 }
 
 add_ideas = {
 	stiff_upper_lip
@@ -309,9 +226,13 @@ add_ideas = {
 	limited_conscription
 	GDU_scuffed_acclim
 }
+
+add_timed_idea = { idea = airandnavy_idea days = 1320 }
+
 add_dynamic_modifier = {
 	modifier = sealion_score_modifier_spirit
-}	
+}
+
 create_corps_commander = {
 	name = "Richard O'Connor AFRICANUS"
 	picture = "AFRICA_Portrait_Britain_Richard_OConnor.dds"
@@ -347,10 +268,7 @@ set_convoys = 1200
 # DIPLOMACY
 if = {
 	limit = {
-		OR = {
-			has_dlc = "Together for Victory"
-			has_dlc = "Man the Guns"
-		}
+		has_dlc = "Together for Victory"
 	}
 	set_autonomy = {
 		target = RAJ
@@ -378,7 +296,6 @@ if = {
 		freedom_level = 0.2
 	}
 	else = {
-		puppet = MAL
 		puppet = RAJ
 	}
 }
@@ -476,204 +393,7 @@ add_equipment_to_stockpile = {
          amount = 100
          producer = ENG
 }
-1939.1.1 = {
 
-	add_political_power = 1198
-	add_command_power = 100
-	
-	#adding ministers
-	add_ideas = {
-		stiff_upper_lip
-		george_v
-		GDU_refinery_prebuild_disincentive
-		limited_conscription
-		GDU_scuffed_acclim
-	}
-
-	recruit_character = ENG_neville_chamberlain
-	promote_character = ENG_neville_chamberlain
-	retire_character = ENG_stanley_baldwin
-	remove_ideas = george_v #Dead
-
-	complete_national_focus = limited_rearmament_focus
-	complete_national_focus = air_defense_focus
-	complete_national_focus = radar_focus
-	complete_national_focus = shadow_scheme_focus
-	complete_national_focus = uk_empire_focus
-	complete_national_focus = uk_service_focus
-	complete_national_focus = uk_colonial_focus
-	complete_national_focus = uk_mediterranean_focus
-	complete_national_focus = uk_asia_focus
-	complete_national_focus = uk_commonwealth_focus
-
-	give_guarantee = POL
-	if = {
-		limit = {
-			NOT = {
-				has_dlc = "No Step Back"
-			}
-		}
-		set_oob = "ENG_1939"
-	}
-	if = {
-		limit = {
-			has_dlc = "No Step Back"
-		}
-		set_oob = "ENG_1939_nsb"
-	}
-	if = {
-		limit = {
-			has_dlc = "Man the Guns"
-		}
-		set_naval_oob = "ENG_1939_Naval"
-		else = {
-			set_naval_oob = "ENG_1939_Naval_Legacy"
-		}
-	}
-	if = {
-		limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "ENG_1939_air_bba"
-		set_technology = {
-			basic_small_airframe = 1
-			improved_small_airframe = 1
-			basic_medium_airframe = 1
-			basic_large_airframe = 1
-			aa_cannon_1 = 1
-			engines_3 = 1
-			range_improvements = 1
-		}
-		else = {
-			set_air_oob = "ENG_1939_air_legacy"
-			set_technology = {
-				fighter1 = 1
-				fighter2 = 1
-				heavy_fighter1 = 1
-				heavy_fighter2 = 1
-				CAS2 = 1
-				naval_bomber2 = 1
-				tactical_bomber1 = 1
-				tactical_bomber2 = 1
-				strategic_bomber1 = 1
-				cv_CAS1 = 1
-				cv_fighter1 = 1
-			}
-		}
-}
-
-	set_technology = {
-		
-		interwar_artillery = 1
-		interwar_antitank = 1
-		infantry_weapons2 = 1
-		support_weapons = 1
-		support_weapons2 = 1
-		
-
-		#doctrines
-		#Air
-		air_superiority = 1
-		home_defence = 1
-		naval_strike_tactics = 1
-
-			grand_battle_plan = 1
-
-		prepared_defense = 1
-		battlefleet_concentration = 1
-		subsidiary_carrier_role = 1
-		convoy_sailing = 1
-		convoy_escorts = 1
-		submarine_operations = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		decimetric_radar = 1
-		mechanical_computing = 1
-		computing_machine = 1
-		##basic_encryption = 1
-		##basic_encryption = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		synth_oil_experiments = 1
-		oil_processing = 1
-		fuel_refining2 = 1
-		construction1 = 1
-		construction2 = 1
-		construction3 = 1
-		dispersed_industry = 1
-		dispersed_industry2 = 1
-		dispersed_industry3 = 1
-	}
-
-	if = {
-		limit = {
-			NOT = {
-				has_dlc = "No Step Back"
-			}
-		}
-		set_technology = {
-			improved_light_tank = 1
-			basic_medium_tank = 1
-			basic_heavy_tank = 1
-		}
-	}
-	if = {
-		limit = {
-			
-			has_dlc = "No Step Back"
-			
-		}
-		set_technology = {
-			improved_light_tank_chassis = 1
-			basic_medium_tank_chassis = 1
-			basic_heavy_tank_chassis = 1
-			armor_tech_1 = 1
-			engine_tech_1 = 1
-		}
-	}
-	if = {
-		limit = {
-			not = { has_dlc = "Man the Guns"}
-		}
-		set_technology = {
-			##basic_submarine = 1
-			##improved_submarine = 1
-			##improved_destroyer = 1
-			##basic_light_cruiser = 1
-			##improved_light_cruiser = 1
-			####basic_carrier = 1
-			##basic_carrier = 1
-			##improved_carrier = 1
-		}
-		
-	}
-	if = {
-		limit = {
-			has_dlc = "Man the Guns"
-		}
-		set_technology = {
-			basic_ship_hull_submarine = 1
-			improved_ship_hull_submarine = 1
-			improved_ship_hull_light = 1
-			improved_ship_hull_cruiser = 1
-			basic_ship_hull_heavy = 1
-			
-			improved_ship_hull_carrier = 1
-			advanced_dp_light_battery = 1
-			improved_sonar = 1
-		}
-		
-		
-		clr_global_flag = MTG_second_london_conference
-		modify_global_flag = { flag = MTG_naval_treaty_signatories value = -2 }
-	}
-
-	set_convoys = 200
-}
 
 set_politics = {
 	ruling_party = democratic
@@ -682,12 +402,35 @@ set_politics = {
 	elections_allowed = yes ##suspended through duration of war, which is handled via event
 }
 set_popularities = {
-	democratic = 97
-	fascism = 2
-	communism = 1
+    democratic = 100
+    fascism = 0
+    communism = 0
 }
 
+1936.1.1.13 = {
 
+	add_ideas = { 
+	No_Asia_Sealion
+	}
+
+
+ add_equipment_to_stockpile = {
+         type = support_equipment
+         amount = 2000
+         producer = ENG
+} 
+add_equipment_to_stockpile = {
+         type = anti_tank_equipment_1
+         amount = 5000
+         producer = ENG
+} 
+add_equipment_to_stockpile = {
+         type = infantry_equipment_1
+         amount = 55000
+         producer = ENG
+} 
+ set_cosmetic_tag = ENG_EMPIRE
+ }
 create_faction = Allies
 add_to_faction = ENG
 add_to_faction = FRA
@@ -1023,94 +766,4 @@ if = {
 			}
 		}
 	}
-	if = {
-		limit = {
-			has_dlc = "By Blood Alone"
-		}
-		create_equipment_variant = {
-			name = "Hawker Fury" #also covers Gloster Gauntlet, Hawker Demon
-			type = small_plane_airframe_0
-			modules = {
-				fixed_main_weapon_slot = light_mg_2x
-				engine_type_slot = engine_1_1x
-				special_type_slot_1 = empty
-			}
-			obsolete = yes
-		}
-
-		create_equipment_variant = {
-			name = "Hawker Nimrod" 
-			type = cv_small_plane_airframe_0
-			modules = {
-				fixed_main_weapon_slot = light_mg_2x
-				engine_type_slot = engine_1_1x
-				special_type_slot_1 = empty
-			}
-			obsolete = yes
-		}
-
-		create_equipment_variant = {
-			name = "Gloster Gladiator" 
-			type = small_plane_airframe_0
-			modules = {
-				fixed_main_weapon_slot = light_mg_4x
-				engine_type_slot = engine_1_1x
-				special_type_slot_1 = empty
-			}
-		}
-
-		create_equipment_variant = {
-			name = "Fairey Gordon" 
-			type = small_plane_cas_airframe_0
-			modules = {
-				fixed_main_weapon_slot = bomb_locks
-				engine_type_slot = engine_1_1x
-				special_type_slot_1 = empty
-			}
-			obsolete = yes
-			icon = "GFX_ENG_CAS1_medium"
-		}
-		create_equipment_variant = {
-			name = "Vickers Vildebeest" 
-			type = small_plane_naval_bomber_airframe_0
-			modules = {
-				fixed_main_weapon_slot = torpedo_mounting
-				engine_type_slot = engine_1_1x
-				special_type_slot_1 = empty
-			}
-			icon = "GFX_ENG_naval_bomber1_medium" #TODO GABRIEL: change if art in before release
-		}
-		create_equipment_variant = {
-			name = "Blackburn Shark" 
-			type = cv_small_plane_naval_bomber_airframe_0
-			modules = {
-				fixed_main_weapon_slot = torpedo_mounting
-				engine_type_slot = engine_1_1x
-				special_type_slot_1 = empty
-			}
-			icon = "GFX_ENG_naval_bomber1_medium"
-		}
-		create_equipment_variant = {
-			name = "Handley Page Heyford" 
-			type = medium_plane_airframe_0
-			modules = {
-				fixed_main_weapon_slot = medium_bomb_bay
-				engine_type_slot = engine_1_2x
-				special_type_slot_1 = empty
-			}
-			obsolete = yes
-		}
-		create_equipment_variant = {
-			name = "Bristol Blenheim" 
-			type = medium_plane_airframe_1
-			modules = {
-				fixed_main_weapon_slot = medium_bomb_bay
-				engine_type_slot = engine_2_2x
-				special_type_slot_1 = lmg_defense_turret
-			}
-			icon = "GFX_ENG_heavy_fighter1_medium"
-		}
-	}
-1939.1.1 = {
 	
-}

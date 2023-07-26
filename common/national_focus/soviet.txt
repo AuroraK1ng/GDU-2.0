@@ -297,8 +297,22 @@ focus_tree = {
 				date > 1941.6.14
 				has_war_with = GER
 				ENG = { surrender_progress > 0.25 }
-				USA = { surrender_progress > 0.4 }
+				IF = {
+				limit = { NOT = { has_start_date > 1936.1.1.12 } } 
+					USA = { surrender_progress > 0.4 }
+				}
+				else_if = {
+    					limit = {
+       			 	has_start_date > 1936.1.1.12
+   				 	}
+					OR = {
+    					date > 1941.6.14
+					ENG = { surrender_progress > 0.25 }
+					}
+				}
+				
 			}
+			
 		}
 		 cancel_if_invalid = no
 		continue_if_invalid = yes
@@ -781,6 +795,7 @@ focus_tree = {
 		available = {
 			date > 1943.6.1
 		}
+		allow_branch = { NOT = { has_start_date > 1936.1.1.12 }  }
 		relative_position_id = SOV_move_industry_to_urals
 		x = -4
 		y = 2
@@ -1987,6 +2002,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_political_power = 150
 		    army_experience = 700
 			add_tech_bonus = {
 				bonus = 1.7
@@ -2393,7 +2409,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
-				bonus = 9.99
+				bonus = 99.99
 				uses = 4
 				technology = basic_heavy_armor_scheme
 				technology = improved_heavy_armor_scheme
