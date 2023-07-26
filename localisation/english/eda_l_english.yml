@@ -1,0 +1,345 @@
+﻿l_english:
+  EDA_BLANK_1_TITLE:0 " "
+  EDA_BLANK_1_ACTION_DESC:0 ""
+  EDA_BLANK_2_TITLE:0 " "
+  EDA_BLANK_2_ACTION_DESC:0 ""
+  EDA_BLANK_3_TITLE:0 " "
+  EDA_BLANK_3_ACTION_DESC:0 ""
+  EDA_BLANK_4_TITLE:0 ""
+  EDA_BLANK_4_ACTION_DESC:0 ""
+  EDA_BLANK_5_TITLE:0 ""
+  EDA_BLANK_5_ACTION_DESC:0 ""
+  EDA_BLANK_TOOLTIP:0 ""
+
+
+
+
+###############################################################################
+#####################
+# Opinion Modifiers #
+#####################
+  demilitarized_country_modifier:0 "De-militarized by Overlord"
+  remilitarized_country_modifier:0 "Re-militarized by Overlord"
+  deindustrialized_country_modifier:0 "De-industrialized by Overlord"
+  reindustrialized_country_modifier:0 "Re-industrialized by Overlord"
+
+  complemented_country_modifier:0 "Complemented"
+  insulted_country_modifier:0 "Insulted"
+
+  denounced_country_modifier:0 "Denounced War Goal(s)"
+  major_supported_country_modifier:0 "Supported War Goal(s)"
+  minor_supported_country_modifier:0 "Supported War Goal(s)"
+
+  given_building_country_modifier:0 "Recieved Building"
+  given_manpower_country_modifier:0 "Recieved Manpower"
+
+  defensive_pact_country_modifier:0 "Signed Defensive Pact"
+  defensive_pact_revoked_country_modifier:0 "Revoked Defensive Pact"
+
+
+
+
+###############################################################################
+#########
+# Ideas #
+#########
+  eda_puppet_demilitarized_idea:0 "De-militarized Military"
+  eda_puppet_being_remilitarized_idea:0 "Re-militarizing Military"
+  eda_puppet_deindustrialized_idea:0 "De-industrialized Industry"
+  eda_puppet_being_reindustrialized_idea:0 "Re-industrializing Industry"
+  
+
+
+
+
+###############################################################################
+##########
+# Events #
+##########
+  war_support_event.1.title:0 "[ROOT.GetName] Recieves Support For Its War!"
+  war_support_event.1.desc:0 "[FROM.GetName] has officially announced its support for [ROOT.GetName]'s war goal. It is still unclear though if [FROM.GetName] plans on giving financial or military aid to [ROOT.GetName] as well."
+  war_support_event.1.a:0 "Makes Sense"
+  war_support_event.1.b:0 "That Can't be good"
+  war_support_event.1.c:0 "Interesting"
+
+  war_disapproval_event.1.title:0 "[ROOT.GetName] Recieves Disapproval For Its War!"
+  war_disapproval_event.1.desc:0 "[FROM.GetName] has officially announced its disapproval for [ROOT.GetName]'s war goal. It is still unclear how [ROOT.GetName] will respond to this disapproval."
+  war_disapproval_event.1.a:0 "What a Change"
+  war_disapproval_event.1.b:0 "[ROOT.GetName] Better Watch Out"
+  war_disapproval_event.1.c:0 "Won't Affect Much"
+
+
+
+
+###############################################################################
+##############
+# Game Rules #
+##############
+  EDA_GENERAL_RULES:0 "Enhanced Diplomatic Actions - General Rules"
+  EDA_PUPPET_RULES:0 "Enhanced Diplomatic Actions - Puppet Rules"
+  EDA_RELATION_RULES:0 "Enhanced Diplomatic Actions - Relation Rules"
+  EDA_WAR_RULES:0 "Enhanced Diplomatic Actions - War Rules"
+
+
+  EDA_EMPTY_SPACE:0 "Clear Action Dividers"
+  EMPTY_SPACE_ACTION_ALLOWED_TEXT:0 "Enabled"
+  EMPTY_SPACE_ACTION_ALLOWED_DESC:0 "Enables the "dividers" between each diplomatic action group in order to organize things."
+  EMPTY_SPACE_ACTION_NOT_ALLOWED_TEXT:0 "Disabled"
+  EMPTY_SPACE_ACTION_NOT_ALLOWED_DESC:0 "Disables the "dividers" between each diplomatic action group."
+
+  EDA_PUPPET_ACTIONS:0 "Puppet Actions"
+  PUPPET_ANY_ACTION_ALLOWED_TEXT:0 "Enabled"
+  PUPPET_ANY_ACTION_ALLOWED_DESC:0 "Enables the puppet action category. This is §Rrequired§! in order for any puppet actions to work. \n\n To enable specific puppet actions, you will need to enable them in the §YEnahnced Diplomatic Actions - Puppet Rules§! category."
+  PUPPET_ANY_ACTION_NOT_ALLOWED_TEXT:0 "Disabled"
+  PUPPET_ANY_ACTION_NOT_ALLOWED_DESC:0 "Disables the puppet action category. If you plan on using any puppet actions, you will need this to be §Renabled§!."
+
+  EDA_RELATION_ACTIONS:0 "Relation Actions"
+  RELATION_ANY_ACTION_ALLOWED_TEXT:0 "Enabled"
+  RELATION_ANY_ACTION_ALLOWED_DESC:0 "Enables the relation action category. This is §Rrequired§! in order for any relation actions to work. \n\n To enable specific relation actions, you will need to enable them in the §YEnahnced Diplomatic Actions - Relation Rules§! category."
+  RELATION_ANY_ACTION_NOT_ALLOWED_TEXT:0 "Disabled"
+  RELATION_ANY_ACTION_NOT_ALLOWED_DESC:0 "Disables the relation action category. If you plan on using any relation actions, you will need this to be §Renabled§!."
+
+  EDA_WAR_ACTIONS:0 "War Actions"
+  WAR_ANY_ACTION_ALLOWED_TEXT:0 "Enabled"
+  WAR_ANY_ACTION_ALLOWED_DESC:0 "Enables the war action category. This is §Rrequired§! in order for any war actions to work. \n\n To enable specific war actions, you will need to enable them in the §YEnahnced Diplomatic Actions - War Rules§! category."
+  WAR_ANY_ACTION_NOT_ALLOWED_TEXT:0 "Disabled"
+  WAR_ANY_ACTION_NOT_ALLOWED_DESC:0 "Disables the war action category. If you plan on using any war actions, you will need this to be §Renabled§!."
+
+
+  EDA_PUPPET_INDEPENDENCE:0 "Grant Puppet Independence"
+  PUPPET_INDEPENDENCE_ACTION_ALLOWED_TEXT:0 "Enabled"
+  PUPPET_INDEPENDENCE_ACTION_ALLOWED_DESC:0 "Enables the Puppet Independence Action. This action allows the puppet overlord to give independence to its puppet quickly and easily. \n\n Make sure you have §Renabled§! the §YPuppet Actions§! rule in the §YEnahnced Diplomatic Actions - General Rules§! category."
+  PUPPET_INDEPENDENCE_ACTION_NOT_ALLOWED_TEXT:0 "Disabled"
+  PUPPET_INDEPENDENCE_ACTION_NOT_ALLOWED_DESC:0 "Disables the the Puppet Independence Action. This action allows the puppet overlord to give independence to its puppet quickly and easily."
+
+  EDA_PUPPET_MILITARIZE:0 "Puppet Militarization Actions"
+  PUPPET_MILITARIZE_ACTION_ALLOWED_TEXT:0 "Enabled"
+  PUPPET_MILITARIZE_ACTION_ALLOWED_DESC:0 "Enables the Puppet Militarization Actions. These actions include the Demilitarize and Remilitarize which allow you to stop the puppet from creating new division and delete andy current ones. \n\n Make sure you have §Renabled§! the §YPuppet Actions§! rule in the §YEnahnced Diplomatic Actions - General Rules§! category."
+  PUPPET_MILITARIZE_ACTION_NOT_ALLOWED_TEXT:0 "Disabled"
+  PUPPET_MILITARIZE_ACTION_NOT_ALLOWED_DESC:0 "Disables the Puppet Militarization Actions. These actions include the Demilitarize and Remilitarize which allow you to stop the puppet from creating new division and delete andy current ones."
+
+  EDA_PUPPET_INDUSTRIALIZE:0 "Puppet Industrialization Actions"
+  PUPPET_INDUSTRIALIZE_ACTION_ALLOWED_TEXT:0 "Enabled"
+  PUPPET_INDUSTRIALIZE_ACTION_ALLOWED_DESC:0 "Enables the Puppet Industrialization Actions. These actions include the Deindustrialize and Reindustrialize which allow you to stop the puppet from using its current industry efficiently or expanding it. \n\n Make sure you have §Renabled§! the §YPuppet Actions§! rule in the §YEnahnced Diplomatic Actions - General Rules§! category."
+  PUPPET_INDUSTRIALIZE_ACTION_NOT_ALLOWED_TEXT:0 "Disabled"
+  PUPPET_INDUSTRIALIZE_ACTION_NOT_ALLOWED_DESC:0 "Disables the Puppet Industrialization Actions. These actions include the Deindustrialize and Reindustrialize which allow you to stop the puppet from using its current industry efficiently or expanding it"
+
+
+  EDA_RELATION_COMPLEMENT:0 "Complement Action"
+  RELATION_COMPLEMENT_ACTION_ALLOWED_TEXT:0 "Enabled"
+  RELATION_COMPLEMENT_ACTION_ALLOWED_DESC:0 "Enables the Country Complement Action. This action allows a country to complement another and increase their opinion of the original country. \n\n Make sure you have §Renabled§! the §YRelation Actions§! rule in the §YEnahnced Diplomatic Actions - General Rules§! category."
+  RELATION_COMPLEMENT_ACTION_NOT_ALLOWED_TEXT:0 "Disabled"
+  RELATION_COMPLEMENT_ACTION_NOT_ALLOWED_DESC:0 "Disables the Country Complement Action. This action allows a country to complement another and increase their opinion of the original country."
+
+  EDA_RELATION_INSULT:0 "Insult Action"
+  RELATION_INSULT_ACTION_ALLOWED_TEXT:0 "Enabled"
+  RELATION_INSULT_ACTION_ALLOWED_DESC:0 "Enables the Country Insult Action. This action allows a country to insult another and decrease their opinion of the original country. \n\n Make sure you have §Renabled§! the §YRelation Actions§! rule in the §YEnahnced Diplomatic Actions - General Rules§! category."
+  RELATION_INSULT_ACTION_NOT_ALLOWED_TEXT:0 "Disabled"
+  RELATION_INSULT_ACTION_NOT_ALLOWED_DESC:0 "Disables the Country Insult Action. This action allows a country to insult another and decrease their opinion of the original country."
+
+  EDA_RELATION_GIVE_INDUSTRIES:0 "Give Industries Actions"
+  RELATION_GIVE_INDUSTRIES_ACTION_ALLOWED_TEXT:0 "Enabled"
+  RELATION_GIVE_INDUSTRIES_ACTION_ALLOWED_DESC:0 "Enables the Give Industries Actions. These actions allow a country to send factories or dockyard to another and increase their opinion of the original country. \n\n Make sure you have §Renabled§! the §YRelation Actions§! rule in the §YEnahnced Diplomatic Actions - General Rules§! category."
+  RELATION_GIVE_INDUSTRIES_ACTION_NOT_ALLOWED_TEXT:0 "Disabled"
+  RELATION_GIVE_INDUSTRIES_ACTION_NOT_ALLOWED_DESC:0 "Disables the Give Industries Actions. These actions allow a country to send factories or dockyard to another and increase their opinion of the original country."
+
+  EDA_RELATION_MANPOWER:0 "Manpower Actions"
+  RELATION_MANPOWER_ACTION_ALLOWED_TEXT:0 "Enabled"
+  RELATION_MANPOWER_ACTION_ALLOWED_DESC:0 "Enables the Manpower Actions. These actions allow a country to send or request manpower from another country. \n\n Make sure you have §Renabled§! the §YRelation Actions§! rule in the §YEnahnced Diplomatic Actions - General Rules§! category."
+  RELATION_MANPOWER_ACTION_NOT_ALLOWED_TEXT:0 "Disabled"
+  RELATION_MANPOWER_ACTION_NOT_ALLOWED_DESC:0 "Disables the Manpower Actions. These actions allow a country to send or request manpower from another country."
+
+  EDA_RELATION_NON_AGGRESSION:0 "Revoke Non-Aggression Action"
+  RELATION_NON_AGGRESSION_ACTION_ALLOWED_TEXT:0 "Enabled"
+  RELATION_NON_AGGRESSION_ACTION_ALLOWED_DESC:0 "Enabled the Revoke Non-Aggression Action. This action allows a country to revoke a non-aggression pact prior to the 12 month timer or the other prerequisites. \n\n Make sure you have §Renabled§! the §YWar Actions§! rule in the §YEnahnced Diplomatic Actions - General Rules§! category."
+  RELATION_NON_AGGRESSION_ACTION_NOT_ALLOWED_TEXT:0 "Disabled"
+  RELATION_NON_AGGRESSION_ACTION_NOT_ALLOWED_DESC:0 "Disbales the Revoke Non-Aggression Action. This action allows a country to revoke a non-aggression pact prior to the 12 month timer or the other prerequisites."
+
+  EDA_RELATION_PACT:0 "Defensive Pact Actions"
+  RELATION_PACT_ACTION_ALLOWED_TEXT:0 "Enabled"
+  RELATION_PACT_ACTION_ALLOWED_DESC:0 "Enables the Defensive Pact Actions. These actions allow a country to sign a defensive pact between it and another country and promise to defend each other in the case of an attack. \n\n Make sure you have §Renabled§! the §YRelation Actions§! rule in the §YEnahnced Diplomatic Actions - General Rules§! category."
+  RELATION_PACT_ACTION_NOT_ALLOWED_TEXT:0 "Disabled"
+  RELATION_PACT_ACTION_NOT_ALLOWED_DESC:0 "Disables the Defensive Pact Actions. These actions allow a country to sign a defensive pact between it and another country and promise to defend each other in the case of an attack."
+
+
+  EDA_WAR_OPINION:0 "War Opinion Actions"
+  WAR_OPINION_ACTION_ALLOWED_TEXT:0 "Enabled"
+  WAR_OPINION_ACTION_ALLOWED_DESC:0 "Enables the War Opinion Actions. These actions allow a country to voice its opinion in on a country's offensive war. \n\n Make sure you have §Renabled§! the §YWar Actions§! rule in the §YEnahnced Diplomatic Actions - General Rules§! category."
+  WAR_OPINION_ACTION_NOT_ALLOWED_TEXT:0 "Disabled"
+  WAR_OPINION_ACTION_NOT_ALLOWED_DESC:0 "Disables the War Opinion Actions. These actions allow a country to voice its opinion in on a country's offensive war."  
+
+  EDA_WAR_PEACE_DEAL:0 "Peace Deal Action"
+  WAR_PEACE_DEAL_ACTION_ALLOWED_TEXT:0 "Enabled"
+  WAR_PEACE_DEAL_ACTION_ALLOWED_DESC:0 "Enables the Peace Deal Action. This action allows a country to offer or demand peace with a country it is at war with. \n\n Make sure you have §Renabled§! the §YWar Actions§! rule in the §YEnahnced Diplomatic Actions - General Rules§! category."
+  WAR_PEACE_DEAL_ACTION_NOT_ALLOWED_TEXT:0 "Disabled"
+  WAR_PEACE_DEAL_ACTION_NOT_ALLOWED_DESC:0 "Disables the Peace Deal Action. This action allows a country to offer or demand peace with a country it is at war with."  
+
+  EDA_WAR_RECALL_VOLUNTEERS:0 "Recall Volunteers Action"
+  WAR_RECALL_VOLUNTEERS_ACTION_ALLOWED_TEXT:0 "Enabled"
+  WAR_RECALL_VOLUNTEERS_ACTION_ALLOWED_DESC:0 "Enables the Recall Volunteer Action. This action allows a country recall its sent volunteer forces. \n\n Make sure you have §Renabled§! the §YWar Actions§! rule in the §YEnahnced Diplomatic Actions - General Rules§! category."
+  WAR_RECALL_VOLUNTEERS_ACTION_NOT_ALLOWED_TEXT:0 "Disabled"
+  WAR_RECALL_VOLUNTEERS_ACTION_NOT_ALLOWED_DESC:0 "Disables the Recall Volunteers Action. This action allows a country recall its sent volunteer forces."  
+
+
+
+
+###############################################################################
+###################
+# Relation Action #
+###################
+  EDA_RELATION_COOLDOWN_TOOLTIP:0 "We have not sent a relation diplomatic action to §Y[THIS.GetName]§! in the past §Y5§! days."
+  eda_ai_acceptance_base:0 "Base Reluctance"
+
+
+  EDA_RELATION_COMPLEMENT_TITLE:0 "Send a Complement"
+  EDA_RELATION_COMPLEMENT_ACTION_DESC:0 "Send a complement to this country in hopes to increase their opinion of us."
+  EDA_RELATION_COMPLEMENT_TOOLTIP_1:0 "We are not at §Rwar§! with §Y[THIS.GetName]§!."
+  EDA_RELATION_COMPLEMENT_TOOLTIP_2:0 "Neither of us have a wargoal against the other."
+  EDA_RELATION_COMPLEMENT_SEND_DESC:0 "Send a message that complements §Y[THIS.GetName]§!.\n\n Will result in a slight §Gincreased§! opinion of us."
+
+
+  EDA_RELATION_INSULT_TITLE:0 "Send an Insult"
+  EDA_RELATION_INSULT_ACTION_DESC:0 "Send a message to this country that includes an insult that will decrease their opinion of us."
+  EDA_RELATION_INSULT_SEND_DESC:0 "Send a message that insults §Y[THIS.GetName]§!.\n\n Will result in a slight §Gdecreased§! opinion of us."
+
+
+  EDA_RELATION_GIVE_CIV_TITLE:0 "Send a Civilian Factory"
+  EDA_RELATION_GIVE_CIV_ACTION_DESC:0 "Give this country one of our civilian factories."
+  EDA_RELATION_GIVE_CIV_TOOLTIP_1:0 "We have not sent a building to §Y[THIS.GetName]§! in the past §Y10§! days."
+  EDA_RELATION_GIVE_CIV_TOOLTIP_2:0 "We have have more than §Y1§! civilian factory avaliable."
+  EDA_RELATION_GIVE_CIV_SEND_DESC:0 "Send §Y1§! of our civilian factories to §Y[THIS.GetName]§!.\n\n Will result in a slight §Gincreased§! opinion of us and we will be unable to send another building for §Y10§! days."
+
+
+  EDA_RELATION_GIVE_MIL_TITLE:0 "Send a Military Factory"
+  EDA_RELATION_GIVE_MIL_ACTION_DESC:0 "Give this country one of our military factories."
+  EDA_RELATION_GIVE_MIL_TOOLTIP_1:0 "We have not sent a building to §Y[THIS.GetName]§! in the past §Y10§! days."
+  EDA_RELATION_GIVE_MIL_TOOLTIP_2:0 "We have have more than §Y1§! military factory avaliable.
+  EDA_RELATION_GIVE_MIL_SEND_DESC:0 "Send §Y1§! of our military factories to §Y[THIS.GetName]§!.\n\n Will result in a slight §Gincreased§! opinion of us and we will be unable to send another building for §Y10§! days."
+
+
+  EDA_RELATION_GIVE_DOCK_TITLE:0 "Send a Dockyard"
+  EDA_RELATION_GIVE_DOCK_ACTION_DESC:0 "Give this country one of our dockyards."
+  EDA_RELATION_GIVE_DOCK_TOOLTIP_1:0 "We have not sent a building to §Y[THIS.GetName]§! in the past §Y10§! days."
+  EDA_RELATION_GIVE_DOCK_TOOLTIP_2:0 "We have have more than §Y1§! dockyard avaliable."
+  EDA_RELATION_GIVE_DOCK_SEND_DESC:0 "Send §Y1§! of our dockyards to §Y[THIS.GetName]§!.\n\n Will result in a slight §Gincreased§! opinion of us and we will be unable to send another building for §Y10§! days."
+
+
+  EDA_RELATION_GIVE_MANPOWER_TITLE:0 "Send Manpower"
+  EDA_RELATION_GIVE_MANPOWER_ACTION_DESC:0 "Give this country §Y50,000§! manpower from our manpower pool."
+  EDA_RELATION_GIVE_MANPOWER_TOOLTIP_1:0 "We have not sent manpower to §Y[THIS.GetName]§! in the past §Y25§! days."
+  EDA_RELATION_GIVE_MANPOWER_TOOLTIP_2:0 "We have have more than §Y55,000§! manpower avaliable."
+  EDA_RELATION_GIVE_MANPOWER_TOOLTIP_3:0 "§Y[THIS.GetName]§! is our puppet or is in a faction with us."
+  EDA_RELATION_GIVE_MANPOWER_SEND_DESC:0 "Transfer §Y50,000§! manpower to §Y[THIS.GetName]§!.\n\n Will result in a slight §Gincreased§! opinion of us and we will be unable to send more manpower for §Y25§! days."
+
+
+  EDA_RELATION_REQUEST_MANPOWER_TITLE:0 "Request Manpower"
+  EDA_RELATION_REQUEST_MANPOWER_ACTION_DESC:0 "Request that this country gives us §Y50,000§! manpower from their manpower pool."
+  EDA_RELATION_REQUEST_MANPOWER_TOOLTIP_1:0 "We have not requested manpower in the past §Y25§! days"
+  EDA_RELATION_REQUEST_MANPOWER_TOOLTIP_2:0 "§Y[THIS.GetName]§! has more than §Y55,000§! manpower avaliable."
+  EDA_RELATION_REQUEST_MANPOWER_TOOLTIP_3:0 "§Y[THIS.GetName]§! is our puppet or is in a faction with us."
+  EDA_RELATION_REQUEST_MANPOWER_SEND_DESC:0 "Request that §Y50,000§! of §Y[THIS.GetName]'s§! manpower be transfered to us.\n\n We will be unable to request more manpower for §Y25§! days."
+  EDA_RELATION_REQUEST_MANPOWER_ACCEPTED_TITLE:0 "Manpower Request Accepted"
+  EDA_RELATION_REQUEST_MANPOWER_ACCEPTED_DESC:0 "§Y[THIS.GetName]§! has accepted our request for manpower and is sending us §Y50,000§!."
+  EDA_RELATION_REQUEST_MANPOWER_REJECTED_TITLE:0 "Manpower Request Denied"
+  EDA_RELATION_REQUEST_MANPOWER_REJECTED_DESC:0 "§Y[THIS.GetName]§! has denied our request for manpower and will not be sending any."
+  eda_request_manpower_ai_acceptance_1a:0 "§Y[THIS.GetName]§! is our puppet"
+  eda_request_manpower_ai_acceptance_2a:0 "§Y[THIS.GetName]'s§! opinion of us"
+  eda_request_manpower_ai_acceptance_3a:0 "We are at war and §Y[THIS.GetName]§! is not"
+  eda_request_manpower_ai_acceptance_4a:0 "§Y[THIS.GetName]§! is at war and we not"
+  eda_request_manpower_ai_acceptance_5a:0 "§Y[THIS.GetName]§! has more manpower than we have"
+  
+
+  EDA_REVOKE_NON_AGGRESSION_TITLE:0 "Revoke Non-Aggression Pact"
+  EDA_REVOKE_NON_AGGRESSION_ACTION_DESC:0 "Revoke the non-aggression pact we signed with this country."
+  EDA_RELATION_NON_AGG_TOOLTIP_1:0 "We are atleast as strong as §Y[THIS.GetName]§!."
+  EDA_RELATION_NON_AGG_TOOLTIP_2:0 "We do not have a defensive pact with §Y[THIS.GetName]§!."
+  EDA_RELATION_REVOKE_NON_AGGRESSION_SEND_DESC:0 "Revoke our non-aggresion pact with this country."
+
+
+  EDA_RELATION_PACT_TITLE:0 "Sign Defensive Pact"
+  EDA_RELATION_PACT_ACTION_DESC:0 "Sign a defensive pact with this country."
+  EDA_RELATION_PACT_TOOLTIP_1:0 "Neither of us are currently at war."
+  EDA_RELATION_PACT_TOOLTIP_2:0 "Neither of us are in factions."
+  EDA_RELATION_PACT_TOOLTIP_3:0 "Neither of us are subjects of another country."
+  EDA_RELATION_PACT_TOOLTIP_4:0 "Neither of us are justifying against the other."
+  EDA_RELATION_PACT_TOOLTIP_5:0 "We have not recently revoked a defensive pact with §Y[THIS.GetName]§!."
+  EDA_RELATION_PACT_SEND_DESC:0 "Sign a defensive pact with §Y[THIS.GetName]§!.\n\nIf they sign, we both recognize that an armed attack against either shall be considered as an attack against all. We will be unable to revoke the pact for §Y90§! days."
+  EDA_RELATION_PACT_ACCEPTED_TITLE:0 "Defensive Pact Signed"
+  EDA_RELATION_PACT_ACCEPTED_DESC:0 "§Y[THIS.GetName]§! has accepted and signed our defensive pact proposal."
+  EDA_RELATION_PACT_REJECTED_TITLE:0 "Defensive Pact Not Signed"
+  EDA_RELATION_PACT_REJECTED_DESC:0 "§Y[THIS.GetName]§! has decided not to accept out proposal for a defensive pact between our nations."
+  eda_pact_ai_acceptance_1a:0 "§Y[THIS.GetName]'s§! opinion of us"
+  eda_pact_ai_acceptance_2a:0 "§Y[THIS.GetName]'s§! is being justified against"
+  eda_pact_ai_acceptance_2b:0 "We are being justified against"
+  eda_pact_ai_acceptance_3a:0 "§Y[THIS.GetName]§! thinks we are stong enough to defend them"
+  eda_pact_ai_acceptance_4a:0 "§Y[THIS.GetName]§! is our neighbor"
+  eda_pact_ai_acceptance_5a:0 "§Y[THIS.GetName]§! already has a defensive pact with another country"
+  eda_pact_ai_acceptance_6a:0 "§Y[THIS.GetName]§! has a neutral foriegn policy"
+  eda_pact_ai_acceptance_7a:0 "World Tension"
+
+
+  EDA_RELATION_PACT_REMOVE_TITLE:0 "Revoke Defensive Pact"
+  EDA_RELATION_PACT_REMOVE_ACTION_DESC:0 "Revoke our defensive pact with this country."
+  EDA_RELATION_PACT_REMOVE_TOOLTIP_1:0 "We have not signed the defensive pact within the past §Y90§! days."
+  EDA_RELATION_PACT_REMOVE_SEND_DESC:0 "Revoke our defensive pact with §Y[THIS.GetName]§!."
+
+
+
+
+###############################################################################
+#################
+# Puppet Action #
+#################
+  EDA_PUPPET_INDEPENDENCE_TITLE:0 "Grant Independence"
+  EDA_PUPPET_INDEPENDENCE_ACTION_DESC:0 "Remove this country from under your rule."
+  EDA_PUPPET_INDEPENDENCE_SEND_DESC:0 "Grant §Y[This.GetName]§! independence from us."
+
+
+  EDA_PUPPET_REMILITARIZE_TITLE:0 "Remilitarize Puppet"
+  EDA_PUPPET_REMILITARIZE_ACTION_DESC:0 "Remilitarize this countries military and allow it to start deploying divisions."
+  EDA_PUPPET_REMILITARIZE_SEND_DESC:0 "Reinstate §Y[This.GetName]§!'s military and allow it to start deploying new divisions.\n\n It will take §R45§! days for §Y[This.GetName]§! to remilitarize. During that time, we wil be unable to demilitarize it."
+  EDA_PUPPET_REMILITARIZE_TOOLTIP_1:0 "§Y[This.GetName]§! has not been demilitarized recently." 
+  
+
+  EDA_PUPPET_DEMILITARIZE_TITLE:0 "Demilitarize Puppet"
+  EDA_PUPPET_DEMILITARIZE_ACTION_DESC:0 "Demilitarize this countries military and stop it from deploying any new divisions."
+  EDA_PUPPET_DEMILITARIZE_SEND_DESC:0 "Disband the §Y[This.GetName]§! military and restrict it from creating a military. This will also result in them having a §Rlowered§! opinion of us.\n\n It will take §R30§! days for §Y[This.GetName]§! to demilitarize. During that time, we wil be unable to remilitarize it."
+  EDA_PUPPET_DEMILITARIZE_TOOLTIP_1:0 "§Y[This.GetName]§! is not being remilitarized."
+  
+
+  EDA_PUPPET_REINDUSTRIALIZE_TITLE:0 "Reindustrialize Puppet"
+  EDA_PUPPET_REINDUSTRIALIZE_ACTION_DESC:0 "Reindustrialize this countries industry and allow it to industrializing furthur."
+  EDA_PUPPET_REINDUSTRIALIZE_SEND_DESC:0 "Unrestrict §Y[This.GetName]§!'s industry and allow it to reindustrialize fully.\n\n It will take §R60§! days for §Y[This.GetName]§! to reindustrialize. During that time, we wil be unable to deindustrialize it."
+  EDA_PUPPET_REINDUSTRIALIZE_TOOLTIP_1:0 "§Y[This.GetName]§! has not been deindustrialize recently." 
+  
+
+  EDA_PUPPET_DEINDUSTRIALIZE_TITLE:0 "Deindustrialize Puppet"
+  EDA_PUPPET_DEINDUSTRIALIZE_ACTION_DESC:0 "Deindustrialize this countries industry and stop it from industrializing any furthur."
+  EDA_PUPPET_DEINDUSTRIALIZE_SEND_DESC:0 "Restrict §Y[This.GetName]§!'s industry and only allow it to industrialize partially.\n\n It will take §R45§! days for §Y[This.GetName]§! to deindustrialize. During that time, we wil be unable to reindustrialize it."
+  EDA_PUPPET_DEINDUSTRIALIZE_TOOLTIP_1:0 "§Y[This.GetName]§! is not being reindustrialized."
+
+
+
+
+###############################################################################
+##############
+# War Action #
+##############
+  EDA_WAR_SUPPORT_TITLE:0 "Support War"
+  EDA_WAR_SUPPORT_ACTION_DESC:0 "Support this country's war goal(s)"
+  EDA_WAR_SUPPORT_SEND_DESC:0 "Formally announce that we support §Y[THIS.GetName]'s§! offensive war. \n\n Will result in an §Gincreased§! opinion from §Y[THIS.GetName]§! and will §Gincrease§! their war support."
+  EDA_WAR_SUPPORT_TOOLTIP_1:0 "We have not voiced our opinion on §Y[THIS.GetName]'s§! war in the past §Y45§! days."
+  EDA_WAR_SUPPORT_TOOLTIP_2:0 "§Y[THIS.GetName]§! is not at war with us."
+
+
+  EDA_WAR_DENOUNCE_TITLE:0 "Denounce War"
+  EDA_WAR_DENOUNCE_ACTION_DESC:0 "Denounce this country's war goal(s)"
+  EDA_WAR_DENOUNCE_SEND_DESC:0 "Formally announce that we disapprove of §Y[THIS.GetName]'s§! offensive war. \n\n Will result in an §Gdecreased§! opinion from §Y[THIS.GetName]§!."
+  EDA_WAR_DENOUNCE_TOOLTIP_1:0 "We have not voiced our opinion on §Y[THIS.GetName]'s§! war in the past §Y45§! days."
+  EDA_WAR_DENOUNCE_TOOLTIP_2:0 "§Y[THIS.GetName]§! is not at war with us."
+
+
+  EDA_RECALL_VOLUNTEERS_TITLE:0 "Recall Volunteers"
+  EDA_RECALL_VOLUNTEERS_ACTION_DESC:0 "Recall our volunteer force(s) from this country."
+  EDA_RECALL_VOLUNTEERS_SEND_DESC:0 "Withdraw our volunteers froces from the war §Y[THIS.GetName]§! is involved in."
+  EDA_RECALL_VOLUNTEERS_TOOLTIP_1:0 "We have sent volunteers to §Y[THIS.GetName]§!."
