@@ -289,22 +289,7 @@ characters={
 
 	SPR_jose_miaja={
 			
-			name=SPR_jose_miaja
-			portraits={
-				army={
-					large="GFX_portrait_SPR_jose_miaja"
-					small=GFX_portrait_SPR_jose_miaja_small
-				}
-			}
-			corps_commander={
-				traits={ infantry_leader }
-				skill=2
-				attack_skill=2
-				defense_skill=2
-				planning_skill=2
-				logistics_skill=1
-				legacy_id=1103
-			}
+		
 			
 			name=SPR_jose_miaja
 			portraits={
@@ -380,32 +365,7 @@ characters={
 					small=GFX_portrait_SPR_jose_asensio_torrado_small
 				}
 			}
-			corps_commander={
-				traits={ career_officer infantry_leader }
-				skill=2
-				attack_skill=1
-				defense_skill=3
-				planning_skill=2
-				logistics_skill=1
-				legacy_id=1101
-			}
 			
-			name=SPR_jose_asensio_torrado
-			portraits={
-				army={
-					large=GFX_portrait_SPR_jose_asensio_torrado
-					small=GFX_portrait_SPR_jose_asensio_torrado_small
-				}
-			}
-			corps_commander={
-				traits={ defensive_doctrine organisational_leader }
-				skill=2
-				attack_skill=1
-				defense_skill=3
-				planning_skill=2
-				logistics_skill=1
-				legacy_id=1100
-			}
 	}
 
 	SPR_valentin_gonzalez={
@@ -548,7 +508,7 @@ characters={
 				}
 			}
 		field_marshal={
-			traits={ offensive_doctrine brilliant_strategist politically_connected war_hero media_personality hill_fighter organizer }
+			traits={ offensive_doctrine brilliant_strategist politically_connected war_hero panzer_leader media_personality hill_fighter organizer }
 			skill=6
 			attack_skill=7
 			defense_skill=5
@@ -657,24 +617,6 @@ characters={
 				cost = 100
 			}
 			
-			field_marshal={
-				traits={ trait_cautious trait_SPA_nationalist_sympathies thorough_planner organisational_leader }
-				skill=3
-				attack_skill=2
-				defense_skill=2
-				planning_skill=4
-				logistics_skill=2
-				legacy_id=1111
-				visible = {
-					OR = {
-						NOT = { has_global_flag = spanish_civil_war }
-						AND = {
-							tag = SPA
-							has_global_flag = spanish_civil_war
-						}
-					}
-				}
-			}
 			
 			name=SPA_emilio_mola_vidal
 			portraits={
@@ -958,15 +900,6 @@ characters={
 				}
 			}
 			
-			corps_commander={
-				traits={ infantry_officer trait_SPA_nationalist_sympathies }
-				skill=3
-				attack_skill=2
-				defense_skill=3
-				planning_skill=3
-				logistics_skill=2
-				legacy_id=1113
-			}
 			
 			name=SPA_agustin_munoz_grandes
 			portraits={
@@ -1034,15 +967,7 @@ characters={
 				}
 			}
 
-			corps_commander={
-				traits={ trait_SPA_nationalist_sympathies organizer infantry_leader }
-				skill=3
-				attack_skill=3
-				defense_skill=2
-				planning_skill=3
-				logistics_skill=2
-				legacy_id=1114
-			}
+		
 		}
 
 	SPA_miguel_cabanellas={ # Carlist
@@ -1077,32 +1002,7 @@ characters={
 				}
 			}
 		
-			corps_commander={
-				traits={ old_guard cavalry_officer trait_SPA_nationalist_sympathies }
-				skill=3
-				attack_skill=2
-				defense_skill=2
-				planning_skill=3
-				logistics_skill=3
-				legacy_id=1115
-				visible = {
-					OR = {
-						NOT = { has_global_flag = spanish_civil_war }
-						AND = {
-							tag = SPA
-							has_global_flag = spanish_civil_war
-							NOT = {
-								has_global_flag = SPR_carlist_uprising_flag
-							}
-						}
-						AND = {
-							tag = SPB
-							has_global_flag = spanish_civil_war
-							has_global_flag = SPR_carlist_uprising_flag
-						}
-					}
-				}
-			}
+			
 			
 			name=SPA_miguel_cabanellas_ferrer
 			portraits={
