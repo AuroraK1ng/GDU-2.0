@@ -272,6 +272,7 @@ on_add = { hidden_effect = { make_tank_designers_free = yes } }
 			}
 			
 			traits = { infantry_equipment_manufacturer }
+			on_add = { hidden_effect = { make_material_designers_free = yes } }
 		}
 		
 		lancia = {
@@ -290,11 +291,11 @@ on_add = { hidden_effect = { make_tank_designers_free = yes } }
 			}			
 
 			traits = { motorized_equipment_manufacturer }
+			on_add = { hidden_effect = { make_material_designers_free = yes } }
 		}
 		
-		breda = {
-			
-			
+		breda = {			
+			on_add = { hidden_effect = { make_material_designers_free = yes } }
 			allowed = {
 				original_tag = ITA
 			}

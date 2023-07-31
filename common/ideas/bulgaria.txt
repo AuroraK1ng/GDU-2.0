@@ -1516,7 +1516,7 @@ on_add = { hidden_effect = { make_air_designers_free = yes } }
 		BUL_dvf = { #DLC
 
 			picture = bul_darzhavna_voenna_fabrika
-			
+			on_add = { hidden_effect = { make_material_designers_free = yes } }
 			allowed = {
 				original_tag = BUL
 
@@ -1569,6 +1569,7 @@ on_add = { hidden_effect = { make_air_designers_free = yes } }
 				army_infantry_attack_factor = 0.03
 				army_infantry_defence_factor = 0.03
 			}
+			on_add = { hidden_effect = { make_material_designers_free = yes } }
 		}
 
 		BUL_dvf_sopot = { #DLC
@@ -1597,6 +1598,7 @@ on_add = { hidden_effect = { make_air_designers_free = yes } }
 			modifier = {
 				custom_modifier_tooltip = BUL_national_military_designer_upgrade_tt
 			}
+			on_add = { hidden_effect = { make_material_designers_free = yes } }
 		}
 
 		BUL_dvf_sopot_improved = { #DLC
@@ -1627,6 +1629,7 @@ on_add = { hidden_effect = { make_air_designers_free = yes } }
 				army_artillery_attack_factor = 0.03
 				army_artillery_defence_factor = 0.03
 			}
+			on_add = { hidden_effect = { make_material_designers_free = yes } }
 		}
 
 		BUL_german_materiel_designer = { #DLC
@@ -1654,6 +1657,7 @@ on_add = { hidden_effect = { make_air_designers_free = yes } }
 			}
 			
 			traits = { motorized_equipment_manufacturer }
+			on_add = { hidden_effect = { make_material_designers_free = yes } }
 		}
 	}
 

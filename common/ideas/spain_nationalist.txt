@@ -370,8 +370,8 @@ production_lack_of_resource_penalty_factor = -0.25
 			research_bonus = {
 				infantry_weapons = 0.15
 			}
-			
 			traits = { infantry_equipment_manufacturer }
+			on_add = { hidden_effect = { make_material_designers_free = yes } }
 		}
 	}	
 	
