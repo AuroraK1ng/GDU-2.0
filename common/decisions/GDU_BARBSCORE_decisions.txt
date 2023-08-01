@@ -1,0 +1,393 @@
+
+
+
+##TODO 
+
+## Events at beginning of operation 
+## Event at end of operation ( an event for victory, an event for failure )
+
+GDU_Barbscore_Score_Category = {
+
+	############################
+	## Axis Mission Selection ##
+	############################
+	GER_buy_bonus = {
+
+		icon = generic_operation  
+
+		allowed = {
+			original_tag = GER
+		}
+		available = {
+			check_variable = { var = ROOT.Barb_score_value value = 9 compare = greater_than }
+		}
+		custom_cost_trigger = {	
+			check_variable = { var = ROOT.Barb_score_value value = 9 compare = greater_than }
+		}
+		custom_cost_text = afrika_xp_more_than_10 ## FIX LOC FOR BARB
+		visible = {
+			original_tag = GER
+		}
+		
+		priority = 500
+
+		
+
+		cost = 0
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = BARB_attack_bonus
+				days = 30
+			}
+			hidden_effect = {
+				subtract_from_variable = { GER.Barb_score_value = 10 }
+			}
+			
+		}
+	}
+
+
+
+
+
+	GER_order_kiev = {
+
+		icon = generic_operation  
+
+		allowed = { 
+			original_tag = GER
+		}
+		available = {
+			SOV = {
+				has_full_control_of_state = 202
+			}
+		}
+		visible = {
+			NOT = {
+				OR = {
+					has_country_flag = GER_order_kiev
+					has_country_flag = GER_take_kiev
+				}
+			}	
+			
+		}
+		
+		priority = 500
+
+		
+
+		cost = 0
+
+		complete_effect = {
+			set_country_flag = GER_order_kiev
+		}
+	}
+	GER_take_kiev = {
+
+		icon = generic_operation
+
+		allowed = {
+			
+			has_country_flag = GER_order_kiev
+			
+		}
+
+		available = {
+			GER = {
+				controls_state = 202
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = GER_order_kiev
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			add_to_variable = { GER.Barb_score_value = 10 }
+
+			clr_country_flag = GER_order_kiev
+			set_country_flag = {
+				flag = GER_take_kiev
+				days = 180
+				value = 1
+			}
+		}
+
+		timeout_effect = {
+
+			country_event = gduevents.20
+
+			clr_country_flag = GER_order_kiev
+			set_country_flag = {
+				flag = GER_take_kiev
+				days = 180
+				value = 1
+			}
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	GER_order_leningrad = {
+
+		icon = generic_operation  
+
+		allowed = { 
+			original_tag = GER
+		}
+		available = {
+			SOV = {
+				has_full_control_of_state = 195
+			}
+		}
+		visible = {
+			NOT = {
+				OR = {
+					has_country_flag = GER_order_leningrad
+					has_country_flag = GER_take_leningrad
+				}
+			}	
+			
+		}
+		
+		priority = 500
+
+		
+
+		cost = 0
+
+		complete_effect = {
+			set_country_flag = GER_order_leningrad
+		}
+	}
+	GER_take_leningrad = {
+
+		icon = generic_operation
+
+		allowed = {
+			
+			has_country_flag = GER_order_leningrad
+			
+		}
+
+		available = {
+			GER = {
+				controls_state = 195
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = GER_order_leningrad
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			add_to_variable = { GER.Barb_score_value = 10 }
+
+			clr_country_flag = GER_order_leningrad
+			set_country_flag = {
+				flag = GER_take_leningrad
+				days = 180
+				value = 1
+			}
+		}
+
+		timeout_effect = {
+
+			country_event = gduevents.20
+
+			clr_country_flag = GER_order_leningrad
+			set_country_flag = {
+				flag = GER_take_leningrad
+				days = 180
+				value = 1
+			}
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	GER_order_moscow = {
+
+		icon = generic_operation  
+
+		allowed = { 
+			original_tag = GER
+		}
+		available = {
+			SOV = {
+				has_full_control_of_state = 219
+			}
+		}
+		visible = {
+			NOT = {
+				OR = {
+					has_country_flag = GER_order_moscow
+					has_country_flag = GER_take_moscow
+				}
+			}	
+			
+		}
+		
+		priority = 500
+
+		
+
+		cost = 0
+
+		complete_effect = {
+			set_country_flag = GER_order_moscow
+		}
+	}
+	GER_take_moscow = {
+
+		icon = generic_operation
+
+		allowed = {
+			
+			has_country_flag = GER_order_moscow
+			
+		}
+
+		available = {
+			GER = {
+				controls_state = 219
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = GER_order_moscow
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			add_to_variable = { GER.Barb_score_value = 10 }
+
+			clr_country_flag = GER_order_moscow
+			set_country_flag = {
+				flag = GER_take_moscow
+				days = 180
+				value = 1
+			}
+		}
+
+		timeout_effect = {
+
+			country_event = gduevents.20
+
+			clr_country_flag = GER_order_moscow
+			set_country_flag = {
+				flag = GER_take_moscow
+				days = 180
+				value = 1
+			}
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	GER_order_stalingrad = {
+
+		icon = generic_operation  
+
+		allowed = { 
+			original_tag = GER
+		}
+		available = {
+			SOV = {
+				has_full_control_of_state = 217
+			}
+		}
+		visible = {
+			NOT = {
+				OR = {
+					has_country_flag = GER_order_stalingrad
+					has_country_flag = GER_take_stalingrad
+				}
+			}	
+			
+		}
+		
+		priority = 500
+
+		
+
+		cost = 0
+
+		complete_effect = {
+			set_country_flag = GER_order_stalingrad
+		}
+	}
+	GER_take_stalingrad = {
+
+		icon = generic_operation
+
+		allowed = {
+			
+			has_country_flag = GER_order_stalingrad
+			
+		}
+
+		available = {
+			GER = {
+				controls_state = 217
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = GER_order_stalingrad
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			add_to_variable = { GER.Barb_score_value = 10 }
+
+			clr_country_flag = GER_order_stalingrad
+			set_country_flag = {
+				flag = GER_take_stalingrad
+				days = 180
+				value = 1
+			}
+		}
+
+		timeout_effect = {
+
+			country_event = gduevents.20
+
+			clr_country_flag = GER_order_stalingrad
+			set_country_flag = {
+				flag = GER_take_stalingrad
+				days = 180
+				value = 1
+			}
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -273,7 +273,14 @@ every_country = {
 			add_to_array = { global.afrika_states_array = 446 } #Cairo
 			add_to_array = { global.afrika_states_array = 447 } #Alexandria
 			
-			
+			## Barbarossa System 
+			set_variable = { var = GER.Barb_score_value value = 0 }
+			set_variable = { var = SOV.Barb_score_value value = 0 }
+
+
+
+
+
 			GER = { startup_on_actions = yes } # Germany does startup scripted effects from on_startup_scripted_effects.txt file. Right now this only includes simulating population growth, since pop growth is deleted for possible desynch/performance reasons.
 
 		

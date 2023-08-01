@@ -6,6 +6,64 @@ ideas = {
 
 	country = {
 
+		AXIS_attack_bonus {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.15	
+            }
+		}
+		SOV_attack_bonus {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.15	
+            }
+			targeted_modifier = {
+				tag = HUN
+				attack_bonus_against = 0.15	
+            }
+			targeted_modifier = {
+				tag = ROM
+				attack_bonus_against = 0.15	
+            }
+			targeted_modifier = {
+				tag = BUL
+				attack_bonus_against = 0.15	
+            }
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = 0.15	
+            }
+			targeted_modifier = {
+				tag = SPR
+				attack_bonus_against = 0.15	
+            }
+			targeted_modifier = {
+				tag = FIN
+				attack_bonus_against = 0.15	
+            }
+		}
 		GDU_fine = {
 			allowed = {
 				always = yes
