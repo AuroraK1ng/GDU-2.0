@@ -193,9 +193,12 @@ GDU_Barbscore_Score_Category = {
 			SOV = {
 				has_full_control_of_state = 137
 			}
-			GER = {
-				has_full_control_of_state = 200
+			NOT = {
+				SOV = {
+					has_full_control_of_state = 200
+				}
 			}
+			
 		}
 		visible = {
 			NOT = {
@@ -392,8 +395,10 @@ GDU_Barbscore_Score_Category = {
 			SOV = {
 				has_full_control_of_state = 195
 			}
-			GER = {
-				has_full_control_of_state = 209
+			NOT = {
+				SOV = {
+					has_full_control_of_state = 209
+				}
 			}
 		}
 		visible = {
@@ -489,11 +494,15 @@ GDU_Barbscore_Score_Category = {
 			SOV = {
 				has_full_control_of_state = 219
 			}
-			GER = {
-				has_full_control_of_state = 222
+			NOT = {
+				SOV = {
+					has_full_control_of_state = 222
+				}
 			}
-			GER = {
-				has_full_control_of_state = 242
+			NOT = {
+				SOV = {
+					has_full_control_of_state = 242
+				}
 			}
 		}
 		visible = {
@@ -588,8 +597,10 @@ GDU_Barbscore_Score_Category = {
 			SOV = {
 				has_full_control_of_state = 217
 			}
-			GER = {
-				has_full_control_of_state = 218
+			NOT = {
+				SOV = {
+					has_full_control_of_state = 218
+				}
 			}
 		}
 		visible = {
@@ -651,6 +662,104 @@ GDU_Barbscore_Score_Category = {
 			clr_country_flag = GER_order_stalingrad
 			set_country_flag = {
 				flag = GER_take_stalingrad
+				days = 180
+				value = 1
+			}
+		}
+
+		timeout_effect = {
+
+		
+
+			clr_country_flag = GER_order_stalingrad
+			set_country_flag = {
+				flag = GER_take_stalingrad
+				days = 180
+				value = 1
+			}
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+		GER_order_kursk = {
+
+		icon = generic_operation  
+
+		allowed = { 
+			original_tag = GER
+		}
+		available = {
+			SOV = {
+				has_full_control_of_state = 220
+			}
+			NOT = {
+				SOV = {
+					has_full_control_of_state = 221
+				}
+			}
+		}
+		visible = {
+			NOT = {
+				OR = {
+					has_country_flag = GER_order_kursk
+					has_country_flag = GER_take_kursk
+				}
+			}	
+			original_tag = GER
+			has_war_with = SOV
+			
+		}
+		
+		priority = 500
+
+		
+
+		cost = 0
+
+		complete_effect = {
+			country_event = gduevents.97
+			set_country_flag = GER_order_kursk
+			SOV = {
+				set_country_flag = SOV_defend_kursk
+			}
+			custom_effect_tooltip = barb_grants_xp_10_tt
+		}
+	}
+	GER_take_kursk = {
+
+		icon = generic_operation
+
+		allowed = {
+			
+			has_country_flag = GER_order_kursk
+			
+		}
+
+		available = {
+			NOT = {
+ 				SOV = {
+					controls_state = 220
+				}
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = GER_order_kursk
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			add_to_variable = { GER.Barb_score_value = 10 }
+
+			clr_country_flag = GER_order_kursk
+			set_country_flag = {
+				flag = GER_take_kursk
 				days = 180
 				value = 1
 			}
@@ -872,7 +981,45 @@ GDU_Barbscore_Score_Category = {
 			factor = 1
 		}
 	}
+	GER_defend_kursk = {
 
+		icon = generic_operation
+
+		allowed = {
+			has_country_flag = GER_defend_kursk
+		}
+
+		available = {
+			SOV = {
+				controls_state = 220
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = GER_defend_kursk
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			custom_effect_tooltip = barb_grants_xp_20_tt
+			clr_country_flag = GER_defend_kursk
+		}
+
+		timeout_effect = {
+			
+			
+			clr_country_flag = GER_defend_kursk
+			add_to_variable = { SOV.Barb_score_value = 20 }
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
 
 
@@ -1482,6 +1629,105 @@ GDU_Barbscore_Score_Category = {
 			factor = 1
 		}
 	}
+	SOV_order_kursk = {
+
+		icon = generic_operation  
+
+		allowed = { 
+			original_tag = SOV
+		}
+		available = {
+			NOT = {
+ 				SOV = {
+					controls_state = 220
+				}
+			}
+			SOV = {
+				has_full_control_of_state = 223
+			}
+		}
+		visible = {
+			NOT = {
+ 				SOV = {
+					controls_state = 220
+				}
+			}
+			NOT = {
+				OR = {
+					has_country_flag = SOV_order_kursk
+					has_country_flag = SOV_take_kursk
+				}
+			}
+			original_tag = SOV
+			has_war_with = GER	
+			
+		}
+		
+		priority = 500
+
+		
+
+		cost = 0
+
+		complete_effect = {
+			country_event = gduevents.97
+			set_country_flag = SOV_order_kursk
+			GER = {
+				set_country_flag = GER_defend_kursk
+			}
+			custom_effect_tooltip = barb_grants_xp_10_tt
+		}
+	}
+	SOV_take_kursk = {
+
+		icon = generic_operation
+
+		allowed = {
+			has_country_flag = SOV_order_kursk
+		}
+
+		available = {
+			SOV = {
+				controls_state = 220
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = SOV_order_kursk
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			add_to_variable = { SOV.Barb_score_value = 10 }
+
+			clr_country_flag = SOV_order_kursk
+			set_country_flag = {
+				flag = SOV_take_kursk
+				days = 180
+				value = 1
+			}
+		}
+
+		timeout_effect = {
+
+			
+
+			clr_country_flag = SOV_order_kursk
+			set_country_flag = {
+				flag = SOV_take_kursk
+				days = 180
+				value = 1
+			}
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
 
 
@@ -1645,6 +1891,47 @@ GDU_Barbscore_Score_Category = {
 			
 			clr_country_flag = SOV_defend_stalingrad
 			add_to_variable = { SOV.Barb_score_value = 20 }
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SOV_defend_kursk = {
+
+		icon = generic_operation
+
+		allowed = {
+			has_country_flag = SOV_defend_kursk
+		}
+
+		available = {
+			NOT = {
+ 				SOV = {
+					controls_state = 220
+				}
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = SOV_defend_kursk
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			custom_effect_tooltip = barb_grants_xp_10_tt
+			clr_country_flag = SOV_defend_kursk
+		}
+
+		timeout_effect = {
+			
+			
+			clr_country_flag = SOV_defend_kursk
+			add_to_variable = { SOV.Barb_score_value = 10 }
          
 		}
 
