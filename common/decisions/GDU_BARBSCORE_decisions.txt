@@ -1898,6 +1898,47 @@ GDU_Barbscore_Score_Category = {
 			factor = 1
 		}
 	}
+	SOV_defend_sevastopol = {
+
+		icon = generic_operation
+
+		allowed = {
+			has_country_flag = SOV_defend_sevastopol
+		}
+
+		available = {
+			NOT = {
+ 				SOV = {
+					controls_state = 137
+				}
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = SOV_defend_sevastopol
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			custom_effect_tooltip = barb_grants_xp_10_tt
+			clr_country_flag = SOV_defend_sevastopol
+		}
+
+		timeout_effect = {
+			
+			
+			clr_country_flag = SOV_defend_sevastopol
+			add_to_variable = { SOV.Barb_score_value = 10 }
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	SOV_defend_kursk = {
 
 		icon = generic_operation
