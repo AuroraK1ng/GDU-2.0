@@ -19,7 +19,7 @@ USA_foreign_politics = {
 GUIDES = {
 	icon = generic_propaganda
 	visible = {
-		always = yes
+		always = no
 	}
 }
 GDU_Afrika_Score_Category = {
@@ -74,6 +74,50 @@ GDU_Afrika_Score_Category = {
 
 	visible = {
 		ITA = { has_war_with = ENG }
+	}
+}
+
+GDU_Barbscore_Score_Category = {
+	
+	icon = hol_gateway_to_europe ## must be changed
+
+	allowed = {
+		OR = {
+			original_tag = GER
+			original_tag = SOV
+		}
+	}
+
+	picture = GFX_decision_cat_generic_roman_empire ## must be changed
+	
+	priority = {
+		base = 1000
+	}
+	
+	custom_icon = {
+		value = sov_barb_icon_value
+		tag = SOV
+		desc = sov_barb_score_breakdown
+
+		visible = {
+			country_exists = SOV
+		}
+	}
+	
+	custom_icon = {
+		value = ger_barb_icon_value
+		tag = GER
+		desc = ger_barb_score_breakdown
+
+		visible = {
+			country_exists = GER
+		}
+	}
+
+	visible_when_empty = yes
+
+	visible = {
+		GER = { has_war_with = SOV }
 	}
 }
 

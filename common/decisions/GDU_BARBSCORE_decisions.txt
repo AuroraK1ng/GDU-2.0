@@ -27,7 +27,9 @@ GDU_Barbscore_Score_Category = {
 		custom_cost_trigger = {	
 			check_variable = { var = ROOT.Barb_score_value value = 19 compare = greater_than }
 		}
-		custom_cost_text = barb_xp_more_than_20 ## FIX LOC FOR BARB
+		custom_cost_text = barb_xp_more_than_20
+
+		
 		visible = {
 			original_tag = GER
 			has_war_with = SOV
@@ -169,6 +171,7 @@ GDU_Barbscore_Score_Category = {
 		allowed = { 
 			original_tag = GER
 		}
+		
 		available = {
 			SOV = {
 				has_full_control_of_state = 202
@@ -199,6 +202,7 @@ GDU_Barbscore_Score_Category = {
 			SOV = {
 				set_country_flag = SOV_defend_kiev
 			}
+			custom_effect_tooltip = barb_grants_xp_10_tt
 			
 		}
 	}
@@ -213,8 +217,10 @@ GDU_Barbscore_Score_Category = {
 		}
 
 		available = {
-			GER = {
-				controls_state = 202
+			NOT = {
+ 				SOV = {
+					controls_state = 202
+				}
 			}
 		}	
 
@@ -266,6 +272,9 @@ GDU_Barbscore_Score_Category = {
 			SOV = {
 				has_full_control_of_state = 195
 			}
+			GER = {
+				has_full_control_of_state = 208
+			}
 		}
 		visible = {
 			NOT = {
@@ -289,6 +298,7 @@ GDU_Barbscore_Score_Category = {
 			SOV = {
 				set_country_flag = SOV_defend_leningrad
 			}
+			custom_effect_tooltip = barb_grants_xp_20_tt
 			
 		}
 	}
@@ -303,8 +313,10 @@ GDU_Barbscore_Score_Category = {
 		}
 
 		available = {
-			GER = {
-				controls_state = 195
+			NOT = {
+ 				SOV = {
+					controls_state = 195
+				}
 			}
 		}	
 
@@ -317,7 +329,7 @@ GDU_Barbscore_Score_Category = {
 		is_good = yes
 
 		complete_effect = {
-			add_to_variable = { GER.Barb_score_value = 10 }
+			add_to_variable = { GER.Barb_score_value = 20 }
 
 			clr_country_flag = GER_order_leningrad
 			set_country_flag = {
@@ -356,6 +368,12 @@ GDU_Barbscore_Score_Category = {
 			SOV = {
 				has_full_control_of_state = 219
 			}
+			GER = {
+				has_full_control_of_state = 205
+			}
+			GER = {
+				has_full_control_of_state = 242
+			}
 		}
 		visible = {
 			NOT = {
@@ -380,6 +398,7 @@ GDU_Barbscore_Score_Category = {
 			SOV = {
 				set_country_flag = SOV_defend_moscow
 			}
+			custom_effect_tooltip = barb_grants_xp_50_tt
 		}
 	}
 	GER_take_moscow = {
@@ -393,8 +412,10 @@ GDU_Barbscore_Score_Category = {
 		}
 
 		available = {
-			GER = {
-				controls_state = 219
+			NOT = {
+ 				SOV = {
+					controls_state = 219
+				}
 			}
 		}	
 
@@ -407,7 +428,7 @@ GDU_Barbscore_Score_Category = {
 		is_good = yes
 
 		complete_effect = {
-			add_to_variable = { GER.Barb_score_value = 10 }
+			add_to_variable = { GER.Barb_score_value = 50 }
 
 			clr_country_flag = GER_order_moscow
 			set_country_flag = {
@@ -446,6 +467,9 @@ GDU_Barbscore_Score_Category = {
 			SOV = {
 				has_full_control_of_state = 217
 			}
+			GER = {
+				has_full_control_of_state = 245
+			}
 		}
 		visible = {
 			NOT = {
@@ -470,6 +494,7 @@ GDU_Barbscore_Score_Category = {
 			SOV = {
 				set_country_flag = SOV_defend_stalingrad
 			}
+			custom_effect_tooltip = barb_grants_xp_20_tt
 		}
 	}
 	GER_take_stalingrad = {
@@ -483,8 +508,10 @@ GDU_Barbscore_Score_Category = {
 		}
 
 		available = {
-			GER = {
-				controls_state = 217
+			NOT = {
+ 				SOV = {
+					controls_state = 217
+				}
 			}
 		}	
 
@@ -497,7 +524,7 @@ GDU_Barbscore_Score_Category = {
 		is_good = yes
 
 		complete_effect = {
-			add_to_variable = { GER.Barb_score_value = 10 }
+			add_to_variable = { GER.Barb_score_value = 20 }
 
 			clr_country_flag = GER_order_stalingrad
 			set_country_flag = {
@@ -595,7 +622,7 @@ GDU_Barbscore_Score_Category = {
 			country_event = gduevents.20
 
 			clr_country_flag = GER_defend_leningrad
-			add_to_variable = { SOV.Barb_score_value = 10 }
+			add_to_variable = { SOV.Barb_score_value = 20 }
          
 		}
 
@@ -633,7 +660,7 @@ GDU_Barbscore_Score_Category = {
 			country_event = gduevents.20
 			
 			clr_country_flag = GER_defend_moscow
-			add_to_variable = { SOV.Barb_score_value = 10 }
+			add_to_variable = { SOV.Barb_score_value = 50 }
          
 		}
 
@@ -671,7 +698,7 @@ GDU_Barbscore_Score_Category = {
 			country_event = gduevents.20
 			
 			clr_country_flag = GER_defend_stalingrad
-			add_to_variable = { SOV.Barb_score_value = 10 }
+			add_to_variable = { SOV.Barb_score_value = 20 }
          
 		}
 
@@ -785,13 +812,17 @@ GDU_Barbscore_Score_Category = {
 			original_tag = SOV
 		}
 		available = {
-			GER = {
-				has_full_control_of_state = 202
+			NOT = {
+ 				SOV = {
+					controls_state = 202
+				}
 			}
 		}
 		visible = {
-			GER = {
-				has_full_control_of_state = 202
+			NOT = {
+ 				SOV = {
+					controls_state = 202
+				}
 			}
 			NOT = {
 				OR = {
@@ -815,6 +846,7 @@ GDU_Barbscore_Score_Category = {
 			GER = {
 				set_country_flag = GER_defend_kiev
 			}
+			custom_effect_tooltip = barb_grants_xp_10_tt
 		}
 	}
 	SOV_take_kiev = {
@@ -875,13 +907,17 @@ GDU_Barbscore_Score_Category = {
 			original_tag = SOV
 		}
 		available = {
-			GER = {
-				has_full_control_of_state = 195
+			NOT = {
+ 				SOV = {
+					controls_state = 195
+				}
 			}
 		}
 		visible = {
-			GER = {
-				has_full_control_of_state = 195
+			NOT = {
+ 				SOV = {
+					controls_state = 195
+				}
 			}
 			NOT = {
 				OR = {
@@ -905,6 +941,7 @@ GDU_Barbscore_Score_Category = {
 			GER = {
 				set_country_flag = GER_defend_leningrad
 			}
+			custom_effect_tooltip = barb_grants_xp_20_tt
 		}
 	}
 	SOV_take_leningrad = {
@@ -930,7 +967,7 @@ GDU_Barbscore_Score_Category = {
 		is_good = yes
 
 		complete_effect = {
-			add_to_variable = { SOV.Barb_score_value = 10 }
+			add_to_variable = { SOV.Barb_score_value = 20 }
 
 			clr_country_flag = SOV_order_leningrad
 			set_country_flag = {
@@ -965,13 +1002,17 @@ GDU_Barbscore_Score_Category = {
 			original_tag = SOV
 		}
 		available = {
-			GER = {
-				has_full_control_of_state = 219
+			NOT = {
+ 				SOV = {
+					controls_state = 219
+				}
 			}
 		}
 		visible = {
-			GER = {
-				has_full_control_of_state = 219
+			NOT = {
+ 				SOV = {
+					controls_state = 219
+				}
 			}
 			NOT = {
 				OR = {
@@ -995,6 +1036,7 @@ GDU_Barbscore_Score_Category = {
 			GER = {
 				set_country_flag = GER_defend_moscow
 			}
+			custom_effect_tooltip = barb_grants_xp_50_tt
 		}
 	}
 	SOV_take_moscow = {
@@ -1020,7 +1062,7 @@ GDU_Barbscore_Score_Category = {
 		is_good = yes
 
 		complete_effect = {
-			add_to_variable = { SOV.Barb_score_value = 10 }
+			add_to_variable = { SOV.Barb_score_value = 50 }
 
 			clr_country_flag = SOV_order_moscow
 			set_country_flag = {
@@ -1055,13 +1097,17 @@ GDU_Barbscore_Score_Category = {
 			original_tag = SOV
 		}
 		available = {
-			GER = {
-				has_full_control_of_state = 217
+			NOT = {
+ 				SOV = {
+					controls_state = 217
+				}
 			}
 		}
 		visible = {
-			GER = {
-				has_full_control_of_state = 217
+			NOT = {
+ 				SOV = {
+					controls_state = 217
+				}
 			}
 			NOT = {
 				OR = {
@@ -1085,6 +1131,7 @@ GDU_Barbscore_Score_Category = {
 			GER = {
 				set_country_flag = GER_defend_stalingrad
 			}
+			custom_effect_tooltip = barb_grants_xp_20_tt
 		}
 	}
 	SOV_take_stalingrad = {
@@ -1110,7 +1157,7 @@ GDU_Barbscore_Score_Category = {
 		is_good = yes
 
 		complete_effect = {
-			add_to_variable = { SOV.Barb_score_value = 10 }
+			add_to_variable = { SOV.Barb_score_value = 20 }
 
 			clr_country_flag = SOV_order_stalingrad
 			set_country_flag = {
@@ -1150,8 +1197,10 @@ GDU_Barbscore_Score_Category = {
 		}
 
 		available = {
-			GER = {
-				controls_state = 202
+			NOT = {
+ 				SOV = {
+					controls_state = 202
+				}
 			}
 		}	
 
@@ -1189,8 +1238,10 @@ GDU_Barbscore_Score_Category = {
 		}
 
 		available = {
-			GER = {
-				controls_state = 195
+			NOT = {
+ 				SOV = {
+					controls_state = 195
+				}
 			}
 		}	
 
@@ -1210,7 +1261,7 @@ GDU_Barbscore_Score_Category = {
 			country_event = gduevents.20
 
 			clr_country_flag = SOV_defend_leningrad
-			add_to_variable = { SOV.Barb_score_value = 10 }
+			add_to_variable = { SOV.Barb_score_value = 20 }
          
 		}
 
@@ -1227,8 +1278,10 @@ GDU_Barbscore_Score_Category = {
 		}
 
 		available = {
-			GER = {
-				controls_state = 219
+			NOT = {
+ 				SOV = {
+					controls_state = 219
+				}
 			}
 		}	
 
@@ -1248,7 +1301,7 @@ GDU_Barbscore_Score_Category = {
 			country_event = gduevents.20
 			
 			clr_country_flag = SOV_defend_moscow
-			add_to_variable = { SOV.Barb_score_value = 10 }
+			add_to_variable = { SOV.Barb_score_value = 50 }
          
 		}
 
@@ -1265,8 +1318,10 @@ GDU_Barbscore_Score_Category = {
 		}
 
 		available = {
-			GER = {
-				controls_state = 217
+			NOT = {
+ 				SOV = {
+					controls_state = 217
+				}
 			}
 		}	
 
@@ -1286,7 +1341,7 @@ GDU_Barbscore_Score_Category = {
 			country_event = gduevents.20
 			
 			clr_country_flag = SOV_defend_stalingrad
-			add_to_variable = { SOV.Barb_score_value = 10 }
+			add_to_variable = { SOV.Barb_score_value = 20 }
          
 		}
 
