@@ -5,31 +5,35 @@
 
 ## Events at beginning of operation 
 ## Event at end of operation ( an event for victory, an event for failure )
+## Change controlled by germany to controlled by any axis member ( change to is_fully_controlled_by instead of has_full_control_of_state )
 
 GDU_Barbscore_Score_Category = {
 
 	############################
-	## Axis Mission Selection ##
+	##  GER Mission Selection ##
 	############################
-	GER_buy_bonus = {
+	
+	GER_buy_bonus_1 = {
 
 		icon = generic_operation  
 
 		allowed = {
 			original_tag = GER
+			
 		}
 		available = {
-			check_variable = { var = ROOT.Barb_score_value value = 9 compare = greater_than }
+			check_variable = { var = ROOT.Barb_score_value value = 19 compare = greater_than }
 		}
 		custom_cost_trigger = {	
-			check_variable = { var = ROOT.Barb_score_value value = 9 compare = greater_than }
+			check_variable = { var = ROOT.Barb_score_value value = 19 compare = greater_than }
 		}
-		custom_cost_text = afrika_xp_more_than_10 ## FIX LOC FOR BARB
+		custom_cost_text = barb_xp_more_than_20 ## FIX LOC FOR BARB
 		visible = {
 			original_tag = GER
+			has_war_with = SOV
 		}
 		
-		priority = 500
+		priority = 1000
 
 		
 
@@ -37,20 +41,127 @@ GDU_Barbscore_Score_Category = {
 
 		complete_effect = {
 			add_timed_idea = {
-				idea = BARB_attack_bonus
+				idea = AXIS_attack_bonus_1
 				days = 30
 			}
+			ROM = {
+				add_timed_idea = {
+				idea = AXIS_attack_bonus_1
+				days = 30
+				}
+			}
+			HUN = {
+				add_timed_idea = {
+				idea = AXIS_attack_bonus_1
+				days = 30
+				}
+			}
+			SPR = {
+				add_timed_idea = {
+				idea = AXIS_attack_bonus_1
+				days = 30
+				}
+			}
+			BUL = {
+				add_timed_idea = {
+				idea = AXIS_attack_bonus_1
+				days = 30
+				}
+			}
+			FIN = {
+				add_timed_idea = {
+				idea = AXIS_attack_bonus_1
+				days = 30
+				}
+			}
+			ITA = {
+				add_timed_idea = {
+				idea = AXIS_attack_bonus_1
+				days = 30
+				}
+			}
 			hidden_effect = {
-				subtract_from_variable = { GER.Barb_score_value = 10 }
+				subtract_from_variable = { GER.Barb_score_value = 20 }
+			}
+			
+		}
+	}
+	GER_buy_bonus_2 = {
+
+		icon = generic_operation  
+
+		allowed = {
+			original_tag = GER
+			
+		}
+		available = {
+			check_variable = { var = ROOT.Barb_score_value value = 49 compare = greater_than }
+		}
+		custom_cost_trigger = {	
+			check_variable = { var = ROOT.Barb_score_value value = 49 compare = greater_than }
+		}
+		custom_cost_text = barb_xp_more_than_50 ## FIX LOC FOR BARB
+		visible = {
+			original_tag = GER
+			has_war_with = SOV
+		}
+		
+		priority = 1000
+
+		
+
+		cost = 0
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = AXIS_attack_bonus_2
+				days = 30
+			}
+			ROM = {
+				add_timed_idea = {
+				idea = AXIS_attack_bonus_2
+				days = 30
+				}
+			}
+			HUN = {
+				add_timed_idea = {
+				idea = AXIS_attack_bonus_2
+				days = 30
+				}
+			}
+			SPR = {
+				add_timed_idea = {
+				idea = AXIS_attack_bonus_2
+				days = 30
+				}
+			}
+			BUL = {
+				add_timed_idea = {
+				idea = AXIS_attack_bonus_2
+				days = 30
+				}
+			}
+			FIN = {
+				add_timed_idea = {
+				idea = AXIS_attack_bonus_2
+				days = 30
+				}
+			}
+			ITA = {
+				add_timed_idea = {
+				idea = AXIS_attack_bonus_2
+				days = 30
+				}
+			}
+
+			hidden_effect = {
+				subtract_from_variable = { GER.Barb_score_value = 50 }
 			}
 			
 		}
 	}
 
-
-
-
-
+	## ATTACK
 	GER_order_kiev = {
 
 		icon = generic_operation  
@@ -70,6 +181,10 @@ GDU_Barbscore_Score_Category = {
 					has_country_flag = GER_take_kiev
 				}
 			}	
+
+			original_tag = GER
+			has_war_with = SOV
+	
 			
 		}
 		
@@ -81,6 +196,10 @@ GDU_Barbscore_Score_Category = {
 
 		complete_effect = {
 			set_country_flag = GER_order_kiev
+			SOV = {
+				set_country_flag = SOV_defend_kiev
+			}
+			
 		}
 	}
 	GER_take_kiev = {
@@ -155,7 +274,8 @@ GDU_Barbscore_Score_Category = {
 					has_country_flag = GER_take_leningrad
 				}
 			}	
-			
+			original_tag = GER
+			has_war_with = SOV
 		}
 		
 		priority = 500
@@ -166,6 +286,10 @@ GDU_Barbscore_Score_Category = {
 
 		complete_effect = {
 			set_country_flag = GER_order_leningrad
+			SOV = {
+				set_country_flag = SOV_defend_leningrad
+			}
+			
 		}
 	}
 	GER_take_leningrad = {
@@ -239,7 +363,9 @@ GDU_Barbscore_Score_Category = {
 					has_country_flag = GER_order_moscow
 					has_country_flag = GER_take_moscow
 				}
-			}	
+			}
+			original_tag = GER
+			has_war_with = SOV	
 			
 		}
 		
@@ -251,6 +377,9 @@ GDU_Barbscore_Score_Category = {
 
 		complete_effect = {
 			set_country_flag = GER_order_moscow
+			SOV = {
+				set_country_flag = SOV_defend_moscow
+			}
 		}
 	}
 	GER_take_moscow = {
@@ -325,6 +454,8 @@ GDU_Barbscore_Score_Category = {
 					has_country_flag = GER_take_stalingrad
 				}
 			}	
+			original_tag = GER
+			has_war_with = SOV
 			
 		}
 		
@@ -336,6 +467,9 @@ GDU_Barbscore_Score_Category = {
 
 		complete_effect = {
 			set_country_flag = GER_order_stalingrad
+			SOV = {
+				set_country_flag = SOV_defend_stalingrad
+			}
 		}
 	}
 	GER_take_stalingrad = {
@@ -383,6 +517,776 @@ GDU_Barbscore_Score_Category = {
 				days = 180
 				value = 1
 			}
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	##### DEFEND 
+	GER_defend_kiev = {
+
+		icon = generic_operation
+
+		allowed = {
+			has_country_flag = GER_defend_kiev
+		}
+
+		available = {
+			SOV = {
+				controls_state = 202
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = GER_defend_kiev
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			clr_country_flag = GER_defend_kiev
+		}
+
+		timeout_effect = {
+
+			country_event = gduevents.20
+
+			clr_country_flag = GER_defend_kiev
+			add_to_variable = { SOV.Barb_score_value = 10 }
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	GER_defend_leningrad = {
+
+		icon = generic_operation
+
+		allowed = {
+			has_country_flag = GER_defend_leningrad
+		}
+
+		available = {
+			SOV = {
+				controls_state = 195
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = GER_defend_leningrad
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			clr_country_flag = GER_defend_leningrad
+		}
+
+		timeout_effect = {
+			country_event = gduevents.20
+
+			clr_country_flag = GER_defend_leningrad
+			add_to_variable = { SOV.Barb_score_value = 10 }
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	GER_defend_moscow = {
+
+		icon = generic_operation
+
+		allowed = {
+			has_country_flag = GER_defend_moscow
+		}
+
+		available = {
+			SOV = {
+				controls_state = 219
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = GER_defend_moscow
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			clr_country_flag = GER_defend_moscow
+		}
+
+		timeout_effect = {
+			country_event = gduevents.20
+			
+			clr_country_flag = GER_defend_moscow
+			add_to_variable = { SOV.Barb_score_value = 10 }
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	GER_defend_stalingrad = {
+
+		icon = generic_operation
+
+		allowed = {
+			has_country_flag = GER_defend_stalingrad
+		}
+
+		available = {
+			SOV = {
+				controls_state = 217
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = GER_defend_stalingrad
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			clr_country_flag = GER_defend_stalingrad
+		}
+
+		timeout_effect = {
+			country_event = gduevents.20
+			
+			clr_country_flag = GER_defend_stalingrad
+			add_to_variable = { SOV.Barb_score_value = 10 }
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	############################
+	##  SOV Mission Selection ##
+	############################
+
+	SOV_buy_bonus_1 = {
+
+		icon = generic_operation  
+
+		allowed = {
+			original_tag = SOV
+			
+		}
+		available = {
+			check_variable = { var = ROOT.Barb_score_value value = 19 compare = greater_than }
+		}
+		custom_cost_trigger = {	
+			check_variable = { var = ROOT.Barb_score_value value = 19 compare = greater_than }
+		}
+		custom_cost_text = barb_xp_more_than_20 ## FIX LOC FOR BARB
+		visible = {
+			original_tag = SOV
+			has_war_with = GER
+		}
+		
+		priority = 1000
+
+		
+
+		cost = 0
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = SOV_attack_bonus_1
+				days = 30
+			}
+			hidden_effect = {
+				subtract_from_variable = { SOV.Barb_score_value = 20 }
+			}
+			
+		}
+	}
+	SOV_buy_bonus_2 = {
+
+		icon = generic_operation  
+
+		allowed = {
+			original_tag = SOV
+			
+		}
+		available = {
+			check_variable = { var = ROOT.Barb_score_value value = 49 compare = greater_than }
+		}
+		custom_cost_trigger = {	
+			check_variable = { var = ROOT.Barb_score_value value = 49 compare = greater_than }
+		}
+		custom_cost_text = barb_xp_more_than_50 ## FIX LOC FOR BARB
+		visible = {
+			original_tag = SOV
+			has_war_with = GER
+		}
+		
+		priority = 1000
+
+		
+
+		cost = 0
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = SOV_attack_bonus_2
+				days = 30
+			}
+			hidden_effect = {
+				subtract_from_variable = { SOV.Barb_score_value = 50 }
+			}
+			
+		}
+	}
+	
+	##### LIBERATE
+	SOV_order_kiev = {
+
+		icon = generic_operation  
+
+		allowed = { 
+			original_tag = SOV
+		}
+		available = {
+			GER = {
+				has_full_control_of_state = 202
+			}
+		}
+		visible = {
+			GER = {
+				has_full_control_of_state = 202
+			}
+			NOT = {
+				OR = {
+					has_country_flag = SOV_order_kiev
+					has_country_flag = SOV_take_kiev
+				}
+			}
+			original_tag = SOV
+			has_war_with = GER	
+			
+		}
+		
+		priority = 500
+
+		
+
+		cost = 0
+
+		complete_effect = {
+			set_country_flag = SOV_order_kiev
+			GER = {
+				set_country_flag = GER_defend_kiev
+			}
+		}
+	}
+	SOV_take_kiev = {
+
+		icon = generic_operation
+
+		allowed = {
+			has_country_flag = SOV_order_kiev
+		}
+
+		available = {
+			SOV = {
+				controls_state = 202
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = SOV_order_kiev
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			add_to_variable = { SOV.Barb_score_value = 10 }
+
+			clr_country_flag = SOV_order_kiev
+			set_country_flag = {
+				flag = SOV_take_kiev
+				days = 180
+				value = 1
+			}
+		}
+
+		timeout_effect = {
+
+			country_event = gduevents.20
+
+			clr_country_flag = SOV_order_kiev
+			set_country_flag = {
+				flag = SOV_take_kiev
+				days = 180
+				value = 1
+			}
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SOV_order_leningrad = {
+
+		icon = generic_operation  
+
+		allowed = { 
+			original_tag = SOV
+		}
+		available = {
+			GER = {
+				has_full_control_of_state = 195
+			}
+		}
+		visible = {
+			GER = {
+				has_full_control_of_state = 195
+			}
+			NOT = {
+				OR = {
+					has_country_flag = SOV_order_leningrad
+					has_country_flag = SOV_take_leningrad
+				}
+			}
+			original_tag = SOV
+			has_war_with = GER	
+			
+		}
+		
+		priority = 500
+
+		
+
+		cost = 0
+
+		complete_effect = {
+			set_country_flag = SOV_order_leningrad
+			GER = {
+				set_country_flag = GER_defend_leningrad
+			}
+		}
+	}
+	SOV_take_leningrad = {
+
+		icon = generic_operation
+
+		allowed = {
+			has_country_flag = SOV_order_leningrad
+		}
+
+		available = {
+			SOV = {
+				controls_state = 195
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = SOV_order_leningrad
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			add_to_variable = { SOV.Barb_score_value = 10 }
+
+			clr_country_flag = SOV_order_leningrad
+			set_country_flag = {
+				flag = SOV_take_leningrad
+				days = 180
+				value = 1
+			}
+		}
+
+		timeout_effect = {
+
+			country_event = gduevents.20
+
+			clr_country_flag = SOV_order_leningrad
+			set_country_flag = {
+				flag = SOV_take_leningrad
+				days = 180
+				value = 1
+			}
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SOV_order_moscow = {
+
+		icon = generic_operation  
+
+		allowed = { 
+			original_tag = SOV
+		}
+		available = {
+			GER = {
+				has_full_control_of_state = 219
+			}
+		}
+		visible = {
+			GER = {
+				has_full_control_of_state = 219
+			}
+			NOT = {
+				OR = {
+					has_country_flag = SOV_order_moscow
+					has_country_flag = SOV_take_moscow
+				}
+			}
+			original_tag = SOV
+			has_war_with = GER	
+			
+		}
+		
+		priority = 500
+
+		
+
+		cost = 0
+
+		complete_effect = {
+			set_country_flag = SOV_order_moscow
+			GER = {
+				set_country_flag = GER_defend_moscow
+			}
+		}
+	}
+	SOV_take_moscow = {
+
+		icon = generic_operation
+
+		allowed = {
+			has_country_flag = SOV_order_moscow
+		}
+
+		available = {
+			SOV = {
+				controls_state = 219
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = SOV_order_moscow
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			add_to_variable = { SOV.Barb_score_value = 10 }
+
+			clr_country_flag = SOV_order_moscow
+			set_country_flag = {
+				flag = SOV_take_moscow
+				days = 180
+				value = 1
+			}
+		}
+
+		timeout_effect = {
+
+			country_event = gduevents.20
+
+			clr_country_flag = SOV_order_moscow
+			set_country_flag = {
+				flag = SOV_take_moscow
+				days = 180
+				value = 1
+			}
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SOV_order_stalingrad = {
+
+		icon = generic_operation  
+
+		allowed = { 
+			original_tag = SOV
+		}
+		available = {
+			GER = {
+				has_full_control_of_state = 217
+			}
+		}
+		visible = {
+			GER = {
+				has_full_control_of_state = 217
+			}
+			NOT = {
+				OR = {
+					has_country_flag = SOV_order_stalingrad
+					has_country_flag = SOV_take_stalingrad
+				}
+			}
+			original_tag = SOV
+			has_war_with = GER	
+			
+		}
+		
+		priority = 500
+
+		
+
+		cost = 0
+
+		complete_effect = {
+			set_country_flag = SOV_order_stalingrad
+			GER = {
+				set_country_flag = GER_defend_stalingrad
+			}
+		}
+	}
+	SOV_take_stalingrad = {
+
+		icon = generic_operation
+
+		allowed = {
+			has_country_flag = SOV_order_stalingrad
+		}
+
+		available = {
+			SOV = {
+				controls_state = 217
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = SOV_order_stalingrad
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			add_to_variable = { SOV.Barb_score_value = 10 }
+
+			clr_country_flag = SOV_order_stalingrad
+			set_country_flag = {
+				flag = SOV_take_stalingrad
+				days = 180
+				value = 1
+			}
+		}
+
+		timeout_effect = {
+
+			country_event = gduevents.20
+
+			clr_country_flag = SOV_order_stalingrad
+			set_country_flag = {
+				flag = SOV_take_stalingrad
+				days = 180
+				value = 1
+			}
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+	##### DEFEND 
+	SOV_defend_kiev = {
+
+		icon = generic_operation
+
+		allowed = {
+			has_country_flag = SOV_defend_kiev
+		}
+
+		available = {
+			GER = {
+				controls_state = 202
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = SOV_defend_kiev
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			clr_country_flag = SOV_defend_kiev
+		}
+
+		timeout_effect = {
+
+			country_event = gduevents.20
+
+			clr_country_flag = SOV_defend_kiev
+			add_to_variable = { SOV.Barb_score_value = 10 }
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SOV_defend_leningrad = {
+
+		icon = generic_operation
+
+		allowed = {
+			has_country_flag = SOV_defend_leningrad
+		}
+
+		available = {
+			GER = {
+				controls_state = 195
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = SOV_defend_leningrad
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			clr_country_flag = SOV_defend_leningrad
+		}
+
+		timeout_effect = {
+			country_event = gduevents.20
+
+			clr_country_flag = SOV_defend_leningrad
+			add_to_variable = { SOV.Barb_score_value = 10 }
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SOV_defend_moscow = {
+
+		icon = generic_operation
+
+		allowed = {
+			has_country_flag = SOV_defend_moscow
+		}
+
+		available = {
+			GER = {
+				controls_state = 219
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = SOV_defend_moscow
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			clr_country_flag = SOV_defend_moscow
+		}
+
+		timeout_effect = {
+			country_event = gduevents.20
+			
+			clr_country_flag = SOV_defend_moscow
+			add_to_variable = { SOV.Barb_score_value = 10 }
+         
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SOV_defend_stalingrad = {
+
+		icon = generic_operation
+
+		allowed = {
+			has_country_flag = SOV_defend_stalingrad
+		}
+
+		available = {
+			GER = {
+				controls_state = 217
+			}
+		}	
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_country_flag = SOV_defend_stalingrad
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			clr_country_flag = SOV_defend_stalingrad
+		}
+
+		timeout_effect = {
+			country_event = gduevents.20
+			
+			clr_country_flag = SOV_defend_stalingrad
+			add_to_variable = { SOV.Barb_score_value = 10 }
          
 		}
 
