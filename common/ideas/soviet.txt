@@ -165,6 +165,22 @@ ideas = {
 			
 		}
 		
+		SOV_Mechanised_Corps_Expanded = {
+			removal_cost = -1
+			picture = ITA_bandits_war
+				
+			allowed = {
+				original_tag = SOV
+				original_tag = GER
+			}					
+			equipment_bonus = {
+				mechanized_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+			}
+		}
+		
 
 		
 		soviet_limited_market = {
@@ -1519,8 +1535,7 @@ on_add = { hidden_effect = { make_air_designers_free = yes } }
 		designer = yes
 
 		grabin_design_bureau = {
-
-
+			on_add = { hidden_effect = { make_material_designers_free = yes } }
 			allowed = {
 				original_tag = SOV
 			}
@@ -1534,14 +1549,14 @@ on_add = { hidden_effect = { make_air_designers_free = yes } }
 			traits = { artillery_manufacturer }
 
 			modifier = {
+			
 			}
 		}
 
 
 
 		tula_arms_plant = {
-
-
+			on_add = { hidden_effect = { make_material_designers_free = yes } }
 			allowed = {
 				original_tag = SOV
 			}
@@ -1559,8 +1574,7 @@ on_add = { hidden_effect = { make_air_designers_free = yes } }
 		}
 
 		gaz = {
-
-
+			on_add = { hidden_effect = { make_material_designers_free = yes } }
 			allowed = {
 				original_tag = SOV
 			}

@@ -1,0 +1,95 @@
+scripted_diplomatic_actions = {
+    #   #   ###   #   #  ####    ###   #     #  ####  ####        ####   #####  #   #  ####
+    ## ##  #   #  ##  #  #   #  #   #  #  #  #  #     #   #      #         #    #   #  #
+    # # #  #####  # # #  ####   #   #  #  #  #  ####  ####       #   ##    #    #   #  ####
+    #   #  #   #  #  ##  #      #   #  #  #  #  #     #   #      #    #    #     # #   #
+    #   #  #   #  #   #  #       ###    ## ##   ####  #   #       ####   #####    #    ####
+
+    eda_relation_give_manpower = {
+        icon = 1
+        cost = 0
+        command_power = 0
+        requires_acceptance = no
+        show_acceptance_on_action_button = no
+        send_description = EDA_RELATION_GIVE_MANPOWER_SEND_DESC
+
+        ##################################
+        ## CONDITIONS TO USE/SEE ACTION ##
+        ##################################
+
+        allowed = {
+			ROOT = { is_ai = no }
+		}
+
+		visible = {
+			AND = {
+                has_game_rule = {
+                    rule = eda_relation_actions
+                    option = RELATION_ANY_ACTION_ALLOWED
+                }
+                has_game_rule = {
+                    rule = eda_relation_manpower
+                    option = RELATION_MANPOWER_ACTION_ALLOWED
+                }
+                NOT = { has_war_with = ROOT }
+            }
+		}
+
+		selectable = {
+			custom_trigger_tooltip = {
+				tooltip = EDA_RELATION_COOLDOWN_TOOLTIP
+				ROOT = { NOT = { has_country_flag = {
+                        flag = eda_relation_action_cooldown@PREV
+                    }
+                } }
+			}
+			custom_trigger_tooltip = {
+				tooltip = EDA_RELATION_GIVE_MANPOWER_TOOLTIP_1
+				ROOT = { NOT = { has_country_flag = {
+                        flag = eda_sent_manpower@PREV
+                    }
+                } }
+			}
+			custom_trigger_tooltip = {
+				tooltip = EDA_RELATION_GIVE_MANPOWER_TOOLTIP_2
+				ROOT = {
+					has_manpower > 55000
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = EDA_RELATION_GIVE_MANPOWER_TOOLTIP_3
+				OR = {
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+        #############
+        ## EFFECTS ##
+        #############
+        can_be_sent = { always = yes }
+        complete_effect = {
+			add_opinion_modifier = { 
+				target = ROOT 
+				modifier = given_manpower_country_modifier
+			}
+			ROOT = {
+				set_country_flag = {
+					flag = eda_relation_action_cooldown@PREV
+					value = 1
+					days = 5
+				}
+				set_country_flag = {
+					flag = eda_sent_manpower@PREV
+					value = 1
+					days = 25
+				}
+			}
+			ROOT = {
+				add_manpower = -50000
+			}
+			add_manpower = 50000
+		}
+    } 
+}

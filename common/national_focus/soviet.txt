@@ -15,7 +15,7 @@ focus_tree = {
 	focus = {
 		id = SOV_stalin_constitution
 		icon = GFX_focus_USSR
-		x = 18
+		x = 16
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -165,12 +165,32 @@ focus_tree = {
 			FRA = { add_opinion_modifier = { target = SOV modifier = anti_capitalist_diplomacy_capitalists } }
 		}
 	}
+	
+	focus = {
+		id = SOV_Mechanise_the_Army
+		icon = GFX_focus_SOV_the_road_of_life
+		prerequisite = { focus = SOV_tank_cult }
+		x = 23
+		y = 5
+
+		cost = 0
+
+		available = {
+			has_completed_focus = SOV_defense_of_moscow
+		}
+		
+		search_filters = {}
+
+		completion_reward = {
+			add_ideas = SOV_Mechanised_Corps_Expanded
+		}
+	}
 
 	focus = {
 		id = SOV_finish_five_year_plan
 		icon = GFX_SOV_economy
 		prerequisite = { focus = SOV_stalin_constitution }
-		x = 7
+		x = 6
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -1678,7 +1698,7 @@ focus_tree = {
 		id = SOV_production_effort
 		text = production_effort
 		icon = GFX_Soviet_War_Economy
-		prerequisite = { focus = SOV_infrastructure_effort }
+		prerequisite = { focus = SOV_infrastructure_effort focus = SOV_workers_culture }
 		x = -3
 		y = 2
 		relative_position_id = SOV_finish_five_year_plan
@@ -1907,7 +1927,7 @@ focus_tree = {
 		id = SOV_tranformation_of_nature
 		icon = GFX_goal_generic_soviet_construction
 		prerequisite = { focus = SOV_improve_railway focus = SOV_workers_culture }
-		x = 1
+		x = 3
 		y = 2
 		relative_position_id = SOV_finish_five_year_plan
 		cost = 5
@@ -1990,7 +2010,7 @@ focus_tree = {
 	focus = {
 		id = SOV_positive_heroism
 		icon = GFX_goal_generic_army_tanks2
-		x = 29
+		x = 26
 		y = 1
 		prerequisite = { focus = SOV_stalin_constitution }
 
@@ -2301,25 +2321,12 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = SOV_finish_five_year_plan
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}
 
 		available_if_capitulated = yes
-
-		bypass = {
-			custom_trigger_tooltip =  {
-				tooltip = construction_effort_tt
-				all_owned_state = {
-					free_building_slots = {
-						building = industrial_complex
-						size < 2
-						include_locked = yes
-					}
-				}
-					}
-				}
 
 		completion_reward = {
 			add_ideas = SOV_Sinteticheskii_Kauchuk_idea
@@ -2339,6 +2346,37 @@ focus_tree = {
 	
 			set_technology = { synth_oil_experiments = 1 }
 			set_technology = { rubber_processing = 1 }
+		}
+	}
+	
+	focus = {
+		id = SOV_Refinery_Programm
+		icon = GFX_Goal_Mass_Mechanization_effort
+		prerequisite = { focus = SOV_workers_culture focus = SOV_infrastructure_effort }
+		x = 1
+		y = 2
+		relative_position_id = SOV_finish_five_year_plan
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip =  {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		completion_reward = {
 			248 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -3504,14 +3542,14 @@ focus_tree = {
 				uses = 1
 				category = radar_tech
 			}
-		hidden_effect = {
-			FIN = {
-				swap_ideas = {
-					remove_idea = sisu
-					add_idea = sisu_2
-				}			
-			}
-		}			
+			hidden_effect = {
+				FIN = {
+					swap_ideas = {
+						remove_idea = sisu
+						add_idea = sisu_2
+					}			
+				}
+			}			
 		}
 
 
@@ -3519,9 +3557,5 @@ focus_tree = {
 
 
 	}
-
-
 	### END BRANCH ###
-
-
 }

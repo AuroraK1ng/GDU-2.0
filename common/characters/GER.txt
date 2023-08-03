@@ -248,7 +248,7 @@ characters={
 		}
 		
 		corps_commander={ #17/17
-			traits = { trickster panzer_leader ranger trait_engineer trait_reckless brilliant_strategist career_officer combined_arms_expert infantry_officer media_personality war_hero urban_assault_specialist}
+			traits = { trickster panzer_leader ranger trait_engineer trait_reckless brilliant_strategist career_officer infantry_officer media_personality war_hero urban_assault_specialist}
 	skill = 7
 	attack_skill = 7
 	defense_skill = 5
@@ -1421,7 +1421,6 @@ characters={
 				original_tag = GER
 			}
 			available = { 
-				NOT = { has_start_date > 1936.1.1.12 }
 				date > 1941.6.1
 				GER = { has_idea = tot_economic_mobilisation }
 			}

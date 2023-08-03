@@ -1450,7 +1450,7 @@ on_add = { hidden_effect = { make_tank_designers_free = yes } }
 				}			
 			}
 			available = {
-				date > 1941.1.1
+				date > 1942.1.1
 			}
 			research_bonus = {
 				armor = 0.15
@@ -1918,10 +1918,10 @@ on_add = { hidden_effect = { make_air_designers_free = yes } }
 			modifier = {
 				# +10% arty/at/aa research speed
 			}
+			on_add = { hidden_effect = { make_material_designers_free = yes } }
 		}
 
 		mauser = {
-
 
 			allowed = {
 				original_tag = GER
@@ -1936,10 +1936,8 @@ on_add = { hidden_effect = { make_air_designers_free = yes } }
 			ai_will_do = {
 				factor = 1
 			}
+			on_add = { hidden_effect = { make_material_designers_free = yes } }
 		}
-
-
-
 
 		opel = {
 
@@ -1952,6 +1950,7 @@ on_add = { hidden_effect = { make_air_designers_free = yes } }
 			}
 
 			traits = { motorized_equipment_manufacturer }
+			on_add = { hidden_effect = { make_material_designers_free = yes } }
 		}
 	}
 
