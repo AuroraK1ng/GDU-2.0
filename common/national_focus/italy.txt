@@ -1066,21 +1066,25 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ITA_Duche
+		id = ITA_Duce
     	icon = GFX_baionette
-		text = "Duche"
+		text = "Duce Supremo"
 		prerequisite = { focus = ITA_special_forces }
 		prerequisite = { focus = ITA_Blackshirts }
 		x = 6
 		y = 6
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
 
 		available_if_capitulated = yes
+		available = {		
+		date > 1941.3.1
+		}
 			completion_reward = {
-
+			add_ideas = Duce_Supremo
+			ITA = { remove_ideas = victor_emmanuel }
 		}
 	}
 	focus = {
@@ -1098,12 +1102,13 @@ focus_tree = {
 		available_if_capitulated = yes
 			completion_reward = {
 		add_ideas = ITA_Blackshirts
+
 		}
 	}
 	focus = {
 		id = ITA_Africa_Lesson
 		icon = GFX_Italian_Shield
-		text = ITA_Africa_Lesson
+		text = "Africa Lesson"
 		prerequisite = { focus = ITA_marines_and_landing_craft }
 		x = 9
 		y = 4
@@ -1137,14 +1142,20 @@ focus_tree = {
 		prerequisite = { focus = ITA_Blackshirts }
 		x = 8
 		y = 5
-		cost = 15
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 
 		available_if_capitulated = yes
+		available = {
+				has_war_with = ENG
+				ITA = { surrender_progress > 0.15 }
+				}
 			completion_reward = {
-
+			
+			add_ideas = ITA_Guerra_Santa
+			
 		}
 	}
 	focus = {
@@ -1385,6 +1396,28 @@ focus_tree = {
 	}
 
 	focus = {
+		id = ITA_effort_Marines
+		icon = GFX_Italy_Marines
+        text = "Corpo dei Marines"
+		prerequisite = { focus = ITA_capital_ships }
+		prerequisite = { focus = ITA_light_ship_effort }
+		x = 10
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1939.6.1
+		}
+
+		completion_reward = {
+			add_ideas =  ITA_Corpo_dei_Marines			
+		}
+	}
+
+	focus = {
 		id = ITA_bomber_effort
 		icon = GFX_goal_ita_savoia_marchetti_sm_79
 		prerequisite = { focus = ITA_army_primacy }
@@ -1504,7 +1537,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = ITA_marines_and_landing_craft
 				bonus = 1.00
-				uses = 2
+				uses = 1
 				technology = marines
 				technology = marines2
 			}
