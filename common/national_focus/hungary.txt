@@ -2011,6 +2011,27 @@ focus_tree = {
 		}
 	}
 
+		focus = {
+		id = HUN_Arrow_Cross
+    	icon = GFX_baionette
+		text = "Arrow Cross"
+		prerequisite = { focus = HUN_home_defense }
+		x = 20
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+				available = {
+				has_war_with = SOV
+				}
+		available_if_capitulated = yes
+			completion_reward = {
+		add_ideas = HUN_Arrow_Cross
+
+		}
+	}
+
 	focus = {
 		id = HUN_danuvia_submachine_guns
 		icon = GFX_goal_generic_small_arms
@@ -2090,7 +2111,27 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = HUN_Halder’s_Telegram
+    	icon = GFX_goal_ger_war_industry
+		text = "Halder’s Telegram"
+		prerequisite = { focus = HUN_artillery_effort }
+		x = 18
+		y = 7
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
 
+		available_if_capitulated = yes
+		available = {
+				date > 1940.11.1
+				}
+			completion_reward = {
+			add_ideas = HUN_Halder_Telegram
+			
+		}
+	}
 	focus = {
 		id = HUN_light_infantry_divisions_doctrine
 		icon = GFX_HUN_infantry
