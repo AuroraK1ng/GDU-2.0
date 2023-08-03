@@ -647,7 +647,10 @@ focus_tree = {
 				JAP = { has_war_with = CHI }
 				JAP = { controls_state = 608 }
 				JAP = { controls_state = 613 }
+				has_start_date > 1936.1.1.12
 			}
+			
+		
 			has_political_power > 25
 			has_government = democratic
 			has_completed_focus = USA_agricultural_adjustment_act
@@ -2665,8 +2668,6 @@ focus_tree = {
 			else = {
 				has_political_power > -25
 			}
-			controls_state = 378
-			controls_state = 358
 			OR = {
 				date < 1936.11.1
 				date > 1937.5.2
@@ -3232,3 +3233,4 @@ focus_tree = {
 			}		
 		}
 	}		
+}
