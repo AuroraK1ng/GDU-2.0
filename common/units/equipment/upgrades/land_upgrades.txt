@@ -26,9 +26,9 @@ upgrades = {
 			}
 		}
 
-		maximum_speed = 0.05
+		maximum_speed = 0.075
 		add_stats = {
-			build_cost_ic = 0.1
+			#build_cost_ic = 0.1
 		}
 	}
 
@@ -54,7 +54,13 @@ upgrades = {
 				has_tech = armor_tech_4
 			}
 		}
+		#maximum_speed = -0.02
+		add_stats = {
+			breakthrough = 0.2
+			defense = 0.5
+			build_cost_ic = 0.1
 
+		}
 ##		resource_cost_thresholds = { # resource values defined here are TOTAL added cost, not cumulative
 ##			5 = { #more armor requires more resources
 ##				steel = 1 
@@ -68,13 +74,5 @@ upgrades = {
 ##				#chromium = 2
 ##			}
 ##		}
-
-		#maximum_speed = -0.02
-		add_stats = {
-			breakthrough = 0.2
-			defense = 0.5
-			build_cost_ic = 0.1
-
-		}
 	}
 }
