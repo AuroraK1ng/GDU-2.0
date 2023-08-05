@@ -2,7 +2,7 @@ sub_units = {
 
 		amphibious_mechanized = {
 		abbreviation = "AMT"
-		sprite = mechanized
+		sprite = amphibious_mechanized
 		map_icon_category = infantry
 
 		priority = 610
@@ -47,7 +47,7 @@ sub_units = {
 		}
 
 		# this is what moves us and sets speed
-		transport = mechanized_equipment
+		transport = amphibious_mechanized_equipment
 
 		need = {
 			amphibious_mechanized_equipment = 40
@@ -72,11 +72,11 @@ sub_units = {
 			defence = -0.05
 		}
 		river = {
-			attack = 0.2
+			attack = 0.4
 			movement = 0.2
 		}
 		amphibious = {
-			attack = 0.3
+			attack = 0.5
 		}
 		forest_africa = {
 			attack = -0.2

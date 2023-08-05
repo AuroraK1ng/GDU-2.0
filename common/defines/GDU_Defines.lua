@@ -688,9 +688,9 @@ NDefines.NNavy.POSITIONING_PENALTY_HOURLY_DECAY_FOR_NEWLY_JOINED_SHIPS			= 1.0 -
 
 
 
-NDefines.NNavy.DAMAGE_PENALTY_ON_MINIMUM_POSITIONING = 0.45 					-- damage penalty at 0% positioning | 0.75
-NDefines.NNavy.SCREENING_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.35  	-- screening efficiency (screen to capital ratio) at 0% positioning | 0.5
-NDefines.NNavy.AA_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.45  			-- AA penalty at 0% positioning | 0.75
+NDefines.NNavy.DAMAGE_PENALTY_ON_MINIMUM_POSITIONING = 0.55 					-- damage penalty at 0% positioning | 0.7
+NDefines.NNavy.AA_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.55  			-- AA penalty at 0% positioning | 0.7
+NDefines.NNavy.SCREENING_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.45  	-- screening efficiency (screen to capital ratio) at 0% positioning | 0.5
 
 NDefines.NNavy.CONVOY_HIT_PROFILE = 250.0  									-- convoys has this contant hit profile
 NDefines.NNavy.CONVOY_SINKING_SPILLOVER = 1.5                 				-- Damaged convoys roll for if they sink in the end of combat by accumulating the damage. This scales that chance. 
