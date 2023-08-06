@@ -142,11 +142,11 @@ set_technology = {
 	basic_light_tank_chassis = 1
 	improved_light_tank_chassis = 1
 	improved_light_tank = 1
-	improved_light_artx = 1
-	improved_light_spaax = 1
-	improved_light_tdx = 1
-	basic_heavy_spaax = 1
-	basic_heavy_tdx = 1
+	#improved_light_artx = 1
+	#improved_light_spaax = 1
+	#improved_light_tdx = 1
+	#basic_heavy_spaax = 1
+	#basic_heavy_tdx = 1
 	CAS1x = 1
 	naval_bomber1x = 1
 	gwtank_chassis = 1
@@ -987,20 +987,20 @@ if = {
  create_equipment_variant = {
  	name = "T-26 modle. 1933"
  	type = light_tank_equipment_1
- 	upgrades = {
- 		tank_gun_upgrade = 5
- 		tank_armor_upgrade = 3
- 		tank_reliability_upgrade = 3
- 	}
+ 	#upgrades = {
+ 	#	tank_gun_upgrade = 5
+ 	#	tank_armor_upgrade = 3
+ 	#	tank_reliability_upgrade = 3
+ 	#}
  	obsolete = yes
  }
 
  create_equipment_variant = {
  	name = "T-27"
  	type = light_tank_equipment_1
- 	upgrades = {
- 		tank_reliability_upgrade = 3
- 	}
+ 	#upgrades = {
+ 	#	tank_reliability_upgrade = 3
+ 	#}
  	obsolete = yes
  }
  create_equipment_variant = {
@@ -1011,28 +1011,28 @@ if = {
  	obsolete = yes
  }
 
- create_equipment_variant = {
- 	name = "BT.5"
- 	type = light_tank_equipment_2
- 	upgrades = {
- 		tank_gun_upgrade = 3
- 		tank_engine_upgrade = 2
- 		tank_armor_upgrade = 2
- 		tank_reliability_upgrade = 3
- 	}
- 	obsolete = yes
- }
+# create_equipment_variant = {
+# 	name = "BT.5"
+# 	type = light_tank_equipment_2
+# 	upgrades = {
+# 		tank_gun_upgrade = 3
+# 		tank_engine_upgrade = 2
+# 		tank_armor_upgrade = 2
+# 		tank_reliability_upgrade = 3
+# 	}
+# 	obsolete = yes
+# }
 
- create_equipment_variant = {
- 	name = "BT.7"
- 	type = light_tank_equipment_2
- 	upgrades = {
- 		tank_gun_upgrade = 4
- 		tank_armor_upgrade = 3
- 		tank_engine_upgrade = 3
- 		tank_reliability_upgrade = 4
- 	}
- }
+# create_equipment_variant = {
+# 	name = "BT.7"
+# 	type = light_tank_equipment_2
+# 	upgrades = {
+# 		tank_gun_upgrade = 4
+# 		tank_armor_upgrade = 3
+# 		tank_engine_upgrade = 3
+# 		tank_reliability_upgrade = 4
+# 	}
+# }
 
  create_equipment_variant = {
  	name = "Sh-1"
