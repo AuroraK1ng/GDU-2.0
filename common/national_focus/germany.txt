@@ -289,7 +289,7 @@ focus_tree = {
 		completion_reward = {
 			GER={every_state = {
 					limit= {OR= { state = 19 state = 23 state = 14 state = 30 state = 15 state = 785 state = 29 state = 6 state = 7 state = 36 state = 56 state = 833 state = 58 state = 834 state = 99}}
-						add_dynamic_modifier = { modifier = GER_DDAY_Wall }
+						add_dynamic_modifier = { modifier = GER_DDAY_Wall scope = GER }
 				}
 			}
 			add_ideas = GER_atlantikwall_idea
