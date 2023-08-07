@@ -29,7 +29,7 @@ ideas = {
 		}
 		Duce_Supremo = {
 			
-			picture = ITVictor
+			picture = vittoria_mutilata
 			
 			allowed = {
 				original_tag = "ITA"
@@ -52,9 +52,40 @@ ideas = {
 			modifier = {
 				stability_factor = 0.35		
 				production_speed_buildings_factor = 0.10
-			}
-		}
 
+			}
+			
+		}
+		ITA_Command = {
+			
+			picture = german_advisors
+			
+			allowed = {
+				original_tag = "ITA"
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = ITA
+						has_government = fascism
+					}
+				}
+			}
+			
+			removal_cost = -1
+			modifier = {
+				planning_speed = 0.15
+				max_planning = 0.05
+				army_org_factor = 0.05
+				army_armor_speed_factor = 0.1
+			}
+			
+			
+		}
 		ITA_Guerra_Santa = {
 
 			allowed = {
@@ -75,7 +106,7 @@ ideas = {
 			}
 			equipment_bonus = {	
 				infantry_equipment   = {
-					build_cost_ic = -0.10
+					build_cost_ic = -0.15
 					instant = yes
 				}
 				}

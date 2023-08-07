@@ -12,7 +12,7 @@ focus_tree = {
 
 	default = no
 
-	continuous_focus_position = { x = 250 y = 1100 }
+	continuous_focus_position = { x = 250 y = 1500 }
 
 	focus = {
 		id = ITA_ethiopian_war_logistics
@@ -509,20 +509,29 @@ focus_tree = {
 		id = ITA_italian_refineries
 		icon = GFX_ITA_oil
 		text = ITA_italian_refineries
-		prerequisite = { focus = ITA_libyan_refineries }
+		prerequisite = { focus = ITA_consolidate_egypt }
 		available = {
 
 		}
-		x = 0
+		x = 2
 		y = 8
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
 		ai_will_do = {
 			factor = 1
 		}
+		available = {		
+		date > 1940.9.1
+		}
 		completion_reward = {
+
+		modify_building_resources = {
+        	   building = synthetic_refinery
+        	   resource = rubber
+        	   amount = 1
+        	}
 			160 = {
 				add_building_construction = {
 					type = synthetic_refinery
@@ -1087,6 +1096,32 @@ focus_tree = {
 			ITA = { remove_ideas = victor_emmanuel }
 		}
 	}
+		focus = {
+		id = ITA_command
+    	icon = GFX_baionette
+		text = "Stato Maggiore Italiano"
+		prerequisite = { focus = ITA_Duce }
+		x = 6
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		available = {		
+		date > 1941.8.1
+		ITA = {
+				controls_state = 446
+					
+			}
+		}
+			completion_reward = {
+			add_ideas = ITA_Command
+			ITA = { remove_ideas = ITA_german_millitary_cooperation_focus }
+
+		}
+	}
 	focus = {
 		id = ITA_Blackshirts
     	icon = GFX_baionette
@@ -1117,7 +1152,12 @@ focus_tree = {
 			factor = 1
 		}
 		cancel_if_invalid = no
-		available = {		
+		available = {	
+		ITA = {
+
+				controls_state = 452
+								
+			}
 		date > 1940.6.1
 		}
 
