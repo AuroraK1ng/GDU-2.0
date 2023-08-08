@@ -405,7 +405,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HUN_industrial_revitalization
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 70
@@ -488,7 +488,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = HUN_industrial_revitalization
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 60
@@ -515,7 +515,7 @@ focus_tree = {
 				limit = {
 					has_state_flag = HUN_support_domestic_industry_IC
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -533,7 +533,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
@@ -679,7 +679,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HUN_announce_the_gyor_program
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -702,7 +702,7 @@ focus_tree = {
 				limit = {
 					has_state_flag = HUN_civilian_industry_IC
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
@@ -720,7 +720,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
@@ -791,7 +791,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = HUN_civilian_industry
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 70
@@ -957,10 +957,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = HUN_domestic_arms_industry_AF1
@@ -973,10 +973,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = HUN_domestic_arms_industry_AF2
@@ -996,7 +996,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HUN_domestic_arms_industry
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 60
@@ -2023,6 +2023,10 @@ focus_tree = {
 			factor = 1
 		}
 				available = {
+				date > 1941.8.1
+				ITA = {
+				controls_state = 446
+					}
 				has_war_with = SOV
 				}
 		available_if_capitulated = yes

@@ -12,7 +12,7 @@ focus_tree = {
 
 	default = no
 
-	continuous_focus_position = { x = 250 y = 1500 }
+	continuous_focus_position = { x = 1000 y = 1000 }
 
 	focus = {
 		id = ITA_ethiopian_war_logistics
@@ -568,7 +568,122 @@ focus_tree = {
 			}				
 		}
 	}
+		focus = {
+		id = ITA_Defence_Africa
+		icon = GFX_ger_achtung_panzer
+		text = "Defence Africa"
+		prerequisite = { focus = ITA_consolidate_egypt }
+		prerequisite = { focus = ITA_consolidate_levant }
 
+		x = 3
+		y = 9
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		ITA = {
+				controls_state = 451
+					
+			}
+				ITA = {
+				controls_state = 448
+					
+			}
+		date > 1942.1.1
+		}
+		completion_reward = {
+			448 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+			}			
+		}
+	}
+
+			focus = {
+		id = ITA_Defence_Africa_2
+		icon = GFX_ger_achtung_panzer
+		text = "Defence Africa 2"
+		prerequisite = { focus = ITA_Defence_Africa }
+
+		x = 3
+		y = 10
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		ITA = {
+				controls_state = 451
+					
+			}
+				ITA = {
+				controls_state = 446
+					
+			}
+		date > 1942.8.1
+		}
+		completion_reward = {
+		add_ideas = ITA_Def_AFR_1 
+			450 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+				focus = {
+		id = ITA_Defence_Africa_3
+		icon = GFX_ger_achtung_panzer
+		text = "Defence Africa 3"
+		prerequisite = { focus = ITA_Defence_Africa_2 }
+
+		x = 3
+		y = 11
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {	
+		ITA = {
+				controls_state = 447
+					
+			}
+				ITA = {
+				controls_state = 458
+					
+			}
+		date > 1943.2.1
+		}
+		completion_reward = {
+		ITA = { remove_ideas = ITA_Def_AFR_1 }
+		add_ideas = ITA_Def_AFR_2
+			448 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 6
+					instant_build = yes
+				}
+			}
+		}
+	}
 	focus = {
 		id = ITA_libyan_infrastructure
 		icon = GFX_goal_generic_construct_civilian
@@ -1082,7 +1197,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_Blackshirts }
 		x = 6
 		y = 6
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1196,6 +1311,60 @@ focus_tree = {
 			
 			add_ideas = ITA_Guerra_Santa
 			
+		}
+	}
+	focus = {
+		id = ITA_Mediterranean
+		icon = GFX_Italy_Marines
+        text = "Dominance in Mediterranean"
+		prerequisite = { focus = ITA_effort_Marines }
+		x = 10
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			ITA = {
+
+				controls_state = 114
+								
+			}
+			ITA = {
+
+				controls_state = 116
+								
+			}
+			ITA = {
+
+				controls_state = 164
+								
+			}
+			ITA = {
+
+				controls_state = 183
+								
+			}
+			ITA = {
+
+				controls_state = 182
+								
+			}
+			ITA = {
+
+				controls_state = 115
+								
+			}
+			ITA = {
+
+				controls_state = 1
+								
+			}
+		}
+
+		completion_reward = {
+						
 		}
 	}
 	focus = {

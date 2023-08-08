@@ -20,7 +20,7 @@ focus_tree = {
 	focus = {
 		id = RAJ_provincial_elections
 		icon = GFX_raj
-		x = 1
+		x = 2
 		y = 1
 
 		cost = 5
@@ -85,7 +85,7 @@ focus_tree = {
 		id = RAJ_indian_national_congress
 		icon = GFX_RAJ_hindi_government
 		prerequisite = { focus = RAJ_provincial_elections }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = RAJ_provincial_elections
 
@@ -130,7 +130,7 @@ focus_tree = {
 		id = RAJ_cripps_mission
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = RAJ_indian_national_congress }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = RAJ_indian_national_congress
 
@@ -171,7 +171,7 @@ focus_tree = {
 		id = RAJ_two_nation_theory
 		icon = GFX_focus_RAJ_two_nation_theory
 		prerequisite = { focus = RAJ_cripps_mission }
-		x = 0
+		x = -1
 		y = 2
 		relative_position_id = RAJ_indian_national_congress
 
@@ -204,7 +204,42 @@ focus_tree = {
 			}
 		}
 	}
+		focus = {
+		id = RAJ_Jungle_Lions
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		prerequisite = { focus = RAJ_two_nation_theory }
+		text = "Jungle Lions"
+		x = 0
+		y = 1
+		relative_position_id = RAJ_two_nation_theory
 
+		cost = 5
+				available = {
+			date > 1941.08.01
+			RAJ = {
+				controls_state = 288
+					
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+
+
+		completion_reward = {
+			add_ideas = RAJ_Jungle_Lions
+			RAJ = { remove_ideas = War_in_pacific }
+			
+				}
+
+		
+	}
 	focus = {
 		id = RAJ_princely_state_donations
 		icon = GFX_goal_generic_improve_relations
