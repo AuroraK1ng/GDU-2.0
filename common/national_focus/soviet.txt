@@ -2169,6 +2169,11 @@ focus_tree = {
 				technology = advanced_heavy_tank_chassis
 			}		
 			add_tech_bonus = {
+				bonus = 2
+				uses = 1
+				technology = mechanised_infantry2 
+			}	
+			add_tech_bonus = {
 				name = patriotic_landdoc_8
 				bonus = 215.00
 				uses = 1
@@ -3383,7 +3388,11 @@ focus_tree = {
 					GER = { add_to_faction = FIN }			
 					set_global_flag = GDU_Winter_War_Over				
 			}
-			set_technology = { mechanised_infantry = 1 }		
+			add_tech_bonus = {
+				bonus = 5
+				uses = 1
+				technology = mechanised_infantry
+			}		
 		
 			custom_effect_tooltip = GDU_lessons_of_war_tt
 			hidden_effect = {
