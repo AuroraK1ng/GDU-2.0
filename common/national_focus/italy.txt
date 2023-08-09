@@ -1094,7 +1094,23 @@ focus_tree = {
 			set_technology = { basic_medium_tank_chassis = 1 }
 			custom_effect_tooltip = GDU_spacer
 			custom_effect_tooltip = GDU_italian_tank_spawn_tt
-			ITA = { add_equipment_to_stockpile = { type = medium_tank_equipment_1 amount = 2000 producer = ITA } }
+			ITA = {
+				create_equipment_variant = {
+				name = "Fiat M11/39" 	
+				type = medium_tank_chassis_1
+					modules = {
+						main_armament_slot = tank_medium_cannon
+						turret_type_slot = tank_medium_three_man_tank_turret
+						special_type_slot_1 = secondary_turret_small_cannon
+						special_type_slot_2 = additional_machine_guns
+						special_type_slot_3 = armor_skirts
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+					}
+				}	
+				add_equipment_to_stockpile = { type = medium_tank_chassis_1 variant_name = "Fiat M11/39" amount = 2500 producer = ITA } 
+			}
 			custom_effect_tooltip = GDU_spacer
 			add_tech_bonus = {
 				name = armor_effort
