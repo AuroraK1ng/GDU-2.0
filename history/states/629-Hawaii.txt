@@ -4,8 +4,9 @@ state={
 	manpower = 368336
 	state_category = town
 		resources={
-		oil=10
-		aluminium=4
+		rubber = 10
+		steel = 10
+		oil= 10
 	}
 
 	history={
@@ -15,10 +16,20 @@ state={
 		}
 		#add_core_of = USA
 		buildings = {
-			infrastructure = 4
-			air_base = 5
+			infrastructure = 8
+			air_base = 8
 			4180 = {
-				naval_base = 10
+				naval_base = 15
+				naval_fort = 5
+			}
+			7195 = {
+				naval_fort = 3
+			}
+			7112 = {
+				naval_fort = 3
+			}
+			2537 = {
+				naval_fort = 3
 			}
 		}
 		victory_points = {

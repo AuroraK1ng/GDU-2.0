@@ -3013,7 +3013,11 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = JAP_the_zero_tt
-			hidden_effect = { set_technology = { cv_fighter2 = 1 } }
+			custom_effect_tooltip = JAP_fighters
+			hidden_effect = { 
+				set_technology = { cv_fighter2 = 1 } 
+				set_technology = { fighter2 = 1  } 
+			}
 		}
 	}
 
@@ -3153,7 +3157,7 @@ focus_tree = {
 		}
 
 		available = {
-
+			date > 1942.6.1
 		}
 
 		bypass = {
@@ -3169,10 +3173,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = JAP_fighters
-			hidden_effect = {
-				set_technology = { fighter2 = 1 }
+			
+			add_tech_bonus = {
+				bonus = 3
+				uses = 1
+				technology = advanced_small_airframe 
 			}
+			add_tech_bonus = {
+				bonus = 3
+				uses = 1
+				technology = cv_fighter3x 
+			}		
 		}
 	}
 
@@ -3207,8 +3218,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_technology = { cv_fighter3 = 1 }
-			set_technology = { advanced_small_airframe = 1 }
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 1
+				technology = modern_small_airframe 
+			}
 		}
 	}
 
