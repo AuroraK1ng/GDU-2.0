@@ -241,7 +241,7 @@ sub_units = {
 	
 		#Size Definitions
 		max_strength = 2
-		max_organisation = 50
+		max_organisation = 20
 		default_morale = 0.3
 		manpower = 500
 		training_time = 120
@@ -253,7 +253,10 @@ sub_units = {
 		can_be_parachuted = yes
 
 		# Support nerfs to combat abilities
-	
+		breakthrough = -0.25
+		defense = -0.25				
+		hard_attack = -0.25
+		soft_attack = -0.25
 		ap_attack = -0.5
 		
 		essential = {
