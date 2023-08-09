@@ -238,16 +238,16 @@ equipment_modules = {
 		add_stats = {
 			build_cost_ic = 2.5
 			reliability = 0.05
-			defense = 5.5
+			defense = 5
 		}
 
-		multiply_stats = {
-			ap_attack = -0.42
-			breakthrough = -0.6
-			soft_attack = -0.89
-			hard_attack = 0.15
-			#armor_value = -0.25
-		}
+		##multiply_stats = {
+		##	ap_attack = -0.42
+		##	breakthrough = -0.6
+		##	soft_attack = -0.89
+		##	hard_attack = 0.15
+		##	#armor_value = -0.25
+		##}
 
 		can_convert_from = {
 			module = tank_light_turret_type
@@ -335,16 +335,16 @@ equipment_modules = {
 		add_stats = {
 			build_cost_ic = 5.5
 			reliability = 0.15
-			defense = 1
+			defense = 5
 		}
 
-		multiply_stats = {
-			ap_attack = -0.125
-			breakthrough = -0.5
-			soft_attack = -0.85
-			hard_attack = 0.5
-			armor_value = -0.25
-		}
+		##multiply_stats = {
+		##	ap_attack = -0.125
+		##	breakthrough = -0.5
+		##	soft_attack = -0.85
+		##	hard_attack = 0.5
+		##	armor_value = -0.25
+		##}
 
 		can_convert_from = {
 			module = tank_medium_turret_type
@@ -439,13 +439,13 @@ equipment_modules = {
 		add_stats = {
 			build_cost_ic = 7.5
 			reliability = 0.15
-			defense = 5
+			defense = 8
 		}
 
-		multiply_stats = {
-			breakthrough = -0.4
-			armor_value = -0.4
-		}
+		##multiply_stats = {
+		##	breakthrough = -0.4
+		##	armor_value = -0.4
+		##}
 
 		can_convert_from = {
 			module = tank_heavy_turret_type
@@ -566,13 +566,6 @@ equipment_modules = {
 			reliability = -0.15	
 		}
 		
-		multiply_stats = {
-			breakthrough = -0.95
-			defense = -0.25
-			soft_attack = -0.5
-			hard_attack = -0.5
-			armor_value = -0.25	
-		}
 		##dismantle_cost_ic = 20 ## =   1
 		xp_cost = 0
 		can_convert_from = {
@@ -595,13 +588,7 @@ equipment_modules = {
 			reliability = -0.15	
 		}
 		
-		multiply_stats = {
-			breakthrough = -0.95
-			defense = -0.25
-			soft_attack = -0.5
-			hard_attack = -0.5
-			armor_value = -0.5	
-		}
+		
 		##dismantle_cost_ic = 20 ## =   1
 		xp_cost = 0
 		can_convert_from = {
@@ -628,13 +615,6 @@ equipment_modules = {
 			reliability = -0.15	
 		}
 		
-		multiply_stats = {
-			breakthrough = -0.95
-			defense = -0.25
-			soft_attack = -0.5
-			hard_attack = -0.5
-			armor_value = -0.5	
-		}
 		##dismantle_cost_ic = 20 ## =   1
 		xp_cost = 0
 		can_convert_from = {
@@ -738,15 +718,12 @@ equipment_modules = {
 		}
 
 		add_stats = {
-			soft_attack = 425
+			soft_attack = 70
 			reliability = -0.3
 			defense = 4	
 		}
 		
-		multiply_stats = {
-			hard_attack = -1.4
-			breakthrough = -0.3
-		}
+
 		##dismantle_cost_ic = 20 ## =   1
 		xp_cost = 0
 		can_convert_from = {
@@ -768,15 +745,11 @@ equipment_modules = {
 
 		parent = tank_medium_howitzer
 		add_stats = {
-			soft_attack = 485
+			soft_attack = 80
 			reliability = -0.3
 			defense = 4	
 		}
-		
-		multiply_stats = {
-			hard_attack = -1.3
-			breakthrough = -0.35
-		}
+	
 		##dismantle_cost_ic = 20 ## =   1
 		xp_cost = 0
 		can_convert_from = {
@@ -798,15 +771,11 @@ equipment_modules = {
 		forbid_equipment_type_exact_match = armor
 		parent = tank_medium_howitzer
 		add_stats = {
-			soft_attack = 565
+			soft_attack = 88
 			reliability = -0.3
 			defense = 3	
 		}
 		
-		multiply_stats = {
-			hard_attack = -1.4
-			breakthrough = -0.375
-		}
 		##dismantle_cost_ic = 20 ## =   1
 		xp_cost = 0
 		can_convert_from = {
@@ -1082,18 +1051,13 @@ equipment_modules = {
 		forbid_equipment_type_exact_match = armor
 		
 		add_stats = {
-			soft_attack = 80
+			soft_attack = 95
 			ap_attack = 10
 			#build_cost_ic = 3
 			#maximum_speed = -2
 			reliability = -0.3
 		}
 		
-		multiply_stats = {
-			hard_attack = -0.8
-			breakthrough = -0.5
-			defense = -0.1
-		}
 		##dismantle_cost_ic = 20 ## =   1
 		xp_cost = 0
 		can_convert_from = {
