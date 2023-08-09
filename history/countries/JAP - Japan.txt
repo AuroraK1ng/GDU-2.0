@@ -242,83 +242,6 @@ if = {
 	set_air_oob = "JAP_1936_air_bba"
 }
 
-add_equipment_to_stockpile = {
-         type = artillery_equipment_1
-         amount = 500
-         producer = JAP
-}  
-add_equipment_to_stockpile = {
-         type = train_equipment_1
-         amount = 300
-         producer = JAP
-}  
-add_equipment_to_stockpile = {
-         type = support_equipment
-         amount = 1400
-         producer = JAP
-} 
-
-add_equipment_to_stockpile = {
-         type = infantry_equipment_0
-         amount = 75000
-         producer = JAP
-} 
-add_equipment_to_stockpile = {
-         type = infantry_equipment_1
-         amount = 5530
-         producer = JAP
-} 
-add_equipment_to_stockpile = {
-         type = motorized_equipment_1
-         amount = 631
-         producer = JAP
-} 
-add_equipment_to_stockpile = {
-         type = light_tank_equipment_1
-         amount = 720
-         producer = JAP
-} 
-add_equipment_to_stockpile = {
-         type = anti_air_equipment_1
-         amount = 2129
-         producer = JAP
-}  
-
-add_equipment_to_stockpile = {
-         type = fighter_equipment_1
-         amount = 300
-         producer = JAP
-}
-add_equipment_to_stockpile = {
-         type = CAS_equipment_1
-         amount = 200
-         producer = JAP
-}
-add_equipment_to_stockpile = {
-         type = tac_bomber_equipment_1
-         amount = 300
-         producer = JAP
-}
-add_equipment_to_stockpile = {
-         type = heavy_fighter_equipment_1
-         amount = 250
-         producer = JAP
-}
-add_equipment_to_stockpile = {
-         type = cv_fighter_equipment_1
-         amount = 250
-         producer = JAP
-}
-add_equipment_to_stockpile = {
-         type = cv_nav_bomber_equipment_1
-         amount = 250
-         producer = JAP
-}
-add_equipment_to_stockpile = {
-         type = cv_CAS_equipment_1
-         amount = 100
-         producer = JAP
-}
 create_corps_commander = {
 	name = "Tomoyuki Yamashita AFRICANUS"
 		picture = "AFRICA_Portrait_Japan_Tomoyuki_Yamashita.dds"
@@ -646,6 +569,95 @@ if = {
 			}
 		}	
 	}
+	
+create_equipment_variant = {
+	name = "Type 95 Ha/Go" 	
+	type = light_tank_chassis_2
+	modules = {
+		main_armament_slot = tank_small_cannon
+		turret_type_slot = tank_light_three_man_tank_turret
+		special_type_slot_2 = additional_machine_guns
+		suspension_type_slot = tank_bogie_suspension
+		armor_type_slot = tank_welded_armor
+		engine_type_slot = tank_gasoline_engine
+	}
+}
+	
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 500
+	producer = JAP
+}  
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 300
+	producer = JAP
+}  
+add_equipment_to_stockpile = {
+	type = support_equipment
+	amount = 1400
+	producer = JAP
+} 
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 75000
+	producer = JAP
+} 
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 5530
+	producer = JAP
+} 
+add_equipment_to_stockpile = {
+	type = motorized_equipment_1
+	amount = 631
+	producer = JAP
+} 
+add_equipment_to_stockpile = {
+	type = light_tank_chassis_2
+	amount = 720
+	producer = JAP
+} 
+add_equipment_to_stockpile = {
+	type = anti_air_equipment_1
+	amount = 2129
+	producer = JAP
+}  
+add_equipment_to_stockpile = {
+	type = fighter_equipment_1
+	amount = 300
+	producer = JAP
+}
+add_equipment_to_stockpile = {
+	type = CAS_equipment_1
+	amount = 200
+	producer = JAP
+}
+add_equipment_to_stockpile = {
+	type = tac_bomber_equipment_1
+	amount = 300
+	producer = JAP
+}
+add_equipment_to_stockpile = {
+	type = heavy_fighter_equipment_1
+	amount = 250
+	producer = JAP
+}
+add_equipment_to_stockpile = {
+	type = cv_fighter_equipment_1
+	amount = 250
+	producer = JAP
+}
+add_equipment_to_stockpile = {
+	type = cv_nav_bomber_equipment_1
+	amount = 250
+	producer = JAP
+}
+add_equipment_to_stockpile = {
+	type = cv_CAS_equipment_1
+	amount = 100
+	producer = JAP
+}
 	# 1939 Start #			
 	
 	

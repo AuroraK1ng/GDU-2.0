@@ -141,7 +141,7 @@ set_technology = {
 	basic_heavy_tank_chassis = 1
 	basic_light_tank_chassis = 1
 	improved_light_tank_chassis = 1
-	improved_light_tank = 1
+	#improved_light_tank = 1
 	#improved_light_artx = 1
 	#improved_light_spaax = 1
 	#improved_light_tdx = 1
@@ -227,149 +227,6 @@ recruit_character = SOV_georgy_zhukov
 set_convoys = 799
 set_stability = 0.5
 set_war_support = 0.8
-
-add_equipment_to_stockpile = {
-         type = artillery_equipment_1
-         amount = 20260
-         producer = SOV
-}  
-add_equipment_to_stockpile = {
-         type = support_equipment
-         amount = 7651
-         producer = SOV
-} 
-add_equipment_to_stockpile = {
-         type = infantry_equipment_0
-         amount = 229000
-         producer = SOV
-} 
-add_equipment_to_stockpile = {
-         type = infantry_equipment_1
-         amount = 118100
-         producer = SOV
-} 
-add_equipment_to_stockpile = {
-         type = motorized_equipment_1
-         amount = 7900
-         producer = SOV
-}
-add_equipment_to_stockpile = {
-         type = heavy_tank_equipment_1
-         amount = 481
-         producer = SOV
-} 
-add_equipment_to_stockpile = {
-         type = anti_air_equipment_1
-         amount = 12400
-         producer = SOV
-} 
-add_equipment_to_stockpile = {
-         type = anti_tank_equipment_1
-         amount = 19160
-         producer = SOV
-} 
-add_equipment_to_stockpile = {
-         type = light_tank_equipment_1
-         amount = 2500
-         producer = SOV
-} 
-add_equipment_to_stockpile = {
-         type = light_tank_equipment_2
-         amount = 500
-         producer = SOV
-}
-#add_equipment_to_stockpile = {
-#         type = motorized_rocket_equipment
-#         amount = 1556
-#         producer = SOV
-#}
-add_equipment_to_stockpile = {
-         type = light_tank_artillery_equipment_1
-         amount = 1475
-         producer = SOV
-}
-add_equipment_to_stockpile = {
-         type = light_tank_artillery_equipment_2
-         amount = 1675
-         producer = SOV
-}
-add_equipment_to_stockpile = {
-         type = light_tank_destroyer_equipment_1
-         amount = 1400
-         producer = SOV
-}
-add_equipment_to_stockpile = {
-         type = light_tank_destroyer_equipment_2
-         amount = 500
-         producer = SOV
-}
-add_equipment_to_stockpile = {
-         type = light_tank_aa_equipment_1
-         amount = 500
-         producer = SOV
-}
-add_equipment_to_stockpile = {
-         type = light_tank_aa_equipment_2
-         amount = 250
-         producer = SOV
-}
-add_equipment_to_stockpile = {
-         type = heavy_tank_artillery_equipment_1
-         amount = 523
-         producer = SOV
-}
-add_equipment_to_stockpile = {
-         type = heavy_tank_destroyer_equipment_1
-         amount = 300
-         producer = SOV
-}
-add_equipment_to_stockpile = {
-         type = heavy_tank_aa_equipment_1
-         amount = 96
-         producer = SOV
-}
-
-
-add_equipment_to_stockpile = {
-         type = fighter_equipment_0
-         amount = 1400
-         producer = SOV
-}
-add_equipment_to_stockpile = {
-         type = fighter_equipment_0
-         amount = 1200
-         producer = SOV
-}
-add_equipment_to_stockpile = {
-         type = fighter_equipment_0
-         amount = 400
-         producer = SOV
-}
-add_equipment_to_stockpile = {
-         type = tac_bomber_equipment_0
-         amount = 300
-         producer = SOV
-}
-add_equipment_to_stockpile = {
-         type = strat_bomber_equipment_1
-         amount = 200
-         producer = SOV
-}
-add_equipment_to_stockpile = {
-         type = train_equipment_1
-         amount = 1000
-         producer = SOV
-}  
-add_equipment_to_stockpile = {
-         type = nav_bomber_equipment_1
-         amount = 100
-         producer = SOV
-} 
-add_equipment_to_stockpile = {
-         type = CAS_equipment_1
-         amount = 500
-         producer = SOV
-}
 
 set_politics = {
 	ruling_party = communism
@@ -955,92 +812,135 @@ if = {
 		}
 	}
 }
- create_equipment_variant = {
- 	name = "I-15bis"
- 	type = fighter_equipment_0
- 	upgrades = {
- 		plane_gun_upgrade = 3
- 		plane_range_upgrade = 5
- 		plane_engine_upgrade = 5
- 		plane_reliability_upgrade = 5
- 	}
- 	obsolete = yes
- }
- create_equipment_variant = {
- 	name = "I-153"
- 	type = fighter_equipment_0
- 	upgrades = {
- 		plane_gun_upgrade = 5
- 		plane_range_upgrade = 5
- 		plane_engine_upgrade = 5
- 		plane_reliability_upgrade = 5
- 	}
- }
- create_equipment_variant = {
- 	name = "T-26 modle. 1931"
- 	type = light_tank_equipment_1
- 	upgrades = {
+create_equipment_variant = {
+	name = "I-15bis"
+	type = fighter_equipment_0
+	upgrades = {
+		plane_gun_upgrade = 3
+		plane_range_upgrade = 5
+		plane_engine_upgrade = 5
+		plane_reliability_upgrade = 5
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "I-153"
+	type = fighter_equipment_0
+	upgrades = {
+		plane_gun_upgrade = 5
+		plane_range_upgrade = 5
+		plane_engine_upgrade = 5
+		plane_reliability_upgrade = 5
+	}
+}
+
+create_equipment_variant = {
+	name = "BT.7" 	
+	type = light_tank_chassis_2
+	modules = {
+		main_armament_slot = tank_small_cannon
+		turret_type_slot = tank_light_three_man_tank_turret
+		special_type_slot_2 = additional_machine_guns
+		suspension_type_slot = tank_bogie_suspension
+		armor_type_slot = tank_welded_armor
+		engine_type_slot = tank_gasoline_engine
+	}
+}
+
+create_equipment_variant = {
+	name = "T.35-A" 	
+	type = heavy_tank_chassis_1
+	modules = {
+		main_armament_slot = tank_heavy_cannon
+		turret_type_slot = tank_heavy_three_man_tank_turret
+		special_type_slot_1 = secondary_turret_small_cannon
+		special_type_slot_2 = additional_machine_guns
+		special_type_slot_3 = dozer_blade
+		suspension_type_slot = tank_bogie_suspension
+		armor_type_slot = tank_welded_armor
+		engine_type_slot = tank_gasoline_engine
+	}
+}
+
+create_equipment_variant = {
+	name = "Sh-1"
+	type = CAS_equipment_1 
+	upgrades = {
+		plane_cas_upgrade = 0
+		plane_range_upgrade = 2
+		plane_engine_upgrade = 1
+		plane_reliability_upgrade = 1
+	}
+}
  
- 	}
- 	obsolete = yes
- }
- create_equipment_variant = {
- 	name = "T-26 modle. 1933"
- 	type = light_tank_equipment_1
- 	#upgrades = {
- 	#	tank_gun_upgrade = 5
- 	#	tank_armor_upgrade = 3
- 	#	tank_reliability_upgrade = 3
- 	#}
- 	obsolete = yes
- }
-
- create_equipment_variant = {
- 	name = "T-27"
- 	type = light_tank_equipment_1
- 	#upgrades = {
- 	#	tank_reliability_upgrade = 3
- 	#}
- 	obsolete = yes
- }
- create_equipment_variant = {
- 	name = "BT.2"
- 	type = light_tank_equipment_2
- 	upgrades = {
- 	}
- 	obsolete = yes
- }
-
-# create_equipment_variant = {
-# 	name = "BT.5"
-# 	type = light_tank_equipment_2
-# 	upgrades = {
-# 		tank_gun_upgrade = 3
-# 		tank_engine_upgrade = 2
-# 		tank_armor_upgrade = 2
-# 		tank_reliability_upgrade = 3
-# 	}
-# 	obsolete = yes
-# }
-
-# create_equipment_variant = {
-# 	name = "BT.7"
-# 	type = light_tank_equipment_2
-# 	upgrades = {
-# 		tank_gun_upgrade = 4
-# 		tank_armor_upgrade = 3
-# 		tank_engine_upgrade = 3
-# 		tank_reliability_upgrade = 4
-# 	}
-# }
-
- create_equipment_variant = {
- 	name = "Sh-1"
- 	type = CAS_equipment_1 
- 	upgrades = {
- 		plane_cas_upgrade = 0
- 		plane_range_upgrade = 2
- 		plane_engine_upgrade = 1
- 		plane_reliability_upgrade = 1
- 	}
- }
+add_equipment_to_stockpile = {
+    type = artillery_equipment_1
+    amount = 20260
+    producer = SOV
+}  
+add_equipment_to_stockpile = {
+    type = support_equipment
+    amount = 7651
+    producer = SOV
+} 
+add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+    amount = 229000
+    producer = SOV
+} 
+add_equipment_to_stockpile = {
+    type = infantry_equipment_1
+    amount = 118100
+    producer = SOV
+} 
+add_equipment_to_stockpile = {
+    type = motorized_equipment_1
+    amount = 7900
+     producer = SOV
+}
+add_equipment_to_stockpile = {
+    type = heavy_tank_chassis_1
+    amount = 500
+    producer = SOV
+} 
+add_equipment_to_stockpile = {
+    type = anti_air_equipment_1
+    amount = 12400
+    producer = SOV
+} 
+add_equipment_to_stockpile = {
+    type = anti_tank_equipment_1
+    amount = 19160
+    producer = SOV
+} 
+add_equipment_to_stockpile = {
+    type = light_tank_chassis_2
+    amount = 5000
+    producer = SOV
+}
+add_equipment_to_stockpile = {
+    type = fighter_equipment_0
+	variant_name = "I-153"
+    amount = 3000
+    producer = SOV
+}
+add_equipment_to_stockpile = {
+    type = tac_bomber_equipment_1
+    amount = 500
+    producer = SOV
+}
+add_equipment_to_stockpile = {
+    type = train_equipment_1
+    amount = 1000
+    producer = SOV
+}  
+add_equipment_to_stockpile = {
+    type = nav_bomber_equipment_1
+    amount = 100
+    producer = SOV
+} 
+add_equipment_to_stockpile = {
+    type = CAS_equipment_1
+    amount = 500
+    producer = SOV
+}

@@ -253,57 +253,6 @@ set_stability = 0.75
 set_war_support = 0.40
 AUS = { give_military_access = GER }
 
-add_equipment_to_stockpile = {
-         type = artillery_equipment_1
-         amount = 2884
-         producer = GER
-}  
-add_equipment_to_stockpile = {
-         type = train_equipment_1
-         amount = 300
-         producer = GER
-}  
-add_equipment_to_stockpile = {
-         type = support_equipment
-         amount = 2180
-         producer = GER
-} 
-
-add_equipment_to_stockpile = {
-         type = infantry_equipment_1
-         amount = 62000
-         producer = GER
-} 
-add_equipment_to_stockpile = {
-         type = motorized_equipment_1
-         amount = 3800
-         producer = GER
-} 
-add_equipment_to_stockpile = {
-         type = light_tank_equipment_2
-         amount = 1801
-         producer = GER
-} 
-add_equipment_to_stockpile = {
-         type = light_tank_equipment_1
-         amount = 1000
-         producer = GER
-} 
-add_equipment_to_stockpile = {
-         type = heavy_tank_equipment_1
-         amount = 10
-         producer = GER
-} 
-add_equipment_to_stockpile = {
-	type = anti_air_equipment_1
-    amount = 2640
-    producer = GER
-}
-add_equipment_to_stockpile = {
-         type = anti_tank_equipment_1
-         amount = 3660
-         producer = GER
-} 
 create_equipment_variant = {
 	name = "Bf 109 E"
 	type = fighter_equipment_1
@@ -316,41 +265,6 @@ create_equipment_variant = {
 	icon = "GFX_GER_fighter1_medium"
 }
 
-add_equipment_to_stockpile = {
-         type = fighter_equipment_1
-         amount = 1300
-         producer = GER
-} 
-add_equipment_to_stockpile = {
-         type = CAS_equipment_1
-         amount = 600
-         producer = GER
-} 
-add_equipment_to_stockpile = {
-         type = transport_plane_equipment_1
-         amount = 5
-         producer = GER
-} 
-add_equipment_to_stockpile = {
-         type = nav_bomber_equipment_1
-         amount = 50
-         producer = GER
-} 
-add_equipment_to_stockpile = {
-         type = heavy_fighter_equipment_1
-         amount = 100
-         producer = GER
-}
-add_equipment_to_stockpile = {
-         type = tac_bomber_equipment_0
-         amount = 500
-         producer = GER
-}
-add_equipment_to_stockpile = {
-         type = tac_bomber_equipment_1
-         amount = 400
-         producer = GER
-}
 
 create_corps_commander = {
 	name = "Erwin Rommel AFRICANUS"
@@ -382,10 +296,6 @@ add_to_faction = BUL
 add_to_faction = SPR
 add_to_faction = ROM
 add_to_faction = HUN
-
-
-
-
 
 add_ideas = {
 	general_staff
@@ -690,15 +600,126 @@ if = {
 	
 	create_equipment_variant = {
 		name = "Do 17"
-		type = tac_bomber_equipment_0
+		type = tac_bomber_equipment_1
 		upgrades = {
 			plane_tac_bomb_upgrade = 5
-			plane_range_upgrade = 1
-			plane_engine_upgrade = 1
+			plane_range_upgrade = 2
+			plane_engine_upgrade = 2
 			plane_reliability_upgrade = 5
 		}
 		obsolete = yes
 	}
 }
+
+create_equipment_variant = {
+	name = "Panzer II" 	
+	type = light_tank_chassis_2
+	modules = {
+		main_armament_slot = tank_small_cannon
+		turret_type_slot = tank_light_three_man_tank_turret
+		special_type_slot_2 = additional_machine_guns
+		suspension_type_slot = tank_bogie_suspension
+		armor_type_slot = tank_welded_armor
+		engine_type_slot = tank_gasoline_engine
+	}
+}
+
+create_equipment_variant = {
+	name = "Grosstraktor" 	
+	type = heavy_tank_chassis_1
+	modules = {
+		main_armament_slot = tank_heavy_cannon
+		turret_type_slot = tank_heavy_three_man_tank_turret
+		special_type_slot_1 = secondary_turret_small_cannon
+		special_type_slot_2 = additional_machine_guns
+		special_type_slot_3 = dozer_blade
+		suspension_type_slot = tank_bogie_suspension
+		armor_type_slot = tank_welded_armor
+		engine_type_slot = tank_gasoline_engine
+	}
+}
+
+add_equipment_to_stockpile = {
+    type = fighter_equipment_1
+    amount = 1300
+    producer = GER
+} 
+add_equipment_to_stockpile = {
+    type = CAS_equipment_1
+    amount = 600
+    producer = GER
+} 
+add_equipment_to_stockpile = {
+	type = transport_plane_equipment_1
+	amount = 5
+	producer = GER
+} 
+add_equipment_to_stockpile = {
+	type = nav_bomber_equipment_1
+	amount = 50
+	producer = GER
+} 
+add_equipment_to_stockpile = {
+	type = heavy_fighter_equipment_1
+	amount = 100
+	producer = GER
+}
+add_equipment_to_stockpile = {
+	type = tac_bomber_equipment_0
+	amount = 500
+	producer = GER
+}
+add_equipment_to_stockpile = {
+	type = tac_bomber_equipment_1
+	amount = 400
+	producer = GER
+}
+
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 2884
+	producer = GER
+}  
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 300
+	producer = GER
+}  
+add_equipment_to_stockpile = {
+	type = support_equipment
+	amount = 2180
+	producer = GER
+} 
+
+add_equipment_to_stockpile = {
+    type = infantry_equipment_1
+    amount = 62000
+	producer = GER
+} 
+add_equipment_to_stockpile = {
+	type = motorized_equipment_1
+	amount = 3800
+	producer = GER
+} 
+add_equipment_to_stockpile = {
+    type = light_tank_chassis_2
+    amount = 2800
+    producer = GER
+} 
+add_equipment_to_stockpile = {
+    type = heavy_tank_chassis_1
+    amount = 10
+    producer = GER
+} 
+add_equipment_to_stockpile = {
+	type = anti_air_equipment_1
+    amount = 2640
+    producer = GER
+}
+add_equipment_to_stockpile = {
+    type = anti_tank_equipment_1
+    amount = 3660
+    producer = GER
+} 
 
 

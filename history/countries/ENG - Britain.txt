@@ -306,93 +306,6 @@ if = {
 
 	add_to_tech_sharing_group = commonwealth_research
 }
-add_equipment_to_stockpile = {
-         type = artillery_equipment_1
-         amount = 10500
-         producer = ENG
-}  
-add_equipment_to_stockpile = {
-         type = train_equipment_1
-         amount = 300
-         producer = ENG
-}  
-add_equipment_to_stockpile = {
-         type = support_equipment
-         amount = 3500
-         producer = ENG
-} 
-add_equipment_to_stockpile = {
-         type = anti_tank_equipment_1
-         amount = 2500
-         producer = ENG
-} 
-add_equipment_to_stockpile = {
-         type = infantry_equipment_1
-         amount = 55000
-         producer = ENG
-} 
-add_equipment_to_stockpile = {
-         type = motorized_equipment_1
-         amount = 1500
-         producer = ENG
-} 
-
-add_equipment_to_stockpile = {
-         type = light_tank_equipment_2
-         amount = 1440
-         producer = ENG
-} 
-
-add_equipment_to_stockpile = {
-	type = anti_air_equipment_1
-    amount = 3500
-    producer = ENG
-}
-add_equipment_to_stockpile = {
-	type = cv_nav_bomber_equipment_1
-    amount = 175
-    producer = ENG
-}
-add_equipment_to_stockpile = {
-	type = cv_fighter_equipment_1
-    amount = 75
-    producer = ENG
-}
-add_equipment_to_stockpile = {
-         type = fighter_equipment_1
-         amount = 500
-         producer = ENG
-}
-add_equipment_to_stockpile = {
-         type = fighter_equipment_0
-         amount = 500
-         producer = ENG
-}
-add_equipment_to_stockpile = {
-         type = CAS_equipment_1
-         amount = 300
-         producer = ENG
-}
-add_equipment_to_stockpile = {
-         type = tac_bomber_equipment_0
-         amount = 200
-         producer = ENG
-}
-add_equipment_to_stockpile = {
-         type = tac_bomber_equipment_1
-         amount = 200
-         producer = ENG
-}
-add_equipment_to_stockpile = {
-         type = heavy_fighter_equipment_1
-         amount = 100
-         producer = ENG
-}
-add_equipment_to_stockpile = {
-         type = nav_bomber_equipment_1
-         amount = 100
-         producer = ENG
-}
 
 
 set_politics = {
@@ -745,19 +658,120 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-			name = "CV2"
-			type = ship_hull_carrier_1
-			name_group = ENG_CV_HISTORICAL
-			parent_version = 0
-			modules = {
-				fixed_ship_deck_slot_1 = ship_deck_space
-				fixed_ship_deck_slot_2 = ship_deck_space
-				fixed_ship_anti_air_slot = ship_anti_air_1
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = carrier_ship_engine_2
-				fixed_ship_secondaries_slot = ship_secondaries_2
-				front_1_custom_slot = ship_deck_space
-			}
+		name = "CV2"
+		type = ship_hull_carrier_1
+		name_group = ENG_CV_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_deck_slot_1 = ship_deck_space
+			fixed_ship_deck_slot_2 = ship_deck_space
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = carrier_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			front_1_custom_slot = ship_deck_space
 		}
 	}
+}
+
+create_equipment_variant = {
+	name = "Vickers Light Tank" 	
+	type = light_tank_chassis_2
+	modules = {
+		main_armament_slot = tank_small_cannon
+		turret_type_slot = tank_light_three_man_tank_turret
+		special_type_slot_2 = additional_machine_guns
+		suspension_type_slot = tank_bogie_suspension
+		armor_type_slot = tank_welded_armor
+		engine_type_slot = tank_gasoline_engine
+	}
+}
+
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 10500
+	producer = ENG
+}  
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 300
+	producer = ENG
+}  
+add_equipment_to_stockpile = {
+	type = support_equipment
+	amount = 3500
+	producer = ENG
+} 
+add_equipment_to_stockpile = {
+	type = anti_tank_equipment_1
+	amount = 2500
+	producer = ENG
+} 
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 55000
+	producer = ENG
+} 
+add_equipment_to_stockpile = {
+	type = motorized_equipment_1
+	amount = 1500
+	producer = ENG
+} 
+
+add_equipment_to_stockpile = {
+	type = light_tank_chassis_2
+	amount = 1440
+	producer = ENG
+} 
+
+add_equipment_to_stockpile = {
+	type = anti_air_equipment_1
+    amount = 3500
+    producer = ENG
+}
+add_equipment_to_stockpile = {
+	type = cv_nav_bomber_equipment_1
+    amount = 175
+    producer = ENG
+}
+add_equipment_to_stockpile = {
+	type = cv_fighter_equipment_1
+    amount = 75
+    producer = ENG
+}
+add_equipment_to_stockpile = {
+	type = fighter_equipment_1
+	amount = 500
+	producer = ENG
+}
+add_equipment_to_stockpile = {
+	type = fighter_equipment_0
+	amount = 500
+	producer = ENG
+}
+add_equipment_to_stockpile = {
+	type = CAS_equipment_1
+	amount = 300
+	producer = ENG
+}
+add_equipment_to_stockpile = {
+	type = tac_bomber_equipment_0
+	amount = 200
+	producer = ENG
+}
+add_equipment_to_stockpile = {
+	type = tac_bomber_equipment_1
+	amount = 200
+	producer = ENG
+}
+add_equipment_to_stockpile = {
+	type = heavy_fighter_equipment_1
+	amount = 100
+	producer = ENG
+}
+add_equipment_to_stockpile = {
+	type = nav_bomber_equipment_1
+	amount = 100
+	producer = ENG
+}
 	

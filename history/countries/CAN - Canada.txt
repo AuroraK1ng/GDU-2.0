@@ -296,56 +296,7 @@ if = {
 
 	add_to_tech_sharing_group = commonwealth_research
 }
-add_equipment_to_stockpile = {
-         type = artillery_equipment_1
-         amount = 2505
-         producer = CAN
-} 
-add_equipment_to_stockpile = {
-         type = train_equipment_1
-         amount = 100
-         producer = CAN
-}   
-add_equipment_to_stockpile = {
-         type = support_equipment
-         amount = 1351
-         producer = CAN
-} 
-add_equipment_to_stockpile = {
-         type = anti_tank_equipment_1
-         amount = 1250
-         producer = CAN
-} 
-add_equipment_to_stockpile = {
-         type = infantry_equipment_1
-         amount = 6000
-         producer = CAN
-} 
-add_equipment_to_stockpile = {
-         type = infantry_equipment_0
-         amount = 7000
-         producer = CAN
-} 
-add_equipment_to_stockpile = {
-         type = motorized_equipment_1
-         amount = 230
-         producer = CAN
-}
-add_equipment_to_stockpile = {
-         type = heavy_tank_equipment_1
-         amount = 400
-         producer = CAN
-}
-add_equipment_to_stockpile = {
-         type = light_tank_equipment_2
-         amount = 800
-         producer = CAN
-}
-add_equipment_to_stockpile = {
-         type = light_tank_equipment_1
-         amount = 400
-         producer = CAN
-} 
+
 
 add_equipment_to_stockpile = {
 	type = anti_air_equipment_1
@@ -526,6 +477,80 @@ create_corps_commander = {
 		defense_skill = 2
 		planning_skill = 4
 		logistics_skill = 2
+}
+
+create_equipment_variant = {
+	name = "Vickers MK VIb" 	
+	type = light_tank_chassis_2
+	modules = {
+		main_armament_slot = tank_small_cannon
+		turret_type_slot = tank_light_three_man_tank_turret
+		special_type_slot_2 = additional_machine_guns
+		suspension_type_slot = tank_bogie_suspension
+		armor_type_slot = tank_welded_armor
+		engine_type_slot = tank_gasoline_engine
+	}
+}
+
+create_equipment_variant = {
+	name = "Matilda MK III" 	
+	type = heavy_tank_chassis_1
+	modules = {
+		main_armament_slot = tank_heavy_cannon
+		turret_type_slot = tank_heavy_three_man_tank_turret
+		special_type_slot_1 = secondary_turret_small_cannon
+		special_type_slot_2 = additional_machine_guns
+		special_type_slot_3 = dozer_blade
+		suspension_type_slot = tank_bogie_suspension
+		armor_type_slot = tank_welded_armor
+		engine_type_slot = tank_gasoline_engine
+	}
+}
+
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 2505
+	producer = CAN
+} 
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 100
+	producer = CAN
+}   
+add_equipment_to_stockpile = {
+	type = support_equipment
+	amount = 1351
+	producer = CAN
+} 
+add_equipment_to_stockpile = {
+	type = anti_tank_equipment_1
+	amount = 1250
+	producer = CAN
+} 
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 6000
+	producer = CAN
+} 
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 7000
+	producer = CAN
+} 
+add_equipment_to_stockpile = {
+	type = motorized_equipment_1
+	amount = 230
+	producer = CAN
+}
+add_equipment_to_stockpile = {
+	type = heavy_tank_chassis_1
+	amount = 400
+	producer = CAN
+}
+add_equipment_to_stockpile = {
+	type = light_tank_chassis_2
+	amount = 1200
+	producer = CAN
 }
 # 1939 Start #
 1939.1.1 = {

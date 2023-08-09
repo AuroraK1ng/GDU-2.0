@@ -253,46 +253,7 @@ set_technology = {
 	basic_train = 1
 }
 ### STOCKPILE ###
-add_equipment_to_stockpile = {
-         type = artillery_equipment_1
-         amount = 3300
-         producer = ITA
-}  
-add_equipment_to_stockpile = {
-         type = train_equipment_1
-         amount = 300
-         producer = ITA
-}  
-add_equipment_to_stockpile = {
-         type = support_equipment
-         amount = 915
-         producer = ITA
-} 
-add_equipment_to_stockpile = {
-         type = infantry_equipment_1
-         amount = 55000
-         producer = ITA
-} 
-add_equipment_to_stockpile = {
-         type = motorized_equipment_1
-         amount = 561
-         producer = ITA
-} 
-add_equipment_to_stockpile = {
-         type = light_tank_equipment_1
-         amount = 600
-         producer = ITA
-} 
-add_equipment_to_stockpile = {
-         type = anti_air_equipment_1
-         amount = 685
-         producer = ITA
-} 
-add_equipment_to_stockpile = {
-         type = anti_tank_equipment_1
-         amount = 3200
-         producer = ITA
-}
+
 set_politics = {
 	ruling_party = fascism
 	last_election = "1934.3.26"
@@ -385,40 +346,16 @@ recruit_character = ITA_giacomo_acerbo
 recruit_character = ITA_giovanni_marinelli
 recruit_character = ITA_serafino_mazzolini
 recruit_character = ITA_roberto_farinacci
-
-
-
 recruit_character = ITA_paolo_thaon_di_revel
-
-
-
-
-
-recruit_character = ITA_romeo_bernotti
-
-
-
 recruit_character = ITA_carlo_favagrossa
 recruit_character = ITA_alberto_beneduce
-
 recruit_character = ITA_adelchi_serena
 recruit_character = ITA_curzio_malaparte
-
-
-
-
-
-
-
-
-
 recruit_character = ITA_pompeo_colajanni
-
 recruit_character = ITA_comitato_di_liberazione_nazionale
 recruit_character = ITA_papa_pio_xi
 recruit_character = ITA_papa_pio_xii
 recruit_character = ITA_antonio_gramsci
-
 recruit_character = ITA_haile_selassie_gugsa_doppleganger
 recruit_character = ITA_abba_jofir_doppleganger
 recruit_character = ITA_hailu_tekle_haymanot_doppleganger
@@ -531,6 +468,60 @@ if = {
 			rear_1_custom_slot = ship_torpedo_sub_1
 		}
 	}
+}
+
+create_equipment_variant = {
+	name = "Fiat L3/35" 	
+	type = light_tank_chassis_2
+	modules = {
+		main_armament_slot = tank_small_cannon
+		turret_type_slot = tank_light_three_man_tank_turret
+		special_type_slot_2 = additional_machine_guns
+		suspension_type_slot = tank_bogie_suspension
+		armor_type_slot = tank_welded_armor
+		engine_type_slot = tank_gasoline_engine
+	}
+}
+
+add_equipment_to_stockpile = {
+         type = artillery_equipment_1
+         amount = 3300
+         producer = ITA
+}  
+add_equipment_to_stockpile = {
+         type = train_equipment_1
+         amount = 300
+         producer = ITA
+}  
+add_equipment_to_stockpile = {
+         type = support_equipment
+         amount = 915
+         producer = ITA
+} 
+add_equipment_to_stockpile = {
+         type = infantry_equipment_1
+         amount = 55000
+         producer = ITA
+} 
+add_equipment_to_stockpile = {
+         type = motorized_equipment_1
+         amount = 561
+         producer = ITA
+} 
+add_equipment_to_stockpile = {
+         type = light_tank_chassis_2
+         amount = 600
+         producer = ITA
+} 
+add_equipment_to_stockpile = {
+         type = anti_air_equipment_1
+         amount = 685
+         producer = ITA
+} 
+add_equipment_to_stockpile = {
+         type = anti_tank_equipment_1
+         amount = 3200
+         producer = ITA
 }
 
 
