@@ -85,11 +85,14 @@ country_event = {
 	}
 	mean_time_to_happen = { days = 5 }
 
+	
+
 	option = {
 		name = soviet.13.a
 		SOV = { declare_war_on = { type = annex_everything target = FIN } }
 		set_global_flag = finland_refuse
 		hidden_effect = {
+			sound_effect = polkka
 			SOV = {
 				country_event = { days = 7 id = gduevents.47 }
 			}
