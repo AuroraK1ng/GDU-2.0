@@ -430,7 +430,27 @@ org_loss_when_moving = 0.10
 			picture = generic_coastal_defense_ships
 			
 			removal_cost = -1
-		}		
+		}	
+				GER_Pact_of_Steel = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = ger_mefo_bills
+
+			targeted_modifier = {
+				tag = ITA
+				trade_cost_for_target_factor = 0.5
+				}
+
+
+			
+		}	
+		
 
 		GER_mefo_bills_non_germany = {
 			name = GER_mefo_bills

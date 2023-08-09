@@ -1910,6 +1910,45 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = AST_Expand_Army
+		icon = GFX_military_construction
+		prerequisite = { focus = AST_department_of_supply_and_development }
+		text = "American machines"
+		x = 4
+		y = 3
+		relative_position_id = AST_standard_gauge_railway
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+		Date > 1942.01.01
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			519 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = AST_department_of_supply_and_development_AF
+			}
+		}
+	}
 
 	focus = {
 		id = AST_expand_lithgow_small_arms_factory
@@ -2034,7 +2073,7 @@ focus_tree = {
 	focus = {
 		id = AST_expand_the_northern_railway
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = AST_expand_lithgow_small_arms_factory }
+		prerequisite = { focus = AST_expand_lithgow_small_arms_factory } Corps of Engineers
 		x = 0
 		y = 4
 		relative_position_id = AST_standard_gauge_railway
@@ -2078,6 +2117,30 @@ focus_tree = {
 			}
 		}
 	}
+		focus = {
+		id = AST_Engineer
+		icon = GFX_Generic_Working_Women
+		prerequisite = { focus = AST_expand_the_northern_railway }
+		text = "Corps of Engineers"
+		x = -1
+		y = 1
+		relative_position_id = AST_expand_the_northern_railway
+
+		cost = 15
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+		date > 1942.03.01
+		}
+
+		completion_reward = {
+		Add_ideas = AST_Engineer
+		}
+
+		}
 
 	focus = {
 		id = AST_australian_arms_production
@@ -2385,6 +2448,46 @@ focus_tree = {
 			add_ideas = AST_Tobruk_Rats
 		}
 	}
+	focus = {
+		id = AST_USMC
+		icon = GFX_usa_amphib
+		prerequisite = { focus = AST_classify_aliens }
+		prerequisite = { focus = AST_CSIR }
+		text = "Cooperation With USMC"
+		x = 0
+		y = 2
+		relative_position_id = AST_rats_of_tobruk
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+				date > 1941.06.1
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+
+			completion_reward = {
+			add_tech_bonus = {
+				name = AST_USMC
+				bonus = 1.00
+				uses = 2
+				category = tp_tech
+				category = marine_tech
+			}
+		}
+		
+	}
 
 	focus = {
 		id = AST_fight_work_or_perish
@@ -2440,6 +2543,7 @@ focus_tree = {
 			}
 		}
 	}
+
 
 	focus = {
 		id = AST_squash_the_squanderbugs
@@ -2618,18 +2722,24 @@ focus_tree = {
 
 		cost = 5
 				available = {
-			date > 1942.06.01
+			date > 1941.08.01
 			AST = {
 				controls_state = 523
 				}
-			ENG = {
-				controls_state = 336
+			AST = {
+				controls_state = 285
 				}
-			USA = {
-				controls_state = 633
+			AST = {
+				controls_state = 521
 				}
-			USA = {
-				controls_state = 645
+				OR = {
+					
+				AST = {
+				controls_state = 284
+				}
+				NZL = {
+				controls_state = 284
+				}
 				}
 		}
 		ai_will_do = {
@@ -2644,15 +2754,7 @@ focus_tree = {
 
 
 		completion_reward = {
-		ENG = {	add_ideas = ENG_War_Heroes }
-		USA = {	add_ideas = USA_War_Heroes }
 		AST = {	add_ideas = AST_War_Heroes }	
-		ENG = { remove_ideas = ENG_War_in_pacific }
-		USA = { remove_ideas = USA_War_in_pacific }
-		CAN = { remove_ideas = War_in_pacific }
-		AST = { remove_ideas = War_in_pacific }
-		FRA = { remove_ideas = War_in_pacific }
-		SAF = { remove_ideas = War_in_pacific }
 		
 				}
 

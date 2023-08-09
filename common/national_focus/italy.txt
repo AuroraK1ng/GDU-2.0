@@ -509,29 +509,23 @@ focus_tree = {
 		id = ITA_italian_refineries
 		icon = GFX_ITA_oil
 		text = ITA_italian_refineries
-		prerequisite = { focus = ITA_consolidate_egypt }
+		prerequisite = { focus = ITA_libyan_refineries }
 		available = {
 
 		}
-		x = 2
+		x = 0
 		y = 8
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
 		ai_will_do = {
 			factor = 1
 		}
-		available = {		
-		date > 1940.9.1
-		}
+
 		completion_reward = {
 
-		modify_building_resources = {
-        	   building = synthetic_refinery
-        	   resource = rubber
-        	   amount = 1
-        	}
+
 			160 = {
 				add_building_construction = {
 					type = synthetic_refinery
@@ -576,7 +570,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_consolidate_levant }
 
 		x = 3
-		y = 9
+		y = 8
 		cost = 5
 
 		available_if_capitulated = yes
@@ -614,7 +608,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_Defence_Africa }
 
 		x = 3
-		y = 10
+		y = 9
 		cost = 5
 
 		available_if_capitulated = yes
@@ -635,15 +629,9 @@ focus_tree = {
 		}
 		completion_reward = {
 		add_ideas = ITA_Def_AFR_1 
-			450 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-
+			ITA = { add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 20000 producer = ITA } }
+			ITA = { add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 2500 producer = ITA } }
+			ITA = { add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 2500 producer = ITA } }
 		}
 	}
 				focus = {
@@ -653,7 +641,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_Defence_Africa_2 }
 
 		x = 3
-		y = 11
+		y = 10
 		cost = 5
 
 		available_if_capitulated = yes
@@ -2217,6 +2205,26 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = ITA_german_millitary_cooperation_focus
+		}
+	}
+		focus = {
+		id = ITA_german_navy_cooperation
+		icon = GFX_goal_ita_military_cooperation
+		Text = "German Navy Cooperation"
+		prerequisite = { focus = ITA_german_millitary_cooperation }
+        prerequisite = { focus = ITA_german_rd_treaty }
+		available = {
+			Date > 1940.6.1
+		}
+
+		x = 14
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			GER = { add_ideas = GER_Pact_of_Steel }
 		}
 	}
 

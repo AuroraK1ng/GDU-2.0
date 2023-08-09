@@ -21,7 +21,38 @@ ideas = {
 				production_speed_synthetic_refinery_factor = 0.20
 			}
 		}	
-		
+				RAJ_Expand_Art  = {
+
+			allowed = {
+
+			}
+
+
+			removal_cost = -1
+
+			picture = generic_wall_line
+
+
+			equipment_bonus = {	
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.075
+				}
+				anti_tank_equipment = {
+					instant = yes
+					build_cost_ic = -0.075
+				}
+				artillery_equipment  = {
+					build_cost_ic = -0.075
+					instant = yes
+				}
+				rocket_artillery_equipment  = {
+					build_cost_ic = -0.075
+					instant = yes
+				}
+				}
+				
+		}
 		RAJ_lions_of_the_great_war = {
 
 			allowed = {
@@ -38,18 +69,21 @@ ideas = {
 				conscription_factor = 0.03
 			}
 		}
-		RAJ_Jungle_Lions = {
+		RAJ_Jungle_Rats = {
 
 			allowed = {
 				original_tag = RAJ
 			}
+			allowed_civil_war = {
+				always = yes
+			}
 
 
 			removal_cost = -1
-
+			picture = generic_morale_bonus
 			modifier = {
-				army_attack_factor = 0.10
-				army_defence_factor = 0.10
+				army_attack_factor = 0.075
+				army_defence_factor = 0.075
 			}
 		}
 
