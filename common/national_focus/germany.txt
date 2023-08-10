@@ -2008,6 +2008,24 @@ activate_mission = GER_relocate_industry_from_friesland
 		}
 		completion_reward = {
 			unlock_decision_tooltip = GER_fall_weiss
+			hidden_effect = {
+				remove_ideas = GER_mefo_bills_1
+				ITA = {
+				remove_ideas = GER_mefo_bills_non_germany
+				}
+				SPR = {
+					remove_ideas = GER_mefo_bills_non_germany
+				}
+				HUN = {
+					remove_ideas = GER_mefo_bills_non_germany
+				}
+				BUL = {
+					remove_ideas = GER_mefo_bills_non_germany
+				}
+				ROM = {
+					remove_ideas = GER_mefo_bills_non_germany
+				}
+			}
 		}
 	}
 

@@ -1100,7 +1100,6 @@ GER_foreign_politics = {
 			GER = {
 				give_resource_rights = { receiver = ROM state = 53 }
 				remove_resource_rights = 724
-				remove_ideas = GER_mefo_bills_1
 			}			
 			SIA = {
 				give_resource_rights = { receiver = JAP state = 724 }			
@@ -1123,21 +1122,6 @@ GER_foreign_politics = {
 					}
 					declare_war_on_all_allies = yes
 				}
-			}
-			ITA = {
-				remove_ideas = GER_mefo_bills_non_germany
-			}
-			SPR = {
-				remove_ideas = GER_mefo_bills_non_germany
-			}
-			HUN = {
-				remove_ideas = GER_mefo_bills_non_germany
-			}
-			BUL = {
-				remove_ideas = GER_mefo_bills_non_germany
-			}
-			ROM = {
-				remove_ideas = GER_mefo_bills_non_germany
 			}			
 			hidden_effect = {
 				set_global_flag = war_is_hell
