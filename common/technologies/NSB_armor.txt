@@ -917,7 +917,6 @@ technologies = {
 			cat_heavy_armor
 		}
 	}
-
 	armor_tech_1 = {
 		enable_equipment_modules = {
 			tank_welded_armor
@@ -927,6 +926,10 @@ technologies = {
 		path = {
 			leads_to_tech = armor_tech_2
 			research_cost_coeff = 1
+		}
+
+		category_all_armor = {
+			max_strength = 1
 		}
 
 		on_research_complete = {
@@ -984,7 +987,9 @@ technologies = {
 			leads_to_tech = armor_tech_3
 			research_cost_coeff = 1
 		}
-
+		category_all_armor = {
+			max_strength = 1
+		}
 		on_research_complete = {
 			custom_effect_tooltip = armor_tech_2_tt
 		}
@@ -1042,7 +1047,9 @@ technologies = {
 			custom_effect_tooltip = armor_tech_3_tt
 		}
 		show_effect_as_desc = yes
-
+		category_all_armor = {
+			max_strength = 1
+		}
 		research_cost = 1
 		start_year = 1942
 		folder = {
@@ -1091,7 +1098,9 @@ technologies = {
 			name = nsb_armour_folder
 			position = { x = 3 y = @1943 }
 		}
-
+		category_all_armor = {
+			max_strength = 1
+		}
 		on_research_complete = {
 			custom_effect_tooltip = armor_tech_4_tt
 		}
@@ -1147,6 +1156,10 @@ technologies = {
 			name = nsb_armour_folder
 			position = { x = 2 y = @1934 }
 		}
+		category_all_armor = {
+			maximum_speed = 0.02
+			breakthrough = 0.02
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -1188,7 +1201,10 @@ technologies = {
 			leads_to_tech = engine_tech_3
 			research_cost_coeff = 1
 		}
-
+		category_all_armor = {
+			maximum_speed = 0.02
+			breakthrough = 0.02
+		}
 		on_research_complete = {
 			custom_effect_tooltip = engine_tech_2_tt
 		}
@@ -1251,6 +1267,10 @@ technologies = {
 			name = nsb_armour_folder
 			position = { x = 2 y = @1941 }
 		}
+		category_all_armor = {
+			maximum_speed = 0.02
+			breakthrough = 0.02
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -1295,6 +1315,10 @@ technologies = {
 		}
 		on_research_complete = {
 			custom_effect_tooltip = engine_tech_4_tt
+		}
+		category_all_armor = {
+			maximum_speed = 0.02
+			breakthrough = 0.02
 		}
 		show_effect_as_desc = yes
 		ai_will_do = {
