@@ -79,31 +79,31 @@ GER_mefo_bills_category = {
 operations = {
 	
 
-	GER_integrate_StuG = {
-		ai_will_do = { factor = 0 }
-		cost = 25
-		visible = {
-			date > 1941.1.1
-		}
-		allowed = {
-			original_tag = GER
-		}
-		available = {
-
-		}
-		fire_only_once = yes
-		complete_effect = {
-
-			GER = {
-				set_technology = {
-					special_StuG_tech_GER = 1
-				}
-			}
-			
-			
-			
-		}
-	}
+##	GER_integrate_StuG = {
+##		ai_will_do = { factor = 0 }
+##		cost = 25
+##		visible = {
+##			date > 1941.1.1
+##		}
+##		allowed = {
+##			original_tag = GER
+##		}
+##		available = {
+##
+##		}
+##		fire_only_once = yes
+##		complete_effect = {
+##
+##			GER = {
+##				set_technology = {
+##					special_StuG_tech_GER = 1
+##				}
+##			}
+##			
+##			
+##			
+##		}
+##	}
 
 }
 
