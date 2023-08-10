@@ -122,7 +122,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1
 		start_year = 1918
 		folder = {
 			name = nsb_armour_folder
@@ -178,7 +178,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1
 		start_year = 1934
 		folder = {
 			name = nsb_armour_folder
@@ -238,7 +238,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1
 		start_year = 1936
 
 		folder = {
@@ -304,8 +304,12 @@ technologies = {
 		enable_equipment_modules {
 			tank_small_cannon_2
 		}
+		
+		allow = { 
+			date > 1939.1.1
+		}
 
-		research_cost = 2
+		research_cost = 1
 		start_year = 1941
 
 		folder = {
@@ -387,7 +391,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1
 		start_year = 1938
 
 		folder = {
@@ -472,7 +476,7 @@ technologies = {
 		}
 		
 
-		research_cost = 2
+		research_cost = 1
 		start_year = 1941
 		allow = { 
 			date > 1939.1.1
@@ -568,7 +572,7 @@ technologies = {
 			research_cost_coeff = 0.6
 		}
 
-		research_cost = 2
+		research_cost = 1
 		start_year = 1943
 		allow = { 
 			date > 1942.1.1
@@ -626,7 +630,7 @@ technologies = {
 			modern_armor
 		}
 
-		research_cost = 2.5
+		research_cost = 1.25
 		start_year = 1945
 		allow = { 
 			date > 1943.6.1
@@ -706,7 +710,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1
 		start_year = 1934
 
 		folder = {
@@ -784,7 +788,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2.5
+		research_cost = 1.25
 		start_year = 1941
 
 		folder = {
@@ -850,7 +854,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2.5
+		research_cost = 1.25
 		start_year = 1943
 
 		folder = {
@@ -901,7 +905,7 @@ technologies = {
 		#	tank_super_heavy_cannon
 		#}
 
-		research_cost = 2.5
+		research_cost = 1.25
 		start_year = 1943
 		folder = {
 			name = nsb_armour_folder

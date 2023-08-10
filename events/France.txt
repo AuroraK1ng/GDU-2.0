@@ -276,23 +276,28 @@ country_event = {
 		hidden_effect =  {
 			add_political_power = 1200
 				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 65000 producer = FRA }
-
 				add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 4500 producer = FRA }
-
 				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 4000 producer = FRA }
-
 				add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 4500 producer = FRA }
-
 				add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 7000 producer = FRA }
-				add_equipment_to_stockpile = { type = support_equipment_1 amount = 5000 producer = FRA }
-				
+				add_equipment_to_stockpile = { type = support_equipment_1 amount = 5000 producer = FRA }				
 				add_equipment_to_stockpile = { type = train_equipment_1 amount = 100 producer = FRA }
-
-				add_equipment_to_stockpile = { type = heavy_tank_equipment_1 amount = 300 producer = FRA }
-				add_equipment_to_stockpile = { type = light_tank_equipment_2 amount = 2000 producer = FRA }
-				add_equipment_to_stockpile = { type = medium_tank_equipment_1 amount = 2000 producer = FRA }
-				add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = 500 producer = FRA }
-			
+				create_equipment_variant = {
+					name = "FCM 38m" 	
+					type = medium_tank_chassis_1
+					modules = {
+					main_armament_slot = tank_medium_cannon
+					turret_type_slot = tank_medium_three_man_tank_turret
+					special_type_slot_1 = secondary_turret_small_cannon
+					special_type_slot_2 = additional_machine_guns
+					special_type_slot_3 = armor_skirts
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
+					}
+				}	
+			add_equipment_to_stockpile = { type = medium_tank_chassis_1 variant_name = "FCM 38m" amount = 2000 producer = FRA } 			
+			add_equipment_to_stockpile = { type = light_tank_chassis_2 variant_name = "FCM 36" amount = 2000 producer = GER }	
 		}
 		if = {
 			limit = { FRA = { has_global_flag = FRA_evacuated1 } }
