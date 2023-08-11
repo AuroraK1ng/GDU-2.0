@@ -481,6 +481,18 @@ on_actions = {
 			##}
 		}
 	}
+	on_daily_ENG = {
+		effect = {
+			if = {
+				limit = {
+					date > 1941.1.1
+					has_global_flag = GDU_dday_started
+					16 = { CONTROLLER = { is_in_faction_with_allies = yes } }
+				}
+				USA = { complete_national_focus = USA_war_plan_black }
+			}
+		}
+	}
 	on_daily_SWE={
 		effect={
 			for_each_scope_loop={
