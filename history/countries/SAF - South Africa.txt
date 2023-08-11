@@ -232,63 +232,86 @@ set_convoys = 100
 
 set_stability = 0.6
 set_war_support = 0.1
+
+create_equipment_variant = {
+	name = "Vickers MK VIb SAF" 	
+	type = light_tank_chassis_2
+	modules = {
+		main_armament_slot = tank_small_cannon
+		turret_type_slot = tank_light_three_man_tank_turret
+		special_type_slot_2 = additional_machine_guns
+		suspension_type_slot = tank_bogie_suspension
+		armor_type_slot = tank_welded_armor
+		engine_type_slot = tank_gasoline_engine
+	}
+}
+create_equipment_variant = {
+	name = "Matilda MK II SAF" 	
+	type = heavy_tank_chassis_1
+	modules = {
+		main_armament_slot = tank_heavy_cannon
+		turret_type_slot = tank_heavy_three_man_tank_turret
+		special_type_slot_1 = secondary_turret_small_cannon
+		special_type_slot_2 = additional_machine_guns
+		special_type_slot_3 = dozer_blade
+		suspension_type_slot = tank_bogie_suspension
+		armor_type_slot = tank_welded_armor
+		engine_type_slot = tank_gasoline_engine
+	}
+}
+
 add_equipment_to_stockpile = {
-         type = artillery_equipment_1
-         amount = 2336
-         producer = SAF
+	type = artillery_equipment_1
+	amount = 2336
+	producer = SAF
 } 
 add_equipment_to_stockpile = {
-         type = anti_tank_equipment_1
-         amount = 1000
-         producer = SAF
+	type = anti_tank_equipment_1
+	amount = 1000
+	producer = SAF
 } 
 add_equipment_to_stockpile = {
-         type = support_equipment
-         amount = 1340
-         producer = SAF
+	type = support_equipment
+	amount = 1340
+	producer = SAF
 } 
 
 add_equipment_to_stockpile = {
-         type = infantry_equipment_1
-         amount = 5700
-         producer = SAF
+	type = infantry_equipment_1
+	amount = 5700
+	producer = SAF
 } 
 add_equipment_to_stockpile = {
-         type = infantry_equipment_0
-         amount = 7000
-         producer = SAF
+	type = infantry_equipment_0
+	amount = 7000
+	producer = SAF
 } 
 add_equipment_to_stockpile = {
-         type = motorized_equipment_1
-         amount = 220
-         producer = SAF
+	type = motorized_equipment_1
+	amount = 220
+	producer = SAF
 } 
  
 add_equipment_to_stockpile = {
-         type = anti_air_equipment_1
-         amount = 621
-         producer = SAF
+	type = anti_air_equipment_1
+	amount = 621
+	producer = SAF
 } 
 add_equipment_to_stockpile = {
-         type = anti_tank_equipment_1
-         amount = 250
-         producer = SAF
+	type = anti_tank_equipment_1
+	amount = 250
+	producer = SAF
 }
 add_equipment_to_stockpile = {
-         type = heavy_tank_equipment_1
-         amount = 300
-         producer = SAF
+	type = heavy_tank_chassis_1
+	amount = 300
+	producer = SAF
 }
 add_equipment_to_stockpile = {
-         type = light_tank_equipment_2
-         amount = 400
-         producer = SAF
+	type = light_tank_chassis_2
+	amount = 600
+	producer = SAF
 }
-add_equipment_to_stockpile = {
-         type = light_tank_equipment_1
-         amount = 200
-         producer = SAF
-} 
 
 set_politics = {
 	ruling_party = democratic
