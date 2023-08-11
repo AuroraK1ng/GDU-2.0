@@ -364,7 +364,11 @@ NDefines.NNavy.FIELD_EXPERIENCE_SCALE = 0
 NDefines.NNavy.XP_GAIN_FACTOR = 0.3
 NDefines.NNavy.TRAINING_DAILY_COUNTRY_EXP_FACTOR = 0.2
 NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_GAIN_DAILY = 0.2
-
+NDefines.NAir.ACE_DEATH_CHANCE_BASE = 0				-- Base chance % for ace pilot die when an airplane is shot down in the Ace wing.
+NDefines.NAir.ACE_DEATH_BY_OTHER_ACE_CHANCE = 0				-- chance to an ace dying by another ace if it was hit by ace in combat
+NDefines.NAir.ACE_DEATH_CHANCE_PLANES_MULT = 0		-- The more airplanes was lost in a single airplanes (more bloody it was) the higher chance of Ace to die.
+NDefines.NAir.ACE_EARN_CHANCE_BASE = 0				-- Base chance % for ace pilot to be created. Happens only when successfully kill airplane/ship or damage the buildings.
+NDefines.NAir.ACE_EARN_CHANCE_PLANES_MULT = 0	
 
 
 
