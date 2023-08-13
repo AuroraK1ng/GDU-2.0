@@ -109,7 +109,7 @@ GDU_Barbscore_Score_Category = {
 			
 		}
 		available = {
-			check_variable = { var = ROOT.Barb_score_value value = 34 compare = greater_than }
+			check_variable = { var = ROOT.Barb_score_value value = 29 compare = greater_than }
 			AND = {
 				NOT = {
 					has_idea = AXIS_attack_bonus_1
@@ -124,9 +124,9 @@ GDU_Barbscore_Score_Category = {
 			
 		}
 		custom_cost_trigger = {	
-			check_variable = { var = ROOT.Barb_score_value value = 34 compare = greater_than }
+			check_variable = { var = ROOT.Barb_score_value value = 29 compare = greater_than }
 		}
-		custom_cost_text = barb_xp_more_than_35
+		custom_cost_text = barb_xp_more_than_30
 
 		
 		visible = {
@@ -196,7 +196,7 @@ GDU_Barbscore_Score_Category = {
 			
 		}
 		available = {
-			check_variable = { var = ROOT.Barb_score_value value = 49 compare = greater_than }
+			check_variable = { var = ROOT.Barb_score_value value = 39 compare = greater_than }
 			AND = {
 				NOT = {
 					has_idea = AXIS_attack_bonus_1
@@ -210,9 +210,9 @@ GDU_Barbscore_Score_Category = {
 			}
 		}
 		custom_cost_trigger = {	
-			check_variable = { var = ROOT.Barb_score_value value = 49 compare = greater_than }
+			check_variable = { var = ROOT.Barb_score_value value = 39 compare = greater_than }
 		}
-		custom_cost_text = barb_xp_more_than_50 ## FIX LOC FOR BARB
+		custom_cost_text = barb_xp_more_than_40 ## FIX LOC FOR BARB
 		visible = {
 			original_tag = GER
 			has_war_with = SOV
@@ -1348,7 +1348,7 @@ GDU_Barbscore_Score_Category = {
 			
 		}
 		available = {
-			check_variable = { var = ROOT.Barb_score_value value = 34 compare = greater_than }
+			check_variable = { var = ROOT.Barb_score_value value = 29 compare = greater_than }
 			AND = {
 				NOT = {
 					has_idea = SOV_attack_bonus_1
@@ -1362,9 +1362,9 @@ GDU_Barbscore_Score_Category = {
 			}
 		}
 		custom_cost_trigger = {	
-			check_variable = { var = ROOT.Barb_score_value value = 34 compare = greater_than }
+			check_variable = { var = ROOT.Barb_score_value value = 29 compare = greater_than }
 		}
-		custom_cost_text = barb_xp_more_than_35 ## FIX LOC FOR BARB
+		custom_cost_text = barb_xp_more_than_30 ## FIX LOC FOR BARB
 		visible = {
 			original_tag = SOV
 			has_war_with = GER
@@ -1396,7 +1396,7 @@ GDU_Barbscore_Score_Category = {
 			
 		}
 		available = {
-			check_variable = { var = ROOT.Barb_score_value value = 49 compare = greater_than }
+			check_variable = { var = ROOT.Barb_score_value value = 39 compare = greater_than }
 			AND = {
 				NOT = {
 					has_idea = SOV_attack_bonus_1
@@ -1407,9 +1407,9 @@ GDU_Barbscore_Score_Category = {
 			}
 		}
 		custom_cost_trigger = {	
-			check_variable = { var = ROOT.Barb_score_value value = 49 compare = greater_than }
+			check_variable = { var = ROOT.Barb_score_value value = 39 compare = greater_than }
 		}
-		custom_cost_text = barb_xp_more_than_50 ## FIX LOC FOR BARB
+		custom_cost_text = barb_xp_more_than_40 ## FIX LOC FOR BARB
 		visible = {
 			original_tag = SOV
 			has_war_with = GER
