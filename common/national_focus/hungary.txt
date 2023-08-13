@@ -25,7 +25,7 @@ focus_tree = {
 		}
 		bypass = {
 			NOT = { country_exists = YUG }
-		}		
+		}
 		will_lead_to_war_with = YUG
 		x = 7
 		y = 0
@@ -34,6 +34,9 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
+			hidden_effect = {
+				sound_effect = yugo
+				}
 			declare_war_on = {
 					target = YUG
 					type = annex_everything
@@ -50,7 +53,7 @@ focus_tree = {
 		}
 		bypass = {
 			NOT = { country_exists = GRE }
-		}		
+		}
 		will_lead_to_war_with = GRE
 		x = 9
 		y = 0
@@ -65,7 +68,7 @@ focus_tree = {
 				}
 		}
 	}
-	
+
 
 	############################
 	## ECONOMIC INTERVENTION ###
@@ -223,8 +226,8 @@ focus_tree = {
 						is_in_faction = yes
 					}
 					ROM = {
-						is_in_faction = yes 
-					}					
+						is_in_faction = yes
+					}
 				}
 			}
 			modifier = {
@@ -265,8 +268,8 @@ focus_tree = {
 					BUL = { controls_state = 212 }
 				}
 				BUL = {
-					transfer_state = 77			
-				}				
+					transfer_state = 77
+				}
 			}
 
 		}
@@ -1296,15 +1299,15 @@ focus_tree = {
 					NOT = { has_idea = HUN_treaty_of_triannon_2 }
 				}
 				has_idea = HUN_treaty_of_triannon_3
-				
+
 				ROM = {
 					OR = {
 						exists = no
 						is_puppet = yes
 					}
 				}
-					
-				
+
+
 			}
 		}
 		cancel_if_invalid = no
@@ -1762,8 +1765,8 @@ focus_tree = {
 				bonus = 1.00
 				uses = 1
 				technology = mechanised_infantry
-				technology = mechanised_infantry2			
-				
+				technology = mechanised_infantry2
+
 			}
 		}
 	}
@@ -1852,7 +1855,7 @@ focus_tree = {
 				uses = 2
 				technology = improved_heavy_tank_chassis
 				technology = advanced_light_tank_chassis
-			}			
+			}
 		}
 	}
 
@@ -1930,7 +1933,7 @@ focus_tree = {
 				uses = 3
 				technology = advanced_medium_tank_chassis
 				technology = advanced_heavy_tank_chassis
-				technology = advanced_light_tank_chassis				
+				technology = advanced_light_tank_chassis
 			}
 		}
 	}

@@ -12,7 +12,7 @@ FRA_GUIDE = {
 			tag = FRA
 		}
 	complete_effect = {
-		country_event = { id = gduevents.89 }	
+		country_event = { id = gduevents.89 }
 		}
 	}
 HUN_GUIDE = {
@@ -28,7 +28,7 @@ HUN_GUIDE = {
 			tag = HUN
 		}
 	complete_effect = {
-		country_event = { id = gduevents.90 }	
+		country_event = { id = gduevents.90 }
 		}
 	}
 ROM_GUIDE = {
@@ -44,7 +44,7 @@ ROM_GUIDE = {
 			tag = ROM
 		}
 	complete_effect = {
-		country_event = { id = gduevents.91 }	
+		country_event = { id = gduevents.91 }
 		}
 	}
 }
@@ -78,7 +78,7 @@ USA_foreign_politics = {
 			}
 		}
 	}
-	
+
 	GDU_USA_SydneyNavalBase = {
 		icon = GFX_decision_usa_congress
 
@@ -88,7 +88,7 @@ USA_foreign_politics = {
 
 		available = {
 			USA = { has_war_with = GER }
-			ENG = { controls_state = 277 }			
+			ENG = { controls_state = 277 }
 		}
 
 		cost = 0
@@ -114,7 +114,7 @@ foreign_politics = {
 		#allowed = {
 		#	has_country_flag = cheater_leader
 		#}
-		available = {	
+		available = {
 			has_country_flag = cheater_leader
 		}
 		visible = {
@@ -131,8 +131,8 @@ foreign_politics = {
 					}
 					remove_trait = {
 						trait = cheater
-					}	
-					
+					}
+
 				}
 				if = {
 					limit = {
@@ -198,11 +198,11 @@ foreign_politics = {
 						trait = lone_wolf
 					}
 				}
-				
+
 			}
-			
+
 		}
-		remove_effect = { 
+		remove_effect = {
 			remove_ideas = GDU_fine
 			clr_country_flag = cheater_leader
 		}
@@ -237,12 +237,15 @@ foreign_politics = {
 		}
 
 		complete_effect = {
+			hidden_effect{
+				sound_effect = Ayaya_Intensifies
+			}
 			333 = { set_demilitarized_zone = no }
 		}
 
 		remove_effect = {
 			custom_effect_tooltip = GDU_Jap_pearlharbor_tt
-			
+
 			hidden_effect = {
 				add_named_threat = { threat = 20 name = Pearl_Harbor }
 				JAP = { remove_ideas = GDU_JAP_No_Prewar_TradeBuff }
@@ -252,7 +255,7 @@ foreign_politics = {
 				USA = { country_event = { id = usa.65 days = 90 } }
 				USA = { country_event = { id = usa.66 days = 540 } }
 
-				
+
 				if = {
 					limit = {
 						country_exists = AST
@@ -267,12 +270,12 @@ foreign_politics = {
 				else = {
 					ENG = {
 						transfer_state = 669
-					}	
+					}
 					ENG = {
 						transfer_state = 845
-					}			
+					}
 				}
-				
+
 				JAP = {
 					add_timed_idea = {
 						idea = JAP_pearl_harbor_idea
@@ -284,7 +287,7 @@ foreign_politics = {
 						idea = GDU_Raj_ToraToraTora
 						days = 60
 					}
-				}				
+				}
 				INS = {
 					give_resource_rights = { receiver = ENG state = 738 }
 					give_resource_rights = { receiver = ENG state = 335 }
@@ -301,7 +304,7 @@ foreign_politics = {
 					}
 					AST = {
 						puppet = INS
-					}				
+					}
 				}
 				if = {
 					limit = {
@@ -311,7 +314,7 @@ foreign_politics = {
 					}
 					ENG = {
 						puppet = INS
-					}				
+					}
 				}
 				declare_war_on = {
 					target = ENG
@@ -377,13 +380,13 @@ foreign_politics = {
 					add_province_modifier = {
 						static_modifiers = { panama_defensive }
 						province = {
-							id = 7617 
+							id = 7617
 							id = 1633
 						}
 					}
 				}
 				# This is the event that transfers states to Japanese control in Raj/Australia if there are no allied troops there, if Japan controls the state, and if Raj/Australia have >50% surrender progress. This is to stop Japan from having to take every single tile if UK annexes Raj/Australia.
-				JAP = { country_event = { id = gduevents.51 days = 30 } }				
+				JAP = { country_event = { id = gduevents.51 days = 30 } }
 			}
 		}
 	}
@@ -416,30 +419,30 @@ foreign_politics = {
 		complete_effect = {
 			ITA = {
 				remove_ideas = vittoria_mutilata
-				add_ideas = vittoria_mutilata_moreresourcestomarket		
+				add_ideas = vittoria_mutilata_moreresourcestomarket
 			}
 			if = {
 				limit = { EFR = { controls_state = 20 } }
 				EFR = {
 					give_resource_rights = { receiver = ITA state = 20 }
-				}				
+				}
 			}
 			else_if = {
 				limit = { FRA = { controls_state = 20 } }
 				FRA = {
 					give_resource_rights = { receiver = ITA state = 20 }
-				}				
+				}
 			}
 			else_if = {
 				limit = { GER = { controls_state = 20 } }
 				GER = {
 					give_resource_rights = { receiver = ITA state = 20 }
-				}				
+				}
 			}
 			set_global_flag = Italy_Got_Vichy_Resource_Rights
-		}	
+		}
 	}
-	
+
 	GDU_GER_avoidrubberwaste = {
 		icon = generic_civil_support
 
@@ -466,9 +469,9 @@ foreign_politics = {
 		complete_effect = {
 			GER = {
 				remove_ideas = GER_autarky_idea
-				add_ideas = GER_autarky_idea_lessresorucestomarket		
+				add_ideas = GER_autarky_idea_lessresorucestomarket
 			}
-		}		
+		}
 	}
 
 
@@ -503,10 +506,10 @@ foreign_politics = {
 		}
 
 		complete_effect = {
-			GER = { add_to_faction = ITA }	
-		 }				
-		
-		
+			GER = { add_to_faction = ITA }
+		 }
+
+
 		remove_effect = {
 			ITA = {
 				add_to_war = {
@@ -540,8 +543,8 @@ foreign_politics = {
 				add_to_war = {
 					targeted_alliance = GER
 					enemy = NZL
-				}				
-			}	
+				}
+			}
 		}
 	}
 }
@@ -558,9 +561,9 @@ USA_foreign_politics = {
 				ENG = { has_capitulated = yes }
 				AND = {
 				CAN = { surrender_progress > 0.01 }
-				NOT = { 278 = { is_controlled_by = ENG } }					
+				NOT = { 278 = { is_controlled_by = ENG } }
 				}
-				NOT = { 126 = { is_controlled_by = ENG } }		
+				NOT = { 126 = { is_controlled_by = ENG } }
 			}
 		}
 		cost = 0
@@ -759,7 +762,7 @@ operations = {
 			}
 			else = {
 				FRA = { add_timed_idea = { idea = GDU_abandoned_by_BEF days = 10 } }
-			}			
+			}
 		}
 
 		ai_will_do = {
@@ -937,7 +940,7 @@ operations = {
 			}
 			else = {
 				FRA = { add_timed_idea = { idea = GDU_abandoned_by_BEF days = 10 } }
-			}			
+			}
 		}
 
 		ai_will_do = {
@@ -1024,7 +1027,7 @@ operations = {
 			}
 			else = {
 				FRA = { add_timed_idea = { idea = GDU_abandoned_by_BEF days = 10 } }
-			}			
+			}
 		}
 
 		ai_will_do = {
@@ -1111,7 +1114,7 @@ operations = {
 			}
 			else = {
 				FRA = { add_timed_idea = { idea = GDU_abandoned_by_BEF days = 10 } }
-			}			
+			}
 		}
 
 		ai_will_do = {
@@ -1197,7 +1200,7 @@ operations = {
 			}
 			else = {
 				FRA = { add_timed_idea = { idea = GDU_abandoned_by_BEF days = 10 } }
-			}			
+			}
 		}
 
 		ai_will_do = {
@@ -1287,7 +1290,7 @@ operations = {
 			}
 			else = {
 				FRA = { add_timed_idea = { idea = GDU_abandoned_by_BEF days = 10 } }
-			}			
+			}
 		}
 
 		ai_will_do = {
@@ -1380,7 +1383,7 @@ operations = {
 			}
 			else = {
 				FRA = { add_timed_idea = { idea = GDU_abandoned_by_BEF days = 10 } }
-			}			
+			}
 		}
 
 		ai_will_do = {
@@ -1471,7 +1474,7 @@ operations = {
 			}
 			else = {
 				FRA = { add_timed_idea = { idea = GDU_abandoned_by_BEF days = 10 } }
-			}			
+			}
 		}
 
 		ai_will_do = {
@@ -1664,7 +1667,7 @@ operations = {
 			USA = {
 				add_timed_idea = { idea = ALLIES_fail_dday_idea days = 180 }
 				add_war_support = -0.2
-				
+
 				add_popularity = {
 					ideology = fascism
 					popularity = 0.05
@@ -1681,7 +1684,7 @@ operations = {
 			ENG = {
 				add_timed_idea = { idea = ALLIES_fail_dday_idea days = 180 }
 				add_war_support = -0.2
-				
+
 				add_popularity = {
 					ideology = fascism
 					popularity = 0.05
@@ -1698,7 +1701,7 @@ operations = {
 			CAN = {
 				add_timed_idea = { idea = ALLIES_fail_dday_idea days = 180 }
 				add_war_support = -0.2
-				
+
 				add_popularity = {
 					ideology = fascism
 					popularity = 0.05
@@ -1715,7 +1718,7 @@ operations = {
 			SAF = {
 				add_timed_idea = { idea = ALLIES_fail_dday_idea days = 180 }
 				add_war_support = -0.2
-				
+
 				add_popularity = {
 					ideology = fascism
 					popularity = 0.05
@@ -1732,7 +1735,7 @@ operations = {
 			AST = {
 				add_timed_idea = { idea = ALLIES_fail_dday_idea days = 180 }
 				add_war_support = -0.2
-				
+
 				add_popularity = {
 					ideology = fascism
 					popularity = 0.05
@@ -1749,7 +1752,7 @@ operations = {
 			NZL = {
 				add_timed_idea = { idea = ALLIES_fail_dday_idea days = 180 }
 				add_war_support = -0.2
-				
+
 				add_popularity = {
 					ideology = fascism
 					popularity = 0.05
@@ -1766,7 +1769,7 @@ operations = {
 			RAJ = {
 				add_timed_idea = { idea = ALLIES_fail_dday_idea days = 180 }
 				add_war_support = -0.2
-				
+
 				add_popularity = {
 					ideology = fascism
 					popularity = 0.05
@@ -1783,7 +1786,7 @@ operations = {
 			FRA = {
 				add_timed_idea = { idea = ALLIES_fail_dday_idea days = 180 }
 				add_war_support = -0.2
-				
+
 				add_popularity = {
 					ideology = fascism
 					popularity = 0.05
@@ -1855,7 +1858,7 @@ GER_foreign_politics = {
 		}
 
 	}
-	
+
 	GDU_GER_invade_iran = {
 		icon = GFX_decision_ger_reichskommissariats
 
@@ -1918,10 +1921,10 @@ GER_foreign_politics = {
 
 	}
 }
-		
+
 
 foreign_politics = {
-	
+
 
 }
 
@@ -1978,8 +1981,8 @@ foreign_politics = {
 				NOT = {
 					454 = { is_fully_controlled_by = ENG }
 				}
-				IF = { 
-  					limit = { NOT = { has_start_date > 1936.1.1.12 } } 
+				IF = {
+  					limit = { NOT = { has_start_date > 1936.1.1.12 } }
    					 date > 1940.6.1
 				}
 				else_if = {
@@ -1992,7 +1995,7 @@ foreign_politics = {
 			has_completed_focus = uk_service_focus
 			OR = {
 				444 = { is_controlled_by = RAJ }
-				444 = { is_controlled_by = ENG }				
+				444 = { is_controlled_by = ENG }
 			}
 		}
 
@@ -2024,7 +2027,7 @@ foreign_politics = {
 		icon = generic_operation
 
 		available = {
-			has_start_date > 1936.1.1.12 
+			has_start_date > 1936.1.1.12
 			EFR = { exists = yes }
 			OR = {
 			ITA = { NOT = { has_full_control_of_state = 448 has_full_control_of_state = 450 has_full_control_of_state = 451} }
@@ -2052,7 +2055,7 @@ foreign_politics = {
 		complete_effect = {
 			country_event = vichy.1
 			EFR = { country_event = vichy.2 }
-			ENG = { add_ideas = GDU_allies_torch }			
+			ENG = { add_ideas = GDU_allies_torch }
 			every_country = {
 			country_event = { id = gduevents.15 }
 			}
@@ -2070,7 +2073,7 @@ foreign_politics = {
 		}
 
 		visible = {
-			
+
 		}
 
 		complete_effect = {
@@ -2093,8 +2096,8 @@ foreign_politics = {
 						level = 5
 						province = 1071
 					}
-				}									
-				
+				}
+
 		}
 	}
 }
@@ -2124,7 +2127,7 @@ USA_foreign_politics = {
 			country_event = vichy.1
 			EFR = { country_event = vichy.2 }
 			USA = { add_ideas = GDU_allies_torch }
-			ENG = { add_ideas = GDU_allies_torch }			
+			ENG = { add_ideas = GDU_allies_torch }
 			every_country = {
 			country_event = { id = gduevents.15 }
 			}
@@ -7724,7 +7727,7 @@ SOV_industry_relocation = {
         }
 
 	}
-	
+
 	SOV_relocate_industry_from_wolyn = {
 		icon = generic_construction
 		highlight_states = {
@@ -7871,9 +7874,9 @@ SOV_industry_relocation = {
         }
 
 	}
-	
-	
-	
+
+
+
 	SOV_relocate_industry_from_zhytomyr = {
 		icon = generic_construction
 		highlight_states = {
@@ -8019,7 +8022,7 @@ SOV_industry_relocation = {
 
         }
 
-	}	
+	}
 
 
 	SOV_relocate_industry_from_pinsk = {
@@ -8167,8 +8170,8 @@ SOV_industry_relocation = {
 
         }
 
-	}	
-	
+	}
+
 }
 
 #Category only allowed for GER

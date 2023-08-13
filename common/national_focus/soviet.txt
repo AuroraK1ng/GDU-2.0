@@ -25,7 +25,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 1000				
+			army_experience = 1000
 			add_political_power = 10
 			add_ideas = partial_economic_mobilisation
 			hidden_effect = {
@@ -55,7 +55,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+
 			custom_effect_tooltip = SOV_great_purge_completed
 
 			#Full military purge. Hardest penalty
@@ -165,7 +165,7 @@ focus_tree = {
 			FRA = { add_opinion_modifier = { target = SOV modifier = anti_capitalist_diplomacy_capitalists } }
 		}
 	}
-	
+
 	focus = {
 		id = SOV_Mechanise_the_Army
 		icon = GFX_focus_SOV_the_road_of_life
@@ -178,7 +178,7 @@ focus_tree = {
 		available = {
 			has_completed_focus = SOV_defense_of_moscow
 		}
-		
+
 		search_filters = {}
 
 		completion_reward = {
@@ -290,8 +290,8 @@ focus_tree = {
 					instant_build = yes
 				}
 				set_state_flag = SOV_finish_five_year_plan_2IC
-			}				
-			
+			}
+
 		}
 	}
 
@@ -318,7 +318,7 @@ focus_tree = {
 				has_war_with = GER
 				ENG = { surrender_progress > 0.25 }
 				IF = {
-				limit = { NOT = { has_start_date > 1936.1.1.12 } } 
+				limit = { NOT = { has_start_date > 1936.1.1.12 } }
 					USA = { surrender_progress > 0.4 }
 				}
 				else_if = {
@@ -330,19 +330,19 @@ focus_tree = {
 					ENG = { surrender_progress > 0.25 }
 					}
 				}
-				
+
 			}
-			
+
 		}
 		 cancel_if_invalid = no
 		continue_if_invalid = yes
 		completion_reward = {
-			custom_effect_tooltip = SOV_defense_of_moscow_capitalmove	
+			custom_effect_tooltip = SOV_defense_of_moscow_capitalmove
 					set_capital = {
 					state = 251
 					}
-				
-				
+
+
 			add_ideas = SOV_WAR
 			add_ideas = SOV_industrial_relocations
 			if = { limit = { has_idea = officers_purged } remove_ideas = officers_purged }
@@ -360,7 +360,7 @@ focus_tree = {
 					remove_province_modifier = {
 						static_modifiers = { soviet_hero_fortress }
 						province = {
-							id = 3392 
+							id = 3392
 						}
 					}
 				}
@@ -437,7 +437,7 @@ focus_tree = {
 							id = 413
 							id = 510
 							id = 6494
-							
+
 						}
 					}
 				}
@@ -451,7 +451,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}					
+				}
 				247 = {
 					if = {
 						limit = { 247 = { is_controlled_by = ROOT } }
@@ -461,7 +461,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}					
+				}
 				250 = {
 					if = {
 						limit = { 250 = { is_controlled_by = ROOT } }
@@ -471,7 +471,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}		
+				}
 				822 = {
 					if = {
 						limit = { 822 = { is_controlled_by = ROOT } }
@@ -481,7 +481,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}		
+				}
 				826 = {
 					if = {
 						limit = { 826 = { is_controlled_by = ROOT } }
@@ -491,7 +491,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}						
+				}
 				808 = {
 					if = {
 						limit = { 808 = { is_controlled_by = ROOT } }
@@ -501,7 +501,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}		
+				}
 				256 = {
 					if = {
 						limit = { 256 = { is_controlled_by = ROOT } }
@@ -511,7 +511,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}						
+				}
 				821 = {
 					if = {
 						limit = { 821 = { is_controlled_by = ROOT } }
@@ -521,7 +521,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}				
+				}
 				824 = {
 					if = {
 						limit = { 824 = { is_controlled_by = ROOT } }
@@ -541,7 +541,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}						
+				}
 				809 = {
 					if = {
 						limit = { 809 = { is_controlled_by = ROOT } }
@@ -551,7 +551,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}				
+				}
 				832 = {
 					if = {
 						limit = { 832 = { is_controlled_by = ROOT } }
@@ -561,7 +561,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}				
+				}
 				830 = {
 					if = {
 						limit = { 830 = { is_controlled_by = ROOT } }
@@ -581,7 +581,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}					
+				}
 				829 = {
 					if = {
 						limit = { 829 = { is_controlled_by = ROOT } }
@@ -591,7 +591,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}				
+				}
 				811 = {
 					if = {
 						limit = { 811 = { is_controlled_by = ROOT } }
@@ -802,7 +802,7 @@ focus_tree = {
 						}
 					}
 				}
-			}				
+			}
 		}
 
 	}
@@ -845,10 +845,11 @@ focus_tree = {
 		cost = 0
 
 		completion_reward = {
+			hidden_effect = {
+				sound_effect = Three_Tankists
+			}
 			add_ideas = soviet_union_eternal
 		}
-
-
 	}
 
 	focus = {
@@ -927,15 +928,15 @@ focus_tree = {
 
 		completion_reward = {
 			set_technology = { jet_engines = 1 }
-			set_technology = { advanced_small_airframe = 1 }			
+			set_technology = { advanced_small_airframe = 1 }
 			add_tech_bonus = {
 				name = jet_fighter_bonus
 				bonus = 1.5
 				uses = 1
 				technology = jet_fighter1
-			}		
+			}
 		}
-	}	
+	}
 
 	focus = {
 		id = SOV_defense_of_moscow
@@ -943,7 +944,7 @@ focus_tree = {
 		prerequisite = { focus = SOV_move_industry_to_urals }
 		available = {
 			OR = {
-				date > 1941.6.14	   
+				date > 1941.6.14
 				has_war_with = GER
 				ENG = { surrender_progress > 0.15 }
 				USA = { surrender_progress > 0.15 }
@@ -964,7 +965,7 @@ focus_tree = {
 				bonus = 2.0
 				uses = 1
 				technology = tech_military_police4
-			}			
+			}
 			swap_ideas = {
 				remove_idea = SOV_industrial_relocations
 				add_idea = SOV_war_for_communism
@@ -984,7 +985,7 @@ focus_tree = {
 
 			custom_effect_tooltip = GDU_spacer
 			hidden_effect = {
-				sound_effect = rokossovsky_moscow_battle			
+				sound_effect = rokossovsky_moscow_battle
 				806 = {
 					if = {
 						limit = { 806 = { is_controlled_by = ROOT } }
@@ -994,7 +995,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}					
+				}
 				247 = {
 					if = {
 						limit = { 247 = { is_controlled_by = ROOT } }
@@ -1004,7 +1005,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}					
+				}
 				250 = {
 					if = {
 						limit = { 250 = { is_controlled_by = ROOT } }
@@ -1014,7 +1015,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}		
+				}
 				822 = {
 					if = {
 						limit = { 822 = { is_controlled_by = ROOT } }
@@ -1024,7 +1025,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}		
+				}
 				826 = {
 					if = {
 						limit = { 826 = { is_controlled_by = ROOT } }
@@ -1034,7 +1035,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}						
+				}
 				808 = {
 					if = {
 						limit = { 808 = { is_controlled_by = ROOT } }
@@ -1044,7 +1045,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}		
+				}
 				256 = {
 					if = {
 						limit = { 256 = { is_controlled_by = ROOT } }
@@ -1054,7 +1055,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}						
+				}
 				821 = {
 					if = {
 						limit = { 821 = { is_controlled_by = ROOT } }
@@ -1064,7 +1065,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}				
+				}
 				824 = {
 					if = {
 						limit = { 824 = { is_controlled_by = ROOT } }
@@ -1084,7 +1085,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}						
+				}
 				809 = {
 					if = {
 						limit = { 809 = { is_controlled_by = ROOT } }
@@ -1094,7 +1095,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}				
+				}
 				832 = {
 					if = {
 						limit = { 832 = { is_controlled_by = ROOT } }
@@ -1104,7 +1105,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}				
+				}
 				830 = {
 					if = {
 						limit = { 830 = { is_controlled_by = ROOT } }
@@ -1124,7 +1125,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}					
+				}
 				829 = {
 					if = {
 						limit = { 829 = { is_controlled_by = ROOT } }
@@ -1134,7 +1135,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}				
+				}
 				811 = {
 					if = {
 						limit = { 811 = { is_controlled_by = ROOT } }
@@ -1360,7 +1361,7 @@ focus_tree = {
 				technology = night_assault_tactics
 				technology = breakthrough_priority
 				technology = guerilla_warfare
-			}						  
+			}
 			219 = {
 				custom_effect_tooltip = SOV_defense_of_moscow_forts_GDU
 				hidden_effect = {
@@ -1570,7 +1571,7 @@ focus_tree = {
 		prerequisite = { focus = SOV_extra_tech_slot_2 }
 		available = {
 			OR = {
-			date > 1941.6.14									  
+			date > 1941.6.14
 				has_war_with = GER
 				ENG = { surrender_progress > 0.15 }
 				USA = { surrender_progress > 0.15 }
@@ -1606,7 +1607,7 @@ focus_tree = {
 				technology = c3i_theory
 				technology = infiltration_in_depth
 				technology = continuous_offensive
-			}			   
+			}
 			if = {
 				limit = {
 					SOV = { has_idea = GDU_SOV_Danger_To_Heartland }
@@ -1652,7 +1653,7 @@ focus_tree = {
 			hidden_effect = {
 
 				sound_effect = katyusha
-				
+
 		create_corps_commander = {
 		name = "Konstantin Rokossovsky"
 		id = 402
@@ -1890,7 +1891,7 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
-				
+
 				set_state_flag = SOV_infrastructure_effort_3Inf
 			}
 			652 = {
@@ -1899,7 +1900,7 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
-				
+
 				set_state_flag = SOV_infrastructure_effort_3Inf
 			}
 			405 = {
@@ -1908,7 +1909,7 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
-				
+
 				set_state_flag = SOV_infrastructure_effort_3Inf
 			}
 			586 = {
@@ -1917,7 +1918,7 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
-		
+
 				set_state_flag = SOV_infrastructure_effort_3Inf
 			}
 		}
@@ -2029,13 +2030,13 @@ focus_tree = {
 				uses = 1
 				name = mech_army_bonus
 				technology = mechanised_infantry
-			}				
+			}
 			add_tech_bonus = {
 				bonus = 9.99
 				uses = 1
 				name = katyusha_bonus
 				technology = motorized_rocket_unit
-			}	
+			}
 		}
 	}
 
@@ -2063,7 +2064,7 @@ focus_tree = {
 				bonus = 2.85
 				uses = 1
 				technology = CAS2x
-			}			
+			}
 		}
 	}
 
@@ -2160,14 +2161,14 @@ focus_tree = {
 				bonus = 2.5
 				uses = 2
 				technology = advanced_medium_tank_chassis
-				technology = advanced_light_tank_chassis				
+				technology = advanced_light_tank_chassis
 			}
 			add_tech_bonus = {
 				name = armor_bonus
 				bonus = 2.0
 				uses = 1
 				technology = advanced_heavy_tank_chassis
-			}			
+			}
 			add_tech_bonus = {
 				name = patriotic_landdoc_8
 				bonus = 215.00
@@ -2209,10 +2210,10 @@ focus_tree = {
 				bonus = 2.9
 				uses = 1
 				technology = improved_small_airframe
-			}	
+			}
 		}
 	}
-	
+
 	focus = {
 		id = SOV_tank_cult
 		icon = GFX_SOV_kv1
@@ -2247,9 +2248,9 @@ focus_tree = {
 				name = light_armor_tank_cult
 				bonus = 2.25
 				technology = advanced_light_tank_chassis
-			}			
+			}
 		}
-	}	
+	}
 
 	focus = {
 		id = SOV_socialist_realism
@@ -2292,7 +2293,7 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
-				
+
 			}
 			248 = {
 				add_building_construction = {
@@ -2300,8 +2301,8 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
-				
-				
+
+
 			}
 			252 = {
 				add_building_construction = {
@@ -2309,7 +2310,7 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
-			
+
 			}
 		}
 	}
@@ -2343,12 +2344,12 @@ focus_tree = {
 				technology = advanced_rubber_processing
 				technology = modern_rubber_processing
 			}
-	
+
 			set_technology = { synth_oil_experiments = 1 }
 			set_technology = { rubber_processing = 1 }
 		}
 	}
-	
+
 	focus = {
 		id = SOV_Refinery_Programm
 		icon = GFX_Goal_Mass_Mechanization_effort
@@ -2696,7 +2697,7 @@ focus_tree = {
 		completion_reward = {
 			set_technology = {
 				fort_construction = 1
-			}		
+			}
 			209 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
@@ -2946,7 +2947,7 @@ focus_tree = {
 						province = 117
 						instant_build = yes
 					}
-				}				
+				}
 			}
 			210 = {
 				if = {
@@ -3178,13 +3179,13 @@ focus_tree = {
 		complete_tooltip = {
 			add_ideas = nevskoye_design_bureau
 			navy_experience = 250
-			add_offsite_building = { type = dockyard level = 10 }	
+			add_offsite_building = { type = dockyard level = 10 }
 		}
 
 		completion_reward = {
 			add_ideas = nevskoye_design_bureau
 			navy_experience = 250
-			add_offsite_building = { type = dockyard level = 10 }	
+			add_offsite_building = { type = dockyard level = 10 }
 		}
 	}
 	### END BRANCH ###
@@ -3305,7 +3306,7 @@ focus_tree = {
 				bonus = 1.00
 				uses = 1
 				category = land_doctrine
-			}			
+			}
 		}
 	}
 
@@ -3340,7 +3341,7 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 				technology = tech_military_police3
-			}				
+			}
 		}
 	}
 
@@ -3373,23 +3374,23 @@ focus_tree = {
 				limit = {
 					SOV = { has_war_with = FIN }
 				}
-					SOV = { set_country_flag = SOV_war_since_purge}					
+					SOV = { set_country_flag = SOV_war_since_purge}
 					SOV = {
 						country_event = { id = finland.8 days = 7 }
 						white_peace = FIN
 						transfer_state = 146
 						transfer_state = 147
 					}
-					GER = { add_to_faction = FIN }			
-					set_global_flag = GDU_Winter_War_Over				
+					GER = { add_to_faction = FIN }
+					set_global_flag = GDU_Winter_War_Over
 			}
 			set_technology = { mechanised_infantry = 1 }
 			add_tech_bonus = {
 				bonus = 1
 				uses = 1
 				technology = mechanised_infantry2
-			}		
-		
+			}
+
 			custom_effect_tooltip = GDU_lessons_of_war_tt
 			hidden_effect = {
 			if = {
@@ -3400,7 +3401,7 @@ focus_tree = {
 				FIN = {
 					add_state_core = 146
 					add_state_core = 147
-					set_technology = {	
+					set_technology = {
 						jaegers = 1
 						jaegers2 = 1
 						shocktroops = 1
@@ -3408,13 +3409,13 @@ focus_tree = {
 						antitank2 = 1
 						antiair2 = 1
 						artillery1 = 1
-						improved_infantry_weapons = 1					
+						improved_infantry_weapons = 1
 					}
 					add_equipment_to_stockpile = { type = anti_tank_equipment_2 amount = 2000 }
 					load_oob = "FIN_MINI_GDU_SPAWN"
 					add_ideas = FIN_mini_GDU
 				}
-			}			
+			}
 			GER = { add_to_faction = FIN }
          # skill 4 generals and field marshals
 			create_corps_commander = {
@@ -3513,7 +3514,7 @@ focus_tree = {
 				category = land_doctrine
 			}
 	}
-}	
+}
 
 	focus = {
 		id = SOV_research_city_experiment
@@ -3552,9 +3553,9 @@ focus_tree = {
 					swap_ideas = {
 						remove_idea = sisu
 						add_idea = sisu_2
-					}			
+					}
 				}
-			}			
+			}
 		}
 
 

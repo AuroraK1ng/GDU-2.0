@@ -77,7 +77,7 @@ GER_mefo_bills_category = {
 
 
 operations = {
-	
+
 
 ##	GER_integrate_StuG = {
 ##		ai_will_do = { factor = 0 }
@@ -99,9 +99,9 @@ operations = {
 ##					special_StuG_tech_GER = 1
 ##				}
 ##			}
-##			
-##			
-##			
+##
+##
+##
 ##		}
 ##	}
 
@@ -125,11 +125,11 @@ NOR_sudoku = {
 	GER = { transfer_state = 790 }
 	transfer_state = 844
 }
-}  
-			 
-			 
-			
-	
+}
+
+
+
+
 
 playable_norway = {
 		ai_will_do = { factor = 0 }
@@ -143,14 +143,14 @@ playable_norway = {
 		visible = {
 			country_exists = NOR
 			date > 1936.1.1
-			NOR = { is_ai = no }			
+			NOR = { is_ai = no }
 		}
 		fire_only_once = yes
 		complete_effect = {
-		
-		NOR = { remove_ideas = GDU_neutrality } 
-		
-		
+
+		NOR = { remove_ideas = GDU_neutrality }
+
+
 #		7 = {
 #				add_extra_state_shared_building_slots = 3
 #				add_building_construction = {
@@ -158,7 +158,7 @@ playable_norway = {
 #					level = 3
 #					instant_build = yes }
 #					}
-#					
+#
 #		10 = {
 #				add_extra_state_shared_building_slots = 5
 #				add_building_construction = {
@@ -166,7 +166,7 @@ playable_norway = {
 #					level = 5
 #					instant_build = yes }
 #					}
-#					
+#
 #					8 = {
 #				add_extra_state_shared_building_slots = 2
 #				add_building_construction = {
@@ -174,7 +174,7 @@ playable_norway = {
 #					level = 2
 #					instant_build = yes }
 #					}
-#					
+#
 #					184 = {
 #				add_extra_state_shared_building_slots = 3
 #				add_building_construction = {
@@ -226,20 +226,20 @@ playable_siam = {
 
 		visible = {
 			country_exists = SIA
-			SIA = { is_ai = no }		
+			SIA = { is_ai = no }
 		}
 		fire_only_once = yes
 		complete_effect = {
-		
-		SIA = { remove_ideas = GDU_neutrality } 
-		
+
+		SIA = { remove_ideas = GDU_neutrality }
+
 		289 = {
 				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = industrial_complex
 					level = 5
 					instant_build = yes }
-					
+
 					}
 		289 = {
 				add_extra_state_shared_building_slots = 1
@@ -248,7 +248,7 @@ playable_siam = {
 					level = 1
 					instant_build = yes }
 					}
-					
+
 		518 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -256,8 +256,8 @@ playable_siam = {
 					level = 1
 					instant_build = yes }
 					}
-					
-					
+
+
 		518 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -265,7 +265,7 @@ playable_siam = {
 					level = 2
 					instant_build = yes }
 					}
-					
+
 		723 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -273,8 +273,8 @@ playable_siam = {
 					level = 1
 					instant_build = yes }
 					}
-					
-					
+
+
 		787 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -282,8 +282,8 @@ playable_siam = {
 					level = 1
 					instant_build = yes }
 					}
-					
-					
+
+
 		787 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -305,7 +305,7 @@ playable_siam = {
 		}
 		allowed = {
 			original_tag = GER
-			
+
 		}
 		available = {
 			HUN = { is_ai = yes }
@@ -330,7 +330,7 @@ playable_siam = {
 				add_state_core = 106
 			}
 			GER = {
-				#add_research_slot = 1  
+				#add_research_slot = 1
 				annex_country = { target = HUN transfer_troops = yes }
 				add_state_core = 155
 				add_state_core = 154
@@ -354,7 +354,7 @@ playable_siam = {
 				add_state_core = 723
 				add_state_core = 284
 			}
-			
+
 			ENG = {
 				#add_research_slot = 1 #UK gets 1 more research slot since it has to research more stuff with fewer minors. But can't do the "complete commitment" focus to get the extra research slot after the war starts, so effectively UK is getting that research slot early.
 				annex_country = { target = CAN transfer_troops = yes }           # Annex Canada
@@ -382,7 +382,7 @@ playable_siam = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
-				}				
+				}
 			}
 			155 = {
 				add_building_construction = {
@@ -400,7 +400,7 @@ playable_siam = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
-				}				
+				}
 			}
 			154 = {
 				add_building_construction = {
@@ -418,15 +418,15 @@ playable_siam = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
-				}				
-			}			
+				}
+			}
 			64 = {
 				add_resource = {
 					type = aluminium
 					amount = 6
 				}
 			}
-			# add some of the infra/mils/civs from Bulgaria focus tree, though not all (about half)	
+			# add some of the infra/mils/civs from Bulgaria focus tree, though not all (about half)
 			212 = {
 				add_building_construction = {
 					type = infrastructure
@@ -443,7 +443,7 @@ playable_siam = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
-				}				
+				}
 			}
 			48 = {
 				add_building_construction = {
@@ -461,7 +461,7 @@ playable_siam = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
-				}					
+				}
 			}
 			add_resource = {
 				type = aluminium
@@ -504,7 +504,7 @@ playable_siam = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
-				}						
+				}
 			}
 			468 = {
 				add_building_construction = {
@@ -517,8 +517,8 @@ playable_siam = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
-				}			
-			}			
+				}
+			}
 			682 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -530,7 +530,7 @@ playable_siam = {
 					type = infrastructure
 					level = 1
 					instant_build = yes
-				}				
+				}
 			}
 			467 = {
 				add_building_construction = {
@@ -552,22 +552,22 @@ playable_siam = {
 					level = 2
 					instant_build = yes
 				}
-			}			
+			}
 			467 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
-				}				
-			}				
+				}
+			}
 			682 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
-				}			
+				}
 			}
 			470 = {
 				add_resource = {
@@ -578,7 +578,7 @@ playable_siam = {
 					type = infrastructure
 					level = 1
 					instant_build = yes
-				}				
+				}
 			}
 			471 = {
 				add_resource = {
@@ -588,7 +588,7 @@ playable_siam = {
 				add_resource = {
 					type = steel
 					amount = 20
-				}				
+				}
 			}
 			683 = {
 				add_resource = {
@@ -598,50 +598,50 @@ playable_siam = {
 				add_resource = {
 					type = chromium
 					amount = 30
-				}				
+				}
 			}
 			472 = {
 				add_resource = {
 					type = steel
 					amount = 20
-				}			
+				}
 			}
 			682 = {
 				add_resource = {
 					type = steel
 					amount = 50
-				}				
+				}
 			}
 			466 = {
 				add_resource = {
 					type = steel
 					amount = 30
-				}						
+				}
 			}
 			468 = {
 				add_resource = {
 					type = steel
 					amount = 30
-				}				
-			}	
+				}
+			}
 			682 = {
 				add_resource = {
 					type = aluminium
 					amount = 100
-				}			
+				}
 			}
 			466 = {
 				add_resource = {
 					type = aluminium
 					amount = 30
-				}					
+				}
 			}
 			468 = {
 				add_resource = {
 					type = aluminium
 					amount = 30
 				}
-			}			
+			}
 			470 = {
 				add_resource = {
 					type = oil
@@ -669,7 +669,7 @@ playable_siam = {
 				add_resource = {
 					type = steel
 					amount = 16
-				}	
+				}
 			}
 			# New Zealand focus factories/resources/etc
 			284 = {
@@ -716,10 +716,10 @@ playable_siam = {
 					level = 1
 					instant_build = yes
 				}
-			}			
-			
-			
-			
+			}
+
+
+
 		}
 	}
 
@@ -760,7 +760,7 @@ GER_foreign_politics = {
 		cost = 0
 		allowed = {
 			original_tag = GER
-			
+
 		}
 		available = {
 			country_exists = BUL
@@ -772,7 +772,7 @@ GER_foreign_politics = {
 		icon = GFX_decision_ger_reichskommissariats
 
 		visible = {
-			always = yes	
+			always = yes
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -789,7 +789,7 @@ GER_foreign_politics = {
 					add_state_core = 48
 					add_state_core = 184
 					add_state_core = 731
-					add_state_core = 106		
+					add_state_core = 106
 				}
 			}
 		}
@@ -798,7 +798,7 @@ GER_foreign_politics = {
 	Operation_Panzerfaust = {
 		ai_will_do = { factor = 0 }
 		cost = 0
-		allowed = {	
+		allowed = {
 			original_tag = GER
 		}
 		available = {	country_exists = HUN
@@ -809,7 +809,7 @@ GER_foreign_politics = {
 		icon = GFX_decision_ger_reichskommissariats
 
 		visible = {
-			always = yes					
+			always = yes
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -822,9 +822,9 @@ GER_foreign_politics = {
 					}
 					add_state_core = 155
 					add_state_core = 154
-					add_state_core = 43				
+					add_state_core = 43
 				}
-			}	
+			}
 		}
 	}
 
@@ -833,25 +833,25 @@ GER_foreign_politics = {
 		cost = 0
 		allowed = {
 			original_tag = GER
-				
+
 		}
 		available = { country_exists = ROM
 			date > 1939.1.1
 			GER = { has_war = yes }
-			ROM = { is_ai = yes } 
+			ROM = { is_ai = yes }
 			}
 		icon = GFX_decision_ger_reichskommissariats
 
 		fire_only_once = yes
 		visible = {
-			always = yes					
+			always = yes
 		}
 
 		complete_effect = {
 			ROM = {
 				give_resource_rights = { receiver = GER state = 46 }
 				remove_resource_rights = 53
-			}		
+			}
 			GER = {
 				annex_country = { target = ROM transfer_troops = yes }
 				add_timed_idea = { idea = GDU_minor_annexation_efficiency days = 30 }
@@ -869,7 +869,7 @@ GER_foreign_politics = {
 					add_state_core = 84
 					add_state_core = 81
 					add_state_core = 82
-					add_state_core = 83			
+					add_state_core = 83
 				}
 			}
 		}
@@ -891,14 +891,14 @@ GER_foreign_politics = {
 		icon = GFX_decision_ger_reichskommissariats
 
 		visible = {
-			always = yes					
+			always = yes
 		}
 
 		complete_effect = {
 			GER = { puppet = FIN }
 		}
 	}
-	
+
 	Puppet_Spain = {
 		ai_will_do = { factor = 0 }
 		cost = 0
@@ -915,7 +915,7 @@ GER_foreign_politics = {
 		icon = GFX_decision_ger_reichskommissariats
 
 		visible = {
-			always = yes					
+			always = yes
 		}
 
 		complete_effect = {
@@ -1021,7 +1021,7 @@ GER_foreign_politics = {
 #
 #		visible = {
 #			always = yes
-#			
+#
 #		}
 #
 #		ai_will_do = {
@@ -1058,7 +1058,7 @@ GER_foreign_politics = {
 
 		allowed = {
 			tag = GER
-		}	
+		}
 
 		available = {
 			has_completed_focus = GER_danzig_or_war
@@ -1082,7 +1082,7 @@ GER_foreign_politics = {
 				ROM = { add_dynamic_modifier = { modifier = axis_afrika_modifier_spirit } }
 				HUN = { add_dynamic_modifier = { modifier = axis_afrika_modifier_spirit } }
 				BUL = { add_dynamic_modifier = { modifier = axis_afrika_modifier_spirit } }
-				
+
 				ENG = { add_dynamic_modifier = { modifier = allied_afrika_modifier_spirit } }
 				AST = { add_dynamic_modifier = { modifier = allied_afrika_modifier_spirit } }
 				NZL = { add_dynamic_modifier = { modifier = allied_afrika_modifier_spirit } }
@@ -1090,7 +1090,7 @@ GER_foreign_politics = {
 				CAN = { add_dynamic_modifier = { modifier = allied_afrika_modifier_spirit } }
 				RAJ = { add_dynamic_modifier = { modifier = allied_afrika_modifier_spirit } }
 				USA = { add_dynamic_modifier = { modifier = allied_afrika_modifier_spirit } }
-				SOV	= { add_dynamic_modifier = { modifier = soviet_afrika_modifier_spirit } }						
+				SOV	= { add_dynamic_modifier = { modifier = soviet_afrika_modifier_spirit } }
 
 			}
 			add_named_threat = { threat = 5 name = GER_danzig_or_war }
@@ -1100,9 +1100,9 @@ GER_foreign_politics = {
 			GER = {
 				give_resource_rights = { receiver = ROM state = 53 }
 				remove_resource_rights = 724
-			}			
+			}
 			SIA = {
-				give_resource_rights = { receiver = JAP state = 724 }			
+				give_resource_rights = { receiver = JAP state = 724 }
 			}
 			if = {
 				limit = {
@@ -1122,12 +1122,12 @@ GER_foreign_politics = {
 					}
 					declare_war_on_all_allies = yes
 				}
-			}			
+			}
 			hidden_effect = {
 				set_global_flag = war_is_hell
 				ITA = {
 					country_event = { id = gduevents.55 days = 1 } # this activates the thing that makes strength damage in Africa be lower than elsewhere
-				}				
+				}
 				128 = {
 					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
@@ -1187,20 +1187,20 @@ GER_foreign_politics = {
 				}
 				CAN = {
 					add_timed_idea = { idea = alli_phoney_war days = 240 }
-					add_ideas = war_economy			
+					add_ideas = war_economy
 				}
 				SAF = {
 					add_timed_idea = { idea = alli_phoney_war days = 240 }
-					add_ideas = war_economy					
+					add_ideas = war_economy
 				}
 				AST = {
 					add_timed_idea = { idea = alli_phoney_war days = 240 }
-					add_ideas = war_economy					
+					add_ideas = war_economy
 				}
 				NZL = {
 					add_timed_idea = { idea = alli_phoney_war days = 240 }
-					add_ideas = war_economy					
-				}				
+					add_ideas = war_economy
+				}
 			}
 
 		}
@@ -1361,6 +1361,9 @@ GER_foreign_politics = {
 		}
 
 		complete_effect = {
+			hidden_effect = {
+				sound_effect = yugo
+			}
 			declare_war_on = {
 				target = YUG
 				type = annex_everything
@@ -1384,7 +1387,7 @@ GER_foreign_politics = {
 			has_completed_focus = GER_ussr_war_goal
 			date > 1941.6.1
 			NOT = { has_war_with = SOV }
-			
+
 		}
 
 		cost = 0
@@ -1401,36 +1404,36 @@ GER_foreign_politics = {
 		complete_effect = {
 
 			hidden_effect = {
-				add_named_threat = { threat = 100 name = Barbarossa }			
+				add_named_threat = { threat = 100 name = Barbarossa }
 				SOV = {
 					country_event = { id = gduevents.4 days = 1 } # warns soviets that Barbarossa is coming, suspicious activity on western border
 					country_event = { id = gduevents.46 days = 30 }	# gduevents.46 is scorched earth event, damages 1 level of infra of each Soviet core state not controlled by Soviets
-					country_event = { id = gduevents.46 days = 70 }	
-					country_event = { id = gduevents.46 days = 140 }	
+					country_event = { id = gduevents.46 days = 70 }
+					country_event = { id = gduevents.46 days = 140 }
 					country_event = { id = gduevents.46 days = 230 }
-					country_event = { id = gduevents.46 days = 340 }	
-					country_event = { id = gduevents.46 days = 470 }	
+					country_event = { id = gduevents.46 days = 340 }
+					country_event = { id = gduevents.46 days = 470 }
 				}
 				ROM = {												# event to transfer states that Romania takes quickly to GER so that you don't have to manually transfer them for GER to build/repair infra/airfields/etc...
-					country_event = { id = gduevents.50 days = 7 } 
+					country_event = { id = gduevents.50 days = 7 }
 					country_event = { id = gduevents.50 days = 14 }
 					country_event = { id = gduevents.50 days = 21 }
-					country_event = { id = gduevents.50 days = 40 }	
-					country_event = { id = gduevents.50 days = 60 }					
-				}			
+					country_event = { id = gduevents.50 days = 40 }
+					country_event = { id = gduevents.50 days = 60 }
+				}
 				94 = {
 					add_province_modifier = {
 						static_modifiers = { soviet_hero_fortress }
 						province = {
-							id = 3392 
+							id = 3392
 						}
 					}
 				}
 
 
 
-			
-			
+
+
 			}
 			every_country = {
 				limit = {
@@ -1463,13 +1466,13 @@ GER_foreign_politics = {
 				targeted_alliance = GER
 				enemy = SOV
 				}
-			}	
+			}
 			ROM = {
 				add_to_war = {
 				targeted_alliance = GER
 				enemy = SOV
 				}
-			}	
+			}
 			BUL = {
 				add_to_war = {
 				targeted_alliance = GER
@@ -1487,7 +1490,7 @@ GER_foreign_politics = {
 				targeted_alliance = GER
 				enemy = SOV
 				}
-			}			
+			}
 			SOV = {
 				country_event = { id = gduevents.57 days = 60 } # event that makes southwest front and frontline military districts province modifiers go away
 			}
@@ -1508,19 +1511,19 @@ GER_foreign_politics = {
 				country_event = { id = gduevents.59 days = 14 }
 				country_event = { id = gduevents.60 days = 21 }
 				country_event = { id = gduevents.61 days = 28 }
-			}	
+			}
 			ROM = { #Check for conquering cities within 1/2/3/4 weeks to add national spirits for supply
 				country_event = { id = gduevents.58 days = 7 }
 				country_event = { id = gduevents.59 days = 14 }
 				country_event = { id = gduevents.60 days = 21 }
 				country_event = { id = gduevents.61 days = 28 }
-			}	
+			}
 			BUL = { #Check for conquering cities within 1/2/3/4 weeks to add national spirits for supply
 				country_event = { id = gduevents.58 days = 7 }
 				country_event = { id = gduevents.59 days = 14 }
 				country_event = { id = gduevents.60 days = 21 }
 				country_event = { id = gduevents.61 days = 28 }
-			}				
+			}
 				GER = {
 					remove_resource_rights = 229   # remove German resource rights to Baku oil at start of Barbarossa
 					give_resource_rights = { receiver = SOV state = 229 }
@@ -1530,9 +1533,9 @@ GER_foreign_politics = {
 					swap_ideas = {
 						remove_idea = soviet_closed_market
 						add_idea = soviet_closed_market2
-					}					
+					}
 				}
-			
+
 		}
 
 	}
@@ -1629,7 +1632,7 @@ GER_foreign_politics = {
 			}
 			ROM = {
 				add_timed_idea = { idea = GDU_Fall_Blau days = 45 }
-			}			
+			}
 			BUL = {
 				add_timed_idea = { idea = GDU_Fall_Blau days = 45 }
 			}

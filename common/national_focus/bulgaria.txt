@@ -12,13 +12,13 @@ focus_tree = {
 
 	country = {
 		factor = 0
-		
+
 		modifier = {
 			add = 10
 			tag = BUL
 		}
 	}
-	
+
 	default = no
 
 	continuous_focus_position = { x = 50 y = 1500 }
@@ -33,7 +33,7 @@ focus_tree = {
 		}
 		bypass = {
 			NOT = { country_exists = YUG }
-		}		
+		}
 		will_lead_to_war_with = YUG
 		x = 0
 		y = 0
@@ -42,6 +42,9 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
+			hidden_effect = {
+				sound_effect = yugo
+			}
 			declare_war_on = {
 				target = YUG
 				type = annex_everything
@@ -58,7 +61,7 @@ focus_tree = {
 		}
 		bypass = {
 			NOT = { country_exists = GRE }
-		}		
+		}
 		will_lead_to_war_with = GRE
 		x = 2
 		y = 0
@@ -74,13 +77,13 @@ focus_tree = {
 		}
 	}
 
-#### ##    ## ########  ##     ##  ######  ######## ########  ####    ###    ##          ########  ########     ###    ##    ##  ######  ##     ## 
- ##  ###   ## ##     ## ##     ## ##    ##    ##    ##     ##  ##    ## ##   ##          ##     ## ##     ##   ## ##   ###   ## ##    ## ##     ## 
- ##  ####  ## ##     ## ##     ## ##          ##    ##     ##  ##   ##   ##  ##          ##     ## ##     ##  ##   ##  ####  ## ##       ##     ## 
- ##  ## ## ## ##     ## ##     ##  ######     ##    ########   ##  ##     ## ##          ########  ########  ##     ## ## ## ## ##       ######### 
- ##  ##  #### ##     ## ##     ##       ##    ##    ##   ##    ##  ######### ##          ##     ## ##   ##   ######### ##  #### ##       ##     ## 
- ##  ##   ### ##     ## ##     ## ##    ##    ##    ##    ##   ##  ##     ## ##          ##     ## ##    ##  ##     ## ##   ### ##    ## ##     ## 
-#### ##    ## ########   #######   ######     ##    ##     ## #### ##     ## ########    ########  ##     ## ##     ## ##    ##  ######  ##     ## 
+#### ##    ## ########  ##     ##  ######  ######## ########  ####    ###    ##          ########  ########     ###    ##    ##  ######  ##     ##
+ ##  ###   ## ##     ## ##     ## ##    ##    ##    ##     ##  ##    ## ##   ##          ##     ## ##     ##   ## ##   ###   ## ##    ## ##     ##
+ ##  ####  ## ##     ## ##     ## ##          ##    ##     ##  ##   ##   ##  ##          ##     ## ##     ##  ##   ##  ####  ## ##       ##     ##
+ ##  ## ## ## ##     ## ##     ##  ######     ##    ########   ##  ##     ## ##          ########  ########  ##     ## ## ## ## ##       #########
+ ##  ##  #### ##     ## ##     ##       ##    ##    ##   ##    ##  ######### ##          ##     ## ##   ##   ######### ##  #### ##       ##     ##
+ ##  ##   ### ##     ## ##     ## ##    ##    ##    ##    ##   ##  ##     ## ##          ##     ## ##    ##  ##     ## ##   ### ##    ## ##     ##
+#### ##    ## ########   #######   ######     ##    ##     ## #### ##     ## ########    ########  ##     ## ##     ## ##    ##  ######  ##     ##
 
 
 	focus = {
@@ -94,7 +97,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_ideas = BUL_national_industry_01
@@ -114,7 +117,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			every_owned_state = {
@@ -159,7 +162,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			custom_effect_tooltip = BUL_attract_foreign_capitals_dynamic_modifier_tt
@@ -182,7 +185,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			random_owned_state = {
@@ -225,7 +228,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_research_slot = 1
@@ -246,7 +249,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 				212 = { #PLOVDIV
@@ -292,7 +295,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			custom_effect_tooltip = BUL_nationalization_dynamic_modifier_tt
-			add_ideas = BUL_nationalized_industry	
+			add_ideas = BUL_nationalized_industry
 
 			every_country = {
 				limit = {
@@ -321,7 +324,7 @@ focus_tree = {
 		available = {
 			num_of_civilian_factories > 16
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			random_owned_state = {
@@ -361,7 +364,7 @@ focus_tree = {
 			NOT = { has_idea = BUL_second_national_catastrophe }
 			num_of_factories > 29
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			if = {
@@ -399,7 +402,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			every_owned_state = {
@@ -414,7 +417,7 @@ focus_tree = {
 					type = infrastructure
 					level = 2
 					instant_build = yes
-				}				
+				}
 			}
 		}
 	}
@@ -432,7 +435,7 @@ focus_tree = {
 		available = {
 			controls_state = 48
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
@@ -446,13 +449,13 @@ focus_tree = {
 				add_resource = {
 					type = steel
 					amount = 16
-				}	
+				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 					instant_build = yes
-				}	
+				}
 			}
 		}
 	}
@@ -474,7 +477,7 @@ focus_tree = {
 				controls_state = 212
 			}
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			48 = {
@@ -511,7 +514,7 @@ focus_tree = {
 			has_tech = excavation3
 			controls_state = 48
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
@@ -537,7 +540,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			air_experience = 10
@@ -566,7 +569,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			air_experience = 15
@@ -578,19 +581,19 @@ focus_tree = {
 			}
 				48 = {
 					add_building_construction = {
-						type = air_base 
+						type = air_base
 						level = 2
 						instant_build = yes
 					}
 				}
 				212 = {
 					add_building_construction = {
-						type = air_base 
+						type = air_base
 						level = 2
 						instant_build = yes
 					}
 				}
-		
+
 			if = {
 				limit = {
 					has_country_flag = BUL_international_pilot_training_program_flag
@@ -619,7 +622,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			unlock_decision_category_tooltip = BUL_rearmament
@@ -639,7 +642,7 @@ focus_tree = {
 		available = {
 			NOT = { has_idea = BUL_army_restrictions }
 		}
-		
+
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
@@ -666,7 +669,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
@@ -675,7 +678,7 @@ focus_tree = {
 			    uses = 2
 				technology = fighter1
 				technology = fighter2
-			}	
+			}
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = BUL_dar
 		}
@@ -694,7 +697,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
@@ -720,7 +723,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
@@ -746,7 +749,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			212 = {
@@ -782,7 +785,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			212 = {
@@ -816,7 +819,7 @@ focus_tree = {
 
 		available = {
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			if = {
@@ -842,7 +845,7 @@ focus_tree = {
 
 		available = {
 		}
-		
+
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			add_tech_bonus = {
@@ -886,7 +889,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			army_experience = 15
@@ -917,7 +920,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			if = {
@@ -954,7 +957,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			army_experience = 15
@@ -981,7 +984,7 @@ focus_tree = {
 		id = BUL_Tank_Development
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = BUL_national_military_academy }
-		relative_position_id = BUL_national_military_academy		
+		relative_position_id = BUL_national_military_academy
 		x = -1
 		y = 1
 		cost = 10
@@ -991,16 +994,16 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = armor_bonus
-				bonus = 2.00 
+				bonus = 2.00
 				uses = 4
 				technology = advanced_medium_tank_chassis
 				technology = advanced_heavy_tank_chassis
 				technology = improved_medium_tank_chassis
 				technology = improved_heavy_tank_chassis
 				technology = advanced_light_tank_chassis
-				
 
-			}			
+
+			}
 		}
 	}
 
@@ -1008,7 +1011,7 @@ focus_tree = {
 		id = BUL_Special_Forces
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = BUL_national_military_academy }
-		relative_position_id = BUL_national_military_academy			
+		relative_position_id = BUL_national_military_academy
 		x = 0
 		y = 5
 		cost = 5
@@ -1018,7 +1021,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = special_forces_bonus
-				bonus = 1.00 
+				bonus = 1.00
 				uses = 1
 				technology = paratroopers
 				technology = paratroopers2
@@ -1034,7 +1037,7 @@ focus_tree = {
 		id = BUL_Marine_Specialization
 		icon = GFX_goal_generic_amphibious_assault
 		prerequisite = { focus = BUL_Special_Forces }
-		relative_position_id = BUL_Special_Forces					
+		relative_position_id = BUL_Special_Forces
 		x = -2
 		y = 1
 		cost = 10
@@ -1044,7 +1047,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = special_forces_bonus
-				bonus = 1.00 
+				bonus = 1.00
 				uses = 1
 				technology = marines
 				technology = marines2
@@ -1056,7 +1059,7 @@ focus_tree = {
 		id = BUL_Airborne_Specialization
 		icon = GFX_goal_generic_CAS
 		prerequisite = { focus = BUL_Special_Forces }
-		relative_position_id = BUL_Special_Forces							
+		relative_position_id = BUL_Special_Forces
 		x = 2
 		y = 1
 		cost = 5
@@ -1066,7 +1069,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = special_forces_bonus
-				bonus = 1.00 
+				bonus = 1.00
 				uses = 1
 				technology = paratroopers
 				technology = paratroopers2
@@ -1078,8 +1081,8 @@ focus_tree = {
 		id = BUL_Mountain_Specialization
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = BUL_Special_Forces }
-		relative_position_id = BUL_Special_Forces					
-		
+		relative_position_id = BUL_Special_Forces
+
 		x = 0
 		y = 1
 		cost = 5
@@ -1089,7 +1092,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = special_forces_bonus
-				bonus = 1.00 
+				bonus = 1.00
 				uses = 1
 				technology = tech_mountaineers
 				technology = tech_mountaineers2
@@ -1105,7 +1108,7 @@ focus_tree = {
 			focus = BUL_Marine_Specialization
 			focus = BUL_Mountain_Specialization
 		}
-		relative_position_id = BUL_Special_Forces							
+		relative_position_id = BUL_Special_Forces
 		x = 0
 		y = 2
 		cost = 5
@@ -1116,7 +1119,7 @@ focus_tree = {
 			army_experience = 10
 			add_tech_bonus = {
 				name = land_doc_bonus
-				bonus = 1.00 
+				bonus = 1.00
 				uses = 1
 				category = land_doctrine
 			}
@@ -1136,7 +1139,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
@@ -1168,7 +1171,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			48 = {
@@ -1248,7 +1251,7 @@ focus_tree = {
 		available = {
 			NOT = { has_idea = BUL_army_restrictions }
 		}
-		
+
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			navy_experience = 15
@@ -1264,9 +1267,9 @@ focus_tree = {
 			    uses = 2
 				category = dd_tech
 			}
-			if = { 
+			if = {
 				limit = { has_dlc = "Man the Guns" }
-				set_technology = { coastal_defense_ships = 1 } 
+				set_technology = { coastal_defense_ships = 1 }
 			}
 		}
 	}
@@ -1284,7 +1287,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			211 = {
@@ -1327,7 +1330,7 @@ focus_tree = {
 						}
 					}
 				}
-			
+
 			add_tech_bonus = {
 				name = BUL_improve_coastal_defenses
 			    bonus = 1.0
@@ -1356,7 +1359,7 @@ focus_tree = {
 				is_coastal = yes
 			}
 		}
-		
+
 		completion_reward = {
 			custom_effect_tooltip = BUL_reinforce_naval_bases_tt
 			every_controlled_state = {
@@ -1419,7 +1422,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
@@ -1444,7 +1447,7 @@ focus_tree = {
 		available = {
 			controls_state = 211
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			211 = {
@@ -1485,7 +1488,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			army_experience = 15
@@ -1513,7 +1516,7 @@ focus_tree = {
 		available = {
 			controls_state = 211
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			navy_experience = 15
@@ -1549,7 +1552,7 @@ focus_tree = {
 		available = {
 			controls_state = 211
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			navy_experience = 15
@@ -1587,7 +1590,7 @@ focus_tree = {
 				dockyard > 0
 			}
 		}
-		
+
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			navy_experience = 25
@@ -1616,7 +1619,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			navy_experience = 25
@@ -1643,7 +1646,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			navy_experience = 25
@@ -1662,15 +1665,15 @@ focus_tree = {
 		}
 	}
 
-	
 
-##     ## ####  ######  ########  #######  ########  ####  ######     ###    ##          ########  ########     ###    ##    ##  ######  ##     ## 
-##     ##  ##  ##    ##    ##    ##     ## ##     ##  ##  ##    ##   ## ##   ##          ##     ## ##     ##   ## ##   ###   ## ##    ## ##     ## 
-##     ##  ##  ##          ##    ##     ## ##     ##  ##  ##        ##   ##  ##          ##     ## ##     ##  ##   ##  ####  ## ##       ##     ## 
-#########  ##   ######     ##    ##     ## ########   ##  ##       ##     ## ##          ########  ########  ##     ## ## ## ## ##       ######### 
-##     ##  ##        ##    ##    ##     ## ##   ##    ##  ##       ######### ##          ##     ## ##   ##   ######### ##  #### ##       ##     ## 
-##     ##  ##  ##    ##    ##    ##     ## ##    ##   ##  ##    ## ##     ## ##          ##     ## ##    ##  ##     ## ##   ### ##    ## ##     ## 
-##     ## ####  ######     ##     #######  ##     ## ####  ######  ##     ## ########    ########  ##     ## ##     ## ##    ##  ######  ##     ## 
+
+##     ## ####  ######  ########  #######  ########  ####  ######     ###    ##          ########  ########     ###    ##    ##  ######  ##     ##
+##     ##  ##  ##    ##    ##    ##     ## ##     ##  ##  ##    ##   ## ##   ##          ##     ## ##     ##   ## ##   ###   ## ##    ## ##     ##
+##     ##  ##  ##          ##    ##     ## ##     ##  ##  ##        ##   ##  ##          ##     ## ##     ##  ##   ##  ####  ## ##       ##     ##
+#########  ##   ######     ##    ##     ## ########   ##  ##       ##     ## ##          ########  ########  ##     ## ## ## ## ##       #########
+##     ##  ##        ##    ##    ##     ## ##   ##    ##  ##       ######### ##          ##     ## ##   ##   ######### ##  #### ##       ##     ##
+##     ##  ##  ##    ##    ##    ##     ## ##    ##   ##  ##    ## ##     ## ##          ##     ## ##    ##  ##     ## ##   ### ##    ## ##     ##
+##     ## ####  ######     ##     #######  ##     ## ####  ######  ##     ## ########    ########  ##     ## ##     ## ##    ##  ######  ##     ##
 
 
 	focus = {
@@ -1685,7 +1688,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_popularity = {
@@ -1719,7 +1722,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_stability = 0.1
@@ -1733,7 +1736,7 @@ focus_tree = {
 				limit = {
 					BUL_country_seeks_macedonian_stability = yes
 				}
-				add_opinion_modifier = { 
+				add_opinion_modifier = {
 					target = BUL
 					modifier = BUL_condemned_imro
 				}
@@ -1756,7 +1759,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			BUL_zveno_low_loyalty_decrease_effect = yes
@@ -1768,7 +1771,7 @@ focus_tree = {
 				limit = {
 					BUL_country_seeks_macedonian_stability = yes
 				}
-				add_opinion_modifier = { 
+				add_opinion_modifier = {
 					target = BUL
 					modifier = BUL_supported_imro
 				}
@@ -1828,7 +1831,7 @@ focus_tree = {
 				NOT = { has_country_flag = BUL_zveno_coup_flag } #Zveno CW has not started
 			}
 		}
-		
+
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_political_power = 70
@@ -1859,7 +1862,7 @@ focus_tree = {
 				NOT = { has_country_flag = BUL_zveno_coup_flag } #Zveno CW has not started
 			}
 		}
-		
+
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_political_power = 50
@@ -1887,7 +1890,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_popularity = {
@@ -1918,7 +1921,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_popularity = {
@@ -1954,7 +1957,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_popularity = {
@@ -1984,7 +1987,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_popularity = {
@@ -2012,7 +2015,7 @@ focus_tree = {
 			BUL_has_freedom_of_press = yes
 			BUL_has_banned_faction_media = no
 		}
-		
+
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			set_country_flag = BUL_freedom_of_press_flag
@@ -2049,7 +2052,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			add_political_power = 70
@@ -2071,7 +2074,7 @@ focus_tree = {
 		available = {
 			NOT = { has_country_flag = BUL_bs_legalized_flag }
 		}
-		
+
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_political_power = 70
@@ -2123,7 +2126,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_stability = 0.1
@@ -2151,7 +2154,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 		completion_reward = {
 			if = {
@@ -2193,7 +2196,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_ideas = BUL_brannik
@@ -2214,7 +2217,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY}
 		completion_reward = {
 			add_war_support = 0.1
@@ -2239,7 +2242,7 @@ focus_tree = {
 		available = {
 			neutrality > 0.7
 		}
-		
+
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			swap_ideas = {
@@ -2253,7 +2256,7 @@ focus_tree = {
 			add_to_variable = { BUL_faction_medium_decrease = -5 }
 			add_to_variable = { BUL_faction_high_decrease = -5 }
 			custom_effect_tooltip = BUL_improved_faction_effects_tt
-			
+
 			BUL_halve_faction_management_decision_times = yes
 			custom_effect_tooltip = BUL_reduced_faction_interaction_cooldown_tt
 		}
@@ -2274,7 +2277,7 @@ focus_tree = {
 		available = {
 			has_war = yes
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			48 = {
@@ -2350,7 +2353,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_ideas = BUL_liberal_trade_policies
@@ -2358,13 +2361,13 @@ focus_tree = {
 	}
 
 
-########    ###     ######   ######  ####  ######  ########    ########  ########     ###    ##    ##  ######  ##     ## 
-##         ## ##   ##    ## ##    ##  ##  ##    ##    ##       ##     ## ##     ##   ## ##   ###   ## ##    ## ##     ## 
-##        ##   ##  ##       ##        ##  ##          ##       ##     ## ##     ##  ##   ##  ####  ## ##       ##     ## 
-######   ##     ##  ######  ##        ##   ######     ##       ########  ########  ##     ## ## ## ## ##       ######### 
-##       #########       ## ##        ##        ##    ##       ##     ## ##   ##   ######### ##  #### ##       ##     ## 
-##       ##     ## ##    ## ##    ##  ##  ##    ##    ##       ##     ## ##    ##  ##     ## ##   ### ##    ## ##     ## 
-##       ##     ##  ######   ######  ####  ######     ##       ########  ##     ## ##     ## ##    ##  ######  ##     ## 
+########    ###     ######   ######  ####  ######  ########    ########  ########     ###    ##    ##  ######  ##     ##
+##         ## ##   ##    ## ##    ##  ##  ##    ##    ##       ##     ## ##     ##   ## ##   ###   ## ##    ## ##     ##
+##        ##   ##  ##       ##        ##  ##          ##       ##     ## ##     ##  ##   ##  ####  ## ##       ##     ##
+######   ##     ##  ######  ##        ##   ######     ##       ########  ########  ##     ## ## ## ## ##       #########
+##       #########       ## ##        ##        ##    ##       ##     ## ##   ##   ######### ##  #### ##       ##     ##
+##       ##     ## ##    ## ##    ##  ##  ##    ##    ##       ##     ## ##    ##  ##     ## ##   ### ##    ## ##     ##
+##       ##     ##  ######   ######  ####  ######     ##       ########  ##     ## ##     ## ##    ##  ######  ##     ##
 
 
 	focus = {
@@ -2382,7 +2385,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_popularity = {
@@ -2413,7 +2416,7 @@ focus_tree = {
 		available = {
 			fascism > 0.3
 		}
-		
+
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_popularity = {
@@ -2460,13 +2463,13 @@ focus_tree = {
 		available = {
 			NOT = { has_country_flag = BUL_nsm_media_banned_flag }
 		}
-		
+
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			set_politics = {
 				ruling_party = fascism
 				elections_allowed = no
-			}			
+			}
 			add_political_power = 70
 			add_war_support = 0.05
 			add_popularity = {
@@ -2485,7 +2488,7 @@ focus_tree = {
 				}
 				set_country_flag = BUL_nsm_legalized_flag
 				custom_effect_tooltip = BUL_allow_far_right_organizations_tt
-			}		
+			}
 		}
 	}
 
@@ -2502,7 +2505,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_ideas = BUL_ratniks
@@ -2525,7 +2528,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_ideas = BUL_government_reforms_fascists_01
@@ -2547,7 +2550,7 @@ focus_tree = {
 		available = {
 			num_of_factories > 20
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			swap_ideas = {
@@ -2574,7 +2577,7 @@ focus_tree = {
 		available = {
 			num_of_factories > 30
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			random_owned_state = {
@@ -2624,7 +2627,7 @@ focus_tree = {
 			BUL_nsm_low_loyalty_increase_effect = yes
 		}
 	}
-	
+
 	focus = {
 		id = BUL_approach_germany
 
@@ -2647,7 +2650,7 @@ focus_tree = {
 		available = {
 			country_exists = GER
 			NOT = { has_war_with = GER }
-			GER = { 
+			GER = {
 				NOT = { is_justifying_wargoal_against = ROOT }
 			}
 			GER = {
@@ -2659,17 +2662,17 @@ focus_tree = {
 			OR = {
 				is_in_faction = no
 				is_in_faction_with = GER
-			}			
+			}
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ANNEXATION}
-		completion_reward = {	
-			add_opinion_modifier = { 
+		completion_reward = {
+			add_opinion_modifier = {
 				target = GER
 				modifier = BUL_strengthened_relations_with_us
 			}
 			GER = {
-				add_opinion_modifier = { 
+				add_opinion_modifier = {
 					target = BUL
 					modifier = BUL_strengthened_relations_with_us
 				}
@@ -2683,7 +2686,7 @@ focus_tree = {
 					}
 					NOT = { is_in_faction_with = GER }
 				}
-				add_opinion_modifier = { 
+				add_opinion_modifier = {
 					target = BUL
 					modifier = BUL_approached_germany
 				}
@@ -2699,7 +2702,7 @@ focus_tree = {
 			else = {
 				show_ideas_tooltip = BUL_bogdan_filov
 			}
-			
+
 			if = {
 				limit = {
 					has_country_flag = BUL_german_influence_flag
@@ -2716,7 +2719,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = BUL_approach_germany_foreign_industry_tt
 			}
-			
+
 			activate_targeted_decision = { target = GER decision = BUL_purchase_artillery }
 			activate_targeted_decision = { target = GER decision = BUL_purchase_military_vehicles }
 			activate_targeted_decision = { target = GER decision = BUL_purchase_infantry_equipment }
@@ -2766,7 +2769,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 			custom_effect_tooltip = BUL_join_the_tripartite_pact_tt
@@ -2802,7 +2805,7 @@ focus_tree = {
 		available = {
 			has_war = no
 		}
-		
+
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 			add_stability = 0.1
@@ -2830,12 +2833,12 @@ focus_tree = {
 		available = {
 			BUL_is_not_alone_in_faction = yes
 		}
-		
+
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_to_tech_sharing_group = BUL_axis_research
 			GER = {add_to_tech_sharing_group = BUL_axis_research}
-			if = { 
+			if = {
 				limit = { is_faction_leader = yes }
 				every_country = {
 					limit = {
@@ -2876,7 +2879,7 @@ focus_tree = {
 				is_fully_controlled_by = BUL
 			}
 		}
-		
+
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 			custom_effect_tooltip = BUL_bulgarisation_of_the_balkans_decisions_tt
@@ -2923,7 +2926,7 @@ focus_tree = {
 		available = {
 			has_stability > 0.50
 		}
-		
+
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 		completion_reward = {
 			add_ideas = BUL_bulgarian_patriarchate_restored
@@ -2944,13 +2947,13 @@ focus_tree = {
 		available = {
 			has_government = fascism
 		}
-		
+
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			add_war_support = 0.1
 			add_stability = -0.1
 			add_ideas = BUL_total_war
-			
+
 			custom_effect_tooltip = BUL_total_war_join_wars_tt
 			#Join other wars except for the Soviets
 			random_country = {
@@ -2999,7 +3002,7 @@ focus_tree = {
 				has_war_with = SOV
 			}
 		}
-		
+
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			#WS bonus based on Fascism Supp
@@ -3087,7 +3090,7 @@ focus_tree = {
 		available = {
 
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			random_owned_state = {

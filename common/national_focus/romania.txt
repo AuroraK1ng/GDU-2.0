@@ -30,7 +30,7 @@ focus_tree = {
 		}
 		bypass = {
 			NOT = { country_exists = YUG }
-		}		
+		}
 		will_lead_to_war_with = YUG
 		x = 12
 		y = 5
@@ -39,6 +39,9 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
+			hidden_effect = {
+				sound_effect = yugo
+			}
 			declare_war_on = {
 					target = YUG
 					type = annex_everything
@@ -55,7 +58,7 @@ focus_tree = {
 		}
 		bypass = {
 			NOT = { country_exists = GRE }
-		}		
+		}
 		will_lead_to_war_with = GRE
 		x = 14
 		y = 5
@@ -783,7 +786,7 @@ focus_tree = {
 		}
 
 		bypass = {
-	
+
 		}
 
 		cancel_if_invalid = no
@@ -1302,7 +1305,7 @@ focus_tree = {
 					bonus = 1.00
 					uses = 1
 					technology = improved_small_airframe
-				}		
+				}
 		}
 	}
 
@@ -1838,7 +1841,7 @@ focus_tree = {
 		id = ROM_the_maresal
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = ROM_royal_guards_divisions }
-		
+
 		x = 2
 		y = 1
 		relative_position_id = ROM_royal_guards_divisions
@@ -1877,8 +1880,8 @@ focus_tree = {
 				uses = 3
 				technology = advanced_medium_tank_chassis
 				technology = advanced_heavy_tank_chassis
-				technology = advanced_light_tank_chassis				
-			}			
+				technology = advanced_light_tank_chassis
+			}
 		}
 	}
 
@@ -2054,8 +2057,8 @@ focus_tree = {
 		}
 
 		available = {
-			IF = { 
-  					limit = {  has_start_date > 1936.1.1.12 } 
+			IF = {
+  					limit = {  has_start_date > 1936.1.1.12 }
 					date > 1938.1.1
 			}
 		}
@@ -2090,8 +2093,8 @@ focus_tree = {
 				}
 				set_state_flag = ROM_expand_the_galati_shipyards_AB
 			}
-				IF = { 
-  					limit = {  has_start_date > 1936.1.1.12 } 
+				IF = {
+  					limit = {  has_start_date > 1936.1.1.12 }
 					46 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
@@ -2099,7 +2102,7 @@ focus_tree = {
 					level = 8
 					instant_build = yes
 					}
-				
+
 				}
 			}
 		}
