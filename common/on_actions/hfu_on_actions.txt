@@ -485,6 +485,7 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
+					NOT = { USA = { has_completed_focus = USA_war_plan_black } }
 					date > 1941.1.1
 					has_global_flag = GDU_dday_started
 					16 = { CONTROLLER = { is_in_faction_with_allies = yes } }
