@@ -482,7 +482,7 @@ guiTypes = {
 		position = { x=0 y=196}
 		show_position = { x=5 y =-85}
 		animation_type = decelerated
-		animation_time = 400
+		animation_time = 1000
 
 		size = {width=598 height=196}
 		orientation = lower_right
@@ -496,7 +496,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "custom_settings_btn"
-			position = { x = 9999 y = 9999 }
+			position = { x = 357 y = 12 }
 			quadTextureSprite ="GFX_custom_set_button_2"
 			pdx_tooltip = FE_CUSTOM_DIFFUCULTY
 		}
@@ -514,7 +514,7 @@ guiTypes = {
 		}
 
 		instantTextBoxType={
-			position = {x = 9999 y = 9999 }
+			position = {x = 9 y = 12 }
 			name = "difficulty_text"
 			font = "hoi_24header"
 			borderSize = {x = 0 y = 0}
@@ -526,7 +526,7 @@ guiTypes = {
 
 		checkboxType = {
 			name = "very_easy_cb"
-			position = { x=9999 y=9999}
+			position = { x=9 y=47}
 			quadTextureSprite ="GFX_difficulty_button_civilian"
 			buttonText = "FE_DIFFICULTY_EASY"
 			buttonFont = "hoi_20b"
@@ -535,7 +535,7 @@ guiTypes = {
 
 		checkboxType = {
 			name = "easy_cb"
-			position = { x=9999 y=9999}
+			position = { x=125 y=47}
 			quadTextureSprite ="GFX_difficulty_button_recruit"
 			buttonText = "FE_DIFFICULTY_EASY"
 			buttonFont = "hoi_20b"
@@ -544,7 +544,7 @@ guiTypes = {
 
 		checkboxType = {
 			name = "normal_cb"
-			position = { x=9999 y=9999}
+			position = { x=241 y=47}
 			quadTextureSprite ="GFX_difficulty_button_regular"
 			clicksound = click_checkbox
 			buttonText = "FE_DIFFICULTY_NORMAL"
@@ -553,7 +553,7 @@ guiTypes = {
 
 		checkboxType = {
 			name = "hard_cb"
-			position = { x=9999 y=9999}
+			position = { x=357 y=47}
 			quadTextureSprite ="GFX_difficulty_button_veteran"
 			buttonText = "FE_DIFFICULTY_HARD"
 			buttonFont = "hoi_20b"
@@ -562,7 +562,7 @@ guiTypes = {
 
 		checkboxType = {
 			name = "very_hard_cb"
-			position = { x=9999 y=9999}
+			position = { x=473 y=47}
 			quadTextureSprite ="GFX_difficulty_button_elite"
 			buttonText = "FE_DIFFICULTY_VERY_HARD"
 			buttonFont = "hoi_20b"
@@ -630,7 +630,7 @@ guiTypes = {
 		}
 
 		instantTextBoxType={
-			position = {x = 9999 y = 9999 }
+			position = {x = 30 y = 103 }
 			name = "ironman_text"
 			font = "hoi_24header"
 			maxWidth = 370
@@ -643,7 +643,7 @@ guiTypes = {
 
 		checkboxType = {
 			name = "ironman_cb"
-			position = { x=9999 y =9999}
+			position = { x=530 y =101}
 			quadTextureSprite ="GFX_generic_checkbox"
 			clicksound = click_checkbox
 		}
