@@ -16,8 +16,226 @@ ideas = {
 			}
 			
 		}
-		
+		Collectivism = {
+			picture = smallarms_factory
 
+			allowed = {
+
+			}
+		
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.025
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.25
+				
+			}
+			
+		}
+		Heroism = {
+			picture = smallarms_factory
+
+			allowed = {
+
+			}
+		
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.015
+				conversion_cost_mil_to_civ_factor = -0.2
+
+			}
+			
+		}
+
+		Workers_Peasants_Red_Army = {
+			picture = smallarms_factory
+
+			allowed = {
+
+			}
+		
+			removal_cost = -1
+
+			equipment_bonus = {	
+				infantry_equipment   = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				support_equipment   = {
+					build_cost_ic = -0.15
+					instant = yes
+				}	
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				anti_tank_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				artillery_equipment  = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+		}
+		All_for_The_Front = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.15
+				conversion_cost_civ_to_mil_factor = -0.5
+			}
+		}
+		Guard = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				conscription = 0.01
+			}
+		}
+		T-34 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = EFR_STO
+
+			equipment_bonus = {	
+				armor = {
+					instant = yes
+					build_cost_ic = -0.05
+				}							
+			}
+		}
+		Motherland_is_calling  = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				conscription = 0.01
+				army_org_factor = 0.075
+				army_morale_factor = 0.025
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		Rzhev_offensive_operation = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				max_planning = 0.05
+				army_attack_factor = 0.075
+				army_defence_factor = -0.05
+			}
+		}
+	     Order_227  = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+			army_org_factor = 0.05
+			army_morale_factor = -0.075
+			}
+		}
+		
+		Heroes_social_labor = {
+			
+			picture = Heroes_social_labor
+			
+			allowed = {
+				original_tag = "SOV"
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+				
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.10
+				production_speed_buildings_factor = 0.10
+
+			}
+			
+		}
+		Chieftain_People = {
+			
+			picture = Chieftain_People
+			
+			allowed = {
+				original_tag = "SOV"
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+				
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.35		
+				production_speed_buildings_factor = 0.10
+
+			}
+			
+		}
 		GDU_SOV_Danger_To_Heartland = {
 			removal_cost = -1
 
@@ -365,7 +583,7 @@ ideas = {
 			picture = SOV_lost_control
 
 			modifier = {
-				conscription = 0.015
+				conscription = 0.02
 			}
 		}
 	    SOV_order_227 = {
@@ -399,7 +617,7 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory = 0.25
+				industrial_capacity_factory = 0.15
 				mobilization_laws_cost_factor = -0.25
 			}
 		}
