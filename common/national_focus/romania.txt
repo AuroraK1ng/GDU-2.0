@@ -1679,10 +1679,7 @@
 		}
 		available = {
 				has_war_with = SOV
-				ITA = {
-				controls_state = 446
-				}
-				date > 1941.9.1
+				date > 1941.3.1
 				}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
@@ -1720,68 +1717,10 @@
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = ROM_royal_guards_divisions_tt
-			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = tech_recon
-					}
-					division_template = {
-						name = "Royal Guards Division"
-						priority = 2
-
-						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
-
-		    	   		 	infantry = { x = 1 y = 0 }
-							infantry = { x = 1 y = 1 }
-							infantry = { x = 1 y = 2 }
-
-		    	   		 	infantry = { x = 2 y = 0 }
-							artillery_brigade = { x = 2 y = 1 }
-							artillery_brigade = { x = 2 y = 2 }
-						}
-						support = {
-							engineer = { x = 0 y = 0 }
-							recon = { x = 0 y = 1 }
-						}
-					}
-					else = {
-						division_template = {
-							name = "Royal Guards Division"
-							priority = 2
-
-							regiments = {
-								infantry = { x = 0 y = 0 }
-								infantry = { x = 0 y = 1 }
-								infantry = { x = 0 y = 2 }
-
-			    	   		 	infantry = { x = 1 y = 0 }
-								infantry = { x = 1 y = 1 }
-								infantry = { x = 1 y = 2 }
-
-			    	   		 	infantry = { x = 2 y = 0 }
-								artillery_brigade = { x = 2 y = 1 }
-								artillery_brigade = { x = 2 y = 2 }
-							}
-							support = {
-								engineer = { x = 0 y = 0 }
-							}
-						}
-					}
+			
+					add_ideas = Rom_Guards
 				}
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 46 }
-					create_unit = {
-						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0"
-						owner = ROM
-					}
-				}
-			}
-		}
+				
 	}
 
 	focus = {

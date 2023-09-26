@@ -587,10 +587,10 @@ focus_tree = {
 				controls_state = 448
 					
 			}
-		date > 1942.1.1
+		date > 1941.6.1
 		}
 		completion_reward = {
-			448 = {
+			2 = {
 				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
@@ -625,7 +625,7 @@ focus_tree = {
 				controls_state = 446
 					
 			}
-		date > 1942.8.1
+		date > 1942.1.1
 		}
 		completion_reward = {
 		add_ideas = ITA_Def_AFR_1 
@@ -658,12 +658,12 @@ focus_tree = {
 				controls_state = 458
 					
 			}
-		date > 1943.2.1
+		date > 1942.6.1
 		}
 		completion_reward = {
 		ITA = { remove_ideas = ITA_Def_AFR_1 }
 		add_ideas = ITA_Def_AFR_2
-			448 = {
+			159 = {
 				add_building_construction = {
 					type = arms_factory
 					level = 6
@@ -1250,7 +1250,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_marines_and_landing_craft }
 		x = 9
 		y = 4
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1269,7 +1269,7 @@ focus_tree = {
 		completion_reward = {
 					add_tech_bonus = {
 				name = Africa_Lesson
-				bonus = 1.00
+				bonus = 1.25
 				uses = 2
 				category = infantry_weapons
 			}
@@ -1285,7 +1285,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_Blackshirts }
 		x = 8
 		y = 5
-		cost = 5
+		cost = 0
 		ai_will_do = {
 			factor = 1
 		}
@@ -1301,60 +1301,60 @@ focus_tree = {
 			
 		}
 	}
-	focus = {
-		id = ITA_Mediterranean
-		icon = GFX_Italy_Marines
-        text = "Dominance in Mediterranean"
-		prerequisite = { focus = ITA_effort_Marines }
-		x = 10
-		y = 5
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
+#	focus = {
+#		id = ITA_Mediterranean
+#		icon = GFX_Italy_Marines
+#       text = "Dominance in Mediterranean"
+#		prerequisite = { focus = ITA_effort_Marines }
+#		x = 10
+#		y = 5
+#		cost = 5
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#			ITA = {
+#				controls_state = 114
+#								
+#			}
+#			ITA = {
+#
+#				controls_state = 116
+#								
+#			}
+#			ITA = {
+#
+#				controls_state = 164
+#								
+#			}
+#			ITA = {
+#
+#				controls_state = 183
+#								
+#			}
+#			ITA = {
+#
+#				controls_state = 182
+#								
+#			}
+#			ITA = {
+#
+#				controls_state = 115
+#								
+#			}
+#			ITA = {
+#
+#				controls_state = 1
+#								
+#			}
+#		}
+#
+#		completion_reward = {
+#						
+#		}
+#	}
 
-		available = {
-			ITA = {
-
-				controls_state = 114
-								
-			}
-			ITA = {
-
-				controls_state = 116
-								
-			}
-			ITA = {
-
-				controls_state = 164
-								
-			}
-			ITA = {
-
-				controls_state = 183
-								
-			}
-			ITA = {
-
-				controls_state = 182
-								
-			}
-			ITA = {
-
-				controls_state = 115
-								
-			}
-			ITA = {
-
-				controls_state = 1
-								
-			}
-		}
-
-		completion_reward = {
-						
-		}
-	}
 	focus = {
 		id = ITA_armored_effort
 		icon = GFX_ITA_p26
