@@ -22,6 +22,78 @@ ideas = {
 				fascism_acceptance = 100
 			}
 		}
+		ROM_Totalen_Krieg = {
+
+			allowed_civil_war = {
+				
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.025
+				industrial_capacity_factory = 0.025
+				stability_factor = 0.10
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		ROM_Spread_wings = {
+
+			allowed_civil_war = {
+				
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.075
+				production_speed_buildings_factor = 0.2
+			}
+		}
+		ROM_Weapons_for_front = {
+
+			allowed = {
+
+			}
+
+
+			removal_cost = -1
+
+			picture = generic_wall_line
+
+
+			equipment_bonus = {	
+				infantry_equipment   = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				}
+				
+		}
+		ROM_Revanchism = {
+
+			allowed_civil_war = {
+				
+			}
+			
+			modifier = {
+			industrial_capacity_factory = 0.05
+				
+			}
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.025
+				defense_bonus_against = 0.025
+				}
+		}
+		ROM_war_GRE = {
+
+			allowed_civil_war = {
+				
+			}
+			
+			modifier = {
+				army_org_factor = 0.05
+				army_morale_factor = 0.025
+
+			}
+		}
 		Rom_Guards = {
 		picture = Waffen_SS
 			allowed = {
@@ -37,7 +109,7 @@ ideas = {
 
 
          	modifier = {
-                army_attack_factor = 0.1
+                army_attack_factor = 0.05
 			}
 		}
 		ROM_Resita_art  = {

@@ -2262,6 +2262,372 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = HUN_Test
+		text = "Totalen Krieg"
+		icon = GFX_GER_total_war
+		x = 23
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+		 date > 1941.1.1
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		154 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+		add_ideas = HUN_Totalen_Krieg
+			
+		}
+	}
+	focus = {
+		id = HUN_Test_2
+		Text = "Lessons from Yugoslavia"
+		icon = GFX_HUN_defense
+		prerequisite = { focus = HUN_Test }
+		relative_position_id = HUN_Test
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = HUN_war_Yugo
+		}
+	}
+	focus = {
+		id = HUN_Test_3
+		text = "War against communism"
+		icon = GFX_GER_czech
+		prerequisite = { focus = HUN_Test }
+		relative_position_id = HUN_Test
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 90
+		}
+		available = {
+				has_war_with = SOV
+			
+		}
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+
+		completion_reward = {
+			add_ideas = HUN_war_with_commi
+		}
+	}
+	focus = {
+		id = HUN_Test_4
+		text = "Ostarbeiters "
+		icon = GFX_HUN_rural
+		prerequisite = { focus = HUN_Test_2 }
+		prerequisite = { focus = HUN_Test_3 }
+		relative_position_id = HUN_Test_3
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+		available = {
+		 GER = {
+				controls_state = 91
+					
+			}
+		GER = {
+				controls_state = 202
+					
+			}
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+
+		completion_reward = {
+		45 = { add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				}
+				45 = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			
+		}
+	}
+		focus = {
+		id = HUN_Test_5
+		Text = "Assault brigades"
+		icon = GFX_HUN_infantry
+		prerequisite = { focus = HUN_Test_4 }
+		relative_position_id = HUN_Test_4
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 1.00
+				uses = 2
+				category = infantry_weapons
+			}
+		add_tech_bonus = {
+				bonus = 1.00
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = HUN_Test_6
+		Text = "Own power"
+		icon = GFX_HUN_greater_hungary
+		prerequisite = { focus = HUN_Test_5 }
+		relative_position_id = HUN_Test_5
+		mutually_exclusive = { focus = HUN_Test_7 }
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+
+		completion_reward = {
+		43 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+			
+		}
+	}
+	focus = {
+		id = HUN_Test_7
+		Text = "Axis support"
+		icon = GFX_European_Axis
+		prerequisite = { focus = HUN_Test_5 }
+		relative_position_id = HUN_Test_5
+		mutually_exclusive = { focus = HUN_Test_6 }
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+
+		completion_reward = {
+		43 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+		39 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+		50 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			
+		}
+	}
+	focus = {
+		id = HUN_Test_8
+		text = "In the shadow"
+		icon = GFX_HUN_germany
+		prerequisite = { focus = HUN_Test_7 }
+		x = 0
+		y = 1
+		relative_position_id = HUN_Test_7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+
+		153 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+		39 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+			
+		}
+	}
+	focus = {
+		id = HUN_Test_9
+		text = "Spread wings"
+		icon = GFX_HUN_army
+		prerequisite = { focus = HUN_Test_6 }
+		x = 0
+		y = 1
+		relative_position_id = HUN_Test_6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 100
+			155 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+				add_ideas = HUN_Spread_wings
+			
+		}
+	}
 
 	############################
 	##### Naval Branch    ######
