@@ -88,7 +88,7 @@ focus_tree = {
 
 		prerequisite = { focus = SOV_great_purge }
 		relative_position_id = SOV_great_purge
-		x = -4
+		x = -3
 		y = 1
 
 		cost = 5
@@ -130,7 +130,7 @@ focus_tree = {
 		icon = GFX_Noras_USSR_anticapitalist_diplomacy
 		relative_position_id = SOV_great_purge
 		prerequisite = { focus = SOV_great_purge }
-		x = 4
+		x = 3
 		y = 1
 
 		cost = 5
@@ -1573,7 +1573,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-				add_ideas = Guard
 				add_ideas = All_for_The_Front
 		}
 	}	
@@ -1730,6 +1729,28 @@ focus_tree = {
 		logistics_skill = 6
 		}
 			}
+		}
+	}
+	focus = {
+		id = SOV_Guards
+		text = "Make a Guard"
+		icon = GFX_goal_ger_me262
+		prerequisite = { focus = SOV_defense_of_stalingrad }
+		relative_position_id = SOV_defense_of_stalingrad
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1942.6.1									  
+			}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_ideas = Guard
 		}
 	}
 	focus = {
@@ -1891,7 +1912,7 @@ focus_tree = {
       date > 1943.1.1
     }
     relative_position_id = SOV_defense_of_stalingrad
-    x = 0
+    x = -1
     y = 1
     cost = 0
 
@@ -1910,7 +1931,7 @@ focus_tree = {
       date > 1943.6.1
     }
     relative_position_id = SOV_defense_of_stalingrad
-    x = 0
+    x = -1
     y = 2
     cost = 0
 
@@ -1930,7 +1951,7 @@ focus_tree = {
       date > 1944.1.1
     }
     relative_position_id = SOV_defense_of_stalingrad
-    x = 0
+    x = -1
     y = 3
     cost = 0
 
@@ -1950,7 +1971,7 @@ focus_tree = {
       date > 1944.6.1
     }
     relative_position_id = SOV_defense_of_stalingrad
-    x = 0
+    x = -1
     y = 4
     cost = 0
 
@@ -2035,7 +2056,7 @@ focus_tree = {
 		focus = { 
 		id = SOV_Workers_Peasants_Red_Army
 		text = "Workers and Peasants Red Army"
-		icon = GFX_Soviet_War_Economy
+		icon = GFX_Goal_Soviet_guns
 		prerequisite = { focus = SOV_t_34 }
 		prerequisite = { focus = SOV_Stalin_Organ }
 		available = {
@@ -2155,63 +2176,18 @@ focus_tree = {
 			}
 		}
 	}
-		focus = {
-		id = SOV_me262
-		icon = GFX_goal_ger_me262
-		prerequisite = { focus = SOV_tranformation_of_nature }
-		relative_position_id = SOV_tranformation_of_nature
-		x = 1
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			date > 1942.6.1
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			set_technology = { jet_engines = 1 }
-			add_tech_bonus = {
-				name = jet_fighter_bonus
-				bonus = 1.5
-				uses = 1
-				technology = jet_fighter1
-			}		
-		}
-	}	
-			focus = {
-		id = SOV_YAK_3
-		icon = GFX_goal_ger_me262
-		prerequisite = { focus = SOV_tranformation_of_nature }
-		relative_position_id = SOV_tranformation_of_nature
-		text = "Yak-3"
-		x = -1
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			date > 1942.6.1
-		}
-		available_if_capitulated = yes
-
-		completion_reward = {
-		set_technology = { advanced_small_airframe = 1 }			
-		}
-	}	
+		
 	focus = {
 		id = SOV_collectivist_propaganda
 		icon = GFX_goal_commune_politics
 		prerequisite = { focus = SOV_stalin_constitution }
 		mutually_exclusive = { focus = SOV_Propaganda_Heroism }
 		relative_position_id = SOV_stalin_constitution
-		x = -6
+		x = -5
 		y = 1
-
+		available = {
+			date > 1937.1.1
+		}
 		cost = 10
 		ai_will_do = {
 			factor = 0.25
@@ -2230,7 +2206,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = SOV_collectivist_propaganda }
 		relative_position_id = SOV_stalin_constitution
-		x = -6
+		x = -5
 		y = 2
 		cost = 5
 		ai_will_do = {
@@ -2249,7 +2225,7 @@ focus_tree = {
 		prerequisite = { focus = SOV_militarized_schools }
 		text = "Minsk Maneuvers 1936"
 		relative_position_id = SOV_stalin_constitution
-		x = -6
+		x = -5
 		y = 3
 		cost = 5
 		ai_will_do = {
@@ -2279,9 +2255,11 @@ focus_tree = {
 		mutually_exclusive = { focus = SOV_collectivist_propaganda }
 		prerequisite = { focus = SOV_stalin_constitution }
 		relative_position_id = SOV_stalin_constitution
-		x = -8
+		x = -7
 		y = 1
-
+		available = {
+			date > 1937.1.1
+		}
 		cost = 10
 		ai_will_do = {
 			factor = 0.25
@@ -2300,7 +2278,7 @@ focus_tree = {
 		prerequisite = { focus = SOV_Propaganda_Heroism }
 		text = "Heroes of social labor"
 		relative_position_id = SOV_stalin_constitution
-		x = -8
+		x = -7
 		y = 2
 		cost = 5
 		ai_will_do = {
@@ -2319,7 +2297,7 @@ focus_tree = {
 		prerequisite = { focus = SOV_Heroes_social_labor }
 		text = "Kiev Maneuvers 1935"
 		relative_position_id = SOV_stalin_constitution
-		x = -8
+		x = -7
 		y = 3
 		cost = 5
 		ai_will_do = {
@@ -2422,7 +2400,55 @@ focus_tree = {
 			}			
 		}
 	}
+	focus = {
+		id = SOV_me262
+		icon = GFX_goal_ger_me262
+		prerequisite = { focus = SOV_women_pilots }
+		relative_position_id = SOV_women_pilots
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1942.6.1
+		}
 
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_technology = { jet_engines = 1 }
+			add_tech_bonus = {
+				name = jet_fighter_bonus
+				bonus = 1.5
+				uses = 1
+				technology = jet_fighter1
+			}		
+		}
+	}	
+			focus = {
+		id = SOV_YAK_3
+		icon = GFX_goal_ger_me262
+		prerequisite = { focus = SOV_women_pilots }
+		prerequisite = { focus = SOV_raskovas_aviation_group }
+		relative_position_id = SOV_women_pilots
+		text = "Yak-3"
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1942.6.1
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+		set_technology = { advanced_small_airframe = 1 }			
+		}
+	}	
 	focus = {
 		id = SOV_progress_cult
 		icon = GFX_Noras_USSR_progress_cult

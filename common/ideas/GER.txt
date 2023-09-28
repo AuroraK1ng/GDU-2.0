@@ -20,7 +20,118 @@ ideas = {
 			
 			removal_cost = -1
 		}
+		GER_Axis_Power = {
 
+			allowed_civil_war = {
+				
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.015
+				industrial_capacity_factory = 0.075
+			}
+		}
+		Axis_Power = {
+
+			allowed_civil_war = {
+				
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.025
+				industrial_capacity_factory = 0.1
+			}
+		}
+		Mobile_Infantry = {
+
+			allowed_civil_war = {
+				
+			}
+			
+			equipment_bonus = {	
+				
+				motorized_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+			}
+			modifier = {
+			army_speed_factor = 0.05
+			land_reinforce_rate = 0.025
+			}
+		}
+		War_in_the_East = {
+
+			allowed_civil_war = {
+				
+			}
+
+			modifier = {
+			army_morale_factor = 0.025
+			supply_consumption_factor = -0.05
+			}
+		}
+		
+		Massive_production = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = EFR_STO
+
+			equipment_bonus = {	
+				armor = {
+					instant = yes
+					build_cost_ic = -0.025
+				}							
+			}
+		}
+		GER_ostarbeiter = {
+
+			allowed_civil_war = {
+				
+			}
+			equipment_bonus = {	
+				infantry_equipment   = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				support_equipment   = {
+					build_cost_ic = -0.1
+					instant = yes
+				}	
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				anti_tank_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				artillery_equipment  = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+			modifier = {
+			consumer_goods_factor = -0.025
+			industrial_capacity_factory = 0.1
+			}
+		}
+		Preparing_for_war = {
+
+			allowed_civil_war = {
+				
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.03
+				industrial_capacity_factory = 0.05
+			}
+		}
 		german_leningrad = {
 
 			allowed = {
