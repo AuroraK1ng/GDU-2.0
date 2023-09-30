@@ -1438,7 +1438,7 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_war_in_the_east_4
-		Text = "Tank strikes"
+		Text = "Achtung panzer!"
 		icon = GFX_ger_achtung_panzer
 		prerequisite = { focus = GER_war_in_the_east_2 }
 		prerequisite = { focus = GER_war_in_the_east_5 }
@@ -1454,6 +1454,14 @@ activate_mission = GER_relocate_industry_from_friesland
 		search_filters = {}
 
 		completion_reward = {
+		army_experience = 500
+		add_tech_bonus = {
+				name = HUN_motorized_support_bonus
+				bonus = 1.00
+				uses = 2
+				category = hospital_tech
+				category = logistics_tech
+			}
 			
 		}
 	}

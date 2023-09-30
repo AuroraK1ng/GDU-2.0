@@ -13,7 +13,7 @@ focus_tree = {
 	default = no
 
 	continuous_focus_position = { x = 1000 y = 1000 }
-
+	
 	focus = {
 		id = ITA_ethiopian_war_logistics
 		icon = GFX_goal_ita_ethiopian_war_logistics
@@ -1179,7 +1179,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_Duce
-    	icon = GFX_baionette
+    	icon = GFX_ITA_Duce_scream
 		text = "Duce Supremo"
 		prerequisite = { focus = ITA_special_forces }
 		prerequisite = { focus = ITA_Blackshirts }
@@ -1201,7 +1201,7 @@ focus_tree = {
 	}
 		focus = {
 		id = ITA_command
-    	icon = GFX_baionette
+    	icon = GFX_focus_ITA_stato_maggiore_italiano
 		text = "Stato Maggiore Italiano"
 		prerequisite = { focus = ITA_Duce }
 		x = 6
@@ -1594,7 +1594,7 @@ focus_tree = {
 
 	focus = {
 		id = ITA_effort_Marines
-		icon = GFX_Italy_Marines
+		icon = GFX_ITA_Corpo_dei_marine
         text = "Corpo dei Marines"
 		prerequisite = { focus = ITA_capital_ships }
 		prerequisite = { focus = ITA_light_ship_effort }

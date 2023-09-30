@@ -297,7 +297,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_move_industry_to_urals
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_goal_soviet_infrastructure_focus
 		x = 0
 		y = 1
 		relative_position_id = SOV_great_purge
@@ -798,7 +798,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_defense_Odesa
-		icon = GFX_focus_AST_war_japan
+		icon = GFX_Goal_Soviet_Defense
 		prerequisite = { focus = SOV_move_industry_to_urals }
 		text = "Defense of Odesa"
 
@@ -876,7 +876,7 @@ focus_tree = {
 	}
 		focus = {
 		id = SOV_defense_Kiev
-		icon = GFX_focus_AST_war_japan
+		icon = GFX_goal_sov_army_rehab
 		prerequisite = { focus = SOV_defense_Odesa }
 		text = "Defense of Kiev"
 
@@ -1734,7 +1734,7 @@ focus_tree = {
 	focus = {
 		id = SOV_Guards
 		text = "Make a Guard"
-		icon = GFX_goal_ger_me262
+		icon = GFX_goal_sov_great_patriotic_war
 		prerequisite = { focus = SOV_defense_of_stalingrad }
 		relative_position_id = SOV_defense_of_stalingrad
 		x = 1
@@ -2179,7 +2179,7 @@ focus_tree = {
 		
 	focus = {
 		id = SOV_collectivist_propaganda
-		icon = GFX_goal_commune_politics
+		icon = GFX_goal_sov_industry_urals
 		prerequisite = { focus = SOV_stalin_constitution }
 		mutually_exclusive = { focus = SOV_Propaganda_Heroism }
 		relative_position_id = SOV_stalin_constitution
@@ -2203,7 +2203,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_militarized_schools
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_goal_sov_red_army_resurgent
 		prerequisite = { focus = SOV_collectivist_propaganda }
 		relative_position_id = SOV_stalin_constitution
 		x = -5
@@ -2274,7 +2274,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Heroes_social_labor
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_SOV_military
 		prerequisite = { focus = SOV_Propaganda_Heroism }
 		text = "Heroes of social labor"
 		relative_position_id = SOV_stalin_constitution
@@ -3592,7 +3592,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_wartime_propaganda
-		icon = GFX_focus_generic_soviet_politics
+		icon = GFX_goal_sov_increase_production
 		prerequisite = { focus = SOV_defense_of_moscow }
 		relative_position_id = SOV_move_industry_to_urals
 		x = -2
@@ -3635,7 +3635,7 @@ focus_tree = {
 	focus = {
 		id = SOV_Chieftain
 		text = "Chieftain of the People"
-		icon = GFX_focus_generic_soviet_politics
+		icon = GFX_goal_sov_cult_of_stalin
 		prerequisite = { focus = SOV_wartime_propaganda }
 		relative_position_id = SOV_wartime_propaganda
 		x = 1
@@ -3681,7 +3681,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_military_reorganization
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_SOV_equipment
 		prerequisite = { focus = SOV_rehabilitated_military }
 		x = 0
 		y = 1
