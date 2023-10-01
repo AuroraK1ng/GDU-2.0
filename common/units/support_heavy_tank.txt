@@ -1,0 +1,56 @@
+sub_units = {
+	support_heavy_armor = {
+		abbreviation = "HAS"
+		sprite = heavy_armor
+		map_icon_category = armored
+		priority = 0
+		ai_priority = 0
+		active = yes
+		training_time = 180
+		affects_speed = no
+		type = {
+			armor
+			support
+		}
+		
+		categories = {
+			category_support_battalions
+			category_all_armor
+			category_army
+		}
+		
+		group = support
+		
+
+		fort = {
+			attack = 0.05
+		}
+
+		combat_width = 0
+
+		need = {
+			heavy_tank_chassis = 40
+		}
+
+		manpower = 300
+		max_organisation = 30
+		default_morale = 0.2
+		max_strength = 1
+		weight = 1.0
+		
+		supply_consumption = 0.24
+
+		#support heavy tank uses less fuel than full battalion
+		fuel_consumption = -0.5
+
+		can_be_parachuted = no		
+
+		#support unit nerf
+		ap_attack = -0.9
+		armor_value = -0.9
+		
+		same_support_type = armor	
+	}
+}
+
+	

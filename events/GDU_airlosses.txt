@@ -1,0 +1,407 @@
+﻿add_namespace = gduairlosses
+
+country_event = { 
+	id = gduairlosses.1
+	title = gduairlosses.1.t
+	desc = gduairlosses.1.d
+	picture = GFX_report_event_canadian_soldiers
+	
+	hidden = yes
+	
+	is_triggered_only = yes 
+	
+	immediate = { 
+				SOV = {
+					add_ideas = GDU1942_airlosses
+				}	
+				ENG = {
+					add_ideas = GDU1942_airlosses
+				}
+				USA = {
+					add_ideas = GDU1942_airlosses
+				}
+				CAN = {
+					add_ideas = GDU1942_airlosses
+				}
+				SAF = {
+					add_ideas = GDU1942_airlosses
+				}
+				RAJ = {
+					add_ideas = GDU1942_airlosses
+				}
+				AST = {
+					add_ideas = GDU1942_airlosses
+				}
+				NZL = {
+					add_ideas = GDU1942_airlosses
+				}
+				FRA = {
+					add_ideas = GDU1942_airlosses
+				}
+				GER = {
+					add_ideas = GDU1942_airlosses
+				}		
+				ITA = {
+					add_ideas = GDU1942_airlosses
+				}		
+				SPR = {
+					add_ideas = GDU1942_airlosses
+				}		
+				HUN = {
+					add_ideas = GDU1942_airlosses
+				}		
+				ROM = {
+					add_ideas = GDU1942_airlosses
+				}		
+				BUL = {
+					add_ideas = GDU1942_airlosses
+				}		
+				FIN = {
+					add_ideas = GDU1942_airlosses
+				}
+				JAP = {
+					add_ideas = GDU1942_airlosses
+				}
+				SIA = {
+					add_ideas = GDU1942_airlosses
+				}					
+				AST = { remove_ideas = AST_papua }
+				NZL = { remove_ideas = AST_papua }				
+	}
+	
+	option = {
+		name = gduairlosses.1.a
+	
+	}
+}	
+	
+country_event = { 
+	id = gduairlosses.2
+	title = gduairlosses.2.t
+	desc = gduairlosses.2.d
+	picture = GFX_report_event_canadian_soldiers
+	
+	hidden = yes	
+	
+	is_triggered_only = yes 
+	
+	immediate = { 
+				SOV = {
+					swap_ideas = { 
+						remove_idea = GDU1942_airlosses
+						add_idea = GDU1943_airlosses
+					}		}
+				ENG = {
+					swap_ideas = { 
+						remove_idea = GDU1942_airlosses
+						add_idea = GDU1943_airlosses
+					}				}
+				USA = {
+					swap_ideas = { 
+						remove_idea = GDU1942_airlosses
+						add_idea = GDU1943_airlosses
+					}				}
+				CAN = {
+					swap_ideas = { 
+						remove_idea = GDU1942_airlosses
+						add_idea = GDU1943_airlosses
+					}				}
+				SAF = {
+					swap_ideas = { 
+						remove_idea = GDU1942_airlosses
+						add_idea = GDU1943_airlosses
+					}				}
+				RAJ = {
+					swap_ideas = { 
+						remove_idea = GDU1942_airlosses
+						add_idea = GDU1943_airlosses
+					}				}
+				AST = {
+					swap_ideas = { 
+						remove_idea = GDU1942_airlosses
+						add_idea = GDU1943_airlosses
+					}				}
+				NZL = {
+					swap_ideas = { 
+						remove_idea = GDU1942_airlosses
+						add_idea = GDU1943_airlosses
+					}				}
+				FRA = {
+					swap_ideas = { 
+						remove_idea = GDU1942_airlosses
+						add_idea = GDU1943_airlosses
+					}				}
+				GER = {
+					swap_ideas = { 
+						remove_idea = GDU1942_airlosses
+						add_idea = GDU1943_airlosses
+					}				}		
+				ITA = {
+					swap_ideas = { 
+						remove_idea = GDU1942_airlosses
+						add_idea = GDU1943_airlosses
+					}				}		
+				SPR = {
+					swap_ideas = { 
+						remove_idea = GDU1942_airlosses
+						add_idea = GDU1943_airlosses
+					}				}		
+				HUN = {
+					swap_ideas = { 
+						remove_idea = GDU1942_airlosses
+						add_idea = GDU1943_airlosses
+					}				}		
+				ROM = {
+					swap_ideas = { 
+						remove_idea = GDU1942_airlosses
+						add_idea = GDU1943_airlosses
+					}				}		
+				BUL = {
+					swap_ideas = { 
+						remove_idea = GDU1942_airlosses
+						add_idea = GDU1943_airlosses
+					}				}		
+				FIN = {
+					swap_ideas = { 
+						remove_idea = GDU1942_airlosses
+						add_idea = GDU1943_airlosses
+					}				}
+				JAP = {
+					swap_ideas = { 
+						remove_idea = GDU1942_airlosses
+						add_idea = GDU1943_airlosses
+					}				}
+SIA = {
+					swap_ideas = { 
+						remove_idea = GDU1942_airlosses
+						add_idea = GDU1943_airlosses
+					}				}					
+	}
+	
+	option = {
+		name = gduairlosses.2.a
+	
+	}	
+}
+
+
+
+
+country_event = { 
+	id = gduairlosses.3
+	title = gduairlosses.3.t
+	desc = gduairlosses.3.d
+	picture = GFX_report_event_canadian_soldiers
+	
+	hidden = yes	
+	
+	is_triggered_only = yes 
+	
+	immediate = { 
+				SOV = {
+					swap_ideas = { 
+						remove_idea = GDU1943_airlosses
+						add_idea = GDU1944_airlosses
+					}				}	
+				ENG = {
+					swap_ideas = { 
+						remove_idea = GDU1943_airlosses
+						add_idea = GDU1944_airlosses
+					}				}
+				USA = {
+					swap_ideas = { 
+						remove_idea = GDU1943_airlosses
+						add_idea = GDU1944_airlosses
+					}				}
+				CAN = {
+					swap_ideas = { 
+						remove_idea = GDU1943_airlosses
+						add_idea = GDU1944_airlosses
+					}				}
+				SAF = {
+					swap_ideas = { 
+						remove_idea = GDU1943_airlosses
+						add_idea = GDU1944_airlosses
+					}				}
+				RAJ = {
+					swap_ideas = { 
+						remove_idea = GDU1943_airlosses
+						add_idea = GDU1944_airlosses
+					}				}
+				AST = {
+					swap_ideas = { 
+						remove_idea = GDU1943_airlosses
+						add_idea = GDU1944_airlosses
+					}				}
+				NZL = {
+					swap_ideas = { 
+						remove_idea = GDU1943_airlosses
+						add_idea = GDU1944_airlosses
+					}				}
+				FRA = {
+					swap_ideas = { 
+						remove_idea = GDU1943_airlosses
+						add_idea = GDU1944_airlosses
+					}				}
+				GER = {
+					swap_ideas = { 
+						remove_idea = GDU1943_airlosses
+						add_idea = GDU1944_airlosses
+					}				}		
+				ITA = {
+					swap_ideas = { 
+						remove_idea = GDU1943_airlosses
+						add_idea = GDU1944_airlosses
+					}				}		
+				SPR = {
+					swap_ideas = { 
+						remove_idea = GDU1943_airlosses
+						add_idea = GDU1944_airlosses
+					}				}		
+				HUN = {
+					swap_ideas = { 
+						remove_idea = GDU1943_airlosses
+						add_idea = GDU1944_airlosses
+					}				}		
+				ROM = {
+					swap_ideas = { 
+						remove_idea = GDU1943_airlosses
+						add_idea = GDU1944_airlosses
+					}				}		
+				BUL = {
+					swap_ideas = { 
+						remove_idea = GDU1943_airlosses
+						add_idea = GDU1944_airlosses
+					}				}		
+				FIN = {
+					swap_ideas = { 
+						remove_idea = GDU1943_airlosses
+						add_idea = GDU1944_airlosses
+					}				}
+				JAP = {
+					swap_ideas = { 
+						remove_idea = GDU1943_airlosses
+						add_idea = GDU1944_airlosses
+					}				}
+SIA = {
+					swap_ideas = { 
+						remove_idea = GDU1943_airlosses
+						add_idea = GDU1944_airlosses
+					}				}					
+	}
+	
+	option = {
+		name = gduairlosses.3.a
+	
+	}	
+}
+
+country_event = { 
+	id = gduairlosses.4
+	title = gduairlosses.4.t
+	desc = gduairlosses.4.d
+	picture = GFX_report_event_canadian_soldiers
+	
+	hidden = yes	
+	
+	is_triggered_only = yes 
+	
+	immediate = { 
+				SOV = {
+					swap_ideas = { 
+						remove_idea = GDU1944_airlosses
+						add_idea = GDU1945_airlosses
+					}				}
+
+SIA = {
+					swap_ideas = { 
+						remove_idea = GDU1944_airlosses
+						add_idea = GDU1945_airlosses
+					}				}					
+				ENG = {
+					swap_ideas = { 
+						remove_idea = GDU1944_airlosses
+						add_idea = GDU1945_airlosses
+					}				}
+				USA = {
+					swap_ideas = { 
+						remove_idea = GDU1944_airlosses
+						add_idea = GDU1945_airlosses
+					}				}
+				CAN = {
+					swap_ideas = { 
+						remove_idea = GDU1944_airlosses
+						add_idea = GDU1945_airlosses
+					}				}
+				SAF = {
+					swap_ideas = { 
+						remove_idea = GDU1944_airlosses
+						add_idea = GDU1945_airlosses
+					}				}
+				RAJ = {
+					swap_ideas = { 
+						remove_idea = GDU1944_airlosses
+						add_idea = GDU1945_airlosses
+					}				}
+				AST = {
+					swap_ideas = { 
+						remove_idea = GDU1944_airlosses
+						add_idea = GDU1945_airlosses
+					}				}
+				NZL = {
+					swap_ideas = { 
+						remove_idea = GDU1944_airlosses
+						add_idea = GDU1945_airlosses
+					}				}
+				FRA = {
+					swap_ideas = { 
+						remove_idea = GDU1944_airlosses
+						add_idea = GDU1945_airlosses
+					}				}
+				GER = {
+					swap_ideas = { 
+						remove_idea = GDU1944_airlosses
+						add_idea = GDU1945_airlosses
+					}				}		
+				ITA = {
+					swap_ideas = { 
+						remove_idea = GDU1944_airlosses
+						add_idea = GDU1945_airlosses
+					}				}		
+				SPR = {
+					swap_ideas = { 
+						remove_idea = GDU1944_airlosses
+						add_idea = GDU1945_airlosses
+					}				}		
+				HUN = {
+					swap_ideas = { 
+						remove_idea = GDU1944_airlosses
+						add_idea = GDU1945_airlosses
+					}				}		
+				ROM = {
+					swap_ideas = { 
+						remove_idea = GDU1944_airlosses
+						add_idea = GDU1945_airlosses
+					}				}		
+				BUL = {
+					swap_ideas = { 
+						remove_idea = GDU1944_airlosses
+						add_idea = GDU1945_airlosses
+					}				}		
+				FIN = {
+					swap_ideas = { 
+						remove_idea = GDU1944_airlosses
+						add_idea = GDU1945_airlosses
+					}				}
+				JAP = {
+					swap_ideas = { 
+						remove_idea = GDU1944_airlosses
+						add_idea = GDU1945_airlosses
+					}				}		
+	}
+	
+	option = {
+		name = gduairlosses.4.a
+	
+	}
+}

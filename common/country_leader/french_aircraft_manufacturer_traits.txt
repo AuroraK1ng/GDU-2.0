@@ -1,0 +1,95 @@
+leader_traits = {
+	
+####### FRENCH AIRCRAFT MANUFACTURERS #######
+
+	morane_saulnier_aircraft_manufacturer = {
+		#on_add = { hidden_effect = { make_air_designers_free = yes } }
+		random = no
+		equipment_bonus = {
+			small_plane_airframe = {
+				air_agility = 0.10 maximum_speed = 0.10 reliability = 0.10 
+			}
+		}
+	}
+	
+	breguet_aircraft_manufacturer = {
+		#on_add = { hidden_effect = { make_air_designers_free = yes } }
+		random = no
+		equipment_bonus = {
+			medium_plane_fighter_airframe  = {
+				reliability = 0.2
+			}
+			small_plane_cas_airframe = {
+				air_ground_attack = 0.1 reliability = 0.1
+			}
+			cv_small_plane_cas_airframe = {
+				air_ground_attack = 0.1 reliability = 0.15
+			}
+		}
+	}
+	
+	potez_aircraft_manufacturer = {
+		#on_add = { hidden_effect = { make_air_designers_free = yes } }
+		random = no
+		equipment_bonus = {
+			medium_plane_fighter_airframe  = {
+				reliability = 0.2 air_agility = 0.1 air_range = 0.1
+			}
+		}
+	}
+	
+	latecoere_aircraft_manufacturer = {
+		#on_add = { hidden_effect = { make_air_designers_free = yes } }
+		random = no
+		equipment_bonus = {
+			small_plane_naval_bomber_airframe  = {
+				air_range = 0.1 naval_strike_attack = 0.1
+			}
+			cv_small_plane_naval_bomber_airframe  = {
+				air_range = 0.1 naval_strike_attack = 0.1
+			}
+		}
+	}
+	
+	dewoitine_aircraft_manufacturer = {
+		#on_add = { hidden_effect = { make_air_designers_free = yes } }
+		random = no
+		equipment_bonus = {
+			small_plane_airframe = {
+				air_agility = 0.10 maximum_speed = 0.10
+			}
+			cv_small_plane_airframe = {
+				air_agility = 0.10 maximum_speed = 0.1 air_range = -0.1
+			}
+			small_plane_naval_bomber_airframe  = {
+				air_range = 0.1 naval_strike_attack = 0.1
+			}
+		}
+	}
+	
+	bloch_aircraft_manufacturer = {
+		#on_add = { hidden_effect = { make_air_designers_free = yes } }
+		random = no
+		equipment_bonus = {
+			small_plane_airframe = {
+				air_agility = 0.15 maximum_speed = 0.15 air_defence = 0.1 reliability = 0.1 air_range = -0.1
+			}
+			medium_plane_airframe = {
+				reliability = 0.2
+			}
+			large_plane_airframe = {
+				air_bombing = 0.1 reliability = 0.1 maximum_speed = 0.3
+			}
+		}
+	}
+	
+	amiot_aircraft_manufacturer = {
+		#on_add = { hidden_effect = { make_air_designers_free = yes } }
+		random = no
+		equipment_bonus = {
+			medium_plane_airframe = {
+				reliability = 0.2 maximum_speed = 0.1
+			}
+		}
+	}
+}

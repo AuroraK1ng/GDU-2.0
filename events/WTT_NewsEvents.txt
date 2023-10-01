@@ -1,0 +1,39 @@
+﻿add_namespace = wtt_news
+
+
+###############
+news_event = {
+	id = wtt_news.1000
+	title = wtt_germany.1001.t
+	desc = wtt_news.1000.desc
+	picture = GFX_news_event_japanese_parade
+
+	is_triggered_only = yes
+
+	fire_for_sender = no
+	
+	option = {
+		name = wtt_news.1000.a
+		trigger = {
+			NOT = { original_tag = GER }
+		}
+	}
+}
+
+news_event = {
+	id = wtt_news.1001
+	title = wtt_germany.1001.t
+	desc = wtt_news.1001.desc
+	picture = GFX_news_event_japanese_parade
+
+	is_triggered_only = yes
+
+	fire_for_sender = no
+	
+	option = {
+		name = wtt_news.1001.a
+		trigger = {
+			NOT = { original_tag = GER }
+		}
+	}
+}

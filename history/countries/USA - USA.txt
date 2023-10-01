@@ -1,0 +1,682 @@
+﻿capital = 361
+
+oob = "USA_1936"
+
+set_naval_oob = "USA_1936_naval_mtg"
+
+starting_train_buffer = 5
+
+set_convoys = 800
+
+set_research_slots = 5
+
+set_stability = 0.8
+set_war_support = 0
+
+
+# Starting tech
+
+add_opinion_modifier = { target = JAP modifier = jap_trade }
+add_opinion_modifier = { target = JAP modifier = jap_trade_2 }
+add_opinion_modifier = { target = JAP modifier = jap_trade_3 }
+add_opinion_modifier = { target = JAP modifier = jap_trade_4 }
+
+add_timed_idea = { idea = airandnavy_idea days = 1775 }
+add_timed_idea = { idea = USA_naval_disarmament days = 541 }
+set_technology = {
+	airfield_construction = 1
+	fort_construction = 1
+	##early_submarine = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		basic_depth_charges = 1
+		##basic_encryption = 1
+		##basic_encryption = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		improved_airplane_launcher = 1
+		##basic_submarine = 1
+		##early_destroyer = 1
+		##early_light_cruiser = 1
+		##basic_light_cruiser = 1
+		##early_heavy_cruiser = 1
+		##early_carrier = 1
+		##early_battlecruiser = 1
+		##early_carrier = 1
+		##basic_carrier = 1
+		##transport = 1
+	interwar_artillery = 1
+	gwtank_chassis = 1
+	cv_early_fighterx = 1
+	basic_light_tank_chassis = 1
+		infantry_weapons2 = 1
+		heavy_fighter1x = 1
+		support_weapons = 1
+		support_weapons2 = 1
+		marines = 1
+		CAS1x = 1
+		cv_fighter1x = 1
+		naval_bomber1x = 1
+		cv_naval_bomber1x = 1
+		interwar_antitank = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	iw_small_airframe = 1
+	basic_small_airframe = 1
+	iw_medium_airframe = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	superior_firepower = 1
+	base_strike = 1
+	motorised_infantry = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	marines = 1
+	basic_train = 1
+}
+add_intel = {
+	target = BUl
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = SPR
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = USA
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = ENG
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = SOV
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = RAJ
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = ITA
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = GER
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = ROM
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = HUN
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = JAP
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = CAN
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = FRA
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = SAF
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = AST
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = NZL
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_equipment_to_stockpile = {
+         type = artillery_equipment_1
+         amount = 1900
+         producer = USA
+}  
+add_equipment_to_stockpile = {
+         type = train_equipment_1
+         amount = 300
+         producer = USA
+}  
+add_equipment_to_stockpile = {
+         type = support_equipment
+         amount = 1591
+         producer = USA
+} 
+add_equipment_to_stockpile = {
+         type = anti_air_equipment_1
+         amount = 946
+         producer = USA
+} 
+add_equipment_to_stockpile = {
+         type = infantry_equipment_1
+         amount = 20000
+         producer = USA
+}
+add_equipment_to_stockpile = {
+         type = motorized_equipment_1
+         amount = 1118
+         producer = USA
+} 
+
+
+
+
+
+add_equipment_to_stockpile = {
+         type = CAS_equipment_1
+         amount = 100
+         producer = USA
+}
+add_equipment_to_stockpile = {
+         type = tac_bomber_equipment_0
+         amount = 250
+         producer = USA
+}
+add_equipment_to_stockpile = {
+         type = heavy_fighter_equipment_1
+         amount = 100
+         producer = USA
+}
+add_equipment_to_stockpile = {
+         type = nav_bomber_equipment_1
+         amount = 100
+         producer = USA
+}
+add_equipment_to_stockpile = {
+         type = cv_fighter_equipment_1
+         amount = 100
+         producer = USA
+}
+add_equipment_to_stockpile = {
+         type = cv_nav_bomber_equipment_1
+         amount = 100
+         producer = USA
+}
+create_corps_commander = {
+	name = "George S. Patton AFRICANUS"
+	picture = "AFRICA_Portrait_USA_George_S_Patton.dds"
+	traits = { trickster armor_officer panzer_leader war_hero trait_reckless panzer_leader hill_fighter desert_fox trait_mountaineer expert_improviser panzer_expert }
+	skill = 6
+
+	attack_skill = 9
+	defense_skill = 5
+	planning_skill = 5
+	logistics_skill = 6
+}
+create_corps_commander = {
+	name = "Lloyd Fredendall AFRICANUS"
+	picture = "AFRICA_Portrait_USA_Lloyd_Fredendall.dds"
+	traits = { old_guard infantry_officer infantry_leader inflexible_strategist naval_invader desert_fox trait_mountaineer}
+	skill = 6
+
+	attack_skill = 7
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Jonathan Wainwright AFRICANUS"
+	picture = "AFRICA_Portrait_USA_Jonathan_Wainwright.dds"
+	traits = { desert_fox career_officer commando infantry_leader skilled_staffer politically_connected urban_assault_specialist } 
+	skill = 6
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 4
+	logistics_skill = 8
+}
+add_equipment_to_stockpile = {
+         type = artillery_equipment_1
+         amount = 1900
+         producer = USA
+}  
+add_equipment_to_stockpile = {
+         type = support_equipment
+         amount = 1591
+         producer = USA
+} 
+add_equipment_to_stockpile = {
+         type = anti_air_equipment_1
+         amount = 946
+         producer = USA
+} 
+add_equipment_to_stockpile = {
+         type = infantry_equipment_1
+         amount = 20000
+         producer = USA
+}
+add_equipment_to_stockpile = {
+         type = infantry_equipment_0
+         amount = 25000
+         producer = USA
+} 
+add_equipment_to_stockpile = {
+         type = motorized_equipment_1
+         amount = 1118
+         producer = USA
+} 
+
+
+
+
+
+add_equipment_to_stockpile = {
+         type = CAS_equipment_1
+         amount = 100
+         producer = USA
+}
+add_equipment_to_stockpile = {
+         type = tac_bomber_equipment_0
+         amount = 250
+         producer = USA
+}
+add_equipment_to_stockpile = {
+         type = heavy_fighter_equipment_1
+         amount = 100
+         producer = USA
+}
+add_equipment_to_stockpile = {
+         type = nav_bomber_equipment_1
+         amount = 100
+         producer = USA
+}
+add_equipment_to_stockpile = {
+         type = cv_fighter_equipment_1
+         amount = 100
+         producer = USA
+}
+add_equipment_to_stockpile = {
+         type = cv_nav_bomber_equipment_1
+         amount = 100
+         producer = USA
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1932.11.8"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 100
+	 fascism = 0
+	communism = 0
+}
+# DIPLOMACY
+
+recruit_character = USA_william_dudley_pelley
+recruit_character = USA_franklin_delano_roosevelt
+recruit_character = USA_george_s_patton
+recruit_character = USA_george_s_patton_highcommand
+recruit_character = USA_omar_bradley
+recruit_character = USA_dwight_d_eisenhower
+recruit_character = USA_geoffrey_keyes
+recruit_character = USA_lucian_truscott
+recruit_character = USA_mark_clark
+recruit_character = USA_douglas_macarthur
+recruit_character = USA_walter_krueger
+recruit_character = USA_lloyd_fredendall
+recruit_character = USA_leslie_mcnair
+recruit_character = USA_jonathan_wainwright
+recruit_character = USA_russell_hartle
+recruit_character = USA_leonard_gerow
+recruit_character = USA_edward_brooks
+recruit_character = USA_clarence_huebner
+recruit_character = USA_alexander_patch
+recruit_character = USA_william_simpson
+recruit_character = USA_stonewall_campbell
+recruit_character = USA_wade_babcock
+recruit_character = USA_j_lawton_collins
+recruit_character = USA_courtney_hodges
+recruit_character = USA_joseph_stilwell
+recruit_character = USA_oscar_griswold
+recruit_character = USA_maurice_rose
+recruit_character = USA_alexander_vandegrift
+recruit_character = USA_ernest_king
+recruit_character = ernest_king_2
+recruit_character = USA_chester_w_nimitz
+recruit_character = USA_william_halsey_jr
+recruit_character = USA_frank_jack_fletcher
+recruit_character = USA_raymond_a_spruance
+recruit_character = USA_harold_rainsford_stark
+recruit_character = USA_arleigh_burke
+recruit_character = USA_charles_m_cooke_jr
+recruit_character = USA_carnot_wheeler
+recruit_character = USA_robert_goddard
+recruit_character = USA_robert_oppenheimer
+recruit_character = USA_curtis_lemay
+recruit_character = USA_thomas_kinkaid
+recruit_character = USA_henry_arnold
+recruit_character = USA_dewitt_clinton_ramsey
+recruit_character = USA_harold_mcclelland
+recruit_character = USA_charles_lindbergh
+recruit_character = USA_george_kenney
+recruit_character = USA_john_cannon
+recruit_character = USA_george_marshall
+recruit_character = USA_carl_spaatz
+recruit_character = USA_marc_mitscher
+recruit_character = USA_jimmy_doolittle
+recruit_character = USA_claire_lee_chennault
+recruit_character = USA_john_winant
+recruit_character = USA_chester_w_nimitz_2
+recruit_character = USA_robert_taft
+recruit_character = USA_donald_nelson
+
+recruit_character = USA_cordell_hull
+
+recruit_character = USA_william_regnery
+recruit_character = USA_joseph_patterson
+recruit_character = USA_henry_stimson
+recruit_character = USA_victor_perlo
+
+
+add_ideas = {
+	ernest_king_1
+	undisturbed_isolation
+	great_depression
+	disarmed_nation
+	free_trade
+	home_of_the_free
+	inexperienced_army
+	GDU_refinery_prebuild_disincentive
+	
+	
+
+}
+
+
+
+### VARIANTS ###
+# 1936 Start #
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	create_equipment_variant = {			# represents O/R class, S class
+		name = "SS1"
+		type = ship_hull_submarine_1
+		name_group = USA_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_torpedo_sub_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "SS2"			# represents Barracuda, Dolphin, Cachalot classes
+		type = ship_hull_submarine_2
+		name_group = USA_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_2
+			fixed_ship_engine_slot = sub_ship_engine_2
+			rear_1_custom_slot = ship_torpedo_sub_2
+		}
+		obsolete = yes
+	}
+	# Destroyers #
+	create_equipment_variant = {
+		name = "DD1 AA"				# represents Sampson, Caldwell, Clemson, and Wickes classes
+		type = ship_hull_light_1
+		name_group = USA_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = dp_light_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = ship_sonar_1
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_anti_air_1
+			rear_1_custom_slot = ship_anti_air_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "DD1 Torp"				# represents Farragut, Porter, Mahan classes
+		type = ship_hull_light_1
+		name_group = USA_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = dp_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_anti_air_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+	# Light Cruisers #
+	create_equipment_variant = {
+		name = "CL2 Light"
+		type = ship_hull_cruiser_2
+		name_group = USA_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_2
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = cruiser_ship_engine_2
+				fixed_ship_armor_slot = ship_armor_cruiser_2
+				fixed_ship_secondaries_slot = ship_secondaries_2
+				front_1_custom_slot = ship_light_medium_battery_2
+				mid_1_custom_slot = ship_light_medium_battery_2
+				mid_2_custom_slot = ship_light_medium_battery_2
+				rear_1_custom_slot = ship_light_medium_battery_2
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "CL1 Light"				#cruiser minelayers
+		type = ship_hull_cruiser_1
+		name_group = USA_MINELAYERS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = ship_light_medium_battery_1
+			mid_2_custom_slot = ship_light_medium_battery_1
+			rear_1_custom_slot = ship_light_medium_battery_1
+		}
+	}
+	# Heavy Cruisers #
+	create_equipment_variant = {
+		name = "CA1 Heavy"			# Pensacola and Northampton classes
+		type = ship_hull_cruiser_1
+		name_group = USA_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = ship_airplane_launcher_2
+			mid_2_custom_slot = ship_medium_battery_2
+			rear_1_custom_slot = ship_medium_battery_2
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "CA2 Heavy"				# Portland and New CA2 Heavyes
+		type = ship_hull_cruiser_2
+		name_group = USA_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = ship_airplane_launcher_2
+			mid_2_custom_slot = ship_medium_battery_2
+			rear_1_custom_slot = ship_medium_battery_2
+		}
+		obsolete = yes
+	}
+	# Battleships #
+	create_equipment_variant = {
+		name = "BB1 Light"				# represents Pennsylvania, Nevada, Tennessee, and New Mexico classes
+		type = ship_hull_heavy_1
+		name_group = USA_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = ship_heavy_battery_1
+			mid_1_custom_slot = ship_airplane_launcher_1
+			mid_2_custom_slot = ship_airplane_launcher_1
+			rear_1_custom_slot = ship_heavy_battery_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "BB1 Heavy"				
+		type = ship_hull_heavy_1
+		name_group = USA_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			fixed_ship_armor_slot = ship_armor_bb_2
+			front_1_custom_slot = ship_heavy_battery_2
+			mid_1_custom_slot = ship_airplane_launcher_2
+			mid_2_custom_slot = ship_airplane_launcher_2
+			rear_1_custom_slot = ship_heavy_battery_2
+		}
+	}
+	# Carriers #
+	create_equipment_variant = {
+		name = "CV1"
+		type = ship_hull_carrier_conversion_bb
+		name_group = USA_CV_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_deck_slot_1 = ship_deck_space
+			fixed_ship_deck_slot_2 = ship_deck_space
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			mid_1_custom_slot = ship_deck_space
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "CV2"
+		type = ship_hull_carrier_1
+		name_group = USA_CV_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_deck_slot_1 = ship_deck_space
+			fixed_ship_deck_slot_2 = ship_deck_space
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = carrier_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			front_1_custom_slot = ship_deck_space
+			
+		}
+		obsolete = yes
+	}
+}
+
+
+

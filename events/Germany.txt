@@ -1,0 +1,1466 @@
+﻿###########################
+# German Events
+###########################
+
+add_namespace = germany
+
+# Austrian Anschluss Completed
+country_event = {
+	id = germany.4
+	title = germany.4.t
+	desc = germany.4.d
+	picture = GFX_report_event_german_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.4.a
+		4 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = GER
+			}
+		}
+		152 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = GER
+			}
+		}
+		153 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = GER
+			}
+		}
+		hidden_effect = { 
+			4 = { remove_core_of = AUS }
+			152 = { remove_core_of = AUS }
+			153 = { remove_core_of = AUS } 
+			AUS = { remove_state_claim  = 39 } 
+		}
+		annex_country = { target = AUS transfer_troops = yes }
+		add_political_power = 75
+		custom_effect_tooltip = anschluss_mefo_bills_tt
+
+		custom_effect_tooltip = anschluss_mefo_bills_double_reduction
+		hidden_effect = {
+			add_named_threat = { threat = 10 name = germany.4.t }
+			set_country_flag = AUS_annexed
+			news_event = { hours = 6 id = news.36 }
+			GER = {
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 2000
+					producer = GER
+				}  
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 460
+					producer = GER
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 2000
+					producer = GER
+				} 
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 35671
+					producer = GER
+				} 
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 110
+					producer = GER
+				} 
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 1500
+					producer = GER
+				} 				
+			}			
+		}
+}
+}
+
+#anti_comintern_pact
+# nations are asked to join pact, agreeing = relations with GER and hit with SOV
+
+country_event = {
+	id = germany.5
+	title = germany.5.t
+	desc = germany.5.d
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.5.a		#join
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 2
+				has_opinion = {
+					target = SOV
+					value < -10
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_opinion = {
+					target = GER
+					value < -10
+				}
+			}
+		}
+		set_country_flag = anti_comintern_member
+		GER = { add_opinion_modifier = { target = ROOT modifier = anti_comintern_pact_opinion } }
+		add_opinion_modifier = { target = GER modifier = anti_comintern_pact_opinion }
+		SOV  = { add_opinion_modifier = { target = ROOT modifier = pact_against_us } }
+	}
+
+	option = {
+		name = germany.5.b		#refuse
+		trigger = { NOT = { is_puppet_of = GER } }
+		ai_chance = {
+			factor = 25
+		}
+		GER =  { add_opinion_modifier = { target = ROOT modifier = refused_anti_comintern_pact_opinion } }
+	}
+
+}
+
+# tripartite_pact
+# anti_comintern_pact nations are asked to join pact, agreeing = relations with GER and hit with SOV
+
+country_event = {
+	id = germany.6
+	title = germany.6.t
+	desc = germany.6.d
+	picture = GFX_report_event_hitler_croatia_handshake
+
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.6.a		#join
+		remove_opinion_modifier = { target = GER modifier = anti_comintern_pact_opinion }
+		add_opinion_modifier = { target = GER modifier = tripartite_pact_opinion }
+		remove_opinion_modifier = { target = SOV modifier = pact_against_us }
+		add_opinion_modifier = { target = SOV modifier = worse_pact_against_us }
+	}
+
+	option = {
+		name = germany.6.b		#refuse
+		trigger = { NOT = { is_puppet_of = GER } }
+		add_opinion_modifier = { target = GER modifier = refused_tripartite_pact_opinion }
+	}
+
+}
+
+#molotov_ribbentrop_pact
+# fire event to SOV to accept or not. adds claims
+# SOV events sends reply to GER, adds claims if they said yes, hurts relations if they say no
+
+# Molotov-Ribbentrop Pact (Soviets)
+country_event = {
+	id = germany.11
+	title = germany.11.t
+	desc = germany.11.d
+	picture = GFX_report_event_molotov_ribentrop_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.11.a	#sounds good
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				GER = {
+					OR = {
+						has_wargoal_against = SOV
+						is_justifying_wargoal_against = SOV
+					}
+					NOT = {
+						is_in_faction_with = SOV
+					}
+				}
+			}
+		}
+		add_opinion_modifier = { target = GER modifier = MR_pact }# pact
+		custom_effect_tooltip = germany.11.a.tt
+		add_state_claim = 96
+		add_state_claim = 11
+		add_state_claim = 12
+		add_state_claim = 13
+		add_state_claim = 190
+		add_state_claim = 191
+		add_state_claim = 146
+		add_state_claim = 147
+		add_state_claim = 189
+		add_state_claim = 784 
+		add_state_claim = 78
+		add_state_claim = 89
+		add_state_claim = 91
+		add_state_claim = 93
+		add_state_claim = 94
+		add_state_claim = 95
+		add_state_claim = 96
+		add_state_claim = 97
+		add_state_claim = 80
+		set_global_flag = finland_flag
+
+		hidden_effect =  {
+			add_timed_idea = { idea = SOV_molotov_ribbentrop_pact days = 730 }
+			SOV = {
+				country_event = { days = 3 id = soviet.4 }
+				country_event = { days = 1 id = soviet.10 }
+				#country_event = { days = 5 id = soviet.31 }
+			}
+
+			POL = {
+				remove_state_core = 784
+				remove_state_core = 78
+				remove_state_core = 89
+				remove_state_core = 91
+				remove_state_core = 93
+				remove_state_core = 94
+				remove_state_core = 95
+				remove_state_core = 96
+				remove_state_core = 80
+				remove_state_core = 73
+			}
+			FRA = { 
+				country_event = { days = 10 id = france.24 } 
+			}
+		}
+		GER = {
+			country_event = { days = 1 id = germany.12 }
+			effect_tooltip = {
+				add_opinion_modifier = { target = SOV modifier = MR_pact }# pact
+			}
+		}
+		add_named_threat = { threat = 5 name = SOV_molotov_ribbentrop_tension }
+		set_global_flag = sov_yes_pact
+	}
+}
+
+# Soviets Sign MR Pact
+country_event = {
+	id = germany.12
+	title = germany.12.t
+	desc = germany.12.d
+	picture = GFX_report_event_molotov_signing_pact
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.12.a	#neat
+		every_other_country = {
+			limit = {
+				NOT = { tag = GER }
+				has_government = fascism
+			}
+			add_opinion_modifier = { target = GER modifier = MR_pact_fascists }
+		}
+		diplomatic_relation = { country = SOV relation = non_aggression_pact }
+		add_opinion_modifier = { target = SOV modifier = MR_pact }# pact
+		hidden_effect = {
+			country_event = { hours = 6 id = news.32 }
+		}
+	}
+}
+
+
+# Poland conquered... honor MR Pact?
+country_event = {
+	id = germany.14
+	title = germany.14.t
+	desc = germany.14.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		has_global_flag = sov_yes_pact
+		SOV = { exists = yes }
+		NOT =  { has_war_with = SOV }
+		OR = {
+			OR = {
+				owns_state = 96
+				owns_state = 95
+				owns_state = 94
+				owns_state = 93
+				owns_state = 91
+				owns_state = 97
+				owns_state = 89
+			}
+			AND = {
+				POL = { has_capitulated = yes }
+				OR = {
+					controls_state = 96
+					controls_state = 95
+					controls_state = 94
+					controls_state = 93
+					controls_state = 91
+					controls_state = 97
+					controls_state = 89
+				}
+			}
+			OR = {
+				any_other_country = {
+					is_in_faction_with = GER
+					GER = {
+						is_faction_leader = yes
+					}
+					OR = {
+						owns_state = 96
+						owns_state = 95
+						owns_state = 94
+						owns_state = 93
+						owns_state = 91
+						owns_state = 97
+						owns_state = 89
+						AND = {
+							POL = { has_capitulated = yes }
+							OR = {
+								controls_state = 96
+								controls_state = 95
+								controls_state = 94
+								controls_state = 93
+								controls_state = 91
+								controls_state = 97
+								controls_state = 89
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				AND = {
+					POL = {
+						is_ai = no
+						has_civil_war = no
+					}
+					is_in_faction_with = POL
+				}
+			}
+		}
+		name = germany.14.a
+		if = {
+			limit = {
+				96 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 96
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 96 }
+			SOV = { add_state_core = 96 }
+		}
+		if = {
+			limit = {
+				784 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 784
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 784 }
+			SOV = { add_state_core = 784 }			
+		}
+		if = {
+			limit = {
+				95 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 95
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 95 }
+			SOV = { add_state_core = 95 }			
+		}
+		if = {
+			limit = {
+				94 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 94
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 94 }
+			SOV = { add_state_core = 94 }			
+		}
+		if = {
+			limit = {
+				93 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 93
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 93 }
+			SOV = { add_state_core = 93 }			
+		}
+		if = {
+			limit = {
+				91 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 91
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 91 }
+			SOV = { add_state_core = 91 }
+		}
+		if = {
+			limit = {
+				97 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 97
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 97 }
+			SOV = { add_state_core = 97 }
+		}
+		if = {
+			limit = {
+				89 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 89
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 89 }
+			SOV = { add_state_core = 89 }
+		}
+		if = {
+			limit = {
+				751 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 751
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 751 }
+			SOV = { add_state_core = 751 }
+		}
+		SOV = { country_event = germany.15 }
+	}
+}
+
+# Germany honors MR Pact (Soviets)
+country_event = {
+	id = germany.15
+	title = germany.15.t
+	desc = germany.15.d
+	picture = GFX_report_event_soviet_german_soldier_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.12.a
+		if = {
+			limit = {
+				SOV = {
+					controls_state = 93
+					controls_state = 94
+				}
+			}
+		}
+	}
+}
+
+
+
+# Claim Memel - Lithuania Folds
+country_event = {
+	id = germany.22
+	title = germany.22.t
+	desc = germany.22.d
+	picture = GFX_report_event_vienna_award_hungary
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.22.a
+		GER = {
+			transfer_state = 188
+		}
+	}
+}
+
+# Fortifying the Westwall
+country_event = {
+	id = germany.27
+	title = germany.27.t
+	desc = germany.27.d
+	picture = GFX_report_event_bunker_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.27.a
+		50 = {
+			add_building_construction = {
+				type = bunker
+				province = 2807
+				level = 5
+			}
+			add_building_construction = {
+				type = bunker
+				province = 6712
+				level = 5
+			}
+			add_building_construction = {
+				type = bunker
+				province = 6542
+				level = 5
+			}
+			add_building_construction = {
+				type = bunker
+				province = 3530
+				level = 5
+			}
+		}
+		42 = {
+			add_building_construction = {
+				type = bunker
+				province = 3558
+				level = 5
+			}
+			add_building_construction = {
+				type = bunker
+				province = 563
+				level = 5
+			}
+			add_building_construction = {
+				type = bunker
+				province = 2917
+				level = 5
+			}
+			add_building_construction = {
+				type = bunker
+				province = 5903
+				level = 5
+			}
+		}
+	}
+}
+
+# Austria asked about Anschluss
+country_event = {
+	id = germany.28
+	title = germany.28.t
+	desc = germany.28.d
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = germany.28.a
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -25
+				GER = { has_army_size = { size < 40 } }
+			}
+			modifier = {
+				add = 100
+				GER = { has_army_size = { size > 39 } }
+			}
+		}
+		GER = {
+			country_event = { hours = 2 id = germany.4 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+}
+
+
+### Munich Conference
+
+# Britain
+country_event = {
+	id = germany.40
+	title = germany.40.t
+	desc = {
+		text = germany.40.d
+		trigger = { NOT = { has_war_with = GER } }
+	}
+	desc = {
+		text = germany.40.d_2
+		trigger = { has_war_with = GER }
+	}
+	picture = GFX_report_event_german_politician_speech
+
+	is_triggered_only = yes
+
+	option = { # Abandon the Czechs
+		name = germany.40.a
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0.3
+				has_government = communism
+				CZE = { has_government = communism }
+			}
+			modifier = {
+				has_global_flag = GER_has_started_war
+				NOT = { is_in_faction_with = GER }
+				factor = 0
+			}
+		}
+		FRA = { country_event = germany.41 }
+		CZE = {
+			add_opinion_modifier = { target = ENG modifier = western_betrayal }
+		}
+	}
+}
+
+# France (Britain Backs Down)
+country_event = {
+	id = germany.41
+	title = germany.40.t
+	desc = germany.41.d
+	picture = GFX_report_event_chamberlain_announce
+
+	is_triggered_only = yes
+
+	option = { # Follow Britain's lead
+		name = germany.41.a
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				is_in_faction_with = CZE
+			}
+			modifier = {
+				factor = 0.3
+				has_government = communism
+				CZE = { has_government = communism }
+			}
+			modifier = {
+				has_global_flag = GER_has_started_war
+				factor = 0
+			}
+		}
+		CZE = {
+			country_event = germany.46
+			add_opinion_modifier = { target = FRA modifier = western_betrayal }
+		}
+		if = {
+			limit = {
+				is_in_faction_with = CZE
+				is_faction_leader = yes
+			}
+		}
+		if = {
+			limit = {
+				is_in_faction_with = CZE
+				is_faction_leader = no
+			}
+			random_other_country = {
+				limit = {
+					is_in_faction_with = FRA
+					is_faction_leader = yes
+				}
+				remove_from_faction = FRA
+			}
+		}
+	}
+}
+
+# France (Britain Supports the Czechs)
+country_event = {
+	id = germany.42
+	title = germany.40.t
+	desc = germany.42.d
+	picture = GFX_report_event_czech_soldiers_01
+
+	is_triggered_only = yes
+
+	#Support
+	option = {
+		name = germany.42.a
+		trigger = {
+			is_puppet = no
+		}
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				is_in_faction_with = GER
+			}
+		}
+		if = {
+			limit = {
+				is_in_faction = yes
+				NOT = { is_in_faction_with = ENG }
+				NOT = { is_in_faction_with = CZE }
+			}
+			remove_from_faction = FRA
+		}
+		if = {
+			limit = {
+				NOT = { is_in_faction_with = ENG }
+				NOT = { is_in_faction_with = CZE }
+				}
+			ENG = { add_to_faction = FRA }
+			add_ai_strategy = {
+				type = alliance
+				id = "ENG"
+				value = 200
+			}
+		}
+		if = {
+			limit = {
+				is_in_faction_with = CZE
+				is_faction_leader = yes
+				NOT = { is_in_faction_with = ENG }
+			}
+			add_to_faction = ENG #Britain joins the little entente
+		}
+		add_opinion_modifier = { target = GER modifier = condemn_aggression }
+		CZE = {
+			country_event = germany.44
+			add_opinion_modifier = { target = FRA modifier = offered_support }
+		}
+		GER = {
+			country_event = germany.47
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = CZE
+					generator = { 69 }
+				}
+			}
+		}
+	}
+
+	#Abandon
+	option = {
+		name = germany.42.b
+		trigger = {
+			NOT = { is_in_faction_with = ENG }
+			NOT = { is_in_faction_with = CZE }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				has_global_flag = GER_has_started_war
+				NOT = { is_in_faction_with = GER } #FRA doesn't care if in faction
+				factor = 0
+			}
+		}
+		CZE = {
+			country_event = germany.44
+			add_opinion_modifier = { target = FRA modifier = western_betrayal }
+		}
+		GER = {
+			country_event = germany.47
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = CZE
+					generator = { 69 }
+				}
+			}
+		}
+	}
+}
+
+# France leaves the Allies
+country_event = {
+	id = germany.43
+	title = germany.43.t
+	desc = germany.43.d
+	picture = GFX_report_event_french_british_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.43.a
+		FRA = {
+			add_opinion_modifier = { target = ENG modifier = abandoned_czechs }
+		}
+	}
+}
+
+# Czechoslovakia (British and (possibly) French Support)
+country_event = {
+	id = germany.44
+	title = germany.40.t
+	desc = germany.44.d
+	picture = GFX_report_event_german_inspect_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.44.a
+		effect_tooltip = {
+			GER = {
+				create_wargoal = {
+					type = take_state_focus
+					target = CZE
+					generator = { 69 }
+				}
+			}
+		}
+	}
+}
+
+# Czechoslovakia (French Support)
+country_event = {
+	id = germany.45
+	title = germany.40.t
+	desc = germany.45.d
+	picture = GFX_report_event_chamberlain_announce
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.45.a
+		effect_tooltip = {
+			GER = {
+				create_wargoal = {
+					type = take_state_focus
+					target = CZE
+					generator = { 69 }
+				}
+			}
+		}
+	}
+}
+
+# Czechoslovakia (Abandoned)
+country_event = {
+	id = germany.46
+	title = germany.46.t
+	desc = germany.46.d
+	picture = GFX_report_event_czech_soldiers_01
+
+	is_triggered_only = yes
+
+	option = { # Surrender the Sudetenland
+		name = germany.46.a
+		ai_chance = {
+			factor = 90
+			modifier = { # Decrease chance CZE resists if AUS isn't taken first
+				AUS = { exists = yes }
+				factor = 0.5
+			}
+			modifier = { # If they stand a chance they will fight
+				factor = 0
+				strength_ratio = {
+					tag = GER
+					ratio > 0.75
+				}
+				NOT = {
+					any_neighbor_country = {
+						NOT = { tag = GER }
+						is_in_faction_with = GER
+					}
+				}
+			}
+			modifier = {
+				factor = 0 #if you lead a faction, fight
+				is_faction_leader = yes
+			}
+			modifier = {
+				factor = 0.05 #if you are in a faction, maybe fight
+				is_faction_leader = no
+				is_in_faction = yes
+			}
+			modifier = {
+				factor = 0
+				is_puppet = yes
+				NOT = { is_puppet_of = GER } #puppeted CZE wouldn't surrender Sudetenland otherwise
+			}
+			modifier = { # Increase it again if other bordering nations are in Axis
+				any_neighbor_country = {
+					NOT = { tag = GER }
+					is_in_faction_with = GER
+				}
+				factor = 2.0
+			}
+		}
+		GER = { country_event = germany.50 }
+	}
+}
+
+# Germany (Czechoslovakia Surrenders Sudetenland)
+country_event = {
+	id = germany.50
+	title = germany.40.t
+	desc = germany.50.d
+	picture = GFX_report_event_german_politician_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.50.a
+		69 = { add_core_of = GER }
+		GER = { transfer_state = 69 }
+		74 = { add_core_of = GER }
+		GER = { transfer_state = 74 }
+		set_country_flag = sudetenland_acquired
+
+		if = {
+			limit = {
+				88 = { is_owned_by = POL }
+			}
+			POL = {
+				country_event = { hours = 6 id = germany.52 }
+			}
+		}
+	}
+}
+
+# Hungary (First Vienna Award)
+country_event = {
+	id = germany.51
+	title = germany.51.t
+	desc = germany.51.d
+	picture = GFX_report_event_vienna_award_negotiations
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.51.a
+		HUN = { transfer_state = 664 }
+	}
+}
+
+# Poland (Zaolzie)
+country_event = {
+	id = germany.52
+	title = germany.52.t
+	desc = germany.52.d
+	picture = GFX_report_event_polish_tanks_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.52.a
+		72 = { add_core_of = POL }
+		POL = { transfer_state = 72 }
+	}
+}
+
+# Czechoslovakia (The Fate of Czechoslovakia)
+country_event = {
+	id = germany.53
+	title = germany.53.t
+	desc = germany.53.d
+	picture = GFX_report_event_german_politician_speech
+
+	is_triggered_only = yes
+
+	option = { # Agree
+		name = germany.53.a
+		ai_chance = {
+			factor = 100
+		}
+		GER = { country_event = germany.55 }
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+
+}
+
+
+# The Fate of Czechoslovakia
+country_event = {
+	id = germany.55
+	title = germany.53.t
+	desc = {
+		text = germany.55.d
+		trigger = { has_global_flag = end_of_czechoslovakia }
+	}
+	desc = {
+		text = germany.55.d_2
+		trigger = { NOT = { has_global_flag = end_of_czechoslovakia } }
+	}
+	picture = GFX_report_event_german_inspect_troops
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			CZE = {
+				set_technology = { basic_medium_tank = 1 }
+				create_equipment_variant = {
+					name = "LT-38 E"
+					type = medium_tank_chassis_1
+					parent_version = 0
+					upgrades = {
+						tank_gun_upgrade = 2
+						tank_armor_upgrade = 4
+						tank_engine_upgrade = 3
+						tank_reliability_upgrade = 6
+					}
+				}
+			}
+			
+		}
+
+	}
+	
+	option = {
+		name = germany.55.b
+		add_to_faction = HUN
+		add_equipment_to_stockpile = {
+			type = light_tank_chassis_2
+			amount = 500
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = medium_tank_chassis_1
+			amount = 200
+			producer = GER
+		}
+		ai_chance = { 
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		HUN = { country_event = germany.56 }
+		if = {
+			limit = {
+				72 = {
+					OR = {
+						is_owned_by = CZE
+						is_owned_by = GER
+					}
+				}
+				country_exists = POL
+			}
+			POL = { transfer_state = 72 } # Give Poland Zaolzie
+		}
+		custom_effect_tooltip = end_of_czechoslovakia_mefo_bills_tt
+		add_to_variable = { var = GER_mefo_bill_counter value = -5 }
+	}
+	
+	
+}
+
+country_event = {
+	id = germany.56
+	title = germany.56.t
+	desc = {
+		text = germany.56.d
+		trigger = { has_global_flag = end_of_czechoslovakia }
+	}
+	desc = {
+		text = germany.56.d_2
+		trigger = { NOT = { has_global_flag = end_of_czechoslovakia } }
+	}
+	picture = GFX_report_event_german_inspect_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.56.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = { NOT = { has_global_flag = mini_GDU } }
+			transfer_state = 70
+			transfer_state = 71
+			transfer_state = 73
+			transfer_state = 664		
+		}
+		if = {
+			limit = { has_global_flag = mini_GDU }
+			GER = {
+				transfer_state = 70
+				transfer_state = 71
+				transfer_state = 73
+				transfer_state = 664
+			}			
+		}		
+		
+		hidden_effect = {
+			GER = {
+				annex_country = { target = CZE }
+				add_to_faction = HUN				
+			}
+			HUN = {
+				add_ai_strategy = {
+					type = alliance
+					id = "GER"
+					value = 200
+				}
+			}
+		}
+		every_state = { 
+			limit = { is_core_of = CZE } 
+			remove_core_of = CZE 
+		}
+		hidden_effect = {
+			country_event = { hours = 6 id = news.61 }
+		}
+	}
+}
+
+
+### Remilitarization of the Rhineland
+
+# French Response
+country_event = {
+	id = germany.60
+	title = germany.60.t
+	desc = germany.60.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = { # Diplomatic response
+		name = germany.60.b
+		ai_chance = { factor = 99 }
+		ENG = { country_event = germany.62 }
+		add_opinion_modifier = { target = GER modifier = protest_action }
+		add_war_support = 0.10
+		add_ideas = low_economic_mobilisation
+	}
+}
+
+
+
+# British Response (French Want Peace)
+country_event = {
+	id = germany.62
+	title = germany.60.t
+	desc = germany.62.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.62.a
+		add_opinion_modifier = { target = GER modifier = protest_action }
+	}
+}
+
+
+# Anschluss Preparations
+country_event = {
+	id = germany.74
+	title = germany.74.t
+	desc = germany.74.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.74.a
+		#add_ideas = elyesa_bazna
+	}
+}
+
+# German-Soviet Treaty (Soviets)
+country_event = {
+	id = germany.75
+	title = germany.75.t
+	desc = germany.75.d
+	picture = GFX_report_event_physics_lab_01
+
+	is_triggered_only = yes
+	
+	immediate = {  
+		hidden_effect = { 
+			GER = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = sov_ger_treaty
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = sov_ger_treaty_trade
+				}
+			}
+		}
+	}
+
+	option = {
+		name = germany.75.a	#sounds good
+		# REVISIT Balance research bonus
+		add_tech_bonus = {
+			name = med_armor_bonus
+			bonus = 1.50
+			technology = improved_medium_tank_chassis
+		}
+		add_tech_bonus = {
+			name = armor_bonus
+			bonus = 6.00 
+			uses = 1
+			technology = basic_medium_tank_chassis
+		}	
+	}
+
+}
+
+# German Joint Air Research
+country_event = {
+	id = germany.78
+	title = germany.78.t
+	desc = germany.78.d
+	picture = GFX_report_event_radar_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.78.a
+		add_tech_bonus = {
+			bonus = 1.00 
+			uses = 1
+			category = radar_tech
+		}
+	}
+}
+
+# France/England (Germany Refuses Ultimatum)
+country_event = {
+	id = germany.92
+	title = germany.92.t
+	desc = germany.92.d
+	picture = GFX_report_event_worried_french
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.92.a
+	}
+}
+
+# Flight of Rudolf No Hindenburg
+country_event = {
+	id = germany.107
+	title = germany.107.t
+	desc = germany.107.d
+	picture = GFX_report_event_airplane_crash
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = flight_of_hess
+		if = {
+			limit = {
+				has_idea = rudolf_hess
+			}
+			remove_ideas = rudolf_hess
+		}
+	}
+
+	option = {
+		name = germany.107.a
+	}
+}
+
+# Rudolf Hess killed No Hindenburg
+country_event = {
+	id = germany.108
+	title = germany.108.t
+	desc = germany.108.d
+	picture = GFX_report_event_airplane_crash
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = flight_of_hess
+		if = {
+			limit = {
+				has_idea = rudolf_hess
+			}
+			remove_ideas = rudolf_hess
+		}
+	}
+
+	option = {
+		name = germany.108.a
+	}
+}
+
+country_event = {
+	id = germany.120
+	title = germany.120.t
+	desc = germany.120.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.120.a
+	}
+}
+
+
+
+#Events in case of weirdness with German Czechoslovakia focus
+country_event = {
+	id = germany.122
+	title = germany.122.t
+	desc = germany.122.d
+	picture = GFX_report_event_german_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.122.a
+		ai_chance = {
+			factor = 100
+		}
+		if = {
+			limit = {
+				is_in_faction_with = GER
+			}
+			remove_from_faction = CZE #kicked from faction
+		}
+		effect_tooltip = {
+			GER = {
+				add_state_claim = 69
+				add_state_claim = 74
+				create_wargoal = {
+					type = take_state_focus
+					target = CZE
+					generator = { 69 74 }
+				}
+			}
+		}
+		hidden_effect = {
+			GER = {
+				country_event = { id = germany.123 days = 1 }
+			}
+		}
+	}
+
+	option = {
+		name = germany.122.b
+		ai_chance = {
+			factor = 0
+		}
+		effect_tooltip = {
+			GER = {
+				transfer_state = 69
+				transfer_state = 74
+			}
+		}
+		hidden_effect = {
+			GER = {
+				country_event = {
+					id = germany.124 days = 1
+				}
+			}
+		}
+	}
+}
+
+
+#Events in case of weirdness with German Czechoslovakia focus
+country_event = {
+	id = germany.123
+	title = germany.123.t
+	desc = germany.123.d
+	picture = GFX_report_event_czech_soldiers_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.123.a
+		add_state_claim = 69
+		add_state_claim = 74
+		create_wargoal = {
+			type = take_state_focus
+			target = CZE
+			generator = { 69 74 }
+		}
+	}
+}
+
+
+#Events in case of weirdness with German Czechoslovakia focus
+country_event = {
+	id = germany.124
+	title = germany.124.t
+	desc = germany.124.d
+	picture = GFX_report_event_german_reichstag_gathering
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.124.a
+		add_state_core = 69
+		transfer_state = 69
+		add_state_core = 74
+		transfer_state = 74
+	}
+}
+
+
+

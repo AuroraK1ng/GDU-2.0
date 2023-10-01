@@ -1,0 +1,163 @@
+bookmarks = {
+	bookmark = {
+		name = "NO_ASIA_NAME"
+		desc = "NO_ASIA_DESC"
+		date = 1936.1.1.13
+		picture = "GFX_select_date_1939"
+		default_country = "GER"
+		default = yes
+
+		"FRA"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				FRA_victors_of_wwi
+				FRA_political_violence
+				FRA_protected_by_the_maginot_line
+			}
+			focuses = {
+				FRA_army_reform
+				FRA_heavy_armor_focus
+				FRA_devalue_the_franc
+			}
+		}
+		"ENG"={
+			history = "ENG_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				stiff_upper_lip
+				ENG_the_war_to_end_all_wars
+				george_v
+			}
+			focuses = {
+				general_rearmament_focus 
+				fighter_command_focus 
+				tizard_mission_focus
+			}
+		}
+
+		"GER"={
+			history = "GER_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				GER_mefo_bills_1 
+				sour_loser
+				general_staff
+			}
+			focuses = {
+				GER_anschluss
+				GER_danzig_or_war
+				GER_ussr_war_goal
+			}
+		}
+		"ITA"={
+			history = "ITA_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				vittoria_mutilata
+				victor_emmanuel
+			}
+			focuses = {
+				ITA_mare_nostrum
+				ITA_slovenia_dalmatia_claims 
+				ITA_pact_of_steel
+			}
+		}
+		"SOV"={
+			history = "SOV_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				trotskyite_plot
+			}
+			focuses = {
+				SOV_great_purge
+				SOV_defense_of_stalingrad
+				SOV_proclaim_victory_over_fascism 
+			}
+		}
+
+		
+
+
+		# minors from DLC ####
+		"CAN"={
+			minor = yes
+			history = "CAN_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				CAN_great_depression_1
+				CAN_conscription_crisis
+			}
+			focuses = {
+				CAN_army_modernization
+			}
+		}
+		"BUL"={
+			minor = yes
+			history = "BUL_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				BUL_second_national_catastrophe
+				BUL_imro_01
+			}
+			focuses = {
+				BUL_power_to_the_tsar
+			}
+		}
+		"SAF"={
+			minor = yes
+			history = "SAF_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				SAF_ossewabrandwag
+				SAF_history_of_segregation
+			}
+			focuses = {
+				SAF_secure_interests_in_africa
+			}
+		}
+		"SPR"={
+			minor = yes
+			history = "SPR_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				SPA_carlism_1
+				SPR_national_strikes_3
+			}
+			focuses = {
+				SPA_unify_the_nationalist_front
+			}
+		}
+		"HUN"={
+			minor = yes
+			history = "HUN_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				HUN_treaty_of_triannon
+			}
+			focuses = {
+				HUN_secret_rearmament
+				HUN_renounce_the_treaty_of_trianon
+			}
+		}
+
+		"ROM"={
+			minor = yes
+			history = "ROM_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				ROM_king_carol_ii_hedonist
+				neutrality_idea
+			}
+			focuses = {
+				ROM_institute_royal_dictatorship
+				ROM_preserve_greater_romania
+			}
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

@@ -1,0 +1,99 @@
+technologies = {
+	
+
+	Spain_INF = {
+		
+		allow = {
+			always = no
+		}
+		
+		enable_subunits = {
+			infantry
+			cavalry
+		}		
+
+		research_cost = 1
+		start_year = 1936
+		
+	}
+
+	airfield_construction = {
+		
+		allow = {
+			always = no
+		}
+		
+		enable_subunits = {
+			infantry
+			cavalry
+		}		
+
+		research_cost = 1
+		start_year = 1936
+
+		enable_building = {
+			building = air_base
+			level = 10
+		}
+		enable_building = {
+			building = naval_base
+			level = 20
+		}			
+	}
+
+	noports = {
+		
+		allow = {
+			always = no
+		}
+		
+		research_cost = 1
+		start_year = 1936
+
+		enable_building = {
+            building = naval_base
+            level = 0
+        }	
+	}
+
+
+
+	fort_construction = {
+		
+		allow = {
+			always = no
+		}
+		
+		research_cost = 1
+		start_year = 1936
+
+		enable_building = {
+            building = bunker
+            level = 5
+        }
+		
+		enable_building = {
+            building = coastal_bunker
+            level = 5
+        }			
+	} 
+  
+	special_StuG_tech_GER = {
+		
+		allow = {
+			always = no
+		}
+		
+		research_cost = 1
+		start_year = 1936
+
+		category_assault_guns = {
+			breakthrough = 0.50
+			soft_attack = 0.20
+			hard_attack = 0.20
+		}
+					
+	} 
+
+
+}

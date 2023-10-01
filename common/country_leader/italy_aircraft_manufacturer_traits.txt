@@ -1,0 +1,93 @@
+leader_traits = {
+	
+####### ITALIAN AIRCRAFT MANUFACTURERS #######
+
+	macchi_aircraft_manufacturer = {
+		#on_add = { hidden_effect = { make_air_designers_free = yes } }
+		random = no
+		equipment_bonus = {
+			small_plane_airframe = {
+				air_agility = 0.15 maximum_speed = 0.15
+			}
+			cv_small_plane_airframe = {
+				air_agility = 0.15 maximum_speed = 0.1
+			}
+		}
+	}
+	
+	savoia_marchetti_aircraft_manufacturer = {
+		#on_add = { hidden_effect = { make_air_designers_free = yes } }
+		random = no
+		equipment_bonus = {
+			medium_plane_fighter_airframe  = {
+				reliability = 0.2 maximum_speed = 0.15 air_range = 0.1 air_agility = -0.1
+			}
+			small_plane_naval_bomber_airframe  = {
+				air_range = 0.1 naval_strike_attack = 0.1 maximum_speed = 0.2
+			}
+			cv_small_plane_naval_bomber_airframe  = {
+				air_range = -0.1 naval_strike_attack = 0.1
+			}
+		}
+	}
+	
+	fiat_aircraft_manufacturer = {
+		#on_add = { hidden_effect = { make_air_designers_free = yes } }
+		random = no
+		equipment_bonus = {
+			small_plane_airframe = {
+				air_agility = 0.15 maximum_speed = 0.15 reliability = 0.1
+			}
+			cv_small_plane_airframe = {
+				air_agility = 0.15 maximum_speed = 0.15 reliability = 0.1
+			}
+			medium_plane_airframe = {
+				reliability = 0.2 maximum_speed = 0.1 air_defence = 0.05
+			}
+		}
+	}
+	
+	piaggio_aircraft_manufacturer = {
+		#on_add = { hidden_effect = { make_air_designers_free = yes } }
+		random = no
+		equipment_bonus = {
+			large_plane_airframe = {
+				air_bombing = 0.1 reliability = 0.1
+			}
+		}
+	}
+	
+	breda_aircraft_manufacturer = {
+		#on_add = { hidden_effect = { make_air_designers_free = yes } }
+		random = no
+		equipment_bonus = {
+			small_plane_cas_airframe = {
+				air_ground_attack = 0.1 reliability = 0.1
+			}
+			cv_small_plane_cas_airframe = {
+				air_ground_attack = 0.1 reliability = 0.1
+			}
+		}
+	}
+	
+	imam_aircraft_manufacturer = {
+		#on_add = { hidden_effect = { make_air_designers_free = yes } }
+		random = no
+		equipment_bonus = {
+			medium_plane_fighter_airframe  = {
+				reliability = 0.2 air_range = 0.1 maximum_speed = 0.1 air_agility = -0.05
+			}
+		}
+	}
+	
+	crda_aircraft_manufacturer = {
+		#on_add = { hidden_effect = { make_air_designers_free = yes } }
+		random = no
+		equipment_bonus = {
+			medium_plane_airframe = {
+				reliability = 0.2 maximum_speed = 0.1 air_agility = 0.1 air_defence = -0.1 air_bombing = 0.05
+			}
+		}
+	}
+	
+}

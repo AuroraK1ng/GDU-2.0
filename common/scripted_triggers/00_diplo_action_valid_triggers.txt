@@ -1,0 +1,51 @@
+is_diplomatic_action_valid_stage_coup = { always = no }
+is_diplomatic_action_valid_boost_party_popularity = { always = no }
+is_diplomatic_action_valid_military_access = { always = no }
+is_diplomatic_action_valid_offer_military_access = { always = no }
+is_diplomatic_action_valid_non_aggression_pact = { always = no }
+is_diplomatic_action_valid_offer_docking_rights = { always = no }
+is_diplomatic_action_valid_docking_rights = { always = no }
+is_diplomatic_action_valid_improve_relation = { always = no }
+is_diplomatic_action_valid_assume_faction_leadership = { always = no }
+is_diplomatic_action_valid_leave_faction = { always = no }
+is_diplomatic_action_valid_join_faction = { always = no }
+is_diplomatic_action_valid_guarantee = { always = no }
+is_diplomatic_action_valid_kick_from_faction = { always = no }
+is_diplomatic_action_valid_offer_join_faction = { always = no }
+is_diplomatic_action_valid_peace_proposal = { always = no }
+is_diplomatic_action_valid_increase_autonomy = { always = no }
+is_diplomatic_action_valid_reduce_autonomy = { always = no }
+is_diplomatic_action_valid_spymaster = { always = no }
+is_diplomatic_action_valid_create_faction = { always = no }
+is_diplomatic_action_valid_request_foreign_manpower = { always = no }
+is_diplomatic_action_valid_set_faction_spymaster = { always = no }
+is_diplomatic_action_valid_transfert_spymaster = { always = no }
+
+#is_diplomatic_action_valid_revoke_embargo = { always = no } #doesnt work
+#is_diplomatic_action_valid_embargo = { always = no } #wroks
+
+
+
+is_diplomatic_action_valid_REQUEST_ACCESS_TO_LICENCE_PRODUCTION = { OR = { AND = { holnor = yes FROM = { normally_played_allies = yes }} AND = { normally_played_allies = yes FROM = { holnor = yes }}   AND = { finefr = yes FROM = { the_axis_no_finefr = yes }}  AND = { the_axis_no_finefr = yes FROM = { finefr = yes }} AND = { normally_played_allies = yes FROM = { tag = SOV }}} }
+
+#is_diplomatic_action_valid_war = { always = no } #
+#is_diplomatic_action_valid_RETURN_ATTACHE = { always = no }
+#is_diplomatic_action_valid_send_attache =  { OR = { AND = { the_geacps = yes FROM = { the_axis = yes }} AND = { is_in_faction_with = GER FROM = { the_geacps = yes }} AND = { is_in_faction_with = ENG FROM = { tag = SOV }}  AND = { tag = SOV FROM = { normally_played_allies = yes }} } }
+#is_diplomatic_action_valid_ask_for_state_control = { always = no } #Nope
+#is_diplomatic_action_valid_askstatecontrol = { always = no }  #should be correct as askstatecontrol can be used in diplomacy_scripted_triggers, but this does not work for diplo_action_valid_triggers
+#is_diplomatic_action_valid_call_ally = { always = no } #should be correct as call_ally can be used in diplomacy_scripted_triggers, but this does not work for diplo_action_valid_triggers
+#is_diplomatic_action_valid_call_ally_war = { always = no } #Nope
+#is_diplomatic_action_valid_call_ally_war_entry = { always = no } #Nope
+#is_diplomatic_action_valid_call_to_war = { always = no } #Nope
+
+#is_diplomatic_action_valid_join_ally_war_entry = { always = no } #Nope
+#is_diplomatic_action_valid_join_ally_war = { always = no } #Nope
+#is_diplomatic_action_valid_join_ally = { always = no } #Nope
+
+#is_diplomatic_action_valid_send_exp_force = { always = yes } #should be correct as send_exp_force can be used in diplomacy_scripted_triggers, but this does not work for diplo_action_valid_triggers
+#is_diplomatic_action_valid_RETURN_EXP_FORCE = { is_in_faction_with = yes     } #should be correct as RETURN_EXP_FORCE can be used in diplomacy_scripted_triggers, but this does not work for diplo_action_valid_triggers
+#is_diplomatic_action_valid_declare_war = { always = no } #will completely disable declare war and hide the button, not very useful
+#is_diplomatic_action_valid_send_volunteers = { always = no }  #should be correct as send_volunteers can be used in diplomacy_scripted_triggers, but this does not work for diplo_action_valid_triggers
+#is_diplomatic_action_valid_generate_wargoal = { always = no }  #should be correct as generate_wargoal can be used in diplomacy_scripted_triggers, but this does not work for diplo_action_valid_triggers
+#is_diplomatic_action_valid_incoming_lend_lease = { always = no } #should be correct as incoming_lend_lease can be used in diplomacy_scripted_triggers, but this does not work for diplo_action_valid_triggers
+#is_diplomatic_action_valid_lend_lease = { always = no }#should be correct as lend_lease can be used in diplomacy_scripted_triggers, but this does not work for diplo_action_valid_triggers

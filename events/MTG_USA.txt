@@ -1,0 +1,435 @@
+﻿###########################
+# USA Events
+###########################
+
+add_namespace = mtg_usa_foreign_support
+
+###  ##  ###  ### ###  ##  #  #      ## #  # ###  ###   ##  ###  ### 
+#   #  # #  # #    #  #    ## #     #   #  # #  # #  # #  # #  #  #  
+##  #  # ###  ##   #  # ## # ##      #  #  # ###  ###  #  # ###   #  
+#   #  # #  # #    #  #  # #  #       # #  # #    #    #  # #  #  #  
+#    ##  #  # ### ###  ##  #  #     ##   ##  #    #     ##  #  #  #  
+
+
+##event for FROM, USA wants donations
+country_event = {
+	id = mtg_usa_foreign_support.1
+	title = mtg_usa_foreign_support.1.t
+	desc = mtg_usa_foreign_support.1.desc
+	picture = GFX_report_event_german_politician_speech
+
+	is_triggered_only = yes
+	option = { #agree
+		name = mtg_usa_foreign_support.1.a
+		ai_chance = {
+			factor = 70
+			
+		}
+		add_political_power = 25
+		set_country_flag = USA_foreign_support_donations_approved
+		FROM = {
+			country_event = mtg_usa_foreign_support.2
+		}
+		effect_tooltip = {
+
+		}
+	}
+	option = { #refuse
+		name = mtg_usa_foreign_support.1.b
+		ai_chance = {
+			factor = 30
+		}
+		add_political_power = -25
+		FROM = {
+			country_event = mtg_usa_foreign_support.3
+		}
+	}
+}
+#event for US, donations approved
+country_event = {
+	id = mtg_usa_foreign_support.2
+	title = mtg_usa_foreign_support.2.t
+	desc = mtg_usa_foreign_support.2.desc
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+	option = { #agree
+		name = mtg_usa_foreign_support.2.a
+		ai_chance = {
+			factor = 70
+		}
+	}
+}
+#event for US, donations refused
+country_event = {
+	id = mtg_usa_foreign_support.3
+	title = mtg_usa_foreign_support.3.t
+	desc = mtg_usa_foreign_support.3.desc
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	option = { #agree
+		name = mtg_usa_foreign_support.3.a
+		ai_chance = {
+			factor = 70
+		}
+	}
+}
+
+##event for FROM, USA wants to smuggle in weapons
+country_event = {
+	id = mtg_usa_foreign_support.4
+	title = mtg_usa_foreign_support.4.t
+	desc = mtg_usa_foreign_support.4.desc
+	picture = GFX_report_event_generic_lend_lease
+
+	is_triggered_only = yes
+	option = { #agree to send some rifles
+		name = mtg_usa_foreign_support.4.a
+		ai_chance = {
+			factor = 50
+			
+		}
+		add_political_power = 25
+		FROM = {
+			country_event = mtg_usa_foreign_support.5
+		}
+		effect_tooltip = {
+			FROM = {
+				add_equipment_to_stockpile = { 
+					type = infantry_equipment
+					amount = 1000
+				}
+			}
+		}
+	}
+	option = { #agree to send artillery
+		name = mtg_usa_foreign_support.4.b
+		ai_chance = {
+			factor = 20	
+		}
+		add_political_power = 25
+		FROM = {
+			country_event = mtg_usa_foreign_support.7
+		}
+		effect_tooltip = {
+			FROM = {
+				add_equipment_to_stockpile = { 
+					type = artillery_equipment
+					amount = 50
+				}
+			}
+		}
+	}
+	option = { #agree to send tanks
+		name = mtg_usa_foreign_support.4.b
+		ai_chance = {
+			factor = 10	
+		}
+		trigger = {
+			has_tech = basic_light_tank
+		}
+		add_political_power = 25
+		FROM = {
+			country_event = mtg_usa_foreign_support.8
+		}
+	}
+	option = { #refuse
+		name = mtg_usa_foreign_support.4.d
+		ai_chance = {
+			factor = 20
+		}
+		add_political_power = -25
+		FROM = {
+			country_event = mtg_usa_foreign_support.6
+		}
+	}
+}
+#event for US, weapons approved
+country_event = {
+	id = mtg_usa_foreign_support.5
+	title = mtg_usa_foreign_support.5.t
+	desc = mtg_usa_foreign_support.5.desc
+	picture = GFX_report_event_generic_rifles
+
+	is_triggered_only = yes
+	option = { #agree
+		name = mtg_usa_foreign_support.5.a
+		ai_chance = {
+			factor = 70
+		}
+		add_to_variable = { var = smuggled_weapons value = 1000 }
+	}
+}
+#event for US, weapons refused
+country_event = {
+	id = mtg_usa_foreign_support.6
+	title = mtg_usa_foreign_support.6.t
+	desc = mtg_usa_foreign_support.6.desc
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	option = { #agree
+		name = mtg_usa_foreign_support.6.a
+		ai_chance = {
+			factor = 70
+		}
+	}
+}
+#event for US, artillery approved
+country_event = {
+	id = mtg_usa_foreign_support.7
+	title = mtg_usa_foreign_support.7.t
+	desc = mtg_usa_foreign_support.7.desc
+	picture = GFX_report_event_british_artillery
+
+	is_triggered_only = yes
+	option = { #agree
+		name = mtg_usa_foreign_support.7.a
+		ai_chance = {
+			factor = 70
+		}
+		add_to_variable = { var = smuggled_artillery value = 50 }
+	}
+}
+#event for US, tanks approved
+country_event = {
+	id = mtg_usa_foreign_support.8
+	title = mtg_usa_foreign_support.8.t
+	desc = mtg_usa_foreign_support.8.desc
+	picture = GFX_report_event_polish_tanks_02
+
+	is_triggered_only = yes
+	option = { #agree
+		name = mtg_usa_foreign_support.8.a
+		ai_chance = {
+			factor = 70
+		}
+		add_to_variable = { var = smuggled_tanks value = 50 }
+	}
+}
+
+##event for FROM, USA wants to build training camps
+country_event = {
+	id = mtg_usa_foreign_support.9
+	title = mtg_usa_foreign_support.9.t
+	desc = mtg_usa_foreign_support.9.desc
+	picture = GFX_report_event_aid_pact
+
+	is_triggered_only = yes
+	option = { #agree
+		name = mtg_usa_foreign_support.9.a
+		ai_chance = {
+			factor = 70
+			
+		}
+		add_political_power = 25
+		set_country_flag = USA_training_camps_approved
+		FROM = {
+			country_event = mtg_usa_foreign_support.10
+		}
+		effect_tooltip = {
+			FROM = {
+				army_experience = 10
+			}
+		}
+	}
+	option = { #refuse
+		name = mtg_usa_foreign_support.9.b
+		ai_chance = {
+			factor = 30
+		}
+		add_political_power = -25
+		FROM = {
+			country_event = mtg_usa_foreign_support.11
+		}
+	}
+}
+#event for US, training camps approved
+country_event = {
+	id = mtg_usa_foreign_support.10
+	title = mtg_usa_foreign_support.10.t
+	desc = mtg_usa_foreign_support.10.desc
+	picture = GFX_report_event_chinese_army_training
+
+	is_triggered_only = yes
+	option = { #agree
+		name = mtg_usa_foreign_support.10.a
+		ai_chance = {
+			factor = 70
+		}
+		set_country_flag = us_training_@FROM	
+		FROM = {
+			add_ai_strategy = {
+   				type = send_volunteers_desire
+   				id = PREV
+   				value = 200
+   			}
+   			add_ai_strategy = {
+   				type = support
+   				id = PREV
+   				value = 200
+   			}
+		}
+	}
+}
+#event for US, training camps refused
+country_event = {
+	id = mtg_usa_foreign_support.11
+	title = mtg_usa_foreign_support.11.t
+	desc = mtg_usa_foreign_support.11.desc
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	option = { #agree
+		name = mtg_usa_foreign_support.11.a
+		ai_chance = {
+			factor = 70
+		}
+	}
+}
+
+##event for FROM, USA wants to train pilots
+country_event = {
+	id = mtg_usa_foreign_support.12
+	title = mtg_usa_foreign_support.12.t
+	desc = mtg_usa_foreign_support.12.desc
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+	option = { #agree
+		name = mtg_usa_foreign_support.12.a
+		ai_chance = {
+			factor = 70
+			
+		}
+		add_political_power = 25
+		set_country_flag = us_pilot_training_approved
+		FROM = {
+			country_event = mtg_usa_foreign_support.13
+		}
+		effect_tooltip = {
+			FROM = {
+				custom_effect_tooltip = us_pilot_training_tt
+			}
+		}
+	}
+	option = { #refuse
+		name = mtg_usa_foreign_support.12.b
+		ai_chance = {
+			factor = 30
+		}
+		add_political_power = -25
+		FROM = {
+			country_event = mtg_usa_foreign_support.14
+		}
+	}
+}
+#event for US, pilot training approved
+country_event = {
+	id = mtg_usa_foreign_support.13
+	title = mtg_usa_foreign_support.13.t
+	desc = mtg_usa_foreign_support.13.desc
+	picture = GFX_report_event_china_flying_tigers
+
+	is_triggered_only = yes
+	option = { #agree
+		name = mtg_usa_foreign_support.13.a
+		ai_chance = {
+			factor = 70
+		}
+		custom_effect_tooltip = us_pilot_training_tt	
+		FROM = {
+			add_ai_strategy = {
+   				type = send_volunteers_desire
+   				id = PREV
+   				value = 200
+   			}
+   			add_ai_strategy = {
+   				type = support
+   				id = PREV
+   				value = 200
+   			}
+		}
+	}
+}
+#event for US, pilot training refused
+country_event = {
+	id = mtg_usa_foreign_support.14
+	title = mtg_usa_foreign_support.14.t
+	desc = mtg_usa_foreign_support.14.desc
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	option = { #agree
+		name = mtg_usa_foreign_support.14.a
+		ai_chance = {
+			factor = 70
+		}
+	}
+}
+
+##event for FROM, USA wants to fund shipyards
+country_event = {
+	id = mtg_usa_foreign_support.15
+	title = mtg_usa_foreign_support.15.t
+	desc = mtg_usa_foreign_support.15.desc
+	picture = GFX_report_event_destroyers
+
+	is_triggered_only = yes
+	option = { #agree
+		name = mtg_usa_foreign_support.15.a
+		ai_chance = {
+			factor = 70
+			
+		}
+		add_political_power = 25
+		FROM = {
+			country_event = mtg_usa_foreign_support.16
+		}
+		effect_tooltip = {
+
+		}
+	}
+	option = { #refuse
+		name = mtg_usa_foreign_support.15.b
+		ai_chance = {
+			factor = 30
+		}
+		add_political_power = -25
+		FROM = {
+			country_event = mtg_usa_foreign_support.17
+		}
+	}
+}
+#event for US, shipyards approved
+country_event = {
+	id = mtg_usa_foreign_support.16
+	title = mtg_usa_foreign_support.16.t
+	desc = mtg_usa_foreign_support.16.desc
+	picture = GFX_report_event_ast_navy
+
+	is_triggered_only = yes
+	option = { #agree
+		name = mtg_usa_foreign_support.16.a
+		ai_chance = {
+			factor = 70
+		}
+	}
+}
+#event for US, shipyards refused
+country_event = {
+	id = mtg_usa_foreign_support.17
+	title = mtg_usa_foreign_support.17.t
+	desc = mtg_usa_foreign_support.17.desc
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	option = { #agree
+		name = mtg_usa_foreign_support.17.a
+		ai_chance = {
+			factor = 70
+		}
+	}
+}
+

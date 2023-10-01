@@ -1,0 +1,197 @@
+on_actions = {
+
+	#### Check if core parts of the Soviet heartland like Leningrad/Moscow/Stalingrad are threatened; give Soviets a buff after they are. Though this is artificial, this is intended as a temporary feature to be gradually phased out while Barbarossa balance is improved in a more natural way  ####
+	
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = GDU_SOV_Danger_To_Heartland }
+					NOT = {
+						SOV = { 
+							has_completed_focus = SOV_defense_of_stalingrad
+						}	
+					}					
+					date > 1941.6.1
+					OR = {
+						original_tag = GER
+						original_tag = ITA
+						original_tag = HUN
+						original_tag = ROM
+						original_tag = BUL
+						original_tag = FIN
+						original_tag = SPR					
+					}
+					FROM = { original_tag = SOV }
+					
+					FROM.FROM = { OR = {
+						state = 581
+						state = 262
+						state = 214
+						state = 351
+						state = 818												
+						state = 264       #Northern Coast to Leningrad#
+						state = 244
+						state = 195
+						state = 208
+
+						state = 263
+						state = 246
+						state = 795
+						state = 205		#Line from Luga to Vyazma to Kursk to Rostov#
+						state = 222
+						state = 220
+						state = 240
+						state = 228
+
+						state = 218		#Rostov to Cauacasus/Baku#
+						state = 234
+						state = 810
+						state = 812						
+						state = 233
+						state = 231
+						state = 230
+						state = 814						
+						state = 229
+						state = 813
+						state = 232
+						
+						state = 584		#Central Asia and Far East#
+						state = 405
+						state = 586
+						state = 587
+						state = 585
+						state = 742
+						state = 732						
+						state = 408
+						state = 409
+						state = 560
+						state = 562
+						state = 657
+						state = 561
+
+					}
+				}
+				}
+				
+                SOV  = { 
+
+                add_timed_idea = { idea = GDU_SOV_Danger_To_Heartland days = 730 } 
+               add_timed_idea = { idea = overextended1  days = 180 } 
+              }
+            GER  = { 
+
+                add_timed_idea = { idea = overextended1  days = 180 } 
+
+              }
+
+
+					set_global_flag = GDU_SOV_Danger_To_Heartland
+				
+			}
+			
+
+				
+		}
+	}	
+	
+	
+	
+	
+	
+	
+	#### Check if core parts of the Soviet heartland from Tikhvin to Moscow itself to Penza to the outskirts of Stalingrad have fallen (Leningrad can fall without triggering this in case Finland takes it early); give Soviets a buff after they have. Though this is artificial, this is intended as a temporary feature to be gradually phased out while Barbarossa balance is improved in a more natural way ####
+	
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = GDU_SOV_Heartland_Falling }
+					NOT = {
+						SOV = { 
+							has_completed_focus = SOV_defense_of_stalingrad
+						}	
+					}					
+					date > 1941.6.1
+					OR = {
+						original_tag = GER
+						original_tag = ITA
+						original_tag = HUN
+						original_tag = ROM
+						original_tag = BUL
+						original_tag = FIN
+						original_tag = SPR
+					}
+					FROM = { original_tag = SOV }
+					FROM.FROM = { OR = {
+						state = 581
+						state = 262
+						state = 214
+						state = 351	   #Northern Coast to Vologda#
+
+						state = 247
+						state = 248
+						state = 219
+						state = 253		#Core areas around Moscow to the outskirts of Stalingrad#
+						state = 255
+						state = 252
+						state = 239
+						state = 265
+						state = 245
+						state = 238
+						state = 235
+						
+						state = 233		#Cauacasus/Baku#
+						state = 231
+						state = 230
+						state = 229
+						
+						state = 584		#Central Asia and Far East#
+						state = 405
+						state = 586
+						state = 587
+						state = 585
+						state = 742
+						state = 732
+						state = 408
+						state = 409
+						state = 560
+						state = 562
+						state = 657
+						state = 561
+						}
+					}
+				}
+				
+                SOV  = { 
+
+                add_timed_idea = { idea = GDU_SOV_Heartland_Falling days = 730 } 
+                add_timed_idea = { idea = overextended2  days = 180 } 
+
+              }
+	            GER  = { 
+
+                add_timed_idea = { idea = overextended2  days = 180 } 
+
+              }
+
+	set_global_flag = GDU_SOV_Heartland_Falling
+				
+			}
+			
+
+				
+		}
+	}		
+	
+	
+
+
+
+
+
+
+
+
+
+}

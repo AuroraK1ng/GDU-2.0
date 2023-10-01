@@ -1,0 +1,151 @@
+on_actions = {
+	on_state_control_changed = { 
+		effect = {
+			if = {
+				limit = {
+					AND = { 
+						NOT = { has_global_flag = fall_of_greece } 					
+						GRE = { surrender_progress > 0.75 } 
+					}
+				}
+				set_global_flag = fall_of_greece
+				GRE = {	set_equipment_fraction = 0.0 }
+				GRE = {	set_equipment_fraction = 0.0 }
+				GRE = {	set_equipment_fraction = 0.0 }
+				GRE = {	set_equipment_fraction = 0.0 }
+				GRE = {	set_equipment_fraction = 0.0 }
+				GER = {
+					add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 4034 producer = GER }  
+					add_equipment_to_stockpile = { type = support_equipment amount = 606 producer = GER } 
+					add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 41483 producer = GER }
+				}
+				ENG = {
+					change_tag_from = GRE					
+				}				
+			}
+			
+			if = {
+				limit = {
+					AND = { 
+						NOT = { has_global_flag = fall_of_poland } 					
+						POL = { surrender_progress > 0.60 } 
+					}
+				}
+				set_global_flag = fall_of_poland
+				POL = {	set_equipment_fraction = 0.0 }
+				POL = {	set_equipment_fraction = 0.0 }
+				POL = {	set_equipment_fraction = 0.0 }
+				POL = {	set_equipment_fraction = 0.0 }
+				POL = {	set_equipment_fraction = 0.0 }
+				GER = {
+					add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 3958 producer = GER } 
+					add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 25312 producer = GER } 
+					add_equipment_to_stockpile = { type = support_equipment amount = 1740 producer = GER } 
+					add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 2478 producer = GER } 
+				}
+				ENG = {
+					change_tag_from = POL					
+				}				
+			}
+			if = {
+				limit = {
+					AND = { 
+						NOT = { has_global_flag = fall_of_france } 					
+						FRA = { surrender_progress > 0.33 } 
+					}
+				}
+				
+				set_global_flag = fall_of_france
+				
+				hidden_effect = {
+					sound_effect = sp_eng_finesthour 
+				}
+				
+				if = {           # if playing mini GDU, Spain becomes a puppet of Germany after France falls and gives Germany all its mils/civs
+					limit = {
+						has_global_flag = mini_GDU
+					}
+					GER = {	
+						set_autonomy = {
+							target = SPR
+							autonomy_state = autonomy_Mini_GDU_Spain
+						}
+					}
+				}
+				
+				GER = { country_event = { id = gduvichy.9 days = 10 } }
+
+				# repeatedly fire an event that deletes France's stockpile, so that it will have no equipment when it capitulates (so Germany doesn't capture anything, and the France player has an incentive to build useful equipment, rather than worrying about what Germany will capture)
+				GER = { country_event = { id = gduvichy.10 days = 7 } }
+				GER = { country_event = { id = gduvichy.10 days = 8 } }
+				GER = { country_event = { id = gduvichy.10 days = 9 } }			
+
+				# event to give a standard stockpile of captured equipment to Germany; so the France player does not have an incentive to build bad equipment intentionally, Germany ends up with the same captured equipment no matter what France does.
+				GER = { country_event = { id = gduvichy.11 days = 20 } }			
+
+				FRA = { add_timed_idea = { idea = FRA_armistice_negotiations_idea days = 50 } }
+
+				GER = { add_timed_idea = { idea = AXIS_armistice_negotiations_idea days = 50 } }
+				ITA = { add_timed_idea = { idea = AXIS_armistice_negotiations_idea days = 50 } }
+				HUN = { add_timed_idea = { idea = AXIS_armistice_negotiations_idea days = 50 } }
+				ROM = { add_timed_idea = { idea = AXIS_armistice_negotiations_idea days = 50 } }
+				BUL = { add_timed_idea = { idea = AXIS_armistice_negotiations_idea days = 50 } }
+				SPR = { add_timed_idea = { idea = AXIS_armistice_negotiations_idea days = 50 } }
+				
+				# Allied armistice news event
+				ENG = { country_event = { id = gduevents.37 } }
+				CAN = { country_event = { id = gduevents.37 } }
+				SAF = { country_event = { id = gduevents.37 } }
+				RAJ = { country_event = { id = gduevents.37 } }
+				AST = { country_event = { id = gduevents.37 } }
+				NZL = { country_event = { id = gduevents.37 } }
+				
+				# French armistice news event
+				FRA = { country_event = { id = gduevents.38 } }
+				
+				# Axis armistice news event
+				GER = { country_event = { id = gduevents.39 } }
+				ITA = { country_event = { id = gduevents.39 } }
+				HUN = { country_event = { id = gduevents.39 } }
+				ROM = { country_event = { id = gduevents.39 } }
+				BUL = { country_event = { id = gduevents.39 } }
+				SPR = { country_event = { id = gduevents.39 } }
+
+				# Neutral armistice news event
+				SOV = { country_event = { id = gduevents.40 } }
+				USA = { country_event = { id = gduevents.40 } }
+				JAP = { country_event = { id = gduevents.40 } }
+				FIN = { country_event = { id = gduevents.40 } }
+				
+				
+				# Finest Hour temporary buffs for UK/commonwealth. finest_hour is the air one, finest_hour_com is the land one.
+				ENG = { add_timed_idea = { idea = finest_hour days = 365 } }				
+				if = {
+					limit = { NOT = { ENG = { has_tech = kampfgruppe } } }
+					ENG = { add_timed_idea = { idea = finest_hour_com days = 365 } }
+				}
+				if = {
+					limit = { NOT = { RAJ = { has_tech = kampfgruppe } } }
+					RAJ = { add_timed_idea = { idea = finest_hour_com days = 365 } }
+				}
+				if = {
+					limit = { NOT = { CAN = { has_tech = kampfgruppe } } }
+					CAN = { add_timed_idea = { idea = finest_hour_com days = 365 } }
+				}				
+				if = {
+					limit = { NOT = { SAF = { has_tech = kampfgruppe } } }
+					SAF = { add_timed_idea = { idea = finest_hour_com days = 365 } }
+				}
+				if = {
+					limit = { NOT = { AST = { has_tech = kampfgruppe } } }
+					AST = { add_timed_idea = { idea = finest_hour_com days = 365 } }
+				}
+				if = {
+					limit = { NOT = { NZL = { has_tech = kampfgruppe } } }
+					NZL = { add_timed_idea = { idea = finest_hour_com days = 365 } }
+				}
+			}
+		}
+	}
+
+}

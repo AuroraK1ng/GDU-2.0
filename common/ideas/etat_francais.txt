@@ -1,0 +1,244 @@
+ideas = {
+	country = {
+		EFR_french_volunteer_army_1 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				stability_factor = -0.05
+				army_org_Factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		EFR_french_volunteer_army_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				stability_factor = -0.10
+				army_org_Factor = 0.10
+				army_morale_factor = 0.10
+			}
+		}
+
+		EFR_war_repairs = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = FRA_factory_strikes
+
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		EFR_german_war_repairs = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = FRA_factory_strikes
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				industry_repair_factor = 0.10
+			}
+		}
+
+		idea_EFR_neutrality = {
+			picture = neutrality_idea
+
+			allowed = {
+				original_tag = EFR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				justify_war_goal_time = 5.0 
+				enemy_justify_war_goal_time = 5.0
+				join_faction_tension = 2.00
+				lend_lease_tension = 2
+				send_volunteers_tension = 0.20
+				guarantee_tension = 2.0
+				ai_get_ally_desire_factor = -500
+			}
+		}
+
+		idea_EFR_chantiers_de_la_jeunesse = {
+
+			picture = ast_all_in
+
+			allowed = {
+				original_tag = EFR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+                production_speed_infrastructure_factor = 0.10
+				production_speed_industrial_complex_factor = 0.10
+				industry_repair_factor = 0.05
+			}
+		}
+		idea_EFR_secret_military_researches = {
+			allowed = {
+				always = no
+				original_research_slots < 5
+			}
+
+			modifier = {
+				research_speed_factor =0.05
+			}
+
+			removal_cost = -1
+			picture = generic_research_bonus
+		}
+		idea_EFR_STO = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = -0.005
+			}
+		}
+		idea_EFR_STO2 = {
+
+			picture = idea_EFR_STO
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = -0.01
+			}
+		}
+		idea_EFR_STO3 = {
+
+			picture = idea_EFR_STO
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = -0.015
+			}
+		}
+		idea_EFR_rationning = {
+
+			picture = generic_agrarian_reform
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		idea_EFR_recycling = {
+
+			picture = generic_flexible_foreign_policy2
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
+	}
+	political_advisor = {
+	
+	}
+
+	theorist = {
+
+		
+	}
+
+	high_command = {
+		
+	}
+	# MILITARY
+	army_chief = {
+		
+	}
+	air_chief = {
+
+		
+	}
+
+	navy_chief = {
+
+		
+	}
+
+}

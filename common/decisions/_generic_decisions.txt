@@ -1,0 +1,360 @@
+political_actions = {
+
+	improved_worker_conditions = {
+
+		icon = GFX_decision_hol_exchange_intelligence_data
+
+		available = {
+			NOT = {
+			original_tag = USA
+			has_country_flag = worker_conditions_running
+			}
+		}
+
+		allowed = { 
+			is_playable_country = yes
+		}
+
+		visible = {
+			always = yes
+			NOT = { tag = USA }
+			
+		}
+
+		fire_only_once = no
+
+		modifier = {
+			war_support_weekly = 0.002
+			stability_weekly = 0.005
+			industrial_capacity_factory = -0.1
+		}
+
+		days_remove = 180
+		days_re_enable = 360
+
+		cost = 100
+
+		complete_effect = {
+			set_country_flag = worker_conditions_running
+		}
+		remove_effect = {
+			clr_country_flag = worker_conditions_running
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+
+	promises_of_peace = {
+
+		icon = GFX_decision_eng_puppet_usa
+		available = {
+			NOT = { has_country_flag = pop_running }
+			has_war = no
+			has_war_support > 0.2
+		}
+
+		allowed = { 
+			is_playable_country = yes
+		}
+
+		visible = {
+		
+		}
+
+		remove_trigger = {
+			has_war = yes
+			has_war_support < 0.05
+		}
+
+		fire_only_once = no
+
+		modifier = {
+			stability_weekly = 0.010
+			war_support_weekly = -0.010
+			political_power_gain = -0.50
+		}
+
+		days_remove = 90
+		days_re_enable = 360
+
+		cost = 50
+
+		complete_effect = {
+			set_country_flag = pop_running
+		}
+		remove_effect = {
+			clr_country_flag = pop_running
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+		}
+	}
+}
+
+war_measures = {
+
+	women_in_the_workforce = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+        allowed = {
+            always = yes
+        }
+
+        available = {
+        	NOT = { has_country_flag = women_in_workforce }
+            has_war = yes
+            has_idea = tot_economic_mobilisation
+        }
+        visible = {
+
+            has_war = yes
+        }
+        cost = 100
+        days_remove = -1
+        remove_trigger = {
+            has_war = no
+        }
+        modifier = {
+            conscription = 0.03
+            stability_factor = -0.05
+        }
+        ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					tag = CAN
+				}
+				country_event = { id = canada_vanilla.1 hours = 6 } # Ronnie the Bren Gun Girl
+			}
+			set_country_flag = women_in_workforce
+        }
+		remove_effect = {
+			clr_country_flag = women_in_workforce
+		}
+   }
+
+
+
+
+	war_bonds_cancel = {
+		icon = generic_industry
+		allowed = {
+			is_playable_country =yes
+		}
+		available = {
+			has_war = yes
+		}
+		visible = {
+			has_decision = war_bonds
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			remove_decision = war_bonds
+		}
+	}
+	war_bonds = {
+		icon = generic_industry
+		allowed = {
+			is_playable_country =yes
+		}
+		available = {
+			has_war = yes
+			NOT = {
+				AND = {
+					tag = SOV
+					NOT = { SOV = { has_completed_focus = SOV_lessons_of_war } }
+				}
+			}			
+		}
+		visible = {
+		}
+		fire_only_once = no
+		days_remove = -1
+		cost = 0
+		modifier = {
+			political_power_gain = -0.2
+			industrial_capacity_factory = 0.05 
+			war_support_weekly = 0.002
+		}
+
+		remove_effect = {
+		}
+		complete_effect = {
+		}
+	}
+
+}
+
+foreign_politics = {
+
+}
+
+economy_decisions = {
+	infrastructure_building_slot = {
+
+		icon = generic_construction
+
+		allowed = { 
+			or = {
+				TAG = SOV
+				TAG = ITA
+				TAG = SPR
+				TAG = HUN
+				TAG = BUL
+				TAG = ROM
+				TAG = FIN
+				TAG = JAP
+				TAG = ENG
+				TAG = FRA
+				TAG = CAN
+				TAG = SAF
+				TAG = RAJ
+				TAG = AST
+				TAG = NZL
+			}
+		}
+
+        cost = 100
+        fire_only_once = no
+
+        days_re_enable = 30
+
+        available = {
+            any_state = {
+            	NOT = { has_state_flag = infrastructure_building_slot_flag }
+            	is_fully_controlled_by = ROOT
+            	is_owned_by = ROOT
+				free_building_slots = {
+					building = infrastructure
+					size < 2
+				}
+            }
+        }
+
+        visible = {
+			any_state = {
+            	NOT = { has_state_flag = infrastructure_building_slot_flag }
+            	is_fully_controlled_by = ROOT
+            	is_owned_by = ROOT
+				free_building_slots = {
+					building = infrastructure
+					size < 2
+				}
+            }
+		}
+
+        complete_effect = {
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+            		free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = infrastructure
+						size < 2
+					}
+					NOT = { has_state_flag = infrastructure_building_slot_flag }
+				}
+				add_extra_state_shared_building_slots = 2
+				set_state_flag = infrastructure_building_slot_flag
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				any_owned_state = { free_building_slots = { building = industrial_complex size < 2 include_locked = no } }
+			}
+		}
+    }
+
+    war_building_slot = {
+
+    	icon = generic_construction
+
+		allowed = { 
+			or = {
+				TAG = SOV
+				TAG = ITA
+				TAG = SPR
+				TAG = HUN
+				TAG = BUL
+				TAG = ROM
+				TAG = FIN
+				TAG = JAP
+				TAG = ENG
+				TAG = FRA
+				TAG = CAN
+				TAG = SAF
+				TAG = RAJ
+				TAG = AST
+				TAG = NZL
+			}
+		}
+
+        cost = 50
+        fire_only_once = no
+
+        available = {
+            any_state = {
+            	NOT = { has_state_flag = war_building_slot_flag }
+            	is_fully_controlled_by = ROOT
+            	is_owned_by = ROOT
+            }
+            has_war = yes
+        }
+
+        visible = {
+        	any_state = {
+            	NOT = { has_state_flag = war_building_slot_flag }
+            	is_fully_controlled_by = ROOT
+            	is_owned_by = ROOT
+            }
+            has_war = yes
+		}
+
+        complete_effect = {
+        	add_war_support = -0.01
+			add_stability = -0.01
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+            		free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					NOT = { has_state_flag = war_building_slot_flag }
+				}
+				add_extra_state_shared_building_slots = 2
+				set_state_flag = war_building_slot_flag
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				any_owned_state = { free_building_slots = { building = industrial_complex size < 2 include_locked = no } }
+			}
+		}
+    }
+}

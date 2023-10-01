@@ -1,0 +1,71 @@
+﻿capital = 335 #Jakarta
+
+# Starting tech
+# clone of Holland
+set_research_slots = 0
+set_technology = {
+
+}
+
+add_opinion_modifier = { target = SOV modifier = large_decrease }
+add_opinion_modifier = { target = SOV modifier = hostile_status }
+
+add_opinion_modifier = { target = FRA modifier = large_decrease }
+add_opinion_modifier = { target = FRA modifier = hostile_status }
+
+add_opinion_modifier = { target = JAP modifier = embargo }
+add_opinion_modifier = { target = JAP modifier = sanctions }
+add_opinion_modifier = { target = JAP modifier = minor_sanctions }
+
+add_opinion_modifier = { target = ENG modifier = large_decrease }
+add_opinion_modifier = { target = ENG modifier = hostile_status }
+
+add_opinion_modifier = { target = CAN modifier = large_decrease }
+add_opinion_modifier = { target = CAN modifier = hostile_status }
+
+add_opinion_modifier = { target = SAF modifier = large_decrease }
+add_opinion_modifier = { target = SAF modifier = hostile_status }
+
+add_opinion_modifier = { target = RAJ modifier = large_decrease }
+add_opinion_modifier = { target = RAJ modifier = hostile_status }
+
+add_opinion_modifier = { target = AST modifier = large_decrease }
+add_opinion_modifier = { target = AST modifier = hostile_status }
+
+add_opinion_modifier = { target = NZL modifier = large_decrease }
+add_opinion_modifier = { target = NZL modifier = hostile_status }
+
+add_opinion_modifier = { target = USA modifier = large_decrease }
+add_opinion_modifier = { target = USA modifier = hostile_status }
+
+add_ideas = { 
+	benelux_neutrality
+	disloyal_puppet_idea
+	free_trade
+}
+
+set_convoys = 25
+set_popularities = {
+	democratic = 10
+	fascism = 10
+	communism = 30
+	neutrality = 50
+}
+
+create_country_leader = {
+	name = "Sukarno"
+	desc = ""
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_5.dds"
+	expire = "1953.3.1"
+	ideology = socialism #Marhaenism his own unique mix of stuff
+	traits = {
+		
+	}
+}
+
+set_cosmetic_tag = INS_HOL # Netherlands East Indies
+
+add_ideas = {
+	GDU_neutrality
+}
+

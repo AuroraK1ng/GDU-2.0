@@ -1,0 +1,770 @@
+﻿###########################
+# Soviet Events
+###########################
+
+add_namespace = soviet
+
+# Romania surrenders Bessarabia
+country_event = {
+	id = soviet.4
+	title = soviet.4.t
+	desc = soviet.4.d
+	picture = GFX_report_event_soviet_army_greeted
+
+	is_triggered_only = yes
+
+	option = {
+		name = soviet.4.a
+		SOV = {
+			transfer_state = 78
+			transfer_state = 80
+			transfer_state = 766
+		}
+	}
+}
+
+# Baltic States Surrender
+country_event = {
+	id = soviet.10
+	title = soviet.10.t
+	desc = soviet.10.d
+	picture = GFX_report_event_soviet_tank_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = soviet.10.a
+		annex_country = { target = LIT }
+		hidden_effect = { 
+			11 = { remove_core_of = LIT } 
+			189 = { remove_core_of = LIT }
+			188 = { remove_core_of = LIT } 
+			191 = { remove_core_of = LIT } 
+			13 = { remove_core_of = LIT }
+			12 = { remove_core_of = LIT } 
+			190 = { remove_core_of = LIT } 
+			SOV = {
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 1000
+					producer = SOV
+				}  
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1000
+					producer = SOV
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 1000
+					producer = SOV
+				} 
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 100000
+					producer = SOV
+				} 			
+			}
+		}
+	}
+}
+
+# Finland Refuses Demands
+country_event = {
+	id = soviet.13
+	title = soviet.13.t
+	desc = soviet.13.d
+	picture = GFX_report_event_soviet_tanks_snow
+
+	fire_only_once = yes
+	trigger = {
+		tag = SOV
+		has_global_flag = soviet_demand
+		NOT = { has_global_flag = finland_refuse }
+		date < 1941.5.5
+	}
+	mean_time_to_happen = { days = 5 }
+
+	option = {
+		name = soviet.13.a
+		SOV = { declare_war_on = { type = annex_everything target = FIN } }
+		set_global_flag = finland_refuse
+		hidden_effect = {
+			SOV = {
+				country_event = { days = 7 id = gduevents.47 }
+			}
+		}
+	}
+}
+
+# Improving the Stalin Line
+country_event = {
+	id = soviet.17
+	title = soviet.17.t
+	desc = soviet.17.d
+	picture = GFX_report_event_bunker_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = soviet.17.a
+
+		209 = {
+			add_building_construction = {
+				type = bunker
+				province = 3859
+				level = 5
+			}
+			add_building_construction = {
+				type = bunker
+				province = 6324
+				level = 5
+			}
+			add_building_construction = {
+				type = bunker
+				province = 3162
+				level = 5
+			}
+		}
+		210 = {
+			add_building_construction = {
+				type = bunker
+				province = 6242
+				level = 5
+			}
+		}
+		207 = {
+			add_building_construction = {
+				type = bunker
+				province = 6249
+				level = 5
+			}
+			add_building_construction = {
+				type = bunker
+				province = 6815
+				level = 5
+			}
+			add_building_construction = {
+				type = bunker
+				province = 3331
+				level = 5
+			}
+		}
+		206 = {
+			add_building_construction = {
+				type = bunker
+				province = 6646
+				level = 5
+			}
+		}
+		202 = {
+			add_building_construction = {
+				type = bunker
+				province = 5908
+				level = 5
+			}
+			add_building_construction = {
+				type = bunker
+				province = 3543
+				level = 5
+			}
+			add_building_construction = {
+				type = bunker
+				province = 504
+				level = 5
+			}
+			add_building_construction = {
+				type = bunker
+				province = 6497
+				level = 5
+			}
+		}
+		203 = {
+			add_building_construction = {
+				type = bunker
+				province = 6061
+				level = 5
+			}
+			add_building_construction = {
+				type = bunker
+				province = 3108
+				level = 5
+			}
+		}
+		192 = {
+			add_building_construction = {
+				type = bunker
+				province = 3757
+				level = 5
+			}
+			add_building_construction = {
+				type = bunker
+				province = 5771
+				level = 5
+			}
+			add_building_construction = {
+				type = bunker
+				province = 741
+				level = 5
+			}
+			add_building_construction = {
+				type = bunker
+				province = 2782
+				level = 5
+			}
+		}
+	}
+}
+
+
+# Soviet Union Cedes Land (Japan)
+country_event = {
+	id = soviet.23
+	title = soviet.23.t
+	desc = soviet.23.d
+	picture = GFX_report_event_soviet_japanese_pact
+
+	is_triggered_only = yes
+
+	option = {
+		name = soviet.23.a
+		transfer_state = 655
+	}
+}
+
+# Great Purge - Begins
+country_event = {
+	id = soviet.24
+	title = soviet.24.t
+	desc = soviet.24.d
+	picture = GFX_report_event_soviet_purge_speech
+
+	is_triggered_only = yes
+	
+	immediate = { 
+		hidden_effect = {
+			country_event = { id = soviet.25 days = 105 }
+		}
+	}
+	
+	option = {
+		name = soviet.24.a
+		add_ideas = officers_purged_start
+		add_tech_bonus = {
+			name = purge_landdoc_rush_disincentive_bonus
+			bonus = 7.50 
+			uses = 1
+			technology = delay
+			technology = sup_delay
+			technology = grand_battle_plan
+			technology = pocket_defence
+		}
+	}
+}
+
+# Great Purge - Trial of the Anti-Soviet Trotskyist Center
+country_event = {
+	id = soviet.25
+	title = soviet.25.t
+	desc = soviet.25.d
+	picture = GFX_report_event_soviet_purge_trial
+
+	is_triggered_only = yes 
+	
+	immediate = { 
+		hidden_effect = { 
+			country_event = { id = soviet.26 days = 210 }
+		}
+	}
+	
+	option = {
+		name = soviet.25.c
+		set_country_flag = purged_party_members
+	}
+	
+	
+}
+
+# Great Purge - Secret Trial of the Generals
+country_event = {
+	id = soviet.26
+	title = soviet.26.t
+	desc = soviet.26.d
+	picture = GFX_report_event_soviet_purge_officers_01
+
+	is_triggered_only = yes 
+	
+	immediate = { 
+		hidden_effect = { 
+			country_event = { id = soviet.27 days = 240 }
+		}
+	}
+	
+	option = {
+		name = soviet.26.a
+		set_country_flag = purge_1_group_a
+		swap_ideas = { 
+			remove_idea = officers_purged_start
+			add_idea = officers_purged_start1
+		}
+	}
+	
+}
+
+# Great Purge - Trial of the 21
+country_event = {
+	id = soviet.27
+	title = soviet.27.t
+	desc = soviet.27.d
+	picture = GFX_report_event_soviet_purge_officers_02
+
+	is_triggered_only = yes 
+	
+	immediate = { 
+		hidden_effect = { 
+			country_event = { id = soviet.53 days = 30 }
+		}
+	}
+
+	option = {
+		name = soviet.27.a
+		swap_ideas = { 
+			remove_idea = officers_purged_start1
+			add_idea = officers_purged_start2
+		}
+		remove_ideas = trotskyite_plot
+		add_ideas = trotskyite_plot_purged
+		set_country_flag = purge_2_group_a
+	}
+	
+}
+	
+# Demand Bessarabia
+country_event = {
+	id = soviet.30
+	title = soviet.30.t
+	desc = soviet.30.d
+	picture = GFX_report_event_stalin_propaganda
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = SOV
+		FROM = { tag = ROM }
+		NOT = { has_country_flag = bessarabia_demand }
+		78 = {
+			is_claimed_by = SOV
+			is_owned_by = ROM
+		}
+	}
+
+	immediate = { set_country_flag = bessarabia_demand }
+
+	option = {
+		name = soviet.30.a
+		ROM = { country_event = { days = 2 id = romania.1 } }
+	}
+	option = {
+		name = soviet.30.b
+		ai_chance = { factor = 0 }
+		#
+	}
+}
+
+# Demand Karjala
+country_event = {
+	id = soviet.31
+	title = soviet.31.t
+	desc = soviet.31.d
+	picture = GFX_report_event_stalin_propaganda
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOV
+		has_global_flag = finland_flag
+		NOT = { has_country_flag = karjala_demand }
+	}
+	mean_time_to_happen = { days = 5 }
+
+	immediate = { set_country_flag = karjala_demand }
+
+	option = {
+		name = soviet.31.a
+		FIN = { country_event = { days = 2 id = finland.1 } }
+	}
+}
+
+# Oppress Lithuania
+country_event = {
+	id = soviet.34
+	title = soviet.34.t
+	desc = soviet.34.d
+	picture = GFX_report_event_soviet_in_riga
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = SOV
+		FROM = {
+			tag = LIT
+			any_owned_state = { is_claimed_by = SOV }
+		}
+		NOT = { has_country_flag = lithuania_demand }
+	}
+
+	immediate = { set_country_flag = lithuania_demand }
+
+	option = {
+		name = soviet.34.a
+		LIT = { country_event = { days = 2 id = baltic.3 } }
+	}
+	option = {
+		name = soviet.34.b
+		ai_chance = { factor = 0 }
+		#
+	}
+}
+
+# Purge - New officers less dumb. Regaining org
+country_event = {
+	id = soviet.37
+	title = soviet.37.t
+	desc = soviet.37.d
+	picture = GFX_report_event_soldiers_marching
+
+	is_triggered_only = yes
+
+	trigger = {	has_idea = officers_purged }
+
+	immediate = {
+		hidden_effect = {
+			remove_ideas = officers_purged
+			add_ideas = officers_purged_8
+		}
+	}
+	option = {
+		name = soviet.37.a
+		custom_effect_tooltip = soviet.37.a_tt
+	}
+}
+# Purge - New officers less dumb. Regaining org
+country_event = {
+	id = soviet.38
+	title = soviet.37.t
+	desc = soviet.37.d
+	picture = GFX_report_event_soldiers_marching
+
+	is_triggered_only = yes
+
+	trigger = {	has_idea = officers_purged_2 }
+
+	immediate = {
+		hidden_effect = {
+			remove_ideas = officers_purged_2
+			add_timed_idea = {
+				idea = officers_purged_3
+				days = 450
+			}
+			country_event = { id = soviet.39 days = 146 }
+		}
+	}
+	option = {
+		name = soviet.37.a
+		custom_effect_tooltip = soviet.37.a_tt
+	}
+}
+# Purge - New officers less dumb. Regaining org
+country_event = {
+	id = soviet.39
+	title = soviet.37.t
+	desc = soviet.37.d
+	picture = GFX_report_event_soldiers_marching
+
+	is_triggered_only = yes
+
+	trigger = {	has_idea = officers_purged_3 }
+
+	immediate = {
+		hidden_effect = {
+			remove_ideas = officers_purged_3
+			add_timed_idea = {
+				idea = officers_purged_4
+				days = 450
+			}
+			country_event = { id = soviet.40 days = 146 }
+		}
+	}
+	option = {
+		name = soviet.37.a
+		custom_effect_tooltip = soviet.37.a_tt
+	}
+}
+# Purge - New officers less dumb. Regaining org
+country_event = {
+	id = soviet.40
+	title = soviet.37.t
+	desc = soviet.37.d
+	picture = GFX_report_event_soldiers_marching
+
+	is_triggered_only = yes
+
+	trigger = {	has_idea = officers_purged_4 }
+
+	immediate = {
+		hidden_effect = {
+			remove_ideas = officers_purged_4
+			add_timed_idea = {
+				idea = officers_purged_5
+				days = 450
+			}
+			country_event = { id = soviet.41 days = 146 }
+		}
+	}
+	option = {
+		name = soviet.37.a
+		custom_effect_tooltip = soviet.37.a_tt
+	}
+}
+# Purge - New officers less dumb. Regaining org
+country_event = {
+	id = soviet.41
+	title = soviet.37.t
+	desc = soviet.37.d
+	picture = GFX_report_event_soldiers_marching
+
+	is_triggered_only = yes
+
+	trigger = {	has_idea = officers_purged_5 }
+
+	immediate = {
+	hidden_effect = {
+			remove_ideas = officers_purged_5
+			add_timed_idea = {
+				idea = officers_purged_6
+				days = 450
+			}
+			country_event = { id = soviet.42 days = 146 }
+		}
+	}
+	option = {
+		name = soviet.37.a
+		custom_effect_tooltip = soviet.37.a_tt
+	}
+}
+# Purge - New officers less dumb. Regaining org
+country_event = {
+	id = soviet.42
+	title = soviet.37.t
+	desc = soviet.37.d
+	picture = GFX_report_event_soldiers_marching
+
+	is_triggered_only = yes
+
+	trigger = {	has_idea = officers_purged_6 }
+
+	immediate = {
+		hidden_effect = {
+			remove_ideas = officers_purged_6
+			add_timed_idea = {
+				idea = officers_purged_7
+				days = 450
+			}
+			country_event = { id = soviet.43 days = 146 }
+		}
+	}
+	option = {
+		name = soviet.37.a
+		custom_effect_tooltip = soviet.37.a_tt
+	}
+}
+# Purge - New officers less dumb. Regaining org
+country_event = {
+	id = soviet.43
+	title = soviet.37.t
+	desc = soviet.37.d
+	picture = GFX_report_event_soldiers_marching
+
+	is_triggered_only = yes
+
+	trigger = {	has_idea = officers_purged_7 }
+
+	immediate = {
+		hidden_effect = {
+			remove_ideas = officers_purged_7
+			add_timed_idea = {
+				idea = officers_purged_8
+				days = 450
+			}
+			country_event = { id = soviet.44 days = 146 }
+		}
+	}
+	option = {
+		name = soviet.37.a
+		custom_effect_tooltip = soviet.37.a_tt
+	}
+}
+# Purge - New officers less dumb. Regaining org
+country_event = {
+	id = soviet.44
+	title = soviet.37.t
+	desc = soviet.37.d
+	picture = GFX_report_event_soldiers_marching
+
+	is_triggered_only = yes
+
+	trigger = {	has_idea = officers_purged_8 }
+
+	immediate = {
+		hidden_effect = {
+			remove_ideas = officers_purged_8
+			add_ideas = officers_purged_9
+		}
+	}
+	option = {
+		name = soviet.37.a
+		custom_effect_tooltip = soviet.37.a_tt
+	}
+}
+
+
+#4/4 purges
+country_event = {
+	id = soviet.53
+	title = soviet.53.t
+	desc = soviet.53.d
+	picture = GFX_report_event_stalin_01
+
+	fire_only_once = yes
+
+	is_triggered_only = yes 
+
+	option = {
+		name = soviet.53.a
+		remove_ideas = trotskyite_plot_purged
+		set_country_flag = SOV_purge_complete
+		set_country_flag = SOV_great_purge_complete_tt
+		remove_ideas = officers_purged_start2
+		add_timed_idea = {
+					idea = officers_purged
+					days = 2200
+				}
+		hidden_effect = {
+			country_event = { id = soviet.37 days = 146 }
+				}
+	}
+}
+		###single deployment###
+	country_event = {
+		id = soviet.54
+		hidden = yes
+
+		is_triggered_only = yes
+		
+		immediate = { 
+			SOV = {		
+				load_oob = "SOV_Belarus_Deployment"
+				load_oob = "SOV_Baltic_Deployment"
+			}
+		}	
+	}
+	country_event = {
+		id = soviet.55
+		hidden = yes
+
+		is_triggered_only = yes
+		
+		immediate = { 
+			load_oob = "SOV_NorthUkraine_Deployment"
+			load_oob = "SOV_SouthUkraine_Deployment"
+		}	
+	}
+		###double deployment###
+	country_event = {
+		id = soviet.56
+		hidden = yes
+
+		is_triggered_only = yes
+		
+		immediate = { 
+			load_oob = "SOV_Belarus_Deployment"
+			load_oob = "SOV_Baltic_Deployment"
+		}	
+	}
+	country_event = {
+		id = soviet.57
+		hidden = yes
+
+		is_triggered_only = yes
+		
+		immediate = { 
+			load_oob = "SOV_Belarus_Deployment"
+			load_oob = "SOV_Baltic_Deployment"
+		}	
+	}
+	country_event = {
+		id = soviet.58
+		hidden = yes
+
+		is_triggered_only = yes
+		
+		immediate = { 
+			load_oob = "SOV_NorthUkraine_Deployment"
+			load_oob = "SOV_SouthUkraine_Deployment"
+		}	
+	}
+	country_event = {
+		id = soviet.59
+		hidden = yes
+
+		is_triggered_only = yes
+		
+		immediate = { 
+			load_oob = "SOV_NorthUkraine_Deployment"
+			load_oob = "SOV_SouthUkraine_Deployment"
+		}	
+	}
+	
+	country_event = {
+		id = soviet.60
+		hidden = yes
+
+		is_triggered_only = yes
+		
+		immediate = { 
+			load_oob = "SOV_NonPlains1"
+		}	
+	}
+	
+	country_event = {
+		id = soviet.61
+		hidden = yes
+
+		is_triggered_only = yes
+		
+		immediate = { 
+			load_oob = "SOV_NonPlains2"
+		}	
+	}		
+
+	country_event = {
+		id = soviet.62
+		hidden = yes
+
+		is_triggered_only = yes
+		
+		immediate = { 
+			load_oob = "SOV_Plains1"
+		}	
+	}
+	
+	country_event = {
+		id = soviet.63
+		hidden = yes
+
+		is_triggered_only = yes
+		
+		immediate = { 
+			load_oob = "SOV_Plains2"
+		}	
+	}	

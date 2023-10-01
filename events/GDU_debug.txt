@@ -1,0 +1,70 @@
+﻿add_namespace = gdu_debug
+
+country_event = {
+	id = gdu_debug.1
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		log = "Starting Debug:"
+		for_each_scope_loop = {
+			array = global.owned_state_array_GER
+			log = "[THIS.GetName]:"
+		}
+	}
+}
+
+country_event = {
+	id = gdu_debug.2
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		log = "Testing declare war on all allies:"
+		declare_war_on_all_allies = yes
+	}
+}
+
+country_event = {
+	id = gdu_debug.3
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		log = "Is country an Ally of UK:"
+		if = {
+			limit = { is_in_faction_with_allies = yes }
+			log = "true"
+		}
+		else = {
+			log = "false"
+		}
+	}
+}
+
+country_event = {
+	id = gdu_debug.4
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		set_global_flag = fall_of_france
+		set_global_flag = achievement_france_surrender
+	}
+}
+
+country_event = {
+	id = gdu_debug.5
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		log = "Calling both sides:"
+		declare_war_on_all_allies = yes
+	}
+}

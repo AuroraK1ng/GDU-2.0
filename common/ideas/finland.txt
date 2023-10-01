@@ -1,0 +1,252 @@
+ideas = {
+
+	country = {
+		sisu = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				supply_consumption_factor = -0.625
+				army_morale_factor = 0.10
+				army_core_attack_factor = 0.5
+				army_core_defence_factor = 0.5
+				max_planning = -0.1
+				planning_speed = 0.25
+				dig_in_speed_factor = 0.5
+				army_attack_factor = -0.20
+				army_defence_factor = -0.20				
+				surrender_limit = 0.8
+				industrial_capacity_dockyard = -5
+				production_speed_naval_base_factor = -1.0	
+				acclimatization_cold_climate_gain_factor = 100.0 			
+			}
+			
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}
+			targeted_modifier = {
+				tag = USA
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}
+			targeted_modifier = {
+				tag = CAN
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}
+			targeted_modifier = {
+				tag = SAF
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}
+			targeted_modifier = {
+				tag = RAJ
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}
+			targeted_modifier = {
+				tag = AST
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}
+			targeted_modifier = {
+				tag = NZL
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}			
+		}
+		
+		sisu_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = 0.10
+				army_core_attack_factor = 1.2
+				army_core_defence_factor = 1.2
+				max_planning = -0.1
+				planning_speed = 0.25
+				dig_in_speed_factor = 0.5
+				army_attack_factor = -0.20
+				army_defence_factor = -0.20				
+				surrender_limit = 0.8
+				industrial_capacity_dockyard = -5
+				production_speed_naval_base_factor = -1.0		
+				acclimatization_cold_climate_gain_factor = 100.0 		
+			}
+			
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}
+			targeted_modifier = {
+				tag = USA
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}
+			targeted_modifier = {
+				tag = CAN
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}
+			targeted_modifier = {
+				tag = SAF
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}
+			targeted_modifier = {
+				tag = RAJ
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}
+			targeted_modifier = {
+				tag = AST
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}
+			targeted_modifier = {
+				tag = NZL
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}						
+		}		
+		
+		no_finnish_justification = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				generate_wargoal_tension = 2.00
+			}
+		}
+
+	}
+
+	political_advisor = {
+
+
+		
+	}
+	theorist = {
+
+	
+	}
+	# MILITARY
+	army_chief = {
+
+
+		
+	}
+
+	air_chief = {
+
+
+		
+	}
+
+	navy_chief = {
+
+	
+	}
+
+	high_command = {
+		
+	}
+
+	# TECHNOLOGY
+
+	naval_manufacturer = {
+
+		designer = yes
+
+		crichton = {
+
+			picture = generic_naval_manufacturer_1
+
+
+			allowed = {
+				original_tag = FIN
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+on_add = { hidden_effect = { make_naval_designers_free = yes } }
+
+			# submarine and defence ship production
+
+			traits = { naval_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+
+		designer = yes
+
+
+		valtion_lentokonetehdas = {
+
+			picture = generic_air_manufacturer_3
+
+
+			allowed = {
+				original_tag = FIN
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+on_add = { hidden_effect = { make_air_designers_free = yes } }
+
+			traits = { light_aircraft_manufacturer }
+
+			# assembled Junkers, fast bombers
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

@@ -1,0 +1,99 @@
+﻿###########################
+# RAJ TFV events Events
+###########################
+
+add_namespace = tfv_raj
+
+#RAF funding
+country_event = {
+	id = tfv_raj.1
+	title = tfv_raj.1.t	
+	desc = tfv_raj.1.desc	#
+	picture = GFX_report_event_fighters
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = tfv_raj.1.a
+		ai_chance = {
+			base = 100
+		}
+		ENG = { country_event = { id = tfv_raj.2 } }
+	}
+	option = { 
+		name = tfv_raj.1.b
+		trigger = {
+			has_tech = early_fighter
+			NOT = { has_tech = fighter1}
+		}
+		add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 20 producer = ENG }
+	}
+	option = { 
+		name = tfv_raj.1.b
+		trigger = {
+			has_tech = fighter1
+			NOT = { has_tech = fighter2}
+		}
+		add_equipment_to_stockpile = { type = fighter_equipment_1 amount = 20 producer = ENG }
+	}
+	option = { 
+		name = tfv_raj.1.b
+		trigger = {
+			has_tech = fighter2
+			NOT = { has_tech = fighter3}
+		}
+		add_equipment_to_stockpile = { type = fighter_equipment_2 amount = 20 producer = ENG }
+	}
+	option = { 
+		name = tfv_raj.1.b
+		trigger = {
+			has_tech = fighter3
+		}
+		add_equipment_to_stockpile = { type = fighter_equipment_3 amount = 20 producer = ENG }
+	}
+
+}
+
+country_event = {
+	id = tfv_raj.2
+	title = tfv_raj.2.t	
+	desc = tfv_raj.2.desc	#
+	picture = GFX_report_event_fighters
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = tfv_raj.2.a
+		trigger = {
+			has_tech = early_fighter
+			NOT = { has_tech = fighter1}
+		}
+		add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 20 producer = ENG }
+	}
+	option = { 
+		name = tfv_raj.2.a
+		trigger = {
+			has_tech = fighter1
+			NOT = { has_tech = fighter2}
+		}
+		add_equipment_to_stockpile = { type = fighter_equipment_1 amount = 20 producer = ENG }
+	}
+	option = { 
+		name = tfv_raj.2.a
+		trigger = {
+			has_tech = fighter2
+			NOT = { has_tech = fighter3}
+		}
+		add_equipment_to_stockpile = { type = fighter_equipment_2 amount = 20 producer = ENG }
+	}
+	option = { 
+		name = tfv_raj.2.a
+		trigger = {
+			has_tech = fighter3
+		}
+		add_equipment_to_stockpile = { type = fighter_equipment_3 amount = 20 producer = ENG }
+	}
+
+}
+
+

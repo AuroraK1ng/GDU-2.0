@@ -1,0 +1,149 @@
+﻿###########################
+# Japanese Events
+###########################
+
+add_namespace = japan
+
+# Chinese Concessions
+country_event = {
+	id = japan.2
+	title = china.1.t
+	desc = japan.2.d
+	picture = GFX_report_event_chinese_soldiers_running
+
+	is_triggered_only = yes
+
+	option = {
+		name = japan.2.a
+		hidden_effect = {
+			country_event = { days = 5 id = news.2 }
+		}
+		if = {
+			limit = {
+				608 = {
+					is_controlled_by = FROM
+				}
+			}
+			JAP = {
+				transfer_state = 608
+			}
+		}
+		if = {
+			limit = {
+				597 = {
+					is_controlled_by = FROM
+				}
+			}
+			JAP = {
+				transfer_state = 597
+			}
+		}
+		if = {
+			limit = {
+				614 = {
+					is_controlled_by = FROM
+				}
+			}
+			JAP = {
+				transfer_state = 614
+			}
+		}
+
+	}
+}
+
+
+
+# French Accept Demands
+country_event = {
+	id = japan.6
+	title = japan.6.t
+	desc = japan.6.d
+	picture = GFX_report_event_japanese_soldiers_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = japan.6.a
+
+		# Dirty changes to give Vichy French Indochina to Japan
+		JAP = {
+			transfer_state = 286
+			transfer_state = 670
+			transfer_state = 671
+			transfer_state = 741
+			add_named_threat = { threat = 3 name = france.1.t }
+		}
+
+	}
+}
+
+# USA condemns our war
+country_event = {
+	id = japan.10
+	title = japan.10.t
+	desc = japan.10.d
+	picture = GFX_report_event_FDR_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = japan.10.a
+		USA = {
+			add_opinion_modifier = { target = JAP modifier = condemn_aggression }
+		}
+	}
+}
+
+# Pressure Siam to become a puppet
+country_event = {
+	id = japan.11
+	title = japan.11.t
+	desc = japan.11.d
+	picture = GFX_report_event_japanese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = japan.11.a
+		SIA = {
+			country_event = { id = japan.12 }
+		}
+	}
+}
+
+# Siam event from Japan: Become puppet or not
+country_event = {
+	id = japan.12
+	title = japan.12.t
+	desc = japan.12.d
+	picture = GFX_report_event_japanese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = japan.12.a
+		ai_chance = { factor = 100 }
+		JAP = {
+			country_event = { id = japan.13 }
+			effect_tooltip = { puppet = SIA }
+		}
+	}
+}
+
+# Siam accepts and is puppeted
+country_event = {
+	id = japan.13
+	title = japan.13.t
+	desc = japan.13.d
+	picture = GFX_report_event_japanese_siam_politicians
+
+	is_triggered_only = yes
+
+	option = {
+		name = japan.13.a
+		puppet = SIA
+	}
+}
+
+

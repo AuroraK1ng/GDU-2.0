@@ -1,0 +1,3096 @@
+﻿add_namespace = gduevents
+
+####
+country_event = {
+	id = gduevents.1
+	title = gduevents.1.t
+	desc = gduevents.1.d
+	picture = GFX_report_event_canadian_soldiers
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+
+
+	option = {
+		name = gduevents.1.a
+	}
+
+
+
+}
+country_event = {
+	id = gduevents.89
+	title = gduevents.89.t
+	desc = gduevents.89.d
+	picture = GFX_report_event_canadian_soldiers
+
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = OK
+	}
+}
+country_event = {
+	id = gduevents.90
+	title = gduevents.90.t
+	desc = gduevents.90.d
+	picture = GFX_report_event_canadian_soldiers
+
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = OK
+	}
+}
+country_event = {
+	id = gduevents.91
+	title = gduevents.91.t
+	desc = gduevents.91.d
+	picture = GFX_report_event_canadian_soldiers
+
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = OK
+	}
+}
+#on action
+country_event = {
+	id = gduevents.2
+	title = gduevents.2.t
+	desc = gduevents.2.d
+	picture = GFX_report_event_fall_blau
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			add_manpower = 0
+		}
+	}
+
+	option = {
+		name = gduevents.2.a
+	}
+
+
+}
+
+# This event is triggered by Germany's decision to begin Barbarossa, unlocked by the USSR wargoal focus for GER. It warns the Axis of what's coming.
+
+country_event = {
+	id = gduevents.3
+	title = gduevents.3.t
+	desc = gduevents.3.d
+	picture = GFX_report_event_fall_blau
+
+	is_triggered_only = yes
+
+	option = {
+		name = gduevents.3.a
+	}
+
+
+}
+
+country_event = {
+	id = gduevents.4
+	title = gduevents.4.t
+	desc = gduevents.4.d
+	picture = GFX_report_event_soviet_tanks
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = gduevents.4.a
+		custom_effect_tooltip = SOV_barbarossa_tooltip
+		add_tech_bonus = {
+			name = barb_landdoc_rush_disincentive_bonus
+			bonus = 99.9
+			uses = 1
+			technology = kampfgruppe
+			technology = concentrated_fire_plans
+			technology = centralized_fire_control
+			technology = branch_interoperation
+			technology = infiltration_assault
+			technology = vast_offensives
+			technology = human_wave_offensive
+
+			if = {
+				limit = {
+					has_tech = mechanised_offensive
+				}
+				set_technology = { kampfgruppe = 1 }
+			}
+			if = {
+				limit = {
+					has_tech = blitzkrieg
+				}
+				set_technology = { kampfgruppe = 1 }
+			}
+			if = {
+				limit = {
+					has_tech = sup_mechanized_offensive
+				}
+				set_technology = { concentrated_fire_plans = 1 }
+			}
+			if = {
+				limit = {
+					has_tech = armored_operations
+				}
+				set_technology = { infiltration_assault = 1 }
+			}
+			if = {
+				limit = {
+					has_tech = assault_concentration
+				}
+				set_technology = { branch_interoperation = 1 }
+			}
+			if = {
+				limit = {
+					has_tech = operational_concentration
+				}
+				set_technology = { vast_offensives = 1 }
+			}
+			if = {
+				limit = {
+					has_tech = large_front_offensive
+				}
+				set_technology = { human_wave_offensive = 1 }
+			}
+
+		}
+	}
+
+}
+
+##Soviet 227 event
+
+country_event = {
+	id = gduevents.5
+	title = gduevents.5.t
+	desc = gduevents.5.d
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = gduevents.5.a
+	}
+
+}
+
+country_event = {
+	id = gduevents.6
+	title = gduevents.6.t
+	desc = gduevents.6.d
+	picture = GFX_report_event_merchant_ship_01
+
+	is_triggered_only = yes
+
+	#Praise the Americans!
+	option = {
+		name = gduevents.6.a
+		effect_tooltip = {
+			add_equipment_to_stockpile = { type = convoy amount = 200 producer = USA }
+		}
+	}
+}
+
+country_event = {
+	id = gduevents.7
+	title = gduevents.7.t
+	desc = gduevents.7.d
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+
+	#Praise the Americans!
+	option = {
+		name = gduevents.7.a
+		effect_tooltip = {
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 20000 producer = USA }
+			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 500 producer = USA }
+			add_equipment_to_stockpile = { type = support_equipment_1 amount = 500 producer = USA }
+		}
+	}
+}
+
+country_event = {
+	id = gduevents.8
+	title = gduevents.8.t
+	desc = gduevents.8.d
+	picture = GFX_report_event_fighters
+
+	is_triggered_only = yes
+
+	#Praise the Americans!
+	option = {
+		name = gduevents.8.a
+		effect_tooltip = {
+			add_equipment_to_stockpile = { type = fighter_equipment_2	 amount = 650 producer = USA }
+		}
+	}
+}
+
+country_event = {
+	id = gduevents.9
+	title = gduevents.9.t
+	desc = gduevents.9.d
+	picture = GFX_report_event_fighters
+
+	is_triggered_only = yes
+
+	#Praise the Americans!
+	option = {
+		name = gduevents.9.a
+		effect_tooltip = {
+			add_equipment_to_stockpile = { type = CAS_equipment_2 amount = 300 producer = USA }
+		}
+	}
+}
+
+country_event = {
+	id = gduevents.10
+	title = gduevents.10.t
+	desc = gduevents.10.d
+	picture = GFX_report_event_generic_bombers
+
+	is_triggered_only = yes
+
+	#Praise the Americans!
+	option = {
+		name = gduevents.10.a
+		effect_tooltip = {
+			add_equipment_to_stockpile = { type = tac_bomber_equipment_2 amount = 200 producer = USA }
+		}
+	}
+}
+##Countenance event for Soviets
+country_event = {
+	id = gduevents.11
+	title = gduevents.11.t
+	desc = gduevents.11.d
+	picture = GFX_report_event_canadian_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = gduevents.11.a
+	}
+}
+
+##Countenance event for UK
+country_event = {
+	id = gduevents.12
+	title = gduevents.12.t
+	desc = gduevents.12.d
+	picture = GFX_report_event_canadian_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = gduevents.11.a
+	}
+}
+
+##Yamamoto's Warning to JAP player
+
+country_event = {
+	id = gduevents.13
+	title = gduevents.13.t
+	desc = gduevents.13.d
+	picture = GFX_report_event_japanese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = gduevents.13.a
+
+	}
+
+}
+
+#Germany chooses who to give Vichy fleet to
+country_event = {
+	id = gduevents.14
+	title = gduevents.14.t
+	desc = gduevents.14.d
+	picture =  GFX_report_event_merchant_ship_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = gduevents.14.a
+		custom_effect_tooltip = gduevents14a_tt
+		hidden_effect = {
+			set_global_flag = vichyfleet_GER
+		}
+	}
+
+	option = {
+		name = gduevents.14.b
+		custom_effect_tooltip = gduevents14b_tt
+		hidden_effect = {
+			set_global_flag = vichyfleet_ITA
+		}
+
+	}
+
+}
+
+country_event = {
+	id = gduevents.15
+	title = gduevents.15.t
+	desc = gduevents.15.d
+	picture = GFX_report_event_saf_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = gduevents.15.a
+
+	}
+
+}
+
+###Cancels military access with EFR 45 days following the armistice. Currently unused.###
+country_event = {
+	id = gduevents.17
+	title = gduevents.17.t
+	desc = gduevents.17.d
+	picture = GFX_report_event_generic_peaceful_annexation
+
+	is_triggered_only = yes
+
+	option = {
+		name = gduevents.17.a
+		if = {
+			limit = {
+				tag = GER
+			}
+			GER = {
+				diplomatic_relation = {
+				country = EFR
+				relation = military_access
+				active = no
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = ITA
+			}
+			ITA = {
+				diplomatic_relation = {
+				country = EFR
+				relation = military_access
+				active = no
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = ROM
+			}
+			ROM = {
+				diplomatic_relation = {
+				country = EFR
+				relation = military_access
+				active = no
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = BUL
+			}
+			BUL = {
+				diplomatic_relation = {
+				country = EFR
+				relation = military_access
+				active = no
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = HUN
+			}
+			HUN = {
+				diplomatic_relation = {
+				country = EFR
+				relation = military_access
+				active = no
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = SPR
+			}
+			SPR = {
+				diplomatic_relation = {
+				country = EFR
+				relation = military_access
+				active = no
+				}
+			}
+		}
+
+
+	}
+
+}
+
+#country_event = {
+#	id = gduevents.18
+#	title = gduevents.18.t
+#	desc = gduevents.18.d
+#	picture = GFX_report_event_usa_macarthur_speech
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = gduevents.18.a
+#		annex_country = {
+#			target = PHI
+#		}
+#
+#	}
+#
+#}
+
+#HOLD FRANCE YOU MONGREL#
+country_event = {
+	id = gduevents.19
+	title = gduevents.19.t
+	desc = gduevents.19.d
+	picture = GFX_report_event_generic_peaceful_annexation
+
+	is_triggered_only = yes
+
+	option = {
+		name = gduevents.19.a
+
+	}
+
+}
+
+country_event = {
+	id = gduevents.20
+	title = gduevents.20.t
+	desc = gduevents.20.d
+	picture = GFX_report_event_merchant_ship_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = gduevents.20.a
+
+	}
+
+}
+
+country_event = {
+	id = gduevents.21
+	title = gduevents.21.t
+	desc = gduevents.21.d
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = gduevents.21.a
+
+	}
+
+}
+
+
+country_event = {
+	id = gduevents.22
+	title = gduevents.22.t
+	desc = gduevents.22.d
+	picture = GFX_report_event_french_resistance_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = gduevents.22.a
+
+	}
+
+}
+
+
+
+# Explaining to USA that the Congress mechanic has been removed and replaced with PP so you don't have to remember when/how much to repeatedly click lobbying efforts.
+country_event = {
+	id = gduevents.23
+	title = gduevents.23.t
+	desc = gduevents.23.d
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+
+	option = {
+		name = gduevents.23.a
+		hidden_effect = {
+			set_global_flag = GDU_USA_Congress_Abolished
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+# Returning France to its normal infrastructure levels in 1939
+country_event = {
+	id = gduevents.24
+	title = gduevents.24.t
+	desc = gduevents.24.d
+	picture = GFX_report_event_usa_election_generic
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = gduevents.24.a
+		hidden_effect = {
+
+
+			14 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			15 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			16 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+			17 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+			18 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			19 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			20 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			21 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			22 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			23 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			24 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			25 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			8 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			26 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			27 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			28 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+			29 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			30 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			31 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			33 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			458 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			665 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			785 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+
+}
+
+
+
+
+
+# Explaining France Infrastructure to the France Player
+country_event = {
+	id = gduevents.25
+	title = gduevents.25.t
+	desc = gduevents.25.d
+	picture = GFX_report_event_generic_peaceful_annexation
+
+	is_triggered_only = yes
+
+	option = {
+		name = gduevents.25.a
+
+	}
+
+}
+
+
+# USA can't join allies yet, letting USA player know
+country_event = {
+	id = gduevents.26
+	title = gduevents.26.t
+	desc = gduevents.26.d
+	picture = GFX_report_event_merchant_ship_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = gduevents.26.a
+
+	}
+
+}
+
+
+
+# Explaining Sealion Mechanic to UK
+country_event = {
+	id = gduevents.27
+	title = gduevents.27.t
+	desc = gduevents.27.d
+	picture = GFX_report_event_merchant_ship_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = gduevents.27.a
+
+	}
+
+}
+
+
+
+
+
+# When Soviets finish their 5th land doctrine, explain that they are stopped from researching the 6th one for now to avoid wasting research and they will get a bonus for the 7th when they get the event about suspicious activity on the western border just before Barbarossa
+country_event = {
+	id = gduevents.28
+	title = gduevents.28.t
+	desc = gduevents.28.d
+	picture = GFX_report_event_soviet_tanks
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = gduevents.28.a
+	}
+
+
+}
+
+
+
+
+
+
+
+country_event = {
+	id = gduevents.29
+	title = gduevents.29.t
+	desc = gduevents.29.d
+	picture = GFX_report_event_soviet_tanks
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = gduevents.29.a
+
+		if = {
+			limit = { has_global_flag = ttfocus_enabled }
+			add_political_power = 50
+		}
+	}
+
+
+}
+
+
+
+country_event = {
+	id = gduevents.30
+	title = gduevents.30.t
+	desc = gduevents.30.d
+	picture = GFX_report_event_soviet_tanks
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = gduevents.30.a
+
+		GER = {
+add_equipment_to_stockpile = {
+         type = tac_bomber_equipment_0
+         amount = 35
+         producer = GER
+}
+add_equipment_to_stockpile = {
+         type = fighter_equipment_0
+         amount = 112
+         producer = GER
+}
+add_equipment_to_stockpile = {
+         type = CAS_equipment_1
+         amount = 80
+         producer = GER
+}		
+		}
+		
+		if = {
+			limit = { NOT = { GER = { is_ai = yes } } }
+
+		
+			POL = {
+				load_oob = "POL_GDU_SPAWN"		
+			}		
+			YUG = {
+				load_oob = "YUG_GDU_SPAWN"
+			}
+			HOL = {
+				load_oob = "HOL_GDU_SPAWN"
+			}
+			BEL = {
+				load_oob = "BEL_GDU_SPAWN"
+			}
+			DEN = {
+				load_oob = "DEN_GDU_SPAWN"
+			}
+			NOR = {
+				load_oob = "NOR_GDU_SPAWN"
+			}
+			if = {
+					limit = {
+						GRE = { is_ai = yes }
+						has_global_flag = greece_started_ai
+					}
+					GRE = {
+						load_oob = "GRE_GDU_SPAWN"
+					}				
+			}			
+		}
+
+}
+}
+
+
+
+
+
+
+country_event = {
+	id = gduevents.31
+	title = gduevents.31.t
+	desc = gduevents.31.d
+	picture = GFX_report_event_usa_british_sailors_destroyers
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = gduevents.31.a
+	}
+
+
+}
+
+country_event = {
+	id = gduevents.32
+	title = gduevents.32.t
+	desc = gduevents.32.d
+	picture = GFX_report_event_usa_british_sailors_destroyers
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = gduevents.32.a
+	}
+
+
+}
+
+
+
+country_event = {
+	id = gduevents.33
+	title = gduevents.33.t
+	desc = gduevents.33.d
+	picture = GFX_report_event_usa_british_sailors_destroyers
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = gduevents.33.a
+
+		SOV = {
+			if = { limit = { has_idea = officers_purged } remove_ideas = officers_purged }
+			if = { limit = { has_idea = officers_purged_2 } remove_ideas = officers_purged_2 }
+			if = { limit = { has_idea = officers_purged_3 } remove_ideas = officers_purged_3 }
+			if = { limit = { has_idea = officers_purged_4 } remove_ideas = officers_purged_4 }
+			if = { limit = { has_idea = officers_purged_5 } remove_ideas = officers_purged_5 }
+			if = { limit = { has_idea = officers_purged_6 } remove_ideas = officers_purged_6 }
+			if = { limit = { has_idea = officers_purged_7 } remove_ideas = officers_purged_7 }
+			if = { limit = { has_idea = officers_purged_8 } remove_ideas = officers_purged_8 }
+			if = { limit = { has_idea = officers_purged_9 } remove_ideas = officers_purged_9 }
+			if = { limit = { has_idea = officers_purged_10 } remove_ideas = officers_purged_10 }
+			add_ideas = { officers_purged_10 }
+		}
+
+	}
+
+
+}
+
+
+
+country_event = {
+	id = gduevents.34
+	title = gduevents.34.t
+	desc = gduevents.34.d
+	picture = GFX_report_event_usa_british_sailors_destroyers
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = gduevents.34.a
+
+
+	}
+
+}
+
+country_event = {
+	id = gduevents.35
+	title = gduevents.35.t
+	desc = gduevents.35.d
+	picture = GFX_report_event_ast_troops_landing
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = gduevents.35.a
+
+
+	}
+
+}
+
+
+country_event = {
+	id = gduevents.36
+	title = gduevents.36.t
+	desc = gduevents.36.d
+	picture = GFX_report_event_fall_blau
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = gduevents.36.a
+
+
+	}
+
+}
+
+
+### event telling allies France has started armistice negotiations, they have 10 days to get out of France
+
+country_event = {
+	id = gduevents.37
+	title = gduevents.37.t
+	desc = gduevents.37.d
+	picture = GFX_report_event_worried_french
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = gduevents.37.a
+
+
+	}
+
+}
+
+### French armistice news event
+
+country_event = {
+	id = gduevents.38
+	title = gduevents.38.t
+	desc = gduevents.38.d
+	picture = GFX_report_event_worried_french
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = gduevents.37.a
+
+
+	}
+
+}
+
+### Axis armistice news event
+
+country_event = {
+	id = gduevents.39
+	title = gduevents.39.t
+	desc = gduevents.39.d
+	picture = GFX_report_event_worried_french
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = gduevents.39.a
+		GER = { complete_national_focus = Victory_in_France }
+	}
+
+}
+
+### Neutral armistice news event
+
+country_event = {
+	id = gduevents.40
+	title = gduevents.40.t
+	desc = gduevents.40.d
+	picture = GFX_report_event_worried_french
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = gduevents.40.a
+
+
+	}
+
+}
+
+
+### Italy don't lose Africa you idiot event
+
+country_event = {
+	id = gduevents.41
+	title = gduevents.41.t
+	desc = gduevents.41.d
+	picture = GFX_report_event_worried_french
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = gduevents.41.a
+
+
+	}
+
+}
+
+
+
+### USA reminder to switch to partial mob
+
+country_event = {
+	id = gduevents.42
+	title = gduevents.42.t
+	desc = gduevents.42.d
+	picture = GFX_report_event_fall_blau
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = gduevents.42.a
+
+
+	}
+
+}
+
+### Deletes the Maginot Line if Germany controls Alsace-Lorraine (fires in Jan 1941, triggered by an on_action)
+
+country_event = {
+	id = gduevents.43
+	title = gduevents.43.t
+	desc = gduevents.43.d
+	picture = GFX_report_event_fall_blau
+
+	is_triggered_only = yes
+
+	hidden = yes
+
+	fire_only_once = no
+
+	option = {
+		name = gduevents.43.a
+			if = {
+				limit = {
+					NOT = { 28 = { is_controlled_by = FRA } }
+				}
+				28 = {
+					set_building_level = {
+						type = bunker
+						level = 0
+						province = {
+							all_provinces = yes
+							limit_to_border = no
+							level > 0
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { 29 = { is_controlled_by = FRA } }
+				}
+				29 = {
+					set_building_level = {
+						type = bunker
+						level = 0
+						province = {
+							all_provinces = yes
+							limit_to_border = no
+							level > 0
+						}
+					}
+				}
+			}
+}
+}
+
+
+
+### USA joins the war, Jan 1941
+
+country_event = {
+	id = gduevents.44
+	title = gduevents.44.t
+	desc = gduevents.44.d
+	picture = GFX_report_event_fall_blau
+
+	is_triggered_only = yes
+
+	hidden = yes
+
+	fire_only_once = no
+
+	option = {
+		name = gduevents.44.a
+		ENG = { add_to_faction = USA }
+			USA = {
+				add_to_war = {
+				targeted_alliance = ENG
+				enemy = GER
+				}
+			}
+
+	}
+}
+
+#Combat width reduction on mot
+country_event = {
+	id = gduevents.45
+	title = gduevents.45.t
+	desc = gduevents.45.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = gduevents.45.a
+	}
+}
+
+#Soviet scorched earth event. This is triggered at various points in time set off by Germany doing the Barbarossa decision. It will damage any infra in Soviet states occupied by the Axis over time.
+country_event = {
+	id = gduevents.46
+	title = gduevents.46.t
+	desc = gduevents.46.d
+
+	hidden = yes
+
+	is_triggered_only = yes
+	
+	fire_only_once = no		
+
+	option = {
+		name = gduevents.46.a
+			every_state = {
+				limit = { is_core_of = SOV NOT = { is_controlled_by = SOV } }
+				damage_building = {
+					type = infrastructure
+					damage = 1
+				}
+			}
+	}
+}
+
+#Ends winter war after 1 week
+country_event = {
+	id = gduevents.47
+	title = gduevents.47.t
+	desc = gduevents.47.d
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = gduevents.47.a
+					SOV = { set_country_flag = SOV_war_since_purge}					
+					SOV = {
+						country_event = { id = finland.8 days = 7 }
+						white_peace = FIN
+						transfer_state = 146
+						transfer_state = 147
+					}
+					GER = { add_to_faction = FIN }
+					FIN = { remove_state_core = 146 }
+					FIN = { remove_state_core = 147 }					
+					set_global_flag = GDU_Winter_War_Over
+	}
+}
+
+#Gives UK resource rights to its chromium back in Botswana after SAF does focus to take more states/build slots.
+country_event = {
+	id = gduevents.48
+	title = gduevents.48.t
+	desc = gduevents.48.d
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = gduevents.48.a
+		SAF = {
+			give_resource_rights = { receiver = ENG state = 542 }
+		}
+	}
+}
+
+
+
+#Transfer any states in the Philippines with no Allied troops in them to Japan, and also same thing for the Dutch East Indies. This gets fired a few times at intervals after Japan joins the war, as QOL for Japan so they don't have to take every last tile.
+country_event = {
+	id = gduevents.49
+	title = gduevents.49.t
+	desc = gduevents.49.d
+
+	hidden = yes
+
+	is_triggered_only = yes
+	
+	fire_only_once = no	
+
+	option = {
+		name = gduevents.49.a
+
+
+					# When Japan invades the Philippines, it doesn't have to take every last tile, they will flip to Japanese control as long as there are no enemy divisions and Japan has at least 1 division in the state
+
+									if = {
+										limit = {
+											JAP = {
+												divisions_in_state = {
+													size > 0
+													state = 327
+												}												
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 327
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 327 }										
+									}
+									if = {
+										limit = {
+											JAP = {
+												divisions_in_state = {
+													size > 0
+													state = 623
+												}												
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 623
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 623 }										
+									}
+									if = {
+										limit = {
+											JAP = {
+												divisions_in_state = {
+													size > 0
+													state = 624
+												}												
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 624
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 624 }										
+									}
+									if = {
+										limit = {
+											JAP = {
+												divisions_in_state = {
+													size > 0
+													state = 625
+												}												
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 625
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 625 }										
+									}
+									if = {
+										limit = {
+											JAP = {
+												divisions_in_state = {
+													size > 0
+													state = 626
+												}												
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 626
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 626 }										
+									}
+									if = {
+										limit = {
+											JAP = {
+												divisions_in_state = {
+													size > 0
+													state = 627
+												}												
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 627
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 627 }										
+									}
+									if = {
+										limit = {
+											JAP = {
+												divisions_in_state = {
+													size > 0
+													state = 628
+												}												
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 628
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 628 }										
+									}
+									if = {
+										limit = {
+											JAP = {
+												divisions_in_state = {
+													size > 0
+													state = 333
+												}												
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 333
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 333 }										
+									}
+									if = {
+										limit = {
+											JAP = {
+												divisions_in_state = {
+													size > 0
+													state = 672
+												}												
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 672
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 672 }										
+									}								
+									if = {
+										limit = {
+											JAP = {
+												divisions_in_state = {
+													size > 0
+													state = 335
+												}												
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 335
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 335 }										
+									}
+									if = {
+										limit = {
+											JAP = {
+												divisions_in_state = {
+													size > 0
+													state = 667
+												}												
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 667
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 667 }										
+									}
+									if = {
+										limit = {
+											JAP = {
+												divisions_in_state = {
+													size > 0
+													state = 793
+												}												
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 793
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 793 }										
+									}
+									if = {
+										limit = {
+											JAP = {
+												divisions_in_state = {
+													size > 0
+													state = 334
+												}												
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 334
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 334 }										
+									}									
+									if = {
+										limit = {
+											JAP = {
+												divisions_in_state = {
+													size > 0
+													state = 673
+												}												
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 673
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 673 }										
+									}
+									if = {
+										limit = {
+											JAP = {
+												divisions_in_state = {
+													size > 0
+													state = 668
+												}												
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 668
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 668 }										
+									}
+									if = {
+										limit = {
+											JAP = {
+												divisions_in_state = {
+													size > 0
+													state = 669
+												}												
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 669
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 669 }										
+									}									
+									if = {
+										limit = {
+											JAP = {
+												divisions_in_state = {
+													size > 0
+													state = 738
+												}												
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 738
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 738 }										
+									}									
+									if = {
+										limit = {
+											JAP = {
+												divisions_in_state = {
+													size > 0
+													state = 669
+												}												
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 669
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 669 }										
+									}
+									
+																
+	}
+}
+
+
+
+
+
+
+
+
+#### In Barbarossa, if other countries like Romania/Hungary/etc capture states, they get transferred to Germany automatically so that Germany can build up infra/airfields. If Germany wants to give some territory/building slots to minors later, they may do so via requests for territory/offers of territory ####
+country_event = {
+	id = gduevents.50
+	title = gduevents.50.t
+	desc = gduevents.50.d
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = gduevents.50.a
+		ROM = {
+			every_controlled_state = {
+				limit = {
+					is_core_of = SOV				
+				}
+				GER = { set_state_controller = PREV }				
+			}		
+		}
+	}
+}
+
+
+
+
+
+
+
+
+#Transfer states in Raj/Australia to Japan if Japan takes the states and there are no allied troops in the state. This is to prevent Japan from having to take every last state in the Raj/Australia, particularly if UK annexes them. This only happens if Raj/Australia has more than 50% surrender progress, however, and is checked once per month, and doesn't apply to Burma. If UK annexes Raj/Australia, that counts as > 50% surrender progress, so that is an incentive to not annex them unless you actually need to.
+country_event = {
+	id = gduevents.51
+	title = gduevents.51.t
+	desc = gduevents.51.d
+
+	hidden = yes
+
+	is_triggered_only = yes
+	
+	fire_only_once = no	
+
+	immediate = { 
+		hidden_effect = {
+			JAP = { country_event = { id = gduevents.51 days = 30 } }
+		}
+	}
+
+	option = {
+		name = gduevents.51.a
+
+					# When Japan attacks Australia/Raj, it doesn't have to take every last tile, they will flip to Japanese control as long as there are no enemy divisions and Japan has at least 1 division in the state
+
+									if = {
+										limit = {
+											AST = { surrender_progress > 0.5 }
+											JAP = {
+												518 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 518
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 518 }
+									}
+									if = {
+										limit = {
+											AST = { surrender_progress > 0.5 }
+											JAP = {
+												517 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 517
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 517 }
+									}
+									if = {
+										limit = {
+											AST = { surrender_progress > 0.5 }
+											JAP = {
+												285 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 285
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 285 }
+									}
+									if = {
+										limit = {
+											AST = { surrender_progress > 0.5 }
+											JAP = {
+												521 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 521
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 521 }
+									}
+									if = {
+										limit = {
+											AST = { surrender_progress > 0.5 }
+											JAP = {
+												519 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 519
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 519 }
+									}
+									if = {
+										limit = {
+											AST = { surrender_progress > 0.5 }
+											JAP = {
+												522 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 522
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 522 }
+									}
+									if = {
+										limit = {
+											AST = { surrender_progress > 0.5 }
+											JAP = {
+												674 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 674
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 674 }
+									}
+									if = {
+										limit = {
+											AST = { surrender_progress > 0.5 }
+											JAP = {
+												520 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 520
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 520 }
+									}
+
+									# Raj States (except Burma)
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												434 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 434
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 434 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												432 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 432
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 432 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												430 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 430
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 430 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												431 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 431
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 431 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												435 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 435
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 435 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												426 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 426
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 426 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												424 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 424
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 424 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												423 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 423
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 423 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												425 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 425
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 425 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												427 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 427
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 427 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												429 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 429
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 429 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												436 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 436
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 436 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												438 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 438
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 438 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												437 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 437
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 437 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												439 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 439
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 439 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												433 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 433
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 433 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												428 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 428
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 428 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												443 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 443
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 443 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												444 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 444
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 444 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												445 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 445
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 445 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												440 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 440
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 440 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												442 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 442
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 442 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												441 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 441
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 441 }
+									}
+									if = {
+										limit = {
+											RAJ = { surrender_progress > 0.5 }
+											JAP = {
+												787 = { is_controlled_by = JAP }
+												all_enemy_country = {
+													divisions_in_state = {
+														size < 1
+														state = 787
+													}									
+												}
+											}											
+										}
+										JAP = { set_state_controller = 787 }
+									}									
+
+	}				
+	
+}
+
+
+
+
+
+
+# This is the event for making strength damage lower for troops controlled by generals with the desert fox trait (ie fighting in Africa)
+
+country_event = {
+	id = gduevents.55
+	title = gduevents.55.t
+	desc = gduevents.55.d
+	picture = GFX_report_event_fascists_posing
+	is_triggered_only = yes 
+
+    fire_only_once = no
+
+    hidden = yes
+
+	option = {
+
+		name = gduevents.55.a
+		ai_chance = {
+		factor = 100
+		}
+
+		every_country = {
+			every_army_leader = {
+				limit = {
+					is_leading_army = yes
+					has_trait = desert_fox
+				}
+				add_temporary_buff_to_units = {
+					str_damage_multiplier = -0.6
+					days = 10
+				}
+			}
+		}
+
+		ITA = {
+			country_event = { id = gduevents.55 days = 10 }
+		}
+
+	}
+}
+
+
+
+
+
+
+# event to remove Fall Blau bonus after 45 days
+
+country_event = {
+	id = gduevents.56
+	title = gduevents.56.t
+	desc = gduevents.56.d
+	picture = GFX_report_event_fascists_posing
+	is_triggered_only = yes 
+
+    fire_only_once = no
+
+    hidden = yes
+
+	option = {
+
+		name = gduevents.56.a
+		ai_chance = {
+		factor = 100
+		}
+
+			every_owned_state = { 
+				limit = {
+					is_core_of = SOV
+				}
+				remove_province_modifier = {
+					static_modifiers = { fall_blau }
+					province = {
+                        all_provinces = yes
+                    }
+				}	
+			} 
+
+	}
+}
+
+
+# event to remove Southwestern Front bonus and frontline military district bonuses 45 days after Barbarossa starts
+
+country_event = {
+	id = gduevents.57
+	title = gduevents.57.t
+	desc = gduevents.57.d
+	picture = GFX_report_event_fascists_posing
+	is_triggered_only = yes 
+
+    fire_only_once = no
+
+    hidden = yes
+
+	option = {
+
+		name = gduevents.57.a
+		ai_chance = {
+		factor = 100
+		}
+
+			every_owned_state = { 
+				limit = {
+					is_core_of = SOV
+				}
+				remove_province_modifier = {
+					static_modifiers = { southwestern_front }
+					province = {
+                        all_provinces = yes
+                    }
+				}			
+			} 
+			every_owned_state = { 
+				limit = {
+					is_core_of = SOV
+				}
+				remove_province_modifier = {
+					static_modifiers = { frontline_military_district }
+					province = {
+                        all_provinces = yes
+                    }
+				}			
+			} 			
+			
+
+	}
+}
+
+
+# Check for Soviet cities captured within 1 week of Barb
+
+country_event = {
+	id = gduevents.58
+	title = gduevents.58.t
+	desc = gduevents.58.d
+	picture = GFX_report_event_fascists_posing
+	is_triggered_only = yes 
+
+    fire_only_once = no
+
+    hidden = yes
+
+	option = {
+
+		name = gduevents.58.a
+		ai_chance = {
+		factor = 100
+		}
+
+		#Riga
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 12 } }
+			}
+			add_timed_idea = { idea = Riga_1 days = 170 }
+		}
+		#Minsk
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 206 } }
+			}
+			add_timed_idea = { idea = Minsk_1 days = 170 }
+		}
+		#Vitebsk
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 207 } }
+			}
+			add_timed_idea = { idea = Vitebsk_1 days = 170 }
+		}		
+		#Gomel
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 241 } }
+			}
+			add_timed_idea = { idea = Gomel_1 days = 170 }
+		}
+		#Kiev
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 202 } }
+			}
+			add_timed_idea = { idea = Kiev_1 days = 170 }
+		}
+		#Odessa
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 192 } }
+			}
+			add_timed_idea = { idea = Odessa_1 days = 170 }
+		}
+		#Cherkasy
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 203 } }
+			}
+			add_timed_idea = { idea = Cherkasy_1 days = 170 }
+		}		
+		#Bobruysk
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 192 } }			
+			}
+			add_timed_idea = { idea = Bobruysk_1 days = 170 }
+		}
+		#Zhytomyr
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 203 } }			
+			}
+			add_timed_idea = { idea = Zhytomyr_1 days = 170 }
+		}		
+	}
+}
+
+
+# Check for Soviet cities captured within 2 weeks of Barb
+country_event = {
+	id = gduevents.59
+	title = gduevents.59.t
+	desc = gduevents.59.d
+	picture = GFX_report_event_fascists_posing
+	is_triggered_only = yes 
+
+    fire_only_once = no
+
+    hidden = yes
+
+	option = {
+
+		name = gduevents.59.a
+		ai_chance = {
+		factor = 100
+		}
+
+		#Riga
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 12 } }
+				NOT = { has_idea = Riga_1 }
+			}
+			add_timed_idea = { idea = Riga_2 days = 170 }
+		}
+		#Minsk
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 206 } }
+				NOT = { has_idea = Minsk_1 }				
+			}
+			add_timed_idea = { idea = Minsk_2 days = 170 }
+		}
+		#Vitebsk
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 207 } }
+				NOT = { has_idea = Vitebsk_1 }				
+			}
+			add_timed_idea = { idea = Vitebsk_2 days = 170 }
+		}		
+		#Gomel
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 241 } }
+				NOT = { has_idea = Gomel_1 }				
+			}
+			add_timed_idea = { idea = Gomel_2 days = 170 }
+		}
+		#Kiev
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 202 } }
+				NOT = { has_idea = Kiev_1 }				
+			}
+			add_timed_idea = { idea = Kiev_2 days = 170 }
+		}
+		#Odessa
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 192 } }
+				NOT = { has_idea = Odessa_1 }				
+			}
+			add_timed_idea = { idea = Odessa_2 days = 170 }
+		}
+		#Cherkasy
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 203 } }
+				NOT = { has_idea = Cherkasy_1 }				
+			}
+			add_timed_idea = { idea = Cherkasy_2 days = 170 }
+		}		
+		#Bobruysk
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 192 } }
+				NOT = { has_idea = Bobruysk_1 }			
+			}
+			add_timed_idea = { idea = Bobruysk_2 days = 170 }
+		}
+		#Zhytomyr
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 203 } }
+				NOT = { has_idea = Zhytomyr_1 }			
+			}
+			add_timed_idea = { idea = Zhytomyr_2 days = 170 }
+		}		
+	}
+}
+
+
+# Check for Soviet cities captured within 3 weeks of Barb
+country_event = {
+	id = gduevents.60
+	title = gduevents.60.t
+	desc = gduevents.60.d
+	picture = GFX_report_event_fascists_posing
+	is_triggered_only = yes 
+
+    fire_only_once = no
+
+    hidden = yes
+
+	option = {
+
+		name = gduevents.60.a
+		ai_chance = {
+		factor = 100
+		}
+
+		#Riga
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 12 } }
+				NOT = { has_idea = Riga_1 }
+				NOT = { has_idea = Riga_2 }				
+			}
+			add_timed_idea = { idea = Riga_3 days = 170 }
+		}
+		#Minsk
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 206 } }
+				NOT = { has_idea = Minsk_1 }
+				NOT = { has_idea = Minsk_2 }								
+			}
+			add_timed_idea = { idea = Minsk_3 days = 170 }
+		}
+		#Vitebsk
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 207 } }
+				NOT = { has_idea = Vitebsk_1 }
+				NOT = { has_idea = Vitebsk_2 }				
+			}
+			add_timed_idea = { idea = Vitebsk_3 days = 170 }
+		}		
+		#Gomel
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 241 } }
+				NOT = { has_idea = Gomel_1 }
+				NOT = { has_idea = Gomel_2 }				
+			}
+			add_timed_idea = { idea = Gomel_3 days = 170 }
+		}
+		#Kiev
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 202 } }
+				NOT = { has_idea = Kiev_1 }
+				NOT = { has_idea = Kiev_2 }				
+			}
+			add_timed_idea = { idea = Kiev_3 days = 170 }
+		}
+		#Odessa
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 192 } }
+				NOT = { has_idea = Odessa_1 }
+				NOT = { has_idea = Odessa_2 }				
+			}
+			add_timed_idea = { idea = Odessa_3 days = 170 }
+		}
+		#Cherkasy
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 203 } }
+				NOT = { has_idea = Cherkasy_1 }
+				NOT = { has_idea = Cherkasy_2 }				
+			}
+			add_timed_idea = { idea = Cherkasy_3 days = 170 }
+		}		
+		#Bobruysk
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 192 } }
+				NOT = { has_idea = Bobruysk_1 }
+				NOT = { has_idea = Bobruysk_2 }
+			}
+			add_timed_idea = { idea = Bobruysk_3 days = 170 }
+		}
+		#Zhytomyr
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 203 } }
+				NOT = { has_idea = Zhytomyr_1 }
+				NOT = { has_idea = Zhytomyr_2 }
+			}
+			add_timed_idea = { idea = Zhytomyr_3 days = 170 }
+		}
+
+		
+	}
+}
+
+
+# Check for Soviet cities captured within 3 weeks of Barb
+country_event = {
+	id = gduevents.61
+	title = gduevents.61.t
+	desc = gduevents.61.d
+	picture = GFX_report_event_fascists_posing
+	is_triggered_only = yes 
+
+    fire_only_once = no
+
+    hidden = yes
+
+	option = {
+
+		name = gduevents.61.a
+		ai_chance = {
+		factor = 100
+		}
+
+		#Riga
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 12 } }
+				NOT = { has_idea = Riga_1 }
+				NOT = { has_idea = Riga_2 }
+				NOT = { has_idea = Riga_3 }				
+			}
+			add_timed_idea = { idea = Riga_4 days = 170 }
+		}
+		#Minsk
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 206 } }
+				NOT = { has_idea = Minsk_1 }
+				NOT = { has_idea = Minsk_2 }	
+				NOT = { has_idea = Minsk_3 }				
+			}
+			add_timed_idea = { idea = Minsk_4 days = 170 }
+		}
+		#Vitebsk
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 207 } }
+				NOT = { has_idea = Vitebsk_1 }
+				NOT = { has_idea = Vitebsk_2 }
+				NOT = { has_idea = Vitebsk_3 }				
+			}
+			add_timed_idea = { idea = Vitebsk_4 days = 170 }
+		}		
+		#Gomel
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 241 } }
+				NOT = { has_idea = Gomel_1 }
+				NOT = { has_idea = Gomel_2 }
+				NOT = { has_idea = Gomel_3 }				
+			}
+			add_timed_idea = { idea = Gomel_4 days = 170 }
+		}
+		#Kiev
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 202 } }
+				NOT = { has_idea = Kiev_1 }
+				NOT = { has_idea = Kiev_2 }
+				NOT = { has_idea = Kiev_3 }								
+			}
+			add_timed_idea = { idea = Kiev_4 days = 170 }
+		}
+		#Odessa
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 192 } }
+				NOT = { has_idea = Odessa_1 }
+				NOT = { has_idea = Odessa_2 }
+				NOT = { has_idea = Odessa_3 }				
+			}
+			add_timed_idea = { idea = Odessa_4 days = 170 }
+		}
+		#Cherkasy
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 203 } }
+				NOT = { has_idea = Cherkasy_1 }
+				NOT = { has_idea = Cherkasy_2 }
+				NOT = { has_idea = Cherkasy_3 }				
+			}
+			add_timed_idea = { idea = Cherkasy_4 days = 170 }
+		}		
+		#Bobruysk
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 192 } }
+				NOT = { has_idea = Bobruysk_1 }
+				NOT = { has_idea = Bobruysk_2 }
+				NOT = { has_idea = Bobruysk_3 }				
+			}
+			add_timed_idea = { idea = Bobruysk_4 days = 170 }
+		}
+		#Zhytomyr
+		if = {
+			limit = {
+				NOT = { SOV = { controls_state = 203 } }
+				NOT = { has_idea = Zhytomyr_1 }
+				NOT = { has_idea = Zhytomyr_2 }
+				NOT = { has_idea = Zhytomyr_3 }				
+			}
+			add_timed_idea = { idea = Zhytomyr_4 days = 170 }
+		}
+
+		
+	}
+}
+
+
+
+### Anschluss reminder to change econ law
+
+country_event = {
+	id = gduevents.62
+	title = gduevents.62.t
+	desc = gduevents.62.d
+	picture = GFX_report_event_fall_blau
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = gduevents.62.a
+		IF = {
+			limit = { has_start_date > 1936.1.1.12 } 
+		SOV = {
+	  army_experience = 1000
+        air_experience  = 300
+                }
+        GER = {
+        air_experience  = 300
+                }
+        ITA = {
+        air_experience  = 300
+                }
+        BUL = {
+		army_experience = 125
+        }
+	  SPR = {
+		army_experience = 125
+        }
+         ROM = {
+        army_experience = 125
+                }
+        HUN = {
+        army_experience = 125
+                }
+        ENG = {
+        army_experience = 100
+                }
+        CAN = {
+        army_experience = 100
+                }
+        SAF = {
+        army_experience = 100
+                }
+		}
+
+	}
+
+}
+
+
+
+### Reminder event for 1938 tank
+
+country_event = {
+	id = gduevents.63
+	title = gduevents.63.t
+	desc = gduevents.63.d
+	picture = GFX_report_event_fall_blau
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = gduevents.63.a
+
+
+	}
+
+}
+
+### Reminder event for 1941 tank
+
+country_event = {
+	id = gduevents.64
+	title = gduevents.64.t
+	desc = gduevents.64.d
+	picture = GFX_report_event_fall_blau
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = gduevents.64.a
+
+
+	}
+
+}
+
+### Reminder event for 1943 tank
+
+country_event = {
+	id = gduevents.65
+	title = gduevents.65.t
+	desc = gduevents.65.d
+	picture = GFX_report_event_fall_blau
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = gduevents.65.a
+
+
+	}
+
+}
+
+### Reminder event for 1945 tank
+
+country_event = {
+	id = gduevents.66
+	title = gduevents.66.t
+	desc = gduevents.66.d
+	picture = GFX_report_event_fall_blau
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = gduevents.66.a
+
+
+	}
+
+}
+
+
+
+#Allies win the war if Axis has not conquered mainland Europe by December 1940
+#country_event = {
+#	id = gduevents.67
+#	title = gduevents.67.t
+#	desc = gduevents.67.d
+#
+#	hidden = yes
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = gduevents.67.a
+#		if = {
+#			limit = {
+#				OR = {
+#					NOT = { has_global_flag = fall_of_poland }
+#					NOT = { has_global_flag = fall_of_greece }
+#					NOT = { has_global_flag = fall_of_france }
+#					YUG = { surrender_progress < 1.0 }
+#					DEN = { surrender_progress < 1.0 }
+#					HOL = { surrender_progress < 1.0 }
+#					FRA = { surrender_progress < 1.0 }
+#				}
+#			}
+#			USA = {
+#				annex_country = { target = GER transfer_troops = no }
+#				annex_country = { target = ITA transfer_troops = no }
+#				annex_country = { target = SPR transfer_troops = no }
+#				annex_country = { target = HUN transfer_troops = no }
+#				annex_country = { target = ROM transfer_troops = no }
+#				annex_country = { target = BUL transfer_troops = no }
+#			}
+#			SOV = {
+#				annex_country = { target = FIN transfer_troops = no }
+#			}			
+#		}
+#
+#	}
+#}
+
+
+
+# watt Africa event
+country_event = {
+	id = gduevents.68
+	title = gduevents.68.t
+	desc = gduevents.68.d
+	picture = GFX_report_event_saf_soldiers
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+ 
+	option = {
+		name = gduevents.68.a
+	}
+}
+
+# The late Barbarossa balance adjustment which reduces the effect of the purge. This was formerly the "Danger to the Heartland" geographic balance adjustment, but is now time-based rather than geography based.
+country_event = { 
+	id = gduevents.69
+	title = gduevents.69.t
+	desc = gduevents.69.d
+	picture = GFX_report_event_soviet_tanks
+	
+	is_triggered_only = yes
+		
+	fire_only_once = yes 
+
+    hidden = yes
+
+	
+	option = {
+		name = gduevents.69.a
+		hidden_effect = { 
+			SOV = { add_ideas = GDU_SOV_Danger_To_Heartland } 
+		}
+	}
+	
+	
+}
+
+#### Kommandanter -Added Fall Blau Event ####
+country_event = {
+	id = gduevents.70
+	title = gduevents.70.t
+	desc = gduevents.70.d
+	picture = GFX_report_event_fall_blau
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+ 
+	option = {
+		name = gduevents.70.a
+	}
+}
+
+
+
+
+# Anti-cheat events that give a debuff to generals which have mutually exclusive traits (for example Panzer Leader and Combined Arms leader). If people have those, they cheated to get them by exploiting, so they should be punished by nerfing their generals.
+
+country_event = {
+	id = gduevents.71
+	title = gduevents.71.t
+	desc = gduevents.71.d
+	picture = GFX_report_event_fascists_posing
+	is_triggered_only = yes 
+
+    fire_only_once = no
+
+    hidden = yes
+
+	option = {
+
+		name = gduevents.71.a
+		ai_chance = {
+		factor = 100
+		}
+
+		every_country = {
+			every_army_leader = {
+				limit = {
+					is_leading_army = yes
+					has_trait = desert_fox
+				}
+				add_temporary_buff_to_units = {
+					str_damage_multiplier = -0.6
+					days = 10
+				}
+			}
+		}
+
+		ITA = {
+			country_event = { id = gduevents.71 days = 10 }
+		}
+
+	}
+}
+
+
+
+
+#Reminder event for UK to garrison Gibraltar
+country_event = {
+	id = gduevents.72
+	title = "Gibraltar"
+	desc = "Uhhh... I'm not sure quite how to say this, but... You might want to garrison Gibraltar, brah..."
+	
+	picture = GFX_report_event_merchant_ship_01
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = "no u"
+	}
+}
+
+#Reminder event for other Allied countries that maybe UK should garrison Gibraltar
+country_event = {
+	id = gduevents.73
+	title = "Gibraltar"
+	desc = "Uhhh... You know your UK? Well, they are not garrisoning Gibraltar. Maybe you want to let them know they should do that?"
+	
+	picture = GFX_report_event_merchant_ship_01
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = "No, doesn't affect me, go away"
+	}
+}
+
+
+#Reminder that there is no BEF
+country_event = {
+	id = gduevents.74
+	title = "No BEF"
+	desc = "There is no British Expeditionary Fore (at least 5 UK divisions in either Nord-Pas-de-Calais, Picardy, Champagne, or Alsace-Lorraine). Being abandoned by the British is demoralizing to French troops, who suffer a minor debuff to their effectiveness."
+	
+	picture = GFX_report_event_canadian_soldiers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = "Tell the UK player to send a BEF, we can still get a bonus!"
+	}
+}
+
+#Reminder that there is no BEF
+country_event = {
+	id = gduevents.75
+	title = "No BEF"
+	desc = "There is no British Expeditionary Fore (at least 5 UK divisions in either Nord-Pas-de-Calais, Picardy, Champagne, or Alsace-Lorraine). Being abandoned by the British is demoralizing to French troops, who suffer a minor debuff to their effectiveness."
+	
+	picture = GFX_report_event_canadian_soldiers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = "We're not sending a BEF! The French can die, and like it, too!"
+	}
+}

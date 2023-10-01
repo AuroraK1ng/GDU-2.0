@@ -1,0 +1,23 @@
+leader_traits = {
+	
+	med_fleet_naval_manufacturer = {
+		#on_add = { hidden_effect = { make_naval_designers_free = yes } }
+		random = no
+		equipment_bonus = {
+			carrier = {
+				build_cost_ic = -0.1 armor_value = 0.25 naval_range = -0.65
+			}
+			capital_ship = {
+				build_cost_ic = -0.1 armor_value = 0.25 hg_attack = 0.15 naval_range = -0.65
+			}
+			screen_ship = {
+				build_cost_ic = -0.1 armor_value = 0.25 lg_attack = 0.15 torpedo_attack = 0.15 naval_range = -0.65
+			}
+			submarine = {
+				build_cost_ic = -0.1 torpedo_attack = 0.15 naval_range = -0.65
+			}
+		}
+	}
+	
+		
+}

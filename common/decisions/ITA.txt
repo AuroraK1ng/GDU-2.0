@@ -1,0 +1,91 @@
+ITA_ll_germany = {
+	ITA_auto_ll_ger = {
+		icon = generic_prepare_civil_war
+		available = { original_tag = ITA }
+		complete_effect = {
+			set_country_flag = auto_ll_ger_enabled
+			activate_mission = ITA_auto_ll_ger_1
+		}
+		visible = { NOT = { has_country_flag = auto_ll_ger_enabled } }
+		
+		fire_only_once = no
+	}
+	ITA_stop_auto_ll_ger = {
+		icon = generic_prepare_civil_war
+		available = { original_tag = ITA }
+		complete_effect = {
+			clr_country_flag = auto_ll_ger_enabled
+		}
+		visible = { has_country_flag = auto_ll_ger_enabled }
+		
+		fire_only_once = no
+	}
+	ITA_egyptx= { 
+		icon = generic_prepare_civil_war
+		fire_only_once = yes	
+		visible = { always = no }
+		allowed = { 	tag = ITA 	}
+		available = { 	ITA = {
+				controls_state = 446
+				controls_state = 447
+				controls_state = 453
+				controls_state = 454								
+			} }	
+		cost = 0		
+		complete_effect = {
+			complete_national_focus = ITA_consolidate_egypt
+		}	
+	}
+	ITA_auto_ll_ger_1 = {
+		allowed = { always = no
+			original_tag = ITA }
+
+		icon = officers_purged
+
+		available = { 
+			NOT = { has_country_flag = auto_ll_ger_enabled } 
+		}
+		activation = {
+			always=no
+		}
+
+		selectable_mission = no
+		days_mission_timeout = 30
+		is_good = yes
+		fire_only_once = yes
+		timeout_effect = { 
+			send_equipment = { equipment = small_plane_airframe amount = 5000 target = GER }
+			send_equipment = { equipment = medium_plane_airframe amount = 5000 target = GER }
+			send_equipment = { equipment = medium_plane_fighter_airframe amount = 5000 target = GER }
+			send_equipment = { equipment = small_plane_cas_airframe amount = 5000 target = GER }
+			send_equipment = { equipment = small_plane_naval_bomber_airframe amount = 5000 target = GER }
+			#send_equipment = { equipment = transport_plane_equipment amount = 5000 target = GER }
+			activate_mission = ITA_auto_ll_ger_2
+		 }
+		complete_effect = {}
+	}
+	ITA_auto_ll_ger_2 = {
+		allowed = { always = no
+			original_tag = ITA }
+		available = { 
+			#tag = gay 
+			NOT = { has_country_flag = auto_ll_ger_enabled } 
+		}
+		activation = {
+			always=no
+		}
+
+		selectable_mission = no
+		days_mission_timeout = 30
+		is_good = yes
+		fire_only_once = yes
+		timeout_effect = { 
+			send_equipment = { equipment = small_plane_airframe amount = 5000 target = GER }
+			send_equipment = { equipment = medium_plane_airframe amount = 5000 target = GER }
+			send_equipment = { equipment = medium_plane_fighter_airframe amount = 5000 target = GER }
+			send_equipment = { equipment = small_plane_cas_airframe amount = 5000 target = GER }
+			send_equipment = { equipment = small_plane_naval_bomber_airframe amount = 5000 target = GER }
+			activate_mission = ITA_auto_ll_ger_1 
+		}
+	}
+}

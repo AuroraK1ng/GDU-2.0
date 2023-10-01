@@ -1,0 +1,175 @@
+﻿division_template = {
+	name = "Divizia Infanterie"			# Infantry Division
+	# Note: also represents Guards, Fortress divisions
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+		artillery_brigade = { x = 3 y = 2 }
+		artillery_brigade = { x = 3 y = 3 }
+		anti_air_brigade = { x = 4 y = 0 }
+		anti_air_brigade = { x = 4 y = 1 }
+
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 	
+		recon = { x = 0 y = 1 } 		
+		artillery = { x = 0 y = 2 }
+		anti_air = { x = 0 y = 3 }				
+	}
+}
+division_template = {
+	name = "Munte Brigada"				# Mountain Brigade
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 0 y = 3 }
+		mountaineers = { x = 0 y = 4 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 1 y = 3 }
+		mountaineers = { x = 1 y = 4 }
+		mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 2 y = 1 }
+		mountaineers = { x = 2 y = 2 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+		artillery_brigade = { x = 3 y = 2 }
+		artillery_brigade = { x = 3 y = 3 }
+		anti_air_brigade = { x = 4 y = 0 }
+		anti_air_brigade = { x = 4 y = 1 }
+		
+	}
+	support = {
+		engineer = { x = 0 y = 0 }      # includes 1x AC comp, 1x L tank comp
+		recon = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+		anti_air = { x = 0 y = 3 }				
+	}
+}
+division_template = {
+	name = "Cavalerie Brigada" 				# Cavalry Brigade
+	# Note: regiments within the brigade were battalion-sized units
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 0 y = 4 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Recon Group consisted of 64 ACs/scout cars
+		anti_air = { x = 0 y = 1 }				
+	}
+}
+division_template = {
+	name = "Blindata Regimentul" 				# Armor Regiment
+	# Note: 2nd regiment created and merged with motorized inf to create Armor Division in 1940
+	regiments = {
+		motorized = { x = 0 y = 0 }
+	    motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 0 y = 3 }
+
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		mot_anti_air_brigade = { x = 1 y = 3 }
+		mot_anti_air_brigade = { x = 1 y = 4 }
+	    
+		light_armor = { x = 2 y = 0 }
+		light_armor = { x = 2 y = 1 }
+		light_armor = { x = 2 y = 2 }
+		light_armor = { x = 2 y = 3 }
+		light_armor = { x = 3 y = 0 }
+		light_armor = { x = 3 y = 1 }
+		light_armor = { x = 3 y = 2 }
+		light_armor = { x = 3 y = 3 }
+		light_armor = { x = 4 y = 0 }
+		light_armor = { x = 4 y = 1 }
+		light_armor = { x = 4 y = 2 }
+		light_armor = { x = 4 y = 3 }
+
+	}
+	support = {
+        engineer = { x = 0 y = 0 }
+        mot_recon = { x = 0 y = 1 }
+		anti_air = { x = 0 y = 2 }				
+
+	}
+}
+
+
+units = {
+	division= {
+		name = "Use this division to select generals' traits"
+		location = 5851
+		division_template = "Divizia Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.01
+	}
+}
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "ROM"
+		}
+		requested_factories = 1
+		progress = 0.87
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "ROM"
+		}
+		requested_factories = 1
+		progress = 0.19
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "ROM"
+		}
+		requested_factories = 1
+		progress = 0.24
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = anti_air_equipment_1
+			creator = "ROM"
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}	
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "ROM" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 100
+	}			
+}

@@ -1,0 +1,586 @@
+
+
+political_actions = {
+
+	hold_blood_toil_tears_sweat_speech = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+			has_war_with = GER
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+		}
+
+		complete_effect = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			USA = { set_country_flag = blood_toil_tears_sweat_speech }
+			set_country_flag = blood_toil_tears_sweat_speech
+		}
+
+		ai_will_do = {
+			factor = 100 #Gotta allow the Americans to help
+		}
+	}
+
+	hold_fight_on_the_beaches_speech = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+			has_war_with = GER
+			is_in_faction_with = FRA
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			has_country_flag = blood_toil_tears_sweat_speech
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+		}
+
+		complete_effect = {
+			add_war_support = 0.05
+			USA = { set_country_flag = fight_on_the_beaches_speech }
+			set_country_flag = fight_on_the_beaches_speech
+		}
+
+		ai_will_do = {
+			factor = 100 #Gotta allow the Americans to help
+		}
+	}
+
+	hold_this_was_their_finest_hour_speech = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+			has_war_with = GER
+			is_in_faction_with = FRA
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			has_country_flag = fight_on_the_beaches_speech
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+		}
+
+		complete_effect = {
+			add_war_support = 0.05
+			USA = { set_country_flag = this_was_their_finest_hour_speech }
+			set_country_flag = this_was_their_finest_hour_speech
+		}
+
+		ai_will_do = {
+			factor = 100 #Gotta allow the Americans to help
+		}
+	}
+
+	puppet_france = {
+		ai_will_do = { factor = 0 }
+		cost = 0
+
+		allowed = {
+			original_tag = ENG
+		}
+
+		visible = {
+			country_exists = FRA
+			date > 1940.6.1
+			FRA = { is_ai = yes }
+
+		}
+		fire_only_once = yes
+		complete_effect = {
+			ENG = { puppet = FRA }
+		}
+	}
+
+	annex_canada = {
+		ai_will_do = { factor = 0 }
+		cost = 0
+
+		allowed = {
+			original_tag = ENG
+		}
+		visible = {
+			CAN = { is_ai = yes }
+			country_exists = CAN
+			date > 1939.1.1
+			has_war = yes
+		}
+		fire_only_once = yes
+		complete_effect = {
+			ENG = {
+				annex_country = { target = CAN transfer_troops = yes }
+				add_ideas = annex_canada_idea
+				add_timed_idea = { idea = GDU_minor_annexation_efficiency days = 30 }				
+			}
+		}
+	}
+
+	annex_british_raj = {
+		ai_will_do = { factor = 0 }
+		cost = 0
+
+		allowed = {
+			original_tag = ENG
+		}
+		visible = {
+			RAJ = { is_ai = yes }
+			country_exists = RAJ
+			date > 1939.1.1
+			has_war = yes
+		}
+		fire_only_once = yes
+		complete_effect = {
+			ENG = {
+				annex_country = { target = RAJ transfer_troops = yes }
+				add_ideas = annex_british_raj_idea
+				add_timed_idea = { idea = GDU_minor_annexation_efficiency days = 30 }
+			}
+		}
+	}
+
+	annex_south_africa = {
+		ai_will_do = { factor = 0 }
+		cost = 0
+
+		allowed = {
+			original_tag = ENG
+		}
+		visible = {
+			SAF = { is_ai = yes }
+			country_exists = SAF
+			date > 1939.1.1
+			has_war = yes
+		}
+		fire_only_once = yes
+		complete_effect = {
+			ENG = {
+				annex_country = { target = SAF transfer_troops = yes }
+				add_ideas= annex_south_africa_idea
+				add_timed_idea = { idea = GDU_minor_annexation_efficiency days = 30 }
+			}
+		}
+	}
+
+	annex_australia = {
+		ai_will_do = { factor = 0 }
+		cost = 0
+
+		allowed = {
+			original_tag = ENG
+		}
+		visible = {
+			AST = { is_ai = yes }
+			country_exists = AST
+			date > 1939.1.1
+			has_war = yes
+		}
+		fire_only_once = yes
+		complete_effect = {
+			ENG = {
+				annex_country = { target = AST transfer_troops = yes }
+				add_ideas = annex_australia_idea
+				add_timed_idea = { idea = GDU_minor_annexation_efficiency days = 30 }
+			}
+		}
+	}
+
+	annex_new_zealand_uk = {
+		ai_will_do = { factor = 0 }
+		cost = 0
+
+		allowed = {
+			original_tag = ENG
+		}
+		visible = {
+			NZL = { is_ai = yes }
+			country_exists = NZL
+			date > 1939.1.1
+			has_war = yes
+		}
+		fire_only_once = yes
+		complete_effect = {
+			ENG = {
+				annex_country = { target = NZL transfer_troops = yes }
+				add_ideas= annex_new_zealand_idea
+				add_timed_idea = { idea = GDU_minor_annexation_efficiency days = 30 }
+			}
+		}
+	}
+
+	annex_france_uk = {
+		ai_will_do = { factor = 0 }
+		cost = 0
+
+		allowed = {
+			original_tag = ENG
+		}
+		visible = {
+			FRA = { is_ai = yes }
+			country_exists = FRA
+			date > 1939.1.1
+			has_global_flag = fall_of_france
+			has_war = yes
+		}
+		fire_only_once = yes
+		complete_effect = {
+			ENG = {
+				annex_country = { target = FRA transfer_troops = yes }
+				add_ideas=annex_france_idea
+				add_timed_idea = { idea = GDU_minor_annexation_efficiency days = 30 }
+				
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated1 
+				}
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}			
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated2 
+				}
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated3 
+				}
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}	
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated1 
+				}
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}			
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated2 
+				}
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated3 
+				}
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}	
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated1 
+				}
+				add_offsite_building = { type = dockyard level = 1 }								
+			}			
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated3 
+				}
+				add_offsite_building = { type = dockyard level = 1 }								
+			}					
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated2 
+				}
+				add_offsite_building = { type = dockyard level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated3 
+				}
+				add_offsite_building = { type = dockyard level = 1 }								
+			}			
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated4 
+				}
+				add_offsite_building = { type = dockyard level = 1 }								
+			}	
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated8 
+				}
+				add_offsite_building = { type = dockyard level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated10 
+				}
+				add_offsite_building = { type = dockyard level = 1 }								
+			}				
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated1 
+				} 
+				add_offsite_building = { type = industrial_complex level = 1 }				
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated2 
+				} 
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated3 
+				} 
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated4 
+				} 
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated5 
+				} 
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated6 
+				} 
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated7 
+				} 
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated8 
+				} 
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated9 
+				} 
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated10 
+				}
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}				
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated1 
+				} 
+				add_offsite_building = { type = arms_factory level = 1 }				
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated2 
+				} 
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated3 
+				} 
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated4 
+				} 
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated5 
+				} 
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated6 
+				} 
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated7 
+				} 
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated8 
+				} 
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated9 
+				} 
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated10 
+				}
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}				
+				
+				
+				
+				
+				
+				
+				
+			}
+		}
+	}
+
+	ENG_Capital_London = {
+
+		icon = generic_political_actions
+
+		allowed = {
+			original_tag = ENG
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		available = {
+			has_country_flag = London_has_Fallen
+			126 = { is_controlled_by = ENG }
+		}
+
+		complete_effect = {
+			set_capital = { state = 126 }
+		}
+	}
+	ENG_Capital_Newfoundland = {
+
+		icon = generic_political_actions
+
+		allowed = {
+			original_tag = ENG
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		available = {
+			has_war = yes
+			331 = { is_controlled_by = ENG }
+			NOT = { 126 = { is_controlled_by = ENG } }
+		}
+
+		complete_effect = {
+			set_capital = { state = 331}
+			set_country_flag = London_has_Fallen
+			331 = {
+				add_building_construction = {
+					type = naval_base
+					level = 9
+					province = 2079
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	ENG_Capital_Guyana = {
+
+		icon = generic_political_actions
+
+		allowed = {
+			original_tag = ENG
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		available = {
+			has_war = yes
+			687 = { is_controlled_by = ENG }
+			NOT = { 126 = { is_controlled_by = ENG } }
+		}
+
+		complete_effect = {
+			set_capital = { state = 687}
+			set_country_flag = London_has_Fallen
+			687 = {
+				add_building_construction = {
+					type = naval_base
+					level = 9
+					province = 4982
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+operations = {
+
+}

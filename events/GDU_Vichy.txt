@@ -1,0 +1,988 @@
+add_namespace = gduvichy 
+
+#### Event that gives Vichy stuff from 00_GDU_Vichy, we space it out to avoid destroying inferior CPU's ####
+country_event = {
+	id = gduvichy.1
+	title = gduvichy.1.t
+	desc = gduvichy.1.d
+	picture = GFX_report_event_canadian_soldiers
+
+	is_triggered_only = yes
+
+	immediate = {
+					transfer_state = 22
+					transfer_state = 31
+					transfer_state = 25
+					transfer_state = 20
+					transfer_state = 33
+					country_event = { id = gduvichy.2 days = 1 }
+					GER = { add_to_faction = SPR }
+					if = {
+						limit = { SPR = { NOT = { has_war_with = ENG } } }
+						SPR = {
+							declare_war_on_all_allies = yes
+						}
+					}
+
+					17 = {
+						remove_building = {
+							type = infrastructure
+							level = 2
+						}
+					}
+					20 = {
+						remove_building = {
+							type = infrastructure
+							level = 1
+						}
+					}
+					24 = {
+						remove_building = {
+							type = infrastructure
+							level = 1
+						}
+					}
+					27 = {
+						remove_building = {
+							type = infrastructure
+							level = 1
+						}
+					}
+					18 = {
+						remove_building = {
+							type = infrastructure
+							level = 1
+						}
+					}
+					16 = {
+						remove_building = {
+							type = infrastructure
+							level = 2
+						}
+					}
+					785 = {
+						remove_building = {
+							type = infrastructure
+							level = 2
+						}
+					}
+					29 = {
+						remove_building = {
+							type = infrastructure
+							level = 1
+						}
+					}
+					6 = {
+						remove_building = {
+							type = infrastructure
+							level = 3
+						}
+					}
+
+			SPR = {
+				give_resource_rights = { receiver = GER state = 169 }
+			}
+					54 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					170	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					59 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					171	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					60 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					174	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					64 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					172	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					64 = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					166	= {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+	}
+
+	option = {
+		name = gduvichy.1.a
+
+	}
+
+
+
+}
+
+country_event = {
+	id = gduvichy.2
+	title = gduvichy.2.t
+	desc = gduvichy.2.d
+	picture = GFX_report_event_canadian_soldiers
+
+	is_triggered_only = yes
+
+	immediate = {
+					transfer_state = 677
+					transfer_state = 680
+					transfer_state = 553
+					transfer_state = 554
+					transfer_state = 459
+					transfer_state = 460
+					transfer_state = 461
+					transfer_state = 462
+					transfer_state = 513
+					country_event = { id = gduvichy.3 days = 1 }
+	}
+
+	option = {
+		name = gduvichy.2.a
+
+	}
+
+
+
+}
+
+country_event = {
+	id = gduvichy.3
+	title = gduvichy.3.t
+	desc = gduvichy.3.d
+	picture = GFX_report_event_canadian_soldiers
+
+	is_triggered_only = yes
+
+	immediate = {
+					transfer_state = 556 # Africa
+					transfer_state = 557
+					transfer_state = 272
+					transfer_state = 778
+					transfer_state = 781
+
+					country_event = { id = gduvichy.4 days = 1 }
+	}
+
+	option = {
+		name = gduvichy.3.a
+
+	}
+
+
+
+}
+
+country_event = {
+	id = gduvichy.4
+	title = gduvichy.4.t
+	desc = gduvichy.4.d
+	picture = GFX_report_event_canadian_soldiers
+
+	is_triggered_only = yes
+
+	immediate = {
+					transfer_state = 779
+					transfer_state = 780
+					transfer_state = 776
+					transfer_state = 777
+					transfer_state = 543 #Madagascar
+
+					country_event = { id = gduvichy.5 days = 3 }
+
+	}
+
+	option = {
+		name = gduvichy.4.a
+
+	}
+
+
+
+}
+
+country_event = {
+	id = gduvichy.5
+	title = gduvichy.5.t
+	desc = gduvichy.5.d
+	picture = GFX_report_event_canadian_soldiers
+
+	is_triggered_only = yes
+
+	immediate = {
+
+
+					transfer_state = 671
+					transfer_state = 670
+					transfer_state = 741
+					transfer_state = 286
+
+				EFR = { country_event = { id = france.1 days = 5 } }
+
+				country_event = { id = gduvichy.8 days = 3 }
+
+	}
+
+
+	option = {
+		name = gduvichy.5.a
+
+	}
+
+
+
+}
+
+
+
+country_event = {
+	id = gduvichy.6
+	title = gduvichy.6.t
+	desc = gduvichy.6.d
+	picture = GFX_report_event_canadian_soldiers
+
+	is_triggered_only = yes
+
+	immediate = {
+
+
+				#### Stuff to replace the old France (FRA) with a brand new Free France (FRA) country ####
+
+				FRA = {
+					transfer_state = 772
+					transfer_state = 773
+					transfer_state = 660
+				}
+
+
+				country_event = { id = gduvichy.14 days = 2 }
+				country_event = { id = gduvichy.13 days = 4 }
+				country_event = { id = gduvichy.12 days = 6 }
+				country_event = { id = gduvichy.7 days = 8 }
+				FRA = { news_event = { id = france.20 days = 5 } }
+
+	}
+
+	option = {
+		name = gduvichy.6.a
+	}
+
+
+
+}
+
+
+
+country_event = {
+	id = gduvichy.12
+	title = gduvichy.12.t
+	desc = gduvichy.12.d
+	picture = GFX_report_event_canadian_soldiers
+
+	is_triggered_only = yes
+
+	immediate = {
+
+
+				#### switch France (FRA) to Free France (FRA) ####
+
+				FRA = {
+					add_state_core = 539
+					add_state_core = 772
+					add_state_core = 773
+					add_state_core = 660
+					add_state_core = 774					
+				}
+
+
+	}
+
+	option = {
+		name = gduvichy.12.a
+
+	}
+
+
+
+}
+
+
+
+country_event = {
+	id = gduvichy.7
+	title = gduvichy.7.t
+	desc = gduvichy.7.d
+	picture = GFX_report_event_canadian_soldiers
+
+	is_triggered_only = yes
+
+	immediate = {
+
+
+				FRA = {
+					transfer_state = 713
+					transfer_state = 320
+					transfer_state = 728
+					transfer_state = 635
+					transfer_state = 734
+					transfer_state = 641
+					transfer_state = 310
+					transfer_state = 694
+					transfer_state = 730
+				}
+
+				country_event = { id = gduvichy.1 days = 3 }
+
+	}
+
+	option = {
+		name = gduvichy.7.a
+
+	}
+
+
+
+}
+
+
+
+
+country_event = {
+	id = gduvichy.8
+	title = gduvichy.8.t
+	desc = gduvichy.8.d
+	picture = GFX_report_event_canadian_soldiers
+
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = gduvichy.8.a
+
+	}
+
+
+
+}
+
+
+
+
+
+country_event = {
+	id = gduvichy.9
+	title = gduvichy.9.t
+	desc = gduvichy.9.d
+	picture = GFX_report_event_canadian_soldiers
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+
+				if = {
+					limit = {
+						AND = {
+							ITA = { NOT = { has_war_with = ENG } }
+						}
+					}
+					ITA = { country_event = { id = pfu.35 days = 20 } } # Force Italian war declaration on the allies.
+				}
+				774	= {
+						add_extra_state_shared_building_slots = 10
+						add_building_construction = {
+							type = industrial_complex
+							level = 10
+							instant_build = yes
+						}
+					}
+				539 = {
+						add_extra_state_shared_building_slots = 5
+						add_building_construction = {
+							type = arms_factory
+							level = 5
+							instant_build = yes
+						}
+					}
+				779 = {
+						add_extra_state_shared_building_slots = 5
+						add_building_construction = {
+							type = industrial_complex
+							level = 5
+							instant_build = yes
+						}
+					}
+				779 = {
+						add_extra_state_shared_building_slots = 5
+						add_building_construction = {
+							type = arms_factory
+							level = 5
+							instant_build = yes
+						}
+					}
+				GER = {
+					transfer_state = 19
+					transfer_state = 23
+					transfer_state = 30
+					transfer_state = 14
+					transfer_state = 15
+					transfer_state = 24
+					transfer_state = 16
+					transfer_state = 785
+					transfer_state = 27
+					transfer_state = 18
+					transfer_state = 17
+					transfer_state = 29
+					transfer_state = 28
+				}
+			EFR = { transfer_state = 20 transfer_state = 33 transfer_state = 25 transfer_state = 31 transfer_state = 22 }
+				FRA = {
+
+					add_state_core = 539
+
+					transfer_state = 539
+
+					
+
+					add_ideas = FRA_FREE_army
+					set_cosmetic_tag = FRA_FREE
+
+					create_corps_commander = {
+						name = "Charles De Gaulle"
+						picture = "Portrait_France_Charles_De_Gaulle.dds"
+						traits = { career_officer trickster infantry_leader cavalry_officer panzer_leader skilled_staffer old_guard trait_cautious brilliant_strategist }
+						skill = 6
+						attack_skill = 7
+						defense_skill = 4
+						planning_skill = 5
+						logistics_skill = 4
+					}
+					create_corps_commander = {
+						name = "Charles De Gaulle AFRICANUS"
+						picture = "AFRICA_Portrait_France_Charles_De_Gaulle.dds"
+						traits = { desert_fox career_officer trickster infantry_leader urban_assault_specialist cavalry_officer panzer_leader  skilled_staffer old_guard trait_cautious brilliant_strategist }
+						skill = 6
+						attack_skill = 8
+						defense_skill = 4
+						planning_skill = 5
+						logistics_skill = 4
+					}					
+					create_field_marshal = {
+						name = "Philippe Leclerc"
+						picture = "portrait_france_philippe_leclerc.dds"
+						traits = { armor_officer trait_reckless career_officer politically_connected panzer_leader skilled_staffer organizer exiled_leader }
+						skill = 5
+						attack_skill = 3
+						defense_skill = 5
+						planning_skill = 3
+						logistics_skill = 5
+					}
+					create_corps_commander = {
+						name = "Marie-Pierre Koenig"
+						picture = "Portrait_France_Marie_Pierre_Koenig.dds"
+						traits = { trickster trait_mountaineer infantry_leader naval_invader infantry_officer career_officer harsh_leader exiled_leader hill_fighter}
+						skill = 5
+						attack_skill = 7
+						defense_skill = 5
+						planning_skill = 5
+						logistics_skill = 5
+					}
+					create_corps_commander = {
+						name = "Marie-Pierre Koenig AFRICANUS"
+						picture = "AFRICA_Portrait_France_Marie_Pierre_Koenig.dds"
+						traits = { trickster trait_mountaineer desert_fox naval_invader infantry_leader infantry_officer career_officer harsh_leader exiled_leader }
+						skill = 5
+						attack_skill = 8
+						defense_skill = 5
+						planning_skill = 5
+						logistics_skill = 5
+					}					
+					create_corps_commander = {
+						name = "Edgard de Larminat"
+						picture = "Portrait_France_Generic_land_4.dds"
+						traits = { war_hero politically_connected trait_reckless cavalry_leader armor_officer exiled_leader }
+						skill = 4
+						attack_skill = 5
+						defense_skill = 3
+						planning_skill = 1
+						logistics_skill = 4
+					}
+					create_corps_commander = {
+						name = "Edgard de Larminat AFRICANUS"
+						picture = "AFRICA_Portrait_France_Generic_land_4.dds"
+						traits = { desert_fox war_hero politically_connected trait_reckless panzer_leader armor_officer exiled_leader trait_engineer }
+						skill = 4
+						attack_skill = 6
+						defense_skill = 4
+						planning_skill = 1
+						logistics_skill = 4
+					}					
+					create_navy_leader = {
+						name = "Émile Muselier"
+						picture = "Portrait_France_Emile_Muselier.dds"
+						traits = { seawolf fleet_protector blockade_runner spotter }
+						skill = 5
+						attack_skill = 5
+						defense_skill = 5
+						maneuvering_skill = 3
+						coordination_skill = 3
+					}
+					set_country_flag = free_france
+					set_capital = { state  = 539}
+					remove_ideas = FRA_matignon_agreements
+					change_tag_from = FRA
+					set_fuel_ratio = 1.0
+					transfer_state = 295
+					transfer_state = 538
+					transfer_state = 718
+					transfer_state = 768
+					transfer_state = 769
+					load_focus_tree = freefrench_focus
+
+				}
+
+				if = {
+						limit = {
+						AND = {
+							21 = { #Provence
+								NOT = { is_controlled_by = ITA }
+							}
+						}
+					}
+					EFR = { transfer_state = 21 }
+				}
+				if = {
+					limit = {
+						AND = {
+							1 = { #Corsica
+								NOT = { is_controlled_by = ITA }
+							}
+						}
+					}
+					ITA = { transfer_state = 1 }
+				}
+				if = {
+					limit = {
+						AND = {
+							665 = { #Gabes
+								NOT = { is_controlled_by = ITA }
+							}
+						}
+					}
+					EFR = { transfer_state = 665 }
+				}
+				if = {
+					limit = {
+						AND = {
+							458 = { #tunisia
+								NOT = { is_controlled_by = ITA }
+							}
+						}
+					}
+					EFR = { transfer_state = 458 }
+				}
+				if = {
+					limit = {
+						AND = {
+							805 = { #Sfax
+								NOT = { is_controlled_by = ITA }
+							}
+						}
+					}
+					EFR = { transfer_state = 805 }
+				}
+				if = {
+					limit = {
+						AND = {
+							665 = { #Gabes
+								NOT = { is_controlled_by = ITA }
+							}
+						}
+					}
+					EFR = { transfer_state = 665 }
+				}
+				if = {
+					limit = {
+							458 = { #Tunisia
+								is_controlled_by = ITA
+							}
+					}
+					ITA = { transfer_state = 805 }
+				}
+				if = {
+					limit = {
+							665 = { #Tunisia
+								is_controlled_by = ITA
+							}
+					}
+					ITA = { transfer_state = 805 }
+				}
+				if = {
+					limit = {
+						AND = {
+							32 = { #Alpes
+								NOT = { is_controlled_by = ITA }
+							}
+						}
+					}
+					EFR = { transfer_state = 32 }
+				}
+				if = {
+					limit = {
+						AND = {
+							735 = { #Savoy
+								NOT = { is_controlled_by = ITA }
+							}
+						}
+					}
+					EFR = { transfer_state = 735 }
+				}
+
+
+
+
+				if = {
+						limit = {
+						AND = {
+							21 = { #Provence
+								is_controlled_by = ITA
+							}
+						}
+					}
+					ITA = { transfer_state = 21 }
+					21 = { add_claim_by = ITA }
+				}
+				if = {
+					limit = {
+						AND = {
+							1 = { #Corsica
+								is_controlled_by = ITA
+							}
+						}
+					}
+					ITA = { transfer_state = 1 }
+					1 = { add_claim_by = ITA }
+				}
+				if = {
+					limit = {
+						AND = {
+							665 = { #Gabes
+								is_controlled_by = ITA
+							}
+						}
+					}
+					ITA = { transfer_state = 665 }
+					665 = { add_claim_by = ITA }
+				}
+				if = {
+					limit = {
+						AND = {
+							805 = { #Sfax
+								is_controlled_by = ITA
+							}
+						}
+					}
+					ITA = { transfer_state = 805 }
+					805 = { add_claim_by = ITA }
+				}
+				if = {
+					limit = {
+						AND = {
+							458 = { #Tunisia
+								is_controlled_by = ITA
+							}
+						}
+					}
+					ITA = { transfer_state = 458 }
+					458 = { add_claim_by = ITA }
+				}
+				if = {
+					limit = {
+						AND = {
+							32 = { #Alpes
+								is_controlled_by = ITA
+							}
+						}
+					}
+					ITA = { transfer_state = 32 }
+					32 = { add_claim_by = ITA }
+				}
+				if = {
+					limit = {
+						AND = {
+							735 = { #Savoy
+								is_controlled_by = ITA
+							}
+						}
+					}
+					ITA = { transfer_state = 735 }
+					735 = { add_claim_by = ITA }
+				}
+
+				EFR = {
+					transfer_state = 26
+					set_capital = { state  = 26}
+
+					country_event = { id = gduvichy.6 days = 4 }  # Give Vichy stuff, spacing out the African and Asian colonies to avoid death via much lag #
+
+					add_ideas = idea_EFR_neutrality
+					diplomatic_relation = { country = GER relation = non_aggression_pact }
+
+					set_capital = { state  = 26}
+
+					set_politics = {
+						ruling_party = fascism
+						elections_allowed = no
+					}
+
+					set_popularities = {
+						fascism = 70
+						democratic = 18
+						communism = 2
+						neutrality = 10
+					}
+
+				}
+
+				every_state = {
+					limit = {
+						is_core_of = FRA
+						is_controlled_by = EFR
+					}
+					add_core_of = EFR
+				}
+				every_state = {
+					limit = {
+						NOT = {
+							is_core_of = FRA
+						}
+						is_controlled_by = EFR
+					}
+					add_claim_by  = FRA
+				}
+				28 = {
+					remove_core_of = EFR
+				}
+
+				FRA = {	set_equipment_fraction = 0.0 }
+				FRA = {	set_equipment_fraction = 0.0 }
+				FRA = {	set_equipment_fraction = 0.0 }
+				FRA = {	set_equipment_fraction = 0.0 }
+				FRA = {	set_equipment_fraction = 0.0 }
+				
+
+
+	}
+
+	option = {
+		name = gduvichy.9.a
+
+	}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = gduvichy.10
+	title = gduvichy.10.t
+	desc = gduvichy.10.d
+	picture = GFX_report_event_canadian_soldiers
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+
+
+				FRA = {	set_equipment_fraction = 0.0 }
+
+
+	}
+
+	option = {
+		name = gduvichy.10.a
+
+	}
+
+
+
+}
+
+
+
+
+country_event = {
+	id = gduvichy.11
+	title = gduvichy.11.t
+	desc = gduvichy.11.d
+	picture = GFX_report_event_canadian_soldiers
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+
+
+				GER = {
+
+			add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 65000 producer = GER }
+
+			add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 4500 producer = GER }
+
+			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 11000 producer = GER }
+
+			add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 4500 producer = GER }
+
+			add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 7000 producer = GER }
+			add_equipment_to_stockpile = { type = support_equipment_1 amount = 5000 producer = GER }
+
+			add_equipment_to_stockpile = { type = heavy_tank_chassis_1 amount = 300 producer = GER }
+			add_equipment_to_stockpile = { type = light_tank_chassis_2 amount = 2000 producer = GER }
+			add_equipment_to_stockpile = { type = medium_tank_chassis_1 amount = 1500 producer = GER }
+			add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 500 producer = GER }
+				}
+
+
+	}
+
+	option = {
+		name = gduvichy.11.a
+
+	}
+
+
+
+}
+
+
+country_event = {
+	id = gduvichy.13
+	title = gduvichy.13.t
+	desc = gduvichy.13.d
+	picture = GFX_report_event_canadian_soldiers
+
+	is_triggered_only = yes
+
+	immediate = {
+
+				FRA = {
+					transfer_state = 774
+					transfer_state = 268
+					transfer_state = 708
+					transfer_state = 706
+				}
+
+
+	}
+
+	option = {
+		name = gduvichy.13.a
+
+	}
+
+
+
+}
+
+
+
+country_event = {
+	id = gduvichy.14
+	title = gduvichy.14.t
+	desc = gduvichy.14.d
+	picture = GFX_report_event_canadian_soldiers
+
+	is_triggered_only = yes
+
+	immediate = {
+
+				ENG = {
+					add_to_faction = FRA
+				}
+				FRA = {
+					add_to_war = {
+						targeted_alliance = ENG
+						enemy = GER
+					}
+				}
+
+	}
+
+	option = {
+		name = gduvichy.14.a
+
+	}
+
+
+
+}
+
+

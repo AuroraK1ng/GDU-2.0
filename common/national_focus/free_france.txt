@@ -1,0 +1,1099 @@
+focus_tree = {
+	id = freefrench_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = FRA
+		}
+	}
+
+	default = no
+
+
+	###FREE FRANCE PART
+
+	focus = {
+		id = FRA_france_libre
+		icon = GFX_france_nine
+		x = 6
+		y = 0
+		cost = 3
+
+		available_if_capitulated = yes
+
+		available = {
+
+		}
+
+		completion_reward = {	
+			add_political_power = 300
+			add_stability = 0.25
+			army_experience = 100
+			add_popularity = {
+				popularity = 0.15
+				ideology = democratic
+			}
+			custom_effect_tooltip = FRA_france_libre
+			country_event = { days = 1 id = free_france.5 }
+			custom_effect_tooltip = syria_sway_tt			
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated1 
+				}
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}			
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated2 
+				}
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated3 
+				}
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}	
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated1 
+				}
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}			
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated2 
+				}
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated3 
+				}
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}	
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated1 
+				}
+				add_offsite_building = { type = dockyard level = 1 }								
+			}			
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated3 
+				}
+				add_offsite_building = { type = dockyard level = 1 }								
+			}			
+		}
+	}
+	
+	focus = {
+		id = FRA_gold_reserve
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = FRA_france_libre }
+        prerequisite = { focus = FRA_sway_west_africa }
+		x = 4
+		y = 1.5
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = FRA_FREE_gold_reserves
+		}
+	}
+
+	focus = {
+		id = FRA_revive_naval_construction
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = FRA_gold_reserve }
+		x = 4
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = FRA_revive_naval_construction 				
+			add_equipment_to_stockpile = {
+				type = convoy_1
+				amount = 100
+				producer = FRA
+			}
+			
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated2 
+				}
+				add_offsite_building = { type = dockyard level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated3 
+				}
+				add_offsite_building = { type = dockyard level = 1 }								
+			}			
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated4 
+				}
+				add_offsite_building = { type = dockyard level = 1 }								
+			}	
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated8 
+				}
+				add_offsite_building = { type = dockyard level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated10 
+				}
+				add_offsite_building = { type = dockyard level = 1 }								
+			}				
+		}
+	}
+
+	focus = {
+		id = FRA_revive_civilian_construction
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = FRA_gold_reserve }
+		x = 6
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }	
+			custom_effect_tooltip = FRA_revive_civilian_construction 
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated1 
+				} 
+				add_offsite_building = { type = industrial_complex level = 1 }				
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated2 
+				} 
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated3 
+				} 
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated4 
+				} 
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated5 
+				} 
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated6 
+				} 
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated7 
+				} 
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated8 
+				} 
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated9 
+				} 
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated10 
+				}
+				add_offsite_building = { type = industrial_complex level = 1 }								
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_rebuild_military_production
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = FRA_gold_reserve }
+		x = 2
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }	
+			custom_effect_tooltip = FRA_rebuild_military_production 		
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated1 
+				} 
+				add_offsite_building = { type = arms_factory level = 1 }				
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated2 
+				} 
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated3 
+				} 
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated4 
+				} 
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated5 
+				} 
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated6 
+				} 
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated7 
+				} 
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated8 
+				} 
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated9 
+				} 
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}
+			if = { 
+				limit = {
+					has_global_flag = FRA_evacuated10 
+				}
+				add_offsite_building = { type = arms_factory level = 1 }								
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_develop_our_resources
+		icon = GFX_goal_generic_construction2
+		prerequisite = {
+			focus = FRA_rebuild_military_production
+			focus = FRA_revive_civilian_construction
+			focus = FRA_revive_naval_construction
+		}
+		x = 3
+		y = 3
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			539 = {
+				add_resource = {
+					type = steel
+					amount = 100
+				}
+				add_resource = {
+					type = tungsten
+					amount = 50
+				}
+				add_resource = {
+					type = chromium
+					amount = 30
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_research_efforts
+		icon = GFX_goal_tfv_generic_tech_sharing
+		prerequisite = {
+			focus = FRA_rebuild_military_production
+			focus = FRA_revive_civilian_construction
+			focus = FRA_revive_naval_construction
+		}
+		x = 5
+		y = 3
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_to_tech_sharing_group = commonwealth_research
+		}
+	}
+	
+	focus = {
+		id = FRA_joint_refinery
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = {
+			focus = FRA_research_efforts
+			focus = FRA_develop_our_resources
+		}
+		x = 4
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = { 
+			has_war_with = JAP
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GDU_refinery_prebuild_disincentive
+				add_idea = FRA_rubber_refinery_program
+			}				
+			add_tech_bonus = {
+				name = FRA_rubber
+				bonus = 1
+				uses = 1
+				technology = rubber_processing
+				technology = improved_rubber_processing
+				technology = advanced_rubber_processing
+				technology = modern_rubber_processing
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_sway_west_africa
+		icon = GFX_france_three
+		prerequisite = { focus = FRA_france_libre }
+		x = 8
+		y = 1
+		cost = 5
+		
+		available = { 
+			EFR = { exists = yes } 
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			country_event = { days = 1 id = free_france.2 }
+			custom_effect_tooltip = west_africa_sway_tt
+		}
+	}
+	
+	focus = {
+		id = FRA_defend_dutch_american_colonies
+		icon = GFX_france_two
+		prerequisite = { focus = FRA_sway_west_africa }
+		x = 8
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+			country_event = { days = 1 id = free_france.8 }
+			custom_effect_tooltip = organize_the_resistance_tt
+		}
+	}
+	
+	focus = {
+		id = FRA_take_Manda
+		icon = GFX_france_one
+		prerequisite = { focus = FRA_defend_dutch_american_colonies }
+		x = 8
+		y = 3
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+			country_event = { days = 1 id = free_france.12 }
+			custom_effect_tooltip = man_sway_tt
+		}
+	}
+	
+	focus = {
+		id = FRA_unleash_the_resistance_3
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = FRA_take_Manda }
+		x = 6
+		y = 5
+		cost = 5
+
+		available = {
+			is_ai = no
+			665 = {
+				OR = {
+					is_fully_controlled_by = FRA
+					is_fully_controlled_by = ENG
+					is_fully_controlled_by = USA
+				}
+			}
+			805 = {
+				OR = {
+					is_fully_controlled_by = FRA
+					is_fully_controlled_by = ENG
+					is_fully_controlled_by = USA
+				}
+			}
+			458 = {
+				OR = {
+					is_fully_controlled_by = FRA
+					is_fully_controlled_by = ENG
+					is_fully_controlled_by = USA
+				}
+			}
+			513 = {
+				OR = {
+					is_fully_controlled_by = FRA
+					is_fully_controlled_by = ENG
+					is_fully_controlled_by = USA
+				}
+			}
+			460 = {
+				OR = {
+					is_fully_controlled_by = FRA
+					is_fully_controlled_by = ENG
+					is_fully_controlled_by = USA
+				}
+			}
+			461 = {
+				OR = {
+					is_fully_controlled_by = FRA
+					is_fully_controlled_by = ENG
+					is_fully_controlled_by = USA
+				}
+			}
+			459 = {
+				OR = {
+					is_fully_controlled_by = FRA
+					is_fully_controlled_by = ENG
+					is_fully_controlled_by = USA
+				}
+			}
+			462 = {
+				OR = {
+					is_fully_controlled_by = FRA
+					is_fully_controlled_by = ENG
+					is_fully_controlled_by = USA
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = FRA_north_africa_tt
+			
+		    hidden_effect = {
+				if = {
+					FRA = { transfer_state = 665 }
+				}
+				if = {
+					FRA = { transfer_state = 462 }
+				}
+				if = {
+					FRA = { transfer_state = 461 }
+				}
+				if = {
+					FRA = { transfer_state = 460 }
+				}
+				if = {
+					FRA = { transfer_state = 459 }
+				}
+				if = {
+					FRA = { transfer_state = 513 }
+				}
+				if = {
+					FRA = { transfer_state = 458 }
+				}
+				if = {
+					FRA = { transfer_state = 805 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_unleash_the_resistance_2
+		icon = GFX_france_four
+		prerequisite = { focus = FRA_take_Manda }
+		x = 8
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = unleash_the_resistance_2_tt
+		}
+	}
+	
+	focus = {
+		id = FRA_viva_la_france
+		icon = GFX_france_five
+		prerequisite = { focus = FRA_unleash_the_resistance_2 }
+		x = 8
+		y = 5
+		cost = 5
+
+		available_if_capitulated = yes
+
+		available = { date > 1944.6.6 }
+
+		completion_reward = {
+			add_ideas = FRA_FREE_viva_la_france
+		}
+	}
+
+	focus = {
+		id = FRA_reform_our_doctrine
+		icon = GFX_france_six
+		prerequisite = { focus = FRA_france_libre }
+		x = 11
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 100
+
+		}
+	}
+
+
+	focus = {
+		id = FRA_reequip_our_forces
+		icon = GFX_france_seven
+		prerequisite = { focus = FRA_reform_our_doctrine }
+		x = 11
+		y = 2
+		cost = 5
+ 
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = FRA }
+		    add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 600 producer = FRA }
+			add_equipment_to_stockpile = { type = support_equipment_1 amount = 300 producer = FRA }
+			add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 300 producer = FRA }
+			add_equipment_to_stockpile = { type = anti_tank_equipment_1  amount = 300 producer = FRA }
+			add_equipment_to_stockpile = { type = motorized_equipment amount = 950 producer = FRA }
+	    }
+	}
+	
+	focus = {
+		id = FRA_colonial_recruitment
+		icon = GFX_france_eight
+		prerequisite = { focus = FRA_reequip_our_forces }
+		x = 11
+		y = 3
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = FRA_FREE_colonial_manpower
+		}
+	}
+
+	focus = {
+		id = FRA_modernize_our_equipment
+		icon = GFX_goal_generic_small_arms
+		mutually_exclusive = { focus = FRA_modernize_our_armor_force }
+		prerequisite = { focus = FRA_colonial_recruitment }
+		x = 10
+		y = 4
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_artillery_focus
+				bonus = 1.00 
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = FRA_regiment_of_artillery
+				bonus = 1.00 
+				uses = 1
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = FRA_artillery_focus
+				bonus = 1.00 
+				uses = 1
+				technology = tech_logistics_company3
+				technology = tech_logistics_company4
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_modernize_our_armor_force
+		icon = GFX_goal_generic_army_tanks
+		mutually_exclusive = { focus = FRA_modernize_our_equipment }
+		prerequisite = { focus = FRA_colonial_recruitment }
+		x = 12
+		y = 4
+		cost = 5
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+
+			add_tech_bonus = {
+				name = tank_bonus
+				bonus = 0.5
+				uses = 1
+				technology = improved_medium_tank_chassis
+			}
+			add_tech_bonus = {
+				name = tank_bonus
+				bonus = 0.75
+				uses = 2
+				technology = improved_heavy_tank_chassis
+				technology = advanced_light_tank_chassis
+			}
+			add_tech_bonus = {
+				name = tank_bonus
+				bonus = 1
+				uses = 3
+				technology = advanced_medium_tank_chassis
+				technology = advanced_heavy_tank_chassis
+				technology = advanced_light_tank_chassis__chassis
+			}
+	
+			add_tech_bonus = {
+				name = FRA_mechanized_focus
+				bonus = 1.00 
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+			add_tech_bonus = {
+				name = FRA_artillery_focus
+				bonus = 1.00 
+				uses = 1
+				technology = tech_logistics_company3
+				technology = tech_logistics_company4
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_electronics
+		icon = GFX_goal_generic_radar
+		prerequisite = { 
+		   focus = FRA_modernize_our_equipment 
+		   focus = FRA_modernize_our_armor_force
+		}
+		x = 11
+		y = 5
+
+		cost = 5
+
+        available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_walkie_talkie
+				bonus = 1.00 
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_air_two_doctrine
+		icon = GFX_goal_generic_air_doctrine
+	 	prerequisite = { focus = FRA_france_libre }
+		x = 15
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = FRA_fighter_two_focus
+		icon = GFX_goal_generic_air_fighter
+	 	prerequisite = { focus = FRA_air_two_doctrine }
+		x = 15
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+            set_technology = { improved_small_airframe = 1 }
+		}
+	}
+	
+	focus = {
+		id = FRA_cas_two_focus
+		icon = GFX_goal_generic_CAS
+		mutually_exclusive = { focus = FRA_naval_bomber_two_focus }
+	 	prerequisite = { focus = FRA_fighter_two_focus }
+		x = 14
+		y = 3
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_cas_focus
+				bonus = 1.00
+				uses = 1
+				technology = CAS
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_naval_bomber_two_focus
+		icon = GFX_goal_generic_air_naval_bomber
+		mutually_exclusive = { focus = FRA_cas_two_focus }
+	 	prerequisite = { focus = FRA_fighter_two_focus }
+		x = 16
+		y = 3
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 200
+		}
+	}
+	
+	focus = {
+		id = FRA_bomber_two_focus
+		icon = GFX_goal_generic_air_bomber
+		mutually_exclusive = { focus = FRA_heavy_bomber_two_focus }
+	 	prerequisite = {
+	 		focus = FRA_cas_two_focus
+	 		focus = FRA_naval_bomber_two_focus
+	 	}
+		x = 16
+		y = 4
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_bomber_focus
+				bonus = 1.00 
+				uses = 1
+				technology = improved_medium_airframe
+			}
+		}
+	} 
+	
+	focus = {
+		id = FRA_heavy_bomber_two_focus
+		icon = GFX_goal_generic_occupy_start_war
+		mutually_exclusive = { focus = FRA_bomber_two_focus }
+	 	prerequisite = {
+	 		focus = FRA_cas_two_focus
+	 		focus = FRA_naval_bomber_two_focus
+	 	}
+		x = 14
+		y = 4
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_heavy_bomber_focus
+				bonus = 1.00 
+				uses = 1
+				technology = heavy_fighter2x
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_air_squadron
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { 
+		   focus = FRA_bomber_two_focus
+		   focus = FRA_heavy_bomber_two_focus
+		}
+		x = 15
+		y = 5
+
+		cost = 2
+
+        available_if_capitulated = yes
+		
+		available = {
+				SOV = { has_war_with = GER }
+            }
+ 
+		completion_reward = {
+			custom_effect_tooltip = FRA_fighters
+			##SOV = { add_equipment_to_stockpile = { type = fighter_equipment_2 amount = 100 producer = FRA } }
+		}
+	}
+	
+	focus = {
+		id = FRA_naval_two_doctrine
+		icon = GFX_goal_generic_navy_doctrines_tactics
+	 	prerequisite = { focus = FRA_france_libre }
+		x = 19
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 400
+		    add_ideas = free_french_fleet
+		}
+	}
+	
+	focus = {
+		id = FRA_destroyer_focus
+		icon = GFX_focus_generic_destroyer
+	 	prerequisite = { focus = FRA_naval_two_doctrine	 }
+		x = 18
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+            set_technology = { 
+			        improved_ship_hull_light = 1
+		    }
+		}
+	}
+	
+	focus = {
+		id = FRA_destroyer_focus2
+		icon = GFX_focus_generic_destroyer
+	 	prerequisite = { focus = FRA_naval_two_doctrine	 }
+		x = 20
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = FRA_expand_the_repair_yards
+		}
+	}	
+
+	focus = {
+		id = FRA_submarine_two
+		icon = GFX_goal_generic_navy_submarine
+		mutually_exclusive = { focus = FRA_improved_screen_two_ships }
+	 	prerequisite = { focus = FRA_destroyer_focus focus = FRA_destroyer_focus2 }
+		x = 18
+		y = 3
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_modern_submarines
+				bonus = 2.00 
+				uses = 1
+				technology = improved_ship_hull_submarine
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_improved_screen_two_ships
+		icon = GFX_goal_generic_navy_cruiser
+		mutually_exclusive = { focus = FRA_submarine_two }
+	 	prerequisite = { focus = FRA_destroyer_focus focus = FRA_destroyer_focus2 }
+		x = 20
+		y = 3
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_improved_screen_ships
+				bonus = 2.00 
+				uses = 1
+				technology = improved_ship_hull_cruiser
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_capital_ship_two_focus
+		icon = GFX_goal_generic_navy_battleship
+		mutually_exclusive = { focus = FRA_carrier_two_focus }
+	 	prerequisite = {
+	 		focus = FRA_improved_screen_two_ships
+	 		focus = FRA_submarine_two
+	 	}
+		x = 20
+		y = 4
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_capital_ship
+				bonus = 2.00 
+				uses = 1
+				technology = improved_ship_hull_heavy
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_carrier_two_focus
+		icon = GFX_goal_generic_navy_carrier
+		mutually_exclusive = { focus = FRA_capital_ship_two_focus }
+	 	prerequisite = {
+	 		focus = FRA_improved_screen_two_ships
+	 		focus = FRA_submarine_two
+	 	}
+		x = 18
+		y = 4
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_carrier
+				bonus = 2.00 
+				uses = 1
+				technology = improved_ship_hull_carrier
+			}
+            set_technology = { cv_fighter2 = 1 }
+		}
+	}
+
+	
+	focus = {
+		id = FRA_marines
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { 
+		   focus = FRA_carrier_two_focus
+		   focus = FRA_capital_ship_two_focus
+		}
+		x = 19
+		y = 5
+		cost = 5
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_marines
+				bonus = 1.00 
+				uses = 1
+			    technology = marines2
+			}
+		}
+	}
+	focus = {
+		id = FRA_light_tank
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = FRA_france_libre }
+	    mutually_exclusive = { 
+		    focus = FRA_heavy_tank
+			}
+		x = 21
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = FRA_motorized_focus
+			add_tech_bonus = {
+				name = at_bonus
+				bonus = 2
+				uses = 2
+				category = cat_anti_tank
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_heavy_tank
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = FRA_france_libre }
+	    mutually_exclusive = { 
+			focus = FRA_light_tank
+			}
+		x = 23
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = FRA_infantry_focus
+			add_ideas = FRA_fortification_focus
+		}
+	}
+}

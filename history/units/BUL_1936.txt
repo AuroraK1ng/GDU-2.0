@@ -1,0 +1,104 @@
+﻿division_template = {
+	name = "Pekhotna Divizija"			# Infantry Division
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		anti_air_brigade = { x = 2 y = 3 }
+		anti_air_brigade = { x = 2 y = 4 }		
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+		artillery_brigade = { x = 3 y = 2 }
+		artillery_brigade = { x = 3 y = 3 }
+
+
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 	
+		recon = { x = 0 y = 1 } 		
+		artillery = { x = 0 y = 2 }
+		anti_air = { x = 0 y = 3 }			
+
+	}
+}
+
+
+units = {
+	division= {
+		name = "Use this division to select generals' traits"
+		location = 949
+		division_template = "Pekhotna Divizija"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.01
+	}
+}
+
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "BUL"
+		}
+		requested_factories = 1
+		progress = 0.49
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "BUL"
+		}
+		requested_factories = 1
+		progress = 0.73
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "BUL"
+		}
+		requested_factories = 1
+		progress = 0.24
+		efficiency = 100
+	}	
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "BUL" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = anti_air_equipment_1
+			creator = "BUL"
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = gw_armored_car_equipment
+			creator = "BUL" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}		
+}
