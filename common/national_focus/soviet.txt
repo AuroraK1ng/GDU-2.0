@@ -15,7 +15,7 @@ focus_tree = {
 	focus = {
 		id = SOV_stalin_constitution
 		icon = GFX_focus_USSR
-		x = 16
+		x = 15
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -34,7 +34,818 @@ focus_tree = {
 
 		}
 	}
+	focus = {
+		id = SOV_Gulag
+		icon = GFX_SOV_Giant
+		text = "Gulags"
+		prerequisite = { focus = SOV_stalin_constitution }
+		available = {
+		 SOV = { has_completed_focus = SOV_great_purge }
+		}
+		x = 5
+		y = 1
+		relative_position_id = SOV_stalin_constitution
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
 
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SOV_Gulag_1
+		icon = GFX_GENERIC_SOV_Industry
+		text = "Convict workers"
+		prerequisite = { focus = SOV_Gulag }
+		
+		x = -1
+		y = 1
+		relative_position_id = SOV_Gulag
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SOV_Gulag_2
+		icon = GFX_SOV_Increase_Military_Spending
+		text = "Increase Military Spending"
+		prerequisite = { focus = SOV_Gulag }
+		
+		x = 1
+		y = 1
+		relative_position_id = SOV_Gulag
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SOV_Gulag_3
+		icon = GFX_SOV_Stalin_purge
+		text = "Stalin's tyranny"
+		prerequisite = { focus = SOV_Gulag }
+		
+		x = 1
+		y = 1
+		relative_position_id = SOV_Gulag_1
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SOV_Molotov
+		icon = GFX_SOV_Molotov
+		text = "Molotov"
+		prerequisite = { focus = SOV_stalin_constitution }
+		available = {
+		 
+		}
+		x = 1
+		y = 1
+		relative_position_id = SOV_stalin_constitution
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_political_power = 75
+		}
+	}
+	focus = {
+		id = SOV_anti_fascist_diplomacy
+		icon = GFX_Noras_USSR_antifascist_diplomacy
+
+		prerequisite = { focus = SOV_Molotov }
+		relative_position_id = SOV_Molotov
+		x = -1
+		y = 1
+
+		cost = 2
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 3
+				ai_irrationality < 25
+			}
+
+			modifier = {
+				factor = 0.75
+				ai_irrationality > 30
+			}
+
+			modifier = {
+				factor = 0.5
+				ai_irrationality > 40
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			USA = { add_opinion_modifier = { target = SOV modifier = anti_fascist_diplomacy_focus } }
+			ENG = { add_opinion_modifier = { target = SOV modifier = anti_fascist_diplomacy_focus } }
+			FRA = { add_opinion_modifier = { target = SOV modifier = anti_fascist_diplomacy_focus } }
+			every_other_country = {
+				limit = { has_government = fascism }
+				add_opinion_modifier = { target = SOV modifier = anti_fascist_diplomacy_fascists }
+			}
+		}
+	}
+	focus = {
+		id = SOV_anti_capitalist_diplomacy
+		icon = GFX_Noras_USSR_anticapitalist_diplomacy
+		relative_position_id = SOV_Molotov
+		prerequisite = { focus = SOV_Molotov }
+		x = 1
+		y = 1
+
+		cost = 2
+		ai_will_do = {
+			factor = 0.25
+
+			modifier = {
+				factor = 5
+				ai_irrationality > 25
+			}
+
+			modifier = {
+				factor = 5
+				ai_irrationality > 35
+			}
+
+			modifier = {
+				factor = 2
+				ai_irrationality > 40
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_other_country = {
+				limit = { has_government = fascism }
+				add_opinion_modifier = { target = SOV modifier = anti_capitalist_diplomacy_focus }
+			}
+			USA = { add_opinion_modifier = { target = SOV modifier = anti_capitalist_diplomacy_capitalists } }
+			ENG = { add_opinion_modifier = { target = SOV modifier = anti_capitalist_diplomacy_capitalists } }
+			FRA = { add_opinion_modifier = { target = SOV modifier = anti_capitalist_diplomacy_capitalists } }
+		}
+	}
+		focus = {
+		id = SOV_anti_capitalist_raids
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = SOV_anti_capitalist_diplomacy }
+		relative_position_id = SOV_anti_capitalist_diplomacy
+		x = 1
+		y = 1
+
+		cost = 5
+		ai_will_do = {
+			factor = 0.25
+
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity  = {
+			ideology = communism
+			popularity = 0.10
+		}
+		add_stability = 0.05
+
+
+		}
+	}
+	focus = {
+		id = SOV_Army_ref
+		icon = GFX_SOV_Zhukov_research
+		text = "Army Reform"
+		prerequisite = { focus = SOV_stalin_constitution }
+		available = {
+		 SOV = { has_completed_focus = SOV_great_purge }
+		}
+		x = 12
+		y = 1
+		relative_position_id = SOV_stalin_constitution
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    army_experience = 700
+		}
+	}
+	focus = {
+		id = SOV_Army_ref_2
+		Text = "Rehabilitate Rokossovsky"
+		icon = GFX_SOV_Rokossovsky
+		prerequisite = { focus = SOV_Army_ref }
+		x = -1
+		y = 1
+		relative_position_id = SOV_Army_ref
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = rehabilitated_military_focus    
+		}
+	}
+	focus = {
+		id = SOV_Army_ref_3
+		Text = "Konev's experience"
+		icon = GFX_SOV_konev
+		prerequisite = { focus = SOV_Army_ref }
+		x = 1
+		y = 1
+		relative_position_id = SOV_Army_ref
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 2
+				uses = 1
+				name = mech_army_bonus
+				technology = mechanised_infantry
+			}				
+			add_tech_bonus = {
+				bonus = 9.99
+				uses = 1
+				name = katyusha_bonus
+				technology = motorized_rocket_unit
+			}    
+		}
+	}
+	focus = {
+		id = SOV_Army_ref_2_1
+		text = "Tank Cult"
+		icon = GFX_SOV_kv1
+		prerequisite = { focus = SOV_Army_ref_2 }
+		x = -1
+		y = 1
+		relative_position_id = SOV_Army_ref_2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1938.1.1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 200
+			add_equipment_to_stockpile = {
+				type = motorized_rocket_equipment
+				amount = 1556
+				producer = SOV
+			}
+			add_tech_bonus = {
+				name = heavy_armor_tank_cult
+				bonus = 2.25
+				technology = improved_heavy_tank_chassis
+			}
+			add_tech_bonus = {
+				name = light_armor_tank_cult
+				bonus = 2.25
+				technology = advanced_light_tank_chassis
+			}			
+		}
+	}	
+	focus = {
+		id = SOV_Army_ref_2_2
+		icon = GFX_SOV_Chuikov
+		text = "Chuikov's proposals"
+		prerequisite = { focus = SOV_Army_ref_2_1 }
+		prerequisite = { focus = SOV_Army_ref_2-3_1 }
+		x = 0
+		y = 2
+		relative_position_id = SOV_Army_ref_2_1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    
+		}
+	}
+	focus = {
+		id = SOV_Army_ref_2-3
+		text = "Army reorganization"
+		icon = GFX_SOV_equipment
+		prerequisite = { focus = SOV_Army_ref_2 focus = SOV_Army_ref_3 }
+		x = 1
+		y = 1
+		relative_position_id = SOV_Army_ref_2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 1.00
+				uses = 1
+				category = land_doctrine
+			}
+			army_experience = 20
+		    
+		}
+	}
+	focus = {
+		id = SOV_Army_ref_2-3_1
+		icon = GFX_SOV_Zhukov_1
+		Text = "Mass Assault"
+		prerequisite = { focus = SOV_Army_ref_2-3 }
+		x = 0
+		y = 1
+		relative_position_id = SOV_Army_ref_2-3
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    
+		}
+	}
+	focus = {
+		id = SOV_Army_ref_3_1
+		Text = "Commissars of the NKVD"
+		icon = GFX_Goal_NKVD_Primacy
+		prerequisite = { focus = SOV_Army_ref_3 }
+		x = 1
+		y = 1
+		relative_position_id = SOV_Army_ref_3
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		 add_ideas = nkvd
+			add_tech_bonus = {
+				name = nkvd_2
+				bonus = 2.0
+				uses = 1
+				technology = tech_military_police2
+			}
+			add_tech_bonus = {
+				bonus = 1.00
+				uses = 1
+				category = land_doctrine
+			}   
+		}
+	}
+	focus = {
+		id = SOV_Army_ref_3_2
+		text = "NKVD divisions"
+		icon = GFX_SOV_hat
+		prerequisite = { focus = SOV_Army_ref_3_1}
+		prerequisite = { focus = SOV_Army_ref_2-3_1 }
+		x = 0
+		y = 2
+		relative_position_id = SOV_Army_ref_3_1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		 custom_effect_tooltip = SOV_nkvd_upgrade_tooltip
+
+			swap_ideas = {
+				remove_idea = nkvd
+				add_idea = nkvd_2
+			}
+			add_tech_bonus = {
+				name = nkvd_3
+				bonus = 1.0
+				uses = 1
+				technology = tech_military_police3
+			}	   
+		}
+	}
+	focus = {
+		id = SOV_Army_ref_4
+		text = "Lessons of War"
+		icon = GFX_SOV_Upgrade_inf
+		prerequisite = { focus = SOV_Army_ref_3_2}
+		prerequisite = { focus = SOV_Army_ref_2-3_1 }
+		prerequisite = { focus = SOV_Army_ref_2_2}
+		available = {
+			OR = {
+				date > 1941.1.1
+				has_country_flag = SOV_war_since_purge
+			}
+		}
+		x = 0
+		y = 2
+		relative_position_id = SOV_Army_ref_2-3_1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		 completion_reward = {
+			if = {
+				limit = {
+					SOV = { has_war_with = FIN }
+				}
+					SOV = { set_country_flag = SOV_war_since_purge}					
+					SOV = {
+						country_event = { id = finland.8 days = 7 }
+						white_peace = FIN
+						transfer_state = 146
+						transfer_state = 147
+					}
+					GER = { add_to_faction = FIN }			
+					set_global_flag = GDU_Winter_War_Over				
+			}
+			set_technology = { mechanised_infantry = 1 }		
+		
+			custom_effect_tooltip = GDU_lessons_of_war_tt
+			hidden_effect = {
+			if = {
+				limit = {
+					has_global_flag = finland_started_ai
+					FIN = { is_ai = yes }
+				}
+				FIN = {
+					add_state_core = 146
+					add_state_core = 147
+					set_technology = {	
+						jaegers = 1
+						jaegers2 = 1
+						shocktroops = 1
+						shocktroops2 = 1
+						antitank2 = 1
+						antiair2 = 1
+						artillery1 = 1
+						improved_infantry_weapons = 1					
+					}
+					add_equipment_to_stockpile = { type = anti_tank_equipment_2 amount = 2000 }
+					load_oob = "FIN_MINI_GDU_SPAWN"
+					add_ideas = FIN_mini_GDU
+				}
+			}			
+			GER = { add_to_faction = FIN }
+         # skill 4 generals and field marshals
+			create_corps_commander = {
+			name = "Nikolai Vatutin"
+				picture = "Portrait_Soviet_Nikolai_Fyodorovich_Vatutin.dds"
+			traits = { winter_specialist infantry_officer trait_reckless trait_engineer infantry_leader trickster }
+			skill = 5
+
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		create_corps_commander = {
+		name = "Filipp Golikov"
+		picture = "Portrait_Soviet_Filipp_Golikov.dds"
+		traits = { winter_specialist career_officer brilliant_strategist harsh_leader panzer_leader armor_officer trait_reckless cavalry_officer}
+		skill = 4
+
+		attack_skill = 6
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+		}
+		create_corps_commander = {
+		name = "Nikandr Chibisov"
+		picture = "Portrait_Soviet_Nikandr_Yevlampyevich_Chibisov.dds"
+		traits = { winter_specialist trickster war_hero urban_assault_specialist infantry_leader infantry_officer harsh_leader }
+		skill = 4
+
+
+		attack_skill = 5
+		defense_skill = 2
+		planning_skill = 1
+		logistics_skill = 4
+		}
+	create_corps_commander = {
+		name = "Andrey Vlasov"
+		picture = "Portrait_Soviet_Andrey_Vlasov.dds"
+		traits = { winter_specialist infantry_officer skilled_staffer organizer trait_engineer career_officer}
+		id = 412
+		skill = 4
+
+		attack_skill = 4
+		defense_skill = 3
+		planning_skill = 1
+		logistics_skill = 5
+	}
+	create_corps_commander = {
+		name = "Ivan Fedyuninsky"
+		picture = "Portrait_Soviet_Ivan_Fedyuninsky.dds"
+		traits = { winter_specialist infantry_officer war_hero harsh_leader trait_reckless hill_fighter }
+		skill = 4
+
+		attack_skill = 5
+		defense_skill = 4
+		planning_skill = 2
+		logistics_skill = 2
+	}
+	create_corps_commander = {
+	name = "Maksim Purkayev"
+		picture = "Portrait_Soviet_Maksim_Purkayev.dds"
+	traits = { winter_specialist career_officer ranger trait_reckless infantry_leader inflexible_strategist  }
+	skill = 4
+
+
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 3
+	}
+		create_field_marshal = {
+			name = "Vasily Chuikov"
+			picture = "Portrait_Soviet_Vasily_Chuikov.dds"
+			traits = { winter_specialist brilliant_strategist career_officer infantry_leader panzer_leader trait_engineer urban_assault_specialist trait_cautious}
+			skill = 4
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+
+
+			army_experience = 20
+			add_tech_bonus = {
+				name = USSR_MEME_project
+				bonus = 1.00
+				uses = 1
+				category = nuclear
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.00
+				uses = 1
+				category = land_doctrine
+			}
+	}   
+	}
+		focus = {
+		id = SOV_research_city_experiment
+		icon = GFX_Goal_Socialist_Science
+		prerequisite = { focus = SOV_Army_ref_4 }
+		available = {
+
+		}
+		x = 0
+		y = 1
+		relative_position_id = SOV_Army_ref_4
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_research_slot = 1
+
+			add_tech_bonus = {
+				name = inf_tech_bonus
+				bonus = 1.00
+				uses = 2
+				category = infantry_weapons
+			}
+						add_tech_bonus = {
+				name = radar_tech_bonus
+				bonus = 1.00
+				uses = 1
+				category = radar_tech
+			}
+			hidden_effect = {
+				FIN = {
+					swap_ideas = {
+						remove_idea = sisu
+						add_idea = sisu_2
+					}			
+				}
+			}			
+		}
+	}
+		focus = {
+		id = SOV_Mechanise_the_Army
+		icon = GFX_SOV_Red_Army_Time
+		prerequisite = { focus = SOV_Army_ref_4 }
+		x = 0
+		y = 2
+		relative_position_id = SOV_Army_ref_4
+
+		cost = 0
+
+		available = {
+			has_completed_focus = SOV_defense_of_moscow
+		}
+		
+		search_filters = {}
+
+		completion_reward = {
+			add_ideas = SOV_Mechanised_Corps_Expanded
+		}
+	}
+	focus = {
+		id = SOV_improove_avia
+		icon = GFX_SOV_Vasily_2
+		text = "New people in aviation"
+		prerequisite = { focus = SOV_stalin_constitution }
+		x = 17
+		y = 1
+		relative_position_id = SOV_stalin_constitution
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1937.6.1
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 250
+
+		}
+	}
+	focus = {
+		id = SOV_aviation_cult
+		icon = GFX_Noras_USSR_aviation_cult
+		prerequisite = { focus = SOV_improove_avia }
+		x = 0
+		y = 1
+		relative_position_id = SOV_improove_avia
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_bonus
+				bonus = 2.9
+				uses = 1
+				technology = improved_small_airframe
+			}	
+		}
+	}
+	focus = {
+		id = SOV_women_pilots
+		icon = GFX_SOV_sturmovik
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = SOV_aviation_cult
+		prerequisite = { focus = SOV_aviation_cult }
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 300
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 2.85
+				uses = 1
+				technology = CAS2x
+			}			
+		}
+	}
+	focus = {
+		id = SOV_raskovas_aviation_group
+		Text = "Vasily Stalin's proposals"
+		icon = GFX_SOV_Vasily_1
+		relative_position_id = SOV_aviation_cult
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = { focus = SOV_aviation_cult }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.00
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = SOV_me262
+		icon = GFX_goal_ger_me262
+		prerequisite = { focus = SOV_women_pilots }
+		relative_position_id = SOV_women_pilots
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1942.6.1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_technology = { jet_engines = 1 }
+			add_tech_bonus = {
+				name = jet_fighter_bonus
+				bonus = 1.5
+				uses = 1
+				technology = jet_fighter1
+			}		
+		}
+	}	
+	focus = {
+		id = SOV_YAK_3
+		icon = GFX_SOV_Yak3
+		prerequisite = { focus = SOV_women_pilots }
+		prerequisite = { focus = SOV_raskovas_aviation_group }
+		relative_position_id = SOV_women_pilots
+		text = "Yak-3"
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1942.6.1
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+		set_technology = { advanced_small_airframe = 1 }			
+		}
+	}	
 	focus = {
 		id = SOV_great_purge
 		icon = GFX_Goal_Great_Purge2
@@ -43,8 +854,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = SOV_stalin_constitution }
 		relative_position_id = SOV_stalin_constitution
-		x = 0
-		y = 2
+		x = -3
+		y = 1
 		cost = 0
 
 		bypass = {
@@ -82,115 +893,18 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = SOV_anti_fascist_diplomacy
-		icon = GFX_Noras_USSR_antifascist_diplomacy
-
-		prerequisite = { focus = SOV_great_purge }
-		relative_position_id = SOV_great_purge
-		x = -3
-		y = 1
-
-		cost = 5
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 3
-				ai_irrationality < 25
-			}
-
-			modifier = {
-				factor = 0.75
-				ai_irrationality > 30
-			}
-
-			modifier = {
-				factor = 0.5
-				ai_irrationality > 40
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			USA = { add_opinion_modifier = { target = SOV modifier = anti_fascist_diplomacy_focus } }
-			ENG = { add_opinion_modifier = { target = SOV modifier = anti_fascist_diplomacy_focus } }
-			FRA = { add_opinion_modifier = { target = SOV modifier = anti_fascist_diplomacy_focus } }
-			every_other_country = {
-				limit = { has_government = fascism }
-				add_opinion_modifier = { target = SOV modifier = anti_fascist_diplomacy_fascists }
-			}
-		}
-	}
-
-
-	focus = {
-		id = SOV_anti_capitalist_diplomacy
-		icon = GFX_Noras_USSR_anticapitalist_diplomacy
-		relative_position_id = SOV_great_purge
-		prerequisite = { focus = SOV_great_purge }
-		x = 3
-		y = 1
-
-		cost = 5
-		ai_will_do = {
-			factor = 0.25
-
-			modifier = {
-				factor = 5
-				ai_irrationality > 25
-			}
-
-			modifier = {
-				factor = 5
-				ai_irrationality > 35
-			}
-
-			modifier = {
-				factor = 2
-				ai_irrationality > 40
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			every_other_country = {
-				limit = { has_government = fascism }
-				add_opinion_modifier = { target = SOV modifier = anti_capitalist_diplomacy_focus }
-			}
-			USA = { add_opinion_modifier = { target = SOV modifier = anti_capitalist_diplomacy_capitalists } }
-			ENG = { add_opinion_modifier = { target = SOV modifier = anti_capitalist_diplomacy_capitalists } }
-			FRA = { add_opinion_modifier = { target = SOV modifier = anti_capitalist_diplomacy_capitalists } }
-		}
-	}
 	
-	focus = {
-		id = SOV_Mechanise_the_Army
-		icon = GFX_focus_SOV_the_road_of_life
-		prerequisite = { focus = SOV_tank_cult }
-		x = 23
-		y = 3
 
-		cost = 0
 
-		available = {
-			has_completed_focus = SOV_defense_of_moscow
-		}
-		
-		search_filters = {}
-
-		completion_reward = {
-			add_ideas = SOV_Mechanised_Corps_Expanded
-		}
-	}
+	
+	
+	
 
 	focus = {
 		id = SOV_finish_five_year_plan
 		icon = GFX_SOV_economy
 		prerequisite = { focus = SOV_stalin_constitution }
-		x = 3
+		x = 2
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -2274,7 +2988,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Heroes_social_labor
-		icon = GFX_SOV_military
+		icon = GFX_SOV_Heroes_SocLabor
 		prerequisite = { focus = SOV_Propaganda_Heroism }
 		text = "Heroes of social labor"
 		relative_position_id = SOV_stalin_constitution
@@ -2342,114 +3056,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_positive_heroism
-		icon = GFX_goal_generic_army_tanks2
-		x = 26
-		y = 1
-		prerequisite = { focus = SOV_stalin_constitution }
-
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_political_power = 150
-		    army_experience = 700
-			add_tech_bonus = {
-				bonus = 1.7
-				uses = 1
-				name = mech_army_bonus
-				technology = mechanised_infantry
-			}				
-			add_tech_bonus = {
-				bonus = 9.99
-				uses = 1
-				name = katyusha_bonus
-				technology = motorized_rocket_unit
-			}	
-		}
-	}
-
-	focus = {
-		id = SOV_women_pilots
-		icon = GFX_SOV_sturmovik
-		x = 4
-		y = 3
-		cost = 10
-		relative_position_id = SOV_positive_heroism
-		prerequisite = { focus = SOV_aviation_cult }
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			air_experience = 500
-			set_rule = {
-				can_generate_female_aces = yes
-			}
-			add_tech_bonus = {
-				name = bomber_bonus
-				bonus = 2.85
-				uses = 1
-				technology = CAS2x
-			}			
-		}
-	}
-	focus = {
-		id = SOV_me262
-		icon = GFX_goal_ger_me262
-		prerequisite = { focus = SOV_women_pilots }
-		relative_position_id = SOV_women_pilots
-		x = 0
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			date > 1942.6.1
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			set_technology = { jet_engines = 1 }
-			add_tech_bonus = {
-				name = jet_fighter_bonus
-				bonus = 1.5
-				uses = 1
-				technology = jet_fighter1
-			}		
-		}
-	}	
-			focus = {
-		id = SOV_YAK_3
-		icon = GFX_SOV_Yak3
-		prerequisite = { focus = SOV_women_pilots }
-		prerequisite = { focus = SOV_raskovas_aviation_group }
-		relative_position_id = SOV_women_pilots
-		text = "Yak-3"
-		x = -2
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			date > 1942.6.1
-		}
-		available_if_capitulated = yes
-
-		completion_reward = {
-		set_technology = { advanced_small_airframe = 1 }			
-		}
-	}	
-	focus = {
 		id = SOV_progress_cult
 		icon = GFX_Noras_USSR_progress_cult
 		prerequisite = { focus = SOV_workers_culture }
@@ -2467,13 +3073,31 @@ focus_tree = {
 			add_ideas = progress_cult_focus
 		}
 	}
+focus = {
+		id = SOV_socialist_realism
+		icon = GFX_goal_soviet_committee
+		prerequisite = { focus = SOV_stalin_constitution }
+		relative_position_id = SOV_stalin_constitution
+		x = -9
+		y = 1
 
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
 	focus = {
 		id = SOV_socialist_science
 		icon = GFX_Noras_USSR_socialist_science
 		prerequisite = { focus = SOV_socialist_realism }
 		relative_position_id = SOV_stalin_constitution
-		x = 3
+		x = -9
 		y = 2
 		cost = 5
 		ai_will_do = {
@@ -2605,89 +3229,11 @@ focus_tree = {
 				NOT = { country_exists = ger }
 			}
 		}
-	focus = {
-		id = SOV_aviation_cult
-		icon = GFX_Noras_USSR_aviation_cult
-		prerequisite = { focus = SOV_positive_heroism }
-		x = 3
-		y = 2
-		relative_position_id = SOV_positive_heroism
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			air_experience = 25
-
-			add_tech_bonus = {
-				name = air_bonus
-				bonus = 2.9
-				uses = 1
-				technology = improved_small_airframe
-			}	
-		}
-	}
 	
-	focus = {
-		id = SOV_tank_cult
-		icon = GFX_SOV_kv1
-		prerequisite = { focus = SOV_positive_heroism }
-		x = -3
-		y = 1
-		relative_position_id = SOV_positive_heroism
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
+	
+	
 
-		available = {
-			date > 1938.1.1
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			army_experience = 200
-			add_equipment_to_stockpile = {
-				type = motorized_rocket_equipment
-				amount = 1556
-				producer = SOV
-			}
-			add_tech_bonus = {
-				name = heavy_armor_tank_cult
-				bonus = 2.25
-				technology = improved_heavy_tank_chassis
-			}
-			add_tech_bonus = {
-				name = light_armor_tank_cult
-				bonus = 2.25
-				technology = advanced_light_tank_chassis
-			}			
-		}
-	}	
-
-	focus = {
-		id = SOV_socialist_realism
-		icon = GFX_goal_soviet_committee
-		prerequisite = { focus = SOV_stalin_constitution }
-		relative_position_id = SOV_stalin_constitution
-		x = 3
-		y = 1
-
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_political_power = 150
-		}
-	}
+	
 
 	focus = {
 		id = SOV_improve_railway
@@ -2825,55 +3371,9 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = SOV_raskovas_aviation_group
-		icon = GFX_goal_generic_air_fighter2
-		relative_position_id = SOV_positive_heroism
-		x = 2
-		y = 3
-		cost = 5
-		prerequisite = { focus = SOV_aviation_cult }
+	
 
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1.00
-				uses = 2
-				category = air_doctrine
-			}
-		}
-	}
-
-	focus = {
-		id = SOV_ocean_going_navy
-		icon = GFX_SOV_dockyard
-		relative_position_id = SOV_stalin_constitution
-		x = 1
-		y = 1
-		cost = 5
-		prerequisite = { focus = SOV_stalin_constitution }
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 99.99
-				uses = 4
-				technology = basic_heavy_armor_scheme
-				technology = improved_heavy_armor_scheme
-				technology = basic_ship_hull_heavy
-				technology = improved_ship_hull_heavy
-			}
-		}
-	}
+	
 
 
 	focus = {
@@ -2902,7 +3402,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_anti_fascist_diplomacy
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -3101,13 +3601,13 @@ focus_tree = {
 
 	focus = {
 		id = SOV_improve_stalin_line
-		icon = GFX_Goal_Soviet_Defense2
-		prerequisite = { focus = SOV_anti_fascist_diplomacy }
+		icon = GFX_SOV_Soldier_1
+		prerequisite = { focus = SOV_anti_fascist_diplomacy focus = SOV_anti_capitalist_diplomacy }
 		available = { has_offensive_war = no }
 		x = 1
 		y = 1
 		relative_position_id = SOV_anti_fascist_diplomacy
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -3538,56 +4038,78 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_anti_capitalist_raids
-		icon = GFX_focus_generic_strike_at_democracy2
-		prerequisite = { focus = SOV_anti_capitalist_diplomacy }
-		relative_position_id = SOV_anti_capitalist_diplomacy
-		x = 0
+		id = SOV_Kuznetsov
+		Text = "Kuznetsov's plan"
+		icon = GFX_SOV_Kuznetsov
+		relative_position_id = SOV_stalin_constitution
+		x = 8
 		y = 1
+		cost = 2
+		prerequisite = { focus = SOV_stalin_constitution }
+		available = {
+			date > 1937.1.1
+		}
 
-		cost = 5
 		ai_will_do = {
-			factor = 0.25
-
+			factor = 1
 		}
-
-		available_if_capitulated = yes
-
 		completion_reward = {
-			add_popularity  = {
-			ideology = communism
-			popularity = 0.10
-		}
-
+		add_ideas = nikolay_kuznetsov
 		}
 	}
-
 	focus = {
 		id = SOV_expand_red_fleet
 		icon = GFX_soviet_navy_1
-		prerequisite = { focus = SOV_stalin_constitution }
-		x = -1
+		prerequisite = { focus = SOV_Kuznetsov }
+		x = 0
 		y = 1
-		relative_position_id = SOV_stalin_constitution
-		cost = 5
+		relative_position_id = SOV_Kuznetsov
+		
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
 
 		available_if_capitulated = yes
 
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 99.99
+				uses = 4
+				technology = basic_heavy_armor_scheme
+				technology = improved_heavy_armor_scheme
+				technology = basic_ship_hull_heavy
+				technology = improved_ship_hull_heavy
+			}
+		}
+	}
+	focus = {
+		id = SOV_ocean_going_navy
+		icon = GFX_SOV_dockyard
+		relative_position_id = SOV_expand_red_fleet
+		x = 0
+		y = 1
+		cost = 3
+		prerequisite = { focus = SOV_expand_red_fleet }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
 		complete_tooltip = {
 			add_ideas = nevskoye_design_bureau
 			navy_experience = 250
 			add_offsite_building = { type = dockyard level = 10 }	
 		}
-
 		completion_reward = {
 			add_ideas = nevskoye_design_bureau
 			navy_experience = 250
 			add_offsite_building = { type = dockyard level = 10 }	
 		}
 	}
+
 	### END BRANCH ###
 
 	focus = {
@@ -3653,340 +4175,6 @@ focus_tree = {
 			NOT = { country_exists = ger }
 		}
 	}
-	focus = {
-		id = SOV_rehabilitated_military
-		icon = GFX_Goal_Soviet_guns
-		mutually_exclusive = { focus = SOV_nkvd_primacy }
-		relative_position_id = SOV_positive_heroism
-		prerequisite = { focus = SOV_positive_heroism }
-		x = -1
-		y = 1
-
-		cost = 10
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 100
-				any_claim = yes
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = rehabilitated_military_focus
-		}
-	}
-
-	focus = {
-		id = SOV_military_reorganization
-		icon = GFX_SOV_equipment
-		prerequisite = { focus = SOV_rehabilitated_military }
-		x = 0
-		y = 1
-		relative_position_id = SOV_rehabilitated_military
-		cost = 10
-		ai_will_do = {
-			factor = 0.25
-			modifier = {
-				factor = 1000
-				any_claim = yes
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1.00
-				uses = 1
-				category = land_doctrine
-			}
-			army_experience = 20
-		}
-	}
-
-	focus = {
-		id = SOV_nkvd_primacy
-		icon = GFX_Goal_NKVD_Primacy
-		mutually_exclusive = { focus = SOV_rehabilitated_military }
-		relative_position_id = SOV_positive_heroism
-		prerequisite = { focus = SOV_positive_heroism }
-		x = 1
-		y = 1
-
-		cost = 10
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 1000
-				any_claim = yes
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = nkvd
-			add_tech_bonus = {
-				name = nkvd_2
-				bonus = 2.0
-				uses = 1
-				technology = tech_military_police2
-			}
-			add_tech_bonus = {
-				bonus = 1.00
-				uses = 1
-				category = land_doctrine
-			}			
-		}
-	}
-
-	focus = {
-		id = SOV_nkvd_divisions
-		icon = GFX_SOV_hat
-		prerequisite = { focus = SOV_nkvd_primacy }
-		x = 0
-		y = 1
-		relative_position_id = SOV_nkvd_primacy
-		cost = 10
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 1000
-				any_claim = yes
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			custom_effect_tooltip = SOV_nkvd_upgrade_tooltip
-
-			swap_ideas = {
-				remove_idea = nkvd
-				add_idea = nkvd_2
-			}
-			add_tech_bonus = {
-				name = nkvd_3
-				bonus = 1.0
-				uses = 1
-				technology = tech_military_police3
-			}				
-		}
-	}
-
-	focus = {
-		id = SOV_lessons_of_war
-		icon = GFX_Goal_sov_art2
-		prerequisite = { focus = SOV_nkvd_divisions focus = SOV_military_reorganization }
-		available = {
-			OR = {
-				date > 1941.1.1
-				has_country_flag = SOV_war_since_purge
-			}
-		}
-		x = -1
-		y = 1
-		relative_position_id = SOV_nkvd_divisions
-		cost = 10
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 1000
-				any_claim = yes
-				has_war = yes
-			}
-		}
-
-		available_if_capitulated = yes
-		completion_reward = {
-			if = {
-				limit = {
-					SOV = { has_war_with = FIN }
-				}
-					SOV = { set_country_flag = SOV_war_since_purge}					
-					SOV = {
-						country_event = { id = finland.8 days = 7 }
-						white_peace = FIN
-						transfer_state = 146
-						transfer_state = 147
-					}
-					GER = { add_to_faction = FIN }			
-					set_global_flag = GDU_Winter_War_Over				
-			}
-			set_technology = { mechanised_infantry = 1 }		
-		
-			custom_effect_tooltip = GDU_lessons_of_war_tt
-			hidden_effect = {
-			if = {
-				limit = {
-					has_global_flag = finland_started_ai
-					FIN = { is_ai = yes }
-				}
-				FIN = {
-					add_state_core = 146
-					add_state_core = 147
-					set_technology = {	
-						jaegers = 1
-						jaegers2 = 1
-						shocktroops = 1
-						shocktroops2 = 1
-						antitank2 = 1
-						antiair2 = 1
-						artillery1 = 1
-						improved_infantry_weapons = 1					
-					}
-					add_equipment_to_stockpile = { type = anti_tank_equipment_2 amount = 2000 }
-					load_oob = "FIN_MINI_GDU_SPAWN"
-					add_ideas = FIN_mini_GDU
-				}
-			}			
-			GER = { add_to_faction = FIN }
-         # skill 4 generals and field marshals
-			create_corps_commander = {
-			name = "Nikolai Vatutin"
-				picture = "Portrait_Soviet_Nikolai_Fyodorovich_Vatutin.dds"
-			traits = { winter_specialist infantry_officer trait_reckless trait_engineer infantry_leader trickster }
-			skill = 5
-
-			attack_skill = 3
-			defense_skill = 4
-			planning_skill = 3
-			logistics_skill = 3
-		}
-		create_corps_commander = {
-		name = "Filipp Golikov"
-		picture = "Portrait_Soviet_Filipp_Golikov.dds"
-		traits = { winter_specialist career_officer brilliant_strategist harsh_leader panzer_leader armor_officer trait_reckless cavalry_officer}
-		skill = 4
-
-		attack_skill = 6
-		defense_skill = 3
-		planning_skill = 3
-		logistics_skill = 3
-		}
-		create_corps_commander = {
-		name = "Nikandr Chibisov"
-		picture = "Portrait_Soviet_Nikandr_Yevlampyevich_Chibisov.dds"
-		traits = { winter_specialist trickster war_hero urban_assault_specialist infantry_leader infantry_officer harsh_leader }
-		skill = 4
-
-
-		attack_skill = 5
-		defense_skill = 2
-		planning_skill = 1
-		logistics_skill = 4
-		}
-	create_corps_commander = {
-		name = "Andrey Vlasov"
-		picture = "Portrait_Soviet_Andrey_Vlasov.dds"
-		traits = { winter_specialist infantry_officer skilled_staffer organizer trait_engineer career_officer}
-		id = 412
-		skill = 4
-
-		attack_skill = 4
-		defense_skill = 3
-		planning_skill = 1
-		logistics_skill = 5
-	}
-	create_corps_commander = {
-		name = "Ivan Fedyuninsky"
-		picture = "Portrait_Soviet_Ivan_Fedyuninsky.dds"
-		traits = { winter_specialist infantry_officer war_hero harsh_leader trait_reckless hill_fighter }
-		skill = 4
-
-		attack_skill = 5
-		defense_skill = 4
-		planning_skill = 2
-		logistics_skill = 2
-	}
-	create_corps_commander = {
-	name = "Maksim Purkayev"
-		picture = "Portrait_Soviet_Maksim_Purkayev.dds"
-	traits = { winter_specialist career_officer ranger trait_reckless infantry_leader inflexible_strategist  }
-	skill = 4
-
-
-	attack_skill = 5
-	defense_skill = 5
-	planning_skill = 3
-	logistics_skill = 3
-	}
-		create_field_marshal = {
-			name = "Vasily Chuikov"
-			picture = "Portrait_Soviet_Vasily_Chuikov.dds"
-			traits = { winter_specialist brilliant_strategist career_officer infantry_leader panzer_leader trait_engineer urban_assault_specialist trait_cautious}
-			skill = 4
-			attack_skill = 5
-			defense_skill = 4
-			planning_skill = 4
-			logistics_skill = 4
-		}
-	}
-
-
-			army_experience = 20
-			add_tech_bonus = {
-				name = USSR_MEME_project
-				bonus = 1.00
-				uses = 1
-				category = nuclear
-			}
-			add_tech_bonus = {
-				name = armor_bonus
-				bonus = 1.00
-				uses = 1
-				category = land_doctrine
-			}
-	}
-}	
-
-	focus = {
-		id = SOV_research_city_experiment
-		icon = GFX_Goal_Socialist_Science
-		prerequisite = { focus = SOV_lessons_of_war }
-		available = {
-
-		}
-		x = 0
-		y = 1
-		relative_position_id = SOV_lessons_of_war
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-		add_research_slot = 1
-
-			add_tech_bonus = {
-				name = inf_tech_bonus
-				bonus = 1.00
-				uses = 2
-				category = infantry_weapons
-			}
-						add_tech_bonus = {
-				name = radar_tech_bonus
-				bonus = 1.00
-				uses = 1
-				category = radar_tech
-			}
-			hidden_effect = {
-				FIN = {
-					swap_ideas = {
-						remove_idea = sisu
-						add_idea = sisu_2
-					}			
-				}
-			}			
-		}
 
 
 
