@@ -88,7 +88,7 @@ ideas = {
 			picture = great_depression
 			
 			modifier = {
-				consumer_goods_expected_value = 0.20
+				consumer_goods_factor = 0.20
 				industrial_capacity_factory = -0.15
 				industrial_capacity_dockyard = -0.15
 				stability_factor = -0.10
@@ -110,7 +110,7 @@ ideas = {
 			picture = great_depression
 			
 			modifier = {
-				consumer_goods_expected_value = 0.15
+				consumer_goods_factor = 0.15
 				industrial_capacity_factory = -0.10
 				industrial_capacity_dockyard = -0.10
 			}
@@ -131,7 +131,7 @@ ideas = {
 			picture = great_depression
 			
 			modifier = {
-				consumer_goods_expected_value = 0.05
+				consumer_goods_factor = 0.05
 				industrial_capacity_factory = -0.05
 				industrial_capacity_dockyard = -0.05
 			}
@@ -174,7 +174,7 @@ ideas = {
 			picture = generic_goods_red_bonus
 			
 			modifier = {
-				consumer_goods_expected_value = -0.03
+				consumer_goods_factor = -0.03
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
 				stability_factor = 0.05
@@ -196,7 +196,7 @@ ideas = {
 			picture = generic_goods_red_bonus
 			
 			modifier = {
-				consumer_goods_expected_value = -0.05
+				consumer_goods_factor = -0.05
 				industrial_capacity_factory = 0.12
 				industrial_capacity_dockyard = 0.12
 				stability_factor = 0.10
@@ -687,6 +687,10 @@ on_add = { hidden_effect = { make_air_designers_free = yes } }
 					maximum_speed = 0.10
 				}
 				large_plane_airframe  = {
+					air_range = 0.1
+					air_ground_attack = 0.05
+				}
+				cv_large_plane_airframe = {
 					air_range = 0.1
 					air_ground_attack = 0.05
 				}

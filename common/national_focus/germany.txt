@@ -1013,7 +1013,7 @@ activate_mission = GER_relocate_industry_from_friesland
 				name = air_bonus
 				bonus = 1.5
 				uses = 1
-				technology = fighter2
+				technology = improved_small_airframe
 			}
 
 			add_ideas = GER_air_innovations_2_idea
@@ -1072,13 +1072,13 @@ activate_mission = GER_relocate_industry_from_friesland
 				name = bomber_bonus
 				bonus = 4
 				uses = 1
-				technology = CAS2
+				technology = CAS2x
 			}
 			add_tech_bonus = {
 				name = bomber_bonus
 				bonus = 4
 				uses = 1
-				technology = CAS3
+				technology = CAS3x
 			}
 			add_tech_bonus = {
 				name = op_dest_bonus
@@ -1108,7 +1108,7 @@ activate_mission = GER_relocate_industry_from_friesland
 				name = GER_long_range_escorts
 				bonus = 1.0
 				uses = 1
-				technology = tactical_bomber2
+				technology = improved_medium_airframe
 			}
 		}
 	}
@@ -1167,7 +1167,7 @@ activate_mission = GER_relocate_industry_from_friesland
 				name = bomber_bonus
 				bonus = 2.5
 				uses = 1
-				technology = strategic_bomber2
+				technology = improved_large_airframe
 			}
 		}
 	}
@@ -1194,6 +1194,16 @@ activate_mission = GER_relocate_industry_from_friesland
 			name = GER_soviet_treaty
 			bonus = 2.00
 			technology = basic_medium_tank_chassis
+		}
+		add_tech_bonus = {
+			name = GER_soviet_treaty
+			bonus = 2.00
+			technology = basic_medium_art
+		}
+		add_tech_bonus = {
+			name = GER_soviet_treaty
+			bonus = 2.00
+			technology = basic_medium_spaa
 		}
 		add_tech_bonus = {
 			name = GER_soviet_treaty
@@ -1676,7 +1686,7 @@ activate_mission = GER_relocate_industry_from_friesland
 			}
 
 			set_technology = {
-				strategic_bomber3 = 1
+				advanced_large_airframe = 1
 			}
 			hidden_effect = {
 				sound_effect = wunderwaffe
@@ -3727,7 +3737,7 @@ activate_mission = GER_relocate_industry_from_friesland
 				name = ta152_bonus
 				bonus = 5.00
 				uses = 1
-				technology = fighter3
+				technology = advanced_small_airframe
 			}
 
 		}

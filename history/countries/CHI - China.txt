@@ -1,41 +1,35 @@
-﻿capital = 613# Nanjing
+﻿capital = 613 # Nanjing
+
 set_stability = 0.35
-set_war_support = 0.7
+set_war_support = 0.70
 set_research_slots = 0
+
 add_ideas = {
 	GDU_neutrality
 	free_trade
 }
 
-add_opinion_modifier = {
-	target = JAP
-	modifier = embargo
-}
-
-add_opinion_modifier = {
-	target = JAP
-	modifier = sanctions
-}
-
-add_opinion_modifier = {
-	target = JAP
-	modifier = minor_sanctions
-}
+add_opinion_modifier = { target = JAP modifier = embargo }
+add_opinion_modifier = { target = JAP modifier = sanctions }
+add_opinion_modifier = { target = JAP modifier = minor_sanctions }
 
 add_equipment_to_stockpile = {
-	type = infantry_equipment_0
-	amount = 81923
-	producer = JAP
+         type = infantry_equipment_0
+         amount = 81923
+         producer = JAP
 }
 
 save_global_event_target_as = WTT_current_china_leader
 set_convoys = 80
-add_ideas = {
-	free_trade
-}
+
+	
+	add_ideas = {
+		free_trade
+	}
 
 set_convoys = 40
-set_politics = {
+
+set_politics = {	
 	ruling_party = neutrality
 	last_election = "1936.1.1"
 	election_frequency = 48
@@ -43,10 +37,10 @@ set_politics = {
 }
 
 set_popularities = {
-	democratic = 0
-	fascism = 0
-	communism = 0
-	neutrality = 100
+    democratic = 0
+    fascism = 0
+    communism = 0
+    neutrality = 100
 }
 
 create_country_leader = {
