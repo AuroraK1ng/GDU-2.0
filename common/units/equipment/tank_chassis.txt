@@ -1,24 +1,18 @@
 equipments = {
-
 	light_tank_chassis = {
 		year = 1922
 		is_archetype = yes
 		is_buildable = no
-
 		can_be_produced = {
 			NOT = {
 				has_idea = BUL_army_restrictions
 			}
 		}
-
 		picture = archetype_light_tank_equipment
 		type = armor
 		group_by = archetype
 		interface_category = interface_category_armor
 		priority = 2000
-
-		
-
 		module_slots = {
 			main_armament_slot = {
 				required = yes
@@ -27,7 +21,6 @@ equipments = {
 					tank_flamethrower
 				}
 			}
-
 			turret_type_slot = {
 				required = yes
 				allowed_module_categories = {
@@ -41,34 +34,29 @@ equipments = {
 					tank_non_tracked_suspension_type
 				}
 			}
-
 			armor_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_armor_type
 				}
 			}
-
 			engine_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_engine_type
 				}
 			}
-
 			special_type_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
 				}
 			}
-
-			
 		}
 		module_count_limit = {
 			module = sloped_armor
 			count < 2
-		}	
+		}
 		module_count_limit = {
 			category = tank_radio_module
 			count < 2
@@ -85,27 +73,22 @@ equipments = {
 			module = amphibious_drive
 			count < 2
 		}
-
 		module_count_limit = {
 			module = wet_ammo_storage
 			count < 2
 		}
-
 		module_count_limit = {
 			module = squeezebore_adaptor
 			count < 2
 		}
-
 		module_count_limit = {
 			module = armor_skirts
 			count < 2
 		}
-
 		module_count_limit = {
 			module = dozer_blade
 			count < 2
 		}
-
 		module_count_limit = {
 			module = easy_maintenance
 			count < 2
@@ -125,7 +108,6 @@ equipments = {
 			armor_type_slot = tank_riveted_armor
 			engine_type_slot = tank_gasoline_engine
 		}
-
 		fuel_consumption = 0
 		maximum_speed = 4
 		build_cost_ic = 4
@@ -135,12 +117,10 @@ equipments = {
 		resources = {
 			steel = 1
 		}
-
 		manpower = 2
-
 	}
-
-	light_tank_chassis_0 = { #also great war tank
+	light_tank_chassis_0 = {
+		#also great war tank
 		abbreviation = "lt0"
 		derived_variant_name = light_tank_equipment_0
 		visual_level = 0
@@ -148,13 +128,11 @@ equipments = {
 		archetype = light_tank_chassis
 		priority = 2000
 		module_slots = inherit
-
 		upgrades = {
 			tank_nsb_engine_upgrade
 			tank_nsb_armor_upgrade
 		}
 	}
-
 	light_tank_chassis_1 = {
 		abbreviation = "lt1"
 		derived_variant_name = light_tank_equipment_1
@@ -176,7 +154,6 @@ equipments = {
 			steel = 2
 		}
 	}
-
 	light_tank_chassis_2 = {
 		abbreviation = "lt2"
 		derived_variant_name = light_tank_equipment_2
@@ -198,7 +175,6 @@ equipments = {
 			steel = 3
 		}
 	}
-
 	light_tank_chassis_3 = {
 		abbreviation = "lt3"
 		derived_variant_name = light_tank_equipment_3
@@ -220,9 +196,6 @@ equipments = {
 			steel = 4
 		}
 	}
-
-	
-
 	medium_tank_chassis = {
 		year = 1922
 		is_archetype = yes
@@ -237,7 +210,6 @@ equipments = {
 		group_by = archetype
 		interface_category = interface_category_armor
 		priority = 2000
-
 		module_slots = {
 			main_armament_slot = {
 				required = yes
@@ -245,42 +217,36 @@ equipments = {
 					tank_small_main_armament
 				}
 			}
-
 			turret_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_medium_turret_type
 				}
 			}
-
 			suspension_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_suspension_type
 				}
 			}
-
 			armor_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_armor_type
 				}
 			}
-
 			engine_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_engine_type
 				}
 			}
-
 			special_type_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					tank_secondary_turret
 				}
 			}
-
 			special_type_slot_2 = {
 				required = no
 				allowed_module_categories = {
@@ -293,20 +259,18 @@ equipments = {
 					tank_special_module
 				}
 			}
-
-			
 		}
 		module_count_limit = {
 			module = sloped_armor
 			count < 2
-		}	
+		}
 		module_count_limit = {
 			category = tank_radio_module
 			count < 2
 		}
 		module_count_limit = {
 			category = tank_secondary_turret
-			count < 2 #one secondary turrets only
+			count < 2			#one secondary turrets only
 		}
 		module_count_limit = {
 			module = amphibious_drive
@@ -316,22 +280,18 @@ equipments = {
 			module = additional_machine_guns
 			count < 2
 		}
-
 		module_count_limit = {
 			module = squeezebore_adaptor
 			count < 2
 		}
-
 		module_count_limit = {
 			module = armor_skirts
 			count < 2
 		}
-
 		module_count_limit = {
 			module = dozer_blade
 			count < 2
 		}
-
 		module_count_limit = {
 			module = easy_maintenance
 			count < 2
@@ -351,21 +311,19 @@ equipments = {
 			armor_type_slot = tank_riveted_armor
 			engine_type_slot = tank_gasoline_engine
 		}
-
 		fuel_consumption = 0
 		maximum_speed = 6
 		build_cost_ic = 1
 		reliability = 1
 		armor_value = 0
-		hardness = 0.90
+		hardness = 0.9
 		resources = {
 			steel = 1
 		}
-
 		manpower = 2
-
 	}
-	medium_tank_chassis_0 = { #used for interwar tanks
+	medium_tank_chassis_0 = {
+		#used for interwar tanks
 		abbreviation = "mt0"
 		derived_variant_name = medium_tank_equipment_0
 		visual_level = 0
@@ -385,7 +343,6 @@ equipments = {
 			steel = 1
 		}
 	}
-
 	medium_tank_chassis_1 = {
 		abbreviation = "mt1"
 		derived_variant_name = medium_tank_equipment_1
@@ -453,7 +410,6 @@ equipments = {
 			tungsten = 2
 		}
 	}
-
 	heavy_tank_chassis = {
 		year = 1922
 		is_archetype = yes
@@ -468,7 +424,6 @@ equipments = {
 		group_by = archetype
 		interface_category = interface_category_armor
 		priority = 2000
-
 		module_slots = {
 			main_armament_slot = {
 				required = yes
@@ -477,66 +432,57 @@ equipments = {
 					tank_flamethrower
 				}
 			}
-
 			turret_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_heavy_turret_type
 				}
 			}
-
 			suspension_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_suspension_type
 				}
 			}
-
 			armor_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_armor_type
 				}
 			}
-
 			engine_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_engine_type
 				}
 			}
-
 			special_type_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					tank_secondary_turret
 				}
 			}
-
 			special_type_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
 				}
 			}
-
 			special_type_slot_3 = {
 				required = no
 				allowed_module_categories = {
 					tank_special_module
 				}
 			}
-
 		}
 		module_count_limit = {
 			module = sloped_armor
 			count < 2
-		}	
+		}
 		module_count_limit = {
 			category = tank_radio_module
 			count < 2
 		}
-
 		module_count_limit = {
 			module = amphibious_drive
 			count < 2
@@ -545,12 +491,10 @@ equipments = {
 			module = wet_ammo_storage
 			count < 2
 		}
-
 		module_count_limit = {
 			module = squeezebore_adaptor
 			count < 2
 		}
-
 		module_count_limit = {
 			module = armor_skirts
 			count < 2
@@ -559,12 +503,10 @@ equipments = {
 			module = additional_machine_guns
 			count < 2
 		}
-
 		module_count_limit = {
 			module = dozer_blade
 			count < 2
 		}
-
 		module_count_limit = {
 			module = easy_maintenance
 			count < 2
@@ -584,7 +526,6 @@ equipments = {
 			armor_type_slot = tank_riveted_armor
 			engine_type_slot = tank_gasoline_engine
 		}
-
 		fuel_consumption = 0
 		maximum_speed = 4.5
 		build_cost_ic = 10
@@ -595,12 +536,10 @@ equipments = {
 			steel = 3
 			chromium = 3
 		}
-
 		manpower = 2
-
 	}
-
-	heavy_tank_chassis_0 = { #interwar heavy tanks
+	heavy_tank_chassis_0 = {
+		#interwar heavy tanks
 		abbreviation = "hv0"
 		derived_variant_name = heavy_tank_equipment_0
 		visual_level = 0
@@ -624,7 +563,6 @@ equipments = {
 			chromium = 3
 		}
 	}
-
 	heavy_tank_chassis_1 = {
 		abbreviation = "hv1"
 		derived_variant_name = heavy_tank_equipment_1
@@ -646,7 +584,6 @@ equipments = {
 			chromium = 3
 		}
 	}
-
 	heavy_tank_chassis_2 = {
 		abbreviation = "hv2"
 		derived_variant_name = heavy_tank_equipment_2
@@ -668,7 +605,6 @@ equipments = {
 			chromium = 3
 		}
 	}
-
 	heavy_tank_chassis_3 = {
 		abbreviation = "hv3"
 		derived_variant_name = heavy_tank_equipment_3
@@ -690,7 +626,6 @@ equipments = {
 			chromium = 3
 		}
 	}
-
 	modern_tank_chassis = {
 		year = 1945
 		is_archetype = yes
@@ -705,7 +640,6 @@ equipments = {
 		group_by = archetype
 		interface_category = interface_category_armor
 		priority = 2000
-
 		module_slots = {
 			main_armament_slot = {
 				required = yes
@@ -715,42 +649,36 @@ equipments = {
 					tank_heavy_main_armament
 				}
 			}
-
 			turret_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_medium_turret_type
 				}
 			}
-
 			suspension_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_suspension_type
 				}
 			}
-
 			armor_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_armor_type
 				}
 			}
-
 			engine_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_engine_type
 				}
 			}
-
 			special_type_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					tank_secondary_turret
 				}
 			}
-
 			special_type_slot_2 = {
 				required = no
 				allowed_module_categories = {
@@ -763,20 +691,18 @@ equipments = {
 					tank_special_module
 				}
 			}
-
-			
 		}
 		module_count_limit = {
 			module = sloped_armor
 			count < 2
-		}	
+		}
 		module_count_limit = {
 			category = tank_radio_module
 			count < 2
 		}
 		module_count_limit = {
 			category = tank_secondary_turret
-			count < 2 #one secondary turrets only
+			count < 2			#one secondary turrets only
 		}
 		module_count_limit = {
 			module = amphibious_drive
@@ -786,22 +712,18 @@ equipments = {
 			module = additional_machine_guns
 			count < 2
 		}
-
 		module_count_limit = {
 			module = squeezebore_adaptor
 			count < 2
 		}
-
 		module_count_limit = {
 			module = armor_skirts
 			count < 2
 		}
-
 		module_count_limit = {
 			module = dozer_blade
 			count < 2
 		}
-
 		module_count_limit = {
 			module = easy_maintenance
 			count < 2
@@ -834,11 +756,8 @@ equipments = {
 			steel = 3
 			tungsten = 3
 		}
-
 		manpower = 2
-
 	}
-
 	modern_tank_chassis_1 = {
 		abbreviation = "mbt0"
 		derived_variant_name = modern_tank_equipment_1
@@ -847,13 +766,11 @@ equipments = {
 		archetype = modern_tank_chassis
 		priority = 2000
 		module_slots = inherit
-
 		upgrades = {
 			tank_nsb_engine_upgrade
 			tank_nsb_armor_upgrade
 		}
 	}
-
 	super_heavy_tank_chassis = {
 		year = 1948
 		is_archetype = yes
@@ -868,7 +785,6 @@ equipments = {
 		group_by = archetype
 		interface_category = interface_category_armor
 		priority = 2000
-
 		module_slots = {
 			main_armament_slot = {
 				required = yes
@@ -876,35 +792,30 @@ equipments = {
 					tank_small_main_armament
 				}
 			}
-
 			turret_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_super_heavy_turret_type
 				}
 			}
-
 			suspension_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_suspension_type
 				}
 			}
-
 			armor_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_armor_type
 				}
 			}
-
 			engine_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_engine_type
 				}
 			}
-
 			special_type_slot_1 = {
 				required = no
 				allowed_module_categories = {
@@ -913,7 +824,6 @@ equipments = {
 					tank_secondary_turret
 				}
 			}
-
 			special_type_slot_2 = {
 				required = no
 				allowed_module_categories = {
@@ -922,7 +832,6 @@ equipments = {
 					tank_radio_module
 				}
 			}
-
 			special_type_slot_3 = {
 				required = no
 				allowed_module_categories = {
@@ -931,7 +840,6 @@ equipments = {
 					tank_radio_module
 				}
 			}
-
 			special_type_slot_4 = {
 				required = no
 				allowed_module_categories = {
@@ -940,9 +848,7 @@ equipments = {
 					tank_radio_module
 				}
 			}
-
 		}
-
 		default_modules = {
 			main_armament_slot = empty
 			turret_type_slot = tank_super_heavy_three_man_tank_turret
@@ -950,7 +856,6 @@ equipments = {
 			armor_type_slot = tank_riveted_armor
 			engine_type_slot = tank_gasoline_engine
 		}
-
 		fuel_consumption = 0
 		maximum_speed = 4
 		build_cost_ic = 24
@@ -961,11 +866,8 @@ equipments = {
 			steel = 3
 			chromium = 2
 		}
-
 		manpower = 2
-
 	}
-
 	super_heavy_tank_chassis_1 = {
 		abbreviation = "sh0"
 		derived_variant_name = super_heavy_tank_equipment_1
@@ -986,7 +888,6 @@ equipments = {
 			tank_nsb_armor_upgrade
 		}
 	}
-
 	amphibious_tank_chassis = {
 		year = 1938
 		is_archetype = yes
@@ -1001,7 +902,6 @@ equipments = {
 		group_by = archetype
 		interface_category = interface_category_armor
 		priority = 2000
-
 		module_slots = {
 			main_armament_slot = {
 				required = yes
@@ -1009,7 +909,6 @@ equipments = {
 					tank_small_main_armament
 				}
 			}
-
 			turret_type_slot = {
 				required = yes
 				allowed_module_categories = {
@@ -1017,35 +916,30 @@ equipments = {
 					tank_medium_turret_type
 				}
 			}
-
 			suspension_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_suspension_type
 				}
 			}
-
 			armor_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_armor_type
 				}
 			}
-
 			engine_type_slot = {
 				required = yes
 				allowed_module_categories = {
 					tank_engine_type
 				}
 			}
-
 			special_type_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					tank_secondary_turret
 				}
 			}
-
 			special_type_slot_2 = {
 				required = no
 				allowed_module_categories = {
@@ -1053,10 +947,7 @@ equipments = {
 					tank_radio_module
 				}
 			}
-
-
 		}
-
 		default_modules = {
 			main_armament_slot = empty
 			turret_type_slot = tank_light_one_man_tank_turret
@@ -1064,7 +955,6 @@ equipments = {
 			armor_type_slot = tank_riveted_armor
 			engine_type_slot = tank_gasoline_engine
 		}
-
 		fuel_consumption = 0
 		maximum_speed = 4
 		build_cost_ic = 4.5
@@ -1074,11 +964,8 @@ equipments = {
 		resources = {
 			steel = 1
 		}
-
 		manpower = 2
-
 	}
-
 	amphibious_tank_chassis_1 = {
 		abbreviation = "am0"
 		derived_variant_name = amphibious_tank_equipment_1
@@ -1092,5 +979,4 @@ equipments = {
 		}
 		module_slots = inherit
 	}
-
 }

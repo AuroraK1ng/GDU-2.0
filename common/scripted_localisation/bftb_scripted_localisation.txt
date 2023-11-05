@@ -1580,10 +1580,7 @@ defined_text = {
 		trigger = {
 			FROM = {
 				OR = {
-					AND = {
-						has_tech = basic_medium_tank
-						NOT = { has_tech = basic_heavy_tank }
-					}
+					 
 					AND = {
 						has_tech = basic_medium_tank_chassis
 						NOT = { has_tech = basic_heavy_tank_chassis }
@@ -1593,40 +1590,8 @@ defined_text = {
 		}
 		localization_key = BUL_purchase_armor_medium_available
 	}
-	text = {
-		trigger = {
-			FROM = {
-				OR = {
-					AND = {
-						NOT = { has_tech = basic_medium_tank }
-						has_tech = basic_heavy_tank
-					}
-					AND = {
-						NOT = { has_tech = basic_medium_tank_chassis }
-						has_tech = basic_heavy_tank_chassis
-					}
-				}
-			}
-		}
-		localization_key = BUL_purchase_armor_heavy_available
-	}
-	text = {
-		trigger = {
-			FROM = {
-				OR = {
-					AND = {
-						has_tech = basic_medium_tank
-						has_tech = basic_heavy_tank
-					}
-					AND = {
-						has_tech = basic_medium_tank_chassis
-						has_tech = basic_heavy_tank_chassis
-					}
-				}
-			}
-		}
-		localization_key = BUL_purchase_armor_everything_available
-	}
+	 
+ 
 	text = {
 		localization_key = BUL_purchase_armor_only_light_available
 	}

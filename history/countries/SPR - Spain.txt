@@ -3,13 +3,7 @@
 set_fuel_ratio = 0.5
 
 oob = "SPR_1936"
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "SPR_1936_naval_mtg"
-	else = {
-		set_naval_oob = "SPR_1936_naval_legacy"
-	}
-}
+ 
 
 add_ideas = { GER_mefo_bills_non_germany }
 
@@ -200,6 +194,11 @@ recruit_character = SPR_niceto_alcala_zamora
 	recruit_character = SPA_manuel_hedilla
 	recruit_character = SPR_felipe_diaz_sandino
 	recruit_character = SPA_emilio_mola
+	#set_technology = {
+	#	early_fighter = 1
+	#	early_bomber = 1
+	#	naval_bomber1 = 1
+	#}
 set_technology = {
 	noports = 1
 	Spain_INF = 1
@@ -220,9 +219,7 @@ set_technology = {
 	fuel_silos = 1
 	fuel_refining = 1
 	synth_oil_experiments = 1
-	iw_small_airframe = 1
-	iw_medium_airframe = 1
-	naval_bomber1x = 1
+
 }
 
 
@@ -418,38 +415,4 @@ set_war_support = 0.8
 				logistics_skill = 2
         }
 
-
-### VARIANTS ###
-# 1936 Start #
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	### Ship Variants ###
-	create_equipment_variant = {
-		name = "C Class"
-		type = submarine_1
-		upgrades = {
-			ship_reliability_upgrade = 1
-			sub_engine_upgrade = 1
-			sub_stealth_upgrade = 1
-			sub_torpedo_upgrade = 1
-		}
-	}
-	create_equipment_variant = {
-		name = "Príncipe Alfonso Class"
-		type = light_cruiser_1
-		upgrades = {
-			ship_reliability_upgrade = 1
-			ship_engine_upgrade = 1
-			ship_gun_upgrade = 1
-			ship_anti_air_upgrade = 1
-		}
-	}
-}
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	# Submarines #
-	# Destroyers #
-	# Light Cruisers #
-	# Heavy Cruisers #
-	# Battleships #
-}
+ 
