@@ -1,49 +1,27 @@
 ﻿capital = 43
-set_politics = {
-	ruling_party = neutrality
-	last_election = "1935.3.31"
-	election_frequency = 48
-	elections_allowed = yes
-}
-
-set_popularities = {
-	democratic = 25
-	fascism = 31
-	neutrality = 44
-}
 
 oob = "HUN_1936"
-add_opinion_modifier = {
-	target = JAP
-	modifier = embargo
-}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "HUN_1936_air_bba"
+		set_technology = {
 
-add_opinion_modifier = {
-	target = JAP
-	modifier = sanctions
+		}
+	else = {
+		set_air_oob = "HUN_1936_air_legacy"
+		set_technology = {
+			iw_small_airframe = 1
+			CAS1 = 1
+		}
+	}
 }
-
-add_opinion_modifier = {
-	target = JAP
-	modifier = minor_sanctions
-}
-
+add_opinion_modifier = { target = JAP modifier = embargo }
+add_opinion_modifier = { target = JAP modifier = sanctions }
+add_opinion_modifier = { target = JAP modifier = minor_sanctions }
 set_research_slots = 4
 set_stability = 0.7
 set_war_support = 0.6
-add_ideas = {
-	limited_conscription
-	HUN_treaty_of_triannon
-	GDU_scuffed_acclim
-	general_staff
-	GER_mefo_bills_non_germany
-}
-
-add_timed_idea = {
-	idea = airandnavy_idea
-	days = 1320
-}
-
+add_timed_idea = { idea = airandnavy_idea days = 1320 }
 add_intel = {
 	target = USA
 	civilian_intel = 200
@@ -51,7 +29,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = SPR
 	civilian_intel = 200
@@ -59,7 +36,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = BUl
 	civilian_intel = 200
@@ -67,7 +43,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = ENG
 	civilian_intel = 200
@@ -75,7 +50,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = SOV
 	civilian_intel = 200
@@ -83,7 +57,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = RAJ
 	civilian_intel = 200
@@ -91,7 +64,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = ITA
 	civilian_intel = 200
@@ -99,7 +71,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = GER
 	civilian_intel = 200
@@ -107,7 +78,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = ROM
 	civilian_intel = 200
@@ -115,7 +85,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = HUN
 	civilian_intel = 200
@@ -123,7 +92,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = JAP
 	civilian_intel = 200
@@ -131,7 +99,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = CAN
 	civilian_intel = 200
@@ -139,7 +106,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = FRA
 	civilian_intel = 200
@@ -147,7 +113,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = SAF
 	civilian_intel = 200
@@ -155,7 +120,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = AST
 	civilian_intel = 200
@@ -163,31 +127,23 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = NZL
 	civilian_intel = 200
 	army_intel = 200
 	navy_intel = 200
 	airforce_intel = 200
-}
-
-#set_technology = {
-#	CAS1 = 1
-#}
-set_technology = {
-	early_fighter = 1
-	fighter1 = 1
-	CAS1 = 1
-}
+} 
 set_technology = {
 	airfield_construction = 1
 	fort_construction = 1
+	
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	tech_support = 1
+	tech_support = 1		
 	tech_recon = 1
 	gw_artillery = 1
+	CAS1x = 1
 	armor_tech_1 = 1
 	engine_tech_1 = 1
 	basic_heavy_tank_chassis = 1
@@ -199,71 +155,244 @@ set_technology = {
 	fuel_silos = 1
 	interwar_antiair = 1
 	##transport = 1
-	gwtank_chassis = 1
+}
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "Death or Dishonor"
+	}
+
+
+	add_ideas = {
+		
+		limited_conscription
+		HUN_treaty_of_triannon
+		GDU_scuffed_acclim
+		general_staff
+		GER_mefo_bills_non_germany
+
+	}
+}
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "WM-16"
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
 }
 
 if = {
 	limit = {
 		#has_dlc = Battle for the Bosporus
 	}
-	add_opinion_modifier = {
+	add_opinion_modifier = { 
 		target = CZE
 		modifier = BFTB_incongruous_neighbors
 	}
-	add_opinion_modifier = {
+	add_opinion_modifier = { 
 		target = ROM
 		modifier = BFTB_incongruous_neighbors
 	}
-	add_opinion_modifier = {
+	add_opinion_modifier = { 
 		target = YUG
 		modifier = BFTB_incongruous_neighbors
 	}
 }
+add_equipment_to_stockpile = {
+         type = artillery_equipment_1
+         amount = 1100
+         producer = HUN
+}  
+add_equipment_to_stockpile = {
+         type = support_equipment
+         amount = 222
+         producer = HUN
+} 
 
 add_equipment_to_stockpile = {
-	type = artillery_equipment_1
-	amount = 1100
-	producer = HUN
-}
-
-add_equipment_to_stockpile = {
-	type = support_equipment
-	amount = 222
-	producer = HUN
-}
-
-add_equipment_to_stockpile = {
-	type = infantry_equipment_1
-	amount = 10000
-	producer = HUN
-}
+         type = infantry_equipment_1
+         amount = 10000
+         producer = HUN
+} 
 
 add_equipment_to_stockpile = {
 	type = anti_air_equipment_1
-	amount = 983
-	producer = HUN
+    amount = 983
+    producer = HUN
 }
-
 create_corps_commander = {
 	name = "Gusztav Denk AFRICANUS"
 	picture = "AFRICA_Portrait_HUN_Gusztav_Denk.dds"
-	traits = {
-		career_officer
-		infantry_leader
-		trickster
-		substance_abuser
-		organizer
-		harsh_leader
-		career_officer
-		panzer_leader
-		trait_reckless
-		desert_fox
-	}
+	traits = { career_officer infantry_leader trickster substance_abuser organizer harsh_leader career_officer panzer_leader trait_reckless desert_fox }
 	skill = 6
 	attack_skill = 6
 	defense_skill = 6
 	planning_skill = 5
 	logistics_skill = 5
+}
+1939.1.1 = {
+	remove_ideas = HUN_treaty_of_triannon
+
+	add_political_power = 1198
+	add_command_power = 100
+
+	if = {
+		limit = {
+			has_dlc = "Death or Dishonor"
+		}
+		complete_national_focus = HUN_economic_intervention
+		complete_national_focus = HUN_secret_rearmament
+		complete_national_focus = HUN_war_games
+		complete_national_focus = HUN_theoretical_air_efforts
+		complete_national_focus = HUN_trade_deal_with_germany
+		complete_national_focus = HUN_joint_aluminum_mining_company
+		complete_national_focus = HUN_reaffirm_territorial_claims
+		complete_national_focus = HUN_announce_the_gyor_program
+		complete_national_focus = HUN_civilian_industry
+		complete_national_focus = HUN_reintegrate_the_railroads
+		complete_national_focus = HUN_invite_foreign_investors
+		complete_national_focus = HUN_bled_agreement
+		complete_national_focus = HUN_army_maneuvers
+		complete_national_focus = HUN_establish_the_air_force
+		complete_national_focus = HUN_demand_southern_slovakia
+		complete_national_focus = HUN_mobile_focus
+		complete_national_focus = HUN_license_foreign_designs
+		
+		#Handle this manually
+		unlock_national_focus = HUN_renounce_the_treaty_of_trianon
+		add_ideas = {
+			limited_conscription
+			HUN_treaty_of_triannon_3
+		}
+
+		unlock_national_focus = HUN_strengthen_fascists #To avoid leader ID clash
+		add_ideas = HUN_strengthen_fascists
+
+		else = {
+			#generic focuses
+			complete_national_focus = army_effort
+			complete_national_focus = equipment_effort
+			complete_national_focus = motorization_effort
+			complete_national_focus = aviation_effort
+			complete_national_focus = construction_effort_2
+			complete_national_focus = production_effort_2
+			complete_national_focus = infrastructure_effort
+			complete_national_focus = industrial_effort
+			complete_national_focus = construction_effort
+			complete_national_focus = production_effort		
+		}
+	}
+	
+	set_technology = {
+		interwar_artillery = 1
+		interwar_antitank = 1
+		interwar_antiair = 1
+		tech_engineers = 1
+		tech_mountaineers = 1
+		CAS1x = 1
+		motorised_infantry = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		fuel_refining = 1
+	}
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+			set_air_oob = "HUN_1939_air_bba"
+		else = {
+			set_air_oob = "HUN_1939_air_legacy"
+			set_technology = {
+				fighter1 = 1
+				early_bomber = 1
+				tactical_bomber1 = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_dlc = "No Step Back"
+			}
+		}
+		set_technology = {
+			basic_light_tank = 1
+	
+		}
+		set_oob = "HUN_1939"
+	}
+	if = {
+		limit = {
+			
+			has_dlc = "No Step Back"
+			
+		}
+		set_technology = {
+			basic_light_tank_chassis = 1
+	
+		}
+		set_oob = "HUN_1939_nsb"
+	}
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.3.31"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 25
+	fascism = 31
+	neutrality = 44
 }
 
 recruit_character = HUN_miklos_horthy
@@ -287,9 +416,30 @@ recruit_character = HUN_kalman_kanya
 recruit_character = HUN_karoly_beregfy
 recruit_character = HUN_lajos_veress
 recruit_character = HUN_ferenc_feketehalmyczeydner
+
 recruit_character = HUN_vilmos_roder
 recruit_character = HUN_zoltan_tildy
+
 recruit_character = HUN_kalman_daranyi
 recruit_character = HUN_lajos_remenyi_schneller
+
 recruit_character = HUN_gyula_gombos_de_jakfa
+
 recruit_character = HUN_franz_friedrich
+
+
+
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = fascism
+		last_election = "1939.5.29"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 27
+		fascism = 70
+		communism = 3
+	}
+}

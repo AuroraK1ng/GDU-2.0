@@ -137,7 +137,11 @@ NDefines.NDiplomacy.MASTER_BUILD_AUTONOMY_FACTOR = 0.0            -- scales auto
 
 NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 15  -- increased from 15 to 35 8/3/2019
 
-
+NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_BASE = 100
+NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_TRASHHOLD = 0
+NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_PENALTY = 0
+NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROLLED = 0
+NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROL_DIFF = 0
 
 
 NDefines.NCountry.BASE_FUEL_CAPACITY = 150000						-- base amount of fuel capacity 50k to 500k
@@ -610,7 +614,21 @@ NDefines.NNavy.SPOTTING_SPEED_EFFECT_FOR_INITIAL_NAVAL_INVASION_SPOTTING = 0.05 
 
 NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0.00									-- Chances one ship get damage each hour while on training
 
-
+NDefines.NAI.DIVISION_UPGRADE_MIN_XP = 400
+NDefines.NAI.DIVISION_CREATE_MIN_XP = 500
+NDefines.NAI.VARIANT_UPGRADE_MIN_XP = 500
+NDefines.NAI.VP_GARRISON_VALUE_FACTOR = 2.0
+NDefines.NAI.PLAN_ATTACK_MIN_ORG_FACTOR_HIGH = 0.40
+NDefines.NAI.PLAN_ATTACK_MIN_STRENGTH_FACTOR_HIGH = 0.30
+NDefines.NAI.ORG_UNIT_WEAK = 0.30
+NDefines.NAI.STR_UNIT_WEAK = 0.40
+NDefines.NAI.STR_UNIT_STRONG = 0.80
+NDefines.NAI.AT_WAR_THREAT_FACTOR = 4.0
+NDefines.NAI.ATTACK_HEAVILY_DEFENDED_LIMIT = 0.9
+NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROLLED = 0
+NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROL_DIFF = 0
+NDefines.NAI.GIVE_STATE_CONTROL_BASE_SCORE = 1
+NDefines.NAI.MAX_VOLUNTEER_ARMY_FRACTION = 0.0001
 
 NDefines.NNavy.AMPHIBIOUS_LANDING_PENALTY = -0.37								-- amphibious landing penalty
 
@@ -691,7 +709,12 @@ NDefines.NNavy.MAX_ORG_ON_MANUAL_MOVE = 1.0									-- org will clamped to this 
 NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0				-- initially countries will allocate this ratio of dockyards for repairs
 
 --- AI defines
--- sildim aq
+
+NDefines.NAI.ACCESS_SCORE_FOR_DEMOCRATIC_COUNTRIES = 0						-- was 500 in vanilla, trying to stop mil access from AI
+NDefines.NAI.TOO_INSIGNIFICANT_ARMY_RATIO_BEGIN = 0.0					-- was 0.75 in vanilla, if army ratio is of a country is larger than this threshold, it will be less reluctant to accept certain diplo actions
+NDefines.NAI.TOO_INSIGNIFICANT_MAX_PENALTY = 999						-- was 350 in vanilla, max penalty that will be applied for thinking a country is too insignificant
+
+
 
 
 NDefines.NCountry.SCORCHED_EARTH_STATE_COST = 100 -- Cost to scorch earth
@@ -712,6 +735,7 @@ NDefines.NNavy.SUPPLY_NEED_FACTOR = 0.0
 --- New Supply defines
 
 NDefines.NMilitary.COMBAT_SUPPLY_LACK_ATTACKER_ATTACK = -0.20
+NDefines.NAI.FIX_SUPPLY_BOTTLENECK_SATURATION_THRESHOLD = 0.75
 NDefines.NSupply.CAPITAL_SUPPLY_BASE = 8.0
 NDefines.NSupply.CAPITAL_SUPPLY_CIVILIAN_FACTORIES = 0.9
 NDefines.NSupply.CAPITAL_SUPPLY_MILITARY_FACTORIES = 0.9

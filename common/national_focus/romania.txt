@@ -1259,8 +1259,8 @@ focus_tree = {
 				name = ROM_cas
 				bonus = 1.00
 				uses = 1
-				technology = CAS1
-				technology = CAS2
+				technology = CAS1x
+				technology = CAS2x
 			}
 		}
 	}
@@ -1301,7 +1301,7 @@ focus_tree = {
 					name = ROM_iar_80
 					bonus = 1.00
 					uses = 1
-					technology = fighter2
+					technology = improved_small_airframe
 				}
 		}
 	}
@@ -1342,8 +1342,8 @@ focus_tree = {
 				name = ROM_strategic_bomber_force
 				bonus = 1.00
 				uses = 1
-				technology = strategic_bomber1
-				technology = strategic_bomber2
+				technology = basic_large_airframe
+				technology = improved_large_airframe
 			}
 		}
 	}
@@ -1383,8 +1383,8 @@ focus_tree = {
 				name = ROM_heavy_bombers
 				bonus = 1.00
 				uses = 1
-				technology = strategic_bomber1
-				technology = strategic_bomber2
+				technology = basic_large_airframe
+				technology = improved_large_airframe
 			}
 		}
 	}
@@ -1911,7 +1911,8 @@ focus_tree = {
 			hidden_effect = {
 				if = {
 					limit = {
- 						has_tech = tech_recon
+						has_tech = basic_medium_tank
+						has_tech = tech_recon
 					}
 					division_template = {
 						name = "Blindata Pz Division"
@@ -1941,6 +1942,9 @@ focus_tree = {
 					}
 					else = {
 						if = {
+							limit = {
+								has_tech = basic_medium_tank
+							}
 							division_template = {
 								name = "Blindata Division"
 								priority = 2
