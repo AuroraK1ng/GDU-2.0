@@ -145,7 +145,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = 0.10
+				consumer_goods_expected_value = 0.10
 			}
 		}
 
@@ -202,7 +202,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = 0.03
+				consumer_goods_expected_value = 0.03
 			}
 		}
 
@@ -273,7 +273,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = 0.10
+				consumer_goods_expected_value = 0.10
 				political_power_gain = -0.25
 			}
 		}
@@ -387,7 +387,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_expected_value = -0.05
 			}
 		}
 
@@ -935,9 +935,6 @@ on_add = { hidden_effect = { make_air_designers_free = yes } }
 					air_attack = 0.1
 				}
 				large_plane_airframe  = {
-					air_ground_attack = 0.1
-				}
-				cv_large_plane_airframe = {
 					air_ground_attack = 0.1
 				}
 			}
