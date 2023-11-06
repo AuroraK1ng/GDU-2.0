@@ -24,12 +24,12 @@ USA_chrysler_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = USA 
+			original_tag = USA 
+			original_tag = BRA
 			AND = {
-				tag = MEX 
+				original_tag = MEX 
 				has_dlc = "Man the Guns"
 			}
-			 
 		}
 	}
 
@@ -51,9 +51,6 @@ USA_chrysler_organization = {
 		else_if = {
 			limit = {
 				FROM = { tag = NOR }
-			}
-			FROM = { 
-				has_completed_focus = NOR_invite_transnational_manufacturers
 			}
 		}
 	}
@@ -151,10 +148,7 @@ USA_detroit_arsenal_organization = {
 	include = generic_tank_organization
 	icon = GFX_idea_generic_industrial_concern_1
 	allowed = {	
-		tag = USA
-	}
-	available = {
-		FROM = { has_completed_focus = USA_main_battle_tanks }
+		
 	}
 }
 
@@ -422,7 +416,7 @@ USA_grumman_organization = {
 		relative_position_id = generic_mio_trait_reinforced_fuselage
 		
 		any_parent = { generic_mio_trait_reinforced_fuselage }
-		limit_to_equipment_type = { mio_cat_eq_all_cv_aircraft small_plane_naval_bomber_airframe }
+		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
 			
 		equipment_bonus = {
 			air_agility = 0.05
@@ -475,8 +469,10 @@ USA_springfield_armory_organization = {
 	icon = GFX_idea_springfield_armory
 	
 	allowed = {	 
-		tag = USA 
-	}
+		OR = {
+			original_tag = USA
+			original_tag = BRA
+		}	}
 }
 
 USA_ford_motor_company_organization = {
@@ -485,44 +481,33 @@ USA_ford_motor_company_organization = {
 	
 	allowed = {	 
 		OR = {
-			tag = USA 
-			AND = {
-				tag = POL # If Poland sets up a local one
-				OR = {
-					has_dlc = "Poland: United and Ready"
-					has_dlc = "No Step Back"
-				}
-			}
-			AND = {
-				tag = ROM
-				has_dlc = "Death or Dishonor"
-			}
-			tag = MEX # Mexican Ford
-			AND = {
-				tag = GRE # Greek Ford
-				has_dlc = "Battle for the Bosporus"
-			}
-			AND = {
-				OR = {
-					original_TAG = LAT
-					original_TAG = LIT
-					original_TAG = EST
-				}
-				has_dlc = "No Step Back"
-			}
+			original_tag = USA 
+			original_tag = POL
+			original_tag = MEX
+			original_tag = BRA
+			# AND = {
+			# 	tag = ROM
+			# 	has_dlc = "Death or Dishonor"
+			# }
+			# tag = MEX # Mexican Ford
+			# AND = {
+			# 	tag = GRE # Greek Ford
+			# 	has_dlc = "Battle for the Bosporus"
+			# }
 		}
 	}
 	
-	visible = {
-		IF = { 
-			limit = {
-				FROM = { tag = POL }
-			}
-			FROM = {
-				has_country_flag = POL_ford_motors
-			}
-		}
-	}
+	# visible = {
+	# 	IF = { 
+	# 		limit = {
+	# 			FROM = { tag = POL }
+	# 		}
+	# 		FROM = {
+	# 			has_country_flag = POL_ford_motors
+	# 			NOT = { has_completed_focus = POL_adaptive_designs }
+	# 		}
+	# 	}
+	# }
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
@@ -533,24 +518,10 @@ USA_ford_motor_company_organization = {
 			FROM = { NOT = { has_war_with = USA } }
 		}
 
-		IF = {
-			limit = { FROM = { original_tag = ROM } }
-			FROM = { has_country_flag = USA_mot_chosen }
-		}
-		if = {
-			limit = {
-				FROM = {
-					OR = {
-						original_TAG = LAT
-						original_TAG = LIT
-						original_TAG = EST
-					}
-				}
-			}
-			FROM = {
-				has_completed_focus = BALTIC_ford_motors
-			}
-		}
+		# IF = {
+		# 	limit = { FROM = { original_tag = ROM } }
+		# 	FROM = { has_country_flag = USA_mot_chosen }
+		# }
 	}
 	
 	initial_trait = {
@@ -567,7 +538,9 @@ USA_rock_island_arsenal_organization = {
 	icon = GFX_idea_rock_island_arsenal
 	
 	allowed = {	 
-		tag = USA 
-
+		OR = {
+			original_tag = USA
+			original_tag = BRA
+		}
 	}
 }

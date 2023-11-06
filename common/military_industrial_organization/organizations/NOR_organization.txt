@@ -60,7 +60,8 @@ NOR_akers_mekaniske_verksted_organization = {
     include = generic_escort_ship_organization
     icon = GFX_idea_NOR_akers_mekaniske_verksted
     allowed = { 
-         
+        tag = NOR
+        has_dlc = "Arms Against Tyranny"
     }
 
     equipment_type = {  
@@ -138,8 +139,7 @@ NOR_akers_mekaniske_verksted_organization = {
     trait = {
         token = NOR_mio_trait_convoy_production
         name = NOR_shipping_capitalist
-        icon = GFX_generic_mio_department_icon_ship_convoy_ship_production
-        special_trait_background  = yes
+        icon = GFX_generic_mio_trait_icon_supply_consumption
 
         position = { x=0 y=0 }
         limit_to_equipment_type = { convoy }
@@ -180,41 +180,39 @@ NOR_karljohansvern_verft_organization = {
 
 ###########################
 
-NOR_marinens_flyvebaatfabrikk_organization = {
+ NOR_marinens_flyvebaatfabrikk_organization = {
     include = generic_naval_aircraft_organization
-    icon = GFX_idea_NOR_marinens_flyvebaatfabrikk
-    allowed = { 
-        tag = NOR
-        has_dlc = "Arms Against Tyranny"
-    }
+     icon = GFX_idea_NOR_marinens_flyvebaatfabrikk
+     allowed = { 
+         tag = NOR
+         has_dlc = "Arms Against Tyranny"
+     }
 
-    initial_trait = {
-        equipment_bonus = {
-            naval_strike_attack = 0.07
-        }
-    }
+     initial_trait = {
+         equipment_bonus = {
+             naval_strike_attack = 0.07
+         }
+     }
 
-    add_trait = { 
-        token = DEN_mio_trait_standardized_production_flyvertroppernes
-        name = generic_mio_initial_trait_standardized_production
-        icon = GFX_generic_mio_department_icon_plane_general_line_efficiency
-        special_trait_background = yes
+     add_trait = { 
+         token = DEN_mio_trait_standardized_production_flyvertroppernes
+         name = generic_mio_initial_trait_standardized_production
+         icon = GFX_generic_mio_department_icon_plane_general_line_efficiency
+         special_trait_background = yes
 
-        position = { x=9 y=0 }
+         position = { x=9 y=0 }
         
-        available = {
-            FROM = {
-                has_completed_focus = NOR_increase_air_production
-            }
-        }
+         available = {
 
-        production_bonus = {
+         }
+
+         production_bonus = {
             production_capacity_factor = 0.05
             production_efficiency_cap_factor = 0.05
             production_efficiency_gain_factor = 0.05
-        }
-    }        
-}
+         }
+     }        
+ }
 
 ### GER_messerschmitt_organization -> see GER_organizations.txt 
 
@@ -252,7 +250,7 @@ NOR_raufoss_ammunisjonsfabrikker_organization = {
 
         all_parents = { generic_mio_trait_improved_hydraulic_recoil_system }
         available = {
-            NOR = { has_completed_focus = NOR_buy_aa_from_sweden }
+
         }
 
         limit_to_equipment_type = {
@@ -305,7 +303,6 @@ NOR_cadillac_organization = { #TODO_Manu: This is a perfect candidate to become 
     }  
     available = {
         FROM = { NOT = { has_war_with = USA } } #This is a bit weird since the MIO does not exist in USA, but consistent with other foreign MIOs requisites
-        FROM = { has_completed_focus = NOR_invite_cadillac_to_norway }
     }
 
     initial_trait = {

@@ -13,24 +13,16 @@ FRA_renault_organization = {
 	include = generic_infantry_tank_organization
 	icon = GFX_idea_renault
 	allowed = {	
-		OR = {
-			tag = FRA 
-			tag = BEL
-			AND = {
-				tag = ETH 
-				has_dlc = "By Blood Alone"
-			}
+		
+		NOT = {
+			original_tag = USA
+			original_tag = ENG
+			original_tag = NOR
+			original_tag = MEX
+			original_tag = BRA
 		}
 	}
 
-	visible = {
-		IF = {
-			limit = {
-				FROM = { original_tag = ETH }
-			}
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
-		}
-	}
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
@@ -40,18 +32,6 @@ FRA_renault_organization = {
 			}
 			FROM = { NOT = { has_war_with = FRA } }
 		}	
-
-		IF = {
-			limit = {
-				FROM = { original_tag = ETH }
-			}
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_FRA_renault_organization_flag
-				}
-			}
-		}
 	}
 
 	initial_trait = {
@@ -100,8 +80,16 @@ FRA_hotchkiss_organization = {
 	include = generic_mobile_tank_organization
 	icon = GFX_idea_generic_tank_manufacturer_3
 	allowed = {	
-		tag = FRA 
-		has_dlc = "Arms Against Tyranny"
+		
+		NOT = {
+			original_tag = ENG
+			original_tag = AST
+			original_tag = NZL
+			original_tag = GRE
+			original_tag = USA
+			original_tag = MEX
+			original_tag = BRA
+		}
 	}
 	add_trait = { 
 		token = FRA_mio_trait_l_35
@@ -126,8 +114,17 @@ FRA_apx_organization = {
 	include = generic_medium_tank_organization
 	icon = GFX_idea_FRA_atelier_puteaux
 	allowed = {	
-		tag = FRA 
-		has_dlc = "Arms Against Tyranny"
+		
+		NOT = {
+			original_tag = ENG
+			original_tag = SAF
+			original_tag = GRE
+			original_tag = NOR
+			original_tag = USA
+			original_tag = MEX
+			original_tag = BRA
+			original_tag = CAN
+		}
 	}
 }
 
@@ -195,90 +192,53 @@ FRA_acf_organization = {
 
 ###########################
 
-FRA_morane_saulnier_organization = {
-	include = generic_light_aircraft_organization
+ FRA_morane_saulnier_organization = {
+ 	include = generic_light_aircraft_organization
 	icon = GFX_idea_morane_saulnier
-	allowed = {	
-		tag = FRA 
+ 	allowed = {	
+ 		tag = FRA 
 		has_dlc = "Arms Against Tyranny"
-	}
+ 	}
 }
 
-FRA_bloch_organization = {
-	include = generic_medium_aircraft_organization
-	icon = GFX_idea_bloch
-	allowed = {	
-		OR = {
+ FRA_bloch_organization = {
+ 	include = generic_medium_aircraft_organization
+ 	icon = GFX_idea_bloch
+ 	allowed = {	
 			tag = FRA 
-			AND = {
-				tag = ETH 
-				has_dlc = "By Blood Alone"
-			}
-		}
-	}
-
-	visible = {
-		IF = {
-			limit = {
-				FROM = { original_tag = ETH }
-			}
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
-		}
-	}
-	
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = FRA } }
-			}
-			FROM = { NOT = { has_war_with = FRA } }
-		}
-
-		IF = {
-			limit = {
-				FROM = { original_tag = ETH }
-			}
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_FRA_bloch_organization_flag
-				}
-			}
-		}
-	}
+ 	}
 }
 
 FRA_amiot_organization = {
 	include = generic_heavy_aircraft_organization
-	icon = GFX_idea_amiot
+ 	icon = GFX_idea_amiot
+ 	allowed = {	
+ 		tag = FRA 
+ 		has_dlc = "Arms Against Tyranny"
+ 	}
+ }
+
+ FRA_levasseur_organization = {
+ 	include = generic_naval_aircraft_organization
+ 	icon = GFX_idea_levasseur
 	allowed = {	
 		tag = FRA 
-		has_dlc = "Arms Against Tyranny"
-	}
-}
+ 		has_dlc = "Arms Against Tyranny"
+ 	}
+ }
 
-FRA_levasseur_organization = {
-	include = generic_naval_aircraft_organization
-	icon = GFX_idea_levasseur
-	allowed = {	
-		tag = FRA 
-		has_dlc = "Arms Against Tyranny"
-	}
-}
-
-FRA_SNCAC_organization = {
-	name = SNCAC
+ FRA_SNCAC_organization = {
+ 	name = SNCAC
 	include = generic_general_aircraft_organization
-	icon = GFX_idea_FRA_sncac
-	allowed = {	
-		tag = FRA 
+ 	icon = GFX_idea_FRA_sncac
+ 	allowed = {	
+ 		tag = FRA 
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
-		FROM = { has_country_flag = FRA_SNCAC_formed }
+ 		FROM = { has_country_flag = FRA_SNCAC_formed }
 	}
-}
+ }
 
 ################################### 
 
@@ -297,8 +257,7 @@ FRA_panhard_organization = {
 	include = generic_armored_car_organization
 	icon = GFX_idea_FRA_panhard
 	allowed = {	
-		tag = FRA 
-		has_dlc = "La Resistance"
+		OR = { original_TAG = BRA original_TAG = POL original_TAG = HOL original_tag = ENG original_tag = SAF original_tag = CAN original_tag = RAJ  original_tag = NOR  original_tag = GRE original_tag = MEX original_tag = FRA }
 	}
 }
 
@@ -326,6 +285,7 @@ FRA_somua_organization = {
 			}
 			FROM = {
 				has_country_flag = POL_somua_motors
+				NOT = { has_completed_focus = POL_adaptive_designs }
 			}
 		}
 	}
@@ -352,15 +312,6 @@ FRA_mas_organization = {
 				tag = ETH
 				has_dlc = "By Blood Alone"
 			}
-		}
-	}
-	
-	visible = {
-		IF = {
-			limit = {
-				FROM = { original_tag = ETH }
-			}
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
 		}
 	}
 
