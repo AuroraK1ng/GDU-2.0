@@ -450,22 +450,6 @@ enemy_has_equal_or_better_radar_tech_trigger = {
 				}
 			}
 		}
-		else_if = {
-			limit = {
-				ROOT = {
-					has_tech = improved_decimetric_radar
-					NOT = {
-						has_tech = advanced_decimetric_radar
-					}
-				}
-			}
-			FROM = {
-				OR = {
-					has_tech = improved_decimetric_radar
-					has_tech = advanced_decimetric_radar
-				}
-			}
-		}
 		#no more steps needed because end of research tree is reached
 	}
 }
