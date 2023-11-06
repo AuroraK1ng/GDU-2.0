@@ -333,6 +333,34 @@ focus_tree = {
 			}
 		}
 	}
+		focus = {
+		id = ENG_lessons_of_war
+		text = "Lessons of the Great War"
+		prerequisite = { focus = limited_rearmament_focus }
+		icon = GFX_ENG_Lessons_of_war
+		x = 0
+		y = 1
+		relative_position_id = limited_rearmament_focus
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+	
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		army_experience = 50	
+		add_tech_bonus = {
+				bonus = 0.2
+				uses = 1
+				category = land_doctrine
+			}	
+		}
+	}
 	focus = {
 		id = ENG_tank_focus
 		prerequisite = { focus = ENG_lessons_of_war }
@@ -341,7 +369,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ENG_lessons_of_war
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -389,34 +417,7 @@ focus_tree = {
 
 		}
 	}
-	focus = {
-		id = ENG_lessons_of_war
-		text = "Lessons of the Great War"
-		prerequisite = { focus = limited_rearmament_focus }
-		icon = GFX_ENG_Lessons_of_war
-		x = 0
-		y = 1
-		relative_position_id = limited_rearmament_focus
-		cost = 3
-		ai_will_do = {
-			factor = 1
-		}
 
-		available = {
-	
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-		army_experience = 50	
-		add_tech_bonus = {
-				bonus = 0.2
-				uses = 1
-				category = land_doctrine
-			}	
-		}
-	}
 	focus = {
 		id = uk_empire_focus
 		available = {
@@ -445,7 +446,7 @@ focus_tree = {
 		relative_position_id = uk_empire_focus
 		x = 3
 		y = 1
-		cost = 2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -468,7 +469,7 @@ focus_tree = {
 		relative_position_id = uk_Parliamentary_elections
 		x = 0
 		y = 1
-		cost = 2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -476,24 +477,31 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		add_war_support = 0.05	
+		add_war_support = 0.10
 		}
 	}
 	focus = {
 		id = uk_British_Lion
 		text = "British Lion"
 		prerequisite = { focus = uk_British_stoicism }
-		
 		icon = GFX_ENG_Lion
 		relative_position_id = uk_British_stoicism
 		x = 0
 		y = 1
-		cost = 2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 
-		available_if_capitulated = yes
+		available = {
+		JAP = {
+				controls_state = 327
+				controls_state = 336
+				controls_state = 669
+				controls_state = 439
+				controls_state = 285
+			}
+		}
 
 		completion_reward = {
 		add_Ideas = British_Lion	
@@ -1777,7 +1785,34 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = uk_waves_focus
+		prerequisite = { focus = ENG_secure_the_imperial_shipping_routes }
+		icon = GFX_goal_britannia
+		x = 0
+		y = 1
+		relative_position_id = ENG_secure_the_imperial_shipping_routes
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
 
+		available_if_capitulated = yes
+
+		completion_reward = {
+	
+			129 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+			}
+			navy_experience = 200
+
+		}
+	}
 	focus = {
 		id = ENG_anti_non_contact_committee
 		prerequisite = { focus = uk_waves_focus }
@@ -1885,34 +1920,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = uk_waves_focus
-		prerequisite = { focus = ENG_secure_the_imperial_shipping_routes }
-		icon = GFX_goal_britannia
-		x = 0
-		y = 1
-		relative_position_id = ENG_secure_the_imperial_shipping_routes
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
 	
-			129 = {
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = dockyard
-					level = 4
-					instant_build = yes
-				}
-			}
-			navy_experience = 200
-
-		}
-	}
 	focus = {
 		id = uk_carrier_focus
 		prerequisite = { focus = uk_waves_focus }
@@ -3926,7 +3934,7 @@ focus = {
 		x = 3
 		y = 1
 		relative_position_id = shadow_scheme_focus
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -3955,7 +3963,7 @@ focus = {
 			}
 		}
 		relative_position_id = ENG_general_staff
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -3990,7 +3998,7 @@ focus = {
 		x = -1
 		y = 1
 		relative_position_id = ENG_general_staff
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4019,14 +4027,14 @@ focus = {
 		x = 1
 		y = 1
 		relative_position_id = ENG_military_training_act
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
 		add_tech_bonus = {
 				name = ENG_inf
-				uses = 1
+				uses = 2
 				bonus = 1.00
 				category = infantry_weapons
 			}	
@@ -4046,7 +4054,7 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = ENG_new_rifle
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4068,7 +4076,7 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = ENG_women_in_army
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4077,7 +4085,7 @@ focus = {
 				bonus = 2.0
 				uses = 1
 				category = land_doctrine
-			}	
+			}
 		}
 	}
 

@@ -17,7 +17,7 @@ ideas = {
 			
 		}
 		Collectivism_2 = {
-			picture = smallarms_factory
+			picture = workers_culture
 
 			allowed = {
 
@@ -25,15 +25,15 @@ ideas = {
 		
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.025
+				consumer_goods_factor = -0.04
 				conversion_cost_mil_to_civ_factor = -0.2
 				production_speed_industrial_complex_factor = 0.1
-				conscription = 0.005
+				stability_factor = -0.05
 			}
 			
 		}
 		Collectivism = {
-			picture = smallarms_factory
+			picture = workers_culture
 
 			allowed = {
 
@@ -41,9 +41,10 @@ ideas = {
 		
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.015
+				consumer_goods_factor = -0.02
 				conversion_cost_mil_to_civ_factor = -0.2
 				production_speed_industrial_complex_factor = 0.05
+				stability_factor = -0.1
 			}
 			
 		}
@@ -74,7 +75,7 @@ ideas = {
 			
 		}
 		Marxism-Leninism = {
-			picture = smallarms_factory
+			picture = generic_manpower_bonus
 
 			allowed = {
 
@@ -88,7 +89,7 @@ ideas = {
 			
 		}
 		Gulags = {
-			picture = smallarms_factory
+			picture = workers_culture
 
 			allowed = {
 
@@ -96,13 +97,13 @@ ideas = {
 		
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.05
-				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = -0.03
+				production_speed_buildings_factor = -0.05
 			}
 			
 		}
 		Convict_Workers = {
-			picture = smallarms_factory
+			picture = SOV_tankograd
 
 			allowed = {
 
@@ -111,7 +112,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 			industrial_capacity_factory = 0.15
-			stability_factor = -0.10
+			stability_factor = -0.05
 			}
 			
 		}
@@ -126,11 +127,12 @@ ideas = {
 			modifier = {
 			production_speed_arms_factory_factor = 0.025
 			production_speed_dockyard_factor = 0.025
+			conscription = -0.002
 			}
 			
 		}
 		Pioners = {
-			picture = smallarms_factory
+			picture = soviet_research
 
 			allowed = {
 
@@ -143,7 +145,7 @@ ideas = {
 			
 		}
 		Heroism_2 = {
-			picture = smallarms_factory
+			picture = workers_culture
 
 			allowed = {
 
@@ -151,16 +153,15 @@ ideas = {
 		
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.025
-				conversion_cost_civ_to_mil_factor = -0.2
-				production_speed_arms_factory_factor = 0.1
+				conversion_cost_civ_to_mil_factor = -0.35
+				production_speed_arms_factory_factor = 0.10
 				production_speed_dockyard_factor = 0.25
-				conscription = 0.01
+				conscription = 0.02
 			}
 			
 		}
 		Heroism = {
-			picture = smallarms_factory
+			picture = workers_culture
 
 			allowed = {
 
@@ -168,7 +169,6 @@ ideas = {
 		
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.015
 				production_speed_arms_factory_factor = 0.05
 				production_speed_dockyard_factor = 0.25
 				conversion_cost_civ_to_mil_factor = -0.2
@@ -324,7 +324,7 @@ ideas = {
 		
 		Heroes_social_labor = {
 			
-			picture = Heroes_social_labor
+			picture = workers_culture
 			
 			allowed = {
 				original_tag = "SOV"
@@ -714,7 +714,7 @@ ideas = {
 			picture = SOV_lost_control
 
 			modifier = {
-				conscription = 0.015
+				conscription = 0.010
 			}
 		}
 	    SOV_order_227 = {
