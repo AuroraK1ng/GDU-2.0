@@ -1,32 +1,25 @@
 ﻿capital = 126
+
+set_oob = "ENG_1936"
+
 set_oob = "ENG_1936_nsb"
+
 set_naval_oob = "ENG_1936_Naval"
+
+set_air_oob = "ENG_1936_air_bba"
+
+set_air_oob = "ENG_1936_air_legacy"
+
+load_oob = "ENG_Motorized"
+
 starting_train_buffer = 4
-set_research_slots = 4
-set_stability = 0.65
-set_war_support = 0.11
-set_politics = {
-	ruling_party = democratic
-	last_election = "1935.11.14"
-	election_frequency = 48
-	elections_allowed = yes	##suspended through duration of war, which is handled via event
-}
 
-add_opinion_modifier = {
-	target = JAP
-	modifier = embargo
-}
 
-add_opinion_modifier = {
-	target = JAP
-	modifier = sanctions
-}
 
-add_opinion_modifier = {
-	target = JAP
-	modifier = minor_sanctions
-}
 
+add_opinion_modifier = { target = JAP modifier = embargo }
+add_opinion_modifier = { target = JAP modifier = sanctions }
+add_opinion_modifier = { target = JAP modifier = minor_sanctions }
 add_intel = {
 	target = SPR
 	civilian_intel = 200
@@ -34,7 +27,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = BUl
 	civilian_intel = 200
@@ -42,7 +34,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = USA
 	civilian_intel = 200
@@ -50,7 +41,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = ENG
 	civilian_intel = 200
@@ -58,7 +48,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = SOV
 	civilian_intel = 200
@@ -66,7 +55,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = RAJ
 	civilian_intel = 200
@@ -74,7 +62,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = ITA
 	civilian_intel = 200
@@ -82,7 +69,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = GER
 	civilian_intel = 200
@@ -90,7 +76,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = ROM
 	civilian_intel = 200
@@ -98,7 +83,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = HUN
 	civilian_intel = 200
@@ -106,7 +90,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = JAP
 	civilian_intel = 200
@@ -114,7 +97,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = CAN
 	civilian_intel = 200
@@ -122,7 +104,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = FRA
 	civilian_intel = 200
@@ -130,7 +111,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = SAF
 	civilian_intel = 200
@@ -138,7 +118,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = AST
 	civilian_intel = 200
@@ -146,7 +125,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = NZL
 	civilian_intel = 200
@@ -154,11 +132,21 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+set_research_slots = 4
+
+set_stability = 0.65
+
+set_war_support = 0.11
+
 
 # Starting tech
 set_technology = {
 	airfield_construction = 1
+	iw_small_airframe = 1
+	basic_medium_airframe = 1
+	basic_small_airframe = 1
 	fort_construction = 1
+	iw_medium_airframe = 1
 	tech_mountaineers = 1
 	desertinfantry_at = 1
 	infantry_weapons = 1
@@ -167,14 +155,24 @@ set_technology = {
 	tech_engineers = 1
 	tech_recon = 1
 	tech_signal_company = 1
-	tech_logistics_company = 1
+	tech_logistics_company = 1 
 	motorised_infantry = 1
 	gw_artillery = 1
+	basic_small_airframe = 1
+	CAS1x = 1
 	armor_tech_1 = 1
 	engine_tech_1 = 1
+	cv_CAS1x = 1
+	cv_fighter1x = 1
+	cv_early_fighterx = 1
+	heavy_fighter1x = 1
 	basic_heavy_tank_chassis = 1
 	basic_light_tank_chassis = 1
 	improved_light_tank_chassis = 1
+	cv_fighter1x = 1
+	cv_naval_bomber1x = 1
+	naval_bomber1x = 1
+	cv_naval_bomber1x = 1
 	interwar_antitank = 1
 	interwar_antiair = 1
 	basic_train = 1
@@ -192,45 +190,36 @@ set_technology = {
 	fuel_silos = 1
 	fuel_refining = 1
 }
-
-set_technology = {
-	early_bomber = 1
-	early_fighter = 1
-	tactical_bomber1 = 1
-	fighter1 = 1
-	cv_fighter1 = 1
-	cv_naval_bomber1 = 1
-	naval_bomber1 = 1
-	cv_CAS1 = 1
-	cv_early_fighter = 1
-	heavy_fighter1 = 1
-	CAS1 = 1
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		smoke_generator = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		basic_fire_control_system = 1
+		basic_dp_light_battery = 1
+	}
 }
 
-set_technology = {
-	early_ship_hull_light = 1
-	basic_ship_hull_light = 1
-	early_ship_hull_submarine = 1
-	early_ship_hull_cruiser = 1
-	basic_ship_hull_cruiser = 1
-	early_ship_hull_heavy = 1
-	basic_ship_hull_heavy = 1
-	early_ship_hull_carrier = 1
-	basic_ship_hull_carrier = 1
-	basic_battery = 1
-	basic_light_battery = 1
-	basic_medium_battery = 1
-	basic_heavy_battery = 1
-	basic_torpedo = 1
-	sonar = 1
-	smoke_generator = 1
-	basic_depth_charges = 1
-	basic_cruiser_armor_scheme = 1
-	basic_heavy_armor_scheme = 1
-	mtg_transport = 1
-	basic_fire_control_system = 1
-	basic_dp_light_battery = 1
-}
 
 add_ideas = {
 	stiff_upper_lip
@@ -240,10 +229,7 @@ add_ideas = {
 	GDU_scuffed_acclim
 }
 
-add_timed_idea = {
-	idea = airandnavy_idea
-	days = 1320
-}
+add_timed_idea = { idea = airandnavy_idea days = 1320 }
 
 add_dynamic_modifier = {
 	modifier = sealion_score_modifier_spirit
@@ -252,62 +238,35 @@ add_dynamic_modifier = {
 create_corps_commander = {
 	name = "Richard O'Connor AFRICANUS"
 	picture = "AFRICA_Portrait_Britain_Richard_OConnor.dds"
-	traits = {
-		panzer_leader
-		desert_fox
-		trickster
-		infantry_officer
-		brilliant_strategist
-		expert_improviser
-		panzer_expert
-		trait_engineer
-	}
+	traits = { panzer_leader desert_fox trickster infantry_officer brilliant_strategist expert_improviser panzer_expert trait_engineer }
 	skill = 6
 	attack_skill = 9
 	defense_skill = 4
 	planning_skill = 3
 	logistics_skill = 3
 }
-
 create_corps_commander = {
 	name = "William Gott AFRICANUS"
-	picture = "AFRICA_Portrait_Britain_William_Gott.dds"
-	traits = {
-		infantry_leader
-		desert_fox
-		armor_officer
-		trait_reckless
-		old_guard
-		inflexible_strategist
-		trickster
-		naval_invader
-	}
+		picture = "AFRICA_Portrait_Britain_William_Gott.dds"
+	traits = {infantry_leader desert_fox armor_officer trait_reckless old_guard inflexible_strategist trickster naval_invader}
 	skill = 6
 	attack_skill = 6
 	defense_skill = 7
 	planning_skill = 3
 	logistics_skill = 4
 }
-
 create_field_marshal = {
 	name = "Jock Campbell AFRICANUS"
-	picture = "AFRICA_Portrait_Britain_Jock_Campbell.dds"
-	traits = {
-		panzer_leader
-		desert_fox
-		war_hero
-		career_officer
-		trait_cautious
-		skilled_staffer
-	}
+		picture = "AFRICA_Portrait_Britain_Jock_Campbell.dds"
+	traits = { panzer_leader desert_fox war_hero career_officer trait_cautious skilled_staffer}
 	skill = 6
 	attack_skill = 5
 	defense_skill = 7
 	planning_skill = 2
 	logistics_skill = 4
 }
-
 set_convoys = 1200
+
 # DIPLOMACY
 if = {
 	limit = {
@@ -343,19 +302,44 @@ if = {
 	}
 }
 
+
 if = {
-	limit = {
-		has_dlc = "Together for Victory"
-	}
+	limit = { has_dlc = "Together for Victory" }
+
 	add_to_tech_sharing_group = commonwealth_research
 }
 
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.11.14"
+	election_frequency = 48
+	elections_allowed = yes ##suspended through duration of war, which is handled via event
+}
 set_popularities = {
-	democratic = 100
-	fascism = 0
-	communism = 0
+    democratic = 100
+    fascism = 0
+    communism = 0
 }
 
+1936.1.1.13 = {
+ add_equipment_to_stockpile = {
+         type = support_equipment
+         amount = 2000
+         producer = ENG
+} 
+add_equipment_to_stockpile = {
+         type = anti_tank_equipment_1
+         amount = 5000
+         producer = ENG
+} 
+add_equipment_to_stockpile = {
+         type = infantry_equipment_1
+         amount = 55000
+         producer = ENG
+} 
+ set_cosmetic_tag = ENG_EMPIRE
+ }
 create_faction = Allies
 add_to_faction = ENG
 add_to_faction = FRA
@@ -365,9 +349,11 @@ add_to_faction = AST
 add_to_faction = NZL
 add_to_faction = SAF
 give_military_access = RAJ
-add_to_faction = RAJ# Must be after puppet
+add_to_faction = RAJ		# Must be after puppet
 add_to_faction = INS
+
 #give_guarantee = CZE
+
 # Order matters - here Chamberlain becomes starting leader
 recruit_character = ENG_stanley_baldwin
 recruit_character = ENG_alan_brooke
@@ -428,17 +414,35 @@ recruit_character = ENG_frederick_bowhill
 recruit_character = ENG_cyril_newall
 recruit_character = ENG_sholto_douglas
 recruit_character = ENG_edward_ellington
+
+
+
+
 recruit_character = ENG_ernest_bevin
 recruit_character = ENG_leslie_hore_belisha
 recruit_character = ENG_nevile_henderson
 recruit_character = ENG_philip_kerr
 recruit_character = ENG_maxwell_aitken
 recruit_character = ENG_thomas_moore
-### Ship Variants ###
+
+
+
 if = {
 	limit = {
-		has_dlc = "Man the Guns"
+		has_dlc = "La Resistance"
 	}
+}
+
+
+### Ship Variants ###
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
 	### Variants ###
 	# Submarines #
 	create_equipment_variant = {
@@ -540,25 +544,27 @@ if = {
 		}
 		obsolete = yes
 	}
+	
+	
 	create_equipment_variant = {
-		name = "CL2 Light"
-		type = ship_hull_cruiser_2
-		name_group = ENG_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_2
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_2
-			fixed_ship_armor_slot = ship_armor_cruiser_2
-			fixed_ship_secondaries_slot = ship_secondaries_2
-			front_1_custom_slot = ship_light_medium_battery_2
-			mid_1_custom_slot = ship_light_medium_battery_2
-			mid_2_custom_slot = ship_light_medium_battery_2
-			rear_1_custom_slot = ship_light_medium_battery_2
+			name = "CL2 Light"
+			type = ship_hull_cruiser_2
+			name_group = ENG_CL_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_light_medium_battery_2
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = cruiser_ship_engine_2
+				fixed_ship_armor_slot = ship_armor_cruiser_2
+				fixed_ship_secondaries_slot = ship_secondaries_2
+				front_1_custom_slot = ship_light_medium_battery_2
+				mid_1_custom_slot = ship_light_medium_battery_2
+				mid_2_custom_slot = ship_light_medium_battery_2
+				rear_1_custom_slot = ship_light_medium_battery_2
+			}
 		}
-	}
 	# Heavy Cruisers #
 	create_equipment_variant = {
 		name = "CA1 Heavy"
@@ -671,7 +677,7 @@ if = {
 }
 
 create_equipment_variant = {
-	name = "Vickers Light Tank"
+	name = "Vickers Light Tank" 	
 	type = light_tank_chassis_2
 	modules = {
 		main_armament_slot = tank_small_cannon
@@ -687,119 +693,87 @@ add_equipment_to_stockpile = {
 	type = artillery_equipment_1
 	amount = 10500
 	producer = ENG
-}
-
+}  
 add_equipment_to_stockpile = {
 	type = train_equipment_1
 	amount = 300
 	producer = ENG
-}
-
+}  
 add_equipment_to_stockpile = {
 	type = support_equipment
 	amount = 3500
 	producer = ENG
-}
-
+} 
 add_equipment_to_stockpile = {
 	type = anti_tank_equipment_1
 	amount = 2500
 	producer = ENG
-}
-
+} 
 add_equipment_to_stockpile = {
 	type = infantry_equipment_1
 	amount = 55000
 	producer = ENG
-}
-
+} 
 add_equipment_to_stockpile = {
 	type = motorized_equipment_1
 	amount = 1500
 	producer = ENG
-}
+} 
 
 add_equipment_to_stockpile = {
 	type = light_tank_chassis_2
 	amount = 1440
 	producer = ENG
-}
+} 
 
 add_equipment_to_stockpile = {
 	type = anti_air_equipment_1
-	amount = 3500
-	producer = ENG
+    amount = 3500
+    producer = ENG
 }
-
 add_equipment_to_stockpile = {
 	type = cv_nav_bomber_equipment_1
-	amount = 175
-	producer = ENG
+    amount = 175
+    producer = ENG
 }
-
 add_equipment_to_stockpile = {
 	type = cv_fighter_equipment_1
-	amount = 75
-	producer = ENG
+    amount = 75
+    producer = ENG
 }
-
 add_equipment_to_stockpile = {
 	type = fighter_equipment_1
 	amount = 500
 	producer = ENG
 }
-
 add_equipment_to_stockpile = {
 	type = fighter_equipment_0
 	amount = 500
 	producer = ENG
 }
-
 add_equipment_to_stockpile = {
 	type = CAS_equipment_1
 	amount = 300
 	producer = ENG
 }
-
 add_equipment_to_stockpile = {
 	type = tac_bomber_equipment_0
 	amount = 200
 	producer = ENG
 }
-
 add_equipment_to_stockpile = {
 	type = tac_bomber_equipment_1
 	amount = 200
 	producer = ENG
 }
-
 add_equipment_to_stockpile = {
 	type = heavy_fighter_equipment_1
 	amount = 100
 	producer = ENG
 }
-
 add_equipment_to_stockpile = {
 	type = nav_bomber_equipment_1
 	amount = 100
 	producer = ENG
 }
-
-1936.1.1.13 = {
-	add_equipment_to_stockpile = {
-		type = support_equipment
-		amount = 2000
-		producer = ENG
-	}
-	add_equipment_to_stockpile = {
-		type = anti_tank_equipment_1
-		amount = 5000
-		producer = ENG
-	}
-	add_equipment_to_stockpile = {
-		type = infantry_equipment_1
-		amount = 55000
-		producer = ENG
-	}
-	set_cosmetic_tag = ENG_EMPIRE
-}
+	

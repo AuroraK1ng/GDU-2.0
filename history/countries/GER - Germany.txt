@@ -1,60 +1,205 @@
 ﻿capital = 64
-set_research_slots = 4
-set_convoys = 200
-set_stability = 0.75
-set_war_support = 0.4
+
+set_oob = "GER_1936"
+
 set_oob = "GER_1936_nsb"
-set_naval_oob = "GER_1936_naval_mtg"
-set_politics = {
-	ruling_party = fascism
-	last_election = "1933.3.5"
-	election_frequency = 48
-	elections_allowed = no
+
+set_air_oob = "GER_1936_air_bba"
+
+set_air_oob = "GER_1936_air_legacy"
+
+
+add_opinion_modifier = { target = SOV modifier = embargo }
+add_opinion_modifier = { target = SOV modifier = sanctions_relations }
+add_opinion_modifier = { target = SOV modifier = large_decrease }
+add_opinion_modifier = { target = SOV modifier = hostile_status }
+
+add_opinion_modifier = { target = FRA modifier = embargo }
+add_opinion_modifier = { target = FRA modifier = sanctions_relations }
+add_opinion_modifier = { target = FRA modifier = large_decrease }
+add_opinion_modifier = { target = FRA modifier = hostile_status }
+
+add_opinion_modifier = { target = ENG modifier = embargo }
+add_opinion_modifier = { target = ENG modifier = sanctions_relations }
+add_opinion_modifier = { target = ENG modifier = large_decrease }
+add_opinion_modifier = { target = ENG modifier = hostile_status }
+
+add_opinion_modifier = { target = CAN modifier = embargo }
+add_opinion_modifier = { target = CAN modifier = sanctions_relations }
+add_opinion_modifier = { target = CAN modifier = large_decrease }
+add_opinion_modifier = { target = CAN modifier = hostile_status }
+
+add_opinion_modifier = { target = SAF modifier = embargo }
+add_opinion_modifier = { target = SAF modifier = sanctions_relations }
+add_opinion_modifier = { target = SAF modifier = large_decrease }
+add_opinion_modifier = { target = SAF modifier = hostile_status }
+
+add_opinion_modifier = { target = RAJ modifier = embargo }
+add_opinion_modifier = { target = RAJ modifier = sanctions_relations }
+add_opinion_modifier = { target = RAJ modifier = large_decrease }
+add_opinion_modifier = { target = RAJ modifier = hostile_status }
+
+add_opinion_modifier = { target = AST modifier = embargo }
+add_opinion_modifier = { target = AST modifier = sanctions_relations }
+add_opinion_modifier = { target = AST modifier = large_decrease }
+add_opinion_modifier = { target = AST modifier = hostile_status }
+
+add_opinion_modifier = { target = NZL modifier = embargo }
+add_opinion_modifier = { target = NZL modifier = sanctions_relations }
+add_opinion_modifier = { target = NZL modifier = large_decrease }
+add_opinion_modifier = { target = NZL modifier = hostile_status }
+
+add_opinion_modifier = { target = USA modifier = embargo }
+add_opinion_modifier = { target = USA modifier = sanctions_relations }
+add_opinion_modifier = { target = USA modifier = large_decrease }
+add_opinion_modifier = { target = USA modifier = hostile_status }
+
+add_opinion_modifier = { target = JAP modifier = embargo }
+add_opinion_modifier = { target = JAP modifier = sanctions }
+add_opinion_modifier = { target = JAP modifier = minor_sanctions }
+add_intel = {
+	target = SPR
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = BUl
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = USA
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
 }
 
-set_popularities = {
-	democratic = 20
-	fascism = 60
-	communism = 20
+add_intel = {
+	target = ENG
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
 }
-
-create_faction = Axis
-add_to_faction = GER
-add_to_faction = BUL
-add_to_faction = SPR
-add_to_faction = ROM
-add_to_faction = HUN
-add_ideas = {
-	general_staff
-	limited_exports
-	limited_conscription
-	partial_economic_mobilisation
-	GDU_scuffed_acclim
+add_intel = {
+	target = SOV
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
 }
-
-add_ideas = GER_mefo_bills_1
-add_timed_idea = {
-	idea = airandnavy_idea
-	days = 1320
+add_intel = {
+	target = RAJ
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
 }
+add_intel = {
+	target = ITA
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = GER
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = ROM
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = HUN
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = JAP
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = CAN
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = FRA
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = SAF
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = AST
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+add_intel = {
+	target = NZL
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+starting_train_buffer = 2
+set_fuel_ratio = 0.8
 
-activate_mission = GER_mefo_bills_mission
+# starting_truck_buffer = 0.8
+# Starting tech
 set_technology = {
 	airfield_construction = 1
 	fort_construction = 1
+	iw_medium_airframe = 1
 	rubber_processing = 1
 	improved_rubber_processing = 1
 	jaegers = 1
+	iw_small_airframe = 1
+	basic_small_airframe = 1
 	paratroopers = 1
 	shocktroops = 1
 	tech_mountaineers = 1
+	#improved_light_artx = 1
+	#improved_light_spaax = 1
+	#improved_light_tdx = 1
 	interwar_antitank = 1
+	heavy_fighter1x = 1
+	CAS1x = 1
+	naval_bomber1x = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	tech_recon = 1
 	tech_signal_company = 1
-	tech_logistics_company = 1
-	tech_support = 1
+	tech_logistics_company = 1 
+	tech_support = 1		
 	tech_engineers = 1
 	tech_mountaineers = 1
 	motorised_infantry = 1
@@ -69,375 +214,47 @@ set_technology = {
 	basic_light_tank_chassis = 1
 	improved_light_tank_chassis = 1
 	basic_heavy_tank_chassis = 1
+	#formation_flying = 1
 	synth_oil_experiments = 1
 	fuel_silos = 1
 	fuel_refining = 1
 }
-
-set_technology = {
-	early_bomber = 1
-	early_fighter = 1
-	fighter1 = 1
-	heavy_fighter1 = 1
-	CAS1 = 1
-	naval_bomber1 = 1
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		panzerschiffe = 1
+		pre_dreadnoughts = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		mtg_transport = 1
+		basic_torpedo = 1
+		improved_ship_torpedo_launcher = 1
+		basic_battery = 1
+		armored_car1 = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_depth_charges = 1
+		sonar = 1
+		basic_cruiser_armor_scheme = 1
+	}
+	set_naval_oob = "GER_1936_naval_mtg"
 }
 
-set_technology = {
-	early_ship_hull_light = 1
-	basic_ship_hull_light = 1
-	early_ship_hull_cruiser = 1
-	basic_ship_hull_cruiser = 1
-	early_ship_hull_heavy = 1
-	basic_ship_hull_heavy = 1
-	panzerschiffe = 1
-	pre_dreadnoughts = 1
-	early_ship_hull_submarine = 1
-	basic_ship_hull_submarine = 1
-	mtg_transport = 1
-	basic_torpedo = 1
-	improved_ship_torpedo_launcher = 1
-	basic_battery = 1
-	armored_car1 = 1
-	basic_light_battery = 1
-	basic_medium_battery = 1
-	basic_heavy_battery = 1
-	basic_depth_charges = 1
-	sonar = 1
-	basic_cruiser_armor_scheme = 1
-}
+set_research_slots = 4
+set_convoys = 200
+set_stability = 0.75
+set_war_support = 0.40
+AUS = { give_military_access = GER }
 
-AUS = {
-	give_military_access = GER
-}
-
-add_opinion_modifier = {
-	target = SOV
-	modifier = embargo
-}
-
-add_opinion_modifier = {
-	target = SOV
-	modifier = sanctions_relations
-}
-
-add_opinion_modifier = {
-	target = SOV
-	modifier = large_decrease
-}
-
-add_opinion_modifier = {
-	target = SOV
-	modifier = hostile_status
-}
-
-add_opinion_modifier = {
-	target = FRA
-	modifier = embargo
-}
-
-add_opinion_modifier = {
-	target = FRA
-	modifier = sanctions_relations
-}
-
-add_opinion_modifier = {
-	target = FRA
-	modifier = large_decrease
-}
-
-add_opinion_modifier = {
-	target = FRA
-	modifier = hostile_status
-}
-
-add_opinion_modifier = {
-	target = ENG
-	modifier = embargo
-}
-
-add_opinion_modifier = {
-	target = ENG
-	modifier = sanctions_relations
-}
-
-add_opinion_modifier = {
-	target = ENG
-	modifier = large_decrease
-}
-
-add_opinion_modifier = {
-	target = ENG
-	modifier = hostile_status
-}
-
-add_opinion_modifier = {
-	target = CAN
-	modifier = embargo
-}
-
-add_opinion_modifier = {
-	target = CAN
-	modifier = sanctions_relations
-}
-
-add_opinion_modifier = {
-	target = CAN
-	modifier = large_decrease
-}
-
-add_opinion_modifier = {
-	target = CAN
-	modifier = hostile_status
-}
-
-add_opinion_modifier = {
-	target = SAF
-	modifier = embargo
-}
-
-add_opinion_modifier = {
-	target = SAF
-	modifier = sanctions_relations
-}
-
-add_opinion_modifier = {
-	target = SAF
-	modifier = large_decrease
-}
-
-add_opinion_modifier = {
-	target = SAF
-	modifier = hostile_status
-}
-
-add_opinion_modifier = {
-	target = RAJ
-	modifier = embargo
-}
-
-add_opinion_modifier = {
-	target = RAJ
-	modifier = sanctions_relations
-}
-
-add_opinion_modifier = {
-	target = RAJ
-	modifier = large_decrease
-}
-
-add_opinion_modifier = {
-	target = RAJ
-	modifier = hostile_status
-}
-
-add_opinion_modifier = {
-	target = AST
-	modifier = embargo
-}
-
-add_opinion_modifier = {
-	target = AST
-	modifier = sanctions_relations
-}
-
-add_opinion_modifier = {
-	target = AST
-	modifier = large_decrease
-}
-
-add_opinion_modifier = {
-	target = AST
-	modifier = hostile_status
-}
-
-add_opinion_modifier = {
-	target = NZL
-	modifier = embargo
-}
-
-add_opinion_modifier = {
-	target = NZL
-	modifier = sanctions_relations
-}
-
-add_opinion_modifier = {
-	target = NZL
-	modifier = large_decrease
-}
-
-add_opinion_modifier = {
-	target = NZL
-	modifier = hostile_status
-}
-
-add_opinion_modifier = {
-	target = USA
-	modifier = embargo
-}
-
-add_opinion_modifier = {
-	target = USA
-	modifier = sanctions_relations
-}
-
-add_opinion_modifier = {
-	target = USA
-	modifier = large_decrease
-}
-
-add_opinion_modifier = {
-	target = USA
-	modifier = hostile_status
-}
-
-add_opinion_modifier = {
-	target = JAP
-	modifier = embargo
-}
-
-add_opinion_modifier = {
-	target = JAP
-	modifier = sanctions
-}
-
-add_opinion_modifier = {
-	target = JAP
-	modifier = minor_sanctions
-}
-
-add_intel = {
-	target = SPR
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = BUl
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = USA
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = ENG
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = SOV
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = RAJ
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = ITA
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = GER
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = ROM
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = HUN
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = JAP
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = CAN
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = FRA
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = SAF
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = AST
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = NZL
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-starting_train_buffer = 2
-set_fuel_ratio = 0.8
-# starting_truck_buffer = 0.8
-# Starting tech
 create_equipment_variant = {
 	name = "Bf 109 E"
 	type = fighter_equipment_1
@@ -450,23 +267,11 @@ create_equipment_variant = {
 	icon = "GFX_GER_fighter1_medium"
 }
 
+
 create_corps_commander = {
 	name = "Erwin Rommel AFRICANUS"
 	picture = "AFRICA_Portrait_Germany_Erwin_Rommel.dds"
-	traits = {
-		desert_fox
-		urban_assault_specialist
-		fortress_buster
-		expert_improviser
-		inflexible_strategist
-		panzer_expert
-		trait_reckless
-		war_hero
-		media_personality
-		infantry_officer
-		trait_engineer
-		panzer_leader
-	}
+	traits = { desert_fox urban_assault_specialist fortress_buster expert_improviser inflexible_strategist panzer_expert trait_reckless war_hero media_personality infantry_officer trait_engineer panzer_leader }
 	skill = 6
 	id = 4
 	attack_skill = 8
@@ -474,6 +279,38 @@ create_corps_commander = {
 	planning_skill = 6
 	logistics_skill = 10
 }
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 20
+	fascism = 60
+	communism = 20
+}
+
+create_faction = Axis
+add_to_faction = GER
+add_to_faction = BUL
+add_to_faction = SPR
+add_to_faction = ROM
+add_to_faction = HUN
+
+add_ideas = {
+	general_staff
+	limited_exports
+	limited_conscription
+	partial_economic_mobilisation
+	GDU_scuffed_acclim
+}
+add_ideas = GER_mefo_bills_1
+
+add_timed_idea = { idea = airandnavy_idea days = 1320 }
+
+activate_mission = GER_mefo_bills_mission
 
 recruit_character = GER_wilhelm_pieck
 recruit_character = GER_albert_speer
@@ -529,48 +366,255 @@ recruit_character = GER_werner_von_fritsch
 recruit_character = GER_wilhelm_keitel
 recruit_character = GER_wilhelm_list
 recruit_character = GER_wilhelm_marschall
+
 recruit_character = GER_wilhelm_ritter_von_leeb
 recruit_character = GER_wolfram_von_richthofen
+
 recruit_character = GER_heinrich_himmler
 recruit_character = GER_walther_funk
 recruit_character = GER_hjalmar_schacht
+
+
+
 recruit_character = GER_fritz_todt
 recruit_character = GER_joachim_von_ribbentrop
+
+
 recruit_character = GER_martin_bormann
+
 recruit_character = GER_joseph_goebbels
 recruit_character = GER_konstantin_von_neurath
+
 recruit_character = GER_wilhelm_ii
 recruit_character = GER_wilhelm_iii
 recruit_character = GER_victoria
 recruit_character = GER_august_von_mackensen
-recruit_character = GER_alexander_von_falkenhausen#Not visible unless recalled from China
-recruit_character = GER_carl_friedrich_goerdeler
-create_equipment_variant = {
-	name = "Ju 86"
-	type = tac_bomber_equipment_0
-	upgrades = {
-		plane_tac_bomb_upgrade = 5
-		plane_range_upgrade = 5
-		plane_engine_upgrade = 5
-		plane_reliability_upgrade = 5
+
+recruit_character = GER_alexander_von_falkenhausen #Not visible unless recalled from China
+
+
+if = {
+	limit = {
+		has_dlc = "Waking the Tiger"
 	}
-	obsolete = yes
+	recruit_character = GER_carl_friedrich_goerdeler
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	### Ship Variants ###
+	## 1936 Start ##
+	# Light Cruisers #
+	create_equipment_variant = {
+		name = "CL2"
+		type = light_cruiser_1
+		parent_version = 0
+		upgrades = {
+			ship_reliability_upgrade = 2
+			ship_engine_upgrade = 2
+			ship_gun_upgrade = 2
+			ship_anti_air_upgrade = 2
+		}
+		obsolete = yes
+	}
+	# Heavy Cruisers #
+	create_equipment_variant = {
+		name = "CA1"
+		type = heavy_cruiser_1
+		parent_version = 0
+		upgrades = {
+			ship_reliability_upgrade = 1
+			ship_engine_upgrade = 1
+			ship_armor_upgrade = 1
+			ship_gun_upgrade = 2
+		}
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	create_equipment_variant = {
+		name = "CA2"
+		type = ship_hull_cruiser_panzerschiff
+		name_group = GER_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+        	fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_battery_slot = ship_heavy_battery_2
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			front_1_custom_slot = ship_heavy_battery_2
+			rear_1_custom_slot = ship_secondaries_2
+			mid_1_custom_slot = ship_airplane_launcher_2
+			mid_2_custom_slot = ship_airplane_launcher_2
+    	}
+	}
+	create_equipment_variant = {
+		name = "DD1 AA"
+		type = ship_hull_light_1
+		name_group = GER_TB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = dp_light_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = ship_sonar_1
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_anti_air_1
+			rear_1_custom_slot = ship_anti_air_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "SS1"
+		type = ship_hull_submarine_1
+		name_group = GER_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_torpedo_sub_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "CL1"
+		type = ship_hull_cruiser_1
+		name_group = GER_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = ship_light_medium_battery_2
+			mid_2_custom_slot = ship_light_medium_battery_2
+			rear_1_custom_slot = ship_light_medium_battery_2
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			fixed_ship_secondaries_slot = ship_secondaries_2
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "CL2"
+		type = ship_hull_cruiser_2
+		name_group = GER_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_2
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = cruiser_ship_engine_2
+				fixed_ship_armor_slot = ship_armor_cruiser_2
+				fixed_ship_secondaries_slot = ship_secondaries_2
+				front_1_custom_slot = ship_light_medium_battery_2
+				mid_1_custom_slot = ship_light_medium_battery_2
+				mid_2_custom_slot = ship_airplane_launcher_2
+				rear_1_custom_slot = ship_light_medium_battery_2
+		}
+	}
+	create_equipment_variant = {
+		name = "CA2 Heavy"
+		type = ship_hull_cruiser_2
+		name_group = GER_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			front_1_custom_slot = ship_medium_battery_2
+			mid_1_custom_slot = ship_airplane_launcher_2
+			mid_2_custom_slot = ship_medium_battery_2
+			rear_1_custom_slot = ship_medium_battery_2
+		}
+	}
+	create_equipment_variant = {
+		name = "BB2"
+		type = ship_hull_heavy_2
+		name_group = GER_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			fixed_ship_armor_slot = ship_armor_bb_2
+			front_1_custom_slot = ship_heavy_battery_2
+			mid_1_custom_slot = ship_airplane_launcher_2
+			mid_2_custom_slot = ship_airplane_launcher_2
+			rear_1_custom_slot = ship_heavy_battery_2
+		}
+	}
+	create_equipment_variant = {
+		name = "CA1"
+		type = ship_hull_pre_dreadnought
+		name_group = GER_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = ship_heavy_battery_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_secondaries_1
+		}
+		obsolete = yes
+	}
+}
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "By Blood Alone"
+		}
+	}
+	create_equipment_variant = {
+		name = "Ju 86"
+		type = tac_bomber_equipment_0
+		upgrades = {
+			plane_tac_bomb_upgrade = 5
+			plane_range_upgrade = 5
+			plane_engine_upgrade = 5
+			plane_reliability_upgrade = 5
+		}
+		obsolete = yes
+	}
+	
+	create_equipment_variant = {
+		name = "Do 17"
+		type = tac_bomber_equipment_1
+		upgrades = {
+			plane_tac_bomb_upgrade = 5
+			plane_range_upgrade = 2
+			plane_engine_upgrade = 2
+			plane_reliability_upgrade = 5
+		}
+		obsolete = yes
+	}
 }
 
 create_equipment_variant = {
-	name = "Do 17"
-	type = tac_bomber_equipment_1
-	upgrades = {
-		plane_tac_bomb_upgrade = 5
-		plane_range_upgrade = 2
-		plane_engine_upgrade = 2
-		plane_reliability_upgrade = 5
-	}
-	obsolete = yes
-}
-
-create_equipment_variant = {
-	name = "Panzer II"
+	name = "Panzer II" 	
 	type = light_tank_chassis_2
 	modules = {
 		main_armament_slot = tank_small_cannon
@@ -583,7 +627,7 @@ create_equipment_variant = {
 }
 
 create_equipment_variant = {
-	name = "Grosstraktor"
+	name = "Grosstraktor" 	
 	type = heavy_tank_chassis_1
 	modules = {
 		main_armament_slot = tank_heavy_cannon
@@ -598,41 +642,35 @@ create_equipment_variant = {
 }
 
 add_equipment_to_stockpile = {
-	type = fighter_equipment_1
-	amount = 1300
-	producer = GER
-}
-
+    type = fighter_equipment_1
+    amount = 1300
+    producer = GER
+} 
 add_equipment_to_stockpile = {
-	type = CAS_equipment_1
-	amount = 600
-	producer = GER
-}
-
+    type = CAS_equipment_1
+    amount = 600
+    producer = GER
+} 
 add_equipment_to_stockpile = {
 	type = transport_plane_equipment_1
 	amount = 5
 	producer = GER
-}
-
+} 
 add_equipment_to_stockpile = {
 	type = nav_bomber_equipment_1
 	amount = 50
 	producer = GER
-}
-
+} 
 add_equipment_to_stockpile = {
 	type = heavy_fighter_equipment_1
 	amount = 100
 	producer = GER
 }
-
 add_equipment_to_stockpile = {
 	type = tac_bomber_equipment_0
 	amount = 500
 	producer = GER
 }
-
 add_equipment_to_stockpile = {
 	type = tac_bomber_equipment_1
 	amount = 400
@@ -643,202 +681,47 @@ add_equipment_to_stockpile = {
 	type = artillery_equipment_1
 	amount = 2884
 	producer = GER
-}
-
+}  
 add_equipment_to_stockpile = {
 	type = train_equipment_1
 	amount = 300
 	producer = GER
-}
-
+}  
 add_equipment_to_stockpile = {
 	type = support_equipment
 	amount = 2180
 	producer = GER
-}
+} 
 
 add_equipment_to_stockpile = {
-	type = infantry_equipment_1
-	amount = 62000
+    type = infantry_equipment_1
+    amount = 62000
 	producer = GER
-}
-
+} 
 add_equipment_to_stockpile = {
 	type = motorized_equipment_1
 	amount = 3800
 	producer = GER
-}
-
+} 
 add_equipment_to_stockpile = {
-	type = light_tank_chassis_2
-	amount = 2800
-	producer = GER
-}
-
+    type = light_tank_chassis_2
+    amount = 2800
+    producer = GER
+} 
 add_equipment_to_stockpile = {
-	type = heavy_tank_chassis_1
-	amount = 10
-	producer = GER
-}
-
+    type = heavy_tank_chassis_1
+    amount = 10
+    producer = GER
+} 
 add_equipment_to_stockpile = {
 	type = anti_air_equipment_1
-	amount = 2640
-	producer = GER
+    amount = 2640
+    producer = GER
 }
-
 add_equipment_to_stockpile = {
-	type = anti_tank_equipment_1
-	amount = 3660
-	producer = GER
-}
+    type = anti_tank_equipment_1
+    amount = 3660
+    producer = GER
+} 
 
-create_equipment_variant = {
-	name = "CA2"
-	type = ship_hull_cruiser_panzerschiff
-	name_group = GER_CA_HISTORICAL
-	parent_version = 0
-	modules = {
-		fixed_ship_anti_air_slot = ship_anti_air_1
-		fixed_ship_battery_slot = ship_heavy_battery_2
-		fixed_ship_secondaries_slot = ship_secondaries_2
-		fixed_ship_armor_slot = ship_armor_cruiser_1
-		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-		fixed_ship_engine_slot = cruiser_ship_engine_2
-		front_1_custom_slot = ship_heavy_battery_2
-		rear_1_custom_slot = ship_secondaries_2
-		mid_1_custom_slot = ship_airplane_launcher_2
-		mid_2_custom_slot = ship_airplane_launcher_2
-	}
-}
 
-create_equipment_variant = {
-	name = "DD1 AA"
-	type = ship_hull_light_1
-	name_group = GER_TB_HISTORICAL
-	parent_version = 0
-	modules = {
-		fixed_ship_battery_slot = dp_light_battery_2
-		fixed_ship_anti_air_slot = ship_anti_air_1
-		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-		fixed_ship_radar_slot = ship_sonar_1
-		fixed_ship_engine_slot = light_ship_engine_2
-		fixed_ship_torpedo_slot = ship_torpedo_1
-		mid_1_custom_slot = ship_anti_air_1
-		rear_1_custom_slot = ship_anti_air_1
-	}
-	obsolete = yes
-}
-
-create_equipment_variant = {
-	name = "SS1"
-	type = ship_hull_submarine_1
-	name_group = GER_SS_HISTORICAL
-	parent_version = 0
-	modules = {
-		fixed_ship_torpedo_slot = ship_torpedo_sub_1
-		fixed_ship_engine_slot = sub_ship_engine_1
-		rear_1_custom_slot = ship_torpedo_sub_1
-	}
-	obsolete = yes
-}
-
-create_equipment_variant = {
-	name = "CL1"
-	type = ship_hull_cruiser_1
-	name_group = GER_CL_HISTORICAL
-	parent_version = 0
-	modules = {
-		fixed_ship_battery_slot = ship_light_medium_battery_1
-		fixed_ship_anti_air_slot = ship_anti_air_1
-		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-		fixed_ship_radar_slot = empty
-		fixed_ship_engine_slot = cruiser_ship_engine_1
-		mid_1_custom_slot = ship_light_medium_battery_2
-		mid_2_custom_slot = ship_light_medium_battery_2
-		rear_1_custom_slot = ship_light_medium_battery_2
-		fixed_ship_armor_slot = ship_armor_cruiser_2
-		fixed_ship_secondaries_slot = ship_secondaries_2
-	}
-	obsolete = yes
-}
-
-create_equipment_variant = {
-	name = "CL2"
-	type = ship_hull_cruiser_2
-	name_group = GER_CL_HISTORICAL
-	parent_version = 0
-	modules = {
-		fixed_ship_battery_slot = ship_light_medium_battery_2
-		fixed_ship_anti_air_slot = ship_anti_air_2
-		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-		fixed_ship_radar_slot = empty
-		fixed_ship_engine_slot = cruiser_ship_engine_2
-		fixed_ship_armor_slot = ship_armor_cruiser_2
-		fixed_ship_secondaries_slot = ship_secondaries_2
-		front_1_custom_slot = ship_light_medium_battery_2
-		mid_1_custom_slot = ship_light_medium_battery_2
-		mid_2_custom_slot = ship_airplane_launcher_2
-		rear_1_custom_slot = ship_light_medium_battery_2
-	}
-}
-
-create_equipment_variant = {
-	name = "CA2 Heavy"
-	type = ship_hull_cruiser_2
-	name_group = GER_CA_HISTORICAL
-	parent_version = 0
-	modules = {
-		fixed_ship_battery_slot = ship_medium_battery_2
-		fixed_ship_anti_air_slot = ship_anti_air_1
-		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-		fixed_ship_radar_slot = empty
-		fixed_ship_engine_slot = cruiser_ship_engine_2
-		fixed_ship_armor_slot = ship_armor_cruiser_1
-		fixed_ship_secondaries_slot = ship_secondaries_2
-		front_1_custom_slot = ship_medium_battery_2
-		mid_1_custom_slot = ship_airplane_launcher_2
-		mid_2_custom_slot = ship_medium_battery_2
-		rear_1_custom_slot = ship_medium_battery_2
-	}
-}
-
-create_equipment_variant = {
-	name = "BB2"
-	type = ship_hull_heavy_2
-	name_group = GER_BB_HISTORICAL
-	parent_version = 0
-	modules = {
-		fixed_ship_battery_slot = ship_heavy_battery_2
-		fixed_ship_anti_air_slot = ship_anti_air_1
-		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-		fixed_ship_radar_slot = empty
-		fixed_ship_engine_slot = heavy_ship_engine_1
-		fixed_ship_secondaries_slot = ship_secondaries_2
-		fixed_ship_armor_slot = ship_armor_bb_2
-		front_1_custom_slot = ship_heavy_battery_2
-		mid_1_custom_slot = ship_airplane_launcher_2
-		mid_2_custom_slot = ship_airplane_launcher_2
-		rear_1_custom_slot = ship_heavy_battery_2
-	}
-}
-
-create_equipment_variant = {
-	name = "CA1"
-	type = ship_hull_pre_dreadnought
-	name_group = GER_BB_HISTORICAL
-	parent_version = 0
-	modules = {
-		fixed_ship_battery_slot = ship_heavy_battery_1
-		fixed_ship_anti_air_slot = ship_anti_air_1
-		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-		fixed_ship_radar_slot = empty
-		fixed_ship_engine_slot = heavy_ship_engine_2
-		fixed_ship_secondaries_slot = ship_secondaries_1
-		fixed_ship_armor_slot = ship_armor_bb_1
-		front_1_custom_slot = ship_heavy_battery_1
-		mid_1_custom_slot = ship_torpedo_1
-		rear_1_custom_slot = ship_secondaries_1
-	}
-	obsolete = yes
-}

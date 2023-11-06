@@ -1,108 +1,89 @@
 ﻿capital = 361
+
 oob = "USA_1936"
+
 set_naval_oob = "USA_1936_naval_mtg"
+
 starting_train_buffer = 5
+
 set_convoys = 800
+
 set_research_slots = 5
+
 set_stability = 0.8
 set_war_support = 0
+
 1936.1.1.13 = {
-	retire_character = USA_ernest_king
+retire_character = USA_ernest_king
 }
-
 # Starting tech
-add_opinion_modifier = {
-	target = JAP
-	modifier = jap_trade
-}
 
-add_opinion_modifier = {
-	target = JAP
-	modifier = jap_trade_2
-}
+add_opinion_modifier = { target = JAP modifier = jap_trade }
+add_opinion_modifier = { target = JAP modifier = jap_trade_2 }
+add_opinion_modifier = { target = JAP modifier = jap_trade_3 }
+add_opinion_modifier = { target = JAP modifier = jap_trade_4 }
 
-add_opinion_modifier = {
-	target = JAP
-	modifier = jap_trade_3
-}
-
-add_opinion_modifier = {
-	target = JAP
-	modifier = jap_trade_4
-}
-
-add_timed_idea = {
-	idea = airandnavy_idea
-	days = 1775
-}
-
-add_timed_idea = {
-	idea = USA_naval_disarmament
-	days = 541
-}
-
-set_technology = {
-	CAS1 = 1
-	cv_fighter1 = 1
-	naval_bomber1 = 1
-	cv_naval_bomber1 = 1
-	heavy_fighter1 = 1
-	cv_early_fighter = 1
-	early_fighter = 1
-	fighter1 = 1
-	early_bomber = 1
-}
-
+add_timed_idea = { idea = airandnavy_idea days = 1775 }
+add_timed_idea = { idea = USA_naval_disarmament days = 541 }
 set_technology = {
 	airfield_construction = 1
 	fort_construction = 1
 	##early_submarine = 1
-	early_ship_hull_light = 1
-	basic_ship_hull_light = 1
-	early_ship_hull_submarine = 1
-	basic_ship_hull_submarine = 1
-	early_ship_hull_cruiser = 1
-	basic_ship_hull_cruiser = 1
-	early_ship_hull_heavy = 1
-	early_ship_hull_carrier = 1
-	basic_ship_hull_carrier = 1
-	basic_battery = 1
-	basic_light_battery = 1
-	basic_medium_battery = 1
-	basic_heavy_battery = 1
-	basic_torpedo = 1
-	sonar = 1
-	basic_depth_charges = 1
-	##basic_encryption = 1
-	##basic_encryption = 1
-	basic_cruiser_armor_scheme = 1
-	basic_heavy_armor_scheme = 1
-	mtg_transport = 1
-	improved_airplane_launcher = 1
-	##basic_submarine = 1
-	##early_destroyer = 1
-	##early_light_cruiser = 1
-	##basic_light_cruiser = 1
-	##early_heavy_cruiser = 1
-	##early_carrier = 1
-	##early_battlecruiser = 1
-	##early_carrier = 1
-	##basic_carrier = 1
-	##transport = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		basic_depth_charges = 1
+		##basic_encryption = 1
+		##basic_encryption = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		improved_airplane_launcher = 1
+		##basic_submarine = 1
+		##early_destroyer = 1
+		##early_light_cruiser = 1
+		##basic_light_cruiser = 1
+		##early_heavy_cruiser = 1
+		##early_carrier = 1
+		##early_battlecruiser = 1
+		##early_carrier = 1
+		##basic_carrier = 1
+		##transport = 1
 	interwar_artillery = 1
 	gwtank_chassis = 1
 	armor_tech_1 = 1
 	engine_tech_1 = 1
+	cv_early_fighterx = 1
 	basic_light_tank_chassis = 1
-	infantry_weapons2 = 1
-	support_weapons = 1
-	support_weapons2 = 1
-	marines = 1
-	interwar_antitank = 1
+		infantry_weapons2 = 1
+		heavy_fighter1x = 1
+		support_weapons = 1
+		support_weapons2 = 1
+		marines = 1
+		CAS1x = 1
+		cv_fighter1x = 1
+		naval_bomber1x = 1
+		cv_naval_bomber1x = 1
+		interwar_antitank = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
+	iw_small_airframe = 1
+	basic_small_airframe = 1
+	iw_medium_airframe = 1
 	tech_recon = 1
-	tech_support = 1
+	tech_support = 1		
 	tech_engineers = 1
 	gw_artillery = 1
 	interwar_antiair = 1
@@ -114,7 +95,6 @@ set_technology = {
 	marines = 1
 	basic_train = 1
 }
-
 add_intel = {
 	target = BUl
 	civilian_intel = 200
@@ -122,7 +102,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = SPR
 	civilian_intel = 200
@@ -130,7 +109,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = USA
 	civilian_intel = 200
@@ -138,7 +116,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = ENG
 	civilian_intel = 200
@@ -146,7 +123,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = SOV
 	civilian_intel = 200
@@ -154,7 +130,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = RAJ
 	civilian_intel = 200
@@ -162,7 +137,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = ITA
 	civilian_intel = 200
@@ -170,7 +144,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = GER
 	civilian_intel = 200
@@ -178,7 +151,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = ROM
 	civilian_intel = 200
@@ -186,7 +158,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = HUN
 	civilian_intel = 200
@@ -194,7 +165,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = JAP
 	civilian_intel = 200
@@ -202,7 +172,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = CAN
 	civilian_intel = 200
@@ -210,7 +179,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = FRA
 	civilian_intel = 200
@@ -218,7 +186,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = SAF
 	civilian_intel = 200
@@ -226,7 +193,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = AST
 	civilian_intel = 200
@@ -234,7 +200,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = NZL
 	civilian_intel = 200
@@ -242,210 +207,167 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+add_equipment_to_stockpile = {
+         type = artillery_equipment_1
+         amount = 1900
+         producer = USA
+}  
+add_equipment_to_stockpile = {
+         type = train_equipment_1
+         amount = 300
+         producer = USA
+}  
+add_equipment_to_stockpile = {
+         type = support_equipment
+         amount = 1591
+         producer = USA
+} 
+add_equipment_to_stockpile = {
+         type = anti_air_equipment_1
+         amount = 946
+         producer = USA
+} 
+add_equipment_to_stockpile = {
+         type = infantry_equipment_1
+         amount = 20000
+         producer = USA
+}
+add_equipment_to_stockpile = {
+         type = motorized_equipment_1
+         amount = 1118
+         producer = USA
+} 
+
+
+
+
 
 add_equipment_to_stockpile = {
-	type = artillery_equipment_1
-	amount = 1900
-	producer = USA
+         type = CAS_equipment_1
+         amount = 100
+         producer = USA
 }
-
 add_equipment_to_stockpile = {
-	type = train_equipment_1
-	amount = 300
-	producer = USA
+         type = tac_bomber_equipment_0
+         amount = 250
+         producer = USA
 }
-
 add_equipment_to_stockpile = {
-	type = support_equipment
-	amount = 1591
-	producer = USA
+         type = heavy_fighter_equipment_1
+         amount = 100
+         producer = USA
 }
-
 add_equipment_to_stockpile = {
-	type = anti_air_equipment_1
-	amount = 946
-	producer = USA
+         type = nav_bomber_equipment_1
+         amount = 100
+         producer = USA
 }
-
 add_equipment_to_stockpile = {
-	type = infantry_equipment_1
-	amount = 20000
-	producer = USA
+         type = cv_fighter_equipment_1
+         amount = 100
+         producer = USA
 }
-
 add_equipment_to_stockpile = {
-	type = motorized_equipment_1
-	amount = 1118
-	producer = USA
+         type = cv_nav_bomber_equipment_1
+         amount = 100
+         producer = USA
 }
-
-add_equipment_to_stockpile = {
-	type = CAS_equipment_1
-	amount = 100
-	producer = USA
-}
-
-add_equipment_to_stockpile = {
-	type = tac_bomber_equipment_0
-	amount = 250
-	producer = USA
-}
-
-add_equipment_to_stockpile = {
-	type = heavy_fighter_equipment_1
-	amount = 100
-	producer = USA
-}
-
-add_equipment_to_stockpile = {
-	type = nav_bomber_equipment_1
-	amount = 100
-	producer = USA
-}
-
-add_equipment_to_stockpile = {
-	type = cv_fighter_equipment_1
-	amount = 100
-	producer = USA
-}
-
-add_equipment_to_stockpile = {
-	type = cv_nav_bomber_equipment_1
-	amount = 100
-	producer = USA
-}
-
 create_corps_commander = {
 	name = "George S. Patton AFRICANUS"
 	picture = "AFRICA_Portrait_USA_George_S_Patton.dds"
-	traits = {
-		trickster
-		armor_officer
-		panzer_leader
-		war_hero
-		trait_reckless
-		panzer_leader
-		hill_fighter
-		desert_fox
-		trait_mountaineer
-		expert_improviser
-		panzer_expert
-	}
+	traits = { trickster armor_officer panzer_leader war_hero trait_reckless panzer_leader hill_fighter desert_fox trait_mountaineer expert_improviser panzer_expert }
 	skill = 6
+
 	attack_skill = 9
 	defense_skill = 5
 	planning_skill = 5
 	logistics_skill = 6
 }
-
 create_corps_commander = {
 	name = "Lloyd Fredendall AFRICANUS"
 	picture = "AFRICA_Portrait_USA_Lloyd_Fredendall.dds"
-	traits = {
-		old_guard
-		infantry_officer
-		infantry_leader
-		inflexible_strategist
-		naval_invader
-		desert_fox
-		trait_mountaineer
-	}
+	traits = { old_guard infantry_officer infantry_leader inflexible_strategist naval_invader desert_fox trait_mountaineer}
 	skill = 6
+
 	attack_skill = 7
 	defense_skill = 5
 	planning_skill = 3
 	logistics_skill = 3
 }
-
 create_corps_commander = {
 	name = "Jonathan Wainwright AFRICANUS"
 	picture = "AFRICA_Portrait_USA_Jonathan_Wainwright.dds"
-	traits = {
-		desert_fox
-		career_officer
-		commando
-		infantry_leader
-		skilled_staffer
-		politically_connected
-		urban_assault_specialist
-	}
+	traits = { desert_fox career_officer commando infantry_leader skilled_staffer politically_connected urban_assault_specialist } 
 	skill = 6
 	attack_skill = 5
 	defense_skill = 5
 	planning_skill = 4
 	logistics_skill = 8
 }
-
 add_equipment_to_stockpile = {
-	type = artillery_equipment_1
-	amount = 1900
-	producer = USA
+         type = artillery_equipment_1
+         amount = 1900
+         producer = USA
+}  
+add_equipment_to_stockpile = {
+         type = support_equipment
+         amount = 1591
+         producer = USA
+} 
+add_equipment_to_stockpile = {
+         type = anti_air_equipment_1
+         amount = 946
+         producer = USA
+} 
+add_equipment_to_stockpile = {
+         type = infantry_equipment_1
+         amount = 20000
+         producer = USA
 }
+add_equipment_to_stockpile = {
+         type = infantry_equipment_0
+         amount = 25000
+         producer = USA
+} 
+add_equipment_to_stockpile = {
+         type = motorized_equipment_1
+         amount = 1118
+         producer = USA
+} 
+
+
+
+
 
 add_equipment_to_stockpile = {
-	type = support_equipment
-	amount = 1591
-	producer = USA
+         type = CAS_equipment_1
+         amount = 100
+         producer = USA
 }
-
 add_equipment_to_stockpile = {
-	type = anti_air_equipment_1
-	amount = 946
-	producer = USA
+         type = tac_bomber_equipment_0
+         amount = 250
+         producer = USA
 }
-
 add_equipment_to_stockpile = {
-	type = infantry_equipment_1
-	amount = 20000
-	producer = USA
+         type = heavy_fighter_equipment_1
+         amount = 100
+         producer = USA
 }
-
 add_equipment_to_stockpile = {
-	type = infantry_equipment_0
-	amount = 25000
-	producer = USA
+         type = nav_bomber_equipment_1
+         amount = 100
+         producer = USA
 }
-
 add_equipment_to_stockpile = {
-	type = motorized_equipment_1
-	amount = 1118
-	producer = USA
+         type = cv_fighter_equipment_1
+         amount = 100
+         producer = USA
 }
-
 add_equipment_to_stockpile = {
-	type = CAS_equipment_1
-	amount = 100
-	producer = USA
-}
-
-add_equipment_to_stockpile = {
-	type = tac_bomber_equipment_0
-	amount = 250
-	producer = USA
-}
-
-add_equipment_to_stockpile = {
-	type = heavy_fighter_equipment_1
-	amount = 100
-	producer = USA
-}
-
-add_equipment_to_stockpile = {
-	type = nav_bomber_equipment_1
-	amount = 100
-	producer = USA
-}
-
-add_equipment_to_stockpile = {
-	type = cv_fighter_equipment_1
-	amount = 100
-	producer = USA
-}
-
-add_equipment_to_stockpile = {
-	type = cv_nav_bomber_equipment_1
-	amount = 100
-	producer = USA
+         type = cv_nav_bomber_equipment_1
+         amount = 100
+         producer = USA
 }
 
 set_politics = {
@@ -454,14 +376,13 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = yes
 }
-
 set_popularities = {
 	democratic = 100
-	fascism = 0
+	 fascism = 0
 	communism = 0
 }
-
 # DIPLOMACY
+
 recruit_character = USA_william_dudley_pelley
 recruit_character = USA_franklin_delano_roosevelt
 recruit_character = USA_george_s_patton
@@ -519,11 +440,15 @@ recruit_character = USA_john_winant
 recruit_character = USA_chester_w_nimitz_2
 recruit_character = USA_robert_taft
 recruit_character = USA_donald_nelson
+
 recruit_character = USA_cordell_hull
+
 recruit_character = USA_william_regnery
 recruit_character = USA_joseph_patterson
 recruit_character = USA_henry_stimson
 recruit_character = USA_victor_perlo
+
+
 add_ideas = {
 	ernest_king_1
 	undisturbed_isolation
@@ -533,17 +458,19 @@ add_ideas = {
 	home_of_the_free
 	inexperienced_army
 	GDU_refinery_prebuild_disincentive
+	
+	
+
 }
+
+
 
 ### VARIANTS ###
 # 1936 Start #
 if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
+	limit = { has_dlc = "Man the Guns" }
 	# Submarines #
-	create_equipment_variant = {
-		# represents O/R class, S class
+	create_equipment_variant = {			# represents O/R class, S class
 		name = "SS1"
 		type = ship_hull_submarine_1
 		name_group = USA_SS_HISTORICAL
@@ -556,7 +483,7 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "SS2"		# represents Barracuda, Dolphin, Cachalot classes
+		name = "SS2"			# represents Barracuda, Dolphin, Cachalot classes
 		type = ship_hull_submarine_2
 		name_group = USA_SS_HISTORICAL
 		parent_version = 0
@@ -569,7 +496,7 @@ if = {
 	}
 	# Destroyers #
 	create_equipment_variant = {
-		name = "DD1 AA"		# represents Sampson, Caldwell, Clemson, and Wickes classes
+		name = "DD1 AA"				# represents Sampson, Caldwell, Clemson, and Wickes classes
 		type = ship_hull_light_1
 		name_group = USA_DD_HISTORICAL
 		parent_version = 0
@@ -586,7 +513,7 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "DD1 Torp"		# represents Farragut, Porter, Mahan classes
+		name = "DD1 Torp"				# represents Farragut, Porter, Mahan classes
 		type = ship_hull_light_1
 		name_group = USA_DD_HISTORICAL
 		parent_version = 0
@@ -609,21 +536,21 @@ if = {
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_2
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_2
-			fixed_ship_armor_slot = ship_armor_cruiser_2
-			fixed_ship_secondaries_slot = ship_secondaries_2
-			front_1_custom_slot = ship_light_medium_battery_2
-			mid_1_custom_slot = ship_light_medium_battery_2
-			mid_2_custom_slot = ship_light_medium_battery_2
-			rear_1_custom_slot = ship_light_medium_battery_2
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = cruiser_ship_engine_2
+				fixed_ship_armor_slot = ship_armor_cruiser_2
+				fixed_ship_secondaries_slot = ship_secondaries_2
+				front_1_custom_slot = ship_light_medium_battery_2
+				mid_1_custom_slot = ship_light_medium_battery_2
+				mid_2_custom_slot = ship_light_medium_battery_2
+				rear_1_custom_slot = ship_light_medium_battery_2
 		}
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "CL1 Light"		#cruiser minelayers
+		name = "CL1 Light"				#cruiser minelayers
 		type = ship_hull_cruiser_1
 		name_group = USA_MINELAYERS_HISTORICAL
 		parent_version = 0
@@ -642,7 +569,7 @@ if = {
 	}
 	# Heavy Cruisers #
 	create_equipment_variant = {
-		name = "CA1 Heavy"		# Pensacola and Northampton classes
+		name = "CA1 Heavy"			# Pensacola and Northampton classes
 		type = ship_hull_cruiser_1
 		name_group = USA_CA_HISTORICAL
 		parent_version = 0
@@ -661,7 +588,7 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "CA2 Heavy"		# Portland and New CA2 Heavyes
+		name = "CA2 Heavy"				# Portland and New CA2 Heavyes
 		type = ship_hull_cruiser_2
 		name_group = USA_CA_HISTORICAL
 		parent_version = 0
@@ -681,7 +608,7 @@ if = {
 	}
 	# Battleships #
 	create_equipment_variant = {
-		name = "BB1 Light"		# represents Pennsylvania, Nevada, Tennessee, and New Mexico classes
+		name = "BB1 Light"				# represents Pennsylvania, Nevada, Tennessee, and New Mexico classes
 		type = ship_hull_heavy_1
 		name_group = USA_BB_HISTORICAL
 		parent_version = 0
@@ -701,7 +628,7 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "BB1 Heavy"
+		name = "BB1 Heavy"				
 		type = ship_hull_heavy_1
 		name_group = USA_BB_HISTORICAL
 		parent_version = 0
@@ -749,7 +676,11 @@ if = {
 			fixed_ship_engine_slot = carrier_ship_engine_2
 			fixed_ship_secondaries_slot = ship_secondaries_2
 			front_1_custom_slot = ship_deck_space
+			
 		}
 		obsolete = yes
 	}
 }
+
+
+

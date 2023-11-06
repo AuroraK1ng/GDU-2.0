@@ -1,73 +1,23 @@
 ﻿capital = 16
+
+set_oob = "FRA_1936"
+
 set_oob = "FRA_1936_nsb"
+
 starting_train_buffer = 2
-set_research_slots = 4
-set_stability = 0.5
-add_command_power = 20
-set_politics = {
-	ruling_party = democratic
-	last_election = "1932.5.1"
-	election_frequency = 48
-	elections_allowed = yes
-}
 
-set_convoys = 600
-set_popularities = {
-	democratic = 70
-	communism = 30
-}
+set_naval_oob = "FRA_1936_naval_mtg"
 
-add_timed_idea = {
-	idea = airandnavy_idea
-	days = 1320
-}
+set_air_oob = "FRA_1936_air_bba"	
+	
 
-add_ideas = {
-	FRA_victors_of_wwi
-	FRA_disjointed_government
-	FRA_protected_by_the_maginot_line
-	limited_conscription
-	FRA_full_employment
-	FRA_political_violence
-	FRA_inefficient_economy_2
-	FRA_inflexible_industry
-	GDU_scuffed_acclim
-	GDU_refinery_prebuild_disincentive
-}
+add_opinion_modifier = { target = SOV modifier = embargo }
+add_opinion_modifier = { target = SOV modifier = sanctions_relations }
+add_opinion_modifier = { target = SOV modifier = large_decrease }
 
-give_guarantee = CZE
-give_guarantee = YUG
-give_guarantee = ROM
-add_opinion_modifier = {
-	target = SOV
-	modifier = embargo
-}
-
-add_opinion_modifier = {
-	target = SOV
-	modifier = sanctions_relations
-}
-
-add_opinion_modifier = {
-	target = SOV
-	modifier = large_decrease
-}
-
-add_opinion_modifier = {
-	target = JAP
-	modifier = embargo
-}
-
-add_opinion_modifier = {
-	target = JAP
-	modifier = sanctions
-}
-
-add_opinion_modifier = {
-	target = JAP
-	modifier = minor_sanctions
-}
-
+add_opinion_modifier = { target = JAP modifier = embargo }
+add_opinion_modifier = { target = JAP modifier = sanctions }
+add_opinion_modifier = { target = JAP modifier = minor_sanctions }
 add_intel = {
 	target = SPR
 	civilian_intel = 200
@@ -75,7 +25,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = BUl
 	civilian_intel = 200
@@ -83,7 +32,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = USA
 	civilian_intel = 200
@@ -91,7 +39,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = ENG
 	civilian_intel = 200
@@ -99,7 +46,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = SOV
 	civilian_intel = 200
@@ -107,7 +53,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = RAJ
 	civilian_intel = 200
@@ -115,7 +60,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = ITA
 	civilian_intel = 200
@@ -123,7 +67,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = GER
 	civilian_intel = 200
@@ -131,7 +74,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = ROM
 	civilian_intel = 200
@@ -139,7 +81,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = HUN
 	civilian_intel = 200
@@ -147,7 +88,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = JAP
 	civilian_intel = 200
@@ -155,7 +95,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = CAN
 	civilian_intel = 200
@@ -163,7 +102,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = FRA
 	civilian_intel = 200
@@ -171,7 +109,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = SAF
 	civilian_intel = 200
@@ -179,7 +116,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = AST
 	civilian_intel = 200
@@ -187,7 +123,6 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-
 add_intel = {
 	target = NZL
 	civilian_intel = 200
@@ -195,9 +130,14 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+set_research_slots = 4
+set_stability = 0.5
+add_command_power = 20
+
 
 # Starting tech
 set_technology = {
+	iw_medium_airframe = 1
 	airfield_construction = 1
 	fort_construction = 1
 	infantry_weapons = 1
@@ -206,13 +146,24 @@ set_technology = {
 	tech_recon = 1
 	tech_engineers = 1
 	tech_signal_company = 1
-	tech_logistics_company = 1
+	tech_logistics_company = 1 
 	tech_mountaineers = 1
+	CAS1x = 1
+	cv_fighter1x = 1
+	iw_small_airframe = 1
+	cv_naval_bomber1x = 1
+	naval_bomber1x = 1
+	cv_naval_bomber1x = 1
 	interwar_antitank = 1
+	basic_small_airframe = 1
+	cv_CAS1x = 1
 	synth_oil_experiments = 1
 	fuel_silos = 1
 	fuel_refining = 1
+	cv_fighter1x = 1
+	cv_early_fighterx = 1
 	armored_car1 = 1
+	heavy_fighter1x = 1
 	tech_mountaineers = 1
 	gwtank_chassis = 1
 	basic_light_tank_chassis = 1
@@ -237,40 +188,72 @@ set_technology = {
 	armored_car1 = 1
 }
 
-set_technology = {
-	early_bomber = 1
-	early_fighter = 1
-	cv_early_fighter = 1
-	fighter1 = 1
-	cv_fighter1 = 1
-	CAS1 = 1
-	cv_CAS1 = 1
-	naval_bomber1 = 1
-	cv_naval_bomber1 = 1
-	heavy_fighter1 = 1
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_heavy_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		basic_heavy_armor_scheme = 1
+		basic_cruiser_armor_scheme = 1
+		mtg_transport = 1
+		basic_dp_light_battery = 1
+		cruiser_submarines = 1
+	}
 }
 
-set_technology = {
-	early_ship_hull_light = 1
-	basic_ship_hull_light = 1
-	early_ship_hull_submarine = 1
-	basic_ship_hull_submarine = 1
-	early_ship_hull_cruiser = 1
-	early_ship_hull_heavy = 1
-	basic_ship_hull_heavy = 1
-	early_ship_hull_carrier = 1
-	basic_battery = 1
-	basic_heavy_battery = 1
-	basic_light_battery = 1
-	basic_medium_battery = 1
-	basic_torpedo = 1
-	basic_depth_charges = 1
-	basic_heavy_armor_scheme = 1
-	basic_cruiser_armor_scheme = 1
-	mtg_transport = 1
-	basic_dp_light_battery = 1
-	cruiser_submarines = 1
+set_politics = {
+	ruling_party = democratic
+	last_election = "1932.5.1"
+	election_frequency = 48
+	elections_allowed = yes
 }
+
+
+set_convoys = 600
+
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1932.5.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 70
+    	communism = 30
+}
+
+
+add_timed_idea = { idea = airandnavy_idea days = 1320 }
+
+add_ideas = {
+	FRA_victors_of_wwi
+	FRA_disjointed_government
+	FRA_protected_by_the_maginot_line
+	limited_conscription
+	FRA_full_employment
+	FRA_political_violence
+	FRA_inefficient_economy_2
+	FRA_inflexible_industry
+	GDU_scuffed_acclim
+	GDU_refinery_prebuild_disincentive
+}
+
+give_guarantee = CZE
+give_guarantee = YUG
+give_guarantee = ROM
 
 recruit_character = FRA_philippe_petain
 recruit_character = FRA_rene_massigli
@@ -313,8 +296,9 @@ recruit_character = FRA_rene_prioux
 recruit_character = FRA_gaston_henry_haye
 recruit_character = FRA_zivony_peshkov
 recruit_character = FRA_felix_gouin
+
 create_equipment_variant = {
-	name = "FCM 36"
+	name = "FCM 36" 	
 	type = light_tank_chassis_2
 	modules = {
 		main_armament_slot = tank_small_cannon
@@ -327,7 +311,7 @@ create_equipment_variant = {
 }
 
 create_equipment_variant = {
-	name = "Char B1"
+	name = "Char B1" 	
 	type = heavy_tank_chassis_1
 	modules = {
 		main_armament_slot = tank_heavy_cannon
@@ -341,56 +325,53 @@ create_equipment_variant = {
 	}
 }
 
-add_equipment_to_stockpile = {
-	type = artillery_equipment_1
-	amount = 5500
-	producer = FRA
-}
 
 add_equipment_to_stockpile = {
-	type = train_equipment_1
-	amount = 110
-	producer = FRA
-}
-
+    type = artillery_equipment_1
+    amount = 5500
+    producer = FRA
+}  
 add_equipment_to_stockpile = {
-	type = support_equipment
-	amount = 3000
-	producer = FRA
-}
-
+    type = train_equipment_1
+    amount = 110
+    producer = FRA
+} 
 add_equipment_to_stockpile = {
-	type = infantry_equipment_1
-	amount = 30000
-	producer = FRA
-}
-
+    type = support_equipment
+    amount = 3000
+    producer = FRA
+} 
 add_equipment_to_stockpile = {
-	type = motorized_equipment_1
-	amount = 8000
-	producer = FRA
-}
-
+    type = infantry_equipment_1
+    amount = 30000
+    producer = FRA
+} 
 add_equipment_to_stockpile = {
-	type = light_tank_chassis_2
-	amount = 2250
-	producer = FRA
-}
-
+    type = motorized_equipment_1
+    amount = 8000
+    producer = FRA
+}  
+add_equipment_to_stockpile = {
+    type = light_tank_chassis_2
+    amount = 2250
+    producer = FRA
+} 
 add_equipment_to_stockpile = {
 	type = anti_air_equipment_1
-	amount = 3200
-	producer = FRA
+    amount = 3200
+    producer = FRA
+}
+add_equipment_to_stockpile = {
+   type = anti_tank_equipment_1
+   amount = 4000
+   producer = FRA
+} 
+add_equipment_to_stockpile = {
+    type = heavy_tank_chassis_1
+    amount = 500
+    producer = FRA
 }
 
-add_equipment_to_stockpile = {
-	type = anti_tank_equipment_1
-	amount = 4000
-	producer = FRA
-}
 
-add_equipment_to_stockpile = {
-	type = heavy_tank_chassis_1
-	amount = 500
-	producer = FRA
-}
+
+
