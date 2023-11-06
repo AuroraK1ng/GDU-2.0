@@ -1,7 +1,6 @@
 technologies = {
 	
 	iw_small_airframe = {
-		allow = { NOT = { disabled_ai_production = yes tag = EFR tag =SPR }  }
 		enable_equipment_modules = {
 		recon_camera
 			engine_1_1x
@@ -245,7 +244,6 @@ technologies = {
 	}
 	
 	iw_medium_airframe = {
-		allow = { disabled_ai_production = yes }
 		enable_equipment_modules = {
 		recon_camera
 			engine_1_2x
@@ -408,7 +406,7 @@ technologies = {
 		}
 		
 		categories = {
-			medium_air generic
+			medium_air 
 			jet_technology
 			cat_heavy_fighter
 			tactical_bomber
@@ -417,7 +415,6 @@ technologies = {
 	}
 
 	iw_large_airframe = {
-		allow = { disabled_ai_production = yes }
 		enable_equipment_modules = {
 		recon_camera
 			engine_1_4x
@@ -570,7 +567,7 @@ technologies = {
 		}
 		
 		categories = {
-			heavy_air generic
+			heavy_air 
 			jet_technology
 			cat_strategic_bomber
 			mio_cat_all_heavy_aircraft_and_modules
