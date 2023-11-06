@@ -20,7 +20,6 @@ GER_porsche_organization = {
 				tag = MEX 
 				has_dlc = "Man the Guns"
 			}
-			NOR_AAT = yes
 		}
 	}
 
@@ -39,12 +38,7 @@ GER_porsche_organization = {
 			}
 			FROM = { is_in_faction_with = GER }
 		}
-		ELSE_IF = {
-			limit = {
-				FROM = { tag = NOR }
-			}
-			FROM = { has_completed_focus = NOR_invite_german_engineers }
-		}
+		
 	}
 }
 
@@ -59,18 +53,12 @@ GER_henschel_organization = {
 				tag = BUL
 				has_dlc = "Battle for the Bosporus"
 			}
-			AND = {
-				tag = ETH
-				has_dlc = "By Blood Alone"
-			}
+			
 		}
 	}
 	
 	visible = {
-		IF = {
-			limit = { FROM = { original_tag = ETH } }
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
-		}
+		
 	}
 
 	available = {
@@ -86,7 +74,6 @@ GER_henschel_organization = {
 			limit = { 
 				OR = { 
 					FROM = { original_tag = BUL }
-					FROM = { original_tag = ETH } 
 				} 
 			}
 			custom_trigger_tooltip = {
@@ -255,7 +242,6 @@ GER_messerschmitt_organization = {
 	allowed = {	
 		OR = {
 			tag = GER
-			NOR_AAT = yes 
 		}
 	}
 
@@ -268,12 +254,7 @@ GER_messerschmitt_organization = {
 			FROM = { NOT = { has_war_with = GER } }
 		}
 		
-		if = {
-			limit = {
-				FROM = { original_tag = NOR }
-			}
-			FROM = { has_completed_focus = NOR_invite_german_engineers }
-		}
+		
 	}
 
 	add_trait = {
@@ -323,18 +304,12 @@ GER_junkers_organization = {
 	allowed = {	 
 		OR = {
 			tag = GER 
-			AND = {
-				tag = ETH
-				has_dlc = "By Blood Alone"
-			}
+			
 		}
 	}
 	
 	visible = {
-		IF = {
-			limit = { FROM = { original_tag = ETH } }
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
-		}
+		
 	}
 
 	available = {
@@ -395,7 +370,6 @@ GER_heinkel_organization = {
 				tag = BUL
 				has_dlc = "Battle for the Bosporus"
 			}
-			NOR_AAT = yes
 		}
 	}
 
@@ -427,12 +401,7 @@ GER_heinkel_organization = {
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
-		ELSE_IF = {
-			limit = {
-				FROM = { original_tag = NOR }
-			}
-			FROM = { has_completed_focus = NOR_invite_german_engineers }
-		}
+		
 	}
 }
 
@@ -488,18 +457,12 @@ GER_mauser_organization = {
 	allowed = {	 
 		OR = {
 			tag = GER 
-			AND = {
-				tag = ETH
-				has_dlc = "By Blood Alone"
-			}
+			
 		}
 	}
 	
 	visible = {
-		IF = {
-			limit = { FROM = { original_tag = ETH } }
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
-		}
+		
 	}
 	
 	available = {
