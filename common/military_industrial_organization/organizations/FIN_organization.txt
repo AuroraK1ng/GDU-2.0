@@ -13,7 +13,7 @@ FIN_valtion_panssaritehdas_organization = {
 	include = generic_infantry_tank_organization
 	icon = GFX_idea_FIN_valtion_panssaritehdas
 	allowed = {	
-		original_tag = FIN
+		tag = FIN
 		has_dlc = "Arms Against Tyranny"
 	}
 
@@ -32,7 +32,7 @@ FIN_valtion_panssaritehdas_organization = {
 		x = 8.5
 	}
 
-	remove_trait = { generic_mio_trait_heavy_tank_improvements generic_mio_trait_heavy_tank_specialization }
+	remove_trait = { generic_mio_trait_heavy_tank_improvements  }
 
 	override_trait = {
 		token = generic_mio_trait_modular_construction
@@ -42,21 +42,12 @@ FIN_valtion_panssaritehdas_organization = {
 	}
 
 	override_trait = {
-		token = generic_mio_trait_light_tank_specialization
+		token = generic_mio_trait_medium_tank_specialization
 
 		position = { x=-1 y=3 }
 		relative_position_id = generic_mio_trait_modular_construction
-		mutually_exclusive= { generic_mio_trait_medium_tank_specialization }
 	}
 	
-	override_trait = {
-		token = generic_mio_trait_medium_tank_specialization
-
-		position = { x=1 y=3 }
-		relative_position_id = generic_mio_trait_modular_construction
-		mutually_exclusive= { generic_mio_trait_light_tank_specialization }
-	}
-
 	add_trait = { 
 		token = FIN_mio_trait_salvaged_and_retooled
 		name = FIN_mio_trait_salvaged_and_retooled
@@ -66,9 +57,7 @@ FIN_valtion_panssaritehdas_organization = {
 		position = { x=8 y=0 }
 		
 		available = {
-			owner = {
-				has_completed_focus = FIN_salvaged_and_retooled
-			}
+
 		}
 
 		production_bonus = {
@@ -89,9 +78,7 @@ FIN_valtion_panssaritehdas_organization = {
 		any_parent = { generic_mio_trait_modular_construction }
 		
 		available = {
-			owner = {
-				has_completed_focus = FIN_wartsila_engine_production
-			}
+
 		}
 
 		production_bonus = {
@@ -110,9 +97,7 @@ FIN_valtion_panssaritehdas_organization = {
 		relative_position_id = FIN_mio_trait_salvaged_and_retooled
 		
 		available = {
-			owner = {
-				has_completed_focus = FIN_modernize_the_industry
-			}
+
 		}
 
 		production_bonus = {
@@ -136,7 +121,7 @@ FIN_crichton_vulcan_organization = { #Coastal Defense Ships & Subs
 	include = generic_raider_ship_organization
 	icon = GFX_idea_FIN_crichton_vulcan
 	allowed = {	
-		original_tag = FIN
+		tag = FIN
 		has_dlc = "Arms Against Tyranny"
 	}
 
@@ -168,9 +153,7 @@ FIN_crichton_vulcan_organization = { #Coastal Defense Ships & Subs
 		any_parent = { generic_mio_trait_long_range_raiding generic_mio_trait_high_speed_raiding }
 		
 		available = {
-			owner = {
-				has_completed_focus = FIN_acquire_andros_dockyards
-			}
+
 		}
 
 		equipment_bonus = {
@@ -192,9 +175,7 @@ FIN_crichton_vulcan_organization = { #Coastal Defense Ships & Subs
 		any_parent = { generic_mio_trait_long_range_raiding generic_mio_trait_high_speed_raiding }
 		
 		available = {
-			owner = {
-				has_completed_focus = FIN_wartsila_engine_production
-			}
+
 		}
 
 		production_bonus = {
@@ -215,9 +196,7 @@ FIN_crichton_vulcan_organization = { #Coastal Defense Ships & Subs
 		mutually_exclusive = { FIN_mio_trait_deep_sea_raiders }
 
 		available = {
-			owner = {
-				has_completed_focus = FIN_rapid_raiders
-			}
+
 		}
 
 		limit_to_equipment_type = { screen_ship }
@@ -242,9 +221,7 @@ FIN_crichton_vulcan_organization = { #Coastal Defense Ships & Subs
 		mutually_exclusive = { FIN_mio_trait_rapid_raiders }
 		
 		available = {
-			owner = {
-				has_completed_focus = FIN_deep_sea_raiders
-			}
+
 		}
 
 		limit_to_equipment_type = { submarine }
@@ -267,9 +244,7 @@ FIN_crichton_vulcan_organization = { #Coastal Defense Ships & Subs
 		relative_position_id = generic_mio_trait_high_speed_raiding
 		
 		available = {
-			owner = {
-				has_completed_focus = FIN_modernize_the_industry
-			}
+
 		}
 
 		production_bonus = {
@@ -289,77 +264,73 @@ FIN_crichton_vulcan_organization = { #Coastal Defense Ships & Subs
 
 ###########################
 
-FIN_valtion_lentokonetehdas_organization = { #Light Aircraft
-	include = generic_general_aircraft_organization
+ FIN_valtion_lentokonetehdas_organization = { #Light Aircraft
+ 	include = generic_general_aircraft_organization
 	icon = GFX_idea_FIN_valtion_lentokonetehdas
-	allowed = {	
-		original_tag = FIN
-		has_dlc = "Arms Against Tyranny"
+ 	allowed = {	
+		tag = FIN
+ 		has_dlc = "Arms Against Tyranny"
+ 	}
+
+ 	tree_header_text = {
+ 		text = mio_header_fighter_aircraft
+ 		x = 1
+ 	}
+
+ 	tree_header_text = {
+ 		text = mio_header_bomber_aircraft
+ 		x = 4
+ 	}
+
+ 	tree_header_text = {
+ 		text = mio_header_naval_aircraft
+ 		x = 7
 	}
 
-	tree_header_text = {
-		text = mio_header_fighter_aircraft
-		x = 1
-	}
+ 	tree_header_text = {
+ 		text = mio_header_production
+ 		x = 9
+ 	}
 
-	tree_header_text = {
-		text = mio_header_bomber_aircraft
-		x = 4
-	}
+ 	add_trait = { 
+ 		token = FIN_mio_trait_modernization_program
+ 		name = FIN_mio_trait_modernization_program
+ 		icon = GFX_generic_mio_department_icon_plane_general_production
+ 		special_trait_background = yes
 
-	tree_header_text = {
-		text = mio_header_naval_aircraft
-		x = 7
-	}
-
-	tree_header_text = {
-		text = mio_header_production
-		x = 9
-	}
-
-	add_trait = { 
-		token = FIN_mio_trait_modernization_program
-		name = FIN_mio_trait_modernization_program
-		icon = GFX_generic_mio_department_icon_plane_general_production
-		special_trait_background = yes
-
-		position = { x=5 y=0 }
-		relative_position_id = generic_mio_trait_conservative_designs
+ 		position = { x=5 y=0 }
+ 		relative_position_id = generic_mio_trait_conservative_designs
 		
-		available = {
-			owner = {
-				has_completed_focus = FIN_modernize_the_industry
-			}
-		}
+ 		available = {
 
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-	}
+ 		}
 
-		add_trait = { 
-		token = FIN_mio_trait_wartsila_engine_production
-		name = FIN_mio_trait_wartsila_engine_production
-		icon = GFX_generic_mio_department_icon_plane_general_line_efficiency
-		special_trait_background = yes
+ 		production_bonus = {
+ 			production_capacity_factor = 0.05
+ 		}
+ 	}
+
+ 		add_trait = { 
+ 		token = FIN_mio_trait_wartsila_engine_production
+ 		name = FIN_mio_trait_wartsila_engine_production
+ 		icon = GFX_generic_mio_department_icon_plane_general_line_efficiency
+ 		special_trait_background = yes
 
 		position = { x=5 y=1 }
 		relative_position_id = generic_mio_trait_conservative_designs
 		
-		any_parent = { generic_mio_trait_conservative_designs }
+ 		any_parent = { generic_mio_trait_conservative_designs }
 		
 		available = {
-			owner = {
-				has_completed_focus = FIN_wartsila_engine_production
-			}
-		}
 
-		production_bonus = {
-			production_capacity_factor = 0.05
-			production_efficiency_gain_factor = 0.05
-		}
-	}
-}
+ 		}
+
+ 		production_bonus = {
+ 			production_capacity_factor = 0.05
+ 			production_efficiency_gain_factor = 0.05
+ 		}
+ 	}
+ }
 
 ################################### 
 
@@ -380,7 +351,7 @@ FIN_valtion_kivaaritehdas_organization = { #Infantry Equipment
 	include = generic_infantry_equipment_organization
 	icon = GFX_idea_FIN_valtion_kivaaritehdas
 	allowed = {	
-		original_tag = FIN
+		tag = FIN
 		has_dlc = "Arms Against Tyranny"
 	}
 
@@ -436,9 +407,7 @@ FIN_valtion_kivaaritehdas_organization = { #Infantry Equipment
 		position = { x=8 y=0 }
 		
 		available = {
-			owner = {
-				has_completed_focus = FIN_salvaged_and_retooled
-			}
+
 		}
 
 		production_bonus = {
@@ -457,9 +426,7 @@ FIN_valtion_kivaaritehdas_organization = { #Infantry Equipment
 		relative_position_id = FIN_mio_trait_salvaged_and_retooled
 		
 		available = {
-			owner = {
-				has_completed_focus = FIN_modernize_the_industry
-			}
+
 		}
 
 		production_bonus = {
@@ -479,9 +446,7 @@ FIN_valtion_kivaaritehdas_organization = { #Infantry Equipment
 		any_parent = { generic_mio_trait_heavy_anti_armor_ammunition }
 		
 		available = {
-			owner = {
-				has_completed_focus = FIN_integrate_oy_tikkakoski
-			}
+
 		}
 
 		production_bonus = {
@@ -500,7 +465,7 @@ FIN_valtion_tykkitehdas_organization = { #AT (Artillery)
 	include = generic_artillery_organization
 	icon = GFX_idea_FIN_valtion_tykkitehdas
 	allowed = {	
-		original_tag = FIN
+		tag = FIN
 		has_dlc = "Arms Against Tyranny"
 	}
 
@@ -534,9 +499,7 @@ FIN_valtion_tykkitehdas_organization = { #AT (Artillery)
 		position = { x=8 y=0 }
 		
 		available = {
-			owner = {
-				has_completed_focus = FIN_salvaged_and_retooled
-			}
+
 		}
 
 		production_bonus = {
@@ -555,9 +518,7 @@ FIN_valtion_tykkitehdas_organization = { #AT (Artillery)
 		relative_position_id = FIN_mio_trait_salvaged_and_retooled
 		
 		available = {
-			owner = {
-				has_completed_focus = FIN_modernize_the_industry
-			}
+
 		}
 
 		production_bonus = {
@@ -576,7 +537,7 @@ FIN_sisu_auto_organization = { #Motorized
 	include = generic_motorized_mechanized_organization
 	icon = GFX_idea_FIN_sisu_auto
 	allowed = {	
-		original_tag = FIN
+		tag = FIN
 		has_dlc = "Arms Against Tyranny"
 	}
 
@@ -655,9 +616,7 @@ FIN_sisu_auto_organization = { #Motorized
 		any_parent = { generic_mio_trait_composite_cargo_bed generic_mio_trait_steel_cargo_bed }
 		
 		available = {
-			owner = {
-				has_completed_focus = FIN_wartsila_engine_production
-			}
+
 		}
 
 		production_bonus = {
@@ -676,9 +635,7 @@ FIN_sisu_auto_organization = { #Motorized
 		relative_position_id = generic_mio_trait_medium_machinegun_mounts
 				
 		available = {
-			owner = {
-				has_completed_focus = FIN_tire_factory_at_nokia
-			}
+
 		}
 
 		limit_to_equipment_type = { motorized_equipment }
@@ -701,9 +658,7 @@ FIN_sisu_auto_organization = { #Motorized
 		all_parents = { FIN_mio_trait_recycled_materials }
 	
 		available = {
-			owner = {
-				has_completed_focus = FIN_contract_with_yhteissisu
-			}
+
 		}
 
 		limit_to_equipment_type = { motorized_equipment }
@@ -733,7 +688,6 @@ FIN_sisu_auto_organization = { #Motorized
 					tooltip = FIN_mio_trait_repurposed_equipment_trigger_tt
 					has_tech = mechanised_infantry3
 				}
-				has_completed_focus = FIN_salvaged_and_retooled
 			}
 		}
 
@@ -753,9 +707,7 @@ FIN_sisu_auto_organization = { #Motorized
 		position = { x=8 y=0 }
 		
 		available = {
-			owner = {
-				has_completed_focus = FIN_salvaged_and_retooled
-			}
+
 		}
 
 		production_bonus = {
@@ -774,9 +726,7 @@ FIN_sisu_auto_organization = { #Motorized
 		relative_position_id = FIN_mio_trait_salvaged_and_retooled
 		
 		available = {
-			owner = {
-				has_completed_focus = FIN_modernize_the_industry
-			}
+
 		}
 
 		production_bonus = {
