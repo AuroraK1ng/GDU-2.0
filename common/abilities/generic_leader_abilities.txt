@@ -113,20 +113,6 @@ ability = {
 			planning_speed = 4.0
 		}
 		
-		
-		ai_will_do = {
-			factor = -1
-			modifier = {
-				FROM = {
-					command_power > 2.0
-				}
-				check_variable = { num_units > 6 }
-				check_variable = { unit_ratio_ready_for_plan > 0.55 }
-				check_variable = { avg_unit_planning_ratio < 0.4 }
-				
-				add = 2
-			}
-		}
 	}
 	
 	
@@ -152,22 +138,7 @@ ability = {
 		duration = 168
 		
 		
-		ai_will_do = {
-			factor = -1
-			modifier = {
-				FROM = {
-					command_power > 1.5
-				}
-				
-				set_temp_variable = { temp = num_units_offensive_combats }
-				check_variable = { temp > 6 }
-				set_temp_variable = { temp2 = num_units_offensive_combats_against@fort }
-				divide_temp_variable = { temp2 = temp }
-				check_variable = { temp2 > 0.5 }
-				
-				add = 2
-			}
-		}
+		
 	}
 	
 	glider_planes = {
@@ -182,7 +153,6 @@ ability = {
 		}
 		
 		unit_modifiers = {
-			paratrooper_count_per_plane = 1.0
 			paradrop_organization_factor = 2.0
 			paratrooper_aa_defense = 0.5
 		}
@@ -308,19 +278,6 @@ ability = {
 		duration = 168
 		
 		
-		ai_will_do = {
-			factor = -1
-			modifier = {
-				FROM = {
-					command_power > 2.0
-				}
-				check_variable = { num_units_on_climate@cold_climate > 8 }
-				set_temp_variable = { temp = avg_units_acclimation@cold_climate }
-				divide_temp_variable = { temp =  num_units }
-				check_variable = { temp < 0.5 }
-				
-				add = 2
-			}
-		}
+		
 	}
 }

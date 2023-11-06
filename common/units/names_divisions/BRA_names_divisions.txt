@@ -30,8 +30,7 @@
 #                                      where you choose the historical division name.
 #           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
 #                                      the current game version.
-BRA_INF_01 = 
-{
+BRA_INF_01 = {
 	name = "Infantry Division"
 
 	for_countries = { BRA }				# Also includes releasable Portuguese colonlies
@@ -72,8 +71,7 @@ BRA_INF_01 =
 	}
 }
 
-BRA_CAV_01 = 
-{
+BRA_CAV_01 = {
 	name = "Cavalry Division"
 
 	for_countries = { BRA }				# Also includes releasable Portuguese colonlies
@@ -104,8 +102,7 @@ BRA_CAV_01 =
 	}
 }
 
-BRA_MOT_01 = 
-{
+BRA_MOT_01 = {
 	name = "Motorized Division"
 
 	for_countries = { BRA }				# Also includes releasable Portuguese colonlies
@@ -136,8 +133,7 @@ BRA_MOT_01 =
 	}
 }
 
-BRA_MEC_01 = 
-{
+BRA_MEC_01 = {
 	name = "Mechanized Division"
 
 	for_countries = { BRA }				# Also includes releasable Portuguese colonlies
@@ -168,15 +164,14 @@ BRA_MEC_01 =
 	}
 }
 
-BRA_ARM_01 = 
-{
+BRA_ARM_01 = {
 	name = "Armored Division"
 
 	for_countries = { BRA }				# Also includes releasable Portuguese colonlies
 
 	can_use = { always = yes }
 
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor"}
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { BRA_INF_01 }
@@ -200,8 +195,7 @@ BRA_ARM_01 =
 	}
 }
 
-BRA_PAR_01 = 
-{
+BRA_PAR_01 = {
 	name = "Parachute Division"
 
 	for_countries = { BRA }				# Also includes releasable Portuguese colonlies
@@ -232,8 +226,7 @@ BRA_PAR_01 =
 	}
 }
 
-BRA_MAR_01 = 
-{
+BRA_MAR_01 = {
 	name = "Marine Division"
 
 	for_countries = { BRA }				# Also includes releasable Portuguese colonlies
@@ -264,8 +257,7 @@ BRA_MAR_01 =
 	}
 }
 
-BRA_MNT_01 = 
-{
+BRA_MNT_01 = {
 	name = "Mountain Division"
 
 	for_countries = { BRA }				# Also includes releasable Portuguese colonlies
@@ -296,8 +288,7 @@ BRA_MNT_01 =
 	}
 }
 
-BRA_GAR_01 = 
-{
+BRA_GAR_01 = {
 	name = "Garrison Division"
 
 	for_countries = { BRA }				# Also includes releasable Portuguese colonlies
@@ -335,4 +326,5 @@ BRA_GAR_01 =
 		18 = { "%da Divisão de Infantaria" }
 		19 = { "%da Divisão de Infantaria" }
 		20 = { "%da Divisão de Infantaria" }		
+}
 }

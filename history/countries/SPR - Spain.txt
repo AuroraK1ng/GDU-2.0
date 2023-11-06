@@ -1,17 +1,9 @@
 ﻿capital = 41
-
 set_fuel_ratio = 0.5
-
 oob = "SPR_1936"
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "SPR_1936_naval_mtg"
-	else = {
-		set_naval_oob = "SPR_1936_naval_legacy"
-	}
+add_ideas = {
+	GER_mefo_bills_non_germany
 }
-
-add_ideas = { GER_mefo_bills_non_germany }
 
 add_intel = {
 	target = BUl
@@ -20,6 +12,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = SPR
 	civilian_intel = 200
@@ -27,42 +20,182 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
-add_opinion_modifier = { target = JAP modifier = embargo }
-add_opinion_modifier = { target = JAP modifier = sanctions }
-add_opinion_modifier = { target = JAP modifier = minor_sanctions }
 
-add_opinion_modifier = { target = ENG modifier = embargo }
-add_opinion_modifier = { target = ENG modifier = sanctions_relations }
-add_opinion_modifier = { target = ENG modifier = large_decrease }
-add_opinion_modifier = { target = ENG modifier = hostile_status }
-add_opinion_modifier = { target = RAJ modifier = embargo }
-add_opinion_modifier = { target = RAJ modifier = sanctions_relations }
-add_opinion_modifier = { target = RAJ modifier = large_decrease }
-add_opinion_modifier = { target = RAJ modifier = hostile_status }
-add_opinion_modifier = { target = CAN modifier = embargo }
-add_opinion_modifier = { target = CAN modifier = sanctions_relations }
-add_opinion_modifier = { target = CAN modifier = large_decrease }
-add_opinion_modifier = { target = CAN modifier = hostile_status }
-add_opinion_modifier = { target = SOV modifier = embargo }
-add_opinion_modifier = { target = SOV modifier = sanctions_relations }
-add_opinion_modifier = { target = SOV modifier = large_decrease }
-add_opinion_modifier = { target = SOV modifier = hostile_status }
-add_opinion_modifier = { target = SAF modifier = embargo }
-add_opinion_modifier = { target = SAF modifier = sanctions_relations }
-add_opinion_modifier = { target = SAF modifier = large_decrease }
-add_opinion_modifier = { target = SAF modifier = hostile_status }
-add_opinion_modifier = { target = AST modifier = embargo }
-add_opinion_modifier = { target = AST modifier = sanctions_relations }
-add_opinion_modifier = { target = AST modifier = large_decrease }
-add_opinion_modifier = { target = AST modifier = hostile_status }
-add_opinion_modifier = { target = NZL modifier = embargo }
-add_opinion_modifier = { target = NZL modifier = sanctions_relations }
-add_opinion_modifier = { target = NZL modifier = large_decrease }
-add_opinion_modifier = { target = NZL modifier = hostile_status }
-add_opinion_modifier = { target = USA modifier = embargo }
-add_opinion_modifier = { target = USA modifier = sanctions_relations }   
-add_opinion_modifier = { target = USA modifier = large_decrease }
-add_opinion_modifier = { target = USA modifier = hostile_status } 
+add_opinion_modifier = {
+	target = JAP
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = JAP
+	modifier = sanctions
+}
+
+add_opinion_modifier = {
+	target = JAP
+	modifier = minor_sanctions
+}
+
+add_opinion_modifier = {
+	target = ENG
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = ENG
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = ENG
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = ENG
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = RAJ
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = RAJ
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = RAJ
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = RAJ
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = CAN
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = CAN
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = CAN
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = CAN
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = SOV
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = SOV
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = SOV
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = SOV
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = SAF
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = SAF
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = SAF
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = SAF
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = AST
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = AST
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = AST
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = AST
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = NZL
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = NZL
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = NZL
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = NZL
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = USA
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = USA
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = USA
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = USA
+	modifier = hostile_status
+}
+
 add_intel = {
 	target = USA
 	civilian_intel = 200
@@ -70,6 +203,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = ENG
 	civilian_intel = 200
@@ -77,6 +211,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = SOV
 	civilian_intel = 200
@@ -84,6 +219,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = RAJ
 	civilian_intel = 200
@@ -91,6 +227,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = ITA
 	civilian_intel = 200
@@ -98,6 +235,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = GER
 	civilian_intel = 200
@@ -105,6 +243,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = ROM
 	civilian_intel = 200
@@ -112,6 +251,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = HUN
 	civilian_intel = 200
@@ -119,6 +259,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = JAP
 	civilian_intel = 200
@@ -126,6 +267,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = CAN
 	civilian_intel = 200
@@ -133,6 +275,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = FRA
 	civilian_intel = 200
@@ -140,6 +283,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = SAF
 	civilian_intel = 200
@@ -147,6 +291,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = AST
 	civilian_intel = 200
@@ -154,6 +299,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = NZL
 	civilian_intel = 200
@@ -163,7 +309,6 @@ add_intel = {
 }
 
 set_research_slots = 4
-
 add_ideas = {
 	SPA_carlism_1
 	SPR_political_violence
@@ -173,33 +318,41 @@ add_ideas = {
 	GDU_volunteer_nation
 }
 
-add_timed_idea = { idea = airandnavy_idea days = 1350 }
+add_timed_idea = {
+	idea = airandnavy_idea
+	days = 1350
+}
 
 recruit_character = SPR_niceto_alcala_zamora
-	recruit_character = SPA_enrique_canovas_lacruz
-	recruit_character = SPR_jose_diaz
-	
-	recruit_character = SPA_wilhelm_ritter_von_thoma
-	recruit_character = SPA_heli_rolando_de_tella
-	recruit_character = SPA_rafael_garcia_valino
-	recruit_character = SPA_jose_enrique_varela
-	recruit_character = SPA_miguel_ponte
-	recruit_character = SPR_alejandro_lerroux
-	recruit_character = SPA_francisco_franco
-	recruit_character = SPR_jose_asensio_torrado
-	recruit_character = SPR_albert_speer
-	recruit_character = SPA_agustin_munoz_grandes
-	recruit_character = SPA_tomas_dominguez_arevalo
-	recruit_character = SPA_diego_hidalgo_y_duran
-	recruit_character = SPA_joaquin_garcia_morato
-	recruit_character = SPA_miguel_cabanellas
-	recruit_character = SPR_jose_miaja
-	recruit_character = SPA_raimundo_fernandez_cuesta
-	recruit_character = SPA_jose_antonio_giron
-	recruit_character = SPA_juan_yague
-	recruit_character = SPA_manuel_hedilla
-	recruit_character = SPR_felipe_diaz_sandino
-	recruit_character = SPA_emilio_mola
+recruit_character = SPA_enrique_canovas_lacruz
+recruit_character = SPR_jose_diaz
+recruit_character = SPA_wilhelm_ritter_von_thoma
+recruit_character = SPA_heli_rolando_de_tella
+recruit_character = SPA_rafael_garcia_valino
+recruit_character = SPA_jose_enrique_varela
+recruit_character = SPA_miguel_ponte
+recruit_character = SPR_alejandro_lerroux
+recruit_character = SPA_francisco_franco
+recruit_character = SPR_jose_asensio_torrado
+recruit_character = SPR_albert_speer
+recruit_character = SPA_agustin_munoz_grandes
+recruit_character = SPA_tomas_dominguez_arevalo
+recruit_character = SPA_diego_hidalgo_y_duran
+recruit_character = SPA_joaquin_garcia_morato
+recruit_character = SPA_miguel_cabanellas
+recruit_character = SPR_jose_miaja
+recruit_character = SPA_raimundo_fernandez_cuesta
+recruit_character = SPA_jose_antonio_giron
+recruit_character = SPA_juan_yague
+recruit_character = SPA_manuel_hedilla
+recruit_character = SPR_felipe_diaz_sandino
+recruit_character = SPA_emilio_mola
+set_technology = {
+	early_fighter = 1
+	early_bomber = 1
+	naval_bomber1 = 1
+}
+
 set_technology = {
 	noports = 1
 	Spain_INF = 1
@@ -220,54 +373,183 @@ set_technology = {
 	fuel_silos = 1
 	fuel_refining = 1
 	synth_oil_experiments = 1
-	iw_small_airframe = 1
-	iw_medium_airframe = 1
-	naval_bomber1x = 1
 }
-
-
 
 if = {
 	limit = {
 		has_dlc = "La Resistance"
 	}
-	set_technology = { armored_car1 = 1	}
+	set_technology = {
+		armored_car1 = 1
+	}
 }
-add_opinion_modifier = { target = ENG modifier = embargo }
-add_opinion_modifier = { target = ENG modifier = sanctions_relations }
-add_opinion_modifier = { target = ENG modifier = large_decrease }
-add_opinion_modifier = { target = ENG modifier = hostile_status }
-add_opinion_modifier = { target = RAJ modifier = embargo }
-add_opinion_modifier = { target = RAJ modifier = sanctions_relations }
-add_opinion_modifier = { target = RAJ modifier = large_decrease }
-add_opinion_modifier = { target = RAJ modifier = hostile_status }
-add_opinion_modifier = { target = CAN modifier = embargo }
-add_opinion_modifier = { target = CAN modifier = sanctions_relations }
-add_opinion_modifier = { target = CAN modifier = large_decrease }
-add_opinion_modifier = { target = CAN modifier = hostile_status }
-add_opinion_modifier = { target = SOV modifier = embargo }
-add_opinion_modifier = { target = SOV modifier = sanctions_relations }
-add_opinion_modifier = { target = SOV modifier = large_decrease }
-add_opinion_modifier = { target = SOV modifier = hostile_status }
-add_opinion_modifier = { target = SAF modifier = embargo }
-add_opinion_modifier = { target = SAF modifier = sanctions_relations }
-add_opinion_modifier = { target = SAF modifier = large_decrease }
-add_opinion_modifier = { target = SAF modifier = hostile_status }
-add_opinion_modifier = { target = AST modifier = embargo }
-add_opinion_modifier = { target = AST modifier = sanctions_relations }
-add_opinion_modifier = { target = AST modifier = large_decrease }
-add_opinion_modifier = { target = AST modifier = hostile_status }
-add_opinion_modifier = { target = NZL modifier = embargo }
-add_opinion_modifier = { target = NZL modifier = sanctions_relations }
-add_opinion_modifier = { target = NZL modifier = large_decrease }
-add_opinion_modifier = { target = NZL modifier = hostile_status }
-add_opinion_modifier = { target = USA modifier = embargo }
-add_opinion_modifier = { target = USA modifier = sanctions_relations }   
-add_opinion_modifier = { target = USA modifier = large_decrease }
-add_opinion_modifier = { target = USA modifier = hostile_status } 
+
+add_opinion_modifier = {
+	target = ENG
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = ENG
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = ENG
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = ENG
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = RAJ
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = RAJ
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = RAJ
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = RAJ
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = CAN
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = CAN
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = CAN
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = CAN
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = SOV
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = SOV
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = SOV
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = SOV
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = SAF
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = SAF
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = SAF
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = SAF
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = AST
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = AST
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = AST
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = AST
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = NZL
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = NZL
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = NZL
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = NZL
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = USA
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = USA
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = USA
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = USA
+	modifier = hostile_status
+}
 
 if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
+	limit = {
+		not = {
+			has_dlc = "Man the Guns"
+		}
+	}
 	set_technology = {
 		##early_submarine = 1
 		##early_destroyer = 1
@@ -279,8 +561,11 @@ if = {
 		##transport = 1
 	}
 }
+
 if = {
-	limit = { has_dlc = "Man the Guns" }
+	limit = {
+		has_dlc = "Man the Guns"
+	}
 	set_technology = {
 		early_ship_hull_light = 1
 		basic_ship_hull_light = 1
@@ -297,28 +582,31 @@ if = {
 		mtg_transport = 1
 	}
 }
-add_equipment_to_stockpile = {
-    type = artillery_equipment_1
-    amount = 1700
-    producer = SPR
-}  
-add_equipment_to_stockpile = {
-    type = support_equipment
-    amount = 321
-    producer = SPR
-} 
 
 add_equipment_to_stockpile = {
-    type = infantry_equipment_1
-    amount = 21000
-    producer = SPR
-} 
+	type = artillery_equipment_1
+	amount = 1700
+	producer = SPR
+}
+
+add_equipment_to_stockpile = {
+	type = support_equipment
+	amount = 321
+	producer = SPR
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 21000
+	producer = SPR
+}
 
 add_equipment_to_stockpile = {
 	type = anti_air_equipment_1
 	amount = 850
 	producer = SPR
-} 
+}
+
 set_politics = {
 	ruling_party = democratic
 	last_election = "1933.2.16"
@@ -327,129 +615,166 @@ set_politics = {
 }
 
 set_popularities = {
-    democratic = 47
-    fascism = 46
-    communism = 7
+	democratic = 47
+	fascism = 46
+	communism = 7
 }
 
 set_convoys = 100
 set_stability = 0.5
 set_war_support = 0.8
-
-
-		create_field_marshal = {
-                name = "Francisco Franco AFRICANUS"
-                portrait_path = "gfx/leaders/SPA/AFRICA_Portrait_Spain_Francisco_Franco.dds"
-                traits = { offensive_doctrine brilliant_strategist politically_connected war_hero media_personality desert_fox organizer }
-                skill = 6
-				attack_skill = 7
-				defense_skill = 5
-				planning_skill = 5
-				logistics_skill = 4
-        }		
-		create_corps_commander = {
-                name = "Alonso Vega"
-                picture = "Portrait_SPR_Alonso_Vega.tga"
-                traits = { infantry_officer infantry_leader hill_fighter organizer trait_engineer harsh_leader  }
-                skill = 6
-				attack_skill = 5
-				defense_skill = 5
-				planning_skill = 7
-				logistics_skill = 4
-        }
-			create_corps_commander = {
-                name = "Davila Arrondo"
-                picture = "Portrait_SPR_Davila_Arrondo.tga"
-                traits = { panzer_leader armor_officer trait_reckless harsh_leader trickster media_personality trait_engineer ranger }
-                skill = 6
-				attack_skill = 7
-				defense_skill = 6
-				planning_skill = 4
-				logistics_skill = 5
-        }
-			create_corps_commander = {
-                name = "Davila Arrondo AFRICANUS"
-                picture = "AFRICA_Portrait_SPR_Davila_Arrondo.dds"
-                traits = { panzer_leader armor_officer trait_reckless harsh_leader trickster media_personality trait_engineer desert_fox }
-                skill = 6
-				attack_skill = 7
-				defense_skill = 6
-				planning_skill = 4
-				logistics_skill = 5
-        }		
-			create_corps_commander = {
-                name = "Goded Llopis"
-                picture = "Portrait_SPR_Goded_Llopis.tga"
-                traits = { skilled_staffer infantry_leader commando old_guard trait_cautious infantry_officer  ranger politically_connected}
-                skill = 6
-				attack_skill = 5
-				defense_skill = 1
-				planning_skill = 6
-				logistics_skill = 6
-        }
-			create_corps_commander = {
-                name = "Jose Sanjurjo Sacanell"
-                picture = "Portrait_SPR_Jose_Sanjurjo_Sacanell.tga"
-                traits = { skilled_staffer swamp_fox cavalry_leader cavalry_officer trickster career_officer harsh_leader }
-                skill = 4
-				attack_skill = 5
-				defense_skill = 2
-				planning_skill = 5
-				logistics_skill = 1
-        }
-			create_corps_commander = {
-                name = "Miguel Cabanellas Ferrer AFRICANUS"
-                picture = "AFRICA_Portrait_SPR_Miguel_Cabanellas_Ferrer.dds"
-                traits = { desert_fox infantry_leader career_officer cavalry_officer trickster organizer harsh_leader trait_reckless  }
-                skill = 6
-				attack_skill = 5
-				defense_skill = 8
-				planning_skill = 5
-				logistics_skill = 5
-        }		
-			create_corps_commander = {
-                name = "Vicente Lluch"
-                picture = "SPR_Portrait_Vicente_Lluch.dds"
-                traits = { infantry_leader skilled_staffer urban_assault_specialist trait_engineer old_guard trait_cautious harsh_leader infantry_officer  }
-                skill = 4
-				attack_skill = 4
-				defense_skill = 4
-				planning_skill = 3
-				logistics_skill = 2
-        }
-
-
-### VARIANTS ###
-# 1936 Start #
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	### Ship Variants ###
-	create_equipment_variant = {
-		name = "C Class"
-		type = submarine_1
-		upgrades = {
-			ship_reliability_upgrade = 1
-			sub_engine_upgrade = 1
-			sub_stealth_upgrade = 1
-			sub_torpedo_upgrade = 1
-		}
+create_field_marshal = {
+	name = "Francisco Franco AFRICANUS"
+	portrait_path = "gfx/leaders/SPA/AFRICA_Portrait_Spain_Francisco_Franco.dds"
+	traits = {
+		offensive_doctrine
+		brilliant_strategist
+		politically_connected
+		war_hero
+		media_personality
+		desert_fox
+		organizer
 	}
-	create_equipment_variant = {
-		name = "Príncipe Alfonso Class"
-		type = light_cruiser_1
-		upgrades = {
-			ship_reliability_upgrade = 1
-			ship_engine_upgrade = 1
-			ship_gun_upgrade = 1
-			ship_anti_air_upgrade = 1
-		}
-	}
+	skill = 6
+	attack_skill = 7
+	defense_skill = 5
+	planning_skill = 5
+	logistics_skill = 4
 }
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	# Submarines #
-	# Destroyers #
-	# Light Cruisers #
-	# Heavy Cruisers #
-	# Battleships #
+
+create_corps_commander = {
+	name = "Alonso Vega"
+	picture = "Portrait_SPR_Alonso_Vega.tga"
+	traits = {
+		infantry_officer
+		infantry_leader
+		hill_fighter
+		organizer
+		trait_engineer
+		harsh_leader
+	}
+	skill = 6
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 7
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Davila Arrondo"
+	picture = "Portrait_SPR_Davila_Arrondo.tga"
+	traits = {
+		panzer_leader
+		armor_officer
+		trait_reckless
+		harsh_leader
+		trickster
+		media_personality
+		trait_engineer
+		ranger
+	}
+	skill = 6
+	attack_skill = 7
+	defense_skill = 6
+	planning_skill = 4
+	logistics_skill = 5
+}
+
+create_corps_commander = {
+	name = "Davila Arrondo AFRICANUS"
+	picture = "AFRICA_Portrait_SPR_Davila_Arrondo.dds"
+	traits = {
+		panzer_leader
+		armor_officer
+		trait_reckless
+		harsh_leader
+		trickster
+		media_personality
+		trait_engineer
+		desert_fox
+	}
+	skill = 6
+	attack_skill = 7
+	defense_skill = 6
+	planning_skill = 4
+	logistics_skill = 5
+}
+
+create_corps_commander = {
+	name = "Goded Llopis"
+	picture = "Portrait_SPR_Goded_Llopis.tga"
+	traits = {
+		skilled_staffer
+		infantry_leader
+		commando
+		old_guard
+		trait_cautious
+		infantry_officer
+		ranger
+		politically_connected
+	}
+	skill = 6
+	attack_skill = 5
+	defense_skill = 1
+	planning_skill = 6
+	logistics_skill = 6
+}
+
+create_corps_commander = {
+	name = "Jose Sanjurjo Sacanell"
+	picture = "Portrait_SPR_Jose_Sanjurjo_Sacanell.tga"
+	traits = {
+		skilled_staffer
+		swamp_fox
+		cavalry_leader
+		cavalry_officer
+		trickster
+		career_officer
+		harsh_leader
+	}
+	skill = 4
+	attack_skill = 5
+	defense_skill = 2
+	planning_skill = 5
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Miguel Cabanellas Ferrer AFRICANUS"
+	picture = "AFRICA_Portrait_SPR_Miguel_Cabanellas_Ferrer.dds"
+	traits = {
+		desert_fox
+		infantry_leader
+		career_officer
+		cavalry_officer
+		trickster
+		organizer
+		harsh_leader
+		trait_reckless
+	}
+	skill = 6
+	attack_skill = 5
+	defense_skill = 8
+	planning_skill = 5
+	logistics_skill = 5
+}
+
+create_corps_commander = {
+	name = "Vicente Lluch"
+	picture = "SPR_Portrait_Vicente_Lluch.dds"
+	traits = {
+		infantry_leader
+		skilled_staffer
+		urban_assault_specialist
+		trait_engineer
+		old_guard
+		trait_cautious
+		harsh_leader
+		infantry_officer
+	}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 2
 }

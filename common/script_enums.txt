@@ -137,13 +137,10 @@ script_enum_equipment_category = {
 script_enum_equipment_bonus_type = {
 	## This script enum contains all equipment types that can be used in equipment_bonus
 	## or in game/common/military_industrial_organization scripts.
-
 	## This list contains either equipment category (see script_enum_equipment_category above)
 	## or equipment archetypes & types defined in game/common/units/equipments
-
 	## This enum should be updated every time either of those is updated
 	## (there will be a log error at startup as a reminder)
-
 	# Equipment categories
 	convoy
 	train
@@ -176,7 +173,6 @@ script_enum_equipment_bonus_type = {
 	anti_tank
 	rocket
 	flame
-
 	# Equipment archetypes & types
 	destroyer
 	infantry_equipment
@@ -221,7 +217,6 @@ script_enum_equipment_bonus_type = {
 	mechanized_equipment_2
 	mechanized_equipment_3
 	motorized_equipment
-	#motorized_equipment_0
 	motorized_equipment_1
 	small_plane_airframe
 	cv_small_plane_airframe
@@ -257,10 +252,10 @@ script_enum_equipment_bonus_type = {
 	ship_hull_carrier_3
 	ship_hull_carrier_conversion_bb
 	ship_hull_carrier_conversion_ca
-	carrier_1
-	carrier_2
-	carrier_3
-	carrier_4
+	#carrier_1
+	#carrier_2
+	#carrier_3
+	#carrier_4
 	ship_hull_cruiser
 	light_cruiser
 	ship_hull_cruiser_1
@@ -286,6 +281,12 @@ script_enum_equipment_bonus_type = {
 	ship_hull_heavy_3
 	ship_hull_heavy_4
 	ship_hull_super_heavy_1
+
+	ship_hull_super_heavy_jap
+
+	ship_hull_heavy_bismarck
+	
+
 	#battleship_1
 	#battleship_2
 	#battleship_3
@@ -316,31 +317,13 @@ script_enum_equipment_bonus_type = {
 	submarine_4
 	support_equipment
 	support_equipment_1
-	light_tank_chassis
-	light_tank_chassis_0
-	light_tank_chassis_1
-	light_tank_chassis_2
-	light_tank_chassis_3
-	medium_tank_chassis
-	medium_tank_chassis_0
-	medium_tank_chassis_1
-	medium_tank_chassis_2
-	medium_tank_chassis_3
-	heavy_tank_chassis
-	heavy_tank_chassis_0
-	heavy_tank_chassis_1
-	heavy_tank_chassis_2
-	heavy_tank_chassis_3
-	modern_tank_chassis
-	modern_tank_chassis_1
-	super_heavy_tank_chassis
-	super_heavy_tank_chassis_1
-	amphibious_tank_chassis
-	amphibious_tank_chassis_1
+
 	train_equipment
 	train_equipment_1
 	train_equipment_2
 	train_equipment_3
+
+	#airframes bba
 	small_plane_cas_airframe
 	cv_small_plane_cas_airframe
 	small_plane_naval_bomber_airframe
@@ -399,6 +382,8 @@ script_enum_equipment_bonus_type = {
 	large_plane_maritime_patrol_plane_airframe_2
 	large_plane_maritime_patrol_plane_airframe_3
 	large_plane_maritime_patrol_plane_airframe_4
+
+	# planes
 	fighter_equipment_0
 	fighter_equipment_1
 	fighter_equipment_2
@@ -440,21 +425,49 @@ script_enum_equipment_bonus_type = {
 	strat_bomber_equipment_2
 	strat_bomber_equipment_3
 	jet_strat_bomber_equipment_1
+
+	#tonk
+	light_tank_chassis
+	light_tank_chassis_0
+	light_tank_chassis_1
+	light_tank_chassis_2
+	light_tank_chassis_3
+	medium_tank_chassis
+	medium_tank_chassis_0
+	medium_tank_chassis_1
+	medium_tank_chassis_2
+	medium_tank_chassis_3
+	heavy_tank_chassis
+	heavy_tank_chassis_0
+	heavy_tank_chassis_1
+	heavy_tank_chassis_2
+	heavy_tank_chassis_3
+	modern_tank_chassis
+	modern_tank_chassis_1
+	super_heavy_tank_chassis
+	super_heavy_tank_chassis_1
+	amphibious_tank_chassis
+	amphibious_tank_chassis_1
+
+	#tonk varaints
 	light_tank_aa_chassis
 	light_tank_artillery_chassis
 	light_tank_destroyer_chassis
 	light_tank_amphibious_chassis
 	light_tank_flame_chassis
+	light_tank_rocket_chassis #added
 	medium_tank_aa_chassis
 	medium_tank_artillery_chassis
 	medium_tank_destroyer_chassis
 	medium_tank_amphibious_chassis
 	medium_tank_flame_chassis
+	medium_tank_rocket_chassis #added
 	heavy_tank_aa_chassis
 	heavy_tank_artillery_chassis
 	heavy_tank_destroyer_chassis
 	heavy_tank_amphibious_chassis
 	heavy_tank_flame_chassis
+	heavy_tank_rocket_chassis #added 
 	super_heavy_tank_aa_chassis
 	super_heavy_tank_artillery_chassis
 	super_heavy_tank_destroyer_chassis
@@ -481,6 +494,10 @@ script_enum_equipment_bonus_type = {
 	light_tank_flame_chassis_1
 	light_tank_flame_chassis_2
 	light_tank_flame_chassis_3
+	light_tank_rocket_chassis_0 #added
+	light_tank_rocket_chassis_1 #added
+	light_tank_rocket_chassis_2 #added
+	light_tank_rocket_chassis_3 #added
 	medium_tank_aa_chassis_0
 	medium_tank_aa_chassis_1
 	medium_tank_aa_chassis_2
@@ -501,6 +518,10 @@ script_enum_equipment_bonus_type = {
 	medium_tank_flame_chassis_1
 	medium_tank_flame_chassis_2
 	medium_tank_flame_chassis_3
+	medium_tank_rocket_chassis_0 #added
+	medium_tank_rocket_chassis_1 #added
+	medium_tank_rocket_chassis_2 #added
+	medium_tank_rocket_chassis_3 #added
 	heavy_tank_aa_chassis_0
 	heavy_tank_aa_chassis_1
 	heavy_tank_aa_chassis_2
@@ -521,12 +542,20 @@ script_enum_equipment_bonus_type = {
 	heavy_tank_flame_chassis_1
 	heavy_tank_flame_chassis_2
 	heavy_tank_flame_chassis_3
+	heavy_tank_rocket_chassis_0 #added
+	heavy_tank_rocket_chassis_1 #added
+	heavy_tank_rocket_chassis_2 #added
+	heavy_tank_rocket_chassis_3 #added
 	super_heavy_tank_aa_chassis_1
 	super_heavy_tank_artillery_chassis_1
 	super_heavy_tank_destroyer_chassis_1
 	modern_tank_aa_chassis_1
 	modern_tank_artillery_chassis_1
 	modern_tank_destroyer_chassis_1
+
+
+
+	#no nsb tank 
 	gw_tank_equipment
 	light_tank_equipment_1
 	light_tank_equipment_2
@@ -555,7 +584,6 @@ script_enum_equipment_bonus_type = {
 	heavy_tank_equipment_1
 	heavy_tank_equipment_2
 	heavy_tank_equipment_3
-	
 	heavy_tank_artillery_equipment_1
 	heavy_tank_artillery_equipment_2
 	heavy_tank_artillery_equipment_3
@@ -573,27 +601,8 @@ script_enum_equipment_bonus_type = {
 	super_heavy_tank_artillery_equipment_1
 	super_heavy_tank_destroyer_equipment_1
 	super_heavy_tank_aa_equipment_1
+	amphibious_tank_equipment
 	amphibious_tank_equipment_1
 	amphibious_tank_equipment_2
-	#gdu
-	motorized_rocket_equipment_equipment
-	ship_hull_heavy_bismarck
-	ship_hull_super_heavy_jap
-	amphibious_tank_equipment
 	amphibious_tank_equipment_3
-	light_tank_rocket_chassis
-	medium_tank_rocket_chassis
-	heavy_tank_rocket_chassis
-	light_tank_rocket_chassis_0
-	light_tank_rocket_chassis_1
-	light_tank_rocket_chassis_2
-	light_tank_rocket_chassis_3
-	medium_tank_rocket_chassis_0
-	medium_tank_rocket_chassis_1
-	medium_tank_rocket_chassis_2
-	medium_tank_rocket_chassis_3
-	heavy_tank_rocket_chassis_0
-	heavy_tank_rocket_chassis_1
-	heavy_tank_rocket_chassis_2
-	heavy_tank_rocket_chassis_3
 }
