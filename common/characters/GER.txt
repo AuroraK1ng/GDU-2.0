@@ -1,94 +1,94 @@
-characters={
-	GER_adolf_hitler={
-		name=GER_adolf_hitler
-		portraits={
-			civilian={
-				large=GFX_portrait_GER_adolf_hitler
+characters = {
+	GER_adolf_hitler = {
+		name = GER_adolf_hitler
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_adolf_hitler
 			}
 		}
-		country_leader={
-			ideology=nazism
-			traits={ dictator }
-			expire="1965.1.1.1"
-			id=-1
+		country_leader = {
+			ideology = nazism
+			traits = {
+				dictator
+			}
+			expire = "1965.1.1.1"
+			id = -1
 		}
 	}
-
-	GER_konrad_adenauer={
-		name=GER_konrad_adenauer
-		portraits={
-			civilian={
-				large=GFX_portrait_GER_konrad_adenauer
+	GER_konrad_adenauer = {
+		name = GER_konrad_adenauer
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_konrad_adenauer
 			}
 		}
-		country_leader={
-			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-1
+		country_leader = {
+			ideology = conservatism
+			expire = "1965.1.1.1"
+			id = -1
 		}
 	}
-
-	GER_wilhelm_pieck={
-		name=GER_wilhelm_pieck
-		portraits={
-			civilian={
-				large=GFX_portrait_GER_wilhelm_pieck
+	GER_wilhelm_pieck = {
+		name = GER_wilhelm_pieck
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_wilhelm_pieck
 			}
 		}
-		country_leader={
-			ideology=stalinism
-			traits={ exiled }
-			expire="1965.1.1.1"
-			id=-1
+		country_leader = {
+			ideology = stalinism
+			traits = {
+				exiled
+			}
+			expire = "1965.1.1.1"
+			id = -1
 		}
 	}
-
-	GER_wilhelm_ii={ #Empty Wilhelm II so he doesn't become ruler automatically if the neutrals are in power
-		name=GER_wilhelm_ii
-		portraits={
-			civilian={
-				large="GFX_portrait_ger_wilhelm_ii"
-			}	
-		}
-	}
-
-	GER_wilhelm_iii={ #Empty Wilhelm III so he doesn't become ruler automatically if the neutrals are in power
-		name=GER_wilhelm_iii
-		portraits={
-			civilian={
-				large="GFX_portrait_ger_wilhelm_iii"
-			}	
-		}
-	}
-
-	GER_victoria={ #Empty Vicky3 
-		name=GER_victoria
-		gender = female 
-		portraits={
-			civilian={
-				large="GFX_portrait_ger_victoria_louise"
+	GER_wilhelm_ii = {
+		#Empty Wilhelm II so he doesn't become ruler automatically if the neutrals are in power
+		name = GER_wilhelm_ii
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ger_wilhelm_ii"
 			}
 		}
 	}
-
-	GER_august_von_mackensen={
-		name=GER_august_von_mackensen
-		portraits={
-			civilian={
-				large="GFX_portrait_ger_august_von_mackensen"
+	GER_wilhelm_iii = {
+		#Empty Wilhelm III so he doesn't become ruler automatically if the neutrals are in power
+		name = GER_wilhelm_iii
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ger_wilhelm_iii"
 			}
 		}
 	}
-
-	GER_gerd_von_rundstedt={
-		name=GER_gerd_von_rundstedt
-		portraits={
-			army={
-				large=GFX_portrait_GER_gerd_von_rundstedt
-				small="GFX_idea_gerd_von_rundstedt"
+	GER_victoria = {
+		#Empty Vicky3 
+		name = GER_victoria
+		gender = female
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ger_victoria_louise"
 			}
 		}
-		advisor={
+	}
+	GER_august_von_mackensen = {
+		name = GER_august_von_mackensen
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ger_august_von_mackensen"
+			}
+		}
+	}
+	GER_gerd_von_rundstedt = {
+		name = GER_gerd_von_rundstedt
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_gerd_von_rundstedt
+				small = "GFX_idea_gerd_von_rundstedt"
+			}
+		}
+		advisor = {
 			slot = high_command
 			idea_token = gerd_von_rundstedt
 			ledger = army
@@ -100,68 +100,90 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.500
+				factor = 1.5
 			}
 		}
-		
-		field_marshal = { #13/13
-			traits = {  brilliant_strategist trait_cautious career_officer inflexible_strategist politically_connected infantry_leader organizer }
-	skill = 6
-	attack_skill = 6
-	defense_skill = 8
-	planning_skill = 8
-	logistics_skill = 5
-			
+		field_marshal = {
+			#13/13
+			traits = {
+				brilliant_strategist
+				trait_cautious
+				career_officer
+				inflexible_strategist
+				politically_connected
+				infantry_leader
+				organizer
+			}
+			skill = 6
+			attack_skill = 6
+			defense_skill = 8
+			planning_skill = 8
+			logistics_skill = 5
 		}
 	}
-
-	GER_gunther_von_kluge={
-		name=GER_gunther_von_kluge
-		portraits={
-			army={
-				large=GFX_portrait_GER_gunther_von_kluge
-				small=GFX_portrait_GER_gunther_von_kluge_small
+	GER_gunther_von_kluge = {
+		name = GER_gunther_von_kluge
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_gunther_von_kluge
+				small = GFX_portrait_GER_gunther_von_kluge_small
 			}
 		}
-		field_marshal={
-			traits = { brilliant_strategist offensive_doctrine armor_officer panzer_leader ranger trait_engineer urban_assault_specialist organizer}
-	skill = 8
-	attack_skill = 7
-	defense_skill = 7
-	planning_skill = 6
-	logistics_skill = 6
+		field_marshal = {
+			traits = {
+				brilliant_strategist
+				offensive_doctrine
+				armor_officer
+				panzer_leader
+				ranger
+				trait_engineer
+				urban_assault_specialist
+				organizer
+			}
+			skill = 8
+			attack_skill = 7
+			defense_skill = 7
+			planning_skill = 6
+			logistics_skill = 6
 		}
 	}
-
-	GER_friedrich_paulus={
-		name=GER_friedrich_paulus
-		portraits={
-			army={
-				large=GFX_portrait_GER_friedrich_paulus
-				small=GFX_portrait_GER_friedrich_paulus_small
+	GER_friedrich_paulus = {
+		name = GER_friedrich_paulus
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_friedrich_paulus
+				small = GFX_portrait_GER_friedrich_paulus_small
 			}
 		}
-		corps_commander={
-		traits = { commando infantry_leader urban_assault_specialist media_personality organizer trait_cautious politically_connected career_officer }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 7
+		corps_commander = {
+			traits = {
+				commando
+				infantry_leader
+				urban_assault_specialist
+				media_personality
+				organizer
+				trait_cautious
+				politically_connected
+				career_officer
+			}
+			skill = 4
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 7
 		}
 	}
-
-	GER_erwin_rommel={
-		name="Erwin Rommel NORMAL"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_GER_erwin_rommel.dds"
+	GER_erwin_rommel = {
+		name = "Erwin Rommel NORMAL"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/idea_GER_erwin_rommel.dds"
 			}
-			army={
-				large="gfx/leaders/GER/Portrait_Germany_Erwin_Rommel.dds"
+			army = {
+				large = "gfx/leaders/GER/Portrait_Germany_Erwin_Rommel.dds"
 			}
 		}
-			advisor={
+		advisor = {
 			slot = high_command
 			idea_token = erwin_rommel
 			ledger = army
@@ -176,28 +198,72 @@ characters={
 			}
 			cost = 75
 			ai_will_do = {
-				factor = 8.000
+				factor = 8
 			}
 		}
-		corps_commander={ #17/17
-			traits = { commando trickster inflexible_strategist panzer_expert trait_reckless war_hero media_personality infantry_officer trait_engineer panzer_leader }
-	skill = 6
-	attack_skill = 7
-	defense_skill = 5
-	planning_skill = 3
-	logistics_skill = 2
+		corps_commander = {
+			#17/17
+			traits = {
+				commando
+				trickster
+				inflexible_strategist
+				panzer_expert
+				trait_reckless
+				war_hero
+				media_personality
+				infantry_officer
+				trait_engineer
+				panzer_leader
+			}
+			skill = 6
+			attack_skill = 7
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 2
 		}
 	}
-
-	GER_erich_von_manstein={
-		name=GER_erich_von_manstein
-		portraits={
-			army={
-				large=GFX_portrait_GER_erich_von_manstein
-				small="GFX_idea_manstein"
+	GER_erwin_rommel_AFRICA = {
+		name = "Erwin Rommel AFRICA"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/idea_GER_erwin_rommel.dds"
+			}
+			army = {
+				large = "gfx/leaders/GER/AFRICA_Portrait_Germany_Erwin_Rommel.dds"
 			}
 		}
-		advisor={
+		corps_commander = {
+			#17/17
+			traits = {
+				desert_fox
+				urban_assault_specialist
+				fortress_buster
+				expert_improviser
+				inflexible_strategist
+				panzer_expert
+				trait_reckless
+				war_hero
+				media_personality
+				infantry_officer
+				trait_engineer
+				panzer_leader
+			}
+			skill = 6
+			attack_skill = 7
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	GER_erich_von_manstein = {
+		name = GER_erich_von_manstein
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_erich_von_manstein
+				small = "GFX_idea_manstein"
+			}
+		}
+		advisor = {
 			cost = 150
 			slot = theorist
 			idea_token = manstein
@@ -212,26 +278,34 @@ characters={
 				mobile_warfare_expert
 			}
 		}
-		
-		field_marshal={ #17/17
-			traits = { offensive_doctrine  brilliant_strategist panzer_leader organizer trickster trait_engineer cavalry_officer ranger}
-	skill = 9
-	attack_skill = 8
-	defense_skill = 4
-	planning_skill = 9
-	logistics_skill = 5
+		field_marshal = {
+			#17/17
+			traits = {
+				offensive_doctrine
+				brilliant_strategist
+				panzer_leader
+				organizer
+				trickster
+				trait_engineer
+				cavalry_officer
+				ranger
+			}
+			skill = 9
+			attack_skill = 8
+			defense_skill = 4
+			planning_skill = 9
+			logistics_skill = 5
 		}
 	}
-
-	GER_heinz_guderian={
-		name=GER_heinz_guderian
-		portraits={
-			army={
-				large=GFX_portrait_GER_heinz_guderian
-				small="GFX_idea_heinz_guderian"
+	GER_heinz_guderian = {
+		name = GER_heinz_guderian
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_heinz_guderian
+				small = "GFX_idea_heinz_guderian"
 			}
 		}
-		advisor={
+		advisor = {
 			cost = 150
 			slot = theorist
 			idea_token = heinz_guderian
@@ -246,171 +320,219 @@ characters={
 				blitzkrieg_theorist
 			}
 		}
-		
-		corps_commander={ #17/17
-			traits = { trickster panzer_leader ranger trait_engineer trait_reckless brilliant_strategist career_officer infantry_officer media_personality war_hero urban_assault_specialist}
-	skill = 7
-	attack_skill = 7
-	defense_skill = 5
-	planning_skill = 5
-	logistics_skill = 6
+		corps_commander = {
+			#17/17
+			traits = {
+				trickster
+				panzer_leader
+				ranger
+				trait_engineer
+				trait_reckless
+				brilliant_strategist
+				career_officer
+				infantry_officer
+				media_personality
+				war_hero
+				urban_assault_specialist
+			}
+			skill = 7
+			attack_skill = 7
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 6
 		}
 	}
-
-	GER_wilhelm_list={
-		name=GER_wilhelm_list
-		portraits={
-			army={
-				large=GFX_portrait_GER_wilhelm_list
-				small=GFX_portrait_GER_wilhelm_list_small
+	GER_wilhelm_list = {
+		name = GER_wilhelm_list
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_wilhelm_list
+				small = GFX_portrait_GER_wilhelm_list_small
 			}
 		}
-		corps_commander={
-			traits = { career_officer skilled_staffer infantry_leader }
-	skill = 5
-	attack_skill = 5
-	defense_skill = 5
-	planning_skill = 3
-	logistics_skill = 3
+		corps_commander = {
+			traits = {
+				career_officer
+				skilled_staffer
+				infantry_leader
+			}
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 3
 		}
 	}
-
-	GER_ewald_von_kleist={
-		name=GER_ewald_von_kleist
-		portraits={
-			army={
-				large=GFX_portrait_GER_ewald_von_kleist
-				small=GFX_portrait_GER_ewald_von_kleist_small
+	GER_ewald_von_kleist = {
+		name = GER_ewald_von_kleist
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_ewald_von_kleist
+				small = GFX_portrait_GER_ewald_von_kleist_small
 			}
 		}
-		corps_commander={ #17/17
-			traits = { panzer_leader armor_officer career_officer brilliant_strategist}
-	skill = 4
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 3
+		corps_commander = {
+			#17/17
+			traits = {
+				panzer_leader
+				armor_officer
+				career_officer
+				brilliant_strategist
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
 		}
 	}
-
-	GER_fedor_von_bock={
-		name=GER_fedor_von_bock
-		portraits={
-			army={
-				large=GFX_portrait_GER_fedor_von_bock
-				small=GFX_portrait_GER_fedor_von_bock_small
+	GER_fedor_von_bock = {
+		name = GER_fedor_von_bock
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_fedor_von_bock
+				small = GFX_portrait_GER_fedor_von_bock_small
 			}
 		}
-		corps_commander={ #17/17
-			traits = { brilliant_strategist offensive_doctrine infantry_leader career_officer old_guard  }
-	skill = 6
-	attack_skill = 6
-	defense_skill = 8
-	planning_skill = 5
-	logistics_skill = 6
+		corps_commander = {
+			#17/17
+			traits = {
+				brilliant_strategist
+				offensive_doctrine
+				infantry_leader
+				career_officer
+				old_guard
+			}
+			skill = 6
+			attack_skill = 6
+			defense_skill = 8
+			planning_skill = 5
+			logistics_skill = 6
 		}
 	}
-
-	GER_walter_model={
-		name=GER_walter_model
-		portraits={
-			army={
-				large=GFX_portrait_GER_walter_model
-				small=GFX_portrait_GER_walter_model_small
+	GER_walter_model = {
+		name = GER_walter_model
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_walter_model
+				small = GFX_portrait_GER_walter_model_small
 			}
 		}
-		field_marshal={
-			traits={ brilliant_strategist trait_cautious career_officer inflexible_strategist politically_connected infantry_leader organizer }
-			skill=6
-			attack_skill=5
-			defense_skill=5
-			planning_skill=5
-			logistics_skill=10
-			legacy_id=10
+		field_marshal = {
+			traits = {
+				brilliant_strategist
+				trait_cautious
+				career_officer
+				inflexible_strategist
+				politically_connected
+				infantry_leader
+				organizer
+			}
+			skill = 6
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 10
+			legacy_id = 10
 		}
 	}
-
-	GER_maximilian_von_weichs={
-		name=GER_maximilian_von_weichs
-		portraits={
-			army={
-				large=GFX_portrait_GER_maximilian_von_weichs
-				small=GFX_portrait_GER_maximilian_von_weichs_small
+	GER_maximilian_von_weichs = {
+		name = GER_maximilian_von_weichs
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_maximilian_von_weichs
+				small = GFX_portrait_GER_maximilian_von_weichs_small
 			}
 		}
-		corps_commander={ #17/17
-			traits = {cavalry_officer career_officer cavalry_leader organizer}
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 5
-	logistics_skill = 4
+		corps_commander = {
+			#17/17
+			traits = {
+				cavalry_officer
+				career_officer
+				cavalry_leader
+				organizer
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 4
 		}
 	}
-
-	GER_wilhelm_ritter_von_leeb={
-		name=GER_wilhelm_ritter_von_leeb
-		portraits={
-			army={
-				large=GFX_portrait_GER_wilhelm_ritter_von_leeb
-				small=GFX_portrait_GER_wilhelm_ritter_von_leeb_small
+	GER_wilhelm_ritter_von_leeb = {
+		name = GER_wilhelm_ritter_von_leeb
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_wilhelm_ritter_von_leeb
+				small = GFX_portrait_GER_wilhelm_ritter_von_leeb_small
 			}
 		}
-		corps_commander={
-			traits = { offensive_doctrine infantry_officer harsh_leader career_officer old_guard}
-	skill = 5
-	attack_skill = 6
-	defense_skill = 5
-	planning_skill = 4
-	logistics_skill = 5
+		corps_commander = {
+			traits = {
+				offensive_doctrine
+				infantry_officer
+				harsh_leader
+				career_officer
+				old_guard
+			}
+			skill = 5
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 5
 		}
 	}
-
-	GER_georghans_reinhardt={
-		name=GER_georghans_reinhardt
-		portraits={
-			army={
-				large=GFX_portrait_GER_georghans_reinhardt
-				small=GFX_portrait_GER_georghans_reinhardt_small
+	GER_georghans_reinhardt = {
+		name = GER_georghans_reinhardt
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_georghans_reinhardt
+				small = GFX_portrait_GER_georghans_reinhardt_small
 			}
 		}
-		corps_commander={
-			traits = { panzer_leader swamp_fox harsh_leader}
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 4
+		corps_commander = {
+			traits = {
+				panzer_leader
+				swamp_fox
+				harsh_leader
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
 		}
 	}
-
-	GER_walter_kruger={
-		name=GER_walter_kruger
-		portraits={
-			army={
-				large=GFX_portrait_GER_walter_kruger
-				small=GFX_portrait_GER_walter_kruger_small
+	GER_walter_kruger = {
+		name = GER_walter_kruger
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_walter_kruger
+				small = GFX_portrait_GER_walter_kruger_small
 			}
 		}
-		corps_commander={
-			traits = {  harsh_leader infantry_officer ranger}
-	skill = 4
-	attack_skill = 7
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
+		corps_commander = {
+			traits = {
+				harsh_leader
+				infantry_officer
+				ranger
+			}
+			skill = 4
+			attack_skill = 7
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
 		}
 	}
-
-	GER_kurt_student={
-		name=GER_kurt_student
-		portraits={
-			army={
-				large=GFX_portrait_GER_kurt_student
-				small="GFX_idea_kurt_student"
+	GER_kurt_student = {
+		name = GER_kurt_student
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_kurt_student
+				small = "GFX_idea_kurt_student"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = high_command
 			idea_token = kurt_student
 			ledger = air
@@ -422,194 +544,257 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-		
-		corps_commander={ #18/17
-			traits = { commando hill_fighter urban_assault_specialist harsh_leader trait_reckless politically_connected }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 6
+		corps_commander = {
+			#18/17
+			traits = {
+				commando
+				hill_fighter
+				urban_assault_specialist
+				harsh_leader
+				trait_reckless
+				politically_connected
+			}
+			skill = 4
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 6
 		}
 	}
-
-	GER_erwin_von_witzleben={
-		name=GER_erwin_von_witzleben
-		portraits={
-			army={
-				large=GFX_portrait_GER_erwin_von_witzleben
-				small=GFX_portrait_GER_erwin_von_witzleben_small
+	GER_erwin_von_witzleben = {
+		name = GER_erwin_von_witzleben
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_erwin_von_witzleben
+				small = GFX_portrait_GER_erwin_von_witzleben_small
 			}
 		}
-		corps_commander={ #16/17
-			traits = { war_hero infantry_officer  old_guard infantry_leader trait_engineer fortress_buster hill_fighter }
-	skill = 6
-	attack_skill = 6
-	defense_skill = 10
-	planning_skill = 3
-	logistics_skill = 3
+		corps_commander = {
+			#16/17
+			traits = {
+				war_hero
+				infantry_officer
+				old_guard
+				infantry_leader
+				trait_engineer
+				fortress_buster
+				hill_fighter
+			}
+			skill = 6
+			attack_skill = 6
+			defense_skill = 10
+			planning_skill = 3
+			logistics_skill = 3
 		}
 	}
-
-	GER_hermann_hoth={
-		name=GER_hermann_hoth
-		portraits={
-			army={
-				large=GFX_portrait_GER_hermann_hoth
-				small=GFX_portrait_GER_hermann_hoth_small
+	GER_hermann_hoth = {
+		name = GER_hermann_hoth
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_hermann_hoth
+				small = GFX_portrait_GER_hermann_hoth_small
 			}
 		}
-		corps_commander={ #17/17
-			traits = { panzer_leader harsh_leader trait_reckless brilliant_strategist skilled_staffer trait_engineer urban_assault_specialist}
-	skill = 4
-	attack_skill = 5
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 3
+		corps_commander = {
+			#17/17
+			traits = {
+				panzer_leader
+				harsh_leader
+				trait_reckless
+				brilliant_strategist
+				skilled_staffer
+				trait_engineer
+				urban_assault_specialist
+			}
+			skill = 4
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
 		}
 	}
-
-	GER_johannes_blaskowitz={
-		name=GER_johannes_blaskowitz
-		portraits={
-			army={
-				large=GFX_portrait_GER_johannes_blaskowitz
-				small=GFX_portrait_GER_johannes_blaskowitz_small
+	GER_johannes_blaskowitz = {
+		name = GER_johannes_blaskowitz
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_johannes_blaskowitz
+				small = GFX_portrait_GER_johannes_blaskowitz_small
 			}
 		}
-		corps_commander={  #17/17
-				traits = { infantry_leader trait_cautious inflexible_strategist infantry_officer}
-	skill = 4
-	attack_skill = 2
-	defense_skill = 6
-	planning_skill = 3
-	logistics_skill = 3
+		corps_commander = {
+			#17/17
+			traits = {
+				infantry_leader
+				trait_cautious
+				inflexible_strategist
+				infantry_officer
+			}
+			skill = 4
+			attack_skill = 2
+			defense_skill = 6
+			planning_skill = 3
+			logistics_skill = 3
 		}
 	}
-
-	GER_paul_hausser={
-		name=GER_paul_hausser
-		portraits={
-			army={
-				large=GFX_portrait_GER_paul_hausser
-				small=GFX_portrait_GER_paul_hausser_small
+	GER_paul_hausser = {
+		name = GER_paul_hausser
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_paul_hausser
+				small = GFX_portrait_GER_paul_hausser_small
 			}
 		}
-		corps_commander={ #18/17
-			traits = {  panzer_leader trickster media_personality harsh_leader trait_engineer armor_officer}
-	skill = 5
-	attack_skill = 6
-	defense_skill = 3
-	planning_skill = 5
-	logistics_skill = 3
+		corps_commander = {
+			#18/17
+			traits = {
+				panzer_leader
+				trickster
+				media_personality
+				harsh_leader
+				trait_engineer
+				armor_officer
+			}
+			skill = 5
+			attack_skill = 6
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 3
 		}
 	}
-
-	GER_friedrich_schulz={
-		name=GER_friedrich_schulz
-		portraits={
-			army={
-				large=GFX_portrait_GER_friedrich_schulz
-				small=GFX_portrait_GER_friedrich_schulz_small
+	GER_friedrich_schulz = {
+		name = GER_friedrich_schulz
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_friedrich_schulz
+				small = GFX_portrait_GER_friedrich_schulz_small
 			}
 		}
-		corps_commander={
-			traits = { ranger politically_connected trait_cautious}
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 5
-	logistics_skill = 4
+		corps_commander = {
+			traits = {
+				ranger
+				politically_connected
+				trait_cautious
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 4
 		}
 	}
-
-	GER_georg_von_kuchler={
-		name=GER_georg_von_kuchler
-		portraits={
-			army={
-				large=GFX_portrait_GER_georg_von_kuchler
-				small=GFX_portrait_GER_georg_von_kuchler_small
+	GER_georg_von_kuchler = {
+		name = GER_georg_von_kuchler
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_georg_von_kuchler
+				small = GFX_portrait_GER_georg_von_kuchler_small
 			}
 		}
-		corps_commander={ #17/17
-			traits = { organizer skilled_staffer infantry_officer brilliant_strategist old_guard}
-	skill = 5
-	attack_skill = 5
-	defense_skill = 4
-	planning_skill = 5
-	logistics_skill = 2
+		corps_commander = {
+			#17/17
+			traits = {
+				organizer
+				skilled_staffer
+				infantry_officer
+				brilliant_strategist
+				old_guard
+			}
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 2
 		}
 	}
-
-	GER_alfred_jodl={
-		name=GER_alfred_jodl
-		portraits={
-			army={
-				large=GFX_portrait_GER_alfred_jodl
-				small=GFX_portrait_GER_alfred_jodl_small
+	GER_alfred_jodl = {
+		name = GER_alfred_jodl
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_alfred_jodl
+				small = GFX_portrait_GER_alfred_jodl_small
 			}
 		}
-		corps_commander={ #17/17
-			traits={ adaptable harsh_leader infantry_leader skilled_staffer infantry_expert expert_improviser }
-			skill=6
-			attack_skill=4
-			defense_skill=2
-			planning_skill=8
-			logistics_skill=5
-			legacy_id=-1
+		corps_commander = {
+			#17/17
+			traits = {
+				adaptable
+				harsh_leader
+				infantry_leader
+				skilled_staffer
+				infantry_expert
+				expert_improviser
+			}
+			skill = 6
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 8
+			logistics_skill = 5
+			legacy_id = -1
 		}
 	}
-
-	GER_sepp_dietrich={
-		name=GER_sepp_dietrich
-		portraits={
-			army={
-				large=GFX_portrait_GER_sepp_dietrich
-				small=GFX_portrait_GER_sepp_dietrich_small
+	GER_sepp_dietrich = {
+		name = GER_sepp_dietrich
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_sepp_dietrich
+				small = GFX_portrait_GER_sepp_dietrich_small
 			}
 		}
-		corps_commander={ #17/17
-			traits = { panzer_leader harsh_leader cavalry_officer trait_reckless politically_connected}
-	skill = 3
-	attack_skill = 5
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
+		corps_commander = {
+			#17/17
+			traits = {
+				panzer_leader
+				harsh_leader
+				cavalry_officer
+				trait_reckless
+				politically_connected
+			}
+			skill = 3
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
 		}
 	}
-
-	GER_hasso_von_manteuffel={
-		name=GER_hasso_von_manteuffel
-		portraits={
-			army={
-				large=GFX_portrait_GER_hasso_von_manteuffel
-				small=GFX_portrait_GER_hasso_von_manteuffel_small
+	GER_hasso_von_manteuffel = {
+		name = GER_hasso_von_manteuffel
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_hasso_von_manteuffel
+				small = GFX_portrait_GER_hasso_von_manteuffel_small
 			}
 		}
-		corps_commander={ #17/17
-			traits = { panzer_leader hill_fighter career_officer media_personality infantry_officer old_guard}
-	skill = 4
-	attack_skill = 2
-	defense_skill = 6
-	planning_skill = 3
-	logistics_skill = 3
+		corps_commander = {
+			#17/17
+			traits = {
+				panzer_leader
+				hill_fighter
+				career_officer
+				media_personality
+				infantry_officer
+				old_guard
+			}
+			skill = 4
+			attack_skill = 2
+			defense_skill = 6
+			planning_skill = 3
+			logistics_skill = 3
 		}
 	}
-
-	GER_albert_kesselring={
-		name=GER_albert_kesselring
-		portraits={
-			army={
-				small="GFX_idea_albert_kesselring"
+	GER_albert_kesselring = {
+		name = GER_albert_kesselring
+		portraits = {
+			army = {
+				small = "GFX_idea_albert_kesselring"
 			}
-			army={
-				large=GFX_portrait_GER_albert_kesselring
+			army = {
+				large = GFX_portrait_GER_albert_kesselring
 			}
 		}
-		advisor={
+		advisor = {
 			slot = air_chief
 			idea_token = albert_kesselring
 			allowed = {
@@ -620,12 +805,22 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-		
-		field_marshal={
-			traits = { media_personality old_guard trait_cautious career_officer war_hero inflexible_strategist organizer infantry_leader skilled_staffer trait_mountaineer}
+		field_marshal = {
+			traits = {
+				media_personality
+				old_guard
+				trait_cautious
+				career_officer
+				war_hero
+				inflexible_strategist
+				organizer
+				infantry_leader
+				skilled_staffer
+				trait_mountaineer
+			}
 			skill = 6
 			attack_skill = 7
 			defense_skill = 6
@@ -633,58 +828,83 @@ characters={
 			logistics_skill = 5
 		}
 	}
-
-	GER_gotthard_heinrici={
-		name=GER_gotthard_heinrici
-		portraits={
-			army={
-				large=GFX_portrait_GER_gotthard_heinrici
-				small=GFX_portrait_GER_gotthard_heinrici_small
+	GER_gotthard_heinrici = {
+		name = GER_gotthard_heinrici
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_gotthard_heinrici
+				small = GFX_portrait_GER_gotthard_heinrici_small
 			}
 		}
-		corps_commander={
-			traits = { trait_engineer fortress_buster infantry_leader trait_cautious fake_skilled_staffer commando camouflage_expert ambusher }
-		traits = {  fortress_buster trickster hill_fighter trait_engineer infantry_leader organizer career_officer war_hero brilliant_strategist old_guard}
-	skill = 5
-	attack_skill = 5
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 3
-
+		corps_commander = {
+			traits = {
+				trait_engineer
+				fortress_buster
+				infantry_leader
+				trait_cautious
+				fake_skilled_staffer
+				commando
+				camouflage_expert
+				ambusher
+			}
+			traits = {
+				fortress_buster
+				trickster
+				hill_fighter
+				trait_engineer
+				infantry_leader
+				organizer
+				career_officer
+				war_hero
+				brilliant_strategist
+				old_guard
+			}
+			skill = 5
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 3
 		}
 	}
-
-	GER_ernsteberhard_hell={
-		name=GER_ernsteberhard_hell
-		portraits={
-			army={
-				large=GFX_portrait_GER_ernsteberhard_hell
-				small=GFX_portrait_GER_ernsteberhard_hell_small
+	GER_ernsteberhard_hell = {
+		name = GER_ernsteberhard_hell
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_ernsteberhard_hell
+				small = GFX_portrait_GER_ernsteberhard_hell_small
 			}
 		}
-		corps_commander={  #17/17
-			traits = { winter_specialist old_guard war_hero career_officer media_personality harsh_leader cavalry_officer skilled_staffer}
-	skill = 4
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 5
+		corps_commander = {
+			#17/17
+			traits = {
+				winter_specialist
+				old_guard
+				war_hero
+				career_officer
+				media_personality
+				harsh_leader
+				cavalry_officer
+				skilled_staffer
+			}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 5
 		}
 	}
-
-
-	GER_karl_donitz={
-		name=GER_karl_donitz
-		portraits={
-			army={
-				large=GFX_portrait_GER_karl_donitz
-				small=GFX_portrait_GER_karl_donitz_small
+	GER_karl_donitz = {
+		name = GER_karl_donitz
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_karl_donitz
+				small = GFX_portrait_GER_karl_donitz_small
 			}
-			army={
-				small="GFX_idea_donitz"
+			army = {
+				small = "GFX_idea_donitz"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = navy_chief
 			idea_token = donitz
 			allowed = {
@@ -695,32 +915,35 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 0.100
+				factor = 0.1
 			}
 		}
-		
-		navy_leader={
-			traits = { seawolf superior_tactician spotter blue_water_expert }
-	skill = 7
-	attack_skill = 7
-	defense_skill = 2
-	maneuvering_skill = 5
-	coordination_skill = 8
+		navy_leader = {
+			traits = {
+				seawolf
+				superior_tactician
+				spotter
+				blue_water_expert
+			}
+			skill = 7
+			attack_skill = 7
+			defense_skill = 2
+			maneuvering_skill = 5
+			coordination_skill = 8
 		}
 	}
-
-	GER_erich_raeder={
-		name=GER_erich_raeder
-		portraits={
-			army={
-				large=GFX_portrait_GER_erich_raeder
-				small=GFX_portrait_GER_erich_raeder_small
+	GER_erich_raeder = {
+		name = GER_erich_raeder
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_erich_raeder
+				small = GFX_portrait_GER_erich_raeder_small
 			}
-			army={
-				small="GFX_idea_raeder"
+			army = {
+				small = "GFX_idea_raeder"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = navy_chief
 			idea_token = raeder
 			allowed = {
@@ -731,32 +954,37 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 0.100
+				factor = 0.1
 			}
 		}
-		
-		navy_leader={
-			traits = { old_guard_navy gunnery_expert fly_swatter superior_tactician ironside fleet_protector }
-	skill = 6
-	attack_skill = 5
-	defense_skill = 4
-	maneuvering_skill = 5
-	coordination_skill = 7
+		navy_leader = {
+			traits = {
+				old_guard_navy
+				gunnery_expert
+				fly_swatter
+				superior_tactician
+				ironside
+				fleet_protector
+			}
+			skill = 6
+			attack_skill = 5
+			defense_skill = 4
+			maneuvering_skill = 5
+			coordination_skill = 7
 		}
 	}
-
-	GER_alfred_saalwachter={
-		name=GER_alfred_saalwachter
-		portraits={
-			army={
-				large=GFX_portrait_GER_alfred_saalwachter
-				small=GFX_portrait_GER_alfred_saalwachter_small
+	GER_alfred_saalwachter = {
+		name = GER_alfred_saalwachter
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_alfred_saalwachter
+				small = GFX_portrait_GER_alfred_saalwachter_small
 			}
-			army={
-				small="GFX_idea_alfred_saalwachter"
+			army = {
+				small = "GFX_idea_alfred_saalwachter"
 			}
 		}
-		advisor={
+		advisor = {
 			cost = 150
 			slot = theorist
 			idea_token = alfred_saalwachter
@@ -768,65 +996,77 @@ characters={
 				submarine_specialist
 			}
 		}
-		
-		navy_leader={
-			traits = { bold fleet_protector blockade_runner ironside blue_water_expert }
-	skill = 4
-	attack_skill = 5
-	defense_skill = 2
-	maneuvering_skill = 5
-	coordination_skill = 4
+		navy_leader = {
+			traits = {
+				bold
+				fleet_protector
+				blockade_runner
+				ironside
+				blue_water_expert
+			}
+			skill = 4
+			attack_skill = 5
+			defense_skill = 2
+			maneuvering_skill = 5
+			coordination_skill = 4
 		}
 	}
-
-	GER_hermann_boehm={
-		name=GER_hermann_boehm
-		portraits={
-			army={
-				large=GFX_portrait_GER_hermann_boehm
-				small=GFX_portrait_GER_hermann_boehm_small
+	GER_hermann_boehm = {
+		name = GER_hermann_boehm
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_hermann_boehm
+				small = GFX_portrait_GER_hermann_boehm_small
 			}
 		}
-		navy_leader={
-			traits = { craven superior_tactician seawolf }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	maneuvering_skill = 5
-	coordination_skill = 2
+		navy_leader = {
+			traits = {
+				craven
+				superior_tactician
+				seawolf
+			}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			maneuvering_skill = 5
+			coordination_skill = 2
 		}
 	}
-
-	GER_wilhelm_marschall={
-		name=GER_wilhelm_marschall
-		portraits={
-			army={
-				large=GFX_portrait_GER_wilhelm_marschall
-				small=GFX_portrait_GER_wilhelm_marschall_small
+	GER_wilhelm_marschall = {
+		name = GER_wilhelm_marschall
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_wilhelm_marschall
+				small = GFX_portrait_GER_wilhelm_marschall_small
 			}
 		}
-		navy_leader={
-			traits = { navy_career_officer bold spotter fly_swatter blue_water_expert }
-	skill = 5
-	attack_skill = 5
-	defense_skill = 2
-	maneuvering_skill = 5
-	coordination_skill = 5
+		navy_leader = {
+			traits = {
+				navy_career_officer
+				bold
+				spotter
+				fly_swatter
+				blue_water_expert
+			}
+			skill = 5
+			attack_skill = 5
+			defense_skill = 2
+			maneuvering_skill = 5
+			coordination_skill = 5
 		}
 	}
-
-	GER_gunther_lutjens={
-		name=GER_gunther_lutjens
-		portraits={
-			army={
-				large=GFX_portrait_GER_gunther_lutjens
-				small=GFX_portrait_GER_gunther_lutjens_small
+	GER_gunther_lutjens = {
+		name = GER_gunther_lutjens
+		portraits = {
+			army = {
+				large = GFX_portrait_GER_gunther_lutjens
+				small = GFX_portrait_GER_gunther_lutjens_small
 			}
-			army={
-				small="GFX_idea_gunther_lutjens"
+			army = {
+				small = "GFX_idea_gunther_lutjens"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = high_command
 			idea_token = gunther_lutjens
 			ledger = navy
@@ -838,26 +1078,30 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-		
-		navy_leader={
-			traits = { navy_media_personality battleship_adherent superior_tactician ironside blue_water_expert  }
-	skill = 6
-	attack_skill = 7
-	defense_skill = 5
-	maneuvering_skill = 5
-	coordination_skill = 2
+		navy_leader = {
+			traits = {
+				navy_media_personality
+				battleship_adherent
+				superior_tactician
+				ironside
+				blue_water_expert
+			}
+			skill = 6
+			attack_skill = 7
+			defense_skill = 5
+			maneuvering_skill = 5
+			coordination_skill = 2
 		}
 	}
-
 	GER_alexander_von_falkenhausen = {
 		name = CHI_alexander_von_falkenhausen
 		portraits = {
 			army = {
-				large="GFX_portrait_chi_alexander_von_falkenhausen"
-				small="GFX_idea_CHI_alexander_von_falkenhausen" 
+				large = "GFX_portrait_chi_alexander_von_falkenhausen"
+				small = "GFX_idea_CHI_alexander_von_falkenhausen"
 			}
 		}
 		corps_commander = {
@@ -867,30 +1111,26 @@ characters={
 			planning_skill = 3
 			logistics_skill = 3
 			legacy_id = 603
-			traits = { infantry_officer }
+			traits = {
+				infantry_officer
+			}
 			visible = {
 				has_global_flag = falkenhausen_recalled
 			}
 		}
 	}
-
-
 	### THEORISTS ###
-
 	# Von Manstein up there
-
 	# Guderian up there
-
 	# Saalwachter up there
-
-	GER_von_braun={
-		name=GER_von_braun
-		portraits={
-			army={
-				small="GFX_idea_von_braun"
+	GER_von_braun = {
+		name = GER_von_braun
+		portraits = {
+			army = {
+				small = "GFX_idea_von_braun"
 			}
 		}
-		advisor={
+		advisor = {
 			cost = 150
 			slot = theorist
 			idea_token = von_braun
@@ -899,22 +1139,21 @@ characters={
 				original_tag = GER
 			}
 			research_bonus = {
-				rocketry = 0.150
+				rocketry = 0.15
 			}
 			traits = {
 				rocket_scientist
 			}
 		}
 	}
-
-	GER_heisenberg={
-		name=GER_heisenberg
-		portraits={
-			army={
-				small="GFX_idea_heisenberg"
+	GER_heisenberg = {
+		name = GER_heisenberg
+		portraits = {
+			army = {
+				small = "GFX_idea_heisenberg"
 			}
 		}
-		advisor={
+		advisor = {
 			cost = 150
 			slot = theorist
 			idea_token = heisenberg
@@ -923,22 +1162,21 @@ characters={
 				original_tag = GER
 			}
 			research_bonus = {
-				nuclear = 0.150
+				nuclear = 0.15
 			}
 			traits = {
 				nuclear_scientist
 			}
 		}
 	}
-
-	GER_wolfram_von_richthofen={
-		name=GER_wolfram_von_richthofen
-		portraits={
-			army={
-				small="GFX_idea_wolfram_von_richthofen"
+	GER_wolfram_von_richthofen = {
+		name = GER_wolfram_von_richthofen
+		portraits = {
+			army = {
+				small = "GFX_idea_wolfram_von_richthofen"
 			}
 		}
-		advisor={
+		advisor = {
 			cost = 150
 			slot = theorist
 			idea_token = wolfram_von_richthofen
@@ -954,15 +1192,14 @@ characters={
 			}
 		}
 	}
-
-	GER_walther_wever={
-		name=GER_walther_wever
-		portraits={
-			army={
-				small="GFX_idea_walther_wever"
+	GER_walther_wever = {
+		name = GER_walther_wever
+		portraits = {
+			army = {
+				small = "GFX_idea_walther_wever"
 			}
 		}
-		advisor={
+		advisor = {
 			cost = 150
 			slot = theorist
 			idea_token = walther_wever
@@ -973,18 +1210,19 @@ characters={
 			allowed = {
 				original_tag = GER
 			}
-			traits = { air_warfare_theorist }
-		}
-	}
-
-	GER_ernst_udet={
-		name=GER_ernst_udet
-		portraits={
-			army={
-				small="GFX_idea_ernst_udet"
+			traits = {
+				air_warfare_theorist
 			}
 		}
-		advisor={
+	}
+	GER_ernst_udet = {
+		name = GER_ernst_udet
+		portraits = {
+			army = {
+				small = "GFX_idea_ernst_udet"
+			}
+		}
+		advisor = {
 			cost = 150
 			slot = theorist
 			idea_token = ernst_udet
@@ -1000,15 +1238,14 @@ characters={
 			}
 		}
 	}
-
-	GER_otto_ciliax={
-		name=GER_otto_ciliax
-		portraits={
-			army={
-				small="GFX_idea_otto_ciliax"
+	GER_otto_ciliax = {
+		name = GER_otto_ciliax
+		portraits = {
+			army = {
+				small = "GFX_idea_otto_ciliax"
 			}
 		}
-		advisor={
+		advisor = {
 			cost = 150
 			slot = theorist
 			idea_token = otto_ciliax
@@ -1019,20 +1256,20 @@ characters={
 			allowed = {
 				original_tag = GER
 			}
-			traits = { naval_theorist }
-		}
-	}
-
-	### ARMY CHIEFS ###
-
-	GER_ludwig_beck={
-		name=GER_ludwig_beck
-		portraits={
-			army={
-				small="GFX_idea_ludwig_beck"
+			traits = {
+				naval_theorist
 			}
 		}
-		advisor={
+	}
+	### ARMY CHIEFS ###
+	GER_ludwig_beck = {
+		name = GER_ludwig_beck
+		portraits = {
+			army = {
+				small = "GFX_idea_ludwig_beck"
+			}
+		}
+		advisor = {
 			slot = army_chief
 			idea_token = ludwig_beck
 			allowed = {
@@ -1043,19 +1280,18 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
 	}
-
-	GER_wilhelm_keitel={
-		name=GER_wilhelm_keitel
-		portraits={
-			army={
-				small="GFX_idea_wilhelm_keitel"
+	GER_wilhelm_keitel = {
+		name = GER_wilhelm_keitel
+		portraits = {
+			army = {
+				small = "GFX_idea_wilhelm_keitel"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = army_chief
 			idea_token = wilhelm_keitel
 			allowed = {
@@ -1069,19 +1305,18 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
-			}
-		}		
-	}
-
-	GER_franz_halder={
-		name=GER_franz_halder
-		portraits={
-			army={
-				small="GFX_idea_franz_halder"
+				factor = 1
 			}
 		}
-		advisor={
+	}
+	GER_franz_halder = {
+		name = GER_franz_halder
+		portraits = {
+			army = {
+				small = "GFX_idea_franz_halder"
+			}
+		}
+		advisor = {
 			slot = army_chief
 			idea_token = franz_halder
 			allowed = {
@@ -1092,19 +1327,18 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
 	}
-
-	GER_walther_von_brauchitsch={
-		name=GER_walther_von_brauchitsch
-		portraits={
-			army={
-				small="GFX_idea_walther_von_brauchitsch"
+	GER_walther_von_brauchitsch = {
+		name = GER_walther_von_brauchitsch
+		portraits = {
+			army = {
+				small = "GFX_idea_walther_von_brauchitsch"
 			}
 		}
-		advisor={	
+		advisor = {
 			slot = army_chief
 			idea_token = walther_von_brauchitsch
 			allowed = {
@@ -1118,34 +1352,26 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
 	}
-
-
 	### NAVY CHIEFS ###
-
 	# Dönitz up there
-
 	# Raeder up there
-
-
 	### AIR CHIEFS ###
-
 	# Kesselring up there
-
-	GER_hermann_goring={
-		name=GER_hermann_goring
-		portraits={
-			army={
-				small="GFX_idea_goering"
+	GER_hermann_goring = {
+		name = GER_hermann_goring
+		portraits = {
+			army = {
+				small = "GFX_idea_goering"
 			}
-			civilian={
-				large=GFX_portrait_GER_hermann_goring
+			civilian = {
+				large = GFX_portrait_GER_hermann_goring
 			}
 		}
-		advisor={
+		advisor = {
 			slot = air_chief
 			idea_token = goering
 			allowed = {
@@ -1162,19 +1388,18 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 2.000
+				factor = 2
 			}
 		}
 	}
-
-	GER_ritter_von_greim={
-		name=GER_ritter_von_greim
-		portraits={
-			army={
-				small="GFX_idea_ritter_von_greim"
+	GER_ritter_von_greim = {
+		name = GER_ritter_von_greim
+		portraits = {
+			army = {
+				small = "GFX_idea_ritter_von_greim"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = air_chief
 			idea_token = ritter_von_greim
 			allowed = {
@@ -1188,30 +1413,23 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 0.500
+				factor = 0.5
 			}
 		}
 	}
-
-
 	### MILITARY HIGH COMMAND ###
-
 	# Von Rundstedt up there
-
 	# Rommel up there
-
 	# Student up there
-
 	# Lütjens up there
-
-	GER_ferdinand_schorner={
-		name=GER_ferdinand_schorner
-		portraits={
-			army={
-				small="GFX_idea_ferdinand_schorner"
+	GER_ferdinand_schorner = {
+		name = GER_ferdinand_schorner
+		portraits = {
+			army = {
+				small = "GFX_idea_ferdinand_schorner"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = high_command
 			idea_token = ferdinand_schorner
 			ledger = army
@@ -1223,18 +1441,18 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 2.000
+				factor = 2
 			}
 		}
 	}
-	GER_ferdinand_schorner_2 ={
-		name=GER_ferdinand_schorner
-		portraits={
-			army={
-				small="GFX_idea_ferdinand_schorner"
+	GER_ferdinand_schorner_2 = {
+		name = GER_ferdinand_schorner
+		portraits = {
+			army = {
+				small = "GFX_idea_ferdinand_schorner"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = high_command
 			idea_token = ferdinand_schorner_2
 			ledger = army
@@ -1243,26 +1461,24 @@ characters={
 			}
 			available = {
 				has_war_with = SOV
-				
 			}
 			traits = {
 				army_infantry_4
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
 	}
-
-	GER_werner_von_fritsch={
-		name=GER_werner_von_fritsch
-		portraits={
-			army={
-				small="GFX_idea_werner_von_fritsch"
+	GER_werner_von_fritsch = {
+		name = GER_werner_von_fritsch
+		portraits = {
+			army = {
+				small = "GFX_idea_werner_von_fritsch"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = high_command
 			idea_token = werner_von_fritsch
 			ledger = army
@@ -1274,19 +1490,18 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.500
+				factor = 1.5
 			}
 		}
 	}
-
-	GER_hugo_sperrle={
-		name=GER_hugo_sperrle
-		portraits={
-			army={
-				small="GFX_idea_hugo_sperrle"
+	GER_hugo_sperrle = {
+		name = GER_hugo_sperrle
+		portraits = {
+			army = {
+				small = "GFX_idea_hugo_sperrle"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = high_command
 			idea_token = hugo_sperrle
 			ledger = air
@@ -1301,19 +1516,18 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
 	}
-
-	GER_erhard_milch={
-		name=GER_erhard_milch
-		portraits={
-			army={
-				small="GFX_idea_erhard_milch"
+	GER_erhard_milch = {
+		name = GER_erhard_milch
+		portraits = {
+			army = {
+				small = "GFX_idea_erhard_milch"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = high_command
 			idea_token = erhard_milch
 			ledger = air
@@ -1325,19 +1539,18 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
 	}
-
-	GER_erich_bey={
-		name=GER_erich_bey
-		portraits={
-			army={
-				small="GFX_idea_erich_bey"
+	GER_erich_bey = {
+		name = GER_erich_bey
+		portraits = {
+			army = {
+				small = "GFX_idea_erich_bey"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = high_command
 			idea_token = erich_bey
 			ledger = navy
@@ -1349,19 +1562,18 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
 	}
-	
-	GER_viktor_schutze={
-		name=GER_viktor_schutze
-		portraits={
-			army={
-				small="GFX_idea_viktor_schutze"
+	GER_viktor_schutze = {
+		name = GER_viktor_schutze
+		portraits = {
+			army = {
+				small = "GFX_idea_viktor_schutze"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = high_command
 			idea_token = viktor_schutze
 			ledger = navy
@@ -1371,121 +1583,113 @@ characters={
 			traits = {
 				navy_anti_submarine_1
 			}
-			cost =  50
+			cost = 50
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
 	}
-	
-
 	### POLITICAL ADVISORS ###
-
-	GER_fritz_todt={
-		name=GER_fritz_todt
-		portraits={
-			army={
-				small="GFX_idea_todt"
+	GER_fritz_todt = {
+		name = GER_fritz_todt
+		portraits = {
+			army = {
+				small = "GFX_idea_todt"
 			}
-			
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = todt
 			allowed = {
 				original_tag = GER
 			}
 			available = {
-				
 			}
 			traits = {
-				fortification_engineer 
+				fortification_engineer
 			}
 			ai_will_do = {
-				factor = 0.500
+				factor = 0.5
 			}
 		}
 	}
-
-	GER_albert_speer={ 
-		name=GER_albert_speer
-		portraits={
-			army={
-				small="GFX_idea_speer"
+	GER_albert_speer = {
+		name = GER_albert_speer
+		portraits = {
+			army = {
+				small = "GFX_idea_speer"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = speer
 			allowed = {
 				original_tag = GER
 			}
-			available = { 
+			available = {
 				date > 1941.6.1
-				GER = { has_idea = tot_economic_mobilisation }
+				GER = {
+					has_idea = tot_economic_mobilisation
+				}
 			}
 			traits = {
-				total_war_organizer 
-			}
-		}		
-	}
-
-	GER_hjalmar_schacht={
-		name=GER_hjalmar_schacht
-		portraits={
-			army={
-				small="GFX_idea_hjalmar_schacht"
+				total_war_organizer
 			}
 		}
-		advisor={
+	}
+	GER_hjalmar_schacht = {
+		name = GER_hjalmar_schacht
+		portraits = {
+			army = {
+				small = "GFX_idea_hjalmar_schacht"
+			}
+		}
+		advisor = {
 			slot = political_advisor
 			idea_token = hjalmar_schacht
-			cost = 150.000
+			cost = 150
 			allowed = {
 				original_tag = GER
 			}
 			available = {
-				
 			}
 			traits = {
-				captain_of_industry 
+				captain_of_industry
 			}
 			ai_will_do = {
-				factor = 2.000
-			}
-		}		
-	}
-
-	GER_walther_funk={
-		name=GER_walther_funk
-		portraits={
-			army={
-				small="GFX_idea_walther_funk"
+				factor = 2
 			}
 		}
-		advisor={
+	}
+	GER_walther_funk = {
+		name = GER_walther_funk
+		portraits = {
+			army = {
+				small = "GFX_idea_walther_funk"
+			}
+		}
+		advisor = {
 			slot = political_advisor
 			idea_token = walther_funk
 			allowed = {
 				original_tag = GER
 			}
 			traits = {
-				war_industrialist 
+				war_industrialist
 			}
 			ai_will_do = {
-				factor = 1.000
-			}
-		}		
-	}
-
-	GER_ernst_thalmann={
-		name=GER_ernst_thalmann
-		portraits={
-			army={
-				small="GFX_idea_ernst_thalmann"
+				factor = 1
 			}
 		}
-		advisor={
+	}
+	GER_ernst_thalmann = {
+		name = GER_ernst_thalmann
+		portraits = {
+			army = {
+				small = "GFX_idea_ernst_thalmann"
+			}
+		}
+		advisor = {
 			slot = political_advisor
 			idea_token = ernst_thalmann
 			allowed = {
@@ -1502,27 +1706,26 @@ characters={
 				}
 			}
 			traits = {
-				communist_revolutionary 
+				communist_revolutionary
 			}
 			do_effect = {
 				not = {
-					has_government = communism 
+					has_government = communism
 				}
 			}
 			ai_will_do = {
-				factor = 0.000
+				factor = 0
 			}
 		}
 	}
-
-	GER_kurt_schumacher={
-		name=GER_kurt_schumacher
-		portraits={
-			army={
-				small="GFX_idea_kurt_schumacher"
+	GER_kurt_schumacher = {
+		name = GER_kurt_schumacher
+		portraits = {
+			army = {
+				small = "GFX_idea_kurt_schumacher"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = kurt_schumacher
 			allowed = {
@@ -1532,70 +1735,66 @@ characters={
 				always = no
 			}
 			traits = {
-				democratic_reformer 
+				democratic_reformer
 			}
 			do_effect = {
 				NOT = {
-					has_government = democratic 
+					has_government = democratic
 				}
 			}
 			ai_will_do = {
-				factor = 0.000
-			}
-		}		
-	}
-
-	GER_joseph_goebbels={
-		name=GER_joseph_goebbels
-		portraits={
-			army={
-				small="GFX_idea_joseph_goebbels"
+				factor = 0
 			}
 		}
-		advisor={
+	}
+	GER_joseph_goebbels = {
+		name = GER_joseph_goebbels
+		portraits = {
+			army = {
+				small = "GFX_idea_joseph_goebbels"
+			}
+		}
+		advisor = {
 			slot = political_advisor
 			idea_token = joseph_goebbels
 			allowed = {
 				original_tag = GER
 			}
 			available = {
-				
-				
 			}
 			traits = {
-				fascist_demagogue propaganda_expert 
+				fascist_demagogue
+				propaganda_expert
 			}
 			do_effect = {
 				NOT = {
-					has_government = fascism 
+					has_government = fascism
 				}
 			}
 			ai_will_do = {
-				factor = 24.000
+				factor = 24
 			}
 		}
 	}
-
-	GER_rudolf_hess={
-		name=GER_rudolf_hess
-		portraits={
-			army={
-				small="GFX_idea_rudolf_hess"
+	GER_rudolf_hess = {
+		name = GER_rudolf_hess
+		portraits = {
+			army = {
+				small = "GFX_idea_rudolf_hess"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = rudolf_hess
 			allowed = {
-				
 			}
 			available = {
 				NOT = {
-					has_country_flag = flight_of_hess 
+					has_country_flag = flight_of_hess
 				}
 				OR = {
-					has_government = fascism 
-					has_country_flag = GER_reinstated_nazi_leadership 
+					has_government = fascism
+					has_country_flag = GER_reinstated_nazi_leadership
 				}
 			}
 			traits = {
@@ -1603,116 +1802,107 @@ characters={
 			}
 		}
 	}
-
-	GER_heinrich_himmler={
-		name=GER_heinrich_himmler
-		portraits={
-			army={
-				small="GFX_idea_heinrich_himmler"
-				large=GFX_portrait_GER_heinrich_himmler
+	GER_heinrich_himmler = {
+		name = GER_heinrich_himmler
+		portraits = {
+			army = {
+				small = "GFX_idea_heinrich_himmler"
+				large = GFX_portrait_GER_heinrich_himmler
 			}
 			civilian = {
-				large=GFX_portrait_GER_heinrich_himmler
+				large = GFX_portrait_GER_heinrich_himmler
 			}
 		}
 		allowed_civil_war = {
-			
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = heinrich_himmler
 			allowed = {
 				original_tag = GER
 			}
 			available = {
-				
 			}
 			on_add = {
 				custom_effect_tooltip = GER_SS_himmler_recruit
 			}
 			traits = {
-				prince_of_terror 
+				prince_of_terror
 			}
 		}
 	}
-
-	GER_martin_bormann={
-		name=GER_martin_bormann
-		portraits={
-			army={
-				small="GFX_idea_martin_bormann"
+	GER_martin_bormann = {
+		name = GER_martin_bormann
+		portraits = {
+			army = {
+				small = "GFX_idea_martin_bormann"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = martin_bormann
 			allowed = {
 				original_tag = GER
 			}
 			available = {
-				
 			}
 			ai_will_do = {
-				factor = 30.000
+				factor = 30
 			}
 			traits = {
-				silent_workhorse 
-			}
-		}		
-	}
-
-	GER_joachim_von_ribbentrop={
-		name=GER_joachim_von_ribbentrop
-		portraits={
-			army={
-				small="GFX_idea_joachim_von_ribbentrop"
+				silent_workhorse
 			}
 		}
-		advisor={
+	}
+	GER_joachim_von_ribbentrop = {
+		name = GER_joachim_von_ribbentrop
+		portraits = {
+			army = {
+				small = "GFX_idea_joachim_von_ribbentrop"
+			}
+		}
+		advisor = {
 			slot = political_advisor
 			idea_token = joachim_von_ribbentrop
 			allowed = {
 				original_tag = GER
 			}
 			available = {
-				
 			}
 			traits = {
-				backroom_backstabber 
+				backroom_backstabber
 			}
 			ai_will_do = {
-				factor = 0.000
+				factor = 0
 			}
 		}
 	}
-
-	GER_konstantin_von_neurath={
-		name=GER_konstantin_von_neurath
-		portraits={
-			army={
-				small="GFX_idea_konstantin_von_neurath"
+	GER_konstantin_von_neurath = {
+		name = GER_konstantin_von_neurath
+		portraits = {
+			army = {
+				small = "GFX_idea_konstantin_von_neurath"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = konstantin_von_neurath
 			allowed = {
 				original_tag = GER
 			}
 			traits = {
-				smooth_talking_charmer 
+				smooth_talking_charmer
 			}
 		}
 	}
-
-	GER_hans_oster={
-		name=GER_hans_oster
-		portraits={
-			army={
-				small="GFX_idea_GER_hans_oster"
+	GER_hans_oster = {
+		name = GER_hans_oster
+		portraits = {
+			army = {
+				small = "GFX_idea_GER_hans_oster"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = GER_hans_oster
 			allowed = {
@@ -1723,22 +1913,21 @@ characters={
 				always = no
 			}
 			traits = {
-				anti_fascist_agent 
+				anti_fascist_agent
 			}
 			ai_will_do = {
-				factor = 0.000
+				factor = 0
 			}
 		}
 	}
-
-	GER_alfred_hugenberg={
-		name=GER_alfred_hugenberg
-		portraits={
-			army={
-				small="GFX_idea_GER_alfred_hugenberg"
+	GER_alfred_hugenberg = {
+		name = GER_alfred_hugenberg
+		portraits = {
+			army = {
+				small = "GFX_idea_GER_alfred_hugenberg"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = GER_alfred_hugenberg
 			allowed = {
@@ -1752,22 +1941,21 @@ characters={
 				cat_trade_interdiction = 0.2
 			}
 			traits = {
-				monarchist_media_mogul 
+				monarchist_media_mogul
 			}
 			ai_will_do = {
-				factor = 0.000
+				factor = 0
 			}
 		}
 	}
-	
-	GER_carl_friedrich_goerdeler={
-		name=GER_carl_friedrich_goerdeler
-		portraits={
-			army={
-				small="GFX_idea_GER_carl_friedrich_goerdeler"
+	GER_carl_friedrich_goerdeler = {
+		name = GER_carl_friedrich_goerdeler
+		portraits = {
+			army = {
+				small = "GFX_idea_GER_carl_friedrich_goerdeler"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = GER_carl_friedrich_goerdeler
 			allowed = {
@@ -1778,22 +1966,21 @@ characters={
 				date > 1943.1.1
 			}
 			traits = {
-				economist 
+				economist
 			}
 			ai_will_do = {
-				factor = 0.000
-			}
-		}		
-	}
-	
-	GER_julius_leber={
-		name=GER_julius_leber
-		portraits={
-			army={
-				small="GFX_idea_GER_julius_leber"
+				factor = 0
 			}
 		}
-		advisor={
+	}
+	GER_julius_leber = {
+		name = GER_julius_leber
+		portraits = {
+			army = {
+				small = "GFX_idea_GER_julius_leber"
+			}
+		}
+		advisor = {
 			slot = political_advisor
 			idea_token = GER_julius_leber
 			allowed = {
@@ -1804,22 +1991,21 @@ characters={
 				always = no
 			}
 			traits = {
-				connected_citizen 
+				connected_citizen
 			}
 			ai_will_do = {
-				factor = 0.000
+				factor = 0
 			}
 		}
 	}
-	
-	GER_theodor_heuss={
-		name=GER_theodor_heuss
-		portraits={
-			army={
-				small="GFX_idea_GER_theodor_heuss"
+	GER_theodor_heuss = {
+		name = GER_theodor_heuss
+		portraits = {
+			army = {
+				small = "GFX_idea_GER_theodor_heuss"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = GER_theodor_heuss
 			allowed = {
@@ -1827,37 +2013,36 @@ characters={
 				has_dlc = "Waking the Tiger"
 			}
 			available = {
-				always = no 
+				always = no
 			}
 			traits = {
-				liberal_journalist 
+				liberal_journalist
 			}
 			ai_will_do = {
-				factor = 0.000
+				factor = 0
 			}
 		}
 	}
-
-	GER_wilhelm_canaris={
-		name=GER_wilhelm_canaris
-		portraits={
-			army={
-				small="GFX_idea_ger_wilhelm_canaris"
+	GER_wilhelm_canaris = {
+		name = GER_wilhelm_canaris
+		portraits = {
+			army = {
+				small = "GFX_idea_ger_wilhelm_canaris"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = ger_wilhelm_canaris
 			available = {
-				has_intelligence_agency = yes 
+				has_intelligence_agency = yes
 			}
 			allowed = {
 				original_tag = GER
 				has_dlc = "La Resistance"
 			}
 			traits = {
-				head_of_intelligence 
+				head_of_intelligence
 			}
-		}		
+		}
 	}
 }

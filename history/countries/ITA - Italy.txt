@@ -31,47 +31,9 @@ add_ideas = {
 	GDU_scuffed_acclim
 	GER_mefo_bills_non_germany
 }
-create_field_marshal = {
-	name = "Emilio De Bono AFRICANUS"
-	picture = "AFRICA_portrait_italy_emilio_de_bono.dds"
-	traits = { organizer defensive_doctrine old_guard infantry_officer infantry_leader  politically_connected inflexible_strategist desert_fox}
-	skill = 6
-	attack_skill = 6
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 7
 
-}
-create_corps_commander = {
-	name = "Giovanni Messe AFRICANUS"
-	picture = "AFRICA_Portrait_Italy_Giovanni_Messe.dds"
-	traits = { panzer_leader trickster politically_connected media_personality old_guard war_hero brilliant_strategist trickster desert_fox hill_fighter trait_engineer }
-	skill = 7
-	attack_skill = 7
-	defense_skill = 6
-	planning_skill = 7
-	logistics_skill = 7
-}
-create_corps_commander = {
-	name = "Ugo Cavallero AFRICANUS"
-	picture = "AFRICA_Portrait_Italy_Ugo_Cavallero.dds"
-	traits = { old_guard media_personality infantry_officer infantry_leader  politically_connected inflexible_strategist desert_fox hill_fighter trait_engineer}
-	skill = 6
-	attack_skill = 6
-	defense_skill = 5
-	planning_skill = 5
-	logistics_skill = 8
-}
-create_corps_commander = {
-	name = "Izzo AFRICANUS"
-	picture = "AFRICA_Portrait_ITA_Izzo.tga"
-	traits = { desert_fox cavalry_officer cavalry_leader infantry_officer trait_engineer trickster media_personality}
-	skill = 5
-	attack_skill = 5
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 3
-}
+
+
 add_intel = {
 	target = SPR
 	civilian_intel = 200
@@ -276,7 +238,12 @@ set_popularities = {
     	fascism = 76
     	communism = 2
 }
-
+#africa leaders
+recruit_character = ITA_emilio_de_bono_AFRICA
+recruit_character = ITA_giovanni_messe_AFRICA
+recruit_character = ITA_ugo_cavallero_AFRICA
+recruit_character = ITA_izzo_AFRICA
+#
 recruit_character = ITA_benito_mussolini
 recruit_character = ITA_grand_council
 recruit_character = ITA_vittorio_emanuele_iii

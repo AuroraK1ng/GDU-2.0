@@ -1,20 +1,34 @@
 capital = 284
-
 oob = "NZL_1936"
 set_research_slots = 3
-add_timed_idea = { idea = airandnavy_idea days = 1320 }
+add_timed_idea = {
+	idea = airandnavy_idea
+	days = 1320
+}
+
 # Starting tech
 set_stability = 0.8
 set_war_support = 0.3
+add_opinion_modifier = {
+	target = JAP
+	modifier = embargo
+}
 
-add_opinion_modifier = { target = JAP modifier = embargo }
-add_opinion_modifier = { target = JAP modifier = sanctions }
-add_opinion_modifier = { target = JAP modifier = minor_sanctions }
+add_opinion_modifier = {
+	target = JAP
+	modifier = sanctions
+}
+
+add_opinion_modifier = {
+	target = JAP
+	modifier = minor_sanctions
+}
 
 add_ideas = GDU_refinery_prebuild_disincentive
-
-
-add_timed_idea = { idea = airandnavy_idea days = 1320 }
+add_timed_idea = {
+	idea = airandnavy_idea
+	days = 1320
+}
 
 add_intel = {
 	target = USA
@@ -23,6 +37,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = SPR
 	civilian_intel = 200
@@ -30,6 +45,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = BUl
 	civilian_intel = 200
@@ -37,6 +53,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = SPR
 	civilian_intel = 200
@@ -44,6 +61,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = BUl
 	civilian_intel = 200
@@ -51,6 +69,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = ENG
 	civilian_intel = 200
@@ -58,6 +77,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = SOV
 	civilian_intel = 200
@@ -65,6 +85,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = RAJ
 	civilian_intel = 200
@@ -72,6 +93,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = ITA
 	civilian_intel = 200
@@ -79,6 +101,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = GER
 	civilian_intel = 200
@@ -86,6 +109,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = ROM
 	civilian_intel = 200
@@ -93,6 +117,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = HUN
 	civilian_intel = 200
@@ -100,6 +125,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = JAP
 	civilian_intel = 200
@@ -107,6 +133,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = CAN
 	civilian_intel = 200
@@ -114,6 +141,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = FRA
 	civilian_intel = 200
@@ -121,6 +149,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = SAF
 	civilian_intel = 200
@@ -128,6 +157,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = AST
 	civilian_intel = 200
@@ -135,6 +165,7 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
 add_intel = {
 	target = NZL
 	civilian_intel = 200
@@ -142,6 +173,11 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+
+#africa leaders
+recruit_character = NZL_bernard_freyberg_AFRICA
+recruit_character = NZL_robert_row_AFRICA
+#
 recruit_character = NZL_michael_joseph_savage
 recruit_character = NZL_sidney_holland
 recruit_character = NZL_john_ormond
@@ -196,43 +232,75 @@ set_technology = {
 	fleet_in_being = 1
 	fuel_silos = 1
 	fuel_refining = 1
-	interwar_antitank = 1	
+	interwar_antitank = 1
 	synth_oil_experiments = 1
-		basic_ship_hull_submarine = 1
-		early_ship_hull_light = 1
-		basic_ship_hull_light = 1
-		early_ship_hull_submarine = 1
-		early_ship_hull_cruiser = 1
-		basic_ship_hull_cruiser = 1
-		early_ship_hull_heavy = 1
-		early_ship_hull_carrier = 1
-		basic_ship_hull_carrier = 1
-		basic_battery = 1
-		basic_light_battery = 1
-		basic_medium_battery = 1
-		basic_heavy_battery = 1
-		basic_torpedo = 1
-		sonar = 1
-		smoke_generator = 1
-		basic_depth_charges = 1
-		##basic_encryption = 1
-		basic_cruiser_armor_scheme = 1
-		basic_heavy_armor_scheme = 1
-		mtg_transport = 1
-		##basic_encryption = 1
-		basic_fire_control_system = 1
-		cruiser_submarines = 1	
+	basic_ship_hull_submarine = 1
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	early_ship_hull_cruiser = 1
+	basic_ship_hull_cruiser = 1
+	early_ship_hull_heavy = 1
+	early_ship_hull_carrier = 1
+	basic_ship_hull_carrier = 1
+	basic_battery = 1
+	basic_light_battery = 1
+	basic_medium_battery = 1
+	basic_heavy_battery = 1
+	basic_torpedo = 1
+	sonar = 1
+	smoke_generator = 1
+	basic_depth_charges = 1
+	##basic_encryption = 1
+	basic_cruiser_armor_scheme = 1
+	basic_heavy_armor_scheme = 1
+	mtg_transport = 1
+	##basic_encryption = 1
+	basic_fire_control_system = 1
+	cruiser_submarines = 1
 }
 
-add_opinion_modifier = { target = AST modifier = huge_increase  }
-add_opinion_modifier = { target = AST modifier = huge_increase  }
-add_opinion_modifier = { target = AST modifier = huge_increase  }
-add_opinion_modifier = { target = SPR modifier = embargo }
-add_opinion_modifier = { target = SPR modifier = sanctions_relations }
-add_opinion_modifier = { target = SPR modifier = large_decrease }
-add_opinion_modifier = { target = SPR modifier = hostile_status }
+add_opinion_modifier = {
+	target = AST
+	modifier = huge_increase
+}
+
+add_opinion_modifier = {
+	target = AST
+	modifier = huge_increase
+}
+
+add_opinion_modifier = {
+	target = AST
+	modifier = huge_increase
+}
+
+add_opinion_modifier = {
+	target = SPR
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = SPR
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = SPR
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = SPR
+	modifier = hostile_status
+}
+
 if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
+	limit = {
+		not = {
+			has_dlc = "Man the Guns"
+		}
+	}
 	set_technology = {
 		##early_destroyer = 1
 		##early_light_cruiser = 1
@@ -240,17 +308,19 @@ if = {
 	}
 }
 
-
 if = {
 	limit = {
 		has_dlc = "La Resistance"
 	}
-	set_technology = { armored_car1 = 1	}
+	set_technology = {
+		armored_car1 = 1
+	}
 }
 
-
 if = {
-	limit = { has_dlc = "Man the Guns" }
+	limit = {
+		has_dlc = "Man the Guns"
+	}
 	set_technology = {
 		early_ship_hull_light = 1
 		early_ship_hull_cruiser = 1
@@ -260,54 +330,62 @@ if = {
 		mtg_transport = 1
 	}
 }
-if = {
-	limit = { has_dlc = "Together for Victory" }
 
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
 	add_to_tech_sharing_group = commonwealth_research
 }
 
 add_equipment_to_stockpile = {
-         type = artillery_equipment_1
-         amount = 1668
-         producer = NZL
-}  
-add_equipment_to_stockpile = {
-         type = support_equipment
-         amount = 1130
-         producer = NZL
-} 
-add_equipment_to_stockpile = {
-         type = anti_tank_equipment_1
-         amount = 500
-         producer = NZL
-} 
-add_equipment_to_stockpile = {
-         type = motorized_equipment_1
-         amount = 100
-         producer = NZL
-} 
+	type = artillery_equipment_1
+	amount = 1668
+	producer = NZL
+}
 
 add_equipment_to_stockpile = {
-         type = infantry_equipment_1
-         amount = 1300
-         producer = NZL
-} 
-add_equipment_to_stockpile = {
-         type = infantry_equipment_0
-         amount = 3000
-         producer = NZL
-} 
+	type = support_equipment
+	amount = 1130
+	producer = NZL
+}
 
 add_equipment_to_stockpile = {
-         type = anti_air_equipment_1
-         amount = 390
-         producer = NZL
-} 
+	type = anti_tank_equipment_1
+	amount = 500
+	producer = NZL
+}
+
 add_equipment_to_stockpile = {
-         type = anti_tank_equipment_1
-         amount = 125
-         producer = NZL
-} 
+	type = motorized_equipment_1
+	amount = 100
+	producer = NZL
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 1300
+	producer = NZL
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 3000
+	producer = NZL
+}
+
+add_equipment_to_stockpile = {
+	type = anti_air_equipment_1
+	amount = 390
+	producer = NZL
+}
+
+add_equipment_to_stockpile = {
+	type = anti_tank_equipment_1
+	amount = 125
+	producer = NZL
+}
+
 set_politics = {
 	ruling_party = democratic
 	last_election = "1935.11.27"
@@ -316,9 +394,9 @@ set_politics = {
 }
 
 set_popularities = {
-    democratic = 100
-    fascism = 0
-    communism = 0
+	democratic = 100
+	fascism = 0
+	communism = 0
 }
 
 create_country_leader = {
@@ -354,49 +432,19 @@ create_country_leader = {
 }
 
 set_convoys = 100
-
-
-create_field_marshal = {
-	name = "Bernard Freyberg AFRICANUS"
-	picture = "Portrait_New_Zealand_Bernard_Freyberg_AFRICA.dds"
-	traits = { jungle_rat organizer inflexible_strategist skilled_staffer politically_connected media_personality }
-	skill = 6
-	attack_skill = 6
-	defense_skill = 6
-	planning_skill = 4
-	logistics_skill = 5
-}
-
-create_corps_commander = {
-	name = "Robert Row AFRICANUS"
-	picture = "Portrait_New_Zeeland_Robert_Row_AFRICA.dds"
-	traits = { naval_invader desert_fox infantry_leader infantry_officer career_officer war_hero }
-	skill = 4
-	attack_skill = 5
-	defense_skill = 5
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "William Stevens AFRICANUS"
-	picture = "Portrait_New_Zeeland_William_Stevens_AFRICA.dds"
-	traits = { panzer_leader armor_officer desert_fox trickster trait_cautious career_officer }
-	skill = 4
-	attack_skill = 6
-	defense_skill = 5
-	planning_skill = 2
-	logistics_skill = 3
-}
-
 create_navy_leader = {
 	name = "Neil Anderson"
 	gfx = "GFX_NZL_peter_phipps"
-	traits = { bold navy_career_officer superior_tactician fly_swatter blue_water_expert }
+	traits = {
+		bold
+		navy_career_officer
+		superior_tactician
+		fly_swatter
+		blue_water_expert
+	}
 	skill = 5
 	attack_skill = 3
 	defense_skill = 4
 	maneuvering_skill = 5
 	coordination_skill = 5
 }
-

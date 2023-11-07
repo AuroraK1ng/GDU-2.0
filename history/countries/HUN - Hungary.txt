@@ -246,16 +246,7 @@ add_equipment_to_stockpile = {
     amount = 983
     producer = HUN
 }
-create_corps_commander = {
-	name = "Gusztav Denk AFRICANUS"
-	picture = "AFRICA_Portrait_HUN_Gusztav_Denk.dds"
-	traits = { career_officer infantry_leader trickster substance_abuser organizer harsh_leader career_officer panzer_leader trait_reckless desert_fox }
-	skill = 6
-	attack_skill = 6
-	defense_skill = 6
-	planning_skill = 5
-	logistics_skill = 5
-}
+
 1939.1.1 = {
 	remove_ideas = HUN_treaty_of_triannon
 
@@ -394,7 +385,9 @@ set_popularities = {
 	fascism = 31
 	neutrality = 44
 }
-
+#afrıca leaders
+recruit_character = HUN_gusztav_denk_AFRICA
+#
 recruit_character = HUN_miklos_horthy
 recruit_character = HUN_albert_speer
 recruit_character = HUN_shvoy_kalman_highcommand

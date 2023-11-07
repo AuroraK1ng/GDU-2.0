@@ -235,36 +235,7 @@ add_dynamic_modifier = {
 	modifier = sealion_score_modifier_spirit
 }
 
-create_corps_commander = {
-	name = "Richard O'Connor AFRICANUS"
-	picture = "AFRICA_Portrait_Britain_Richard_OConnor.dds"
-	traits = { panzer_leader desert_fox trickster infantry_officer brilliant_strategist expert_improviser panzer_expert trait_engineer }
-	skill = 6
-	attack_skill = 9
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "William Gott AFRICANUS"
-		picture = "AFRICA_Portrait_Britain_William_Gott.dds"
-	traits = {infantry_leader desert_fox armor_officer trait_reckless old_guard inflexible_strategist trickster naval_invader}
-	skill = 6
-	attack_skill = 6
-	defense_skill = 7
-	planning_skill = 3
-	logistics_skill = 4
-}
-create_field_marshal = {
-	name = "Jock Campbell AFRICANUS"
-		picture = "AFRICA_Portrait_Britain_Jock_Campbell.dds"
-	traits = { panzer_leader desert_fox war_hero career_officer trait_cautious skilled_staffer}
-	skill = 6
-	attack_skill = 5
-	defense_skill = 7
-	planning_skill = 2
-	logistics_skill = 4
-}
+ 
 set_convoys = 1200
 
 # DIPLOMACY
@@ -353,6 +324,12 @@ add_to_faction = RAJ		# Must be after puppet
 add_to_faction = INS
 
 #give_guarantee = CZE
+
+#africa leaders
+recruit_character = ENG_richard_oconnor_AFRICA
+recruit_character = ENG_william_gott_AFRICA
+recruit_character = ENG_jock_campbell_AFRICA
+#
 
 # Order matters - here Chamberlain becomes starting leader
 recruit_character = ENG_stanley_baldwin

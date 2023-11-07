@@ -267,19 +267,6 @@ create_equipment_variant = {
 	icon = "GFX_GER_fighter1_medium"
 }
 
-
-create_corps_commander = {
-	name = "Erwin Rommel AFRICANUS"
-	picture = "AFRICA_Portrait_Germany_Erwin_Rommel.dds"
-	traits = { desert_fox urban_assault_specialist fortress_buster expert_improviser inflexible_strategist panzer_expert trait_reckless war_hero media_personality infantry_officer trait_engineer panzer_leader }
-	skill = 6
-	id = 4
-	attack_skill = 8
-	defense_skill = 6
-	planning_skill = 6
-	logistics_skill = 10
-}
-
 set_politics = {
 	ruling_party = fascism
 	last_election = "1933.3.5"
@@ -311,7 +298,9 @@ add_ideas = GER_mefo_bills_1
 add_timed_idea = { idea = airandnavy_idea days = 1320 }
 
 activate_mission = GER_mefo_bills_mission
-
+#AFRICA LEADERS
+recruit_character = GER_erwin_rommel_AFRICA
+#
 recruit_character = GER_wilhelm_pieck
 recruit_character = GER_albert_speer
 recruit_character = GER_konrad_adenauer

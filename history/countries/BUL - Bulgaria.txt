@@ -7,6 +7,15 @@ add_opinion_modifier = { target = JAP modifier = sanctions }
 add_opinion_modifier = { target = JAP modifier = minor_sanctions }
 
 set_fuel_ratio = 0.8
+#africa leaders
+recruit_character = BUL_vladimir_stoychev_AFRICA
+recruit_character = BUL_hristo_lukov_AFRICA
+
+#
+recruit_character = BUL_erich_von_manstein #lower stat erich
+recruit_character = BUL_heinz_guderian
+#
+
 recruit_character = BUL_boris_iii
 	recruit_character = BUL_georgi_dimitrov
 	recruit_character = BUL_hristo_lukov
@@ -21,6 +30,7 @@ recruit_character = BUL_boris_iii
 	recruit_character = BUL_trifon_trifonov
 	recruit_character = BUL_sava_ivanov
 	recruit_character = BUL_vladimir_stoychev
+
 	recruit_character = BUL_stoyan_stoyanov
 	recruit_character = BUL_zachari_zachariev
 	recruit_character = BUL_stefan_tsanev
@@ -217,16 +227,7 @@ add_ideas = { GER_mefo_bills_non_germany }
 		}
 	}
 
-	create_country_leader = { #DLC
-		name = "Hristo Lukov"
-		desc = "POLITICS_HRISTO_LUKOV_DESC"
-		picture = "GFX_Portrait_bulgaria_hristo_lukov"
-		expire = "1965.1.1"
-		ideology = liberalism
-		traits = {
-			hardened_officer
-		}
-	}
+	
 
 
 
@@ -413,27 +414,7 @@ add_equipment_to_stockpile = {
 
 
 
-create_field_marshal = {
-	name = "Erich von Manstein"
-	picture = "Portrait_Germany_Erich_von_Manstein.dds"
-	traits = { offensive_doctrine  brilliant_strategist infantry_leader trickster trait_engineer cavalry_officer }
-	skill = 6
-	attack_skill = 6
-	defense_skill = 6
-	planning_skill = 3
-	logistics_skill = 4
-}
 
-create_corps_commander = {
-	name = "Heinz Guderian"
-	picture = "Portrait_Germany_Heinz_Guderian.dds"
-	traits = { trickster panzer_leader ranger trait_engineer trait_reckless armor_officer career_officer}
-	skill = 6
-	attack_skill = 6
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 5
-}
 
 create_field_marshal = {
 	name = "Vasil Tenev Boydev"
@@ -455,55 +436,4 @@ create_field_marshal = {
 	defense_skill = 6
 	planning_skill = 2
 	logistics_skill = 7
-}
-
-create_corps_commander = {
-	name = "Teodosi Daskalov"
-	picture = "Portrait_BUL_Teodosi_Daskalov.tga"
-	traits = { organizer infantry_officer old_guard politically_connected trait_engineer career_officer skilled_staffer harsh_leader}
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 5
-}
-create_corps_commander = {
-	name = "Vladimir Stoychev"
-	picture = "Portrait_BUL_Vladimir_Stoychev.tga"
-	traits = { panzer_leader trait_engineer trickster cavalry_leader cavalry_officer trait_reckless skilled_staffer }
-	skill = 5
-	attack_skill = 6
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 4
-}
-create_corps_commander = {
-	name = "Vladimir Stoychev AFRICANUS"
-	picture = "AFRICA_Portrait_BUL_Vladimir_Stoychev.dds"
-	traits = { panzer_leader trait_engineer trickster cavalry_leader cavalry_officer trait_reckless skilled_staffer desert_fox}
-	skill = 6
-	attack_skill = 6
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 4
-}
-create_corps_commander = {
-	name = "Hristo Lukov"
-	picture = "Portrait_Bulgaria_Hristo_Lukov.tga"
-	traits = { naval_invader trait_engineer commando infantry_officer trait_reckless }
-	skill = 6
-	attack_skill = 6
-	defense_skill = 7
-	planning_skill = 3
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Hristo Lukov AFRICANUS"
-	picture = "AFRICA_Portrait_Bulgaria_Hristo_Lukov.dds"
-	traits = { naval_invader trait_engineer commando infantry_officer trait_reckless desert_fox}
-	skill = 6
-	attack_skill = 6
-	defense_skill = 7
-	planning_skill = 3
-	logistics_skill = 3
 }

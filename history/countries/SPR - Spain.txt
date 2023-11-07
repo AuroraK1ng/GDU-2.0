@@ -175,6 +175,16 @@ add_ideas = {
 
 add_timed_idea = { idea = airandnavy_idea days = 1350 }
 
+#africa leaders
+recruit_character = SPA_francisco_franco_AFRICA
+recruit_character = SPR_davila_arrondo_AFRICA
+recruit_character = SPR_vicente_rojo_lluch
+#
+recruit_character = SPR_alonso_vega
+recruit_character = SPR_davila_arrondo
+recruit_character = SPR_goded_llopis
+recruit_character = SPR_jose_sanjurjo_sacanell
+#
 recruit_character = SPR_niceto_alcala_zamora
 	recruit_character = SPA_enrique_canovas_lacruz
 	recruit_character = SPR_jose_diaz
@@ -335,90 +345,6 @@ set_popularities = {
 set_convoys = 100
 set_stability = 0.5
 set_war_support = 0.8
-
-
-		create_field_marshal = {
-                name = "Francisco Franco AFRICANUS"
-                portrait_path = "gfx/leaders/SPA/AFRICA_Portrait_Spain_Francisco_Franco.dds"
-                traits = { offensive_doctrine brilliant_strategist politically_connected war_hero media_personality desert_fox organizer }
-                skill = 6
-				attack_skill = 7
-				defense_skill = 5
-				planning_skill = 5
-				logistics_skill = 4
-        }		
-		create_corps_commander = {
-                name = "Alonso Vega"
-                picture = "Portrait_SPR_Alonso_Vega.tga"
-                traits = { infantry_officer infantry_leader hill_fighter organizer trait_engineer harsh_leader  }
-                skill = 6
-				attack_skill = 5
-				defense_skill = 5
-				planning_skill = 7
-				logistics_skill = 4
-        }
-			create_corps_commander = {
-                name = "Davila Arrondo"
-                picture = "Portrait_SPR_Davila_Arrondo.tga"
-                traits = { panzer_leader armor_officer trait_reckless harsh_leader trickster media_personality trait_engineer ranger }
-                skill = 6
-				attack_skill = 7
-				defense_skill = 6
-				planning_skill = 4
-				logistics_skill = 5
-        }
-			create_corps_commander = {
-                name = "Davila Arrondo AFRICANUS"
-                picture = "AFRICA_Portrait_SPR_Davila_Arrondo.dds"
-                traits = { panzer_leader armor_officer trait_reckless harsh_leader trickster media_personality trait_engineer desert_fox }
-                skill = 6
-				attack_skill = 7
-				defense_skill = 6
-				planning_skill = 4
-				logistics_skill = 5
-        }		
-			create_corps_commander = {
-                name = "Goded Llopis"
-                picture = "Portrait_SPR_Goded_Llopis.tga"
-                traits = { skilled_staffer infantry_leader commando old_guard trait_cautious infantry_officer  ranger politically_connected}
-                skill = 6
-				attack_skill = 5
-				defense_skill = 1
-				planning_skill = 6
-				logistics_skill = 6
-        }
-			create_corps_commander = {
-                name = "Jose Sanjurjo Sacanell"
-                picture = "Portrait_SPR_Jose_Sanjurjo_Sacanell.tga"
-                traits = { skilled_staffer swamp_fox cavalry_leader cavalry_officer trickster career_officer harsh_leader }
-                skill = 4
-				attack_skill = 5
-				defense_skill = 2
-				planning_skill = 5
-				logistics_skill = 1
-        }
-			create_corps_commander = {
-                name = "Miguel Cabanellas Ferrer AFRICANUS"
-                picture = "AFRICA_Portrait_SPR_Miguel_Cabanellas_Ferrer.dds"
-                traits = { desert_fox infantry_leader career_officer cavalry_officer trickster organizer harsh_leader trait_reckless  }
-                skill = 6
-				attack_skill = 5
-				defense_skill = 8
-				planning_skill = 5
-				logistics_skill = 5
-        }		
-			create_corps_commander = {
-                name = "Vicente Lluch"
-                picture = "SPR_Portrait_Vicente_Lluch.dds"
-                traits = { infantry_leader skilled_staffer urban_assault_specialist trait_engineer old_guard trait_cautious harsh_leader infantry_officer  }
-                skill = 4
-				attack_skill = 4
-				defense_skill = 4
-				planning_skill = 3
-				logistics_skill = 2
-        }
-
-
 ### VARIANTS ###
 # 1936 Start #
 if = {
