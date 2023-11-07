@@ -2,22 +2,12 @@ technologies = {
 	
 	iw_small_airframe = {
 		enable_equipment_modules = {
-		recon_camera
+			#recon_camera
 			engine_1_1x
-			dive_brakes_small
 			non_strategic_materials_small
-			floats
-			non_strategic_materials_medium
-			flying_boat_medium
-			non_strategic_materials_large
-			flying_boat_large
-			bomb_locks
-			small_bomb_bay
-			medium_bomb_bay
-			large_bomb_bay
 			high_octane_fuel_small
-			high_octane_fuel_medium
-			#high_octane_fuel_large
+			light_mg_2x
+			light_mg_4x
 		}
 		
 		enable_subunits = {
@@ -56,7 +46,7 @@ technologies = {
 			naval_air
 			naval_bomber
 			air_equipment 
-						mio_cat_all_light_fighter_and_modules
+			mio_cat_all_light_fighter_and_modules
 			mio_cat_all_cas_and_modules
 			mio_cat_all_naval_bomber_and_modules
 			mio_cat_all_light_aircraft_and_modules
@@ -77,8 +67,12 @@ technologies = {
 			cv_small_plane_naval_bomber_airframe_1
 			cv_small_plane_suicide_airframe_1
 		}
-			enable_equipment_modules = {
+		enable_equipment_modules = {
 			engine_2_1x
+			heavy_mg_2x
+			heavy_mg_4x
+			lmg_defense_turret
+			#lmg_defense_turret_2x
 		}
 		
 		path = {
@@ -106,9 +100,6 @@ technologies = {
 			mio_cat_all_naval_bomber_and_modules
 			mio_cat_all_light_aircraft_and_modules
 		}
-		
-		
-
 	}
 	
 	
@@ -116,13 +107,17 @@ technologies = {
 	improved_small_airframe = {
 		enable_equipment_modules = {
 			engine_3_1x
+			aircraft_cannon_1_1x
+			aircraft_cannon_1_2x
+			hmg_defense_turret
+			#hmg_defense_turret_2x
 		}
 		enable_equipments = {
 			small_plane_airframe_2
 			small_plane_cas_airframe_2
 			small_plane_naval_bomber_airframe_2
 			small_plane_suicide_airframe_2
-						cv_small_plane_airframe_2
+			cv_small_plane_airframe_2
 			cv_small_plane_cas_airframe_2
 			cv_small_plane_naval_bomber_airframe_2
 			cv_small_plane_suicide_airframe_2
@@ -132,8 +127,6 @@ technologies = {
 			leads_to_tech = advanced_small_airframe
 			research_cost_coeff = 1
 		}
-				
-
 		research_cost = 2
 		start_year = 1940
 		folder = {
@@ -178,8 +171,12 @@ technologies = {
 			leads_to_tech = modern_small_airframe
 			research_cost_coeff = 1
 		}
-				enable_equipment_modules = {
+		enable_equipment_modules = {
 			engine_4_1x
+			aircraft_cannon_2_1x
+			aircraft_cannon_2_2x
+			cannon_defense_turret
+			#cannon_defense_turret_2x
 		}
 		research_cost = 2
 		start_year = 1944
@@ -245,22 +242,12 @@ technologies = {
 	
 	iw_medium_airframe = {
 		enable_equipment_modules = {
-		recon_camera
 			engine_1_2x
-					dive_brakes_small
-			non_strategic_materials_small
-			floats
 			non_strategic_materials_medium
-			flying_boat_medium
-			non_strategic_materials_large
-			flying_boat_large
-						bomb_locks
-			small_bomb_bay
-			medium_bomb_bay
-			large_bomb_bay
-						high_octane_small
 			high_octane_medium
-			high_octane_large
+			light_mg_2x
+			light_mg_4x
+			medium_bomb_bay
 		}
 		
 		enable_equipments = {
@@ -299,6 +286,9 @@ technologies = {
 		}
 			enable_equipment_modules = {
 			engine_2_2x
+			heavy_mg_2x
+			heavy_mg_4x
+			lmg_defense_turret
 		}
 		
 		path = {
@@ -326,6 +316,9 @@ technologies = {
 	improved_medium_airframe = {
 		enable_equipment_modules = {
 			engine_3_2x
+			aircraft_cannon_1_1x
+			aircraft_cannon_1_2x
+			hmg_defense_turret_2x
 		}
 		enable_equipments = {
 			medium_plane_airframe_2
@@ -368,6 +361,9 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			engine_4_2x
+			aircraft_cannon_2_1x
+			aircraft_cannon_2_2x
+			cannon_defense_turret_2x
 		}
 		research_cost = 2
 		start_year = 1944
@@ -416,22 +412,10 @@ technologies = {
 
 	iw_large_airframe = {
 		enable_equipment_modules = {
-		recon_camera
 			engine_1_4x
-						bomb_locks
-			small_bomb_bay
-			medium_bomb_bay
-			large_bomb_bay
-					dive_brakes_small
-			non_strategic_materials_small
-			floats
-			non_strategic_materials_medium
-			flying_boat_medium
 			non_strategic_materials_large
-			flying_boat_large
-						high_octane_small
-			high_octane_medium
 			high_octane_large
+			large_bomb_bay
 		}
 		
 		enable_equipments = {
@@ -574,14 +558,15 @@ technologies = {
 		}
 	}
 
-	aa_lmg = {
+	early_bombs = {
 
 		enable_equipment_modules = {
-			tank_buster_1
-			light_mg_2x
-			light_mg_4x
-			lmg_defense_turret
-			lmg_defense_turret_2x
+			#tank_buster_1
+			#light_mg_2x
+			#light_mg_4x
+			#lmg_defense_turret
+			#lmg_defense_turret_2x
+			bomb_locks
 		}
 
 		research_cost = 1
@@ -589,16 +574,16 @@ technologies = {
 
 		folder = {
 			name = bba_air_techs_folder
-			position = { x = 0 y = 2 }
+			position = { x = 5 y = 2 }
 		}
 
 		path = {
-			leads_to_tech = aa_hmg
+			leads_to_tech = heavy_bombs
 			research_cost_coeff = 1
 		}
-
+		
 		path = {
-			leads_to_tech = aa_cannon_1
+			leads_to_tech = air_torpedoe_1
 			research_cost_coeff = 1
 		}
 
@@ -632,6 +617,10 @@ technologies = {
 			armor_plate_small
 			armor_plate_medium
 			armor_plate_large
+			floats
+			flying_boat_medium
+			flying_boat_large
+			dive_breaks_small
 		}
 		
 		research_cost = 1
@@ -639,7 +628,7 @@ technologies = {
 
 		folder = {
 			name = bba_air_techs_folder
-			position = { x = -2 y = 4 }
+			position = { x = 2 y = 4 }
 		}
 
 		categories = {
@@ -652,21 +641,26 @@ technologies = {
 		}
 	}
 
-	aa_hmg = {
+	heavy_bombs = {
 
 		enable_equipment_modules = {
-			heavy_mg_2x
-			heavy_mg_4x
-			hmg_defense_turret
-			hmg_defense_turret_2x
+			#heavy_mg_2x
+			#heavy_mg_4x
+			#hmg_defense_turret
+			#hmg_defense_turret_2x
+			armor_piercing_bomb_locks
 		}
 	
 		research_cost = 1 
-		start_year = 1938
+		start_year = 1936
 
 		folder = {
 			name = bba_air_techs_folder
-			position = { x = 0 y = 5 } 
+			position = { x = 4 y = 4 } 
+		}
+		path = {
+			leads_to_tech = aa_cannon_1
+			research_cost_coeff = 1
 		}
 
 		categories = {
@@ -683,16 +677,17 @@ technologies = {
 	aa_cannon_1 = {
 
 		enable_equipment_modules = {
-			aircraft_cannon_1_1x
-			aircraft_cannon_1_2x
+			#aircraft_cannon_1_1x
+			#aircraft_cannon_1_2x
+			tank_buster_1
 		}
 		
 		research_cost = 1
-		start_year = 1938
+		start_year = 1940
 
 		folder = {
 			name = bba_air_techs_folder
-			position = { x = 2 y = 5 }
+			position = { x = 4 y = 6 }
 		}
 		path = {
 			leads_to_tech = aa_cannon_2
@@ -712,26 +707,108 @@ technologies = {
 	aa_cannon_2 = {
 
 		enable_equipment_modules = {
-			aircraft_cannon_2_1x
-			aircraft_cannon_2_2x
-			cannon_defense_turret
-			cannon_defense_turret_2x
+			#aircraft_cannon_2_1x
+			#aircraft_cannon_2_2x
+			#cannon_defense_turret
+			#cannon_defense_turret_2x
 			tank_buster_2
 		}
 		
 		research_cost = 1
-		start_year = 1940
+		start_year = 1944
 
 		folder = {
 			name = bba_air_techs_folder
-			position = { x = 2 y = 7 }
+			position = { x = 4 y = 8 }
 		}
 
 		categories = {
 			air_equipment 
 			plane_modules_tech 
 			cat_air_guns
-						mio_cat_all_light_fighter_and_modules
+			mio_cat_all_light_fighter_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_heavy_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
+		}
+	}
+	
+	air_torpedoe_1 = {
+		enable_equipment_modules = {
+			torpedo_mounting
+		}
+			
+		research_cost = 1
+		start_year = 1936
+
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = 6 y = 4 }
+		}
+
+		path = {
+			leads_to_tech = air_torpedoe_2
+			research_cost_coeff = 1
+		}
+		
+		categories = {
+			air_equipment
+			plane_modules_tech
+			cat_air_bombs
+			mio_cat_all_naval_bomber_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_heavy_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
+		}
+	}
+
+	air_torpedoe_2 = {
+		enable_equipment_modules = {
+			torpedo_mounting_2
+		}
+			
+		research_cost = 1
+		start_year = 1940
+
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = 6 y = 6 }
+		}
+
+		path = {
+			leads_to_tech = air_torpedoe_3
+			research_cost_coeff = 1
+		}
+		
+		categories = {
+			air_equipment
+			plane_modules_tech
+			cat_air_bombs
+			mio_cat_all_naval_bomber_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_heavy_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
+		}
+	}
+
+	air_torpedoe_3 = {
+		enable_equipment_modules = {
+			torpedo_mounting_3
+		}
+			
+		research_cost = 1
+		start_year = 1944
+
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = 6 y = 8 }
+		}
+
+		categories = {
+			air_equipment
+			plane_modules_tech
+			cat_air_bombs
+			mio_cat_all_naval_bomber_and_modules
 			mio_cat_all_medium_aircraft_and_modules
 			mio_cat_all_heavy_aircraft_and_modules
 			mio_cat_all_light_aircraft_and_modules
@@ -753,7 +830,7 @@ technologies = {
 
 		folder = {
 			name = bba_air_techs_folder
-			position = { x = 4 y = 4 }
+			position = { x = 8 y = 4 }
 		}
 
 		categories = {

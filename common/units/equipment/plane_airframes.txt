@@ -250,6 +250,17 @@ equipments = {
 					plane_special_module_defense_turret
 				}
 			}
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_small
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret
+				}
+			}
 		}
 	}
 	small_plane_airframe_2 = { #Improved
@@ -304,9 +315,18 @@ equipments = {
 					plane_special_module_defense_turret
 				}
 			}
-
-
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_small
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret
+				}
 			}
+		}
 	}
 
 	small_plane_airframe_3 = { #Advanced
@@ -352,6 +372,17 @@ equipments = {
 			}
 
 			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_small
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret
+				}
+			}
+			special_type_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					plane_special_module_small
@@ -430,7 +461,17 @@ equipments = {
 					plane_special_module_defense_turret
 				}
 			}
-
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_small
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret
+				}
+			}
 		}
 	}
 
@@ -912,6 +953,17 @@ equipments = {
 					quad_large_plane_engine_type
 				}
 			}
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_small
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret
+				}
+			}
 		}
 
 		module_count_limit = {
@@ -1072,6 +1124,17 @@ equipments = {
 					quad_large_plane_engine_type
 				}
 			}
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_small
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret
+				}
+			}
 		}
 	}
 
@@ -1121,6 +1184,17 @@ equipments = {
 					twin_plane_jet_engine_type
 					medium_plane_jet_engine_type
 					quad_large_plane_jet_engine_type
+				}
+			}
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_small
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret
 				}
 			}
 
@@ -1176,6 +1250,17 @@ equipments = {
 					quad_large_plane_jet_engine_type
 				}
 			}
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_small
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret
+				}
+			}
 		}
 	}
 
@@ -1225,6 +1310,17 @@ equipments = {
 					twin_plane_jet_engine_type
 					medium_plane_jet_engine_type
 					quad_large_plane_jet_engine_type
+				}
+			}
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_small
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret
 				}
 			}
 		}
@@ -1281,6 +1377,17 @@ equipments = {
 				allowed_module_categories = {
 					quad_large_plane_engine_type
 					large_plane_engine_type
+				}
+			}
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_small
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret
 				}
 			}
 
@@ -1412,7 +1519,12 @@ equipments = {
 					strat_weapon
 				}
 			}
-
+			fixed_auxiliary_weapon_slot_1 = { 
+				required = no
+				allowed_module_categories = {
+					strat_weapon
+				}
+			}
 			engine_type_slot = {
 				required = yes
 				allowed_module_categories = {
@@ -1452,7 +1564,18 @@ equipments = {
 					strat_weapon
 				}
 			}
-
+			fixed_auxiliary_weapon_slot_1 = { 
+				required = no
+				allowed_module_categories = {
+					strat_weapon
+				}
+			}
+			fixed_auxiliary_weapon_slot_2 = { 
+				required = no
+				allowed_module_categories = {
+					strat_weapon
+				}
+			}
 			engine_type_slot = {
 				required = yes
 				allowed_module_categories = {
@@ -1492,7 +1615,24 @@ equipments = {
 					strat_weapon
 				}
 			}
-
+			fixed_auxiliary_weapon_slot_1 = { 
+				required = no
+				allowed_module_categories = {
+					strat_weapon
+				}
+			}
+			fixed_auxiliary_weapon_slot_2 = { 
+				required = no
+				allowed_module_categories = {
+					strat_weapon
+				}
+			}
+			fixed_auxiliary_weapon_slot_3 = { 
+				required = no
+				allowed_module_categories = {
+					strat_weapon
+				}
+			}
 			engine_type_slot = {
 				required = yes
 				allowed_module_categories = {
@@ -1532,7 +1672,30 @@ equipments = {
 					strat_weapon
 				}
 			}
-
+			fixed_auxiliary_weapon_slot_1 = { 
+				required = no
+				allowed_module_categories = {
+					strat_weapon
+				}
+			}
+			fixed_auxiliary_weapon_slot_2 = { 
+				required = no
+				allowed_module_categories = {
+					strat_weapon
+				}
+			}
+			fixed_auxiliary_weapon_slot_3 = { 
+				required = no
+				allowed_module_categories = {
+					strat_weapon
+				}
+			}
+			fixed_auxiliary_weapon_slot_4 = { 
+				required = no
+				allowed_module_categories = {
+					strat_weapon
+				}
+			}
 			engine_type_slot = {
 				required = yes
 				allowed_module_categories = {
