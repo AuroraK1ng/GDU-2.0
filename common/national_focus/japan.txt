@@ -760,7 +760,7 @@ focus_tree = {
 	focus = {
 		id = JAP_army_expansion_law
 		icon = GFX_jap_officer_hat
-		x = 22
+		x = 23
 		y = 0
 
 
@@ -797,7 +797,7 @@ focus_tree = {
 		id = JAP_small_arms_modernization
 		icon = GFX_goal_arisaka
 		prerequisite = { focus = JAP_army_expansion_law }
-		x = -1
+		x = -4
 		y = 1
 		relative_position_id = JAP_army_expansion_law
 
@@ -830,7 +830,193 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = JAP_infantry
+		text = "Special training"
+		icon = GFX_JAP_support_bat
+		prerequisite = { focus = JAP_army_expansion_law }
+		x = -1
+		y = 1
+		relative_position_id = JAP_army_expansion_law
 
+		cost = 5
+
+
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = JAP_small_arms_modernization
+				bonus = 1.00
+				uses = 2
+				category = cat_special_forces_generic
+
+			}
+		}
+	}
+	focus = {
+		id = JAP_infantry_1
+		Text = "Form support batalions"
+		icon = GFX_JAP_special_inf
+		prerequisite = { focus = JAP_army_expansion_law }
+		x = 1
+		y = 1
+		relative_position_id = JAP_army_expansion_law
+
+		cost = 5
+
+
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = JAP_small_arms_modernization
+				bonus = 1.00
+				uses = 2
+				category = support_tech
+
+			}
+		}
+	}
+	focus = {
+		id = JAP_military_industry
+		icon = GFX_JAP_mil_ind
+		text = "Preparation of army warehouses"
+		prerequisite = { focus = JAP_infantry_1 focus = JAP_infantry}
+		x = 1
+		y = 1
+		relative_position_id = JAP_infantry
+
+		cost = 15
+
+
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		add_ideas = Warehouses
+		612 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+			}
+				}
+		}
+	}
+	focus = {
+		id = JAP_Way_Samurai
+	    text = "Way of the Samurai"
+		icon = GFX_JAP_samurai
+		prerequisite = { focus = JAP_military_industry }
+		prerequisite = { focus = JAP_supremacy_of_will }
+		prerequisite = { focus = JAP_supremacy_of_technology }
+		x = 1
+		y = 2
+		relative_position_id = JAP_infantry
+
+		cost = 5
+
+
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		add_ideas = Samurai
+		}
+	}
+	focus = {
+		id = JAP_emperor_ancestors
+	    text = "In the name of the Emperor and ancestors"
+		icon = GFX_JAP_Emperor
+		prerequisite = { focus = JAP_Way_Samurai }
+		x = 0
+		y = 1
+		relative_position_id = JAP_Way_Samurai
+
+		cost = 5
+
+
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		add_timed_idea = { idea = Emperor days = 365 }
+		}
+	}
 	focus = {
 		id = JAP_supremacy_of_technology
 		icon = GFX_goal_supremacy_of_technology
@@ -866,11 +1052,92 @@ focus_tree = {
 	}
 
 	focus = {
+		id = JAP_modern_artillery
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus =JAP_infantry  }
+		x = -1
+		y = 1
+		relative_position_id = JAP_infantry
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = JAP_modern_artillery
+				bonus = 1.5
+				uses = 3
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_modern_inf
+		icon = GFX_JAP_inf_modern
+		text = "Modern Weapons"
+		prerequisite = { focus =JAP_infantry_1  }
+		x = 1
+		y = 1
+		relative_position_id = JAP_infantry_1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = JAP_small_arms_modernization
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
 		id = JAP_armored_divisions
 		icon = GFX_goal_jap_tank
 		prerequisite = { focus = JAP_supremacy_of_technology }
-		x = 0
-		y = 1
+		x = 1
+		y = 2
 		relative_position_id = JAP_supremacy_of_technology
 
 		cost = 5
@@ -923,6 +1190,173 @@ focus_tree = {
 				name = mech_army_bonus
 				technology = mechanised_infantry
 			}
+		}
+	}
+	focus = {
+		id = JAP_army_expansion
+		icon = GFX_goal_japanese_instructors
+		prerequisite = { focus = JAP_army_expansion_law }
+		x = 4
+		y = 1
+		relative_position_id = JAP_army_expansion_law
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = hajime_sugiyama
+		}
+	}
+
+	focus = {
+		id = JAP_supremacy_of_will
+		icon = GFX_Nippon
+		prerequisite = { focus = JAP_army_expansion }
+		x = 0
+		y = 1
+		relative_position_id = JAP_army_expansion
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = JAP_superior_will
+		}
+	}
+
+	focus = {
+		id = JAP_bicycle_battalions
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = JAP_supremacy_of_will }
+		x = 7
+		y = 2
+		relative_position_id = JAP_supremacy_of_technology
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_technology = { bicycle_infantry = 1 }
+		}
+	}
+
+	focus = {
+		id = JAP_amphibious_armor
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = JAP_armored_divisions focus = JAP_bicycle_battalions }
+
+		x = 3
+		y = 2
+		relative_position_id = JAP_armored_divisions
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+            add_tech_bonus = {
+				name = JAP_armored_divisions
+				bonus = 5.0
+				uses = 1
+				technology = amphibious_tank
+			}
+			add_tech_bonus = {
+				name = JAP_armored_divisions
+				bonus = 4.0
+				uses = 1
+				technology = amphibious_tank_2
+			}
+			add_tech_bonus = {
+				name = JAP_armored_divisions
+				bonus = 2.0
+				uses = 1
+				technology = amphibious_mechanized_infantry
+			}
+
+
 		}
 	}
 
@@ -2658,225 +3092,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = JAP_modern_artillery
-		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus =JAP_supremacy_of_technology  }
-		x = -2
-		y = 1
-		relative_position_id = JAP_supremacy_of_technology
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = JAP_modern_artillery
-				bonus = 1.5
-				uses = 1
-				technology = artillery3
-			}
-			add_tech_bonus = {
-				name = JAP_modern_artillery
-				bonus = 1.5
-				uses = 1
-				technology = artillery4
-			}
-		}
-	}
-
-	focus = {
-		id = JAP_amphibious_armor
-		icon = GFX_goal_generic_position_armies
-		prerequisite = { focus = JAP_armored_divisions }
-		prerequisite = { focus = JAP_bicycle_battalions }
-
-		x = 1
-		y = 1
-		relative_position_id = JAP_armored_divisions
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 3
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-            add_tech_bonus = {
-				name = JAP_armored_divisions
-				bonus = 5.0
-				uses = 1
-				technology = amphibious_tank
-			}
-			add_tech_bonus = {
-				name = JAP_armored_divisions
-				bonus = 4.0
-				uses = 1
-				technology = amphibious_tank_2
-			}
-			add_tech_bonus = {
-				name = JAP_armored_divisions
-				bonus = 2.0
-				uses = 1
-				technology = amphibious_mechanized_infantry
-			}
-
-
-		}
-	}
-
-	focus = {
-		id = JAP_bicycle_battalions
-		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = JAP_supremacy_of_technology focus = JAP_supremacy_of_will }
-		x = 2
-		y = 1
-		relative_position_id = JAP_supremacy_of_technology
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			set_technology = { bicycle_infantry = 1 }
-		}
-	}
-
-	focus = {
-		id = JAP_army_expansion
-		icon = GFX_goal_japanese_instructors
-		prerequisite = { focus = JAP_army_expansion_law }
-		x = 1
-		y = 1
-		relative_position_id = JAP_army_expansion_law
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-			}
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = available_chief_of_army
-			show_ideas_tooltip = hajime_sugiyama
-		}
-	}
-
-	focus = {
-		id = JAP_supremacy_of_will
-		icon = GFX_Nippon
-		prerequisite = { focus = JAP_army_expansion }
-		x = 0
-		y = 1
-		relative_position_id = JAP_army_expansion
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-			}
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_ideas = JAP_superior_will
-		}
-	}
-
-	focus = {
 		id = JAP_fighter_modernization
 		icon = GFX_goal_japanese_airforce
 		prerequisite = { focus = JAP_army_expansion_law focus = JAP_new_naval_estimates }
-		x = 4
+		x = 7
 		y = 2
 		relative_position_id = JAP_army_expansion_law
 
@@ -3212,7 +3431,7 @@ focus_tree = {
 	focus = {
 		id = JAP_new_naval_estimates
 		icon = GFX_goal_jap_navy
-		x = 8
+		x = 11
 		y = 0
 		relative_position_id = JAP_army_expansion_law
 

@@ -6,7 +6,73 @@ ideas = {
 			
 	
 		# POLITICAL
-	
+		Samurai = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				max_planning = 0.05
+				land_reinforce_rate = 0.025
+				army_org_factor = 0.025
+			}
+		}
+		Emperor = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+			army_org = 5
+			army_morale_factor = 0.1
+			army_defence_factor = 0.05
+			army_attack_factor = 0.05
+			}
+		}
+	Warehouses = {
+			picture = smallarms_factory
+
+			allowed = {
+
+			}
+		
+			removal_cost = -1
+
+			equipment_bonus = {	
+				support_equipment   = {
+					build_cost_ic = -0.1
+					instant = yes
+				}	
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				anti_tank_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				artillery_equipment  = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
 	The_Manchurian_Project = {
 			
 			
