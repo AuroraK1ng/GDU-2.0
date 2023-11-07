@@ -3323,7 +3323,42 @@ guiTypes = {
 					position = { x=0 y=0 }
 					alwaystransparent = yes
 				}
-
+				instantTextBoxType = {
+					name = "air_reminder"
+					position = { x = 980 y = 460 }
+					textureFile = ""
+					font = "hoi_22tech"
+					borderSize = {x = 0 y = 4}
+					text = "Improved Airframes And Modules Are Date Locked to 1938"
+					maxWidth = 250
+					maxHeight = 320
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "air_reminder2"
+					position = { x = 980 y = 600 }
+					textureFile = ""
+					font = "hoi_22tech"
+					borderSize = {x = 0 y = 4}
+					text = "Advanced Airframes And Modules Are Date Locked to 1942"
+					maxWidth = 250
+					maxHeight = 320
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "air_reminder3"
+					position = { x = 980 y = 880 }
+					textureFile = ""
+					font = "hoi_22tech"
+					borderSize = {x = 0 y = 4}
+					text = "Modern Airframes And Modules Are Date Locked to 1943"
+					maxWidth = 250
+					maxHeight = 320
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
 			}
 
 			instantTextBoxType = {
@@ -3506,11 +3541,11 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "airtech_subtitle_weapons"
-				position = { x = 1155 y = 110 }
+				position = { x = 1200 y = 110 }
 				textureFile = ""
 				font = "hoi_33"
 				borderSize = {x = 0 y = 4}
-				text = "AIR_TITLE_WEAPONS"
+				text = "MODULES"
 				maxWidth = 300
 				maxHeight = 62
 				format = center
@@ -3518,19 +3553,7 @@ guiTypes = {
 				pdx_tooltip = ""
 			}
 
-			instantTextBoxType = {
-				name = "airtech_subtitle_engines"
-				position = { x = 1650 y = 110 }
-				textureFile = ""
-				font = "hoi_33"
-				borderSize = {x = 0 y = 4}
-				text = "AIR_TITLE_ENGINES"
-				maxWidth = 300
-				maxHeight = 62
-				format = center
-				Orientation = "UPPER_LEFT"
-				pdx_tooltip = "nav_bomber_equipment_desc"
-			}
+	
 
 			containerWindowType = {
 				name = "tiled_research_bg"
