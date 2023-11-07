@@ -751,3 +751,7 @@ NDefines.NSupply.DAYS_TO_START_GIVING_SUPPLY_AFTER_MOVING_SUPPLY_CAPITAL = 4
 NDefines.NSupply.SUPPLY_PATH_MAX_DISTANCE = 10
 NDefines.NSupply.ALERT_VERY_LOW_SUPPLY_LEVEL = 0.5
 NDefines.NSupply.ALERT_LOW_SUPPLY_LEVEL = 0.9
+
+NDefines.NIndustrialOrganisation.ASSIGN_DESIGN_TEAM_PP_COST_PER_DAY = 0.1
+NDefines.NIndustrialOrganisation.DESIGN_TEAM_CHANGE_XP_COST = 1 -- vanilla 5		-- Flat cost added to the XP cost of a new equipment design
+NDefines.NIndustrialOrganisation.FUNDS_FROM_MANUFACTURER_PER_IC_PER_DAY = 0.1	 -- vanilla 0.1	-- Funds added to MIO when a manufacturer is attached to a production line. Added every day proportional to IC produced.
