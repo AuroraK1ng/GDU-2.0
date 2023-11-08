@@ -914,8 +914,8 @@ equipments = {
 		type_override = fixed_main_weapon_slot
 		allowed_types = {
 			tactical_bomber
-			fighter
-			scout_plane
+			heavy_fighter
+			#scout_plane
 		}
 		allow_mission_type = training
 		group_by = archetype
@@ -924,7 +924,7 @@ equipments = {
 		interface_category = interface_category_air
 		
 		interface_overview_category_index = 4
-		air_superiority = 2
+		air_superiority = 1.25
 		reliability = 0.8
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
@@ -945,14 +945,6 @@ equipments = {
 					fighter_weapon
 				}
 			}
-
-			fixed_auxiliary_weapon_slot_1 = { 
-				required = no
-				allowed_module_categories = {
-					fighter_weapon
-					tac_weapon
-				}
-			}
 			engine_type_slot = {
 				required = yes
 				allowed_module_categories = {
@@ -964,12 +956,12 @@ equipments = {
 			special_type_slot_1 = {
 				required = no
 				allowed_module_categories = {
-					plane_special_module_small
+					plane_special_module_medium
 					plane_special_module_bomb_sights
 					plane_special_module_radio_navigation
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
-					plane_special_module_defense_turret
+					plane_special_module_defense_turret_x2
 				}
 			}
 		}
@@ -1077,36 +1069,16 @@ equipments = {
 		module_slots = inherit
 		priority = 5
 
-		air_range = 1200
+		air_range = 1400
 		maximum_speed = 0
-		air_agility = 20
-		air_defence = 3
+		air_agility = 60
+		air_defence = 8
 		##weight = 8
-		naval_strike_attack = 1
-		naval_strike_targetting = 1
-	}
-
-	medium_plane_airframe_1 = { #Basic
-		abbreviation = "afm1"
-		derived_variant_name = tac_bomber_equipment_1
-		year = 1936
-
-		archetype = medium_plane_airframe
-		parent = medium_plane_airframe_0
-		priority = 5
-
-		air_range = 2200
-		maximum_speed = 0
-		air_agility = 30
-		air_defence = 4
-		##weight = 10
-		naval_strike_attack = 1
-		naval_strike_targetting = 1
-		build_cost_ic = 76
-		resources = {
-			aluminium = 3
-			rubber = 1
-		}
+		naval_strike_attack = 2
+		naval_strike_targetting = -12
+		surface_detection = -20
+		sub_detection = -2.5
+		build_cost_ic = 50
 		module_slots = {
 			fixed_main_weapon_slot = {
 				required = yes
@@ -1115,15 +1087,13 @@ equipments = {
 					fighter_weapon
 				}
 			}
-
 			fixed_auxiliary_weapon_slot_1 = { 
 				required = no
 				allowed_module_categories = {
+					#tac_weapon
 					fighter_weapon
-					tac_weapon
 				}
 			}
-
 			engine_type_slot = {
 				required = yes
 				allowed_module_categories = {
@@ -1135,12 +1105,83 @@ equipments = {
 			special_type_slot_1 = {
 				required = no
 				allowed_module_categories = {
-					plane_special_module_small
+					plane_special_module_medium
 					plane_special_module_bomb_sights
 					plane_special_module_radio_navigation
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
-					plane_special_module_defense_turret
+					plane_special_module_defense_turret_x2
+				}
+			}
+		}
+	}
+
+	medium_plane_airframe_1 = { #Basic
+		abbreviation = "afm1"
+		derived_variant_name = tac_bomber_equipment_1
+		year = 1936
+
+		archetype = medium_plane_airframe
+		parent = medium_plane_airframe_0
+		priority = 5
+
+		air_range = 1900
+		maximum_speed = 0
+		air_agility = 70
+		air_defence = 8
+		##weight = 10
+		naval_strike_attack = 3
+		naval_strike_targetting = -12
+		surface_detection = -21
+		sub_detection = -1
+		build_cost_ic = 50
+		resources = {
+			aluminium = 2
+			rubber = 1
+		}
+		module_slots = {
+			fixed_main_weapon_slot = {
+				required = yes
+				allowed_module_categories = {
+					tac_weapon
+					fighter_weapon
+				}
+			}
+			fixed_auxiliary_weapon_slot_1 = { 
+				required = no
+				allowed_module_categories = {
+					tac_weapon
+					fighter_weapon
+				}
+			}
+			engine_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					twin_plane_engine_type
+					medium_plane_engine_type
+					quad_large_plane_engine_type
+				}
+			}
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_medium
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret_x2
+				}
+			}
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_medium
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret_x2
 				}
 			}
 		}
@@ -1155,16 +1196,18 @@ equipments = {
 		parent = medium_plane_airframe_1
 		priority = 5
 
-		air_range = 2400
+		air_range = 2450
 		maximum_speed = 0
-		air_agility = 35
-		air_defence = 6
+		air_agility = 60
+		air_defence = 7
 		##weight = 12
-		naval_strike_attack = 1
-		naval_strike_targetting = 1
-		build_cost_ic = 88
+		naval_strike_attack = 0
+		naval_strike_targetting = -1
+		surface_detection = -14
+		sub_detection = -4.5
+		build_cost_ic = 50
 		resources = {
-			aluminium = 4
+			aluminium = 3
 			rubber = 1
 		}
 		module_slots = {
@@ -1175,12 +1218,11 @@ equipments = {
 					fighter_weapon
 				}
 			}
-
 			fixed_auxiliary_weapon_slot_1 = { 
 				required = no
 				allowed_module_categories = {
-					fighter_weapon
 					tac_weapon
+					fighter_weapon
 				}
 			}
 			engine_type_slot = {
@@ -1197,15 +1239,25 @@ equipments = {
 			special_type_slot_1 = {
 				required = no
 				allowed_module_categories = {
-					plane_special_module_small
+					plane_special_module_medium
 					plane_special_module_bomb_sights
 					plane_special_module_radio_navigation
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
-					plane_special_module_defense_turret
+					plane_special_module_defense_turret_x2
 				}
 			}
-
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_medium
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret_x2
+				}
+			}
 		}
 	}
 
@@ -1218,16 +1270,18 @@ equipments = {
 		parent = medium_plane_airframe_2
 		priority = 5
 
-		air_range = 2800
+		air_range = 2900
 		maximum_speed = 0
-		air_agility = 45
+		air_agility = 50
 		air_defence = 8
 		##weight = 14
 		naval_strike_attack = 1
-		naval_strike_targetting = 1
-		build_cost_ic = 98
+		naval_strike_targetting = -8
+		surface_detection = -19
+		sub_detection = -6
+		build_cost_ic = 50
 		resources = {
-			aluminium = 5
+			aluminium = 4
 			rubber = 1
 		}
 		module_slots = {
@@ -1238,15 +1292,13 @@ equipments = {
 					fighter_weapon
 				}
 			}
-
 			fixed_auxiliary_weapon_slot_1 = { 
 				required = no
 				allowed_module_categories = {
-					fighter_weapon
 					tac_weapon
+					fighter_weapon
 				}
 			}
-
 			engine_type_slot = {
 				required = yes
 				allowed_module_categories = {
@@ -1261,12 +1313,23 @@ equipments = {
 			special_type_slot_1 = {
 				required = no
 				allowed_module_categories = {
-					plane_special_module_small
+					plane_special_module_medium
 					plane_special_module_bomb_sights
 					plane_special_module_radio_navigation
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
-					plane_special_module_defense_turret
+					plane_special_module_defense_turret_x2
+				}
+			}
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_medium
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret_x2
 				}
 			}
 		}
@@ -1281,14 +1344,14 @@ equipments = {
 		parent = medium_plane_airframe_3
 		priority = 5
 
-		air_range = 3000
+		air_range = 3200
 		maximum_speed = 0
 		air_agility = 55
 		air_defence = 10
 		##weight = 16
 		naval_strike_attack = 1
-		naval_strike_targetting = 1
-		build_cost_ic = 108
+		naval_strike_targetting = -5
+		build_cost_ic = 55
 		resources = {
 			aluminium = 5
 			rubber = 1
@@ -1301,12 +1364,11 @@ equipments = {
 					fighter_weapon
 				}
 			}
-
 			fixed_auxiliary_weapon_slot_1 = { 
 				required = no
 				allowed_module_categories = {
-					fighter_weapon
 					tac_weapon
+					fighter_weapon
 				}
 			}
 			engine_type_slot = {
@@ -1323,12 +1385,34 @@ equipments = {
 			special_type_slot_1 = {
 				required = no
 				allowed_module_categories = {
-					plane_special_module_small
+					plane_special_module_medium
 					plane_special_module_bomb_sights
 					plane_special_module_radio_navigation
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
-					plane_special_module_defense_turret
+					plane_special_module_defense_turret_x2
+				}
+			}
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_medium
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret_x2
+				}
+			}
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_medium
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret_x2
 				}
 			}
 		}
