@@ -1079,41 +1079,41 @@ equipments = {
 		surface_detection = -20
 		sub_detection = -2.5
 		build_cost_ic = 50
-		module_slots = {
-			fixed_main_weapon_slot = {
-				required = yes
-				allowed_module_categories = {
-					tac_weapon
-					fighter_weapon
-				}
-			}
-			fixed_auxiliary_weapon_slot_1 = { 
-				required = no
-				allowed_module_categories = {
-					#tac_weapon
-					fighter_weapon
-				}
-			}
-			engine_type_slot = {
-				required = yes
-				allowed_module_categories = {
-					twin_plane_engine_type
-					medium_plane_engine_type
-					quad_large_plane_engine_type
-				}
-			}
-			special_type_slot_1 = {
-				required = no
-				allowed_module_categories = {
-					plane_special_module_medium
-					plane_special_module_bomb_sights
-					plane_special_module_radio_navigation
-					plane_special_module_air_ground_radar
-					plane_special_module_air_air_radar
-					plane_special_module_defense_turret_x2
-				}
-			}
-		}
+		#module_slots = {
+		#	fixed_main_weapon_slot = {
+		#		required = yes
+		#		allowed_module_categories = {
+		#			tac_weapon
+		#			fighter_weapon
+		#		}
+		#	}
+		#	fixed_auxiliary_weapon_slot_1 = { 
+		#		required = no
+		#		allowed_module_categories = {
+		#			#tac_weapon
+		#			fighter_weapon
+		#		}
+		#	}
+		#	engine_type_slot = {
+		#		required = yes
+		#		allowed_module_categories = {
+		#			twin_plane_engine_type
+		#			medium_plane_engine_type
+		#			quad_large_plane_engine_type
+		#		}
+		#	}
+		#	special_type_slot_1 = {
+		#		required = no
+		#		allowed_module_categories = {
+		#			plane_special_module_medium
+		#			plane_special_module_bomb_sights
+		#			plane_special_module_radio_navigation
+		#			plane_special_module_air_ground_radar
+		#			plane_special_module_air_air_radar
+		#			plane_special_module_defense_turret_x2
+		#		}
+		#	}
+		#}
 	}
 
 	medium_plane_airframe_1 = { #Basic
