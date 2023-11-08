@@ -46,6 +46,78 @@ ideas = {
 
 			
 		}
+		Production = {
+			picture = smallarms_factory
+
+			allowed = {
+
+			}
+		
+			removal_cost = -1
+
+			equipment_bonus = {	
+			infantry_equipment   = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				support_equipment   = {
+					build_cost_ic = -0.1
+					instant = yes
+				}	
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				anti_tank_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				artillery_equipment  = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		Dockyards = {
+			picture = generic_navy_bonus
+
+			allowed = {
+
+			}
+		
+			removal_cost = -1
+			modifier = {
+				production_speed_dockyard_factor = 0.2
+			}
+			
+		}
+		ITA_Victory_in_Mediterranean  = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_navy_bonus
+			
+			equipment_bonus = {
+
+				ship_hull_heavy = {
+					build_cost_ic = -0.2 instant = yes
+					armor_value = 0.1
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.2 instant = yes
+					armor_value = 0.1
+				}
+			}
+		}
 		Duce_Supremo = {
 			
 			picture = vittoria_mutilata
