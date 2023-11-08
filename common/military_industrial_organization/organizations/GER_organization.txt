@@ -11,7 +11,6 @@ GER_porsche_organization = {
 	allowed = {
 		OR = {
 			the_axis = yes
-			the_geacps = yes
 		}
 		NOT = {
 			original_tag = CZE
@@ -25,7 +24,6 @@ GER_henschel_organization = {
 	allowed = {
 		OR = {
 			the_axis = yes
-			the_geacps = yes
 		}
 	}
 }
@@ -36,7 +34,6 @@ GER_man_organization = {
 	allowed = {
 		OR = {
 			the_axis = yes
-			the_geacps = yes
 		}
 		NOT = {
 			original_tag = CZE
@@ -50,7 +47,9 @@ GER_nibelungenwerke_organization = {
 	allowed = {
 		OR = {
 			the_axis = yes
-			the_geacps = yes
+		}
+		NOT={
+			tag=SPR
 		}
 	}
 }
@@ -59,10 +58,7 @@ GER_miag_organization = {
 	include = generic_infantry_tank_organization
 	icon = GFX_idea_miag
 	allowed = {
-		OR = {
-			the_axis = yes
-			the_geacps = yes
-		}
+		tag = GER
 	}
 }
 
