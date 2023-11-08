@@ -27,7 +27,8 @@ NDefines.NIntel.DYNAMIC_INTEL_SOURCE_EVENT_ABSOLUTE_MAXIMUMS = { 200, 200, 200, 
 
 NDefines.NIntel.DYNAMIC_INTEL_SOURCE_EVENT_MULT_DECAY = 1.0
 NDefines.NProduction.BASE_LICENSE_IC_COST = 0
-
+NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_VALUE = 0		-- The minimum number of factories we have to put on consumer goods, by value.	
+NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT = 0 		-- The minimum number of factories we have to put on consumer goods, in percent.	
 --- Letting people see some stuff on ledger
 NDefines.NGame.GAME_SPEED_SECONDS = { 2.0, 0.5, 0.2, 0.03, 0.0 }	
 
