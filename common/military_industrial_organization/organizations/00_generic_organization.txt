@@ -811,8 +811,8 @@ generic_medium_tank_organization = {
 			military_industrial_organization_research_bonus = 0.05
 		}
 		
-		production_bonus = {
-			production_capacity_factor = 0.05
+		equipment_bonus = {
+			defense = 0.05
 		}
 	}
 
@@ -824,7 +824,7 @@ generic_medium_tank_organization = {
 		position = { x=1 y=0 }
 		
 		equipment_bonus = {
-			breakthrough = 0.05
+			reliability = 0.05
 		}
 	}
 
@@ -839,7 +839,7 @@ generic_medium_tank_organization = {
 		all_parents = { generic_mio_trait_power_traverse }
 		
 		equipment_bonus = {
-			breakthrough = 0.05
+			reliability = 0.05
 		}
 	}
 
@@ -853,8 +853,8 @@ generic_medium_tank_organization = {
 
 		all_parents = { generic_mio_trait_all_round_cupola }
 		
-		production_bonus = {
-			production_capacity_factor = 0.05
+		equipment_bonus = {
+			hard_attack = 0.05
 		}
 	}
 
@@ -869,7 +869,7 @@ generic_medium_tank_organization = {
 		all_parents = { generic_mio_trait_simplified_turret_design }
 		
 		equipment_bonus = {
-			hard_attack = 0.05
+			air_attack = 0.1
 		}
 	}
 
@@ -911,8 +911,8 @@ generic_medium_tank_organization = {
 		position = { x=4 y=0 }
 		relative_position_id = generic_mio_trait_power_traverse
 		
-		production_bonus = {
-			production_capacity_factor = 0.05
+		equipment_bonus = {
+			armor_value = 0.05
 		}
 	}
 
