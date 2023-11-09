@@ -245,6 +245,8 @@ SOV_okmo_organization = {
 		#		set_country_flag = SOV_merge_plant_no_174_flag
 		#	}
 		#}
+		
+		limit_to_equipment_type = { mio_cat_eq_all_heavy_tank }
 
 		equipment_bonus = {
 			ap_attack = 0.05
@@ -283,6 +285,8 @@ SOV_okmo_organization = {
 		#		set_country_flag = SOV_merge_plant_no_112_flag
 		#	}
 		#}
+		
+		limit_to_equipment_type = { mio_cat_eq_all_heavy_tank mio_cat_eq_all_light_tank }
 
 		equipment_bonus = {
 			ap_attack = 0.05
@@ -313,6 +317,8 @@ SOV_okmo_organization = {
 				has_completed_focus = SOV_defense_of_moscow
 			}
 		}
+		
+		limit_to_equipment_type = { mio_cat_eq_all_heavy_tank mio_cat_eq_all_light_tank }
 
 		#on_complete = {
 		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -400,19 +406,6 @@ SOV_nevskoye_design_bureau_organization = {
 		available = {
 			FROM = {
 				has_completed_focus = SOV_ocean_going_navy
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_370_flag
-					add_tech_bonus = {
-						name = SOV_merge_ship_plant_2_baltic
-						bonus = 1
-						uses = 1
-						category = naval_mines
-					}
 			}
 		}
 
