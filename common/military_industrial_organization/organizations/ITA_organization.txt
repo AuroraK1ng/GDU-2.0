@@ -951,25 +951,25 @@ ITA_officine_meccaniche_organization = {
 
 	#research_bonus = 0.2 #Intended to be a total of 20% Research for the MIO at start
 
-	override_trait = { #Traits with no limits in the archetype need the limit to exclude the additional equipment in this MIO (train)
-		token = generic_mio_trait_medium_machinegun_mounts
+	#override_trait = { #Traits with no limits in the archetype need the limit to exclude the additional equipment in this MIO (train)
+	#	token = generic_mio_trait_medium_machinegun_mounts
+	#
+	#	limit_to_equipment_type = {
+	#		motorized_equipment
+	#		mech_chassis
+	#		motorized_rocket_equipment
+	#	}
+	#}
 
-		limit_to_equipment_type = {
-			motorized_equipment
-			mech_chassis
-			motorized_rocket_equipment
-		}
-	}
-
-	override_trait = { #Traits with no limits in the archetype need the limit to exclude the additional equipment in this MIO (train)
-		token = generic_mio_trait_armored_pulpit_mount
-
-		limit_to_equipment_type = {
-			motorized_equipment
-			mech_chassis
-			motorized_rocket_equipment
-		}
-	}
+	#override_trait = { #Traits with no limits in the archetype need the limit to exclude the additional equipment in this MIO (train)
+	#	token = generic_mio_trait_armored_pulpit_mount
+	#
+	#	limit_to_equipment_type = {
+	#		motorized_equipment
+	#		mech_chassis
+	#		motorized_rocket_equipment
+	#	}
+	#}
 
 	add_trait = { 
 		token = ITA_mio_trait_new_ricostruzione_iundustriale_motorized
