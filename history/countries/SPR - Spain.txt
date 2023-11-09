@@ -1,169 +1,23 @@
 ﻿capital = 41
-
 set_fuel_ratio = 0.5
-
 oob = "SPR_1936"
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "SPR_1936_naval_mtg"
-	else = {
-		set_naval_oob = "SPR_1936_naval_legacy"
-	}
+set_convoys = 100
+set_stability = 0.5
+set_war_support = 0.8
+set_politics = {
+	ruling_party = democratic
+	last_election = "1933.2.16"
+	election_frequency = 36
+	elections_allowed = yes
 }
 
-add_ideas = { GER_mefo_bills_non_germany }
-
-add_intel = {
-	target = BUl
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = SPR
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_opinion_modifier = { target = JAP modifier = embargo }
-add_opinion_modifier = { target = JAP modifier = sanctions }
-add_opinion_modifier = { target = JAP modifier = minor_sanctions }
-
-add_opinion_modifier = { target = ENG modifier = embargo }
-add_opinion_modifier = { target = ENG modifier = sanctions_relations }
-add_opinion_modifier = { target = ENG modifier = large_decrease }
-add_opinion_modifier = { target = ENG modifier = hostile_status }
-add_opinion_modifier = { target = RAJ modifier = embargo }
-add_opinion_modifier = { target = RAJ modifier = sanctions_relations }
-add_opinion_modifier = { target = RAJ modifier = large_decrease }
-add_opinion_modifier = { target = RAJ modifier = hostile_status }
-add_opinion_modifier = { target = CAN modifier = embargo }
-add_opinion_modifier = { target = CAN modifier = sanctions_relations }
-add_opinion_modifier = { target = CAN modifier = large_decrease }
-add_opinion_modifier = { target = CAN modifier = hostile_status }
-add_opinion_modifier = { target = SOV modifier = embargo }
-add_opinion_modifier = { target = SOV modifier = sanctions_relations }
-add_opinion_modifier = { target = SOV modifier = large_decrease }
-add_opinion_modifier = { target = SOV modifier = hostile_status }
-add_opinion_modifier = { target = SAF modifier = embargo }
-add_opinion_modifier = { target = SAF modifier = sanctions_relations }
-add_opinion_modifier = { target = SAF modifier = large_decrease }
-add_opinion_modifier = { target = SAF modifier = hostile_status }
-add_opinion_modifier = { target = AST modifier = embargo }
-add_opinion_modifier = { target = AST modifier = sanctions_relations }
-add_opinion_modifier = { target = AST modifier = large_decrease }
-add_opinion_modifier = { target = AST modifier = hostile_status }
-add_opinion_modifier = { target = NZL modifier = embargo }
-add_opinion_modifier = { target = NZL modifier = sanctions_relations }
-add_opinion_modifier = { target = NZL modifier = large_decrease }
-add_opinion_modifier = { target = NZL modifier = hostile_status }
-add_opinion_modifier = { target = USA modifier = embargo }
-add_opinion_modifier = { target = USA modifier = sanctions_relations }   
-add_opinion_modifier = { target = USA modifier = large_decrease }
-add_opinion_modifier = { target = USA modifier = hostile_status } 
-add_intel = {
-	target = USA
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = ENG
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = SOV
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = RAJ
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = ITA
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = GER
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = ROM
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = HUN
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = JAP
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = CAN
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = FRA
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = SAF
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = AST
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = NZL
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
+set_popularities = {
+	democratic = 47
+	fascism = 46
+	communism = 7
 }
 
 set_research_slots = 4
-
 add_ideas = {
 	SPA_carlism_1
 	SPR_political_violence
@@ -171,9 +25,13 @@ add_ideas = {
 	GDU_scuffed_acclim
 	free_trade
 	GDU_volunteer_nation
+	GER_mefo_bills_non_germany
 }
 
-add_timed_idea = { idea = airandnavy_idea days = 1350 }
+add_timed_idea = {
+	idea = airandnavy_idea
+	days = 1350
+}
 
 #africa leaders
 recruit_character = SPA_francisco_franco_AFRICA
@@ -186,30 +44,36 @@ recruit_character = SPR_goded_llopis
 recruit_character = SPR_jose_sanjurjo_sacanell
 #
 recruit_character = SPR_niceto_alcala_zamora
-	recruit_character = SPA_enrique_canovas_lacruz
-	recruit_character = SPR_jose_diaz
-	
-	recruit_character = SPA_wilhelm_ritter_von_thoma
-	recruit_character = SPA_heli_rolando_de_tella
-	recruit_character = SPA_rafael_garcia_valino
-	recruit_character = SPA_jose_enrique_varela
-	recruit_character = SPA_miguel_ponte
-	recruit_character = SPR_alejandro_lerroux
-	recruit_character = SPA_francisco_franco
-	recruit_character = SPR_jose_asensio_torrado
-	recruit_character = SPR_albert_speer
-	recruit_character = SPA_agustin_munoz_grandes
-	recruit_character = SPA_tomas_dominguez_arevalo
-	recruit_character = SPA_diego_hidalgo_y_duran
-	recruit_character = SPA_joaquin_garcia_morato
-	recruit_character = SPA_miguel_cabanellas
-	recruit_character = SPR_jose_miaja
-	recruit_character = SPA_raimundo_fernandez_cuesta
-	recruit_character = SPA_jose_antonio_giron
-	recruit_character = SPA_juan_yague
-	recruit_character = SPA_manuel_hedilla
-	recruit_character = SPR_felipe_diaz_sandino
-	recruit_character = SPA_emilio_mola
+recruit_character = SPA_enrique_canovas_lacruz
+recruit_character = SPR_jose_diaz
+recruit_character = SPA_wilhelm_ritter_von_thoma
+recruit_character = SPA_heli_rolando_de_tella
+recruit_character = SPA_rafael_garcia_valino
+recruit_character = SPA_jose_enrique_varela
+recruit_character = SPA_miguel_ponte
+recruit_character = SPR_alejandro_lerroux
+recruit_character = SPA_francisco_franco
+recruit_character = SPR_jose_asensio_torrado
+recruit_character = SPR_albert_speer
+recruit_character = SPA_agustin_munoz_grandes
+recruit_character = SPA_tomas_dominguez_arevalo
+recruit_character = SPA_diego_hidalgo_y_duran
+recruit_character = SPA_joaquin_garcia_morato
+recruit_character = SPA_miguel_cabanellas
+recruit_character = SPR_jose_miaja
+recruit_character = SPA_raimundo_fernandez_cuesta
+recruit_character = SPA_jose_antonio_giron
+recruit_character = SPA_juan_yague
+recruit_character = SPA_manuel_hedilla
+recruit_character = SPR_felipe_diaz_sandino
+recruit_character = SPA_emilio_mola
+set_technology = {
+	iw_small_airframe = 1
+	iw_medium_airframe = 1
+	iw_large_airframe = 1
+	early_bombs = 1
+}
+
 set_technology = {
 	noports = 1
 	Spain_INF = 1
@@ -230,152 +94,492 @@ set_technology = {
 	fuel_silos = 1
 	fuel_refining = 1
 	synth_oil_experiments = 1
-	iw_small_airframe = 1
-	iw_medium_airframe = 1
-	
+	armored_car1 = 1
 }
-
-
-
-if = {
-	limit = {
-		has_dlc = "La Resistance"
-	}
-	set_technology = { armored_car1 = 1	}
-}
-add_opinion_modifier = { target = ENG modifier = embargo }
-add_opinion_modifier = { target = ENG modifier = sanctions_relations }
-add_opinion_modifier = { target = ENG modifier = large_decrease }
-add_opinion_modifier = { target = ENG modifier = hostile_status }
-add_opinion_modifier = { target = RAJ modifier = embargo }
-add_opinion_modifier = { target = RAJ modifier = sanctions_relations }
-add_opinion_modifier = { target = RAJ modifier = large_decrease }
-add_opinion_modifier = { target = RAJ modifier = hostile_status }
-add_opinion_modifier = { target = CAN modifier = embargo }
-add_opinion_modifier = { target = CAN modifier = sanctions_relations }
-add_opinion_modifier = { target = CAN modifier = large_decrease }
-add_opinion_modifier = { target = CAN modifier = hostile_status }
-add_opinion_modifier = { target = SOV modifier = embargo }
-add_opinion_modifier = { target = SOV modifier = sanctions_relations }
-add_opinion_modifier = { target = SOV modifier = large_decrease }
-add_opinion_modifier = { target = SOV modifier = hostile_status }
-add_opinion_modifier = { target = SAF modifier = embargo }
-add_opinion_modifier = { target = SAF modifier = sanctions_relations }
-add_opinion_modifier = { target = SAF modifier = large_decrease }
-add_opinion_modifier = { target = SAF modifier = hostile_status }
-add_opinion_modifier = { target = AST modifier = embargo }
-add_opinion_modifier = { target = AST modifier = sanctions_relations }
-add_opinion_modifier = { target = AST modifier = large_decrease }
-add_opinion_modifier = { target = AST modifier = hostile_status }
-add_opinion_modifier = { target = NZL modifier = embargo }
-add_opinion_modifier = { target = NZL modifier = sanctions_relations }
-add_opinion_modifier = { target = NZL modifier = large_decrease }
-add_opinion_modifier = { target = NZL modifier = hostile_status }
-add_opinion_modifier = { target = USA modifier = embargo }
-add_opinion_modifier = { target = USA modifier = sanctions_relations }   
-add_opinion_modifier = { target = USA modifier = large_decrease }
-add_opinion_modifier = { target = USA modifier = hostile_status } 
-
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	set_technology = {
-		##early_submarine = 1
-		##early_destroyer = 1
-		##basic_destroyer = 1
-		##early_light_cruiser = 1
-		##early_heavy_cruiser = 1
-		##basic_heavy_cruiser = 1
-		##early_carrier = 1
-		##transport = 1
-	}
-}
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	set_technology = {
-		early_ship_hull_light = 1
-		basic_ship_hull_light = 1
-		early_ship_hull_submarine = 1
-		basic_ship_hull_submarine = 1
-		early_ship_hull_cruiser = 1
-		basic_ship_hull_cruiser = 1
-		early_ship_hull_heavy = 1
-		basic_battery = 1
-		basic_medium_battery = 1
-		##basic_encryption = 1
-		basic_torpedo = 1
-		basic_depth_charges = 1
-		mtg_transport = 1
-	}
-}
-add_equipment_to_stockpile = {
-    type = artillery_equipment_1
-    amount = 1700
-    producer = SPR
-}  
-add_equipment_to_stockpile = {
-    type = support_equipment
-    amount = 321
-    producer = SPR
-} 
 
 add_equipment_to_stockpile = {
-    type = infantry_equipment_1
-    amount = 21000
-    producer = SPR
-} 
+	type = artillery_equipment_1
+	amount = 1700
+	producer = SPR
+}
+
+add_equipment_to_stockpile = {
+	type = support_equipment
+	amount = 321
+	producer = SPR
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 21000
+	producer = SPR
+}
 
 add_equipment_to_stockpile = {
 	type = anti_air_equipment_1
 	amount = 850
 	producer = SPR
-} 
-set_politics = {
-	ruling_party = democratic
-	last_election = "1933.2.16"
-	election_frequency = 36
-	elections_allowed = yes
 }
 
-set_popularities = {
-    democratic = 47
-    fascism = 46
-    communism = 7
+add_opinion_modifier = {
+	target = JAP
+	modifier = embargo
 }
 
-set_convoys = 100
-set_stability = 0.5
-set_war_support = 0.8
-### VARIANTS ###
-# 1936 Start #
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	### Ship Variants ###
-	create_equipment_variant = {
-		name = "C Class"
-		type = submarine_1
-		upgrades = {
-			ship_reliability_upgrade = 1
-			sub_engine_upgrade = 1
-			sub_stealth_upgrade = 1
-			sub_torpedo_upgrade = 1
-		}
-	}
-	create_equipment_variant = {
-		name = "Príncipe Alfonso Class"
-		type = light_cruiser_1
-		upgrades = {
-			ship_reliability_upgrade = 1
-			ship_engine_upgrade = 1
-			ship_gun_upgrade = 1
-			ship_anti_air_upgrade = 1
-		}
-	}
+add_opinion_modifier = {
+	target = JAP
+	modifier = sanctions
 }
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	# Submarines #
-	# Destroyers #
-	# Light Cruisers #
-	# Heavy Cruisers #
-	# Battleships #
+
+add_opinion_modifier = {
+	target = JAP
+	modifier = minor_sanctions
+}
+
+add_opinion_modifier = {
+	target = ENG
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = ENG
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = ENG
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = ENG
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = RAJ
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = RAJ
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = RAJ
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = RAJ
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = CAN
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = CAN
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = CAN
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = CAN
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = SOV
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = SOV
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = SOV
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = SOV
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = SAF
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = SAF
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = SAF
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = SAF
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = AST
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = AST
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = AST
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = AST
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = NZL
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = NZL
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = NZL
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = NZL
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = USA
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = USA
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = USA
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = USA
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = ENG
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = ENG
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = ENG
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = ENG
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = RAJ
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = RAJ
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = RAJ
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = RAJ
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = CAN
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = CAN
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = CAN
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = CAN
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = SOV
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = SOV
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = SOV
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = SOV
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = SAF
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = SAF
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = SAF
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = SAF
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = AST
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = AST
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = AST
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = AST
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = NZL
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = NZL
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = NZL
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = NZL
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = USA
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = USA
+	modifier = sanctions_relations
+}
+
+add_opinion_modifier = {
+	target = USA
+	modifier = large_decrease
+}
+
+add_opinion_modifier = {
+	target = USA
+	modifier = hostile_status
+}
+
+add_intel = {
+	target = BUl
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = SPR
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = USA
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = ENG
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = SOV
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = RAJ
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = ITA
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = GER
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = ROM
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = HUN
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = JAP
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = CAN
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = FRA
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = SAF
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = AST
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = NZL
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
 }

@@ -904,7 +904,7 @@ focus_tree = {
 				category = nuclear
 			}
 			set_technology = {
-				strategic_bomber3 = 1
+				advanced_large_airframe = 1
 			}
 		}
 	}
@@ -2385,12 +2385,12 @@ focus_tree = {
 				name = USA_fighter_bonus
 				ahead_reduction = 0.5
 				bonus = 0.25
-				technology = fighter2
+				technology = improved_small_airframe
 			}
 			add_tech_bonus = {
 				name = USA_fighter_bonus
 				bonus = 0.25
-				technology = fighter2
+				technology = improved_small_airframe
 			}			
 		}
 	}
@@ -2554,16 +2554,16 @@ focus_tree = {
 				bonus = 2.5
 				ahead_reduction = 0.5
 				uses = 1
-				technology = heavy_fighter1
-				technology = heavy_fighter2
-				technology = heavy_fighter3
+				technology = basic_medium_airframe
+				technology = improved_medium_airframe
+				technology = advanced_medium_airframe
 			}
 			add_tech_bonus = {
 				name = USA_escort_fighters
 				bonus = 2.5
 				uses = 1
-				technology = heavy_fighter2
-				technology = heavy_fighter3
+				technology = improved_medium_airframe
+				technology = advanced_medium_airframe
 			}			
 		}
 	}
@@ -2981,14 +2981,18 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 				ahead_reduction = 0.5
-				category = naval_bomber
+				technology = air_torpedoe_1
+				technology = air_torpedoe_2
+				technology = air_torpedoe_3
 				category = naval_air
 			}
 			add_tech_bonus = {
 				name = USA_bureau_of_aeronautics
 				bonus = 1.0
 				uses = 1
-				category = naval_bomber
+				technology = air_torpedoe_1
+				technology = air_torpedoe_2
+				technology = air_torpedoe_3
 				category = naval_air
 			}			
 		}
@@ -3223,13 +3227,13 @@ focus_tree = {
 				name = fighter3_bonus
 				bonus = 0.5
 				uses = 1
-				technology = fighter3
+				technology = advanced_small_airframe
 			}			
 			add_tech_bonus = {
 				name = jet_fighter_bonus
 				bonus = 2.5
 				uses = 1
-				technology = jet_fighter1
+				technology = modern_small_airframe
 			}		
 		}
 	}		

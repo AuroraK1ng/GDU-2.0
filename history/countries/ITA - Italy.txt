@@ -1,31 +1,54 @@
 ﻿capital = 2
-
 starting_train_buffer = 1.5
-
 set_research_slots = 4
-
 oob = "ITA_1936_nsb"
-
 set_naval_oob = "ITA_1936_naval_mtg"
-
 set_stability = 0.65
 set_war_support = 0.71
+add_opinion_modifier = {
+	target = SOV
+	modifier = embargo
+}
 
-add_opinion_modifier = { target = SOV modifier = embargo }
-add_opinion_modifier = { target = SOV modifier = sanctions_relations }
-add_opinion_modifier = { target = SOV modifier = large_decrease }
-add_opinion_modifier = { target = SOV modifier = hostile_status }
+add_opinion_modifier = {
+	target = SOV
+	modifier = sanctions_relations
+}
 
-add_opinion_modifier = { target = JAP modifier = embargo }
-add_opinion_modifier = { target = JAP modifier = sanctions }
-add_opinion_modifier = { target = JAP modifier = minor_sanctions }
+add_opinion_modifier = {
+	target = SOV
+	modifier = large_decrease
+}
 
-add_timed_idea = { idea = airandnavy_idea days = 1320 }
+add_opinion_modifier = {
+	target = SOV
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = JAP
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = JAP
+	modifier = sanctions
+}
+
+add_opinion_modifier = {
+	target = JAP
+	modifier = minor_sanctions
+}
+
+add_timed_idea = {
+	idea = airandnavy_idea
+	days = 1320
+}
 
 add_ideas = {
 	victor_emmanuel
 	vittoria_mutilata
-	export_focus 
+	export_focus
 	limited_conscription
 	partial_economic_mobilisation
 	GDU_scuffed_acclim
@@ -34,160 +57,45 @@ add_ideas = {
 
 
 
-add_intel = {
-	target = SPR
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = BUl
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-
-
-add_intel = {
-	target = USA
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = ENG
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = SOV
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = RAJ
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = ITA
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = GER
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = ROM
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = HUN
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = JAP
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = CAN
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = FRA
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = SAF
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = AST
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-add_intel = {
-	target = NZL
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
 # Starting tech
+set_technology = {
+	iw_small_airframe = 1
+	basic_small_airframe = 1
+	iw_medium_airframe = 1
+	basic_medium_airframe = 1
+	early_bombs = 1
+	air_torpedoe_1 = 1	# navbomber 1 guns
+
+}
+
 set_technology = {
 	airfield_construction = 1
 	fort_construction = 1
 	rubber_processing = 1
 	improved_rubber_processing = 1
-	
 	paratroopers = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	##early_submarine = 1
-		##early_destroyer = 1
-		##early_light_cruiser = 1
-		##early_heavy_cruiser = 1
-		##early_carrier = 1
-		####basic_carrier = 1
-		##early_battlecruiser = 1
-		early_ship_hull_light = 1
-		basic_ship_hull_light = 1
-		early_ship_hull_submarine = 1
-		early_ship_hull_cruiser = 1
-		basic_ship_hull_cruiser = 1
-		early_ship_hull_heavy = 1
-		basic_ship_hull_heavy = 1
-		early_ship_hull_carrier = 1
-		basic_battery = 1
-		basic_light_battery = 1
-		basic_medium_battery = 1
-		basic_heavy_battery = 1
-		basic_torpedo = 1
-		smoke_generator = 1
-		basic_depth_charges = 1
-		##basic_encryption = 1
-		basic_cruiser_armor_scheme = 1
-		basic_heavy_armor_scheme = 1
-		mtg_transport = 1
-		##basic_encryption = 1
-		basic_fire_control_system = 1
-		##transport = 1
+
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	early_ship_hull_cruiser = 1
+	basic_ship_hull_cruiser = 1
+	early_ship_hull_heavy = 1
+	basic_ship_hull_heavy = 1
+	early_ship_hull_carrier = 1
+	basic_battery = 1
+	basic_light_battery = 1
+	basic_medium_battery = 1
+	basic_heavy_battery = 1
+	basic_torpedo = 1
+	smoke_generator = 1
+	basic_depth_charges = 1
+	basic_cruiser_armor_scheme = 1
+	basic_heavy_armor_scheme = 1
+	mtg_transport = 1
+	basic_fire_control_system = 1
 	tech_support = 1
 	tech_engineers = 1
 	tech_recon = 1
@@ -203,11 +111,6 @@ set_technology = {
 	basic_heavy_tank_chassis = 1
 	armor_tech_1 = 1
 	engine_tech_1 = 1
-	iw_small_airframe = 1
-	basic_small_airframe = 1
-	iw_medium_airframe = 1
-	
-	
 	trench_warfare = 1
 	fleet_in_being = 1
 	fuel_silos = 1
@@ -216,8 +119,8 @@ set_technology = {
 	synth_oil_experiments = 1
 	basic_train = 1
 }
-### STOCKPILE ###
 
+### STOCKPILE ###
 set_politics = {
 	ruling_party = fascism
 	last_election = "1934.3.26"
@@ -226,17 +129,17 @@ set_politics = {
 }
 
 set_convoys = 800
-
 set_politics = {
 	ruling_party = fascism
 	last_election = "1934.3.26"
 	election_frequency = 60
 	elections_allowed = no
 }
+
 set_popularities = {
-	 democratic = 22
-    	fascism = 76
-    	communism = 2
+	democratic = 22
+	fascism = 76
+	communism = 2
 }
 #africa leaders
 recruit_character = ITA_emilio_de_bono_AFRICA
@@ -257,7 +160,6 @@ recruit_character = ITA_giovanni_messe
 recruit_character = ITA_sebastiano_visconti_prasca
 recruit_character = ITA_ubaldo_soddu
 recruit_character = ITA_italo_balbo
-
 recruit_character = ITA_ettore_bastico
 recruit_character = ITA_italo_gariboldi
 recruit_character = ITA_pietro_pintor
@@ -278,16 +180,12 @@ recruit_character = ITA_amedeo_guillet
 recruit_character = ITA_annibale_bergonzoli
 recruit_character = ITA_hamid_idris_awate
 recruit_character = ITA_ibrahim_farag_mohammed
-
 recruit_character = ITA_norma_barbolini
-
 recruit_character = ITA_ada_gobetti
 recruit_character = ITA_randolfo_pacciardi
 recruit_character = ITA_giuseppe_pieche
-
 recruit_character = ITA_giuseppe_de_stefanis
 recruit_character = ITA_prince_aimone
-
 recruit_character = ITA_inigo_campioni
 recruit_character = ITA_alberto_da_zara
 recruit_character = ITA_giuseppe_fioravanzo
@@ -295,7 +193,6 @@ recruit_character = ITA_carlo_bergamini
 recruit_character = ITA_angelo_iachino
 recruit_character = ITA_giuseppe_di_bartolo
 recruit_character = ITA_junio_valerio_borghese
-
 recruit_character = ITA_alfredo_guzzoni
 recruit_character = ITA_renato_sandalli
 recruit_character = ITA_francesco_pricolo
@@ -329,25 +226,35 @@ recruit_character = ITA_haile_selassie_gugsa_doppleganger
 recruit_character = ITA_abba_jofir_doppleganger
 recruit_character = ITA_hailu_tekle_haymanot_doppleganger
 recruit_character = ITA_seyoum_mengesha_doppleganger
-
 ### VARIANTS ###
 # 1936 Start #
 #plane variants
-if = {
-	limit = { NOT = { has_dlc = "By Blood Alone" } }
-	create_equipment_variant = {
-		name = "CR.42"
-		type = fighter_equipment_0
-		upgrades = {
-			plane_gun_upgrade = 1
-			plane_range_upgrade = 0  
-			plane_engine_upgrade = 2
-			plane_reliability_upgrade = 1
-		}
+create_equipment_variant = {
+	name = "CR.42"
+	type = fighter_equipment_0
+	upgrades = {
+		plane_gun_upgrade = 1
+		plane_range_upgrade = 0
+		plane_engine_upgrade = 2
+		plane_reliability_upgrade = 1
+	}
+}
+create_equipment_variant = {
+	name = "Fiat L3/35"
+	type = light_tank_chassis_2
+	modules = {
+		main_armament_slot = tank_small_cannon
+		turret_type_slot = tank_light_three_man_tank_turret
+		special_type_slot_2 = additional_machine_guns
+		suspension_type_slot = tank_bogie_suspension
+		armor_type_slot = tank_welded_armor
+		engine_type_slot = tank_gasoline_engine
 	}
 }
 if = {
-	limit = { has_dlc = "Man the Guns"}
+	limit = {
+		has_dlc = "Man the Guns"
+	}
 	### Battleship Variants	
 	create_equipment_variant = {
 		name = "BB1"
@@ -376,21 +283,21 @@ if = {
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_2
-				fixed_ship_anti_air_slot = ship_anti_air_2
-				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = cruiser_ship_engine_2
-				fixed_ship_armor_slot = ship_armor_cruiser_2
-				fixed_ship_secondaries_slot = ship_secondaries_2
-				front_1_custom_slot = ship_light_medium_battery_2
-				mid_1_custom_slot = ship_light_medium_battery_2
-				mid_2_custom_slot = ship_light_medium_battery_2
-				rear_1_custom_slot = ship_light_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			front_1_custom_slot = ship_light_medium_battery_2
+			mid_1_custom_slot = ship_light_medium_battery_2
+			mid_2_custom_slot = ship_light_medium_battery_2
+			rear_1_custom_slot = ship_light_medium_battery_2
 		}
 	}
 	### Destroyer Variants	
 	create_equipment_variant = {
-		name = "DD1 AA" 			#Represents the following WWI/1920s DDs: Freccia, Foglore, Mastrale, Oriani, Spica (and subclasses)
+		name = "DD1 AA"		#Represents the following WWI/1920s DDs: Freccia, Foglore, Mastrale, Oriani, Spica (and subclasses)
 		type = ship_hull_light_1
 		name_group = ITA_DD_HISTORICAL
 		parent_version = 0
@@ -407,24 +314,24 @@ if = {
 	}
 	### Battleship Variants	
 	create_equipment_variant = {
-			name = "BB2"
-			type = ship_hull_heavy_2
-			name_group = ITA_BB_HISTORICAL
-			parent_version = 0
-			modules = {
-				fixed_ship_battery_slot = ship_heavy_battery_2
-				fixed_ship_anti_air_slot = ship_anti_air_3
-				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = heavy_ship_engine_3
-				fixed_ship_secondaries_slot = ship_secondaries_2
-				fixed_ship_armor_slot = ship_armor_bb_2
-				front_1_custom_slot = ship_heavy_battery_2
-				mid_1_custom_slot = ship_airplane_launcher_2
-				mid_2_custom_slot = ship_airplane_launcher_2
-				rear_1_custom_slot = ship_heavy_battery_2
-			}
+		name = "BB2"
+		type = ship_hull_heavy_2
+		name_group = ITA_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_3
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_3
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			fixed_ship_armor_slot = ship_armor_bb_2
+			front_1_custom_slot = ship_heavy_battery_2
+			mid_1_custom_slot = ship_airplane_launcher_2
+			mid_2_custom_slot = ship_airplane_launcher_2
+			rear_1_custom_slot = ship_heavy_battery_2
 		}
+	}
 	### Submarine Variants	
 	create_equipment_variant = {
 		name = "SS1"
@@ -439,60 +346,180 @@ if = {
 	}
 }
 
-create_equipment_variant = {
-	name = "Fiat L3/35" 	
+
+
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 3300
+	producer = ITA
+}
+
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 300
+	producer = ITA
+}
+
+add_equipment_to_stockpile = {
+	type = support_equipment
+	amount = 915
+	producer = ITA
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 55000
+	producer = ITA
+}
+
+add_equipment_to_stockpile = {
+	type = motorized_equipment_1
+	amount = 561
+	producer = ITA
+}
+
+add_equipment_to_stockpile = {
 	type = light_tank_chassis_2
-	modules = {
-		main_armament_slot = tank_small_cannon
-		turret_type_slot = tank_light_three_man_tank_turret
-		special_type_slot_2 = additional_machine_guns
-		suspension_type_slot = tank_bogie_suspension
-		armor_type_slot = tank_welded_armor
-		engine_type_slot = tank_gasoline_engine
-	}
+	amount = 600
+	producer = ITA
 }
 
 add_equipment_to_stockpile = {
-         type = artillery_equipment_1
-         amount = 3300
-         producer = ITA
-}  
-add_equipment_to_stockpile = {
-         type = train_equipment_1
-         amount = 300
-         producer = ITA
-}  
-add_equipment_to_stockpile = {
-         type = support_equipment
-         amount = 915
-         producer = ITA
-} 
-add_equipment_to_stockpile = {
-         type = infantry_equipment_1
-         amount = 55000
-         producer = ITA
-} 
-add_equipment_to_stockpile = {
-         type = motorized_equipment_1
-         amount = 561
-         producer = ITA
-} 
-add_equipment_to_stockpile = {
-         type = light_tank_chassis_2
-         amount = 600
-         producer = ITA
-} 
-add_equipment_to_stockpile = {
-         type = anti_air_equipment_1
-         amount = 685
-         producer = ITA
-} 
-add_equipment_to_stockpile = {
-         type = anti_tank_equipment_1
-         amount = 3200
-         producer = ITA
+	type = anti_air_equipment_1
+	amount = 685
+	producer = ITA
 }
 
+add_equipment_to_stockpile = {
+	type = anti_tank_equipment_1
+	amount = 3200
+	producer = ITA
+}
 
+add_intel = {
+	target = SPR
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
 
+add_intel = {
+	target = BUl
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
 
+add_intel = {
+	target = USA
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = ENG
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = SOV
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = RAJ
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = ITA
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = GER
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = ROM
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = HUN
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = JAP
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = CAN
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = FRA
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = SAF
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = AST
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = NZL
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}

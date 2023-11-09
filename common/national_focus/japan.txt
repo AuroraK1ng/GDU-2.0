@@ -2987,7 +2987,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_tech = cv_fighter2
+			has_tech = improved_small_airframe
 		}
 
 		cancel_if_invalid = no
@@ -3002,9 +3002,8 @@ focus_tree = {
 			custom_effect_tooltip = JAP_the_zero_tt
 			custom_effect_tooltip = JAP_fighters
 			hidden_effect = { 
-				set_technology = { cv_fighter2 = 1 } 
-				set_technology = { fighter2 = 1  } 
-			}
+				set_technology = { improved_small_airframe = 1 } 
+ 			}
 		}
 	}
 
@@ -3164,12 +3163,7 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 3
 				uses = 1
-				technology = fighter3 
-			}
-			add_tech_bonus = {
-				bonus = 3
-				uses = 1
-				technology = cv_fighter3 
+				technology = advanced_small_airframe 
 			}		
 		}
 	}
@@ -3208,7 +3202,7 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 1.5
 				uses = 1
-				technology = jet_fighter1 
+				technology = modern_small_airframe 
 			}
 		}
 	}
@@ -3468,7 +3462,10 @@ focus_tree = {
 				name = JAP_nav_bomber_effort
 				bonus = 2.0
 				uses = 1
-				category = naval_bomber
+				technology = air_torpedoe_1
+				technology = air_torpedoe_2
+				technology = air_torpedoe_3
+
 			}
 		}
 	}

@@ -1,5 +1,25 @@
 ﻿capital = 282
-set_stability = 0.25 #with emperor
+set_naval_oob = "JAP_1936_naval"
+set_air_oob = "JAP_1936_air_bba"
+set_oob = "JAP_1936_nsb"
+create_faction = GEACPS
+add_to_faction = JAP
+set_convoys = 1200
+set_politics = {
+	ruling_party = fascism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 0
+	fascism = 82
+	communism = 0
+	neutrality = 18
+}
+
+set_stability = 0.25	# with emperor
 set_war_support = 0.8
 set_research_slots = 5
 set_fuel_ratio = 1
@@ -52,159 +72,18 @@ add_ideas = {
 	GDU_scuffed_acclim
 	GDU_JAP_No_Prewar_TradeBuff
 	JAP_SOV_neutrality
+	JAP_interservice_rivalry_balanced
 }
 
-if = {
-	limit = {
-		has_dlc = "Waking the Tiger"
-	}
-	add_ideas = {
-		JAP_interservice_rivalry_balanced
-	}
-}
-
-add_intel = {
-	target = USA
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = SPR
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = BUl
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = SPR
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = BUl
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = ENG
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = SOV
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = RAJ
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = ITA
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = GER
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = ROM
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = HUN
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = JAP
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = CAN
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = FRA
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = SAF
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = AST
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = NZL
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
+set_technology = {
+	iw_small_airframe = 1
+	basic_small_airframe = 1
+	iw_medium_airframe = 1
+	basic_medium_airframe = 1
+	early_bombs = 1
+	survivability_studies = 1
+	heavy_bombs = 1 #cas 1 guns
+	air_torpedoe_1 = 1 # nav bomber 1 guns
 }
 
 set_technology = {
@@ -231,10 +110,6 @@ set_technology = {
 	armor_tech_1 = 1
 	engine_tech_1 = 1
 	#basic_medium_tank_chassis = 1 # PLACEHOLDER
-	iw_small_airframe = 1
-	basic_small_airframe = 1
-	iw_medium_airframe = 1
-	basic_medium_airframe = 1
 	trench_warfare = 1
 	fuel_silos = 1
 	synth_oil_experiments = 1
@@ -246,56 +121,30 @@ set_technology = {
 	armored_car1 = 1
 }
 
-set_oob = "JAP_1936_nsb"
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		basic_torpedo = 1
-		basic_battery = 1
-		basic_light_battery = 1
-		basic_heavy_battery = 1
-		basic_medium_battery = 1
-		improved_ship_torpedo_launcher = 1
-		early_ship_hull_submarine = 1
-		basic_ship_hull_submarine = 1
-		early_ship_hull_light = 1
-		early_ship_hull_cruiser = 1
-		basic_ship_hull_cruiser = 1
-		early_ship_hull_heavy = 1
-		basic_ship_hull_heavy = 1
-		early_ship_hull_carrier = 1
-		basic_ship_hull_carrier = 1
-		mtg_transport = 1
-		coastal_defense_ships = 1
-		basic_depth_charges = 1
-		basic_cruiser_armor_scheme = 1
-		cruiser_submarines = 1
-		basic_dp_light_battery = 1
-	}
-	set_naval_oob = "JAP_1936_naval"
-	set_air_oob = "JAP_1936_air_bba"
+set_technology = {
+	basic_torpedo = 1
+	basic_battery = 1
+	basic_light_battery = 1
+	basic_heavy_battery = 1
+	basic_medium_battery = 1
+	improved_ship_torpedo_launcher = 1
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+	early_ship_hull_light = 1
+	early_ship_hull_cruiser = 1
+	basic_ship_hull_cruiser = 1
+	early_ship_hull_heavy = 1
+	basic_ship_hull_heavy = 1
+	early_ship_hull_carrier = 1
+	basic_ship_hull_carrier = 1
+	mtg_transport = 1
+	coastal_defense_ships = 1
+	basic_depth_charges = 1
+	basic_cruiser_armor_scheme = 1
+	cruiser_submarines = 1
+	basic_dp_light_battery = 1
 }
 
- 
-
-create_faction = GEACPS
-add_to_faction = JAP
-set_convoys = 1200
-set_politics = {
-	ruling_party = fascism
-	last_election = "1936.1.1"
-	election_frequency = 48
-	elections_allowed = no
-}
-
-set_popularities = {
-	democratic = 0
-	fascism = 82
-	communism = 0
-	neutrality = 18
-}
 #AFRICA LEADER
 recruit_character = JAP_tomoyuki_yamashita_AFRICA
 #
@@ -366,34 +215,16 @@ recruit_character = JAP_mitsumasa_yonai
 recruit_character = JAP_takuo_godo
 recruit_character = JAP_chiune_sugihara
 recruit_character = JAP_kingoro_hashimoto
-if = {
-	limit = {
-		has_dlc = "La Resistance"
-	}
-	create_operative_leader = {
-		name = "Yoshiko Kawashima"
-		GFX = GFX_portrait_yoshiko_kawashima
-		traits = {
-		}
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		female = yes
-		nationalities = {
-			MAN
-			JAP
-			CHI
-		}
-	}
-	create_operative_leader = {
-		name = "Takeo Yoshikawa"
-		GFX = GFX_portrait_takeo_yoshikawa
-		traits = {
-		}
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		nationalities = {
-			JAP
-		}
+create_equipment_variant = {
+	name = "Type 95 Ha/Go"
+	type = light_tank_chassis_2
+	modules = {
+		main_armament_slot = tank_small_cannon
+		turret_type_slot = tank_light_three_man_tank_turret
+		special_type_slot_2 = additional_machine_guns
+		suspension_type_slot = tank_bogie_suspension
+		armor_type_slot = tank_welded_armor
+		engine_type_slot = tank_gasoline_engine
 	}
 }
 
@@ -602,19 +433,6 @@ if = {
 	}
 }
 
-create_equipment_variant = {
-	name = "Type 95 Ha/Go"
-	type = light_tank_chassis_2
-	modules = {
-		main_armament_slot = tank_small_cannon
-		turret_type_slot = tank_light_three_man_tank_turret
-		special_type_slot_2 = additional_machine_guns
-		suspension_type_slot = tank_bogie_suspension
-		armor_type_slot = tank_welded_armor
-		engine_type_slot = tank_gasoline_engine
-	}
-}
-
 add_equipment_to_stockpile = {
 	type = artillery_equipment_1
 	amount = 500
@@ -705,4 +523,146 @@ add_equipment_to_stockpile = {
 	producer = JAP
 }
 
-# 1939 Start #			
+add_intel = {
+	target = USA
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = SPR
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = BUl
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = SPR
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = BUl
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = ENG
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = SOV
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = RAJ
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = ITA
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = GER
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = ROM
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = HUN
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = JAP
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = CAN
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = FRA
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = SAF
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = AST
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = NZL
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
