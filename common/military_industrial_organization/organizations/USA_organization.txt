@@ -340,9 +340,9 @@ USA_lockheed_organization = {
 			x = 0
 			y = 1
 		}
-		relative_position_id = generic_mio_trait_narrow_build
+		relative_position_id = generic_mio_trait_mixed_material_construction
 		any_parent = {
-			generic_mio_trait_narrow_build
+			generic_mio_trait_mixed_material_construction
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_all_medium_plane
@@ -351,13 +351,13 @@ USA_lockheed_organization = {
 			production_efficiency_cap_factor = 0.05
 		}
 	}
-	override_trait = {
-		token = generic_mio_trait_heavy_fighter_specialization
-		equipment_bonus = {
-			air_range = 0.1
-			air_attack = 0.05
-		}
-	}
+	#override_trait = {
+	#	token = generic_mio_trait_heavy_fighter_specialization
+	#	equipment_bonus = {
+	#		air_range = 0.1
+	#		air_attack = 0.05
+	#	}
+	#}
 }
 
 USA_douglas_aircraft_company_organization = {

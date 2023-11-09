@@ -167,7 +167,7 @@ GER_messerschmitt_organization = {
 		icon = GFX_generic_mio_department_icon_plane_fighter_line_efficiency
 		special_trait_background = yes
 		position = {
-			x = -2
+			x = -1
 			y = 1
 		}
 		relative_position_id = generic_mio_trait_expanded_production_facilities
@@ -175,10 +175,7 @@ GER_messerschmitt_organization = {
 			generic_mio_trait_expanded_production_facilities
 		}
 		equipment_bonus = {
-			reliability = 0.05
-		}
-		production_bonus = {
-			production_efficiency_gain_factor = 0.05
+			maximum_speed = 0.05
 		}
 	}
 	add_trait = {
@@ -190,15 +187,12 @@ GER_messerschmitt_organization = {
 			x = 1
 			y = 1
 		}
-		relative_position_id = generic_mio_trait_gun_pods
+		relative_position_id = generic_mio_trait_expanded_production_facilities
 		any_parent = {
-			generic_mio_trait_heavier_airframe
-			generic_mio_trait_maximum_wing_loads
-			generic_mio_trait_gun_pods
+			generic_mio_trait_expanded_production_facilities
 		}
 		equipment_bonus = {
 			air_attack = 0.05
-			air_agility = 0.05
 		}
 	}
 }

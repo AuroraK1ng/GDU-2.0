@@ -86,7 +86,7 @@ SOV_morozov_design_bureau_organization = {
 		token = SOV_mio_trait_merge_plant_no_174
 		name = SOV_merge_tank_plant
 		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_maximum_speed
+		icon = GFX_generic_mio_trait_icon_ap_attack
 		special_trait_background = yes
 
 		position = { x=@tank_1_X y=@tank_1_Y }
@@ -101,12 +101,12 @@ SOV_morozov_design_bureau_organization = {
 			}
 		}
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_174_flag
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_plant_no_174_flag
+		#	}
+		#}
 
 		equipment_bonus = {
 			ap_attack = 0.25
@@ -132,12 +132,12 @@ SOV_morozov_design_bureau_organization = {
 			}
 		}
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_112_flag
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_plant_no_112_flag
+		#	}
+		#}
 
 		production_bonus = {
 			production_cost_factor = -0.05
@@ -163,12 +163,12 @@ SOV_morozov_design_bureau_organization = {
 			}
 		}
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_ural_heavy_machine_building_plant_flag
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_ural_heavy_machine_building_plant_flag
+		#	}
+		#}
 
 		equipment_bonus = {
 			soft_attack = @tank_soft_attack
@@ -176,107 +176,7 @@ SOV_morozov_design_bureau_organization = {
 	}
 }
 
-SOV_astrov_design_bureau_organization = {
-	include = generic_mobile_tank_organization
-	icon = GFX_idea_astrov_design_bureau
-	
-	allowed = {	
-		original_tag = SOV
-	}
 
-	add_trait = { 
-		token = SOV_mio_trait_merge_plant_no_174
-		name = SOV_merge_tank_plant
-		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_maximum_speed
-		special_trait_background = yes
-
-		position = { x=@tank_1_X y=@tank_1_Y }
-		
-		visible = {
-			FROM = { original_tag = SOV }
-		}
-
-		available = { #Two FROM blocs to provide two different check marks in the UI
-			FROM = {
-				has_completed_focus = SOV_tank_cult
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_174_flag
-			}
-		}
-
-		equipment_bonus = {
-			maximum_speed = @tank_max_speed
-		}
-	}
-
-	add_trait = { 
-		token = SOV_mio_trait_merge_plant_no_112
-		name = SOV_merge_tank_plant_2
-		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-
-		position = { x=@tank_2_X y=@tank_2_Y }
-		
-		visible = {
-			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_completed_focus = SOV_tank_cult
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_112_flag
-			}
-		}
-
-		production_bonus = {
-			production_capacity_factor = @tank_production_capacity_factor
-		}
-	}
-
-	add_trait = { 
-		token = SOV_mio_trait_merge_ural_heavy_machine_building_plant
-		name = SOV_merge_tank_plant_3
-		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_soft_attack
-		special_trait_background = yes
-
-		position = { x=@tank_3_X y=@tank_3_Y }
-		
-		visible = {
-			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_completed_focus = SOV_tank_cult
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_ural_heavy_machine_building_plant_flag
-			}
-		}
-
-		equipment_bonus = {
-			soft_attack = @tank_soft_attack
-		}
-	}
-}
 
 SOV_okmo_organization = {
 	include = generic_infantry_tank_organization
@@ -324,7 +224,7 @@ SOV_okmo_organization = {
 		token = SOV_mio_trait_merge_plant_no_174
 		name = SOV_merge_tank_plant
 		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_maximum_speed
+		icon = GFX_generic_mio_department_icon_tank_general_quality
 		special_trait_background = yes
 
 		position = { x=@tank_1_X y=@tank_1_Y }
@@ -335,19 +235,26 @@ SOV_okmo_organization = {
 
 		available = { #Two FROM blocs to provide two different check marks in the UI
 			FROM = {
-				has_completed_focus = SOV_tank_cult
+				has_completed_focus = SOV_defense_of_moscow
 			}
 		}
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_174_flag
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_plant_no_174_flag
+		#	}
+		#}
 
 		equipment_bonus = {
-			maximum_speed = @tank_max_speed
+			ap_attack = 0.05
+			hard_attack = 0.05
+			soft_attack = 0.05
+			armor_value = 0.1
+		}
+		
+		production_bonus = {
+			production_cost_factor = 0.1
 		}
 	}
 
@@ -355,7 +262,7 @@ SOV_okmo_organization = {
 		token = SOV_mio_trait_merge_plant_no_112
 		name = SOV_merge_tank_plant_2
 		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_production_capacity
+		icon = GFX_generic_mio_trait_icon_soft_attack
 		special_trait_background = yes
 
 		position = { x=@tank_2_X y=@tank_2_Y }
@@ -366,19 +273,25 @@ SOV_okmo_organization = {
 
 		available = {
 			FROM = {
-				has_completed_focus = SOV_tank_cult
+				has_completed_focus = SOV_defense_of_moscow
 			}
 		}
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_112_flag
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_plant_no_112_flag
+		#	}
+		#}
 
+		equipment_bonus = {
+			ap_attack = 0.05
+			hard_attack = 0.05
+			soft_attack = 0.05
+		}
+		
 		production_bonus = {
-			production_capacity_factor = @tank_production_capacity_factor
+			production_cost_factor = 0.05
 		}
 	}
 
@@ -397,19 +310,25 @@ SOV_okmo_organization = {
 
 		available = {
 			FROM = {
-				has_completed_focus = SOV_tank_cult
+				has_completed_focus = SOV_defense_of_moscow
 			}
 		}
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_ural_heavy_machine_building_plant_flag
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_ural_heavy_machine_building_plant_flag
+		#	}
+		#}
 
 		equipment_bonus = {
-			soft_attack = @tank_soft_attack
+			ap_attack = 0.05
+			hard_attack = 0.05
+			soft_attack = 0.05
+		}
+		
+		production_bonus = {
+			production_cost_factor = 0.05
 		}
 	}
 }
@@ -502,39 +421,6 @@ SOV_nevskoye_design_bureau_organization = {
 		production_bonus = {
 			production_cost_factor = @ship_production_capacity_factor
 		}
-
-		equipment_bonus = {
-			mines_planting = @ship_mines_planting
-		}
-	}
-
-
-
-	add_trait = { 
-		token = SOV_mio_trait_merge_plant_no_5
-		name = SOV_merge_ship_plant_1_baltic
-		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_department_icon_ship_screen_ship_production
-		special_trait_background = yes
-
-		position = { x=@ship_2_X y=@ship_2_Y }
-		
-		visible = {
-			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_completed_focus = SOV_ocean_going_navy
-			}
-			#Only exists in this MIO
-		}
-
-		limit_to_equipment_type = { mio_cat_eq_all_cruiser }
-
-		production_bonus = {
-			production_cost_factor = @ship_cruiser_production_cost_factor
-		}
 	}
 }
 
@@ -589,15 +475,15 @@ SOV_mig_design_bureau_organization = {
 			}
 		}
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_28_flag
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_plant_no_28_flag
+		#	}
+		#}
 
-		production_bonus = {
-			production_cost_factor = @aircraft_production_cost_factor
+		equipment_bonus = {
+			reliability = 0.05
 		}
 	}
 
@@ -620,20 +506,20 @@ SOV_mig_design_bureau_organization = {
 			}
 		}
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_150_flag
-				add_resource = {
-					type = aluminium
-					amount = 3
-					state = 219
-				}
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_plant_no_150_flag
+		#		add_resource = {
+		#			type = aluminium
+		#			amount = 3
+		#			state = 219
+		#		}
+		#	}
+		#}
 
 		equipment_bonus = {
-			air_agility = @aircraft_air_agility
+			air_agility = 0.05
 		}
 	}
 
@@ -656,23 +542,21 @@ SOV_mig_design_bureau_organization = {
 			}
 		}
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_vef_plant_flag
-				add_tech_bonus = {
-					name = SOV_mio_trait_merge_vef_plant
-					bonus = 1
-					uses = 1
-					category = radar_tech
-				}
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_vef_plant_flag
+		#		add_tech_bonus = {
+		#			name = SOV_mio_trait_merge_vef_plant
+		#			bonus = 1
+		#			uses = 1
+		#			category = radar_tech
+		#		}
+		#	}
+		#}
 
 		equipment_bonus = {
-			air_defence = @aircraft_air_defence
-			surface_detection = @aircraft_surface_detection
-			sub_detection = @aircraft_sub_detection
+			maximum_speed = 0.05
 		}
 	}
 }
@@ -704,12 +588,12 @@ SOV_ilyushin_design_bureau_organization = {
 			}
 		}
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_28_flag
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_plant_no_28_flag
+		#	}
+		#}
 
 		production_bonus = {
 			production_cost_factor = @aircraft_production_cost_factor
@@ -735,17 +619,17 @@ SOV_ilyushin_design_bureau_organization = {
 			}
 		}
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_150_flag
-				add_resource = {
-					type = aluminium
-					amount = 3
-					state = 219
-				}
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_plant_no_150_flag
+		#		add_resource = {
+		#			type = aluminium
+		#			amount = 3
+		#			state = 219
+		#		}
+		#	}
+		#}
 
 		equipment_bonus = {
 			air_agility = @aircraft_air_agility
@@ -767,33 +651,31 @@ SOV_ilyushin_design_bureau_organization = {
 		
 		available = {
 			FROM = {
-				has_completed_focus = SOV_research_city_experiment
+				has_completed_focus = SOV_defense_of_moscow
 			}
 		}
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_vef_plant_flag
-				add_tech_bonus = {
-					name = SOV_mio_trait_merge_vef_plant
-					bonus = 1
-					uses = 1
-					category = radar_tech
-				}
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_vef_plant_flag
+		#		add_tech_bonus = {
+		#			name = SOV_mio_trait_merge_vef_plant
+		#			bonus = 1
+		#			uses = 1
+		#			category = radar_tech
+		#		}
+		#	}
+		#}
 
 		equipment_bonus = {
-			air_defence = @aircraft_air_defence
-			surface_detection = @aircraft_surface_detection
-			sub_detection = @aircraft_sub_detection
+			air_ground_attack = 0.05
 		}
 	}
 }
 
 SOV_tupolev_design_bureau_organization = {
-	include = generic_heavy_aircraft_organization
+	include = generic_multi_role_aircraft_organization
 	icon = GFX_idea_tupolev_design_bureau
 	allowed = {	
 		original_tag = SOV
@@ -809,57 +691,22 @@ SOV_tupolev_design_bureau_organization = {
 		x = 7
 	}
 
-	override_trait = {
-		token = generic_mio_trait_pressurized_cockpit
-		
-		position = { x=2 y=1 }
-		relative_position_id = generic_mio_trait_reinforced_frames
-	}
-
-	override_trait = {
-		token = generic_mio_trait_extended_rear_fuselage
-		
-		position = { x=5 y=0 }
-		relative_position_id = generic_mio_trait_reinforced_frames
-	}
-
-	add_trait = { 
-		token = SOV_mio_trait_gas_tank_protection
-		name = SOV_mio_trait_gas_tank_protection
-		icon = GFX_generic_mio_trait_icon_anti_air_attack
-		special_trait_background = yes
-
-		position = { x=-1 y=1 }
-		relative_position_id = generic_mio_trait_pressurized_cockpit
-
-		any_parent = { generic_mio_trait_pressurized_cockpit }
-		
-		available = {
-		}
-
-		equipment_bonus = {
-			air_defence = 0.05
-			reliability = 0.03
-		}
-	}
-
 	add_trait = { 
 		token = SOV_mio_trait_lightened_reduction_gear
 		name = SOV_mio_trait_lightened_reduction_gear
 		icon = GFX_generic_mio_trait_icon_fuel_consumption
 		special_trait_background = yes
 
-		position = { x=1 y=1 }
-		relative_position_id = generic_mio_trait_pressurized_cockpit
+		position = { x=2 y=3 }
+		relative_position_id = generic_mio_trait_armored_cockpit
 
-		any_parent = { generic_mio_trait_pressurized_cockpit }
+		any_parent = { generic_mio_trait_armored_cockpit }
 		
 		available = {
 		}
 
 		equipment_bonus = {
-			fuel_consumption = -0.05
-			reliability = 0.03
+			fuel_consumption = -0.1
 		}
 	}
 
@@ -878,16 +725,16 @@ SOV_tupolev_design_bureau_organization = {
 
 		available = {
 			FROM = {
-				has_completed_focus = SOV_research_city_experiment
+				has_completed_focus = SOV_defense_of_moscow
 			}
 		}
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_28_flag
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_plant_no_28_flag
+		#	}
+		#}
 
 		production_bonus = {
 			production_cost_factor = @aircraft_production_cost_factor
@@ -909,21 +756,21 @@ SOV_tupolev_design_bureau_organization = {
 
 		available = {
 			FROM = {
-				has_completed_focus = SOV_research_city_experiment
+				has_completed_focus = SOV_defense_of_moscow
 			}
 		}
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_plant_no_150_flag
-				add_resource = {
-					type = aluminium
-					amount = 3
-					state = 219
-				}
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_plant_no_150_flag
+		#		add_resource = {
+		#			type = aluminium
+		#			amount = 3
+		#			state = 219
+		#		}
+		#	}
+		#}
 
 		equipment_bonus = {
 			air_agility = @aircraft_air_agility
@@ -945,27 +792,25 @@ SOV_tupolev_design_bureau_organization = {
 
 		available = {
 			FROM = {
-				has_completed_focus = SOV_research_city_experiment
+				has_completed_focus = SOV_defense_of_moscow
 			}
 		}
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_vef_plant_flag
-				add_tech_bonus = {
-					name = SOV_mio_trait_merge_vef_plant
-					bonus = 1
-					uses = 1
-					category = radar_tech
-				}
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_vef_plant_flag
+		#		add_tech_bonus = {
+		#			name = SOV_mio_trait_merge_vef_plant
+		#			bonus = 1
+		#			uses = 1
+		#			category = radar_tech
+		#		}
+		#	}
+		#}
 
 		equipment_bonus = {
 			air_defence = @aircraft_air_defence
-			surface_detection = @aircraft_surface_detection
-			sub_detection = @aircraft_sub_detection
 		}
 	}
 }

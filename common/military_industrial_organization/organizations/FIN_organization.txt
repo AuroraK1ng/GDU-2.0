@@ -34,19 +34,19 @@ FIN_valtion_panssaritehdas_organization = {
 
 	remove_trait = { generic_mio_trait_heavy_tank_improvements  }
 
-	override_trait = {
-		token = generic_mio_trait_modular_construction
+	#override_trait = {
+	#	token = generic_mio_trait_modular_construction
+	#
+	#	position = { x=3 y=1 }
+	#	relative_position_id = generic_mio_trait_medium_tank_improvements
+	#}
 
-		position = { x=3 y=1 }
-		relative_position_id = generic_mio_trait_medium_tank_improvements
-	}
-
-	override_trait = {
-		token = generic_mio_trait_medium_tank_specialization
-
-		position = { x=-1 y=3 }
-		relative_position_id = generic_mio_trait_modular_construction
-	}
+	#override_trait = {
+	#	token = generic_mio_trait_medium_tank_specialization
+	#
+	#	position = { x=-1 y=3 }
+	#	relative_position_id = generic_mio_trait_modular_construction
+	#}
 	
 	add_trait = { 
 		token = FIN_mio_trait_salvaged_and_retooled
