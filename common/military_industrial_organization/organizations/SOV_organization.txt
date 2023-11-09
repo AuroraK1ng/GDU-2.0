@@ -78,7 +78,7 @@ SOV_morozov_design_bureau_organization = {
 	icon = GFX_idea_morozov_design_bureau
 	
 	allowed = {	
-			tag = SOV
+		tag = SOV
 	}
 
 
@@ -854,13 +854,13 @@ SOV_grabin_design_bureau_organization = {
 
 		available = {
 			FROM = {
-				has_completed_focus = SOV_tank_cult
+				has_completed_focus = SOV_defense_of_moscow
 			}
 			#Only exists in this MIO
 		}
 
 		production_bonus = {
-			production_cost_factor = @artillery_production_cost_factor
+			production_cost_factor = -0.05
 		}
 	}
 	
@@ -879,19 +879,19 @@ SOV_grabin_design_bureau_organization = {
 
 		available = {
 			FROM = {
-				has_completed_focus = SOV_tank_cult
+				has_completed_focus = SOV_defense_of_moscow
 			}
 		}
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_nkmz_plant_flag
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_nkmz_plant_flag
+		#	}
+		#}
 
 		production_bonus = {
-			production_efficiency_cap_factor = @materiel_production_efficiency_cap_factor
+			production_efficiency_cap_factor = 0.05
 		}
 	}
 
@@ -910,19 +910,19 @@ SOV_grabin_design_bureau_organization = {
 
 		available = {
 			FROM = {
-				has_completed_focus = SOV_tank_cult
+				has_completed_focus = SOV_defense_of_moscow
 			}
 		}
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_magnitogorsk_metallurgical_plant_flag
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_magnitogorsk_metallurgical_plant_flag
+		#	}
+		#}
 
 		production_bonus = {
-			production_capacity_factor = @materiel_production_capacity_factor
+			production_capacity_factor = 0.05
 		}
 	}
 }
@@ -945,27 +945,6 @@ SOV_tula_arms_plant_organization = {
 		x = 7
 	}
 
-	override_trait = {
-		token = generic_mio_trait_armor_piercing_rounds
-		
-		position = { x=0 y=2 }
-		relative_position_id = generic_mio_trait_quality_materials
-	}
-
-	override_trait = {
-		token = generic_mio_trait_advanced_barrel_forging
-		
-		position = { x=1 y=2 }
-		relative_position_id = generic_mio_trait_drum_pattern_sights
-	}
-
-	override_trait = {
-		token = generic_mio_trait_reinforced_stocks
-		
-		position = { x=3 y=0 }
-		relative_position_id = generic_mio_trait_drum_pattern_sights
-	}
-
 	add_trait = { 
 		token = SOV_mio_trait_merge_plant_no_622
 		name = SOV_merge_materiel_plant_1_infantry
@@ -981,13 +960,13 @@ SOV_tula_arms_plant_organization = {
 
 		available = {
 			FROM = {
-				has_completed_focus = SOV_tank_cult
+				has_completed_focus = SOV_defense_of_moscow
 			}
 			#Only exists in this MIO
 		}
 
 		production_bonus = {
-			production_cost_factor = @infantry_equipment_production_cost_factor
+			production_cost_factor = -0.05
 		}
 	}
 
@@ -1006,19 +985,19 @@ SOV_tula_arms_plant_organization = {
 
 		available = {
 			FROM = {
-				has_completed_focus = SOV_tank_cult
+				has_completed_focus = SOV_defense_of_moscow
 			}
 		}
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_nkmz_plant_flag
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_nkmz_plant_flag
+		#	}
+		#}
 
 		production_bonus = {
-			production_efficiency_cap_factor = @materiel_production_efficiency_cap_factor
+			production_efficiency_cap_factor = 0.05
 		}
 	}
 
@@ -1037,19 +1016,19 @@ SOV_tula_arms_plant_organization = {
 
 		available = {
 			FROM = {
-				has_completed_focus = SOV_tank_cult
+				has_completed_focus = SOV_defense_of_moscow
 			}
 		}
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_magnitogorsk_metallurgical_plant_flag
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_magnitogorsk_metallurgical_plant_flag
+		#	}
+		#}
 
 		production_bonus = {
-			production_capacity_factor = @materiel_production_capacity_factor
+			production_capacity_factor = 0.05
 		}
 	}
 }
@@ -1111,13 +1090,15 @@ SOV_gaz_organization = {
 
 		available = {
 			FROM = {
-				has_completed_focus = SOV_tank_cult
+				has_completed_focus = SOV_Mechanise_the_Army
 			}
 			#Only exists in this MIO
 		}
+		
+		limit_to_equipment_type = { mechanized_equipment }
 
-		production_bonus = {
-			production_cost_factor = @motorized_production_cost_factor
+		equipment_bonus = {
+			build_cost_ic = -0.2
 		}
 	}
 	
@@ -1136,19 +1117,21 @@ SOV_gaz_organization = {
 
 		available = {
 			FROM = {
-				has_completed_focus = SOV_tank_cult
+				has_completed_focus = SOV_stalin_constitution
 			}
 		}
+		
+		limit_to_equipment_type = { motorized_rocket_equipment }
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_nkmz_plant_flag
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_nkmz_plant_flag
+		#	}
+		#}
 
-		production_bonus = {
-			production_efficiency_cap_factor = @materiel_production_efficiency_cap_factor
+		equipment_bonus = {
+			breakthrough = 1
 		}
 	}
 
@@ -1167,19 +1150,22 @@ SOV_gaz_organization = {
 
 		available = {
 			FROM = {
-				has_completed_focus = SOV_tank_cult
+				has_completed_focus = SOV_stalin_constitution
 			}
 		}
+		
+		limit_to_equipment_type = { motorized_rocket_equipment }
 
-		on_complete = {
-			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = SOV_merge_magnitogorsk_metallurgical_plant_flag
-			}
-		}
+		#on_complete = {
+		#	custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
+		#	FROM = {
+		#		set_country_flag = SOV_merge_magnitogorsk_metallurgical_plant_flag
+		#	}
+		#}
 
-		production_bonus = {
-			production_capacity_factor = @materiel_production_capacity_factor
+		equipment_bonus = {
+			soft_attack = 0.2
+			defense = 0.2
 		}
 	}
 }

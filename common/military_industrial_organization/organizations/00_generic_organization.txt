@@ -319,6 +319,10 @@ generic_infantry_tank_organization = {
 			armor
 		}
 		
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		
 		equipment_bonus = {
 			armor_value = 0.05
 		}
@@ -705,7 +709,7 @@ generic_medium_tank_organization = {
 		name = generic_mio_initial_trait_medium_tank_designer
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_research_bonus = 0.1
 		}
 		
 		equipment_bonus = {
@@ -942,7 +946,7 @@ generic_heavy_tank_organization = {
 		name = generic_mio_initial_trait_heavy_tank_designer
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_research_bonus = 0.1
 		}
 		
 		equipment_bonus = {
@@ -1205,7 +1209,7 @@ generic_tank_refurbishment_plant_organization = {
 		limit_to_equipment_type = { armor }
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_research_bonus = 0.1
 		}
 
 		production_bonus = {
@@ -1364,7 +1368,7 @@ generic_tank_refurbishment_plant_organization = {
 		relative_position_id = generic_mio_trait_standardized_secondary_armament
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.06
+			military_industrial_organization_research_bonus = 0.1
 		}
 	}
 
@@ -1490,7 +1494,7 @@ generic_task_force_ship_organization = {
 		name = generic_mio_initial_trait_task_force_ship_builders
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_research_bonus = 0.1
 		}
 		equipment_bonus = {
 			max_strength = 0.05
@@ -1745,7 +1749,7 @@ generic_battle_line_ship_organization = {
 		name = generic_mio_initial_trait_battle_line_ship_builders
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_research_bonus = 0.1
 		}
 		production_bonus = {
 			production_cost_factor = -0.1
@@ -1970,7 +1974,7 @@ generic_escort_ship_organization = {
 		name = generic_mio_initial_trait_escort_fleet
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_research_bonus = 0.1
 		}
 		production_bonus = {
 			production_capacity_factor = 0.05
@@ -2186,7 +2190,7 @@ generic_raider_ship_organization = {
 		name = generic_mio_initial_trait_raiding_fleet
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_research_bonus = 0.1
 		}
 		equipment_bonus = {
 			surface_visibility = -0.05
@@ -2481,7 +2485,7 @@ generic_submarine_organization = {
 		name = generic_mio_initial_trait_submarine_designer
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_research_bonus = 0.1
 		}
 		equipment_bonus = {
 			sub_visibility = -0.05
@@ -3123,7 +3127,7 @@ generic_refurbishment_repair_organization = {
 		}
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.01
+			military_industrial_organization_research_bonus = 0.1
 		}
 	}
 
@@ -3444,7 +3448,7 @@ generic_general_aircraft_organization = {
 		name = generic_mio_initial_trait_general_aircraft_designer
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_research_bonus = 0.1
 		}
 		production_bonus = {
 			production_capacity_factor = 0.03
@@ -3716,6 +3720,10 @@ generic_light_aircraft_organization = {
 
 	initial_trait = {
 		name = generic_mio_initial_trait_light_aircraft_designer
+		
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
 
 		equipment_bonus = {
 			reliability = 0.05
@@ -3773,7 +3781,7 @@ generic_light_aircraft_organization = {
 		all_parents = { generic_mio_trait_liquid_cooled_engines generic_mio_trait_advanced_aerodynamics }
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_research_bonus = 0.1
 		}
 
 		production_bonus = {
@@ -3837,6 +3845,10 @@ generic_medium_aircraft_organization = {
 		name = generic_mio_initial_trait_multi_role_tactical_aircraft
 
 		limit_to_equipment_type = { mio_cat_eq_all_medium_plane mio_cat_all_cas_and_modules }
+		
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
 
 		equipment_bonus = {
 			reliability = 0.05
@@ -3985,7 +3997,7 @@ generic_heavy_aircraft_organization = {
 		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_research_bonus = 0.1
 		}
 		equipment_bonus = {
 			air_bombing = 0.05
@@ -4285,6 +4297,10 @@ generic_cas_aircraft_organization = {
 
 	initial_trait = {
 		name = generic_mio_initial_trait_cas_aircraft_designer
+		
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
 
 		equipment_bonus = {
 			air_ground_attack = 0.05
@@ -4541,7 +4557,7 @@ generic_naval_aircraft_organization = {
 		name = generic_mio_initial_trait_naval_aircraft_designer
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_research_bonus = 0.1
 		}
 
 		production_bonus = {
@@ -4808,6 +4824,10 @@ generic_multi_role_aircraft_organization = {
 		name = generic_mio_initial_trait_multi_role_aircraft_designer
 
 		limit_to_equipment_type = { large_plane_airframe }
+		
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
 
 		equipment_bonus = {
 			reliability = 0.1
@@ -4858,7 +4878,7 @@ generic_multi_role_aircraft_organization = {
 		limit_to_equipment_type = { large_plane_airframe }
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_research_bonus = 0.1
 		}
 
 		equipment_bonus = {
@@ -4881,7 +4901,7 @@ generic_multi_role_aircraft_organization = {
 		limit_to_equipment_type = { mio_cat_eq_all_medium_plane }
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_research_bonus = 0.1
 		}
 
 		equipment_bonus = {
@@ -5628,10 +5648,7 @@ generic_artillery_organization = {
 		name = generic_mio_initial_trait_artillery_manufacturer
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
-		}
-		production_bonus = {
-			production_cost_factor = -0.03
+			military_industrial_organization_research_bonus = 0.1
 		}
 	}
 
@@ -5644,7 +5661,7 @@ generic_artillery_organization = {
 		mutually_exclusive = { generic_mio_trait_stable_platforms }
 
 		equipment_bonus = {
-			breakthrough = 0.1
+			breakthrough = 0.05
 		}
 	}
 
@@ -5659,7 +5676,7 @@ generic_artillery_organization = {
 		mutually_exclusive = { generic_mio_trait_mobile_limbers }
 
 		equipment_bonus = {
-			defense = 0.03
+			defense = 0.05
 		}
 	}
 
@@ -5682,99 +5699,21 @@ generic_artillery_organization = {
 	}
 
 	trait = {
-		token = generic_mio_trait_improved_direct_fire_targeting
-		name = generic_mio_trait_improved_direct_fire_targeting
-		icon = GFX_generic_mio_department_icon_anti_tank
-
-		position = { x=-1 y=3 }
-		relative_position_id = generic_mio_trait_improved_hydraulic_recoil_system
-
-		all_parents = {
-			 generic_mio_trait_improved_hydraulic_recoil_system
-		}
-
-		mutually_exclusive = { generic_mio_trait_advanced_anti_air_targeting generic_mio_trait_advanced_trajectory_calculations }
-		
-		limit_to_equipment_type = { 
-			anti_tank_equipment
-		}
-
-		equipment_bonus = {
-			ap_attack = 0.05
-			hard_attack = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_advanced_anti_air_targeting
-		name = generic_mio_trait_advanced_anti_air_targeting
-		icon = GFX_generic_mio_department_icon_anti_air
-
-		position = { x=1 y=0 }
-		relative_position_id = generic_mio_trait_improved_direct_fire_targeting
-		
-		all_parents = {
-			 generic_mio_trait_improved_hydraulic_recoil_system
-		}
-		
-		mutually_exclusive = {
-			generic_mio_trait_improved_direct_fire_targeting
-			generic_mio_trait_advanced_trajectory_calculations
-		}
-		
-		limit_to_equipment_type = { 
-			anti_air_equipment
-		}
-
-		equipment_bonus = {
-			air_attack = 0.07
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_advanced_trajectory_calculations
-		name = generic_mio_trait_advanced_trajectory_calculations
-		icon = GFX_generic_mio_department_icon_artillery
-
-		position = { x=2 y=0 }
-		relative_position_id = generic_mio_trait_improved_direct_fire_targeting
-
-		all_parents = {
-			 generic_mio_trait_improved_hydraulic_recoil_system
-		}
-
-		mutually_exclusive = { 
-			generic_mio_trait_improved_direct_fire_targeting
-			generic_mio_trait_advanced_anti_air_targeting
-		}
-
-		limit_to_equipment_type = { 
-			artillery_equipment
-			rocket_artillery_equipment
-		}
-
-		equipment_bonus = {
-			hard_attack = 1
-			breakthrough = 0.05
-		}
-	}
-
-	trait = {
 		token = generic_mio_trait_sliding_breech_block
 		name = generic_mio_trait_sliding_breech_block
 		icon = GFX_generic_mio_trait_icon_soft_attack
 
 		position = { x=0 y=2 }
-		relative_position_id = generic_mio_trait_rapid_fire	
+		relative_position_id = generic_mio_trait_improved_hydraulic_recoil_system	
 
 		all_parents = {
 			generic_mio_trait_improved_hydraulic_recoil_system
-			generic_mio_trait_rapid_fire
+			#generic_mio_trait_rapid_fire
 		}
 
 		equipment_bonus = {
-			soft_attack = 0.03
-			breakthrough = 0.03
+			breakthrough = 0.05
+			reliability = 0.05
 		}
 	}
 
@@ -5785,6 +5724,8 @@ generic_artillery_organization = {
 
 		position = { x=4 y=0 }
 		relative_position_id = generic_mio_trait_mobile_limbers	
+		
+		mutually_exclusive = { generic_mio_trait_advanced_barrel_forging generic_mio_trait_big_guns }
 
 		limit_to_equipment_type = { 
 			anti_tank_equipment
@@ -5792,9 +5733,9 @@ generic_artillery_organization = {
 		}
 
 		equipment_bonus = {
-			soft_attack = 0.1
-			hard_attack = 0.04
-			air_attack = 0.04
+			soft_attack = 0.02
+			hard_attack = 0.02
+			air_attack = 0.05
 		}
 	}
 
@@ -5805,9 +5746,14 @@ generic_artillery_organization = {
 
 		position = { x=2 y=0 }
 		relative_position_id = generic_mio_trait_rapid_fire
+		
+		mutually_exclusive = { generic_mio_trait_rapid_fire generic_mio_trait_big_guns }
 
-		production_bonus = {
-			production_efficiency_gain_factor = 0.05
+		equipment_bonus = {
+			soft_attack = -0.05
+			hard_attack = -0.05
+			air_attack = -0.10
+			build_cost_ic = -0.05
 		}
 	}
 
@@ -5818,6 +5764,8 @@ generic_artillery_organization = {
 
 		position = { x=2 y=0 }
 		relative_position_id = generic_mio_trait_advanced_barrel_forging
+		
+		mutually_exclusive = { generic_mio_trait_advanced_barrel_forging generic_mio_trait_rapid_fire}
 
 		limit_to_equipment_type = { 
 			artillery_equipment
@@ -5825,81 +5773,12 @@ generic_artillery_organization = {
 		}
 
 		equipment_bonus = {
-			soft_attack = 0.02
-			build_cost_ic = 0.03
+			soft_attack = 0.04
+			hard_attack = 0.04
+			air_attack = 0.10
+			build_cost_ic = 0.075
 		}
 	}
-
-	trait = {
-		token = generic_mio_trait_gun_mass_production
-		name = generic_mio_trait_gun_mass_production
-		icon = GFX_generic_mio_department_icon_facilities
-
-		position = { x=0 y=2 }
-		relative_position_id = generic_mio_trait_advanced_barrel_forging
-
-		all_parents = {	generic_mio_trait_advanced_barrel_forging }
-
-		production_bonus = {
-			production_efficiency_gain_factor = 0.03
-			production_efficiency_cap_factor = 0.03
-		}
-
-		organization_modifier = {
-			military_industrial_organization_design_team_assign_cost = -0.15
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_super_charges
-		name = generic_mio_trait_super_charges
-		icon = GFX_generic_mio_department_icon_facilities
-
-		position = { x=0 y=2 }
-		relative_position_id = generic_mio_trait_big_guns
-
-		all_parents = {	generic_mio_trait_big_guns }
-
-		limit_to_equipment_type = { 
-			artillery_equipment
-			rocket_artillery_equipment
-		}
-
-		production_bonus = {
-			production_efficiency_gain_factor = 0.03
-			production_efficiency_cap_factor = 0.03
-		}
-
-		organization_modifier = {
-			military_industrial_organization_design_team_assign_cost = -0.15
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_light_weight_barrels
-		name = generic_mio_trait_light_weight_barrels
-		icon = GFX_generic_mio_trait_icon_breakthrough
-
-		position = { x=0 y=2 }
-		relative_position_id = generic_mio_trait_gun_mass_production
-
-		all_parents = {
-			generic_mio_trait_super_charges
-			generic_mio_trait_gun_mass_production
-			generic_mio_trait_sliding_breech_block
-
-		}
-
-		production_bonus = {
-			production_cost_factor = -0.03
-		}
-
-		equipment_bonus = {
-			breakthrough = 0.06
-			defense = 0.1
-		}
-	}
-
 }
 
 	
@@ -5995,15 +5874,7 @@ generic_infantry_equipment_organization = {
 		name = generic_mio_initial_trait_infantry_manufacturer
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
-		}
-
-		production_bonus = {
-			production_efficiency_cap_factor = 0.03
-		}
-
-		equipment_bonus = {
-			soft_attack = 0.03
+			military_industrial_organization_research_bonus = 0.1
 		}
 	}
 
@@ -6015,7 +5886,7 @@ generic_infantry_equipment_organization = {
 		position = { x=1 y=0 }
 
 		equipment_bonus = {
-			defense = 0.035
+			defense = 0.025
 		}
 	}
 
@@ -6029,7 +5900,7 @@ generic_infantry_equipment_organization = {
 
 		equipment_bonus = {
 			soft_attack = 0.025
-			reliability = 0.03
+			#reliability = 0.03
 		}
 	}
 
@@ -6046,11 +5917,8 @@ generic_infantry_equipment_organization = {
 		mutually_exclusive = { generic_mio_trait_semi_auto }
 
 		equipment_bonus = {
-			soft_attack = -0.03
-		}
-
-		production_bonus = {
-			production_efficiency_gain_factor = 0.05
+			soft_attack = -0.1
+			build_cost_ic = -0.1
 		}
 	}
 
@@ -6067,63 +5935,8 @@ generic_infantry_equipment_organization = {
 		mutually_exclusive = { generic_mio_trait_bolt_action }
 
 		equipment_bonus = {
-			soft_attack = 0.03
-			breakthrough = 0.03
-		}
-
-		production_bonus = {
-			production_efficiency_gain_factor = -0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_medium_machineguns
-		name = generic_mio_trait_medium_machineguns
-		icon = GFX_generic_mio_trait_icon_breakthrough
-
-		position = { x=1 y=2 }
-		relative_position_id = generic_mio_trait_bolt_action
-
-		any_parent = { generic_mio_trait_semi_auto generic_mio_trait_bolt_action }
-		
-		equipment_bonus = {
-			breakthrough = 0.06
-			build_cost_ic = 0.08
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_advanced_barrel_forging
-		name = generic_mio_trait_advanced_barrel_forging
-		icon = GFX_generic_mio_trait_icon_efficiency_gain
-
-		position = { x=2 y=2 }
-		relative_position_id = generic_mio_trait_drum_pattern_sights
-
-		any_parent = { generic_mio_trait_reinforced_stocks generic_mio_trait_drum_pattern_sights }
-
-		production_bonus = {
-			production_efficiency_gain_factor = 0.03
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_mass_rifle_production
-		name = generic_mio_trait_mass_rifle_production
-		icon = GFX_generic_mio_department_icon_facilities
-
-		position = { x=0 y=2 }
-		relative_position_id = generic_mio_trait_advanced_barrel_forging
-
-		all_parents = { generic_mio_trait_advanced_barrel_forging }
-
-		production_bonus = {
-			production_efficiency_cap_factor = 0.03
-			production_cost_factor = -0.03
-		}
-
-		organization_modifier = {
-			military_industrial_organization_design_team_assign_cost = -0.3
+			soft_attack = 0.05
+			build_cost_ic = 0.1
 		}
 	}
 
@@ -6157,8 +5970,8 @@ generic_infantry_equipment_organization = {
 		mutually_exclusive = { generic_mio_trait_armor_piercing_rounds }
 
 		equipment_bonus = {
-			soft_attack = 0.05
-			breakthrough = 0.03
+			soft_attack = 0.025
+			breakthrough = 0.025
 		}
 	}
 
@@ -6175,78 +5988,10 @@ generic_infantry_equipment_organization = {
 		mutually_exclusive = { generic_mio_trait_improved_small_arms_bullet_design }
 
 		equipment_bonus = {
-			ap_attack = 0.25
-			hard_attack = 0.05
+			hard_attack = 0.025
+			defense = 0.025
 		}
 	}
-
-	trait = {
-		token = generic_mio_trait_heavy_anti_armor_ammunition
-		name = generic_mio_trait_heavy_anti_armor_ammunition
-		icon = GFX_generic_mio_trait_icon_ap_attack
-
-		position = { x=3 y=0 }
-		relative_position_id = generic_mio_trait_reinforced_stocks
-
-		equipment_bonus = {
-			hard_attack = 0.1
-			ap_attack = 0.25
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_vehicle_mounted_capabilities
-		name = generic_mio_trait_vehicle_mounted_capabilities
-		icon = GFX_generic_mio_trait_icon_breakthrough
-
-		position = { x=-1 y=2 }
-		relative_position_id = generic_mio_trait_heavy_anti_armor_ammunition
-
-		all_parents = { generic_mio_trait_heavy_anti_armor_ammunition }
-		
-		mutually_exclusive = { generic_mio_trait_rubber_cushioned_buttpad }
-
-		equipment_bonus = {
-			breakthrough = 0.06
-			build_cost_ic = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_rubber_cushioned_buttpad
-		name = generic_mio_trait_rubber_cushioned_buttpad
-		icon = GFX_generic_mio_trait_icon_breakthrough
-
-		position = { x=1 y=2 }
-		relative_position_id = generic_mio_trait_heavy_anti_armor_ammunition
-
-		all_parents = { generic_mio_trait_heavy_anti_armor_ammunition }
-		
-		mutually_exclusive = { generic_mio_trait_vehicle_mounted_capabilities }
-
-		equipment_bonus = {
-			breakthrough = 0.02
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_anti_vechicle_land_mines
-		name = generic_mio_trait_anti_vechicle_land_mines
-		icon = GFX_generic_mio_department_icon_infantry_quality
-
-		position = { x=1 y=2 }
-		relative_position_id = generic_mio_trait_vehicle_mounted_capabilities
-
-		any_parent = { generic_mio_trait_rubber_cushioned_buttpad generic_mio_trait_vehicle_mounted_capabilities }
-
-		equipment_bonus = {
-			defense = 0.04
-			hard_attack = 0.03
-			build_cost_ic = 0.05
-
-		}
-	}
-
 }
 
 
@@ -6281,7 +6026,7 @@ generic_support_equipment_organization = {
 		name = generic_mio_initial_trait_support_equipment_manufacturer
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_research_bonus = 0.1
 		}
 	}
 
@@ -6372,7 +6117,7 @@ generic_support_equipment_organization = {
 		mutually_exclusive = { generic_mio_trait_efficient_scale_up }
 		
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.06
+			military_industrial_organization_research_bonus = 0.1
 		}
 	}
 
@@ -6404,7 +6149,7 @@ generic_support_equipment_organization = {
 		relative_position_id = generic_mio_trait_material_recycling
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_research_bonus = 0.1
 		}
 	}
 
@@ -6606,7 +6351,7 @@ generic_motorized_mechanized_organization = {
 		name = generic_mio_initial_trait_motorized_mechanized_manufacturer
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_research_bonus = 0.1
 		}
 	}
 
@@ -6622,7 +6367,7 @@ generic_motorized_mechanized_organization = {
 		limit_to_equipment_type = { motorized_equipment motorized_rocket_equipment }
 
 		equipment_bonus = {
-			reliability = -0.07
+			reliability = -0.15
 			build_cost_ic = -0.05
 		}
 	}
@@ -6642,9 +6387,6 @@ generic_motorized_mechanized_organization = {
 		equipment_bonus = {
 			reliability = 0.05
 		}
-		production_bonus = {
-			production_resource_need_factor = 0.02
-		}
 	}
 
 	trait = {
@@ -6660,7 +6402,7 @@ generic_motorized_mechanized_organization = {
 		limit_to_equipment_type = { motorized_equipment motorized_rocket_equipment }
 		
 		equipment_bonus = {
-			breakthrough = 0.035
+			breakthrough = 0.05
 		}
 	}
 
@@ -6669,37 +6411,17 @@ generic_motorized_mechanized_organization = {
 		name = generic_mio_trait_attached_wood_gas_generator
 		icon = GFX_generic_mio_trait_icon_fuel_consumption
 		
-		position = { x=-1 y=2 }
+		position = { x=0 y=2 }
 		relative_position_id = generic_mio_trait_all_wheel_drive
 		
 		all_parents = { generic_mio_trait_all_wheel_drive }
 		
-		mutually_exclusive = { generic_mio_trait_high_powered_engine }
+		#mutually_exclusive = { generic_mio_trait_high_powered_engine }
 
 		limit_to_equipment_type = { motorized_equipment motorized_rocket_equipment }
 
 		equipment_bonus = {
 			fuel_consumption = -0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_high_powered_engine
-		name = generic_mio_trait_high_powered_engine
-		icon = GFX_generic_mio_trait_icon_maximum_speed
-		
-		position = { x=2 y=0 }
-		relative_position_id = generic_mio_trait_attached_wood_gas_generator
-		
-		all_parents = { generic_mio_trait_all_wheel_drive }
-		
-		mutually_exclusive = { generic_mio_trait_attached_wood_gas_generator }
-
-		limit_to_equipment_type = { motorized_equipment motorized_rocket_equipment }
-
-		equipment_bonus = {
-			fuel_consumption = 0.05
-			maximum_speed = 0.05
 		}
 	}
 
@@ -6717,81 +6439,6 @@ generic_motorized_mechanized_organization = {
 	}
 
 	trait = {
-		token = generic_mio_trait_armored_pulpit_mount
-		name = generic_mio_trait_armored_pulpit_mount
-		icon = GFX_generic_mio_trait_icon_hardness
-		
-		position = { x=0 y=2 }
-		relative_position_id = generic_mio_trait_medium_machinegun_mounts
-
-		all_parents = { generic_mio_trait_medium_machinegun_mounts }
-
-		equipment_bonus = {
-			hardness = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_advanced_artillery_racks
-		name = generic_mio_trait_advanced_artillery_racks
-		icon = GFX_generic_mio_trait_icon_soft_attack
-		
-		position = { x=-1 y=2 }
-		relative_position_id = generic_mio_trait_armored_pulpit_mount
-		
-		all_parents = { generic_mio_trait_armored_pulpit_mount }
-		
-		mutually_exclusive = { generic_mio_trait_heavy_machinegun_mount generic_mio_trait_mounted_light_anti_tank_gun }
-		
-		limit_to_equipment_type = { motorized_rocket_equipment }
-
-		equipment_bonus = {
-			soft_attack = 0.035
-			build_cost_ic = 0.06
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_heavy_machinegun_mount
-		name = generic_mio_trait_heavy_machinegun_mount
-		icon = GFX_generic_mio_trait_icon_breakthrough
-		
-		position = { x=2 y=0 }
-		relative_position_id = generic_mio_trait_advanced_artillery_racks
-		
-		all_parents = { generic_mio_trait_armored_pulpit_mount }
-		
-		mutually_exclusive = { generic_mio_trait_advanced_artillery_racks generic_mio_trait_mounted_light_anti_tank_gun }
-		
-		limit_to_equipment_type = { mechanized_equipment motorized_equipment }
-		
-		equipment_bonus = {
-			breakthrough = 0.04
-			build_cost_ic = 0.01
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_mounted_light_anti_tank_gun #elephant gun
-		name = generic_mio_trait_mounted_light_anti_tank_gun
-		icon = GFX_generic_mio_trait_icon_ap_attack
-		
-		position = { x=1 y=0 }
-		relative_position_id = generic_mio_trait_heavy_machinegun_mount
-		
-		mutually_exclusive = { generic_mio_trait_advanced_artillery_racks generic_mio_trait_heavy_machinegun_mount }
-		
-		all_parents = { generic_mio_trait_bulletproof_panels }
-		
-		limit_to_equipment_type = { mechanized_equipment }
-
-		equipment_bonus = {
-			ap_attack = 0.1
-			hard_attack = 0.02
-		}
-	}
-
-	trait = {
 		token = generic_mio_trait_open_chassi
 		name = generic_mio_trait_open_chassi
 		icon = GFX_generic_mio_department_icon_mechanized_production
@@ -6804,8 +6451,8 @@ generic_motorized_mechanized_organization = {
 		mutually_exclusive = { generic_mio_trait_closed_chassi }
 
 		equipment_bonus = {
-			defense = -0.02
-			build_cost_ic = -0.03
+			defense = -0.1
+			build_cost_ic = -0.05
 		}
 	}
 
@@ -6849,7 +6496,7 @@ generic_motorized_mechanized_organization = {
 		name = generic_mio_trait_light_flame_projectors
 		icon = GFX_generic_mio_trait_icon_breakthrough
 		
-		position = { x=0 y=2 }
+		position = { x=-1 y=2 }
 		relative_position_id = generic_mio_trait_bulletproof_panels
 		
 		limit_to_equipment_type = { mechanized_equipment }
@@ -6857,7 +6504,8 @@ generic_motorized_mechanized_organization = {
 		all_parents = { generic_mio_trait_bulletproof_panels }
 
 		equipment_bonus = {
-			breakthrough = 0.035
+			breakthrough = 0.025
+			defense = 0.025
 		}
 	}
 
@@ -6866,7 +6514,7 @@ generic_motorized_mechanized_organization = {
 		name = generic_mio_trait_land_mine_racks
 		icon = GFX_generic_mio_department_icon_mechanized_hull
 		
-		position = { x=1 y=0 }
+		position = { x=2 y=0 }
 		relative_position_id = generic_mio_trait_light_flame_projectors
 		
 		limit_to_equipment_type = { mechanized_equipment }
@@ -6874,8 +6522,8 @@ generic_motorized_mechanized_organization = {
 		all_parents = { generic_mio_trait_bulletproof_panels }
 
 		equipment_bonus = {
-			defense = 0.06
-			maximum_speed = -0.02
+			defense = 0.05
+			maximum_speed = -0.1
 		}
 	}
 }
