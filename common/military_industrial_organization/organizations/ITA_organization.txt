@@ -10,7 +10,7 @@
 
 
 ITA_fiat_organization = {
-	include = generic_tank_organization
+	include = generic_medium_tank_organization
 	icon = GFX_idea_fiat
 	
 	allowed = {	
@@ -26,24 +26,73 @@ ITA_fiat_organization = {
 			}
 		}
 	}
+	
+	remove_trait = { generic_mio_trait_spaced_armor generic_mio_trait_crew_survival_layout generic_mio_trait_sloped_side_armor generic_mio_trait_advanced_shells generic_mio_trait_improved_gun_metallurgy }
 
-	visible = {
-		IF = {
-			limit = { FROM = { original_tag = AOI } }
-			FROM = { has_country_flag = ETH_ITA_sends_army_designers }
+	add_trait = {	
+		token = GER_mio_trait_hotrolled_armor
+		name = GER_mio_trait_hotrolled_armor
+		icon = GFX_generic_mio_department_icon_tank_general_technology
+		special_trait_background = yes
+		
+		all_parents = { generic_mio_trait_armor_steel_working }
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = generic_mio_trait_armor_steel_working
+	}		
+	add_trait = {
+		token = generic_mio_trait_standardized_components
+		name = generic_mio_trait_standardized_components
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_simplified_turret_design
+		
+		all_parents = { generic_mio_trait_simplified_turret_design }
+
+		equipment_bonus = {
+			soft_attack = 0.05
 		}
 	}
-	
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ITA } }
-			}
-			FROM = { NOT = { has_war_with = ITA } }
+}
+
+ITA_porsche_organization = {
+	include = generic_heavy_tank_organization
+	icon = GFX_idea_porsche
+	allowed = {
+		OR = {
+			tag = ITA
 		}
-		ELSE = { #original_tag = ITA
-			ITA_is_northern_designer = yes
+		NOT = {
+			original_tag = CZE
+		}
+	}
+	add_trait = {
+		token = generic_mio_trait_high_explosive_shells
+		name = generic_mio_trait_high_explosive_shells
+		icon = GFX_generic_mio_department_icon_tank_general_weapons
+
+		position = { x=1 y=2 }
+		relative_position_id = generic_mio_trait_commander_cupola
+
+		any_parent = { generic_mio_trait_commander_cupola generic_mio_trait_simplified_layout }
+
+		#mutually_exclusive = { generic_mio_trait_apcr_hvap_shells }
+		
+		equipment_bonus = {
+			build_cost_ic = -0.2
+			hard_attack = 0.05
+			soft_attack = 0.05
+			breakthrough = -0.25
+			defense = -0.5
+			armor_value = -0.55
 		}
 	}
 }
@@ -72,22 +121,8 @@ ITA_crda_organization = {
 			}
 		}
 	}
-	
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ITA } }
-			}
-			FROM = { NOT = { has_war_with = ITA } }
-		}
-		ELSE = { #original_tag = ITA
-			ITA_is_northern_designer = yes
-		}
 
-	}
-
-	add_trait = { 
+	add_trait = {
 		token = ITA_mio_trait_new_industrialization_program
 		name = ITA_german_millitary_cooperation
 		icon = GFX_generic_mio_department_icon_ship_capital_ship_production
@@ -97,97 +132,22 @@ ITA_crda_organization = {
 		
 		available = {
 			FROM = {
-				has_completed_focus = ITA_german_millitary_cooperation
-				has_completed_focus = ITA_armored_effort
+				has_completed_focus = ITA_secret_weapons
 			}
 		}
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.1
+			military_industrial_organization_research_bonus = 0.5
 		}
 
 		production_bonus = {
-			production_capacity_factor = 0.1
+			production_capacity_factor = 0.05
 		}
 	}
 }
-
-ITA_cantiere_oto_organization = {
-	include = generic_escort_ship_organization
-	icon = GFX_idea_ITA_oto
-	
-	allowed = {	
-		tag = ITA 
-	}
-	
-	available = {
-		ITA_is_northern_designer = yes
-	}
-
-	add_trait = { 
-		token = ITA_mio_trait_new_industrialization_program
-		name = ITA_german_millitary_cooperation
-		icon = GFX_generic_mio_department_icon_ship_screen_ship_production
-		special_trait_background = yes
-
-		position = { x=9 y=0 }
-		
-		available = {
-			FROM = {
-				has_completed_focus = ITA_german_millitary_cooperation
-				has_completed_focus = ITA_armored_effort
-			}
-		}
-
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.1
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
-		}
-	}
-}
-
-ITA_navalmeccanica_organization = {
-	include = generic_refurbishment_repair_organization
-	icon = GFX_idea_ITA_navalmeccanica
-	
-	allowed = {	
-		tag = ITA 
-	}
-	
-	available = {
-		ITA_is_southern_designer = yes
-	}
-
-	add_trait = { 
-		token = ITA_mio_trait_new_industrialization_program
-		name = ITA_german_millitary_cooperation
-		icon = GFX_generic_mio_department_icon_ship_screen_ship_production
-		special_trait_background = yes
-
-		position = { x=9 y=0 }
-		
-		available = {
-			FROM = {
-				has_completed_focus = ITA_german_millitary_cooperation
-				has_completed_focus = ITA_mare_nostrum
-			}
-		}
-
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.1
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
-		}
-	}
-} 
 
 ITA_cantiere_navale_di_ancona_organization = {
-	include = generic_raider_ship_organization
+	include = generic_task_force_ship_organization
 	icon = GFX_idea_ITA_cantera_navale_di_ancona
 	
 	allowed = {	
@@ -208,8 +168,7 @@ ITA_cantiere_navale_di_ancona_organization = {
 		
 		available = {
 			FROM = {
-				has_completed_focus = ITA_german_millitary_cooperation
-				has_completed_focus = ITA_mare_nostrum
+				has_completed_focus = ITA_secret_weapons
 			}
 		}
 
@@ -218,44 +177,7 @@ ITA_cantiere_navale_di_ancona_organization = {
 		}
 
 		production_bonus = {
-			production_capacity_factor = 0.1
-		}
-	}
-}
-
-ITA_cantieri_navali_tosi_organization = {
-	include = generic_submarine_organization
-	icon = GFX_idea_ITA_cantieri_navali_tosi
-	
-	allowed = {	
-		tag = ITA 
-	}
-	
-	available = {
-		ITA_is_southern_designer = yes
-	}
-
-	add_trait = { 
-		token = ITA_mio_trait_new_industrialization_program
-		name = ITA_german_millitary_cooperation
-		icon = GFX_generic_mio_department_icon_ship_submarine_production
-		special_trait_background = yes
-
-		position = { x=9 y=0 }
-		
-		available = {
-			FROM = {
-				has_completed_focus = ITA_german_millitary_cooperation
-				has_completed_focus = ITA_mare_nostrum
-			}
-		}
-
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.1
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
+			production_capacity_factor = 0.05
 		}
 	}
 }
@@ -860,43 +782,6 @@ ITA_breda_organization = {
 	}
 }
 
-ITA_brescia_arsenal_organization = {
-	include = generic_support_equipment_organization
-	icon = GFX_idea_ITA_brescia_arsenal
-	
-	allowed = {	 
-		original_tag = ITA
-	}
-	
-	available = {
-		ITA_is_northern_designer = yes
-	}
-
-	add_trait = { 
-		token = ITA_mio_trait_new_industrialization_program
-		name = ITA_german_millitary_cooperation
-		icon = GFX_generic_mio_department_icon_infantry_production
-		special_trait_background = yes
-
-		position = { x=9 y=0 }
-		
-		available = {
-			FROM = {
-				has_completed_focus = ITA_german_millitary_cooperation
-				has_completed_focus = ITA_armored_effort
-			}
-		}
-
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.1
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
-		}
-	}
-}
-
 ITA_officine_meccaniche_organization = {
 	include = generic_motorized_mechanized_organization
 	icon = GFX_idea_ITA_officine_meccaniche
@@ -904,13 +789,6 @@ ITA_officine_meccaniche_organization = {
 	allowed = {
 		original_tag = ITA
 		has_dlc = "By Blood Alone"
-	}
-
-	equipment_type = {
-		motorized_equipment
-		mech_chassis
-		motorized_rocket_equipment
-		train_equipment
 	}
 	
 	research_categories = {
@@ -926,111 +804,4 @@ ITA_officine_meccaniche_organization = {
 	}
 
 	#research_bonus = 0.2 #Intended to be a total of 20% Research for the MIO at start
-
-	#override_trait = { #Traits with no limits in the archetype need the limit to exclude the additional equipment in this MIO (train)
-	#	token = generic_mio_trait_medium_machinegun_mounts
-	#
-	#	limit_to_equipment_type = {
-	#		motorized_equipment
-	#		mech_chassis
-	#		motorized_rocket_equipment
-	#	}
-	#}
-
-	#override_trait = { #Traits with no limits in the archetype need the limit to exclude the additional equipment in this MIO (train)
-	#	token = generic_mio_trait_armored_pulpit_mount
-	#
-	#	limit_to_equipment_type = {
-	#		motorized_equipment
-	#		mech_chassis
-	#		motorized_rocket_equipment
-	#	}
-	#}
-
-	add_trait = { 
-		token = ITA_mio_trait_new_ricostruzione_iundustriale_motorized
-		name = ITA_new_ricostruzione_industriale
-		icon = GFX_generic_mio_department_icon_motorized_production
-		special_trait_background = yes
-
-		position = { x=1 y=0 }
-		relative_position_id = generic_mio_trait_steel_cargo_bed
-		
-		available = {
-			FROM = {
-				has_completed_focus = ITA_german_millitary_cooperation
-				has_completed_focus = ITA_armored_effort
-			}
-		}
-
-		limit_to_equipment_type = {
-			motorized_equipment
-			motorized_rocket_equipment
-		}
-
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.1
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
-		}
-	}
-
-	add_trait = { 
-		token = ITA_mio_trait_new_ricostruzione_iundustriale_mechanized
-		name = ITA_new_ricostruzione_industriale
-		icon = GFX_generic_mio_department_icon_mechanized_production
-		special_trait_background = yes
-
-		position = { x=-1 y=0 }
-		relative_position_id = generic_mio_trait_open_chassi
-		
-		available = {
-			FROM = {
-				has_completed_focus = ITA_german_millitary_cooperation
-				has_completed_focus = ITA_armored_effort
-			}
-		}
-
-		limit_to_equipment_type = {
-			mechanized_equipment
-		}
-
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.1
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
-		}
-	}
-
-	add_trait = { 
-		token = ITA_mio_trait_new_ricostruzione_iundustriale_train
-		name = ITA_new_ricostruzione_industriale
-		icon = GFX_military_industrial_organization_train
-		special_trait_background = yes
-
-		position = { x=9 y=0 }
-		
-		available = {
-			FROM = {
-				has_completed_focus = ITA_german_millitary_cooperation
-				has_completed_focus = ITA_armored_effort
-			}
-		}
-
-		limit_to_equipment_type = {
-			train_equipment
-		}
-
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.1
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
-		}
-	}
 }

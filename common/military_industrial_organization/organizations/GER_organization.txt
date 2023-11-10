@@ -10,7 +10,7 @@ GER_porsche_organization = {
 	icon = GFX_idea_porsche
 	allowed = {
 		OR = {
-			the_axis = yes
+			tag = GER
 		}
 		NOT = {
 			original_tag = CZE
@@ -50,8 +50,8 @@ GER_man_organization = {
 	include = generic_tank_organization
 	icon = GFX_idea_GER_MAN
 		allowed = {
-		tag = GER
-	}
+			the_axis = yes
+		}
 	tree_header_text = {
 		text = mio_header_tank_construction
 		x = 3
@@ -100,6 +100,7 @@ GER_man_organization = {
 		name = GER_mio_trait_multilayer_armour
 		icon = GFX_generic_mio_trait_icon_armor_value
 		special_trait_background = yes
+		
 		any_parent = {
 			GER_mio_trait_hotrolled_armor
 		}
