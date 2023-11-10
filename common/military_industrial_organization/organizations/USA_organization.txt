@@ -363,44 +363,6 @@ USA_boeing_organization = {
 	allowed = {
 		tag = USA
 	}
-	override_trait = {
-		token = generic_mio_trait_flying_fortress
-		position = {
-			x = -1
-			y = 1
-		}
-	}
-	override_trait = {
-		token = generic_mio_trait_advanced_instruments
-		position = {
-			x = 1
-			y = 1
-		}
-	}
-	add_trait = {
-		token = USA_mio_trait_superfortress
-		name = USA_mio_trait_superfortress
-		icon = GFX_generic_mio_department_icon_plane_general_engine
-		special_trait_background = yes
-		position = {
-			x = 0
-			y = 1
-		}
-		relative_position_id = generic_mio_trait_flying_fortress
-		any_parent = {
-			generic_mio_trait_flying_fortress
-		}
-		limit_to_equipment_type = {
-			large_plane_airframe
-			large_plane_maritime_patrol_plane_airframe
-		}
-		equipment_bonus = {
-			air_defence = 0.1
-			air_range = 0.1
-			air_agility = -0.05
-			fuel_consumption = 0.05
-		}
-	}
 }
 
 USA_grumman_organization = {
@@ -408,60 +370,6 @@ USA_grumman_organization = {
 	icon = GFX_idea_grumman
 	allowed = {
 		tag = USA
-	}
-	add_trait = {
-		token = USA_mio_trait_smooth_finish
-		name = USA_mio_trait_smooth_finish
-		icon = GFX_generic_mio_trait_icon_air_agility
-		special_trait_background = yes
-		position = {
-			x = 2
-			y = 1
-		}
-		relative_position_id = generic_mio_trait_reinforced_fuselage
-		any_parent = {
-			generic_mio_trait_reinforced_fuselage
-		}
-		limit_to_equipment_type = {
-			large_plane_airframe
-			large_plane_maritime_patrol_plane_airframe
-		}
-		equipment_bonus = {
-			air_agility = 0.05
-			maximum_speed = 0.05
-		}
-	}
-	override_trait = {
-		token = generic_mio_advanced_materials
-		position = {
-			x = -1
-			y = 1
-		}
-	}
-	add_trait = {
-		token = USA_mio_trait_jet_fighter_design
-		name = USA_mio_trait_jet_fighter_design
-		icon = GFX_generic_mio_trait_icon_maximum_speed
-		special_trait_background = yes
-		available = {
-			FROM = {
-				has_tech = jet_engines
-			}
-		}
-		position = {
-			x = 1
-			y = 1
-		}
-		relative_position_id = generic_mio_water_injection
-		any_parent = {
-			generic_mio_water_injection
-		}
-		limit_to_equipment_type = {
-			mio_cat_eq_all_cv_aircraft
-		}
-		equipment_bonus = {
-			maximum_speed = 0.1
-		}
 	}
 }
 

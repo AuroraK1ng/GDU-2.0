@@ -110,6 +110,29 @@ GER_man_organization = {
 			x = 9
 			y = 2
 		}
+	}		
+	add_trait = {
+		token = generic_mio_trait_standardized_components
+		name = generic_mio_trait_standardized_components
+		icon = GFX_generic_mio_department_icon_tank_general_line_efficiency
+		
+		position = { x=2 y=2 }
+		relative_position_id = generic_mio_trait_simplified_suspension
+		
+		limit_to_equipment_type = {
+			#light_tank_rocket_chassis
+			medium_tank_rocket_chassis
+			heavy_tank_rocket_chassis
+		}
+		
+		any_parent = { generic_mio_trait_simplified_suspension generic_mio_trait_crew_ergonomics }
+
+		equipment_bonus = {
+			reliability = 0.05
+			soft_attack = -0.1
+			hard_attack = 0.75
+			build_cost_ic = -0.1
+		}
 	}
 }
 
@@ -147,7 +170,7 @@ GER_daimler_benz_organization = {
 ##  #  # ### #    ##  
 #####################
 GER_germaniawerft_organization = {
-	include = generic_battle_line_ship_organization
+	include = generic_task_force_ship_organization
 	icon = GFX_idea_germaniawerft
 	allowed = {
 		tag = GER
@@ -212,7 +235,7 @@ GER_messerschmitt_organization = {
 }
 
 GER_junkers_organization = {
-	include = generic_cas_aircraft_organization
+	include = generic_medium_aircraft_organization
 	icon = GFX_idea_junkers
 	allowed = {
 		OR = {
@@ -255,18 +278,45 @@ GER_junkers_organization = {
 			}
 		}
 	}
+	
+	
 	add_trait = {
 		token = GER_mio_trait_psychological_warfare
 		name = GER_mio_trait_psychological_warfare
 		icon = GFX_generic_mio_trait_icon_fuel_consumption
 		special_trait_background = yes
 		position = {
-			x = 2
-			y = 0
+			x = 0
+			y = 1
 		}
-		relative_position_id = generic_mio_trait_reinforced_wings
+		
+		any_parent = { generic_mio_trait_mixed_material_construction }
+		
+		relative_position_id = generic_mio_trait_mixed_material_construction
+		
+		limit_to_equipment_type = { small_plane_cas_airframe }
+		
 		equipment_bonus = {
-			fuel_consumption = -0.05
+			air_ground_attack = 0.05
+			air_attack = -0.05
+			reliability = 0.05
+		}
+	}
+	
+	add_trait = {
+		token = generic_mio_trait_streamlined_fuselage
+		name = generic_mio_trait_streamlined_fuselage
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		position = { x=1 y=2 }
+		relative_position_id = generic_mio_trait_expanded_cockpit
+
+		any_parent = { generic_mio_trait_expanded_cockpit generic_mio_trait_metal_nose_replacement }
+
+		limit_to_equipment_type = { mio_cat_eq_all_medium_plane }
+
+		equipment_bonus = {
+			maximum_speed = 0.1
 		}
 	}
 }
@@ -280,7 +330,7 @@ GER_focke_wulf_organization = {
 }
 
 GER_heinkel_organization = {
-	include = generic_medium_aircraft_organization
+	include = generic_heavy_aircraft_organization
 	icon = GFX_idea_heinkel
 	allowed = {
 		tag = GER
