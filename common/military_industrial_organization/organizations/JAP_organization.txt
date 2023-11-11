@@ -1,5 +1,5 @@
 JAP_osaka_army_arsenal_organization = {
-	include = generic_tank_organization
+	include = generic_tank_refurbishment_plant_organization
 	icon = GFX_idea_osaka_army_arsenal
 	allowed = {	
 		the_geacps = yes
@@ -7,59 +7,60 @@ JAP_osaka_army_arsenal_organization = {
 	}
 } 
 JAP_kure_naval_arsenal_organization = {
-	include = generic_battle_line_ship_organization
+	include = generic_task_force_ship_organization
 	icon = GFX_idea_kure_naval_arsenal
 	allowed = {	
 		the_geacps = yes
 		has_dlc = "Arms Against Tyranny"
 	}
-	available = {
-		FROM = {
-			OR = {
-				has_completed_focus = JAP_supremacy_of_the_battlefleet
-				has_completed_focus = JAP_the_ultimate_battleship
-			}
+	
+	add_trait = { 
+		token = ENG_mio_trait_flared_bow
+		name = ENG_mio_trait_flared_bow
+		icon = GFX_generic_mio_trait_icon_armor_value
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+		
+		limit_to_equipment_type = { capital_ship }
+
+		equipment_bonus = {
+			armor_value = 0.03
 		}
 	}
 }
 
 JAP_yokosuka_naval_arsenal_organization = {
-	include = generic_task_force_ship_organization
+	include = generic_escort_ship_organization
 	icon = GFX_idea_yokosuka_naval_arsenal
-	allowed = {	
-			the_geacps = yes
+	allowed = {
+		the_geacps = yes
 		has_dlc = "Arms Against Tyranny"
 	}
 }
 
 JAP_maizuru_naval_arsenal_organization = {
-	include = generic_escort_ship_organization
+	include = generic_raider_ship_organization
 	icon = GFX_idea_maizuru_naval_arsenal
 	
 	allowed = {	 
-			the_geacps = yes
+		the_geacps = yes
 	}
-	}
+}
 
 
 JAP_sasebo_naval_arsenal_organization = {
-	include = generic_raider_ship_organization
+	include = generic_refurbishment_repair_organization
 	icon = GFX_idea_sasebo_naval_arsenal
 	allowed = {	 
-			the_geacps = yes
+		the_geacps = yes
 		has_dlc = "Arms Against Tyranny"
 	}
 }
 
 
 
-              
-                 
-             
-                   
-              
-
-
+#######################################################################PLANES
 
 
 JAP_mitsubishi_organization = {

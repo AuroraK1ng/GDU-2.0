@@ -173,7 +173,7 @@ ITA_cantiere_navale_di_ancona_organization = {
 		}
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.1
+			military_industrial_organization_research_bonus = 0.05
 		}
 
 		production_bonus = {
@@ -239,23 +239,19 @@ ITA_macchi_organization = {
 		
 		available = {
 			FROM = {
-				has_completed_focus = ITA_german_millitary_cooperation
-				has_completed_focus = ITA_armored_effort
+				has_completed_focus = ITA_air_innovation_2
 			}
 		}
 
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.1
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
+		equipment_bonus = {
+			maximum_speed = 0.05
+			air_agility = 0.05
 		}
 	}
 }
 
 ITA_savoia_marchetti_organization = {
-	include = generic_multi_role_aircraft_organization
+	include = generic_naval_aircraft_organization
 	icon = GFX_idea_savoia_marchetti
 	
 	allowed = {	
@@ -265,6 +261,8 @@ ITA_savoia_marchetti_organization = {
 	available = {
 		ITA_is_northern_designer = yes
 	}
+	
+	remove_trait = { generic_mio_trait_patrol_fuel_tanks generic_mio_trait_internal_torpedo_mountings generic_mio_agility_wing_design generic_mio_strength_wing_design generic_mio_air_cooled_engines }
 
 	add_trait = {
 		token = ITA_mio_trait_air_race_pedigree
@@ -272,15 +270,14 @@ ITA_savoia_marchetti_organization = {
 		icon = GFX_generic_mio_department_icon_plane_medium_engine
 		special_trait_background = yes
 		
-		position = { x=7 y=0 }  
-		#relative_position_id = generic_mio_trait_narrow_build
+		position = { x=-1 y=1 }  
+		relative_position_id = generic_mio_trait_reinforced_fuselage
 		
-		#any_parent = { generic_mio_trait_narrow_build }
+		all_parents = { generic_mio_trait_reinforced_fuselage }
 		
-		limit_to_equipment_type = { mio_cat_eq_all_medium_plane }
 		equipment_bonus = {
-			maximum_speed = 0.05
-			air_range = 0.15
+			reliability = -0.1
+			air_range = 0.1
 		}
 	}
 
@@ -290,14 +287,14 @@ ITA_savoia_marchetti_organization = {
 		icon = GFX_generic_mio_trait_icon_torpedo_attack
 		special_trait_background = yes
 		
-		position = { x=1 y=0 }  
+		position = { x=2 y=0 }  
 		relative_position_id = ITA_mio_trait_air_race_pedigree
 		
-		#any_parent = { generic_mio_trait_narrow_build }
+		all_parents = { generic_mio_trait_reinforced_fuselage }
 		
-		limit_to_equipment_type = { mio_cat_eq_all_medium_plane }
 		equipment_bonus = {
-			naval_strike_attack = 0.15
+			reliability = -0.05
+			naval_strike_attack = 0.05
 		}
 	}
 
@@ -307,20 +304,13 @@ ITA_savoia_marchetti_organization = {
 		icon = GFX_generic_mio_trait_icon_build_cost_ic
 		special_trait_background = yes
 		
-		position = { x=-2 y=0 }  
-		relative_position_id = generic_mio_trait_armored_cockpit
-		available = {
-			FROM = { has_tech = experimental_rockets }
-		}
+		position = { x=1 y=1 }  
+		relative_position_id = ITA_mio_trait_air_race_pedigree
 		
-		#any_parent = { generic_mio_trait_narrow_build }
+		all_parents = { ITA_mio_trait_special_aerotorpedoes_unit ITA_mio_trait_air_race_pedigree }
 		
-		limit_to_equipment_type = { mio_cat_eq_all_small_plane }
 		equipment_bonus = {
-			reliability = 0.1
-		}
-		production_bonus = {
-			production_cost_factor = -0.1
+			maximum_speed = 0.2
 		}
 	}
 
@@ -331,26 +321,18 @@ ITA_savoia_marchetti_organization = {
 		special_trait_background = yes
 
 		position = { x=9 y=0 }
+		relative_position_id = ITA_mio_trait_air_race_pedigree
 		
-		available = {
-			FROM = {
-				has_completed_focus = ITA_german_millitary_cooperation
-				has_completed_focus = ITA_armored_effort
-			}
-		}
+		limit_to_equipment_type = { small_plane_naval_bomber_airframe }
 
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.1
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
+		equipment_bonus = {
+			maximum_speed = 0.1
 		}
 	}
 }
 
 ITA_caproni_organization = {
-	include = generic_cas_aircraft_organization
+	include = generic_medium_aircraft_organization
 	icon = GFX_idea_caproni
 	
 	allowed = {	 
@@ -383,33 +365,41 @@ ITA_caproni_organization = {
 		}
 	}
 
-	add_trait = { 
+	add_trait = {
 		token = ITA_mio_trait_new_industrialization_program
 		name = ITA_german_millitary_cooperation
-		icon = GFX_generic_mio_department_icon_plane_cas_production
+		icon = GFX_generic_mio_trait_icon_maximum_speed
 		special_trait_background = yes
 
 		position = { x=9 y=0 }
-		
-		available = {
-			FROM = {
-				has_completed_focus = ITA_german_millitary_cooperation
-				has_completed_focus = ITA_armored_effort
-			}
-		}
 
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.1
-		}
+		limit_to_equipment_type = { medium_plane_airframe }
 
-		production_bonus = {
-			production_capacity_factor = 0.1
+		equipment_bonus = {
+			maximum_speed = 0.1
+		}
+	}
+	add_trait = {
+		token = generic_mio_trait_streamlined_fuselage
+		name = generic_mio_trait_streamlined_fuselage
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
+
+		position = { x=1 y=2 }
+		relative_position_id = generic_mio_trait_expanded_cockpit
+
+		any_parent = { generic_mio_trait_expanded_cockpit generic_mio_trait_metal_nose_replacement }
+
+		limit_to_equipment_type = { medium_plane_airframe }
+
+		equipment_bonus = {
+			air_agility = 0.1
+			air_bombing = 0.05
 		}
 	}
 }
 
 ITA_piaggio_organization = {
-	include = generic_heavy_aircraft_organization
+	include = generic_multi_role_aircraft_organization
 	icon = GFX_idea_piaggio
 	
 	allowed = {	 
@@ -419,6 +409,8 @@ ITA_piaggio_organization = {
 	available = {
 		ITA_is_northern_designer = yes
 	}
+	
+	remove_trait = { generic_mio_trait_variable_pitch_propellers }
 
 	add_trait = { 
 		token = ITA_mio_trait_new_industrialization_program
@@ -426,185 +418,17 @@ ITA_piaggio_organization = {
 		icon = GFX_generic_mio_department_icon_plane_heavy_production
 		special_trait_background = yes
 
-		position = { x=9 y=0 }
+		position = { x=0 y=2 }
+		relative_position_id = generic_mio_trait_medium_airframe
 		
-		available = {
-			FROM = {
-				has_completed_focus = ITA_german_millitary_cooperation
-				has_completed_focus = ITA_armored_effort
-			}
-		}
-
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.1
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
-		}
-	}
-}
-
-ITA_imam_organization = {
-	include = generic_medium_aircraft_organization
-	icon = GFX_idea_ITA_imam
-	
-	allowed = {	
-		OR = {
-			tag = ITA 
-			AND = {
-				tag = AOI 
-				has_dlc = "By Blood Alone"
-			}
-		}
-	}
-
-	visible = {
-		IF = {
-			limit = { FROM = { original_tag = AOI } }
-			FROM = { has_country_flag = ETH_ITA_sends_air_designers }
-		}
-	}
-	
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ITA } }
-			}
-			FROM = { NOT = { has_war_with = ITA } }
-		}
-		ELSE = { #original_tag = ITA
-			ITA_is_southern_designer = yes
-		}
-	}
-
-	add_trait = { 
-		token = ITA_mio_trait_new_industrialization_program
-		name = ITA_german_millitary_cooperation
-		icon = GFX_generic_mio_department_icon_plane_medium_production
-		special_trait_background = yes
-
-		position = { x=9 y=0 }
+		all_parents = { generic_mio_trait_medium_airframe }
 		
-		available = {
-			FROM = {
-				has_completed_focus = ITA_german_millitary_cooperation
-				has_completed_focus = ITA_mare_nostrum
-			}
-		}
+		limit_to_equipment_type = { medium_plane_fighter_airframe }
 
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.1
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
-		}
-	}
-}
-
-ITA_crda_cant_organization = {
-	include = generic_naval_aircraft_organization
-	icon = GFX_idea_ITA_crda_cant
-	
-	allowed = {	 
-		tag = ITA 
-	}
-	
-	available = {
-		ITA_is_southern_designer = yes
-	}
-
-	add_trait = { 
-		token = ITA_mio_trait_new_industrialization_program
-		name = ITA_german_millitary_cooperation
-		icon = GFX_generic_mio_department_icon_plane_naval_bomber_production
-		special_trait_background = yes
-
-		position = { x=9 y=0 }
-		
-		available = {
-			FROM = {
-				has_completed_focus = ITA_german_millitary_cooperation
-				has_completed_focus = ITA_armored_effort
-			}
-		}
-
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.1
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
-		}
-	}
-}
-
-ITA_fiat_aviazione_organization = {
-	include = generic_range_focused_aircraft_organization
-	icon = GFX_idea_ITA_fiat_aviazione
-	
-	allowed = {	 
-		tag = ITA 
-	}
-	
-	available = {
-		ITA_is_northern_designer = yes
-	}
-	
-	initial_trait = {
 		equipment_bonus = {
-			naval_strike_attack = -0.1
+			air_agility = -0.1
+			air_range = 0.1
 			maximum_speed = 0.1
-		}
-	}
-
-	override_trait = {
-		token = generic_mio_trait_extra_cargo_doors
-
-		position = { x=8 y=0 }
-	}
-
-	add_trait = {
-		token = ITA_mio_trait_high_altitude_fighter_development
-		name = ITA_mio_trait_high_altitude_fighter_development
-		icon = GFX_generic_mio_trait_icon_air_agility
-		special_trait_background = yes
-		
-		position = { x=0 y=1 }  
-		relative_position_id = generic_mio_trait_low_drag_wings
-		
-		any_parent = { generic_mio_trait_low_drag_wings }
-		
-		limit_to_equipment_type = { mio_cat_eq_all_small_plane }
-		equipment_bonus = {
-			air_agility = 0.05
-			air_attack = 0.03
-		}
-	}
-
-	add_trait = { 
-		token = ITA_mio_trait_new_industrialization_program
-		name = ITA_german_millitary_cooperation
-		icon = GFX_generic_mio_department_icon_plane_general_production
-		special_trait_background = yes
-
-		position = { x=9 y=0 }
-		
-		available = {
-			FROM = {
-				has_completed_focus = ITA_german_millitary_cooperation
-				has_completed_focus = ITA_armored_effort
-			}
-		}
-
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.1
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
 		}
 	}
 }
@@ -672,7 +496,7 @@ ITA_beretta_organization = {
 		}
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.1
+			military_industrial_organization_research_bonus = 0.05
 		}
 
 		production_bonus = {
@@ -715,7 +539,7 @@ ITA_lancia_organization = {
 		}
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.1
+			military_industrial_organization_research_bonus = 0.05
 		}
 
 		production_bonus = {
@@ -773,7 +597,7 @@ ITA_breda_organization = {
 		}
 
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.1
+			military_industrial_organization_research_bonus = 0.05
 		}
 
 		production_bonus = {
@@ -799,7 +623,7 @@ ITA_officine_meccaniche_organization = {
 
 	initial_trait = {
 		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.15
+			military_industrial_organization_research_bonus = 0.055
 		}
 	}
 
