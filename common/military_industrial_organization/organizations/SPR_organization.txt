@@ -24,27 +24,9 @@
 # 	include = generic_task_force_ship_organization
 # 	icon = GFX_idea_generic_naval_manufacturer_3
 # 	allowed = {	
-# 		always=  no
+# 		always =  no
 # 	}
 # }
-
- SPR_secn_organization = {
- 	include = generic_battle_line_ship_organization
- 	icon = GFX_idea_SPR_sociedad_espanola_de_construccion_naval
-	allowed = {	
-		has_dlc = "La Resistance"
- 		tag = SPR
- 	}
- }
-
- SPR_euskalduna_organization = {
- 	include = generic_raider_ship_organization
- 	icon = GFX_idea_SPR_euskalduna
- 	allowed = {	
- 		has_dlc = "La Resistance"
- 		tag = SPR
- 	}
- }
 
 ###########################
 
@@ -77,10 +59,28 @@ SPR_casa_vanilla_organization = {
  	include = generic_light_aircraft_organization
 	icon = GFX_idea_SPR_hispano_aviacion
  	allowed = {
- 				has_dlc = "La Resistance"
- 				tag = SPR
+ 		has_dlc = "La Resistance"
+ 		tag = SPR
 	}
  }
+ 
+ SPR_llama_gabilondo_y_cia_organization = {
+	include = generic_multi_role_aircraft_organization
+	icon = GFX_idea_SPR_llama_gabilondo_y_cia_sa
+	allowed ={
+		OR = {
+			original_tag = SPR
+			original_tag = HUN
+			original_tag = BUL
+		}
+	}
+	
+	remove_trait = { generic_mio_trait_variable_pitch_propellers generic_mio_trait_medium_airframe }
+
+	available = {
+
+	}
+}
 
 
 ################################### 
@@ -111,22 +111,8 @@ SPR_esperanza_y_cia_organization = {
 	include = generic_artillery_organization
 	icon = GFX_idea_SPR_esperanza_y_cia
 	allowed = {	
-		 has_dlc = "La Resistance"
+		has_dlc = "La Resistance"
 		tag = SPR
-	}
-
-	available = {
-
-	}
-}
-
-SPR_llama_gabilondo_y_cia_organization = {
-	include = generic_support_equipment_organization
-	icon = GFX_idea_SPR_llama_gabilondo_y_cia_sa
-	allowed = {	
-			original_tag = SPR
-		
-
 	}
 
 	available = {
@@ -139,10 +125,10 @@ SPR_hispano_suiza_organization = {
 	icon = GFX_idea_SPR_hispano_suiza
 	
 	allowed = {
-			AND = {
-				has_dlc = "La Resistance"
-				tag = SPR
-			}					
+		AND = {
+			has_dlc = "La Resistance"
+			tag = SPR
+		}					
 	}
 
 	available = {

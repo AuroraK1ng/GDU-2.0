@@ -2171,15 +2171,18 @@ generic_black_sea_fleet_organization = {
 	}
 
 	equipment_type = {
+		carrier	
 		capital_ship
 		screen_ship
-		ship_hull_submarine
+		submarine
+	}
+	research_categories = {
+		mio_cat_tech_all_carrier_and_modules
+		mio_cat_tech_all_capital_ship_and_modules
+		mio_cat_tech_all_cruiser_and_modules
+		mio_cat_tech_all_submarine_and_modules
 	}
 
-	research_categories = {
-		naval_equipment
-	}
-	
 	tree_header_text = {
 		text = mio_header_systems
 		x = 1
@@ -2187,285 +2190,148 @@ generic_black_sea_fleet_organization = {
 
 	tree_header_text = {
 		text = mio_header_weapons
-		x = 4
-	}
-
-	tree_header_text = {
-		text = mio_header_production
-		x = 8
+		x = 5
 	}
 
 	initial_trait = {
 		name = generic_mio_initial_trait_black_sea_fleet_designer
-		limit_to_equipment_type = { capital_ship screen_ship ship_hull_submarine }
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
 		equipment_bonus = {
-			anti_air_attack = 0.02
-			armor_value = 0.02
-			max_strength = 0.02
-			naval_range = -0.15
+			naval_range = -0.5
 		}
 	}
 
 	trait = {
-		token = generic_mio_trait_submarine_hunters_black_sea
-		name = generic_mio_trait_submarine_hunters_black_sea
-		icon = GFX_generic_mio_trait_icon_sub_detection
+		token = generic_mio_trait_external_armor_belt
+		name = generic_mio_trait_external_armor_belt
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_armor
 
-		position = { x=1 y=0 }
-		
-		equipment_bonus = {
-			sub_detection = 0.05
-			patrol_coordination = 0.05
-		}
-	}
+		position = { x=0 y=0 }
 
-	trait = {
-		token = generic_mio_trait_efficient_patrolling_scheme
-		name = generic_mio_trait_efficient_patrolling_scheme
-		icon = GFX_generic_mio_department_icon_ship_capital_screen_utility
-
-		position = { x=-1 y=1 }
-		relative_position_id = generic_mio_trait_submarine_hunters_black_sea
+		mutually_exclusive = { generic_mio_trait_internal_armor_belt }
 		
-		all_parents = { generic_mio_trait_submarine_hunters_black_sea }
-		
-		equipment_bonus = {
-			patrol_coordination = 0.1
-			naval_range = -0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_advanced_sub_scanners
-		name = generic_mio_trait_advanced_sub_scanners
-		icon = GFX_generic_mio_trait_icon_sub_detection
-		
-		position = { x=0 y=1 }
-		relative_position_id = generic_mio_trait_submarine_hunters_black_sea
-		
-		all_parents = { generic_mio_trait_submarine_hunters_black_sea }
-		
-		limit_to_equipment_type = { capital_ship screen_ship }
-		
-		equipment_bonus = {
-			sub_detection = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_high_altitute_catapult
-		name = generic_mio_trait_high_altitute_catapult
-		icon = GFX_generic_mio_trait_icon_detection
-		
-		position = { x=-1 y=1 }
-		relative_position_id = generic_mio_trait_advanced_sub_scanners
-		
-		all_parents = { generic_mio_trait_advanced_sub_scanners }
-		
-		equipment_bonus = {
-			surface_detection = 0.04
-			sub_detection = 0.04
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_light_armor_piercing_guns
-		name = generic_mio_trait_light_armor_piercing_guns
-		icon = GFX_generic_mio_trait_icon_lg_attack
-		
-		position = { x=2 y=0 }
-		relative_position_id = generic_mio_trait_high_altitute_catapult
-		
-		all_parents = { generic_mio_trait_advanced_sub_scanners }
-		
-		limit_to_equipment_type = { capital_ship screen_ship }
-		
-		equipment_bonus = {
-			lg_armor_piercing = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_brass_case_reloader
-		name = generic_mio_trait_brass_case_reloader
-		icon = GFX_generic_mio_department_icon_ship_capital_screen_weapons
-		
-		position = { x=0 y=2 }
-		relative_position_id = generic_mio_trait_light_armor_piercing_guns
-		
-		all_parents = { generic_mio_trait_light_armor_piercing_guns generic_mio_trait_piercing_rounds }
-		
-		limit_to_equipment_type = { capital_ship screen_ship }
-		
-		equipment_bonus = {
-			lg_attack = 0.06
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_anti_air_defense
-		name = generic_mio_trait_anti_air_defense
-		icon = GFX_generic_mio_trait_icon_anti_air_attack
-		
-		position = { x=4 y=0 }
-		
-		limit_to_equipment_type = { capital_ship screen_ship }
+		limit_to_equipment_type = { carrier capital_ship screen_ship }
 
 		equipment_bonus = {
-			anti_air_attack = 0.06
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_heavy_guns
-		name = generic_mio_trait_heavy_guns
-		icon = GFX_generic_mio_trait_icon_hg_attack
-		
-		position = { x=0 y=1 }
-		relative_position_id = generic_mio_trait_anti_air_defense
-		
-		all_parents = { generic_mio_trait_anti_air_defense }
-		
-		limit_to_equipment_type = { capital_ship screen_ship }
-		
-		equipment_bonus = {
-			hg_attack = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_advanced_periscope
-		name = generic_mio_advanced_periscope
-		icon = GFX_generic_mio_trait_icon_sub_visibility
-		
-		position = { x=2 y=1 }
-		relative_position_id = generic_mio_trait_anti_air_defense
-		
-		all_parents = { generic_mio_trait_anti_air_defense }
-		
-		limit_to_equipment_type = { ship_hull_submarine }
-		
-		equipment_bonus = {
-			sub_visibility = -0.03
-			surface_detection = 0.03
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_piercing_rounds
-		name = generic_mio_trait_piercing_rounds
-		icon = GFX_generic_mio_department_icon_ship_capital_ship_weapons
-		
-		position = { x=-1 y=1 }
-		relative_position_id = generic_mio_trait_heavy_guns
-		
-		all_parents = { generic_mio_trait_heavy_guns }
-		
-		limit_to_equipment_type = { capital_ship }
-		
-		equipment_bonus = {
-			hg_armor_piercing = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_base_defense
-		name = generic_mio_trait_base_defense
-		icon = GFX_generic_mio_department_icon_ship_capital_screen_armor
-		
-		position = { x=1 y=1 }
-		relative_position_id = generic_mio_trait_heavy_guns
-		
-		all_parents = { generic_mio_trait_heavy_guns }
-		
-		limit_to_equipment_type = { capital_ship screen_ship }
-		
-		equipment_bonus = {
-			anti_air_attack = 0.06
-			naval_range = -0.1
 			armor_value = 0.05
 		}
 	}
 
 	trait = {
-		token = generic_mio_trait_state_sponsored_growth
-		name = generic_mio_trait_state_sponsored_growth
-		icon = GFX_generic_mio_department_icon_facilities
-		
-		position = { x=4 y=0 }
-		relative_position_id = generic_mio_trait_anti_air_defense
-		
-		organization_modifier = {
-			military_industrial_organization_funds_gain = 0.1
-		}
-		
-	}
+		token = generic_mio_trait_internal_armor_belt
+		name = generic_mio_trait_internal_armor_belt
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_armor
 
-	trait = {
-		token = generic_mio_trait_state_sponsored_research
-		name = generic_mio_trait_state_sponsored_research
-		icon = GFX_generic_mio_department_icon_facilities
-		
-		position = { x=-1 y=2 }
-		relative_position_id = generic_mio_trait_state_sponsored_growth
-		
-		all_parents = { generic_mio_trait_state_sponsored_growth }
-
-		mutually_exclusive = { generic_mio_trait_24h_shifts }
-		
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_24h_shifts
-		name = generic_mio_trait_24h_shifts
-		icon = GFX_generic_mio_department_icon_ship_general_production
-		
 		position = { x=2 y=0 }
-		relative_position_id = generic_mio_trait_state_sponsored_research
-		
-		all_parents = { generic_mio_trait_state_sponsored_growth }
+		relative_position_id = generic_mio_trait_external_armor_belt
 
-		mutually_exclusive = { generic_mio_trait_state_sponsored_research }
-		
-		production_bonus = {
-			production_capacity_factor = 0.05
+		mutually_exclusive = { generic_mio_trait_external_armor_belt }
+
+		limit_to_equipment_type = { carrier capital_ship screen_ship }
+
+		equipment_bonus = {
+			armor_value = 0.10
+			build_cost_ic = 0.10
 		}
 	}
 
 	trait = {
-		token = generic_mio_trait_state_subsidizing
-		name = generic_mio_trait_state_subsidizing
-		icon = GFX_generic_mio_department_icon_facilities
-		
-		position = { x=1 y=2 }
-		relative_position_id = generic_mio_trait_state_sponsored_research
-		
-		any_parent = { generic_mio_trait_state_sponsored_research generic_mio_trait_24h_shifts }
-		
-		organization_modifier = {
-			military_industrial_organization_size_up_requirement = -0.25
-			military_industrial_organization_design_team_assign_cost = 0.15
-		}
+		token = generic_mio_trait_anti_air_layout
+		name = generic_mio_trait_anti_air_layout
+		icon = GFX_generic_mio_trait_icon_armor_value
 
+		position = { x=4 y=0 }
+		relative_position_id = generic_mio_trait_external_armor_belt
+		
+		limit_to_equipment_type = { carrier capital_ship screen_ship }
+
+		equipment_bonus = {
+			armor_value = 0.05
+		}
 	}
 
 	trait = {
-		token = generic_mio_trait_deck_guns_black_sea
-		name = generic_mio_trait_deck_guns_black_sea
-		icon = GFX_generic_mio_trait_icon_anti_air_attack
+		token = generic_mio_trait_secondary_battery_layout
+		name = generic_mio_trait_secondary_battery_layout
+		icon = GFX_generic_mio_trait_icon_armor_value
 
-		position = { x=-1 y=2 } 
-		relative_position_id = generic_mio_trait_base_defense
+		position = { x=2 y=0 }
+		relative_position_id = generic_mio_trait_anti_air_layout
 		
-		any_parent = { generic_mio_trait_base_defense generic_mio_trait_piercing_rounds }
+		limit_to_equipment_type = { carrier capital_ship screen_ship }
+
+		equipment_bonus = {
+			armor_value = 0.05
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_gyro_stabilized_mounts
+		name = generic_mio_trait_gyro_stabilized_mounts
+		icon = GFX_generic_mio_trait_icon_armor_value
+
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_anti_air_layout
+
+		all_parents = { generic_mio_trait_anti_air_layout generic_mio_trait_secondary_battery_layout }
 		
+		limit_to_equipment_type = { carrier capital_ship screen_ship }
+
+		equipment_bonus = {
+			armor_value = 0.05
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_secondary_fire_director_control
+		name = generic_mio_trait_secondary_fire_director_control
+		icon = GFX_generic_mio_trait_icon_sub_visibility
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_gyro_stabilized_mounts
+
+		any_parent = { generic_mio_trait_gyro_stabilized_mounts }
+		
+		limit_to_equipment_type = { screen_ship submarine }
+
+		equipment_bonus = {
+			torpedo_attack = 0.2
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_primary_battery_layout
+		name = generic_mio_trait_primary_battery_layout
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		position = { x=2 y=0 }
+		relative_position_id = generic_mio_trait_secondary_battery_layout
+
 		limit_to_equipment_type = { capital_ship }
+
+		equipment_bonus = {
+			hg_attack = 0.2
+		}
+	}
+	
+	trait = {
+		token = generic_mio_trait_super_heavy_shells
+		name = generic_mio_trait_super_heavy_shells
+		icon = GFX_generic_mio_trait_icon_hg_attack
+		
+		position = { x=0 y=2 }
+		relative_position_id = generic_mio_trait_primary_battery_layout
+		
+		any_parent = { generic_mio_trait_primary_battery_layout }
+		
+		limit_to_equipment_type = { screen_ship }
 		
 		equipment_bonus = {
-			anti_air_attack = 0.06
+			lg_attack = 0.2
+			build_cost_ic = -0.2
 		}
 	}	
 }
@@ -2717,236 +2583,8 @@ generic_general_aircraft_organization = {
 		organization_modifier = {
 			military_industrial_organization_research_bonus = 0.05
 		}
-		production_bonus = {
-			production_capacity_factor = 0.03
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_conservative_designs
-		name = generic_mio_trait_conservative_designs
-		icon = GFX_generic_mio_trait_icon_reliability
-
-		position = { x=4 y=0 }
-
 		equipment_bonus = {
-			reliability = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_fighter_aircraft_specialists
-		name = generic_mio_trait_fighter_aircraft_specialists
-		icon = GFX_generic_mio_department_icon_plane_fighter_engine
-
-		position = { x=-3 y=1 }
-		relative_position_id = generic_mio_trait_conservative_designs
-
-		all_parents = { generic_mio_trait_conservative_designs }
-
-		limit_to_equipment_type = { mio_cat_eq_only_light_fighter_no_cv medium_plane_fighter_airframe medium_plane_scout_plane_airframe }
-
-		equipment_bonus = {
-			air_range = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_high_speed_design
-		name = generic_mio_trait_high_speed_design
-		icon = GFX_generic_mio_trait_icon_maximum_speed
-
-		position = { x=-1 y=1 }
-		relative_position_id = generic_mio_trait_fighter_aircraft_specialists
-
-		all_parents = { generic_mio_trait_fighter_aircraft_specialists }
-
-		mutually_exclusive = { generic_mio_trait_agility_wing_design }
-
-		limit_to_equipment_type = { mio_cat_eq_only_light_fighter_no_cv medium_plane_fighter_airframe medium_plane_scout_plane_airframe }
-
-		equipment_bonus = {
-			maximum_speed = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_agility_wing_design
-		name = generic_mio_trait_agility_wing_design
-		icon = GFX_generic_mio_trait_icon_air_agility
-
-		position = { x=1 y=1 }
-		relative_position_id = generic_mio_trait_fighter_aircraft_specialists
-
-		all_parents = { generic_mio_trait_fighter_aircraft_specialists }
-
-		mutually_exclusive = { generic_mio_trait_high_speed_design }
-
-		limit_to_equipment_type = { mio_cat_eq_only_light_fighter_no_cv medium_plane_fighter_airframe medium_plane_scout_plane_airframe }
-
-		equipment_bonus = {
-			air_agility = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_fighter_aircraft_production
-		name = generic_mio_trait_fighter_aircraft_production
-		icon = GFX_generic_mio_department_icon_plane_fighter_production
-
-		position = { x=1 y=2 }
-		relative_position_id = generic_mio_trait_high_speed_design
-
-		any_parent = { generic_mio_trait_high_speed_design generic_mio_trait_agility_wing_design }
-
-		limit_to_equipment_type = { mio_cat_eq_only_light_fighter_no_cv medium_plane_fighter_airframe medium_plane_scout_plane_airframe }
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_bomber_aircraft_specialists
-		name = generic_mio_trait_bomber_aircraft_specialists
-		icon = GFX_generic_mio_department_icon_plane_strategic_bomber_engine
-
-		position = { x=0 y=1 }
-		relative_position_id = generic_mio_trait_conservative_designs
-
-		all_parents = { generic_mio_trait_conservative_designs }
-
-		limit_to_equipment_type = { small_plane_cas_airframe mio_cat_eq_only_tactical_bomber mio_cat_eq_only_strategic_bomber }
-	equipment_bonus = {
-			air_range = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_bomb_trucks
-		name = generic_mio_trait_bomb_trucks
-		icon = GFX_generic_mio_trait_icon_defense
-
-		position = { x=-1 y=1 }
-		relative_position_id = generic_mio_trait_bomber_aircraft_specialists
-
-		all_parents = { generic_mio_trait_bomber_aircraft_specialists }
-
-		mutually_exclusive = { generic_mio_trait_fast_bombers }
-
-		limit_to_equipment_type = { small_plane_cas_airframe mio_cat_eq_only_tactical_bomber mio_cat_eq_only_strategic_bomber }
-
-		equipment_bonus = {
-			air_defence = 0.03
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_fast_bombers
-		name = generic_mio_trait_fast_bombers
-		icon = GFX_generic_mio_trait_icon_maximum_speed
-
-		position = { x=1 y=1 }
-		relative_position_id = generic_mio_trait_bomber_aircraft_specialists
-
-		all_parents = { generic_mio_trait_bomber_aircraft_specialists }
-
-		mutually_exclusive = { generic_mio_trait_bomb_trucks }
-
-		limit_to_equipment_type = { small_plane_cas_airframe mio_cat_eq_only_tactical_bomber mio_cat_eq_only_strategic_bomber }
-
-		equipment_bonus = {
-			maximum_speed = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_bomber_aircraft_production
-		name = generic_mio_trait_bomber_aircraft_production
-		icon = GFX_generic_mio_department_icon_plane_strategic_bomber_production
-
-		position = { x=1 y=2 }
-		relative_position_id = generic_mio_trait_bomb_trucks
-
-		any_parent = { generic_mio_trait_bomb_trucks generic_mio_trait_fast_bombers }
-
-		limit_to_equipment_type = { small_plane_cas_airframe mio_cat_eq_only_tactical_bomber mio_cat_eq_only_strategic_bomber }
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_naval_aircraft_specialists
-		name = generic_mio_trait_naval_aircraft_specialists
-		icon = GFX_generic_mio_department_icon_plane_cv_naval_bomber_engine
-
-		position = { x=3 y=1 }
-		relative_position_id = generic_mio_trait_conservative_designs
-
-		all_parents = { generic_mio_trait_conservative_designs }
-
-		limit_to_equipment_type = { small_plane_naval_bomber_airframe mio_cat_eq_all_cv_aircraft large_plane_maritime_patrol_plane_airframe }
-
-		equipment_bonus = {
-			air_range = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_naval_strike
-		name = generic_mio_trait_naval_strike
-		icon = GFX_generic_mio_trait_icon_torpedo_attack
-
-		position = { x=-1 y=1 }
-		relative_position_id = generic_mio_trait_naval_aircraft_specialists
-
-		all_parents = { generic_mio_trait_naval_aircraft_specialists }
-
-		mutually_exclusive = { generic_mio_trait_naval_air_patrol }
-
-		limit_to_equipment_type = { small_plane_naval_bomber_airframe mio_cat_eq_all_cv_aircraft large_plane_maritime_patrol_plane_airframe }
-
-		equipment_bonus = {
-			naval_strike_targetting = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_naval_air_patrol
-		name = generic_mio_trait_naval_air_patrol
-		icon = GFX_generic_mio_trait_icon_surface_detection
-
-		position = { x=1 y=1 }
-		relative_position_id = generic_mio_trait_naval_aircraft_specialists
-
-		all_parents = { generic_mio_trait_naval_aircraft_specialists }
-
-		mutually_exclusive = { generic_mio_trait_naval_strike }
-
-		limit_to_equipment_type = { small_plane_naval_bomber_airframe mio_cat_eq_all_cv_aircraft large_plane_maritime_patrol_plane_airframe }
-
-		equipment_bonus = {
-			surface_detection = 0.05
-			air_agility = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_naval_aircraft_production
-		name = generic_mio_trait_naval_aircraft_production
-		icon = GFX_generic_mio_department_icon_plane_cv_naval_bomber_production
-
-		position = { x=1 y=2 }
-		relative_position_id = generic_mio_trait_naval_strike
-
-		any_parent = { generic_mio_trait_naval_strike generic_mio_trait_naval_air_patrol }
-
-		limit_to_equipment_type = { small_plane_naval_bomber_airframe mio_cat_eq_all_cv_aircraft large_plane_maritime_patrol_plane_airframe }
-
-		production_bonus = {
-			production_capacity_factor = 0.05
+			reliability = 0.1
 		}
 	}
 }

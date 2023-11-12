@@ -1,7 +1,7 @@
 @prussia_of_the_balkans_position_X = 9
-@prussia_of_the_balkans_position_Y = 4
-@prussia_of_the_balkans_research_bonus = 0.1
-@prussia_of_the_balkans_production_capacity_factor = 0.1
+@prussia_of_the_balkans_position_Y = 0
+@prussia_of_the_balkans_research_bonus = 0.05
+@prussia_of_the_balkans_production_capacity_factor = 0.05
 
 #####################
 
@@ -31,7 +31,7 @@
 #####################
 
 BUL_varna_naval_dockyard_organization = {
-	include = generic_task_force_ship_organization
+	include = generic_refurbishment_repair_organization
 	icon = GFX_idea_generic_naval_manufacturer_2
 	
 	allowed = {	
@@ -48,16 +48,6 @@ BUL_varna_naval_dockyard_organization = {
 		special_trait_background = yes
 
 		position = { x=@prussia_of_the_balkans_position_X y=@prussia_of_the_balkans_position_Y }
-		
-		available = {
-			FROM = {
-				has_completed_focus = BUL_an_aegean_sea_fleet
-			}
-		}
-
-		organization_modifier = {
-			military_industrial_organization_research_bonus = @prussia_of_the_balkans_research_bonus
-		}
 
 		production_bonus = {
 			production_capacity_factor = @prussia_of_the_balkans_production_capacity_factor

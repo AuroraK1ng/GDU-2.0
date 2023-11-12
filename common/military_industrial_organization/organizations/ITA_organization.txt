@@ -113,13 +113,7 @@ ITA_crda_organization = {
 	icon = GFX_idea_crda
 	
 	allowed = {	
-		OR = {
-			tag = ITA 
-			AND = {
-				tag = BUL 
-				has_dlc = "Battle for the Bosporus"
-			}
-		}
+		tag = ITA 
 	}
 
 	add_trait = {
@@ -202,10 +196,7 @@ ITA_macchi_organization = {
 	allowed = {	
 		OR = {
 			tag = ITA 
-			AND = {
-				tag = AOI 
-				has_dlc = "By Blood Alone"
-			}
+			tag = BUL
 		}
 	}
 	
@@ -255,7 +246,11 @@ ITA_savoia_marchetti_organization = {
 	icon = GFX_idea_savoia_marchetti
 	
 	allowed = {	
-		tag = ITA 
+		OR = {
+			original_tag = ITA
+			original_tag = HUN
+			original_tag = BUL
+		}
 	}
 	
 	available = {
@@ -313,22 +308,6 @@ ITA_savoia_marchetti_organization = {
 			maximum_speed = 0.2
 		}
 	}
-
-	add_trait = { 
-		token = ITA_mio_trait_new_industrialization_program
-		name = ITA_german_millitary_cooperation
-		icon = GFX_generic_mio_department_icon_plane_general_production
-		special_trait_background = yes
-
-		position = { x=9 y=0 }
-		relative_position_id = ITA_mio_trait_air_race_pedigree
-		
-		limit_to_equipment_type = { small_plane_naval_bomber_airframe }
-
-		equipment_bonus = {
-			maximum_speed = 0.1
-		}
-	}
 }
 
 ITA_caproni_organization = {
@@ -338,10 +317,7 @@ ITA_caproni_organization = {
 	allowed = {	 
 		OR = {
 			tag = ITA 
-			AND = {
-				tag = AOI 
-				has_dlc = "By Blood Alone"
-			}
+			tag = BUL
 		}
 	}
 

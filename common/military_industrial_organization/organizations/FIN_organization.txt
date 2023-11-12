@@ -47,63 +47,6 @@ FIN_valtion_panssaritehdas_organization = {
 	#	position = { x=-1 y=3 }
 	#	relative_position_id = generic_mio_trait_modular_construction
 	#}
-	
-	add_trait = { 
-		token = FIN_mio_trait_salvaged_and_retooled
-		name = FIN_mio_trait_salvaged_and_retooled
-		icon = GFX_generic_mio_department_icon_tank_general_materials
-		special_trait_background = yes
-
-		position = { x=8 y=0 }
-		
-		available = {
-
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-			production_resource_need_factor = -0.1
-		}
-	}
-
-	add_trait = { 
-		token = FIN_mio_trait_wartsila_engine_production
-		name = FIN_mio_trait_wartsila_engine_production
-		icon = GFX_generic_mio_department_icon_tank_general_line_efficiency
-		special_trait_background = yes
-
-		position = { x=0 y=1 }
-		relative_position_id = generic_mio_trait_modular_construction
-		
-		any_parent = { generic_mio_trait_modular_construction }
-		
-		available = {
-
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-			production_efficiency_gain_factor = 0.05
-		}
-	}
-
-	add_trait = { 
-		token = FIN_mio_trait_modernization_program
-		name = FIN_mio_trait_modernization_program
-		icon = GFX_generic_mio_department_icon_tank_general_production
-		special_trait_background = yes
-
-		position = { x=1 y=0 }
-		relative_position_id = FIN_mio_trait_salvaged_and_retooled
-		
-		available = {
-
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-	}
 }
 
 
@@ -290,45 +233,6 @@ FIN_crichton_vulcan_organization = { #Coastal Defense Ships & Subs
  	tree_header_text = {
  		text = mio_header_production
  		x = 9
- 	}
-
- 	add_trait = { 
- 		token = FIN_mio_trait_modernization_program
- 		name = FIN_mio_trait_modernization_program
- 		icon = GFX_generic_mio_department_icon_plane_general_production
- 		special_trait_background = yes
-
- 		position = { x=5 y=0 }
- 		relative_position_id = generic_mio_trait_conservative_designs
-		
- 		available = {
-
- 		}
-
- 		production_bonus = {
- 			production_capacity_factor = 0.05
- 		}
- 	}
-
- 		add_trait = { 
- 		token = FIN_mio_trait_wartsila_engine_production
- 		name = FIN_mio_trait_wartsila_engine_production
- 		icon = GFX_generic_mio_department_icon_plane_general_line_efficiency
- 		special_trait_background = yes
-
-		position = { x=5 y=1 }
-		relative_position_id = generic_mio_trait_conservative_designs
-		
- 		any_parent = { generic_mio_trait_conservative_designs }
-		
-		available = {
-
- 		}
-
- 		production_bonus = {
- 			production_capacity_factor = 0.05
- 			production_efficiency_gain_factor = 0.05
- 		}
  	}
  }
 

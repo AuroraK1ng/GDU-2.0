@@ -64,41 +64,79 @@ JAP_sasebo_naval_arsenal_organization = {
 
 
 JAP_mitsubishi_organization = {
-	include = generic_high_agility_fighter_aircraft_organization
+	include = generic_light_aircraft_organization
 	icon = GFX_idea_mitsubishi
 	
 	allowed = {	 
-			tag = JAP 
+		tag = JAP 
 	}
-	
 
-	available = {
-			FROM = { has_completed_focus = JAP_agility_focus }
-	}
+	initial_trait = {
+		name = generic_mio_initial_trait_light_aircraft_designer
+
+		equipment_bonus = {
+			air_agility = 0.1
+		}
+	}	
 } 
 
 JAP_aichi_organization = {
-	include = generic_range_focused_aircraft_organization
+	include = generic_multi_role_aircraft_organization
 	icon = GFX_idea_aichi
 	allowed = {	
 		tag = JAP
 	}
-	available = {
-		FROM = { has_completed_focus = JAP_range_focus }
-	}
+	
+	remove_trait = { generic_mio_trait_variable_pitch_propellers }
 }
 
 JAP_nakajima_organization = {
-	include = generic_heavy_aircraft_organization
+	include = generic_naval_aircraft_organization
 	icon = GFX_idea_nakajima
 	allowed = {	
 		tag = JAP
 		has_dlc = "Arms Against Tyranny"
 	}
+	
+		remove_trait = { generic_mio_trait_patrol_fuel_tanks generic_mio_trait_internal_torpedo_mountings generic_mio_agility_wing_design generic_mio_strength_wing_design generic_mio_air_cooled_engines }
+
+	add_trait = {
+		token = ITA_mio_trait_air_race_pedigree
+		name = ITA_mio_trait_air_race_pedigree
+		icon = GFX_generic_mio_department_icon_plane_medium_engine
+		special_trait_background = yes
+		
+		position = { x=-1 y=1 }  
+		relative_position_id = generic_mio_trait_reinforced_fuselage
+		
+		all_parents = { generic_mio_trait_reinforced_fuselage }
+		
+		equipment_bonus = {
+			reliability = -0.1
+			air_range = 0.1
+		}
+	}
+
+	add_trait = {
+		token = ITA_mio_trait_special_aerotorpedoes_unit
+		name = ITA_mio_trait_special_aerotorpedoes_unit
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
+		special_trait_background = yes
+		
+		position = { x=2 y=0 }  
+		relative_position_id = ITA_mio_trait_air_race_pedigree
+		
+		all_parents = { generic_mio_trait_reinforced_fuselage }
+		
+		equipment_bonus = {
+			reliability = -0.05
+			naval_strike_attack = 0.05
+		}
+	}
 }
 
 JAP_yokosuka_organization = {
-	include = generic_naval_aircraft_organization 
+	include = generic_medium_aircraft_organization
 	icon = GFX_idea_yokosuka
 	allowed = {	
 		tag = JAP

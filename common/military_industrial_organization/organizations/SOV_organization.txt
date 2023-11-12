@@ -389,6 +389,20 @@ SOV_nevskoye_design_bureau_organization = {
 		# 	}
 		# }
 	}
+	
+	initial_trait = {
+		name = generic_mio_initial_trait_black_sea_fleet_designer
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_cost_factor = -0.15
+		}
+		equipment_bonus = {
+			naval_range = -0.65
+		}
+	}
 
 	add_trait = { #MTG version
 		token = SOV_mio_trait_merge_plant_no_370

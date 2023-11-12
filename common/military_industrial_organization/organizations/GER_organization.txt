@@ -11,6 +11,10 @@ GER_porsche_organization = {
 	allowed = {
 		OR = {
 			tag = GER
+			tag = SPR
+			tag = ROM
+			tag = HUN
+			tag = BUL
 		}
 		NOT = {
 			original_tag = CZE
@@ -50,7 +54,13 @@ GER_man_organization = {
 	include = generic_tank_organization
 	icon = GFX_idea_GER_MAN
 		allowed = {
-			the_axis = yes
+			OR = {
+				tag = GER
+				tag = SPR
+				tag = ITA
+				tag = HUN
+				tag = BUL
+			}
 		}
 	tree_header_text = {
 		text = mio_header_tank_construction
@@ -141,7 +151,13 @@ GER_daimler_benz_organization = {
 	include = generic_mobile_tank_organization
 	icon = GFX_idea_daimler_benz	# TODO change
 	allowed = {
-		tag = GER
+		OR = {
+			tag = GER
+			tag = SPR
+			tag = ROM
+			tag = HUN
+			tag = BUL
+		}
 	}
 	tree_header_text = {
 		text = mio_header_tank_construction
@@ -362,9 +378,6 @@ GER_rheinmetall_organization = {
 		OR = {
 			original_tag = GER
 			original_tag = HUN
-			original_tag = CZE
-			original_tag = YUG
-			original_tag = EFR
 		}
 	}
 	available = {
@@ -392,7 +405,6 @@ GER_mauser_organization = {
 	allowed = {
 		OR = {
 			original_tag = GER
-			original_tag = EFR
 		}
 	}
 }
@@ -404,11 +416,6 @@ GER_opel_organization = {
 		OR = {
 			original_tag = GER
 			original_tag = ROM
-			original_tag = HUN
-			original_tag = CZE
-			original_tag = YUG
-			original_tag = EFR
-			original_tag = AOI
 		}
 	}
 	available = {
