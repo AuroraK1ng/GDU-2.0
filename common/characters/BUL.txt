@@ -144,7 +144,7 @@ characters = {
 				large = "GFX_Portrait_bulgaria_hristo_lukov"
 			}
 			army = {
-				large = "gfx/leaders/BUL/AFRICA_Portrait_Bulgaria_Hristo_Lukov.dds"
+				large = "gfx/leaders/BUL/Portrait_Bulgaria_Hristo_Lukov.tga"
 			}
 		}
 		country_leader = {
@@ -177,7 +177,7 @@ characters = {
 		name = "Hristo Lukov AFRICA"
 		portraits = {
 			army = {
-				large = "gfx/leaders/BUL/Portrait_Bulgaria_Hristo_Lukov.tga"
+				large = "gfx/leaders/BUL/AFRICA_Portrait_Bulgaria_Hristo_Lukov.dds"
 			}
 		}
 		corps_commander = {
@@ -211,6 +211,9 @@ characters = {
 			}
 		}
 		field_marshal = {
+			visible = {
+				has_completed_focus = BUL_invite_german_advisors
+			}
 			traits = {
 				offensive_doctrine
 				brilliant_strategist
@@ -234,6 +237,9 @@ characters = {
 			}
 		}
 		corps_commander = {
+			visible = {
+				has_completed_focus = BUL_invite_german_advisors
+			}
 			traits = {
 				trickster
 				panzer_leader
@@ -1579,6 +1585,7 @@ characters = {
 						has_government = communism
 					}
 					BUL_has_abolished_monarchy = no
+					has_completed_focus = BUL_crush_the_communists
 				}
 				visible = {
 					NOT = {
@@ -1726,7 +1733,7 @@ characters = {
 					original_tag = BUL
 				}
 				available = {
-					has_country_flag = BUL_appointed_bzns_members_flag
+					has_completed_focus = BUL_freedom_of_press
 				}
 				traits = {
 					leader_of_the_agrarian_union
@@ -1845,6 +1852,7 @@ characters = {
 			allowed = {
 				has_dlc = "Battle for the Bosporus"
 				original_tag = BUL
+				has_completed_focus = BUL_limited_womens_suffrage
 			}
 			available = {
 			}
@@ -2184,6 +2192,7 @@ characters = {
 			allowed = {
 				has_dlc = "Battle for the Bosporus"
 				original_tag = BUL
+				has_completed_focus = BUL_corporatism
 			}
 			available = {
 				has_country_flag = BUL_appointed_zveno_members_flag
