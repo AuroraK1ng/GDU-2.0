@@ -5214,11 +5214,10 @@ generic_motorized_mechanized_organization = {
 
 
 generic_armored_car_organization = {
-	icon = GFX_idea_generic_tank_manufacturer_1
+	icon = GFX_idea_FRA_panhard
 
 	allowed = {
-		always = no # Archetype only - countries using it have their own verisons
-		has_dlc = "La Resistance"
+		always = yes
 	}
 
 	equipment_type = { armored_car_equipment }
