@@ -657,15 +657,36 @@ add_equipment_to_stockpile = {
 	producer = SOV
 }
 
+create_equipment_variant = {
+	name = "I-153"
+	type = small_plane_airframe_0
+	modules = {
+		fixed_main_weapon_slot = light_mg_4x
+		engine_type_slot = engine_2_1x
+		special_type_slot_1 = lmg_defense_turret
+	}
+}
+
 add_equipment_to_stockpile = {
-	type = fighter_equipment_0
+	type = small_plane_airframe_0
 	amount = 3000
 	producer = SOV
 }
 
+create_equipment_variant = {
+	name = "Tu 23"
+	type = medium_plane_airframe_1
+	modules = {
+		fixed_main_weapon_slot = medium_bomb_bay
+		engine_type_slot = engine_2_2x
+		special_type_slot_1 = lmg_defense_turret_2x
+		special_type_slot_2 = armor_plate_medium
+	}
+}
+
 add_equipment_to_stockpile = {
-	type = tac_bomber_equipment_1
-	amount = 500
+	type = medium_plane_airframe_1
+	amount = 600
 	producer = SOV
 }
 
@@ -675,14 +696,19 @@ add_equipment_to_stockpile = {
 	producer = SOV
 }
 
-add_equipment_to_stockpile = {
-	type = nav_bomber_equipment_1
-	amount = 100
-	producer = SOV
+create_equipment_variant = {
+	name = "Sh-1"
+	type = small_plane_cas_airframe_1
+	modules = {
+		fixed_main_weapon_slot = armor_piercing_bomb_locks
+		engine_type_slot = engine_2_1x
+		special_type_slot_1 = dive_brakes_small
+		special_type_slot_2 = lmg_defense_turret
+	}
 }
 
 add_equipment_to_stockpile = {
-	type = CAS_equipment_1
+	type = small_plane_cas_airframe_1
 	amount = 500
 	producer = SOV
 }

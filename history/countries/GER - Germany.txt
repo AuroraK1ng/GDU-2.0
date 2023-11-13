@@ -449,14 +449,51 @@ create_equipment_variant = {
 	}
 }
 
+create_equipment_variant = {
+	name = "Grosstraktor"
+	type = heavy_tank_chassis_1
+	modules = {
+		main_armament_slot = tank_heavy_cannon
+		turret_type_slot = tank_heavy_three_man_tank_turret
+		special_type_slot_1 = secondary_turret_small_cannon
+		special_type_slot_2 = additional_machine_guns
+		special_type_slot_3 = dozer_blade
+		suspension_type_slot = tank_bogie_suspension
+		armor_type_slot = tank_welded_armor
+		engine_type_slot = tank_gasoline_engine
+	}
+}
+
+create_equipment_variant = {
+	name = "Bf 109 E"
+	type = small_plane_airframe_1
+	modules = {
+		fixed_main_weapon_slot = heavy_mg_4x
+		engine_type_slot = engine_2_1x
+		special_type_slot_1 = lmg_defense_turret
+		special_type_slot_2 = armor_plate_small
+	}
+}
+
 add_equipment_to_stockpile = {
-	type = fighter_equipment_1
+	type = small_plane_airframe_1
 	amount = 1300
 	producer = GER
 }
 
+create_equipment_variant = {
+	name = "Ju 87 Stuka"
+	type = small_plane_cas_airframe_1
+	modules = {
+		fixed_main_weapon_slot = armor_piercing_bomb_locks
+		engine_type_slot = engine_2_1x
+		special_type_slot_1 = dive_brakes_small
+		special_type_slot_2 = armor_plate_small
+	}
+}
+
 add_equipment_to_stockpile = {
-	type = CAS_equipment_1
+	type = small_plane_cas_airframe_1
 	amount = 600
 	producer = GER
 }
@@ -467,26 +504,50 @@ add_equipment_to_stockpile = {
 	producer = GER
 }
 
-add_equipment_to_stockpile = {
-	type = nav_bomber_equipment_1
-	amount = 50
-	producer = GER
+create_equipment_variant = {
+	name = "Bf 110"
+	type = medium_plane_fighter_airframe_1
+	modules = {
+		fixed_main_weapon_slot = heavy_mg_4x
+		fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+		engine_type_slot = engine_2_2x
+		special_type_slot_1 = lmg_defense_turret_2x
+		special_type_slot_2 = armor_plate_medium
+	}
 }
 
 add_equipment_to_stockpile = {
-	type = heavy_fighter_equipment_1
+	type = medium_plane_fighter_airframe_1
 	amount = 100
 	producer = GER
 }
 
+create_equipment_variant = {
+	name = "Do 23"
+	type = medium_plane_airframe_0
+	modules = {
+		fixed_main_weapon_slot = small_bomb_bay
+		engine_type_slot = engine_2_2x
+	}
+}
+
 add_equipment_to_stockpile = {
-	type = tac_bomber_equipment_0
+	type = medium_plane_airframe_0
 	amount = 500
 	producer = GER
 }
 
+create_equipment_variant = {
+	name = "He 111"
+	type = medium_plane_airframe_1
+	modules = {
+		fixed_main_weapon_slot = medium_bomb_bay
+		engine_type_slot = engine_2_2x
+	}
+}
+
 add_equipment_to_stockpile = {
-	type = tac_bomber_equipment_1
+	type = medium_plane_airframe_1
 	amount = 400
 	producer = GER
 }
@@ -529,7 +590,7 @@ add_equipment_to_stockpile = {
 
 add_equipment_to_stockpile = {
 	type = heavy_tank_chassis_1
-	amount = 10
+	amount = 100
 	producer = GER
 }
 

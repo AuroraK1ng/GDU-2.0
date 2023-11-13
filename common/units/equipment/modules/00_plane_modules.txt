@@ -1072,6 +1072,12 @@ equipment_modules = {
 			weight = 2
 			
 		}
+		allow_mission_type = {
+			cas
+			attack_logistics
+			strategic_bomber
+			port_strike
+		}
 		multiply_stats = {
 			air_attack = 0.3
 		}
@@ -1502,20 +1508,11 @@ equipment_modules = {
 
 		add_stats = {
 			build_cost_ic = 2
+			naval_strike_targetting = 6
+			air_defence = 4
 			weight = 4
 		}
 
-		mission_type_stats = {
-			limit = {
-				cas
-				naval_bomber
-				port_strike
-			}
-			add_stats = {
-				naval_strike_targetting = 6
-				air_defence = 4
-			}
-		}
 		dismantle_cost_ic = 2 #you essentially have to redesign part of the wing
 		xp_cost = 0
 	}

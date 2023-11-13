@@ -501,9 +501,10 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = fighter_equipment_1
-			creator = "GER" 
+			type = small_plane_airframe_1
 			version_name = "Bf 109 E"
+			creator = "GER" 
+		
 		}
 		requested_factories = 30
 		progress = 0.15
@@ -511,7 +512,8 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = CAS_equipment_1
+			type = small_plane_cas_airframe_1
+			version_name = "Ju 87 Stuka"
 			creator = "GER" 
 		}
 		requested_factories = 2
@@ -520,7 +522,8 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = heavy_fighter_equipment_1
+			type = medium_plane_fighter_airframe_1
+			version_name = "Bf 110"
 			creator = "GER" 
 		}
 		requested_factories = 1
