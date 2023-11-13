@@ -15,7 +15,7 @@ generic_tank_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_1
 
 	allowed = {
-		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = CZE tag = ROM tag = HUN } }
+		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = CZE tag = ROM tag = HUN tag = RAJ } }
 		NOT = {
 			AND = {
 				tag = POL
@@ -2511,7 +2511,35 @@ generic_general_aircraft_organization = {
 	icon = GFX_idea_generic_air_manufacturer_1
 
 	allowed = {
-		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = CAN tag = YUG tag = ROM tag = CZE tag = HUN tag = CHI tag = MAN tag = HOL tag = BUL tag = GRE tag = TUR tag = LAT tag = LIT } }
+		NOT = { 
+			OR = { 
+			tag = GER 
+			tag = ENG 
+			tag = SOV 
+			tag = FRA 
+			tag = ITA 
+			tag = JAP 
+			tag = USA 
+			tag = BEL 
+			tag = CAN 
+			tag = YUG 
+			tag = ROM 
+			tag = CZE 
+			tag = HUN 
+			tag = CHI 
+			tag = MAN 
+			tag = HOL 
+			tag = BUL 
+			tag = GRE 
+			tag = TUR 
+			tag = LAT 
+			tag = LIT 
+			tag = RAJ 
+			tag = AST 
+			tag = NZL
+			tag = SAf
+			} 
+		}
 		NOT = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD }
 		NOT = {
 			AND = {
@@ -4950,7 +4978,7 @@ generic_motorized_mechanized_organization = {
 	icon = GFX_idea_generic_motorized_equipment_manufacturer_3
 
 	allowed = {
-		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = CZE tag = ROM tag = MEX tag = RAJ tag = SAF } }
+		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = CZE tag = ROM tag = MEX tag = RAJ tag = SAF tag = NZL} }
 		NOT = {
 			AND = {
 				tag = POL
@@ -5236,10 +5264,12 @@ generic_armored_car_organization = {
 	
 	initial_trait = {
 		name = generic_mio_initial_trait_standardized_production
+		
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
 		equipment_bonus = {
-			armor_value = 0.05
-			defense =0.05
-			build_cost_ic = -0.05
+		
 		}
 	}
 
@@ -5247,9 +5277,11 @@ generic_armored_car_organization = {
 		token = generic_mio_trait_simplified_suspension
 		name = generic_mio_trait_simplified_suspension
 		icon = GFX_generic_mio_trait_icon_reliability
+		
+		mutually_exclusive = { generic_mio_trait_crew_ergonomics }
 
 		equipment_bonus = {
-			reliability = 0.05
+			build_cost_ic = -0.05
 		}
 		position = { x=1 y=0 }
 	}
@@ -5258,11 +5290,12 @@ generic_armored_car_organization = {
 		token = generic_mio_trait_crew_ergonomics
 		name = generic_mio_trait_crew_ergonomics
 		icon = GFX_generic_mio_trait_icon_defense
-
+		
+		mutually_exclusive = { generic_mio_trait_simplified_suspension }
 
 		equipment_bonus = {
-			maximum_speed = 0.02
-			defense = 0.02
+			build_cost_ic = 0.05
+			breakthrough = 0.05
 		}
 		position = { x=4 y=0 }
 		relative_position_id = generic_mio_trait_simplified_suspension
@@ -5275,10 +5308,12 @@ generic_armored_car_organization = {
 		any_parent = { generic_mio_trait_simplified_suspension }
 
 		equipment_bonus = {
-			reliability = 0.05
-			maximum_speed = 0.05
+			build_cost_ic = -0.05
+			breakthrough = -0.05
+			soft_attack = -0.05
+			hard_attack = -0.05
 		}
-		position = { x=0 y=2 }
+		position = { x=0 y=1 }
 		relative_position_id = generic_mio_trait_simplified_suspension
 	}
 
@@ -5290,86 +5325,44 @@ generic_armored_car_organization = {
 
 
 		equipment_bonus = {
-			breakthrough = 0.05
+			maximum_speed = 0.05
+			ap_attack = -0.05
 		}
-		position = { x=0 y=2 }
+		position = { x=-1 y=1 }
 		relative_position_id = generic_mio_trait_crew_ergonomics
-	}
-	
-	trait = {
-		token = generic_mio_trait_standardized_components
-		name = generic_mio_trait_standardized_components
-		icon = GFX_generic_mio_department_icon_armored_car_line_efficiency
-		all_parents = { generic_mio_trait_simplified_suspension generic_mio_trait_crew_ergonomics }
-
-
-		position = { x=2 y=1 }
-		relative_position_id = generic_mio_trait_simplified_suspension
-
-		production_bonus = {
-			production_efficiency_gain_factor = 0.15
-			production_resource_need_factor = -0.15
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_improved_tooling
-		name = generic_mio_trait_improved_tooling
-		icon = GFX_generic_mio_department_icon_armored_car_technology
-
-		all_parents = { generic_mio_trait_reinforced_wheels generic_mio_trait_command_upgrades }
-
-		position = { x=2 y=2 }
-		relative_position_id = generic_mio_trait_reinforced_wheels
-
-		production_bonus = {
-			production_efficiency_cap_factor = 0.1
-		}
 	}
 
 	trait = {
 		token = generic_mio_trait_mass_production
 		name = generic_mio_trait_mass_production
 		icon = GFX_generic_mio_department_icon_armored_car_production
-		any_parent = { generic_mio_trait_improved_tooling }
-		mutually_exclusive = { generic_mio_trait_quality_improvements }
+		any_parent = { generic_mio_trait_reinforced_wheels }
 
-		position = { x=-1 y=1 }
-		relative_position_id = generic_mio_trait_improved_tooling
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_reinforced_wheels
 
-		production_bonus = {
-			production_cost_factor = -0.05
-			production_efficiency_gain_factor = 0.1
+		equipment_bonus = {
+			build_cost_ic = -0.05
+			breakthrough = -0.05
+			soft_attack = -0.05
+			hard_attack = -0.05
 		}
 	}
 
 	trait = {
 		token = generic_mio_trait_quality_improvements
 		name = generic_mio_trait_quality_improvements
-		icon = GFX_generic_mio_department_icon_tank_general_armor
-		any_parent = { generic_mio_trait_improved_tooling }
-		mutually_exclusive = { generic_mio_trait_mass_production}
-
-		position = { x=1 y=1 }
-		relative_position_id = generic_mio_trait_improved_tooling
-
-		equipment_bonus = {
-			armor_value = 0.1
-			defense = 0.1
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_defensive_equipment
-		name = generic_mio_trait_defensive_equipment
 		icon = GFX_generic_mio_trait_icon_soft_attack
+		any_parent = { generic_mio_trait_command_upgrades }
+		
+		mutually_exclusive = { generic_mio_trait_heavy_anti_tank_gun }
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_command_upgrades
 
 		equipment_bonus = {
-			soft_attack = 0.02
-			defense = 0.02
+			soft_attack = 0.1
 		}
-		position = { x=2 y=0 }
-		relative_position_id = generic_mio_trait_crew_ergonomics
 	}
 
 	trait = {
@@ -5377,14 +5370,14 @@ generic_armored_car_organization = {
 		name = generic_mio_trait_long_barreled_guns
 		icon = GFX_generic_mio_department_icon_armored_car_offense
 
-		all_parents = { generic_mio_trait_crew_ergonomics generic_mio_trait_defensive_equipment }
+		all_parents = { generic_mio_trait_crew_ergonomics }
 
-		position = { x=0 y=2 }
-		relative_position_id = generic_mio_trait_defensive_equipment
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_crew_ergonomics
 
 		equipment_bonus = {
-			ap_attack = 0.05
-			hard_attack = 0.05
+			ap_attack = -0.05
+			reliability = 0.05
 		}
 	}
 
@@ -5393,30 +5386,14 @@ generic_armored_car_organization = {
 		name = generic_mio_trait_heavy_anti_tank_gun
 		icon = GFX_generic_mio_trait_icon_hard_attack
 		any_parent = { generic_mio_trait_long_barreled_guns }
-		mutually_exclusive = { generic_mio_trait_officer_support_car }
+		
+		mutually_exclusive = { generic_mio_trait_quality_improvements }
 
-		position = { x=-1 y=2 }
+		position = { x=0 y=1 }
 		relative_position_id = generic_mio_trait_long_barreled_guns
 
 		equipment_bonus = {
-			armor_value = 0.05
-			hard_attack = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_officer_support_car
-		name = generic_mio_trait_officer_support_car
-		icon = GFX_generic_mio_trait_icon_soft_attack
-		any_parent = { generic_mio_trait_long_barreled_guns }
-		mutually_exclusive = { generic_mio_trait_heavy_anti_tank_gun }
-
-		position = { x=1 y=2 }
-		relative_position_id = generic_mio_trait_long_barreled_guns
-
-		equipment_bonus = {
-			soft_attack = 0.05
-			build_cost_ic = -0.03
+			hard_attack = 0.1
 		}
 	}
 }

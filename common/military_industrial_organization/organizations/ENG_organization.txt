@@ -14,10 +14,11 @@ ENG_vickers_armstrong_eng_organization = {
 	allowed = {	
 		OR = {
 			tag = ENG 
-			AND = {
-				tag = GRE
-				has_dlc = "Battle for the Bosporus"
-			}
+			tag = CAN
+			tag = RAJ
+			tag = AST
+			tag = NZL
+			tag = SAF
 		}
 	}
 	
@@ -93,15 +94,12 @@ ENG_vauxhall_organization = {
 
 	allowed = {	
 		OR = {
-			tag = ENG
+			tag = ENG 
+			tag = CAN
 			tag = RAJ
-			AND = {
-				tag = POL # If Poland sets up a local one
-				OR = {
-					has_dlc = "Poland: United and Ready"
-					has_dlc = "No Step Back"
-				}
-			}
+			tag = AST
+			tag = NZL
+			tag = SAF
 		}
 	}
 
@@ -182,7 +180,10 @@ ENG_yarrow_shipbuilders_organization = {
 	icon = GFX_idea_yarrow_shipbuilders
 	
 	allowed = {	
-		tag = ENG 
+		OR = {
+			tag = ENG 
+			tag = SAF
+		} 
 	}
 	
 }
@@ -191,7 +192,13 @@ ENG_john_brown_organization = {
 	icon = GFX_idea_john_brown_company
 	
 	allowed = {	
-		tag = ENG
+		OR = {
+			tag = ENG 
+			tag = CAN
+			tag = AST
+			tag = NZL
+			tag = SAF
+		}
 	}
 }
 
@@ -276,8 +283,13 @@ ENG_hawker_organization = {
 	include = generic_medium_aircraft_organization
 	icon = GFX_idea_hawker
 	allowed = {	
-		tag = ENG
-		has_dlc = "Arms Against Tyranny"
+		OR = {
+			tag = ENG 
+			tag = RAJ
+			tag = AST
+			tag = NZL
+			tag = SAF
+		}
 	}
 	
 	add_trait = { 
@@ -321,9 +333,12 @@ ENG_de_havilland_organization = {
 	include = generic_multi_role_aircraft_organization
 	icon = GFX_idea_de_havilland
 	allowed = {	
-		has_dlc = "Arms Against Tyranny"
 		OR = {
-			tag = ENG		
+			tag = ENG 
+			tag = RAJ
+			tag = AST
+			tag = NZL
+			tag = SAF
 		}
 	}
 
@@ -343,7 +358,13 @@ ENG_fairey_aviation_organization = {
 	icon = GFX_idea_fairey_aviation
 	
 	allowed = {	
-		tag = ENG 
+		OR = {
+			tag = ENG 
+			tag = RAJ
+			tag = AST
+			tag = NZL
+			tag = SAF
+		}
 	}
 	
 	remove_trait = { generic_mio_trait_patrol_fuel_tanks generic_mio_trait_internal_torpedo_mountings generic_mio_agility_wing_design generic_mio_strength_wing_design generic_mio_air_cooled_engines }
@@ -381,14 +402,19 @@ ENG_fairey_aviation_organization = {
 			naval_strike_attack = 0.05
 		}
 	}
-
 }
 
 ENG_avro_organization = {
 	include = generic_heavy_aircraft_organization
 	icon = GFX_idea_avro
 	allowed = {	
-		tag = ENG
+		OR = {
+			tag = ENG 
+			tag = RAJ
+			tag = AST
+			tag = NZL
+			tag = SAF			
+		}
 	}
 }
 
@@ -423,11 +449,9 @@ ENG_vauxhall_automotive_organization = {
 	
 	allowed = {	
 		OR = {
-			original_tag = CAN
 			original_tag = ENG
 			original_tag = RAJ
 			original_tag = SAF
-			original_tag = AST
 		}
 	}
 	
@@ -435,11 +459,6 @@ ENG_vauxhall_automotive_organization = {
 
 	}
 	
-	initial_trait = {
-		equipment_bonus = {
-			maximum_speed = 0.05
-		}
-	}
 }
 
 ENG_royal_arsenal_organization = {
@@ -449,8 +468,6 @@ ENG_royal_arsenal_organization = {
 			OR = { 
 			original_tag = ENG 
 			original_tag = NZL 
-			original_tag = AST 
-			original_tag = CAN 
 			original_tag = SAF
 		}
 	}

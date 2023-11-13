@@ -16,6 +16,44 @@ AST_new_south_wales_rc_organization = {
 		original_TAG = AST
 		has_dlc = "Together for Victory"
 	}
+	
+	remove_trait = { 
+		generic_mio_trait_improved_boogies
+		generic_mio_engine_optimization
+		generic_mio_reduced_fuel_usage
+		generic_mio_sloping_armor
+		generic_mio_lighter_materials
+		generic_mio_armor_hardening_process
+		generic_mio_quality_assurance_routines
+		generic_mio_streamlined_production
+	}
+	
+	add_trait = {
+		token = USA_mio_trait_strict_design_specifications
+		name = USA_mio_trait_strict_design_specifications
+		icon = GFX_generic_mio_trait_icon_reliability
+		special_trait_background = yes
+		position = {
+			x = 0
+			y = 0
+		}
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+	add_trait = {
+		token = USA_mio_trait_expanded_production_facilities
+		name = USA_mio_trait_expanded_production_facilities
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		special_trait_background = yes
+		position = {
+			x = 0
+			y = 1
+		}
+		equipment_bonus = {
+			maximum_speed = 0.05
+		}
+	}
 }
 
 #####################
@@ -30,14 +68,11 @@ AST_new_south_wales_rc_organization = {
 
 AST_cockatoo_doe_organization = {
 	name = AST_cockatoo_doe_organization
-	include = generic_raider_ship_organization
+	include = generic_escort_ship_organization
 	icon = GFX_idea_Cockatoo_doe
 	allowed = {
 		original_TAG = AST
 		has_dlc = "Together for Victory"
-	}
-	available = {
-		owner = { has_completed_focus = AST_cockatoo_island_shipyards}
 	}
 }
 AST_evans_deakin_co_organization = {
@@ -47,9 +82,6 @@ AST_evans_deakin_co_organization = {
 	allowed = {
 		original_TAG = AST
 		has_dlc = "Together for Victory"
-	}
-	available = {
-		owner = { has_completed_focus = AST_cockatoo_island_shipyards}
 	}
 }
 
@@ -69,8 +101,10 @@ AST_com_aircraft_corporation_organization = {
  	include = generic_light_aircraft_organization
  	icon = GFX_idea_com_aircraft_corporation
  	allowed = {
- 		original_TAG = AST
-		has_dlc = "Together for Victory"
+		OR = {
+			original_TAG = AST
+			has_dlc = "Together for Victory"
+		}
 	}
  	available = {
 
