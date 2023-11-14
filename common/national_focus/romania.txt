@@ -511,7 +511,7 @@
 	}
 	focus = {
 		id = ROM_indust_2_1
-		text = "Development of aluminum deposits"
+		text = "Development of Aluminium Deposits"
 		icon = GFX_romania_infra
 		prerequisite = { focus = ROM_danubian_transport_network }
 		x = 2
@@ -685,8 +685,8 @@
 				}
 				set_state_flag = ROM_invest_in_the_iar_AF1
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = ROM_iar
+			#custom_effect_tooltip = available_designer
+			#show_ideas_tooltip = ROM_iar
 		}
 	}
 
@@ -1352,13 +1352,14 @@
 
 	focus = {
 		id = ROM_cas
+		text = "Romanian CAS"
 		icon = GFX_goal_generic_CAS
-		prerequisite = { focus = ROM_air_superiority }
-		x = 1
+		prerequisite = { focus = ROM_strategic_bomber_force }
+		x = 2
 		y = 1
 		relative_position_id = ROM_air_superiority
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1395,7 +1396,7 @@
 		id = ROM_iar_80
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = ROM_air_superiority }
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = ROM_air_superiority
 
@@ -1443,11 +1444,11 @@
 		icon = GFX_ROM_industrial3
 		prerequisite = { focus = ROM_iar_80 }
 		prerequisite = { focus = ROM_cas }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = ROM_iar_80
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 9
@@ -1471,7 +1472,7 @@
 
 		completion_reward = {
 			46 = {
-				add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
 					level = 3
@@ -1488,7 +1489,7 @@
 		y = 1
 		relative_position_id = ROM_local_development
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -1523,11 +1524,12 @@
 
 	focus = {
 		id = ROM_heavy_bombers
-		text = "Heavy Bombers factory"
+		text = "Heavy Bombers Factories"
 		icon = GFX_goal_generic_air_bomber
-		prerequisite = { focus = ROM_strategic_bomber_force }
-		x = 1
-		y = 1
+		prerequisite = { focus = ROM_iar_80 }
+		prerequisite = { focus = ROM_cas }
+		x = 0
+		y = 2
 		relative_position_id = ROM_strategic_bomber_force
 
 		cost = 10
@@ -1557,7 +1559,7 @@
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -1798,7 +1800,7 @@
 			hidden_effect = { set_technology = { mountain_gun = 1 } }
 		}
 	}
-		focus = {
+	focus = {
 		id = ROM_Resita_art
 		icon = GFX_goal_generic_army_artillery2
 		Text = "Resita Artillery" 
@@ -1814,8 +1816,8 @@
 			factor = 1
 		}
 		available = {
-				date > 1941.3.1
-				}
+			date > 1941.3.1
+		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -1825,7 +1827,7 @@
 		}
 
 		completion_reward = {
-		add_ideas = ROM_Resita_art
+			add_ideas = ROM_Resita_art
 		}
 	}
 
@@ -1858,9 +1860,9 @@
 				
 	}
 	focus = {
-		id = ROM_army_1
+		id = ROM_ITA_Weapons
 		icon = GFX_focus_ITA_stato_maggiore_italiano
-		text = "Purchase of Italian weapons"
+		text = "Purchase of Italian Weapons"
 		x = -2
 		y = 1
 		prerequisite = { focus = ROM_royal_guards_divisions }
@@ -1899,14 +1901,14 @@
 		}
 	}
 	focus = {
-		id = ROM_army_2
+		id = ROM_New_Weapons
 		icon = GFX_ROM_army
-		Text = "Weapon improvements"
+		Text = "Weapons Improvements"
 		x = 2
 		y = 1
-		prerequisite = { focus = ROM_army_1 }
+		prerequisite = { focus = ROM_ITA_Weapons }
 		cost = 5
-		relative_position_id = ROM_army_1
+		relative_position_id = ROM_ITA_Weapons
 		ai_will_do = {
 			factor = 9
 		}
@@ -1931,14 +1933,14 @@
 		}
 	}
 	focus = {
-		id = ROM_army_3
+		id = ROM_Gen_Rearmament
 		icon = GFX_ROM_industrial3
 		text = "Rearmament of the army"
 		x = 0
 		y = 1
-		prerequisite = { focus = ROM_army_1 }
+		prerequisite = { focus = ROM_ITA_Weapons }
 		cost = 10
-		relative_position_id = ROM_army_1
+		relative_position_id = ROM_ITA_Weapons
 		ai_will_do = {
 			factor = 9
 		}
@@ -1966,9 +1968,9 @@
 		}
 	}
 	focus = {
-		id = ROM_army_4
+		id = ROM_Wargames
 		icon = GFX_ROM_axis
-		text = "Wargames with Axis"
+		text = "Axis Wargames"
 		x = 0
 		y = 1
 		prerequisite = { focus = ROM_royal_guards_divisions }
@@ -1996,14 +1998,16 @@
 		}
 	}
 	focus = {
-		id = ROM_army_5
+		id = ROM_Military_Industry
 		icon = GFX_ROM_industrial4
-		text = "Military industry"
+		text = "Military Industry"
 		x = 1
 		y = 1
-		prerequisite = { focus = ROM_army_3 focus = ROM_army_2 }
-		cost = 5
-		relative_position_id = ROM_army_3
+		prerequisite = { focus = ROM_Gen_Rearmament }
+		prerequisite = { focus = ROM_New_Weapons }
+		prerequisite = { focus = ROM_the_maresal }
+		cost = 10
+		relative_position_id = ROM_Gen_Rearmament
 		ai_will_do = {
 			factor = 9
 		}
@@ -2021,7 +2025,7 @@
 				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 5
 					instant_build = yes
 				}
 			}
@@ -2062,7 +2066,7 @@
 		id = ROM_acquire_modern_tanks
 		icon = GFX_ger_achtung_panzer
 		prerequisite = { focus = ROM_the_maresal 	}
-		prerequisite = { focus = ROM_army_2	}
+		prerequisite = { focus = ROM_New_Weapons	}
 		x = 2
 		y = 3
 		relative_position_id = ROM_royal_guards_divisions
@@ -2083,34 +2087,6 @@
 
 		completion_reward = {
 			add_ideas = ROM_acquire_modern_tanks
-		}
-	}
-
-	focus = {
-		id = ROM_mobile_tank_destroyers
-		icon = GFX_goal_generic_build_tank
-		prerequisite = { focus = ROM_acquire_modern_tanks }
-		x = 0
-		y = 1
-		relative_position_id = ROM_acquire_modern_tanks
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 9
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = ROM_leonidas_works
 		}
 	}
 
@@ -2647,21 +2623,20 @@
 
 
 		completion_reward = {
-		82 = {
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
+			82 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
 				}
-		add_ideas = ROM_Totalen_Krieg
-			
+			}
+			add_ideas = HUN_Totalen_Krieg			
 		}
 	}
 	focus = {
-		id = ROM_Test_2_1
-		text = "Weapons for the front"
+		id = ROM_Mosin_Weapons
+		text = "Weapons for the East"
 		icon = GFX_ROM_weapons
 		prerequisite = { focus = ROM_Test }
 		relative_position_id = ROM_Test
@@ -2690,8 +2665,8 @@
 		}
 	}
 	focus = {
-		id = ROM_Test_2
-		Text = "Lessons from Greece"
+		id = ROM_GRE_War
+		Text = "Lessons of Greek War"
 		icon = GFX_ROM_standing
 		prerequisite = { focus = ROM_Test }
 		relative_position_id = ROM_Test
@@ -2717,8 +2692,8 @@
 		}
 	}
 	focus = {
-		id = ROM_Test_3
-		text = "Revanchism"
+		id = ROM_East_Revanchism
+		text = "Romanian Revanchism"
 		icon = GFX_focus_ger_bulwark_against_bolshevism
 		prerequisite = { focus = ROM_Test }
 		relative_position_id = ROM_Test
@@ -2748,17 +2723,17 @@
 		}
 	}
 	focus = {
-		id = ROM_Test_4
-		text = "Ostarbeiters "
+		id = ROM_Ostarbeiters
+		text = "Ostarbeiters"
 		icon = GFX_ROM_industrial
-		prerequisite = { focus = ROM_Test_2 }
-		prerequisite = { focus = ROM_Test_2_1 }
-		prerequisite = { focus = ROM_Test_3 }
-		relative_position_id = ROM_Test_3
+		prerequisite = { focus = ROM_GRE_War }
+		prerequisite = { focus = ROM_Mosin_Weapons }
+		prerequisite = { focus = ROM_East_Revanchism }
+		relative_position_id = ROM_East_Revanchism
 		x = 1
 		y = 1
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 90
@@ -2803,13 +2778,13 @@
 		}
 	}
 	focus = {
-		id = Rom_war_in_the_east
+		id = ROM_Barb_War
 		Text = "War in the East"
 		icon = GFX_ROM_army
-		prerequisite = { focus = ROM_Test_3 }
+		prerequisite = { focus = ROM_East_Revanchism }
 		x = -1
 		y = 1
-		relative_position_id = ROM_Test_3
+		relative_position_id = ROM_East_Revanchism
 		cost = 5
 
 		available = {
@@ -2823,14 +2798,14 @@
 		}
 	}
 	focus = {
-		id = Rom_Test_5_2
-		Text = "Experience of war with the Soviets"
+		id = ROM_Commi_War
+		Text = "Lessons of Barbarossa"
 		icon = GFX_ger_achtung_panzer
-		prerequisite = { focus = ROM_Test_4 } 
-		prerequisite = { focus = Rom_war_in_the_east }
+		prerequisite = { focus = ROM_Ostarbeiters } 
+		prerequisite = { focus = ROM_Barb_War }
 		x = 1
 		y = 1
-		relative_position_id = Rom_war_in_the_east
+		relative_position_id = ROM_Barb_War
 		cost = 5
 
 		available = {
@@ -2852,17 +2827,17 @@
 	}
 	
 	focus = {
-		id = ROM_Test_4_1
-		text = "Italian investments "
+		id = ROM_Italian_Investors
+		text = "Italian Investments"
 		icon = GFX_romania_infra
-		prerequisite = { focus = ROM_Test_2 }
-		prerequisite = { focus = ROM_Test_2_1 }
-		prerequisite = { focus = ROM_Test_3 }
-		relative_position_id = ROM_Test_3
+		prerequisite = { focus = ROM_GRE_War }
+		prerequisite = { focus = ROM_Mosin_Weapons }
+		prerequisite = { focus = ROM_East_Revanchism }
+		relative_position_id = ROM_East_Revanchism
 		x = 3
 		y = 1
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 90
@@ -2882,24 +2857,23 @@
 
 		completion_reward = {
 		add_offsite_building = { type = dockyard level = 2 }
-		163 = {
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
+			163 = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
 				}
-			
+			}			
 		}
 	}
 	focus = {
-		id = ROM_Test_4_3
-		text = "Expand production"
+		id = ROM_Production_Fixer
+		text = "Expand Production"
 		icon = GFX_ROM_industrial3
-		prerequisite = { focus = ROM_Test_4_1 }
-		prerequisite = { focus = ROM_Test_4_2 }
-		relative_position_id = ROM_Test_4_1
+		prerequisite = { focus = ROM_Italian_Investors }
+		prerequisite = { focus = ROM_Autarky1 }
+		relative_position_id = ROM_Italian_Investors
 		x = 1
 		y = 1
 
@@ -2922,19 +2896,19 @@
 
 
 		completion_reward = {
-		add_Ideas = Expand_production
+			add_ideas = Expand_production
 		}
 	}
 	focus = {
-		id = ROM_Test_4_2
-		text = "Own enterprises"
+		id = ROM_Autarky1
+		text = "Own Enterprise"
 		icon = GFX_ROM_industrial2
-		prerequisite = { focus = ROM_Test_2_1 }
-		relative_position_id = ROM_Test_2_1
+		prerequisite = { focus = ROM_Mosin_Weapons }
+		relative_position_id = ROM_Mosin_Weapons
 		x = 1
 		y = 1
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 90
@@ -2959,12 +2933,12 @@
 		}
 	}
 	focus = {
-		id = ROM_Test_5
-		Text = "Marine brigades"
+		id = ROM_Expand_Marines_Corps
+		Text = "Marine Brigades"
 		icon = GFX_Generic_German_Soldiers2
-		prerequisite = { focus = ROM_Test_4 }
-		prerequisite = { focus = ROM_Test_4_1 }
-		relative_position_id = ROM_Test_4
+		prerequisite = { focus = ROM_Ostarbeiters }
+		prerequisite = { focus = ROM_Italian_Investors }
+		relative_position_id = ROM_Ostarbeiters
 		x = 1
 		y = 1
 
@@ -3002,11 +2976,11 @@
 		}
 	}
 	focus = {
-		id = ROM_Test_5_1
-		Text = "Dominance in Black Sea"
+		id = ROM_Black_Sea_Dominance
+		Text = "Black Sea Dominance"
 		icon = GFX_battleship_ger1
-		prerequisite = { focus = ROM_Test_5 }
-		relative_position_id = ROM_Test_5
+		prerequisite = { focus = ROM_Expand_Marines_Corps }
+		relative_position_id = ROM_Expand_Marines_Corps
 		x = 0
 		y = 1
 
@@ -3029,12 +3003,12 @@
 		}
 	}
 	focus = {
-		id = ROM_Test_6
-		Text = "Own power"
+		id = ROM_Autarky2
+		Text = "Romanian Autarky"
 		icon = GFX_focus_rom_preserve_romania
-		prerequisite = { focus = ROM_Test_5 }
-		relative_position_id = ROM_Test_5
-		mutually_exclusive = { focus = ROM_Test_7 }
+		prerequisite = { focus = ROM_Expand_Marines_Corps }
+		relative_position_id = ROM_Expand_Marines_Corps
+		mutually_exclusive = { focus = ROM_Axis_Support }
 		x = 1
 		y = 2
 
@@ -3055,23 +3029,22 @@
 
 		completion_reward = {
 		79 = {
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = arms_factory
-						level = 3
-						instant_build = yes
-					}
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = arms_factory
+					level = 3
+					instant_build = yes
 				}
-			
+			}		
 		}
 	}
 	focus = {
-		id = ROM_Test_7
-		Text = "Axis support"
+		id = ROM_Axis_Support
+		Text = "Axis Support"
 		icon = GFX_European_Axis
-		prerequisite = { focus = ROM_Test_5 }
-		relative_position_id = ROM_Test_5
-		mutually_exclusive = { focus = ROM_Test_6 }
+		prerequisite = { focus = ROM_Expand_Marines_Corps }
+		relative_position_id = ROM_Expand_Marines_Corps
+		mutually_exclusive = { focus = ROM_Autarky2 }
 		x = -1
 		y = 2
 
@@ -3091,41 +3064,41 @@
 
 
 		completion_reward = {
-		82 = {
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
+			82 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
-		39 = {
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
+			}
+			39 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
-		75 = {
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
+			}
+			75 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
+			}
 			
 		}
 	}
 	focus = {
-		id = ROM_Test_8
-		text = "In the shadow"
+		id = ROM_Axis_Shadow
+		text = "In the Shadows"
 		icon = GFX_ROM_axis
-		prerequisite = { focus = ROM_Test_7 }
+		prerequisite = { focus = ROM_Axis_Support }
 		x = 0
 		y = 1
-		relative_position_id = ROM_Test_7
+		relative_position_id = ROM_Axis_Support
 
 		cost = 5
 
@@ -3142,34 +3115,32 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-
-		153 = {
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = arms_factory
-						level = 3
-						instant_build = yes
-					}
+			153 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
 				}
-		736 = {
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = arms_factory
-						level = 3
-						instant_build = yes
-					}
+			}
+			736 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
 				}
-			
+			}			
 		}
 	}
 	focus = {
-		id = ROM_Test_9
-		text = "Spread wings"
+		id = ROM_Spread_Wings
+		text = "Spreading Wings"
 		icon = GFX_ROM_industrial4
-		prerequisite = { focus = ROM_Test_6 }
+		prerequisite = { focus = ROM_Autarky2 }
 		x = 0
 		y = 1
-		relative_position_id = ROM_Test_6
+		relative_position_id = ROM_Autarky2
 
 		cost = 5
 
@@ -3192,15 +3163,14 @@
 		completion_reward = {
 			army_experience = 100
 			81 = {
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = arms_factory
-						level = 3
-						instant_build = yes
-					}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
 				}
-				add_ideas = ROM_Spread_wings
-			
+			}
+			add_ideas = HUN_Spread_wings			
 		}
 	}
 

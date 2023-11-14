@@ -29,7 +29,7 @@ ideas = {
 			}
 			
 			modifier = {
-				consumer_goods_factor = -0.025
+				consumer_goods_expected_value = -0.025
 				industrial_capacity_factory = 0.025
 				stability_factor = 0.10
 				production_speed_buildings_factor = 0.1
@@ -106,7 +106,7 @@ ideas = {
 			}
 		}
 		Rom_Guards = {
-		picture = Waffen_SS
+			picture = Waffen_SS
 			allowed = {
 				always = no
 			}
@@ -116,8 +116,6 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
-
 
          	modifier = {
                 army_attack_factor = 0.05
@@ -129,30 +127,27 @@ ideas = {
 
 			}
 
-
 			removal_cost = -1
-
 			picture = generic_wall_line
-
 
 			equipment_bonus = {	
 				anti_air_equipment = {
 					instant = yes
-					build_cost_ic = -0.15
+					build_cost_ic = -0.1
 				}
 				anti_tank_equipment = {
 					instant = yes
-					build_cost_ic = -0.15
+					build_cost_ic = -0.1
 				}
 				artillery_equipment  = {
-					build_cost_ic = -0.15
+					build_cost_ic = -0.1
 					instant = yes
 				}
 				rocket_artillery_equipment  = {
-					build_cost_ic = -0.15
+					build_cost_ic = -0.1
 					instant = yes
 				}
-				}
+			}
 				
 		}
 		ROM_romanian_volunteer_brigades = {
@@ -689,7 +684,12 @@ ideas = {
 			}
 
 			equipment_bonus = {
-
+				ship_hull_cruiser = { #If you change this - Change the custom tooltip too: ROM_coastal_defense_ships_tech_tt
+					armor_value = 0.05
+					lg_attack = 0.05
+					build_cost_ic = -0.05
+					instant = yes
+				}
 			}
 		}
 
@@ -709,14 +709,15 @@ ideas = {
 
 			equipment_bonus = {
 				ship_hull_cruiser = { #If you change this - Change the custom tooltip too: ROM_coastal_defense_ships_tech_tt
-					armor_value = 0.2
-					lg_attack = 0.1
-					build_cost_ic = -0.1
+					armor_value = 0.05
+					lg_attack = 0.05
+					build_cost_ic = -0.05
 					instant = yes
 				}
 
 				ship_hull_light = { #If you change this - Change the custom tooltip too: ROM_coastal_defense_ships_tech_tt
-					torpedo_attack = 0.2
+					torpedo_attack = 0.05
+					build_cost_ic = -0.05
 					instant = yes
 				}
 			}

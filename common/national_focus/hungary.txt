@@ -2263,8 +2263,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HUN_Test
-		text = "Totalen Krieg"
+		id = HUN_Total_War
+		text = "Hungarian Totalen Krieg"
 		icon = GFX_GER_total_war
 		x = 23
 		y = 0
@@ -2305,11 +2305,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HUN_Test_2
-		Text = "Lessons from Yugoslavia"
+		id = HUN_Yug_Lessons
+		Text = "Lessons of Yugoslavian War"
 		icon = GFX_HUN_defense
-		prerequisite = { focus = HUN_Test }
-		relative_position_id = HUN_Test
+		prerequisite = { focus = HUN_Total_War }
+		relative_position_id = HUN_Total_War
 		x = 1
 		y = 1
 
@@ -2328,15 +2328,15 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-		add_ideas = HUN_war_Yugo
+			add_ideas = HUN_war_Yugo
 		}
 	}
 	focus = {
-		id = HUN_Test_3
-		text = "War against communism"
+		id = HUN_Eastern_War_Ussr
+		text = "Strike the Commies!"
 		icon = GFX_GER_czech
-		prerequisite = { focus = HUN_Test }
-		relative_position_id = HUN_Test
+		prerequisite = { focus = HUN_Total_War }
+		relative_position_id = HUN_Total_War
 		x = -1
 		y = 1
 
@@ -2359,20 +2359,20 @@ focus_tree = {
 
 
 		completion_reward = {
-			add_ideas = HUN_war_with_commi
+			add_ideas = HUN_war_commi
 		}
 	}
 	focus = {
-		id = HUN_Test_4
+		id = HUN_Ostarbeiters
 		text = "Ostarbeiters "
 		icon = GFX_HUN_rural
-		prerequisite = { focus = HUN_Test_2 }
-		prerequisite = { focus = HUN_Test_3 }
-		relative_position_id = HUN_Test_3
+		prerequisite = { focus = HUN_Yug_Lessons }
+		prerequisite = { focus = HUN_Eastern_War_Ussr }
+		relative_position_id = HUN_Eastern_War_Ussr
 		x = 1
 		y = 1
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 90
@@ -2417,11 +2417,11 @@ focus_tree = {
 		}
 	}
 		focus = {
-		id = HUN_Test_5
+		id = HUN_Assault_Brigades
 		Text = "Assault brigades"
 		icon = GFX_HUN_infantry
-		prerequisite = { focus = HUN_Test_4 }
-		relative_position_id = HUN_Test_4
+		prerequisite = { focus = HUN_Ostarbeiters }
+		relative_position_id = HUN_Ostarbeiters
 		x = 0
 		y = 1
 
@@ -2454,11 +2454,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HUN_Test_5_1
+		id = HUN_Autarky_2
 		Text = "Everything for Hungary"
 		icon = GFX_Noras_economicintervention
-		prerequisite = { focus = HUN_Test_4 }
-		relative_position_id = HUN_Test_4
+		prerequisite = { focus = HUN_Ostarbeiters }
+		relative_position_id = HUN_Ostarbeiters
 		x = 2
 		y = 1
 
@@ -2479,21 +2479,22 @@ focus_tree = {
 
 
 		completion_reward = {
-		664 = { add_extra_state_shared_building_slots = 3
+			664 = { 
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
-				}
+			}
 		}
 	}
 	focus = {
-		id = HUN_Test_5_2
-		Text = "Army Reform"
+		id = HUN_Eastern_Reforms
+		Text = "Lessons of Barbarossa"
 		icon = GFX_Noras_hungarianwargames
-		prerequisite = { focus = HUN_Test_4 }
-		relative_position_id = HUN_Test_4
+		prerequisite = { focus = HUN_Ostarbeiters }
+		relative_position_id = HUN_Ostarbeiters
 		x = -2
 		y = 1
 
@@ -2513,20 +2514,20 @@ focus_tree = {
 
 
 		completion_reward = {
-		 add_ideas = HUN_ref_arm
+			add_ideas = HUN_ref_arm
 		}
 	}
 	focus = {
-		id = HUN_Test_6
-		Text = "Own power"
+		id = HUN_Autarky1
+		Text = "Hungarian Autarky"
 		icon = GFX_HUN_greater_hungary
-		prerequisite = { focus = HUN_Test_5 }
-		relative_position_id = HUN_Test_5
-		mutually_exclusive = { focus = HUN_Test_7 }
+		prerequisite = { focus = HUN_Assault_Brigades }
+		relative_position_id = HUN_Assault_Brigades
+		mutually_exclusive = { focus = HUN_Axis_Support }
 		x = 1
 		y = 1
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 90
@@ -2554,16 +2555,16 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HUN_Test_7
-		Text = "Axis support"
+		id = HUN_Axis_Support
+		Text = "Axis Support"
 		icon = GFX_European_Axis
-		prerequisite = { focus = HUN_Test_5 }
-		relative_position_id = HUN_Test_5
-		mutually_exclusive = { focus = HUN_Test_6 }
+		prerequisite = { focus = HUN_Assault_Brigades }
+		relative_position_id = HUN_Assault_Brigades
+		mutually_exclusive = { focus = HUN_Autarky1 }
 		x = -1
 		y = 1
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 90
@@ -2579,43 +2580,42 @@ focus_tree = {
 
 
 		completion_reward = {
-		43 = {
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
+			43 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
-		39 = {
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
+			}
+			39 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
-		50 = {
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
+			}
+			50 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
-			
+			}		
 		}
 	}
 	focus = {
-		id = HUN_Test_8
-		text = "In the shadow"
+		id = HUN_Axis_Shadow
+		text = "In the Shadows"
 		icon = GFX_HUN_germany
-		prerequisite = { focus = HUN_Test_7 }
+		prerequisite = { focus = HUN_Axis_Support }
 		x = 0
 		y = 1
-		relative_position_id = HUN_Test_7
+		relative_position_id = HUN_Axis_Support
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 80
@@ -2651,15 +2651,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HUN_Test_9
-		text = "Spread wings"
+		id = HUN_Spread_Wings
+		text = "Spreading Wings"
 		icon = GFX_HUN_army
-		prerequisite = { focus = HUN_Test_6 }
+		prerequisite = { focus = HUN_Autarky1 }
 		x = 0
 		y = 1
-		relative_position_id = HUN_Test_6
+		relative_position_id = HUN_Autarky1
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 60
