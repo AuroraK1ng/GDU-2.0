@@ -19,201 +19,19 @@ focus_tree = {
 
 	default = no
 
-	continuous_focus_position = { x = 50 y = 1300 }
+	continuous_focus_position = { x = 50 y = 1000 }
 
 
 	############################
 	####### ARMY SECTION #######
 	############################
-	focus = {
-		id = AST_army
-		Text = "Memories of Gallipoli"
-		icon = GFX_AST_Gallipoli
-		x = 2
-		y = 0
 
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = yes
-
-		completion_reward = {
-			army_experience = 50
-		add_tech_bonus = {
-				bonus = 0.2
-				uses = 1
-				category = land_doctrine
-			}
-			add_tech_bonus = {
-				uses = 1
-				bonus = 0.40
-				category = infantry_weapons
-			}	
-		}
-	}
-	focus = {
-		id = AST_Prepare_for_defense
-		text = "Prepare for defense"
-		icon = GFX_AST_Prepare_for_defense
-		prerequisite = { focus = AST_army }
-		x = -2
-		y = 1
-		relative_position_id = AST_army
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = yes
-
-		completion_reward = {
-			army_experience = 30
-			519 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = AST_ANZAC
-		text = "ANZAC"
-		icon = GFX_AST_solgier
-		prerequisite = { focus = AST_army }
-		x = 2
-		y = 1
-		relative_position_id = AST_army
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = yes
-
-		completion_reward = {
-			army_experience = 10
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = land_doctrine
-			}
-			NZL = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = land_doctrine
-			}
-		}
-			
-		}
-	}
-	focus = {
-		id = AST_ANZAC_1
-		text = "Victory in unity"
-		icon = GFX_AST_anzac
-		prerequisite = { focus = AST_ANZAC }
-		prerequisite = { focus = AST_cac_boomerang }
-		x = 3
-		y = 1
-		relative_position_id = AST_ANZAC
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = yes
-
-		completion_reward = {
-			army_experience = 30
-			519 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-				}
-			520  = {
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-			}
-	        284 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			284  = {
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-			}
-			
-		}
-	}
 	focus = {
 		id = AST_additional_militia_training
 		icon = GFX_goal_AST_state_of_army
-		prerequisite = { focus = AST_army }
-		x = 0
-		y = 1
-		relative_position_id = AST_army
+		x = 2
+		y = 0
+
 		cost = 5
 
 		ai_will_do = {
@@ -247,7 +65,6 @@ focus_tree = {
 		id = AST_royal_australian_artillery
 		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = AST_additional_militia_training }
-		prerequisite = { focus = AST_Prepare_for_defense }
 		x = -1
 		y = 1
 		relative_position_id = AST_additional_militia_training
@@ -282,9 +99,8 @@ focus_tree = {
 
 	focus = {
 		id = AST_promote_reservists
-		icon = GFX_AST_Promote
+		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = AST_additional_militia_training }
-		prerequisite = { focus = AST_ANZAC }
 		x = 1
 		y = 1
 		relative_position_id = AST_additional_militia_training
@@ -333,99 +149,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = AST_british_exp
-		text = "British experience"
-		icon = GFX_AST_British_experience
-		prerequisite = { focus = AST_additional_militia_training }
-		prerequisite = { focus = AST_ANZAC }
-		x = 3
-		y = 1
-		relative_position_id = AST_additional_militia_training
 
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = yes
-
-		completion_reward = {
-			army_experience = 25
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 1
-				category = land_doctrine
-			}
-		}
-	}
-	focus = {
-		id = AST_teamwork
-		Text = "Work together"
-		icon = GFX_AST_factories
-		prerequisite = { focus = AST_british_exp }
-		prerequisite = { focus = AST_ANZAC_1 }
-		x = 1
-		y = 1
-		relative_position_id = AST_british_exp
-
-		cost = 15
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-				has_war = yes
-				Date > 1941.1.1
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-		521 = {
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}	
-			723 = {
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-			119 = {
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-	}
 	focus = {
 		id = AST_daimler_dingo
 		icon = GFX_goal_generic_army_motorized
@@ -859,7 +583,7 @@ focus_tree = {
 	focus = {
 		id = AST_expand_the_raaf
 		icon = GFX_goal_AST_state_of_RAAF
-		x = 9
+		x = 7
 		y = 0
 		cost = 5
 
@@ -1280,52 +1004,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = AST_aircraft_factory
-		Text = "Aircraft Facility"
-		icon = GFX_AST_factories
-		prerequisite = { focus = AST_volunteer_air_observers_corps }
-		x = 0
-		y = 1
-		relative_position_id = AST_volunteer_air_observers_corps
 
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-		519 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}	
-			522 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
 	focus = {
 		id = AST_naval_bombers
 		icon = GFX_goal_generic_air_naval_bomber
@@ -1374,7 +1053,7 @@ focus_tree = {
 		id = AST_death_from_down_under
 		icon = GFX_goal_generic_CAS
 		prerequisite = { focus = AST_volunteer_air_observers_corps }
-		x = -2
+		x = -1
 		y = 5
 		relative_position_id = AST_expand_the_raaf
 
@@ -1478,7 +1157,7 @@ focus_tree = {
 		id = AST_womens_auxilliary_australian_air_force
 		icon = GFX_goal_generic_build_airforce
 		prerequisite = { focus = AST_volunteer_air_observers_corps focus = AST_naval_bombers }
-		x = 1
+		x = 0
 		y = 4
 		relative_position_id = AST_expand_the_raaf
 
@@ -1581,7 +1260,7 @@ focus_tree = {
 	focus = {
 		id = AST_cockatoo_island_shipyards
 		icon = GFX_Noras_cockatoo_shipyards
-		x = 13
+		x = 11
 		y = 0
 
 		cost = 5
@@ -1939,44 +1618,7 @@ focus_tree = {
 			}			
 		}
 	}
-	focus = {
-		id = AST_dock
-		Text = "British shipyards"
-		icon = GFX_AST_Dock
-		prerequisite = { focus = AST_cruisers focus = AST_pacific_area_navy}
-		x = 1
-		y = 1
-		relative_position_id = AST_cruisers
 
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {	
-		522 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-				}
-			}			
-		}
-	}
 	focus = {
 		id = AST_pacific_area_navy
 		icon = GFX_goal_base_strike
@@ -2033,7 +1675,7 @@ focus_tree = {
 	focus = {
 		id = AST_standard_gauge_railway
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 16
+		x = 14
 		y = 0
 
 		cost = 5
@@ -2269,69 +1911,6 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = AST_Expand_Army
-		icon = GFX_military_construction
-		prerequisite = { focus = AST_department_of_supply_and_development }
-		text = "American machines"
-		x = 4
-		y = 3
-		relative_position_id = AST_standard_gauge_railway
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		available = {
-		Date > 1940.01.01
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			519 = {
-				add_extra_state_shared_building_slots = 6
-				add_building_construction = {
-					type = arms_factory
-					level = 4
-					instant_build = yes
-				}
-				set_state_flag = AST_department_of_supply_and_development_AF
-			}
-		}
-	}
-	focus = {
-		id = AST_Engineer
-		icon = GFX_Generic_Working_Women
-		prerequisite = { focus = AST_Expand_Army }
-		text = "Corps of Engineers"
-		x = 0
-		y = 1
-		relative_position_id = AST_Expand_Army
-
-		cost = 15
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		available = {
-		date > 1941.06.01
-		}
-
-		completion_reward = {
-		Add_ideas = AST_Engineer
-		}
-
-		}
 
 	focus = {
 		id = AST_expand_lithgow_small_arms_factory
@@ -2572,7 +2151,7 @@ focus_tree = {
 	focus = {
 		id = AST_establish_advisory_war_council
 		icon = GFX_AST_nation
-		x = 25
+		x = 22
 		y = 0
 
 		cost = 10
@@ -2629,38 +2208,6 @@ focus_tree = {
 				remove_idea = AST_great_depression_1
 				add_idea = AST_great_depression_2
 			}
-		}
-	}
-	focus = {
-		id = AST_congratulate_Churchill
-		text = "Congratulate Churchill"
-		icon = GFX_AST_Churchill
-		prerequisite = { focus = AST_national_security_act }
-		x = 0
-		y = 1
-		relative_position_id = AST_national_security_act
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 8
-		}
-
-		available = {
-		has_war = yes
-		}
-
-		bypass = {
-		
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = yes
-
-		completion_reward = {
-		add_political_power = 120
-		add_stability = 0.05	
 		}
 	}
 
@@ -2819,7 +2366,6 @@ focus_tree = {
 					is_controlled_by = PREV
 					is_on_continent = africa
 				}
-				date > 1941.06.1
 			}
 		}
 
@@ -2836,48 +2382,108 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = AST_Tobruk_Rats
-		}
-	}
-	focus = {
-		id = AST_USMC
-		icon = GFX_AST_Coop
-		prerequisite = { focus = AST_classify_aliens }
-		prerequisite = { focus = AST_CSIR }
-		text = "Cooperation With USMC"
-		x = 0
-		y = 2
-		relative_position_id = AST_rats_of_tobruk
+			#Starts with recon and engineers
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = tech_logistics_company
+					}
+					division_template = {
+						name = "Rats of Tobruk"
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 2 y = 2 }
 
-		cost = 5
+							artillery_brigade = { x = 3 y = 0 }
+							artillery_brigade = { x = 3 y = 1 }
+							artillery_brigade = { x = 3 y = 2 }
+							artillery_brigade = { x = 3 y = 3 }
+						}
+						support = {
+					        recon = { x = 0 y = 0 }
+					        engineer = { x = 0 y = 1 }
+					        logistics_company = { x = 0 y = 2 }
+						}
+					}
+					else = {
+						division_template = {
+							name = "Rats of Tobruk"
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+								infantry = { x = 1 y = 2 }
+								infantry = { x = 2 y = 0 }
+								infantry = { x = 2 y = 1 }
+								infantry = { x = 2 y = 2 }
 
-		ai_will_do = {
-			factor = 1
-		}
+								artillery_brigade = { x = 3 y = 0 }
+								artillery_brigade = { x = 3 y = 1 }
+								artillery_brigade = { x = 3 y = 2 }
+								artillery_brigade = { x = 3 y = 3 }
+							}
+							support = {
+						        recon = { x = 0 y = 0 }
+						        engineer = { x = 0 y = 1 }
+							}
+						}
+					}
+				}
 
-		available = {
-				date > 1941.06.1
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-
-			completion_reward = {
-			add_tech_bonus = {
-				name = AST_USMC
-				bonus = 1.00
-				uses = 2
-				category = tp_tech
-				category = marine_tech
+				#Spawn unit in Africa
+				if = {
+					limit = {
+						any_country = {
+							is_in_faction_with = AST
+							controls_state = 273
+						}
+						any_country = {
+							is_in_faction_with = AST
+							controls_state = 552
+						}
+					}
+					load_oob = "AST_TFV_rats_africa"
+					else = {
+						if = {
+							limit = {
+								controls_state = 285
+							}
+							load_oob = "AST_TFV_rats_australia"
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						is_in_faction_with = AST
+						controls_state = 273
+					}
+					any_country = {
+						is_in_faction_with = AST
+						controls_state = 552
+					}
+				}
+				custom_effect_tooltip = AST_rats_of_tobruk_effect_1
+				else = {
+					if = {
+						limit = {
+							controls_state = 285
+						}
+					}
+					custom_effect_tooltip = AST_rats_of_tobruk_effect_2
+				}
 			}
 		}
-		
 	}
 
 	focus = {
@@ -2934,7 +2540,6 @@ focus_tree = {
 			}
 		}
 	}
-
 
 	focus = {
 		id = AST_squash_the_squanderbugs
@@ -3102,55 +2707,7 @@ focus_tree = {
 			}
 		}
 	}
-			focus = {
-		id = AST_War_Heroes
-		icon = GFX_AST_solgier
-		prerequisite = { focus = AST_classify_aliens }
-		text = "War Heroes"
-		x = 0
-		y = 1
-		relative_position_id = AST_classify_aliens
 
-		cost = 5
-				available = {
-			date > 1941.08.01
-			AST = {
-				controls_state = 523
-				}
-			AST = {
-				controls_state = 285
-				}
-			AST = {
-				controls_state = 521
-				}
-				OR = {
-					
-				AST = {
-				controls_state = 284
-				}
-				NZL = {
-				controls_state = 284
-				}
-				}
-		}
-		ai_will_do = {
-			factor = 25
-		}
-
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-
-
-		completion_reward = {
-		AST = {	add_ideas = AST_War_Heroes }	
-		
-				}
-
-		
-	}
 
 	############################
 	#### GO WITH UK SECTION ####
@@ -3159,7 +2716,7 @@ focus_tree = {
 	focus = {
 		id = AST_support_the_policy_of_appeasement
 		icon = GFX_Noras_aussie_appeasement
-		x = 32
+		x = 28
 		y = 0
 
 		cost = 5

@@ -12,8 +12,8 @@ focus_tree = {
 
 	default = no
 
-	continuous_focus_position = { x = 1000 y = 1000 }
-	
+	continuous_focus_position = { x = 250 y = 1100 }
+
 	focus = {
 		id = ITA_ethiopian_war_logistics
 		icon = GFX_goal_ita_ethiopian_war_logistics
@@ -518,10 +518,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
 		completion_reward = {
-
-
 			160 = {
 				add_building_construction = {
 					type = synthetic_refinery
@@ -558,110 +555,7 @@ focus_tree = {
 			}				
 		}
 	}
-		focus = {
-		id = ITA_Defense_Africa
-		icon = GFX_ITA_Defence_of_Africa
-		text = "Defense Africa"
-		prerequisite = { focus = ITA_consolidate_egypt }
-		prerequisite = { focus = ITA_consolidate_levant }
 
-		x = 3
-		y = 8
-		cost = 5
-
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-		ITA = {
-				controls_state = 451
-					
-			}
-				ITA = {
-				controls_state = 448
-					
-			}
-		date > 1941.6.1
-		}
-		completion_reward = {
-			2 = {
-				add_extra_state_shared_building_slots = 5
-				add_building_construction = {
-					type = arms_factory
-					level = 5
-					instant_build = yes
-				}
-			}			
-		}
-	}
-
-			focus = {
-		id = ITA_Defense_Africa_2
-		icon = GFX_ITA_Rommel
-		text = "Defense Africa 2"
-		prerequisite = { focus = ITA_Defense_Africa }
-
-		x = 3
-		y = 9
-		cost = 5
-
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-		ITA = {
-				controls_state = 451
-					
-			}
-				ITA = {
-				controls_state = 446
-					
-			}
-		date > 1942.1.1
-		}
-		completion_reward = {
-		add_ideas = ITA_Def_AFR_1 
-			ITA = { add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 20000 producer = ITA } }
-			ITA = { add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 2500 producer = ITA } }
-			ITA = { add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 2500 producer = ITA } }
-		}
-	}
-				focus = {
-		id = ITA_Defense_Africa_3
-		icon = GFX_ITA_panzerIV
-		text = "Defense Africa 3"
-		prerequisite = { focus = ITA_Defense_Africa_2 }
-
-		x = 3
-		y = 10
-		cost = 5
-
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 1
-		}
-		available = {	
-		ITA = {
-				controls_state = 447
-					
-			}
-				ITA = {
-				controls_state = 458
-					
-			}
-		date > 1942.6.1
-		}
-		completion_reward = {
-		ITA = { remove_ideas = ITA_Def_AFR_1 }
-		add_ideas = ITA_Def_AFR_2
-		add_offsite_building = { type = arms_factory level = 6 }
-		}
-	}
 	focus = {
 		id = ITA_libyan_infrastructure
 		icon = GFX_goal_generic_construct_civilian
@@ -948,8 +842,6 @@ focus_tree = {
 		}
 	}
 
-	
-
 	focus = {
 		id = ITA_consolidate_levant
 		icon = GFX_Italian_Shield
@@ -1155,57 +1047,16 @@ focus_tree = {
 			add_tech_bonus = {
 				name = special_bonus
 				bonus = 1.00
-				uses = 2
-				category = cat_special_forces_generic
-			}			
-		}
-	}
-	focus = {
-		id = ITA_Duce
-    	icon = GFX_ITA_Duce_scream
-		text = "Duce Supremo"
-		prerequisite = { focus = ITA_special_forces }
-		prerequisite = { focus = ITA_Blackshirts }
-		x = 6
-		y = 6
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-		available = {		
-		date > 1941.3.1
-		}
-			completion_reward = {
-			add_ideas = Duce_Supremo
-			ITA = { remove_ideas = victor_emmanuel }
-		}
-	}
-		focus = {
-		id = ITA_command
-    	icon = GFX_focus_ITA_stato_maggiore_italiano
-		text = "Stato Maggiore Italiano"
-		prerequisite = { focus = ITA_Duce }
-		x = 6
-		y = 7
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-		available = {		
-		date > 1941.8.1
-		ITA = {
-				controls_state = 446
-					
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
 			}
-		}
-			completion_reward = {
-			add_ideas = ITA_Command
-			ITA = { remove_ideas = ITA_german_millitary_cooperation_focus }
-
+			add_tech_bonus = {
+				name = special_bonus
+				bonus = 1.00
+				uses = 1
+				technology = tech_mountaineers2
+			}			
 		}
 	}
 	focus = {
@@ -1213,7 +1064,7 @@ focus_tree = {
     	icon = GFX_baionette
 		text = "Blackshirts"
 		prerequisite = { focus = ITA_marines_and_landing_craft }
-		x = 7
+		x = 8
 		y = 4
 		cost = 5
 		ai_will_do = {
@@ -1223,111 +1074,8 @@ focus_tree = {
 		available_if_capitulated = yes
 			completion_reward = {
 		add_ideas = ITA_Blackshirts
-
 		}
 	}
-	focus = {
-		id = ITA_Africa_Lesson
-		icon = GFX_Italian_Shield
-		text = "Africa Lesson"
-		prerequisite = { focus = ITA_marines_and_landing_craft }
-		x = 9
-		y = 4
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		cancel_if_invalid = no
-		available = {	
-		ITA = {
-
-				controls_state = 452
-								
-			}
-		date > 1940.6.1
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-					add_tech_bonus = {
-				name = Africa_Lesson
-				bonus = 1.00
-				uses = 1
-				category = infantry_weapons
-			}
-			add_tech_bonus = {
-				name = Africa_Lesson
-				bonus = 1.00
-				uses = 1
-				category = cat_special_forces_generic
-
-			}
-			add_tech_bonus = {
-				name = Africa_Lesson
-				bonus = 1.00
-				uses = 1
-				category = support_tech
-
-			}
-			add_tech_bonus = {
-				name = Africa_Lesson
-				bonus = 1.50
-				uses = 2
-				category = rocketry
-			}
-			
-		}
-	}
-	focus = {
-		id = ITA_Africa_Lesson_1
-		icon = GFX_JAP_mil_ind
-		text = "Mass production"
-		prerequisite = { focus = ITA_Africa_Lesson }
-		x = 10
-		y = 5
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		cancel_if_invalid = no
-		available = {	
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-		add_ideas = Production
-			
-		}
-	}
-	
-		focus = {
-		id = ITA_Holy_war
-    	icon = GFX_focus_ITA_guerra_santa_4
-		text = "Guerra santa"
-		prerequisite = { focus = ITA_Africa_Lesson }
-		prerequisite = { focus = ITA_Blackshirts }
-		x = 8
-		y = 5
-		cost = 0
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-		available = {
-				has_war_with = ENG
-				ITA = { surrender_progress > 0.05 }
-				}
-			completion_reward = {
-			
-			add_ideas = ITA_Guerra_Santa
-			
-		}
-	}
-
-
 	focus = {
 		id = ITA_armored_effort
 		icon = GFX_ITA_p26
@@ -1576,28 +1324,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ITA_effort_Marines
-		icon = GFX_ITA_Corpo_dei_marine
-        text = "Corpo dei Marines"
-		prerequisite = { focus = ITA_capital_ships }
-		prerequisite = { focus = ITA_light_ship_effort }
-		x = 10
-		y = 3
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1939.6.1
-		}
-
-		completion_reward = {
-			add_ideas =  ITA_Corpo_dei_Marines			
-		}
-	}
-
-	focus = {
 		id = ITA_bomber_effort
 		icon = GFX_goal_ita_savoia_marchetti_sm_79
 		prerequisite = { focus = ITA_army_primacy }
@@ -1717,7 +1443,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = ITA_marines_and_landing_craft
 				bonus = 1.00
-				uses = 1
+				uses = 2
 				technology = marines
 				technology = marines2
 			}
@@ -1784,7 +1510,7 @@ focus_tree = {
 	focus = {
 		id = ITA_light_ship_effort
 		icon = GFX_goal_generic_navy_cruiser
-		x = 12
+		x = 10
 		y = 0
 		cost = 5
 		ai_will_do = {
@@ -1830,105 +1556,12 @@ focus_tree = {
 			}				
 		}
 	}
-	focus = {
-		id = ITA_Fleet
-		Text = "Shipyard expansion"
-		icon = GFX_ITA_Shipyard
-		prerequisite = { focus = ITA_light_ship_effort }
-		x = 11
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
 
-		available = {
-		}
-
-		completion_reward = {
-		add_timed_idea = { idea = Dockyards days = 180 }					
-		}
-	}
-	focus = {
-		id = ITA_Fleet_2
-		Text = "New Dockyards"
-		icon = GFX_ITA_New_dockyards
-		prerequisite = { focus = ITA_light_ship_effort }
-		x = 13
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-
-		completion_reward = {
-		163 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-				}
-			}					
-		}
-	}
-
-	focus = {
-		id = ITA_Mediterranean
-		icon = GFX_ITA_Dominance
-       text = "Dominance in Mediterranean"
-		prerequisite = { focus = ITA_Fleet_2 focus = ITA_Fleet }
-		x = 12
-		y = 2
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		ITA = {
-				controls_state = 114
-								
-			}
-			ITA = {
-
-				controls_state = 116
-								
-			}
-			ITA = {
-
-				controls_state = 164
-								
-			}
-			ITA = {
-
-				controls_state = 183
-								
-			}
-			ITA = {
-
-				controls_state = 182
-								
-			}
-			ITA = {
-
-				controls_state = 115
-								
-			}
-		}
-
-		completion_reward = {
-		add_ideas = ITA_Victory_in_Mediterranean				
-		}
-	}
 	focus = {
 		id = ITA_escort_effort
 		icon = GFX_goal_generic_navy_anti_submarine
 		prerequisite = { focus = ITA_light_ship_effort }
-		x = 16
+		x = 11
 		y = 1
 		cost = 5
 		ai_will_do = {
@@ -1972,7 +1605,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_submarine
 		text = submarine_effort
 		prerequisite = { focus = ITA_light_ship_effort }
-		x = 14
+		x = 10
 		y = 2
 		cost = 5
 		ai_will_do = {
@@ -2022,9 +1655,9 @@ focus_tree = {
 		id = ITA_sea_wolves
 		icon = GFX_goal_generic_wolf_pack
 		prerequisite = { focus = ITA_submarine_effort }
-		prerequisite = { focus = ITA_Ger_coop }
-		x = 14
-		y = 6
+		prerequisite = { focus = ITA_german_millitary_cooperation }
+		x = 9
+		y = 5
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -2068,7 +1701,7 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		x = 18
+		x = 13
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -2081,7 +1714,6 @@ focus_tree = {
 		air_experience = 50
 		}
 	}
-	
 
 	focus = {
 		id = ITA_slovenia_dalmatia_claims
@@ -2091,7 +1723,7 @@ focus_tree = {
 			GER = { has_completed_focus = GER_danzig_or_war }
 			ITA = { has_war_with = ENG }
 		}
-		x = 19
+		x = 14
 		y = 2
 		cost = 5
 		ai_will_do = {
@@ -2115,7 +1747,7 @@ focus_tree = {
 		id = ITA_bulgaria_friend
 		icon = GFX_goal_ita_befriend_bulg
 		prerequisite = { focus = ITA_albania_war_goal }
-		x = 17
+		x = 12
 		y = 2
 		cost = 5
 		ai_will_do = {
@@ -2155,7 +1787,7 @@ focus_tree = {
 		id = ITA_albania_war_goal
 		icon = GFX_Noras_albania
 		prerequisite = { focus = ITA_victoryinETH }
-		x = 18
+		x = 13
 		y = 1
 
 		available = {
@@ -2207,7 +1839,7 @@ focus_tree = {
 				country_exists = GER
 			}
 		}
-		x = 17
+		x = 12
 		y = 3
 		cost = 1
 		ai_will_do = {
@@ -2251,7 +1883,7 @@ focus_tree = {
 			NOT = { country_exists = GRE }
 		}		
 		will_lead_to_war_with = GRE
-		x = 19
+		x = 14
 		y = 4
 		cost = 5
 		ai_will_do = {
@@ -2274,7 +1906,7 @@ focus_tree = {
 			NOT = { has_war_with = GER }
 		}
 
-		x = 15
+		x = 10
 		y = 4
 		cost = 5
 		ai_will_do = {
@@ -2284,33 +1916,13 @@ focus_tree = {
 			add_ideas = ITA_german_millitary_cooperation_focus
 		}
 	}
-		focus = {
-		id = ITA_german_navy_cooperation
-		icon = GFX_ITA_Ger_navy_cooperation
-		Text = "German Navy Cooperation"
-		prerequisite = { focus = ITA_german_millitary_cooperation }
-        prerequisite = { focus = ITA_german_rd_treaty }
-		available = {
-			Date > 1940.6.1
-		}
-
-		x = 17
-		y = 5
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			GER = { add_ideas = GER_Pact_of_Steel }
-		}
-	}
 
 	focus = {
 		id = ITA_german_rd_treaty
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = ITA_pact_of_steel }
 
-		x = 17
+		x = 12
 		y = 4
 		cost = 10
 		ai_will_do = {
@@ -2340,10 +1952,9 @@ focus_tree = {
 		id = ITA_secret_weapons
 		icon = GFX_goal_generic_secret_weapon
 		text = secret_weapons
-		prerequisite = { focus = ITA_german_millitary_cooperation  }
-		prerequisite = { focus = ITA_german_rd_treaty }
-		x = 16
-		y = 6
+		prerequisite = { focus = ITA_german_millitary_cooperation }
+		x = 11
+		y = 5
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -2358,36 +1969,6 @@ focus_tree = {
 				uses = 2
 				category = electronics
 				category = rocketry
-			}
-		}
-	}
-	focus = {
-		id = ITA_Ger_coop
-		icon = GFX_goal_generic_scientific_exchange
-		text = "Cooperation with Germany"
-		prerequisite = { focus = ITA_german_millitary_cooperation  }
-
-		x = 15
-		y = 5
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = Ger_coop
-				bonus = 1.00
-				uses = 1
-				category = land_doctrine
-			}
-			add_tech_bonus = {
-				name = Ger_coop
-				bonus = 1.20
-				uses = 1
-				category = artillery
 			}
 		}
 	}

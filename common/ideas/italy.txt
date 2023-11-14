@@ -1,10 +1,14 @@
 ideas = {
 	country = {
+		
 		victor_emmanuel = {
+			
 			picture = ITVictor
+			
 			allowed = {
 				original_tag = "ITA"
 			}
+
 			allowed_civil_war = {
 				NOT = {
 					has_government = communism
@@ -16,227 +20,39 @@ ideas = {
 					}
 				}
 			}
+			
 			removal_cost = -1
+			
 			modifier = {
-				stability_factor = 0.2
-			}
-		}
-		GER_Pact_of_Steel = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			picture = ger_mefo_bills
-			targeted_modifier = {
-				tag = ITA
-				trade_cost_for_target_factor = -0.5
-			}
-		}
-		Production = {
-			picture = smallarms_factory
-			allowed = {
-			}
-			removal_cost = -1
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
-				support_equipment = {
-					build_cost_ic = -0.1
-					instant = yes
-				}
-				anti_air_equipment = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				anti_tank_equipment = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				artillery_equipment = {
-					build_cost_ic = -0.05
-					instant = yes
-				}
-			}
-		}
-		Dockyards = {
-			picture = generic_navy_bonus
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				production_speed_dockyard_factor = 0.2
-			}
-		}
-		ITA_Victory_in_Mediterranean = {
-			allowed = {
-				always = yes
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			picture = generic_navy_bonus
-			equipment_bonus = {
-				ship_hull_heavy = {
-					build_cost_ic = -0.2
-					instant = yes
-					armor_value = 0.1
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.2
-					instant = yes
-					armor_value = 0.1
-				}
-			}
-		}
-		Duce_Supremo = {
-			picture = vittoria_mutilata
-			allowed = {
-				original_tag = "ITA"
-			}
-			allowed_civil_war = {
-				NOT = {
-					has_government = communism
-				}
-				NOT = {
-					any_other_country = {
-						original_tag = ITA
-						has_government = fascism
-					}
-				}
-			}
-			removal_cost = -1
-			modifier = {
-				stability_factor = 0.35
-				production_speed_buildings_factor = 0.1
-			}
-		}
-		ITA_Def_AFR_1 = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			picture = vittoria_mutilata
-			modifier = {
-				army_core_attack_factor = 0.1
-				army_core_defence_factor = 0.1
-			}
-		}
-		ITA_Def_AFR_2 = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			picture = vittoria_mutilata
-			modifier = {
-				army_core_attack_factor = 0.2
-				army_core_defence_factor = 0.2
-			}
-		}
-		ITA_Def_AFR_3 = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			picture = vittoria_mutilata
-			modifier = {
-				army_core_attack_factor = 0.35
-				army_core_defence_factor = 0.35
-			}
-		}
-		ITA_Command = {
-			picture = german_advisors
-			allowed = {
-				original_tag = "ITA"
-			}
-			allowed_civil_war = {
-				NOT = {
-					has_government = communism
-				}
-				NOT = {
-					any_other_country = {
-						original_tag = ITA
-						has_government = fascism
-					}
-				}
-			}
-			removal_cost = -1
-			modifier = {
-				planning_speed = 0.15
-				max_planning = 0.05
-				army_org_factor = 0.05
-				army_armor_speed_factor = 0.1
-			}
-		}
-		ITA_Guerra_Santa = {
-			allowed = {
-				original_tag = "ITA"
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			picture = generic_wall_line
-			modifier = {
-				production_speed_bunker_factor = 0.15
-			}
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
-			}
-		}
-		ITA_Corpo_dei_Marines = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			picture = generic_navy_bonus
-			equipment_bonus = {
-				ship_hull_light = {
-					build_cost_ic = -0.1
-					instant = yes
-				}
-				convoy = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
+				stability_factor = 0.2		
 			}
 		}
 		ITA_Blackshirts = {
-			picture = Waffen_SS
+		picture = Waffen_SS
 			allowed = {
 				always = no
 			}
+
 			allowed_civil_war = {
+				
 			}
+
 			removal_cost = -1
-			modifier = {
-				conscription = 0.02
+			
+
+
+         	modifier = {
+            	conscription = 0.02
 			}
 		}
-		vittoria_mutilata = {
+		vittoria_mutilata = {	
+			
 			allowed = {
 				original_tag = "ITA"
 			}
+			
 			removal_cost = -1
+			
 			modifier = {
 				communism_acceptance = -10
 				democratic_acceptance = -10
@@ -248,14 +64,19 @@ ideas = {
 			research_bonus = {
 				naval_equipment = 0.1
 				naval_doctrine = 0.1
-			}
+			}			
 		}
+		
 		vittoria_mutilata_moreresourcestomarket = {
+			
 			picture = vittoria_mutilata
+			
 			allowed = {
 				original_tag = "ITA"
 			}
+			
 			removal_cost = -1
+			
 			modifier = {
 				communism_acceptance = -10
 				democratic_acceptance = -10
@@ -268,14 +89,19 @@ ideas = {
 			research_bonus = {
 				naval_equipment = 0.1
 				naval_doctrine = 0.1
-			}
+			}			
 		}
+
 		vittoria_mutilata_lessresourcestomarket = {
+
 			picture = vittoria_mutilata
+			
 			allowed = {
 				original_tag = "ITA"
 			}
+			
 			removal_cost = -1
+			
 			modifier = {
 				communism_acceptance = -10
 				democratic_acceptance = -10
@@ -288,13 +114,17 @@ ideas = {
 			research_bonus = {
 				naval_equipment = 0.1
 				naval_doctrine = 0.1
-			}
-		}
+			}			
+		}		
+
 		ITA_german_millitary_cooperation_focus = {
+
 			picture = german_advisors
+
 			allowed = {
 				original_tag = ITA
 			}
+
 			allowed_civil_war = {
 				OR = {
 					AND = {
@@ -315,46 +145,66 @@ ideas = {
 					#		has_government = democratic
 				}
 			}
+
 			removal_cost = -1
+
 			research_bonus = {
 				land_doctrine = 0.1
 				air_doctrine = 0.1
 			}
 		}
 	}
+
 	political_advisor = {
+		
+		
 	}
+		
 	# MILITARY
 	army_chief = {
+	
+
 	}
 	navy_chief = {
+		
+		
 	}
 	air_chief = {
-	}
+		
+		
+	}	
+	
 	high_command = {
+	
+	
 	}
+	
+	
 	tank_manufacturer = {
+	
 		designer = yes
+	
 		fiat = {
+			
 			cost = 75
+			
 			allowed = {
 				original_tag = ITA
 			}
+			
+			
 			research_bonus = {
 				armor = 0.15
 			}
-			on_add = {
-				hidden_effect = {
-					make_tank_designers_free = yes
-				}
-			}
+on_add = { hidden_effect = { make_tank_designers_free = yes } }
+			
 			equipment_bonus = {
-				medium_tank_chassis = {
-					hard_attack = 0.1
-					soft_attack = 0.1
-					reliability = 0.15
+				medium_tank_chassis= {
+				hard_attack = 0.10
+				soft_attack = 0.10
+				reliability = 0.15	 
 				}
-				heavy_tank_chassis = {
+				heavy_tank_chassis= {
 					hard_attack = 0.15
 					soft_attack = 0.15
 					reliability = 0.15
@@ -363,171 +213,176 @@ ideas = {
 					armor_value = -0.5
 					build_cost_ic = -0.15
 				}
-				medium_tank_aa_chassis = {
+				medium_tank_aa_chassis= {
 					air_attack = 0.15
 					reliability = 0.15
-				}
+				}				
 			}
 		}
+		
 		ansaldo_fossati = {
-			cost = 75
+
+			cost = 75			
+			
 			allowed = {
 				original_tag = ITA
 			}
+			
+			
 			research_bonus = {
 				armor = 0.15
 			}
-			on_add = {
-				hidden_effect = {
-					make_tank_designers_free = yes
-				}
-			}
+on_add = { hidden_effect = { make_tank_designers_free = yes } }
+			
 			equipment_bonus = {
-				medium_tank_chassis = {
-					hard_attack = 0.1
-					soft_attack = 0.1
+				medium_tank_chassis= {
+					hard_attack = 0.10
+					soft_attack = 0.10 
 					reliability = 0.15
 				}
-				medium_tank_aa_chassis = {
+				medium_tank_aa_chassis= {
 					air_attack = 0.05
 				}
-				heavy_tank_chassis = {
-					hard_attack = 0.1
-					soft_attack = 0.1
+				heavy_tank_chassis= {
+					hard_attack = 0.10
+					soft_attack = 0.10
 					armor_value = 0.05
 				}
+				
 			}
 		}
 	}
+	
+	
 	materiel_manufacturer = {
+			
 		designer = yes
+		
 		beretta = {
+			
+			
 			allowed = {
 				original_tag = ITA
 			}
+			
+
+			
 			research_bonus = {
 				infantry_weapons = 0.15
 			}
-			traits = {
-				infantry_equipment_manufacturer
-			}
-			on_add = {
-				hidden_effect = {
-					make_material_designers_free = yes
-				}
-			}
+			
+			traits = { infantry_equipment_manufacturer }
+			on_add = { hidden_effect = { make_material_designers_free = yes } }
 		}
+		
 		lancia = {
+			
+			
 			allowed = {
 				original_tag = ITA
 			}
+			
+			
 			research_bonus = {
 				motorized_equipment = 0.15
 			}
 			research_bonus = {
-				mechanized_equipment = 0.1
-			}
-			traits = {
-				motorized_equipment_manufacturer
-			}
-			on_add = {
-				hidden_effect = {
-					make_material_designers_free = yes
-				}
-			}
+				mechanized_equipment = 0.10
+			}			
+
+			traits = { motorized_equipment_manufacturer }
+			on_add = { hidden_effect = { make_material_designers_free = yes } }
 		}
-		breda = {
-			on_add = {
-				hidden_effect = {
-					make_material_designers_free = yes
-				}
-			}
+		
+		breda = {			
+			on_add = { hidden_effect = { make_material_designers_free = yes } }
 			allowed = {
 				original_tag = ITA
 			}
+			
+
+			
 			research_bonus = {
 				artillery = 0.15
 			}
-			traits = {
-				artillery_manufacturer
-			}
+			
+			traits = { artillery_manufacturer }
 		}
 	}
-	aircraft_manufacturer = {
+	
+	
+	aircraft_manufacturer = {	
+		
 		designer = yes
+		
 		macchi = {
+			
+			
 			allowed = {
 				original_tag = ITA
 			}
 			cost = 75
 			#removal_cost = 10
+			
 			research_bonus = {
 				air_equipment = 0.15
 			}
-			on_add = {
-				hidden_effect = {
-					make_air_designers_free = yes
-				}
-			}
-			traits = {
-				macchi_aircraft_manufacturer
-			}
+on_add = { hidden_effect = { make_air_designers_free = yes } }
+			
+			traits = { macchi_aircraft_manufacturer }
 		}
+		
 		savoia_marchetti = {
+			
+			
 			allowed = {
 				original_tag = ITA
 			}
 			cost = 75
 			#removal_cost = 10
+			
 			research_bonus = {
 				air_equipment = 0.15
 			}
-			on_add = {
-				hidden_effect = {
-					make_air_designers_free = yes
-				}
-			}
-			traits = {
-				savoia_marchetti_aircraft_manufacturer
-			}
+on_add = { hidden_effect = { make_air_designers_free = yes } }
+			
+			traits = { savoia_marchetti_aircraft_manufacturer }
 		}
+		
 		crdaair = {
+						
 			allowed = {
 				original_tag = ITA
 			}
 			cost = 75
 			#removal_cost = 10
+						
 			research_bonus = {
 				air_equipment = 0.15
 			}
-			on_add = {
-				hidden_effect = {
-					make_air_designers_free = yes
-				}
-			}
-			traits = {
-				crda_aircraft_manufacturer
-			}
+on_add = { hidden_effect = { make_air_designers_free = yes } }
+			
+			traits = { crda_aircraft_manufacturer }
 		}
+		
 		piaggio = {
+						
 			allowed = {
 				original_tag = ITA
 			}
 			cost = 75
 			#removal_cost = 10
+						
 			research_bonus = {
 				air_equipment = 0.15
 			}
-			on_add = {
-				hidden_effect = {
-					make_air_designers_free = yes
-				}
-			}
-			traits = {
-				piaggio_aircraft_manufacturer
-			}
+on_add = { hidden_effect = { make_air_designers_free = yes } }
+			
+			traits = { piaggio_aircraft_manufacturer }
 		}
+		
 		fiatair = {
+						
 			allowed = {
 				original_tag = ITA
 			}
@@ -536,122 +391,119 @@ ideas = {
 			}
 			cost = 75
 			#removal_cost = 10
+						
 			research_bonus = {
 				air_equipment = 0.15
 			}
-			on_add = {
-				hidden_effect = {
-					make_air_designers_free = yes
-				}
-			}
-			traits = {
-				fiat_aircraft_manufacturer
-			}
+on_add = { hidden_effect = { make_air_designers_free = yes } }
+			
+			traits = { fiat_aircraft_manufacturer }
 		}
+		
 		bredaair = {
+						
 			allowed = {
 				original_tag = ITA
 			}
 			cost = 75
 			#removal_cost = 10
+						
 			research_bonus = {
 				air_equipment = 0.15
 			}
-			on_add = {
-				hidden_effect = {
-					make_air_designers_free = yes
-				}
-			}
-			traits = {
-				breda_aircraft_manufacturer
-			}
+on_add = { hidden_effect = { make_air_designers_free = yes } }
+			
+			traits = { breda_aircraft_manufacturer }
 		}
+		
 		imam = {
+						
 			allowed = {
 				original_tag = ITA
 			}
 			cost = 75
 			#removal_cost = 10
+						
 			research_bonus = {
 				air_equipment = 0.15
 			}
-			on_add = {
-				hidden_effect = {
-					make_air_designers_free = yes
-				}
-			}
-			traits = {
-				imam_aircraft_manufacturer
-			}
+on_add = { hidden_effect = { make_air_designers_free = yes } }
+			
+			traits = { imam_aircraft_manufacturer }
 		}
 	}
+	
 	industrial_concern = {
+	
 		danieli = {
+			
 			allowed = {
 				original_tag = ITA
 			}
+			
 			research_bonus = {
 				industry = 0.15
+				
 			}
-			traits = {
-				industrial_concern
-			}
-		}
+			
+			traits = { industrial_concern }
+		}		
 	}
+	
+	
 	naval_manufacturer = {
+	
 		designer = yes
+				
 		crda = {
-			cost = 50
+
+		cost = 50
+						
 			allowed = {
 				original_tag = ITA
 			}
+						
 			research_bonus = {
 				naval_equipment = 0.15
 			}
-			on_add = {
-				hidden_effect = {
-					make_naval_designers_free = yes
-				}
-			}
-			traits = {
-				atlantic_fleet_naval_manufacturer
-			}
+on_add = { hidden_effect = { make_naval_designers_free = yes } }
+			
+			traits = { atlantic_fleet_naval_manufacturer }
 		}
+		
 		ansaldo = {
-			cost = 50
+						
+			cost = 50				
+						
 			allowed = {
 				original_tag = ITA
 			}
+						
 			research_bonus = {
 				naval_equipment = 0.15
 			}
-			on_add = {
-				hidden_effect = {
-					make_naval_designers_free = yes
-				}
-			}
-			traits = {
-				med_fleet_naval_manufacturer
-			}
+on_add = { hidden_effect = { make_naval_designers_free = yes } }
+			
+			traits = { med_fleet_naval_manufacturer }
 		}
+
 		odero_terni_orlando = {
+				
 			cost = 50
+				
 			allowed = {
 				original_tag = ITA
 			}
+						
 			research_bonus = {
 				naval_equipment = 0.15
 			}
-			on_add = {
-				hidden_effect = {
-					make_naval_designers_free = yes
-				}
-			}
-			traits = {
-				convoy_escort_naval_manufacturer
-			}
+on_add = { hidden_effect = { make_naval_designers_free = yes } }
+			
+			traits = { convoy_escort_naval_manufacturer }
 		}
 	}
+	
 	theorist = {
 	}
 }

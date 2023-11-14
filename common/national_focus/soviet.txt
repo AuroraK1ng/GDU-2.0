@@ -1,1079 +1,63 @@
 focus_tree = {
 	id = soviet_focus
+
 	country = {
 		factor = 0
+
 		modifier = {
 			add = 10
 			tag = SOV
 		}
 	}
+
 	default = no
+
 	focus = {
 		id = SOV_stalin_constitution
 		icon = GFX_focus_USSR
-		x = 15
+		x = 16
 		y = 0
 		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
+
 		available_if_capitulated = yes
+
 		completion_reward = {
 			army_experience = 1000
 			add_political_power = 10
 			add_ideas = partial_economic_mobilisation
 			hidden_effect = {
-				country_event = {
-					id = soviet.24
-					days = 130
-				}
+				country_event = { id = soviet.24 days = 130 }
 			}
+
 		}
 	}
-	focus = {
-		id = SOV_Gulag_3
-		icon = GFX_SOV_Stalin_purge
-		text = "Stalin's tyranny"
-		prerequisite = {
-			focus = SOV_stalin_constitution
-		}
-		available = {
-			SOV = {
-				has_completed_focus = SOV_great_purge
-			}
-		}
-		x = 5
-		y = 1
-		relative_position_id = SOV_stalin_constitution
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_political_power = -100
-			add_ideas = Stalin_tyranny
-		}
-	}
-	focus = {
-		id = SOV_Gulag
-		icon = GFX_SOV_Giant
-		text = "Gulags"
-		prerequisite = {
-			focus = SOV_Gulag_3
-		}
-		x = 0
-		y = 1
-		relative_position_id = SOV_Gulag_3
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_ideas = Gulags
-		}
-	}
-	focus = {
-		id = SOV_Gulag_1
-		icon = GFX_GENERIC_SOV_Industry
-		text = "Convict workers"
-		prerequisite = {
-			focus = SOV_Gulag
-		}
-		x = -1
-		y = 1
-		relative_position_id = SOV_Gulag
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_ideas = Convict_Workers
-		}
-	}
-	focus = {
-		id = SOV_Gulag_2
-		icon = GFX_SOV_Increase_Military_Spending
-		text = "Increase Military Spending"
-		prerequisite = {
-			focus = SOV_Gulag
-		}
-		x = 1
-		y = 1
-		relative_position_id = SOV_Gulag
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_stability = -0.05
-			580 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			579 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			577 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			574 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = SOV_Molotov
-		icon = GFX_SOV_Molotov
-		text = "Molotov"
-		prerequisite = {
-			focus = SOV_stalin_constitution
-		}
-		available = {
-		}
-		x = -2
-		y = 1
-		relative_position_id = SOV_stalin_constitution
-		cost = 3
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_political_power = 75
-		}
-	}
-	focus = {
-		id = SOV_anti_fascist_diplomacy
-		icon = GFX_Noras_USSR_antifascist_diplomacy
-		prerequisite = {
-			focus = SOV_Molotov
-		}
-		relative_position_id = SOV_Molotov
-		x = -1
-		y = 1
-		cost = 1
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				ai_irrationality < 25
-			}
-			modifier = {
-				factor = 0.75
-				ai_irrationality > 30
-			}
-			modifier = {
-				factor = 0.5
-				ai_irrationality > 40
-			}
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			USA = {
-				add_opinion_modifier = {
-					target = SOV
-					modifier = anti_fascist_diplomacy_focus
-				}
-			}
-			ENG = {
-				add_opinion_modifier = {
-					target = SOV
-					modifier = anti_fascist_diplomacy_focus
-				}
-			}
-			FRA = {
-				add_opinion_modifier = {
-					target = SOV
-					modifier = anti_fascist_diplomacy_focus
-				}
-			}
-			every_other_country = {
-				limit = {
-					has_government = fascism
-				}
-				add_opinion_modifier = {
-					target = SOV
-					modifier = anti_fascist_diplomacy_fascists
-				}
-			}
-		}
-	}
-	focus = {
-		id = SOV_anti_capitalist_diplomacy
-		icon = GFX_Noras_USSR_anticapitalist_diplomacy
-		relative_position_id = SOV_Molotov
-		prerequisite = {
-			focus = SOV_Molotov
-		}
-		x = 1
-		y = 1
-		cost = 1
-		ai_will_do = {
-			factor = 0.25
-			modifier = {
-				factor = 5
-				ai_irrationality > 25
-			}
-			modifier = {
-				factor = 5
-				ai_irrationality > 35
-			}
-			modifier = {
-				factor = 2
-				ai_irrationality > 40
-			}
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			every_other_country = {
-				limit = {
-					has_government = fascism
-				}
-				add_opinion_modifier = {
-					target = SOV
-					modifier = anti_capitalist_diplomacy_focus
-				}
-			}
-			USA = {
-				add_opinion_modifier = {
-					target = SOV
-					modifier = anti_capitalist_diplomacy_capitalists
-				}
-			}
-			ENG = {
-				add_opinion_modifier = {
-					target = SOV
-					modifier = anti_capitalist_diplomacy_capitalists
-				}
-			}
-			FRA = {
-				add_opinion_modifier = {
-					target = SOV
-					modifier = anti_capitalist_diplomacy_capitalists
-				}
-			}
-		}
-	}
-	focus = {
-		id = SOV_anti_capitalist_raids
-		icon = GFX_focus_generic_strike_at_democracy2
-		prerequisite = {
-			focus = SOV_anti_capitalist_diplomacy
-		}
-		relative_position_id = SOV_anti_capitalist_diplomacy
-		x = 1
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 0.25
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.1
-			}
-			add_stability = 0.05
-		}
-	}
-	focus = {
-		id = SOV_positive_heroism
-		icon = GFX_SOV_Zhukov_research
-		text = "Army Reform"
-		prerequisite = {
-			focus = SOV_stalin_constitution
-		}
-		available = {
-			SOV = {
-				has_completed_focus = SOV_great_purge
-			}
-		}
-		x = 12
-		y = 1
-		relative_position_id = SOV_stalin_constitution
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			army_experience = 700
-		}
-	}
-	focus = {
-		id = SOV_Army_ref_2
-		Text = "Rehabilitate Rokossovsky"
-		icon = GFX_SOV_Rokossovsky
-		prerequisite = {
-			focus = SOV_positive_heroism
-		}
-		x = -1
-		y = 1
-		relative_position_id = SOV_positive_heroism
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_ideas = rehabilitated_military_focus
-		}
-	}
-	focus = {
-		id = SOV_Army_ref_3
-		Text = "Konev's experience"
-		icon = GFX_SOV_konev
-		prerequisite = {
-			focus = SOV_positive_heroism
-		}
-		x = 1
-		y = 1
-		relative_position_id = SOV_positive_heroism
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 2
-				uses = 1
-				name = mech_army_bonus
-				technology = mechanised_infantry
-			}
-			add_tech_bonus = {
-				bonus = 9.99
-				uses = 1
-				name = katyusha_bonus
-				technology = motorized_rocket_unit
-			}
-		}
-	}
-	focus = {
-		id = SOV_Army_ref_2_1
-		text = "Tank Cult"
-		icon = GFX_SOV_kv1
-		prerequisite = {
-			focus = SOV_Army_ref_2
-		}
-		x = -1
-		y = 1
-		relative_position_id = SOV_Army_ref_2
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			date > 1938.1.1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			army_experience = 200
-			add_equipment_to_stockpile = {
-				type = motorized_rocket_equipment
-				amount = 1556
-				producer = SOV
-			}
-			add_tech_bonus = {
-				name = heavy_armor_tank_cult
-				bonus = 2.25
-				technology = improved_heavy_tank_chassis
-			}
-			add_tech_bonus = {
-				name = light_armor_tank_cult
-				bonus = 2.25
-				technology = advanced_light_tank_chassis
-			}
-		}
-	}
-	focus = {
-		id = SOV_Army_ref_2_2
-		icon = GFX_SOV_Chuikov
-		text = "Chuikov's proposals"
-		prerequisite = {
-			focus = SOV_Army_ref_2_1
-		}
-		prerequisite = {
-			focus = SOV_Army_ref_2-3_1
-		}
-		x = 0
-		y = 2
-		relative_position_id = SOV_Army_ref_2_1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_tech_bonus = {
-				name = inf_tech_bonus
-				bonus = 1
-				uses = 1
-				category = infantry_weapons
-			}
-		}
-	}
-	focus = {
-		id = SOV_Army_ref_2-3
-		text = "Army reorganization"
-		icon = GFX_SOV_solgier_Hero
-		prerequisite = {
-			focus = SOV_Army_ref_2
-			focus = SOV_Army_ref_3
-		}
-		x = 1
-		y = 1
-		relative_position_id = SOV_Army_ref_2
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = land_doctrine
-			}
-			army_experience = 20
-		}
-	}
-	focus = {
-		id = SOV_Army_ref_2-3_1
-		icon = GFX_SOV_Zhukov_1
-		Text = "Mass Assault"
-		prerequisite = {
-			focus = SOV_Army_ref_2-3
-		}
-		x = 0
-		y = 1
-		relative_position_id = SOV_Army_ref_2-3
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = land_doctrine
-			}
-		}
-	}
-	focus = {
-		id = SOV_Army_ref_2-3_2
-		icon = GFX_SOV_equipment
-		Text = "New equipment"
-		prerequisite = {
-			focus = SOV_Army_ref_2-3
-		}
-		x = 0
-		y = 2
-		relative_position_id = SOV_Army_ref_2-3
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = artillery
-			}
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = infantry_weapons
-			}
-		}
-	}
-	focus = {
-		id = SOV_Army_ref_3_1
-		Text = "Commissars of the NKVD"
-		icon = GFX_Goal_NKVD_Primacy
-		prerequisite = {
-			focus = SOV_Army_ref_3
-		}
-		x = 1
-		y = 1
-		relative_position_id = SOV_Army_ref_3
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_ideas = nkvd
-			add_tech_bonus = {
-				name = nkvd_2
-				bonus = 2
-				uses = 1
-				technology = tech_military_police2
-			}
-		}
-	}
-	focus = {
-		id = SOV_Army_ref_3_2
-		text = "NKVD divisions"
-		icon = GFX_SOV_hat
-		prerequisite = {
-			focus = SOV_Army_ref_3_1
-		}
-		prerequisite = {
-			focus = SOV_Army_ref_2-3_1
-		}
-		x = 0
-		y = 2
-		relative_position_id = SOV_Army_ref_3_1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			custom_effect_tooltip = SOV_nkvd_upgrade_tooltip
-			swap_ideas = {
-				remove_idea = nkvd
-				add_idea = nkvd_2
-			}
-			add_tech_bonus = {
-				name = nkvd_3
-				bonus = 1
-				uses = 1
-				technology = tech_military_police3
-			}
-		}
-	}
-	focus = {
-		id = SOV_lessons_of_war
-		text = "Lessons of War"
-		icon = GFX_SOV_Upgrade_inf
-		prerequisite = {
-			focus = SOV_Army_ref_3_2
-		}
-		prerequisite = {
-			focus = SOV_Army_ref_2-3_1
-		}
-		prerequisite = {
-			focus = SOV_Army_ref_2_2
-		}
-		available = {
-			OR = {
-				date > 1941.1.1
-				has_country_flag = SOV_war_since_purge
-			}
-		}
-		x = 0
-		y = 2
-		relative_position_id = SOV_Army_ref_2-3_1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			if = {
-				limit = {
-					SOV = {
-						has_war_with = FIN
-					}
-				}
-				SOV = {
-					set_country_flag = SOV_war_since_purge
-				}
-				SOV = {
-					country_event = {
-						id = finland.8
-						days = 7
-					}
-					white_peace = FIN
-					transfer_state = 146
-					transfer_state = 147
-				}
-				GER = {
-					add_to_faction = FIN
-				}
-				set_global_flag = GDU_Winter_War_Over
-			}
-			set_technology = {
-				mechanised_infantry = 1
-			}
-			custom_effect_tooltip = GDU_lessons_of_war_tt
-			hidden_effect = {
-				if = {
-					limit = {
-						has_global_flag = finland_started_ai
-						FIN = {
-							is_ai = yes
-						}
-					}
-					FIN = {
-						add_state_core = 146
-						add_state_core = 147
-						set_technology = {
-							jaegers = 1
-							jaegers2 = 1
-							shocktroops = 1
-							shocktroops2 = 1
-							antitank2 = 1
-							antiair2 = 1
-							artillery1 = 1
-							improved_infantry_weapons = 1
-						}
-						add_equipment_to_stockpile = {
-							type = anti_tank_equipment_2
-							amount = 2000
-						}
-						load_oob = "FIN_MINI_GDU_SPAWN"
-						add_ideas = FIN_mini_GDU
-					}
-				}
-				GER = {
-					add_to_faction = FIN
-				}
-				# skill 4 generals and field marshals
-				create_corps_commander = {
-					name = "Nikolai Vatutin"
-					picture = "Portrait_Soviet_Nikolai_Fyodorovich_Vatutin.dds"
-					traits = {
-						winter_specialist
-						infantry_officer
-						trait_reckless
-						trait_engineer
-						infantry_leader
-						trickster
-					}
-					skill = 5
-					attack_skill = 3
-					defense_skill = 4
-					planning_skill = 3
-					logistics_skill = 3
-				}
-				create_corps_commander = {
-					name = "Filipp Golikov"
-					picture = "Portrait_Soviet_Filipp_Golikov.dds"
-					traits = {
-						winter_specialist
-						career_officer
-						brilliant_strategist
-						harsh_leader
-						panzer_leader
-						armor_officer
-						trait_reckless
-						cavalry_officer
-					}
-					skill = 4
-					attack_skill = 6
-					defense_skill = 3
-					planning_skill = 3
-					logistics_skill = 3
-				}
-				create_corps_commander = {
-					name = "Nikandr Chibisov"
-					picture = "Portrait_Soviet_Nikandr_Yevlampyevich_Chibisov.dds"
-					traits = {
-						winter_specialist
-						trickster
-						war_hero
-						urban_assault_specialist
-						infantry_leader
-						infantry_officer
-						harsh_leader
-					}
-					skill = 4
-					attack_skill = 5
-					defense_skill = 2
-					planning_skill = 1
-					logistics_skill = 4
-				}
-				create_corps_commander = {
-					name = "Andrey Vlasov"
-					picture = "Portrait_Soviet_Andrey_Vlasov.dds"
-					traits = {
-						winter_specialist
-						infantry_officer
-						skilled_staffer
-						organizer
-						trait_engineer
-						career_officer
-					}
-					id = 412
-					skill = 4
-					attack_skill = 4
-					defense_skill = 3
-					planning_skill = 1
-					logistics_skill = 5
-				}
-				create_corps_commander = {
-					name = "Ivan Fedyuninsky"
-					picture = "Portrait_Soviet_Ivan_Fedyuninsky.dds"
-					traits = {
-						winter_specialist
-						infantry_officer
-						war_hero
-						harsh_leader
-						trait_reckless
-						hill_fighter
-					}
-					skill = 4
-					attack_skill = 5
-					defense_skill = 4
-					planning_skill = 2
-					logistics_skill = 2
-				}
-				create_corps_commander = {
-					name = "Maksim Purkayev"
-					picture = "Portrait_Soviet_Maksim_Purkayev.dds"
-					traits = {
-						winter_specialist
-						career_officer
-						ranger
-						trait_reckless
-						infantry_leader
-						inflexible_strategist
-					}
-					skill = 4
-					attack_skill = 5
-					defense_skill = 5
-					planning_skill = 3
-					logistics_skill = 3
-				}
-				create_field_marshal = {
-					name = "Vasily Chuikov"
-					picture = "Portrait_Soviet_Vasily_Chuikov.dds"
-					traits = {
-						winter_specialist
-						brilliant_strategist
-						career_officer
-						infantry_leader
-						panzer_leader
-						trait_engineer
-						urban_assault_specialist
-						trait_cautious
-					}
-					skill = 4
-					attack_skill = 5
-					defense_skill = 4
-					planning_skill = 4
-					logistics_skill = 4
-				}
-			}
-			army_experience = 200
-			add_tech_bonus = {
-				bonus = 1
-				uses = 2
-				technology = tech_recon2
-				technology = tech_recon3
-				technology = tech_recon4
-				technology = tech_logistics_company2
-				technology = tech_logistics_company3
-				technology = tech_logistics_company4
-			}
-		}
-	}
-	focus = {
-		id = SOV_Army_ref_5
-		Text = "Stalin's defense department"
-		icon = GFX_SOV_Stalin_Note
-		prerequisite = {
-			focus = SOV_Army_ref_2_2
-		}
-		prerequisite = {
-			focus = SOV_Fleet_2
-		}
-		x = -1
-		y = 1
-		relative_position_id = SOV_Army_ref_2_2
-		cost = 3
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			SOV = {
-				has_completed_focus = SOV_raskovas_aviation_group
-			}
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_ideas = Defense_departament
-		}
-	}
-	#focus = {
-	#	id = SOV_Army_ref_6
-	#	Text = "STAVKA"
-	#	icon = 	GFX_SOV_Politburo
-	#	prerequisite = { focus = SOV_Army_ref_5 }
-	#	x = 0
-	#	y = 1
-	#	relative_position_id = SOV_Army_ref_5
-	#	cost = 3
-	#	ai_will_do = {
-	#		factor = 1
-	#	}
-	#
-	#	available_if_capitulated = yes
-	#
-	#	completion_reward = {
-	#	 
-	#		  
-	#	}
-	# }
-	focus = {
-		id = SOV_research_city_experiment
-		icon = GFX_Goal_Socialist_Science
-		prerequisite = {
-			focus = SOV_lessons_of_war
-		}
-		available = {
-		}
-		x = 0
-		y = 1
-		relative_position_id = SOV_lessons_of_war
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_research_slot = 1
-			add_tech_bonus = {
-				name = inf_tech_bonus
-				bonus = 1
-				uses = 1
-				category = infantry_weapons
-			}
-			add_tech_bonus = {
-				name = radar_tech_bonus
-				bonus = 1
-				uses = 1
-				category = radar_tech
-			}
-			hidden_effect = {
-				FIN = {
-					swap_ideas = {
-						remove_idea = sisu
-						add_idea = sisu_2
-					}
-				}
-			}
-		}
-	}
-	focus = {
-		id = SOV_Mechanise_the_Army
-		icon = GFX_SOV_Red_Army_Time
-		prerequisite = {
-			focus = SOV_research_city_experiment
-		}
-		x = 0
-		y = 2
-		relative_position_id = SOV_lessons_of_war
-		cost = 0
-		available = {
-			has_completed_focus = SOV_defense_of_moscow
-		}
-		search_filters = {
-		}
-		completion_reward = {
-			add_ideas = SOV_Mechanised_Corps_Expanded
-		}
-	}
-	focus = {
-		id = SOV_improove_avia
-		icon = GFX_SOV_Vasily_2
-		text = "New people in aviation"
-		prerequisite = {
-			focus = SOV_stalin_constitution
-		}
-		x = 17
-		y = 1
-		relative_position_id = SOV_stalin_constitution
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			date > 1937.6.1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			air_experience = 250
-		}
-	}
-	focus = {
-		id = SOV_aviation_cult
-		icon = GFX_Noras_USSR_aviation_cult
-		prerequisite = {
-			focus = SOV_improove_avia
-		}
-		x = 0
-		y = 1
-		relative_position_id = SOV_improove_avia
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_tech_bonus = {
-				name = air_bonus
-				bonus = 2.9
-				uses = 1
-				technology = improved_small_airframe
-			}
-		}
-	}
-	focus = {
-		id = SOV_women_pilots
-		icon = GFX_SOV_sturmovik
-		x = 1
-		y = 1
-		cost = 10
-		relative_position_id = SOV_aviation_cult
-		prerequisite = {
-			focus = SOV_aviation_cult
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			air_experience = 300
-			set_rule = {
-				can_generate_female_aces = yes
-			}
-			add_tech_bonus = {
-				name = bomber_bonus
-				bonus = 2.85
-				uses = 1
-				technology = aa_cannon_1
-			}
-		}
-	}
-	focus = {
-		id = SOV_raskovas_aviation_group
-		Text = "Vasily Stalin's proposals"
-		icon = GFX_SOV_Vasily_1
-		relative_position_id = SOV_aviation_cult
-		x = -1
-		y = 1
-		cost = 5
-		prerequisite = {
-			focus = SOV_aviation_cult
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 2
-				category = air_doctrine
-			}
-		}
-	}
-	focus = {
-		id = SOV_me262
-		icon = GFX_goal_ger_me262
-		prerequisite = {
-			focus = SOV_women_pilots
-		}
-		relative_position_id = SOV_women_pilots
-		x = 0
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			date > 1942.6.1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			set_technology = {
-				jet_engines = 1
-			}
-			add_tech_bonus = {
-				name = jet_fighter_bonus
-				bonus = 1.5
-				uses = 1
-				technology = jet_fighter1
-			}
-		}
-	}
-	focus = {
-		id = SOV_YAK_3
-		icon = GFX_SOV_Yak3
-		prerequisite = {
-			focus = SOV_women_pilots
-		}
-		prerequisite = {
-			focus = SOV_raskovas_aviation_group
-		}
-		relative_position_id = SOV_women_pilots
-		text = "Yak-3"
-		x = -2
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			date > 1942.6.1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			set_technology = {
-				advanced_small_airframe = 1
-			}
-		}
-	}
+
 	focus = {
 		id = SOV_great_purge
 		icon = GFX_Goal_Great_Purge2
 		available = {
 			has_country_flag = SOV_purge_complete
 		}
-		prerequisite = {
-			focus = SOV_stalin_constitution
-		}
+		prerequisite = { focus = SOV_stalin_constitution }
 		relative_position_id = SOV_stalin_constitution
-		x = 2
-		y = 1
+		x = 0
+		y = 2
 		cost = 0
+
 		bypass = {
 			custom_trigger_tooltip = {
 				tooltip = SOV_great_purge_complete_tt
 				has_country_flag = SOV_purge_complete
 			}
 		}
+
 		completion_reward = {
+
 			custom_effect_tooltip = SOV_great_purge_completed
+
 			#Full military purge. Hardest penalty
 			if = {
 				limit = {
@@ -1091,29 +75,132 @@ focus_tree = {
 					days = 2200
 				}
 				hidden_effect = {
-					country_event = {
-						id = soviet.37
-						days = 146
-					}
+					country_event = { id = soviet.37 days = 146 }
 				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = SOV_anti_fascist_diplomacy
+		icon = GFX_Noras_USSR_antifascist_diplomacy
+
+		prerequisite = { focus = SOV_great_purge }
+		relative_position_id = SOV_great_purge
+		x = -4
+		y = 1
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 3
+				ai_irrationality < 25
+			}
+
+			modifier = {
+				factor = 0.75
+				ai_irrationality > 30
+			}
+
+			modifier = {
+				factor = 0.5
+				ai_irrationality > 40
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			USA = { add_opinion_modifier = { target = SOV modifier = anti_fascist_diplomacy_focus } }
+			ENG = { add_opinion_modifier = { target = SOV modifier = anti_fascist_diplomacy_focus } }
+			FRA = { add_opinion_modifier = { target = SOV modifier = anti_fascist_diplomacy_focus } }
+			every_other_country = {
+				limit = { has_government = fascism }
+				add_opinion_modifier = { target = SOV modifier = anti_fascist_diplomacy_fascists }
 			}
 		}
 	}
+
+
+	focus = {
+		id = SOV_anti_capitalist_diplomacy
+		icon = GFX_Noras_USSR_anticapitalist_diplomacy
+		relative_position_id = SOV_great_purge
+		prerequisite = { focus = SOV_great_purge }
+		x = 4
+		y = 1
+
+		cost = 5
+		ai_will_do = {
+			factor = 0.25
+
+			modifier = {
+				factor = 5
+				ai_irrationality > 25
+			}
+
+			modifier = {
+				factor = 5
+				ai_irrationality > 35
+			}
+
+			modifier = {
+				factor = 2
+				ai_irrationality > 40
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_other_country = {
+				limit = { has_government = fascism }
+				add_opinion_modifier = { target = SOV modifier = anti_capitalist_diplomacy_focus }
+			}
+			USA = { add_opinion_modifier = { target = SOV modifier = anti_capitalist_diplomacy_capitalists } }
+			ENG = { add_opinion_modifier = { target = SOV modifier = anti_capitalist_diplomacy_capitalists } }
+			FRA = { add_opinion_modifier = { target = SOV modifier = anti_capitalist_diplomacy_capitalists } }
+		}
+	}
+
+	focus = {
+		id = SOV_Mechanise_the_Army
+		icon = GFX_focus_SOV_the_road_of_life
+		prerequisite = { focus = SOV_tank_cult }
+		x = 23
+		y = 5
+
+		cost = 0
+
+		available = {
+			has_completed_focus = SOV_defense_of_moscow
+		}
+		
+		search_filters = {}
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_BTR_In_Army
+		}
+	}
+
 	focus = {
 		id = SOV_finish_five_year_plan
 		icon = GFX_SOV_economy
-		prerequisite = {
-			focus = SOV_stalin_constitution
-		}
-		x = 2
+		prerequisite = { focus = SOV_stalin_constitution }
+		x = 6
 		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 5
 		}
+
 		available_if_capitulated = yes
+
 		bypass = {
-			custom_trigger_tooltip = {
+			custom_trigger_tooltip =  {
 				tooltip = construction_effort_tt
 				all_owned_state = {
 					free_building_slots = {
@@ -1124,11 +211,10 @@ focus_tree = {
 				}
 			}
 		}
+
 		complete_tooltip = {
 			every_state = {
-				limit = {
-					has_state_flag = SOV_finish_five_year_plan_2IC
-				}
+				limit = { has_state_flag = SOV_finish_five_year_plan_2IC }
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -1140,7 +226,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = GER_four_year_plan
-				bonus = 1
+				bonus = 1.0
 				uses = 1
 				technology = construction2
 			}
@@ -1205,174 +291,160 @@ focus_tree = {
 				}
 				set_state_flag = SOV_finish_five_year_plan_2IC
 			}
+
 		}
 	}
+
 	focus = {
 		id = SOV_move_industry_to_urals
-		icon = GFX_goal_soviet_infrastructure_focus
+		icon = GFX_goal_generic_construct_civilian
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = SOV_great_purge
-		prerequisite = {
-			focus = SOV_great_purge
-		}
-		cost = 4.7
+		prerequisite = { focus = SOV_great_purge }
+
+		cost = 8.6
 		ai_will_do = {
 			factor = 10
 			modifier = {
 				factor = 0
-				NOT = {
-					has_war_with = GER
-				}
+				NOT = { has_war_with = GER }
 			}
 		}
+
 		available = {
 			OR = {
 				date > 1941.6.14
 				has_war_with = GER
-				ENG = {
-					surrender_progress > 0.25
-				}
+				ENG = { surrender_progress > 0.25 }
 				IF = {
-					limit = {
-						NOT = {
-							has_start_date > 1936.1.1.12
-						}
-					}
-					USA = {
-						surrender_progress > 0.4
-					}
+				limit = { NOT = { has_start_date > 1936.1.1.12 } }
+					USA = { surrender_progress > 0.4 }
 				}
 				else_if = {
-					limit = {
-						has_start_date > 1936.1.1.12
-					}
+    					limit = {
+       			 	has_start_date > 1936.1.1.12
+   				 	}
 					OR = {
-						date > 1941.6.14
-						ENG = {
-							surrender_progress > 0.25
-						}
+    					date > 1941.6.14
+					ENG = { surrender_progress > 0.25 }
 					}
 				}
+
 			}
+
 		}
-		cancel_if_invalid = no
+		 cancel_if_invalid = no
 		continue_if_invalid = yes
 		completion_reward = {
 			custom_effect_tooltip = SOV_defense_of_moscow_capitalmove
-			set_capital = {
-				state = 251
-			}
+					set_capital = {
+					state = 251
+					}
+
+
 			add_ideas = SOV_WAR
 			add_ideas = SOV_industrial_relocations
-			94 = {
-				remove_province_modifier = {
-					static_modifiers = {
-						soviet_hero_fortress
-					}
-					province = {
-						id = 3392
+			if = { limit = { has_idea = officers_purged } remove_ideas = officers_purged }
+			if = { limit = { has_idea = officers_purged_2 } remove_ideas = officers_purged_2 }
+			if = { limit = { has_idea = officers_purged_3 } remove_ideas = officers_purged_3 }
+			if = { limit = { has_idea = officers_purged_4 } remove_ideas = officers_purged_4 }
+			if = { limit = { has_idea = officers_purged_5 } remove_ideas = officers_purged_5 }
+			if = { limit = { has_idea = officers_purged_6 } remove_ideas = officers_purged_6 }
+			if = { limit = { has_idea = officers_purged_7 } remove_ideas = officers_purged_7 }
+			if = { limit = { has_idea = officers_purged_8 } remove_ideas = officers_purged_8 }
+			if = { limit = { has_idea = officers_purged_9 } remove_ideas = officers_purged_9 }
+			if = { limit = { has_idea = officers_purged_10 } remove_ideas = officers_purged_10 }
+			add_ideas = officers_purged_9
+				94 = {
+					remove_province_modifier = {
+						static_modifiers = { soviet_hero_fortress }
+						province = {
+							id = 3392
+						}
 					}
 				}
-			}
-			218 = {
-				remove_province_modifier = {
-					static_modifiers = {
-						soviet_hero_city
-					}
-					province = {
-						id = 6136
+				218 = {
+					remove_province_modifier = {
+						static_modifiers = { soviet_hero_city }
+						province = {
+							id = 6136
+						}
 					}
 				}
-			}
 			137 = {
-				remove_province_modifier = {
-					static_modifiers = {
-						soviet_hero_city
-					}
-					province = {
-						id = 3686
-						id = 705
+					remove_province_modifier = {
+						static_modifiers = { soviet_hero_city }
+						province = {
+							id = 3686
+							id = 705
+						}
 					}
 				}
-			}
 			217 = {
-				remove_province_modifier = {
-					static_modifiers = {
-						soviet_hero_city
-					}
-					province = {
-						id = 490
-						id = 3529
-						id = 526
-						id = 3555
-						id = 498
+					remove_province_modifier = {
+						static_modifiers = { soviet_hero_city }
+						province = {
+							id = 490
+							id = 3529
+							id = 526
+							id = 3555
+							id = 498
+						}
 					}
 				}
-			}
 			219 = {
-				remove_province_modifier = {
-					static_modifiers = {
-						soviet_hero_city
-					}
-					province = {
-						id = 597
-						id = 594
-						id = 6380
-						id = 598
-						id = 593
+					remove_province_modifier = {
+						static_modifiers = { soviet_hero_city }
+						province = {
+							id = 597
+							id = 594
+							id = 6380
+							id = 598
+							id = 593
+						}
 					}
 				}
-			}
 			195 = {
-				remove_province_modifier = {
-					static_modifiers = {
-						soviet_hero_city
-					}
-					province = {
-						id = 556
-						id = 149
-						id = 538
-						id = 3151
-						id = 589
+					remove_province_modifier = {
+						static_modifiers = { soviet_hero_city }
+						province = {
+							id = 556
+							id = 149
+							id = 538
+							id = 3151
+							id = 589
+						}
 					}
 				}
-			}
 			265 = {
-				remove_province_modifier = {
-					static_modifiers = {
-						soviet_hero_city
-					}
-					province = {
-						id = 2894
-						id = 6087
-						id = 579
-						id = 6454
-						id = 3024
+					remove_province_modifier = {
+						static_modifiers = { soviet_hero_city }
+						province = {
+							id = 2894
+							id = 6087
+							id = 579
+							id = 6454
+							id = 3024
+						}
 					}
 				}
-			}
 			260 = {
-				remove_province_modifier = {
-					static_modifiers = {
-						soviet_hero_city
-					}
-					province = {
-						id = 6317
-						id = 413
-						id = 510
-						id = 6494
+					remove_province_modifier = {
+						static_modifiers = { soviet_hero_city }
+						province = {
+							id = 6317
+							id = 413
+							id = 510
+							id = 6494
+
+						}
 					}
 				}
-			}
 			hidden_effect = {
 				806 = {
 					if = {
-						limit = {
-							806 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 806 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -1382,11 +454,7 @@ focus_tree = {
 				}
 				247 = {
 					if = {
-						limit = {
-							247 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 247 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -1396,11 +464,7 @@ focus_tree = {
 				}
 				250 = {
 					if = {
-						limit = {
-							250 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 250 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -1410,11 +474,7 @@ focus_tree = {
 				}
 				822 = {
 					if = {
-						limit = {
-							822 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 822 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -1424,11 +484,7 @@ focus_tree = {
 				}
 				826 = {
 					if = {
-						limit = {
-							826 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 826 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -1438,11 +494,7 @@ focus_tree = {
 				}
 				808 = {
 					if = {
-						limit = {
-							808 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 808 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -1452,11 +504,7 @@ focus_tree = {
 				}
 				256 = {
 					if = {
-						limit = {
-							256 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 256 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -1466,11 +514,7 @@ focus_tree = {
 				}
 				821 = {
 					if = {
-						limit = {
-							821 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 821 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -1480,11 +524,7 @@ focus_tree = {
 				}
 				824 = {
 					if = {
-						limit = {
-							824 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 824 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -1494,11 +534,7 @@ focus_tree = {
 				}
 				264 = {
 					if = {
-						limit = {
-							264 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 264 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -1508,11 +544,7 @@ focus_tree = {
 				}
 				809 = {
 					if = {
-						limit = {
-							809 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 809 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -1522,11 +554,7 @@ focus_tree = {
 				}
 				832 = {
 					if = {
-						limit = {
-							832 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 832 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -1536,11 +564,7 @@ focus_tree = {
 				}
 				830 = {
 					if = {
-						limit = {
-							830 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 830 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -1550,11 +574,7 @@ focus_tree = {
 				}
 				808 = {
 					if = {
-						limit = {
-							808 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 808 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -1564,11 +584,7 @@ focus_tree = {
 				}
 				829 = {
 					if = {
-						limit = {
-							829 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 829 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 3
@@ -1578,11 +594,7 @@ focus_tree = {
 				}
 				811 = {
 					if = {
-						limit = {
-							811 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 811 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -1592,11 +604,7 @@ focus_tree = {
 				}
 				399 = {
 					if = {
-						limit = {
-							399 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 399 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -1606,11 +614,7 @@ focus_tree = {
 				}
 				807 = {
 					if = {
-						limit = {
-							807 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 807 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 6
@@ -1620,11 +624,7 @@ focus_tree = {
 				}
 				399 = {
 					if = {
-						limit = {
-							399 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 399 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -1634,11 +634,7 @@ focus_tree = {
 				}
 				400 = {
 					if = {
-						limit = {
-							400 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 400 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -1648,11 +644,7 @@ focus_tree = {
 				}
 				817 = {
 					if = {
-						limit = {
-							400 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 400 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -1662,11 +654,7 @@ focus_tree = {
 				}
 				815 = {
 					if = {
-						limit = {
-							400 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 400 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -1676,11 +664,7 @@ focus_tree = {
 				}
 				809 = {
 					if = {
-						limit = {
-							809 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 809 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -1690,11 +674,7 @@ focus_tree = {
 				}
 				406 = {
 					if = {
-						limit = {
-							406 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 406 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 4
@@ -1704,11 +684,7 @@ focus_tree = {
 				}
 				587 = {
 					if = {
-						limit = {
-							587 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 587 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 3
@@ -1718,11 +694,7 @@ focus_tree = {
 				}
 				584 = {
 					if = {
-						limit = {
-							584 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 584 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -1732,11 +704,7 @@ focus_tree = {
 				}
 				251 = {
 					if = {
-						limit = {
-							251 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 251 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 5
@@ -1746,11 +714,7 @@ focus_tree = {
 				}
 				401 = {
 					if = {
-						limit = {
-							401 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 401 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 3
@@ -1760,11 +724,7 @@ focus_tree = {
 				}
 				652 = {
 					if = {
-						limit = {
-							652 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 652 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 3
@@ -1774,11 +734,7 @@ focus_tree = {
 				}
 				239 = {
 					if = {
-						limit = {
-							239 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 239 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -1788,11 +744,7 @@ focus_tree = {
 				}
 				249 = {
 					if = {
-						limit = {
-							249 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 249 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -1802,11 +754,7 @@ focus_tree = {
 				}
 				256 = {
 					if = {
-						limit = {
-							256 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 256 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -1816,11 +764,7 @@ focus_tree = {
 				}
 				250 = {
 					if = {
-						limit = {
-							250 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 250 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -1830,11 +774,7 @@ focus_tree = {
 				}
 				351 = {
 					if = {
-						limit = {
-							351 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 351 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -1844,11 +784,7 @@ focus_tree = {
 				}
 				255 = {
 					if = {
-						limit = {
-							255 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 255 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -1858,11 +794,7 @@ focus_tree = {
 				}
 				352 = {
 					if = {
-						limit = {
-							352 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 352 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -1872,183 +804,26 @@ focus_tree = {
 				}
 			}
 		}
+
 	}
-	focus = {
-		id = SOV_defense_Odesa
-		icon = GFX_Goal_Soviet_Defense
-		prerequisite = {
-			focus = SOV_move_industry_to_urals
-		}
-		text = "Defense of Odesa"
-		relative_position_id = SOV_move_industry_to_urals
-		x = 0
-		y = 1
-		cost = 2
-		ai_will_do = {
-			factor = 0
-		}
-		completion_reward = {
-			137 = {
-				add_building_construction = {
-					type = bunker
-					level = 6
-					province = 705
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 6704
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 6724
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 2
-					province = 705
-					instant_build = yes
-				}
-			}
-			234 = {
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 6741
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 2
-					province = 719
-					instant_build = yes
-				}
-			}
-			218 = {
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = 6136
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = 585
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = 3093
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = SOV_defense_Kiev
-		icon = GFX_RUS_tank
-		prerequisite = {
-			focus = SOV_defense_Odesa
-		}
-		text = "Defense of Kiev"
-		relative_position_id = SOV_defense_Odesa
-		x = 0
-		y = 1
-		cost = 2
-		ai_will_do = {
-			factor = 0
-		}
-		completion_reward = {
-			if = {
-				limit = {
-					has_idea = officers_purged
-				}
-				remove_ideas = officers_purged
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_2
-				}
-				remove_ideas = officers_purged_2
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_3
-				}
-				remove_ideas = officers_purged_3
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_4
-				}
-				remove_ideas = officers_purged_4
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_5
-				}
-				remove_ideas = officers_purged_5
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_6
-				}
-				remove_ideas = officers_purged_6
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_7
-				}
-				remove_ideas = officers_purged_7
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_8
-				}
-				remove_ideas = officers_purged_8
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_9
-				}
-				remove_ideas = officers_purged_9
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_10
-				}
-				remove_ideas = officers_purged_10
-			}
-			add_ideas = officers_purged_9
-		}
-	}
+
+
 	focus = {
 		id = SOV_invade_Japan
 		icon = GFX_focus_AST_war_japan
-		prerequisite = {
-			focus = SOV_defense_of_moscow
-		}
+		prerequisite = { focus = SOV_defense_of_moscow }
 		available = {
 			date > 1943.6.1
 		}
-		allow_branch = {
-			NOT = {
-				has_start_date > 1936.1.1.12
-			}
-		}
+		allow_branch = { NOT = { has_start_date > 1936.1.1.12 }  }
 		relative_position_id = SOV_move_industry_to_urals
 		x = -4
-		y = 4
+		y = 2
 		cost = 4.3
 		ai_will_do = {
 			factor = 0
 		}
+
 		completion_reward = {
 			create_wargoal = {
 				type = annex_everything
@@ -2056,29 +831,124 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = SOV_proclaim_victory_over_fascism
+		icon = GFX_Goal_communist_victory
+		prerequisite = { focus = SOV_defense_of_stalingrad }
+		available = {
+			date > 1943.1.1
+		}
+		relative_position_id = SOV_move_industry_to_urals
+		x = -1
+		y = 4
+		cost = 0
+
+		completion_reward = {
+			add_ideas = soviet_union_eternal
+		}
+	}
+
+	focus = {
+		id = SOV_proclaim_victory_over_fascism2
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		prerequisite = { focus = SOV_proclaim_victory_over_fascism }
+		available = {
+			date > 1943.6.1
+		}
+		relative_position_id = SOV_move_industry_to_urals
+		x = -1
+		y = 5
+		cost = 0
+
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = soviet_union_eternal
+			add_idea = soviet_union_eternal2
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_proclaim_victory_over_fascism3
+		icon = GFX_goal_soviet_committee
+		prerequisite = { focus = SOV_proclaim_victory_over_fascism2 }
+		available = {
+			date > 1944.1.1
+		}
+		relative_position_id = SOV_move_industry_to_urals
+		x = -1
+		y = 6
+		cost = 0
+
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = soviet_union_eternal2
+			add_idea = soviet_union_eternal3
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_proclaim_victory_over_fascism4
+		icon = GFX_focus_usa_focus_on_europe1
+		prerequisite = { focus = SOV_proclaim_victory_over_fascism3 }
+		available = {
+			date > 1944.6.1
+		}
+		relative_position_id = SOV_move_industry_to_urals
+		x = -1
+		y = 7
+		cost = 0
+
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = soviet_union_eternal3
+			add_idea = soviet_union_eternal4
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_me262
+		icon = GFX_goal_ger_me262
+		prerequisite = { focus = SOV_defense_of_stalingrad }
+		relative_position_id = SOV_move_industry_to_urals
+		x = 1
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_technology = { jet_engines = 1 }
+			set_technology = { advanced_small_airframe = 1 }
+			add_tech_bonus = {
+				name = jet_fighter_bonus
+				bonus = 1.5
+				uses = 1
+				technology = modern_small_airframe
+			}
+		}
+	}
+
 	focus = {
 		id = SOV_defense_of_moscow
-		icon = GFX_goal_sov_army_rehab
-		prerequisite = {
-			focus = SOV_defense_Kiev
-		}
-		prerequisite = {
-			focus = SOV_defense_Odesa
-		}
+		icon = GFX_RUS_tank
+		prerequisite = { focus = SOV_move_industry_to_urals }
 		available = {
 			OR = {
 				date > 1941.6.14
 				has_war_with = GER
-				ENG = {
-					surrender_progress > 0.15
-				}
-				USA = {
-					surrender_progress > 0.15
-				}
+				ENG = { surrender_progress > 0.15 }
+				USA = { surrender_progress > 0.15 }
 			}
 		}
 		x = 0
-		y = 3
+		y = 1
 		relative_position_id = SOV_move_industry_to_urals
 		cost = 10
 		ai_will_do = {
@@ -2089,7 +959,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = nkvd_4
-				bonus = 2
+				bonus = 2.0
 				uses = 1
 				technology = tech_military_police4
 			}
@@ -2098,77 +968,24 @@ focus_tree = {
 				add_idea = SOV_war_for_communism
 			}
 			custom_effect_tooltip = GDU_spacer
-			if = {
-				limit = {
-					has_idea = officers_purged
-				}
-				remove_ideas = officers_purged
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_2
-				}
-				remove_ideas = officers_purged_2
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_3
-				}
-				remove_ideas = officers_purged_3
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_4
-				}
-				remove_ideas = officers_purged_4
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_5
-				}
-				remove_ideas = officers_purged_5
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_6
-				}
-				remove_ideas = officers_purged_6
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_7
-				}
-				remove_ideas = officers_purged_7
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_8
-				}
-				remove_ideas = officers_purged_8
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_9
-				}
-				remove_ideas = officers_purged_9
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_10
-				}
-				remove_ideas = officers_purged_10
-			}
+			if = { limit = { has_idea = officers_purged } remove_ideas = officers_purged }
+			if = { limit = { has_idea = officers_purged_2 } remove_ideas = officers_purged_2 }
+			if = { limit = { has_idea = officers_purged_3 } remove_ideas = officers_purged_3 }
+			if = { limit = { has_idea = officers_purged_4 } remove_ideas = officers_purged_4 }
+			if = { limit = { has_idea = officers_purged_5 } remove_ideas = officers_purged_5 }
+			if = { limit = { has_idea = officers_purged_6 } remove_ideas = officers_purged_6 }
+			if = { limit = { has_idea = officers_purged_7 } remove_ideas = officers_purged_7 }
+			if = { limit = { has_idea = officers_purged_8 } remove_ideas = officers_purged_8 }
+			if = { limit = { has_idea = officers_purged_9 } remove_ideas = officers_purged_9 }
+			if = { limit = { has_idea = officers_purged_10 } remove_ideas = officers_purged_10 }
 			add_ideas = officers_purged_10
+
 			custom_effect_tooltip = GDU_spacer
 			hidden_effect = {
 				sound_effect = rokossovsky_moscow_battle
 				806 = {
 					if = {
-						limit = {
-							806 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 806 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -2178,11 +995,7 @@ focus_tree = {
 				}
 				247 = {
 					if = {
-						limit = {
-							247 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 247 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -2192,11 +1005,7 @@ focus_tree = {
 				}
 				250 = {
 					if = {
-						limit = {
-							250 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 250 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -2206,11 +1015,7 @@ focus_tree = {
 				}
 				822 = {
 					if = {
-						limit = {
-							822 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 822 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -2220,11 +1025,7 @@ focus_tree = {
 				}
 				826 = {
 					if = {
-						limit = {
-							826 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 826 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -2234,11 +1035,7 @@ focus_tree = {
 				}
 				808 = {
 					if = {
-						limit = {
-							808 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 808 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -2248,11 +1045,7 @@ focus_tree = {
 				}
 				256 = {
 					if = {
-						limit = {
-							256 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 256 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -2262,11 +1055,7 @@ focus_tree = {
 				}
 				821 = {
 					if = {
-						limit = {
-							821 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 821 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -2276,11 +1065,7 @@ focus_tree = {
 				}
 				824 = {
 					if = {
-						limit = {
-							824 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 824 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -2290,11 +1075,7 @@ focus_tree = {
 				}
 				264 = {
 					if = {
-						limit = {
-							264 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 264 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -2304,11 +1085,7 @@ focus_tree = {
 				}
 				809 = {
 					if = {
-						limit = {
-							809 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 809 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -2318,11 +1095,7 @@ focus_tree = {
 				}
 				832 = {
 					if = {
-						limit = {
-							832 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 832 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -2332,11 +1105,7 @@ focus_tree = {
 				}
 				830 = {
 					if = {
-						limit = {
-							830 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 830 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -2346,11 +1115,7 @@ focus_tree = {
 				}
 				808 = {
 					if = {
-						limit = {
-							808 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 808 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -2360,11 +1125,7 @@ focus_tree = {
 				}
 				829 = {
 					if = {
-						limit = {
-							829 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 829 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 3
@@ -2374,11 +1135,7 @@ focus_tree = {
 				}
 				811 = {
 					if = {
-						limit = {
-							811 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 811 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -2388,11 +1145,7 @@ focus_tree = {
 				}
 				399 = {
 					if = {
-						limit = {
-							399 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 399 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -2402,11 +1155,7 @@ focus_tree = {
 				}
 				807 = {
 					if = {
-						limit = {
-							807 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 807 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 6
@@ -2416,11 +1165,7 @@ focus_tree = {
 				}
 				399 = {
 					if = {
-						limit = {
-							399 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 399 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -2430,11 +1175,7 @@ focus_tree = {
 				}
 				400 = {
 					if = {
-						limit = {
-							400 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 400 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -2444,11 +1185,7 @@ focus_tree = {
 				}
 				817 = {
 					if = {
-						limit = {
-							400 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 400 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -2458,11 +1195,7 @@ focus_tree = {
 				}
 				815 = {
 					if = {
-						limit = {
-							400 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 400 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -2472,11 +1205,7 @@ focus_tree = {
 				}
 				809 = {
 					if = {
-						limit = {
-							809 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 809 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 1
@@ -2486,11 +1215,7 @@ focus_tree = {
 				}
 				406 = {
 					if = {
-						limit = {
-							406 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 406 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 4
@@ -2500,11 +1225,7 @@ focus_tree = {
 				}
 				587 = {
 					if = {
-						limit = {
-							587 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 587 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 3
@@ -2514,11 +1235,7 @@ focus_tree = {
 				}
 				584 = {
 					if = {
-						limit = {
-							584 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 584 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -2528,11 +1245,7 @@ focus_tree = {
 				}
 				251 = {
 					if = {
-						limit = {
-							251 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 251 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 5
@@ -2542,11 +1255,7 @@ focus_tree = {
 				}
 				401 = {
 					if = {
-						limit = {
-							401 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 401 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 3
@@ -2556,11 +1265,7 @@ focus_tree = {
 				}
 				652 = {
 					if = {
-						limit = {
-							652 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 652 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 3
@@ -2570,11 +1275,7 @@ focus_tree = {
 				}
 				239 = {
 					if = {
-						limit = {
-							239 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 239 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -2584,11 +1285,7 @@ focus_tree = {
 				}
 				249 = {
 					if = {
-						limit = {
-							249 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 249 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -2598,11 +1295,7 @@ focus_tree = {
 				}
 				256 = {
 					if = {
-						limit = {
-							256 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 256 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -2612,11 +1305,7 @@ focus_tree = {
 				}
 				250 = {
 					if = {
-						limit = {
-							250 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 250 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -2626,11 +1315,7 @@ focus_tree = {
 				}
 				351 = {
 					if = {
-						limit = {
-							351 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 351 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -2640,11 +1325,7 @@ focus_tree = {
 				}
 				255 = {
 					if = {
-						limit = {
-							255 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 255 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -2654,11 +1335,7 @@ focus_tree = {
 				}
 				352 = {
 					if = {
-						limit = {
-							352 = {
-								is_controlled_by = ROOT
-							}
-						}
+						limit = { 352 = { is_controlled_by = ROOT } }
 						add_building_construction = {
 							type = infrastructure
 							level = 2
@@ -2671,7 +1348,7 @@ focus_tree = {
 			custom_effect_tooltip = GDU_spacer
 			add_tech_bonus = {
 				name = moscow_landdoc_7
-				bonus = 215
+				bonus = 215.00
 				uses = 1
 				technology = volkssturm
 				technology = firebrigades
@@ -2765,263 +1442,151 @@ focus_tree = {
 					}
 				}
 			}
-			custom_effect_tooltip = GDU_spacer
-			custom_effect_tooltip = GDU_defense_of_moscow_tt
-			hidden_effect = {
-				create_field_marshal = {
-					name = "Georgy Zhukov"
-					id = 410
-					picture = "Portrait_Soviet_Gregory_Zhukov.dds"
-					traits = {
-						winter_specialist
-						career_officer
-						media_personality
-						brilliant_strategist
-						harsh_leader
-						politically_connected
-						organizer
-						panzer_leader
-						trait_engineer
-						ranger
-					}
-					skill = 6
-					attack_skill = 8
-					defense_skill = 5
-					planning_skill = 5
-					logistics_skill = 6
-				}
-				create_field_marshal = {
-					name = "Boris Shaposhnikov"
-					picture = "Portrait_Soviet_Boris_Shaposhnikov.dds"
-					traits = {
-						winter_specialist
-						trait_cautious
-						career_officer
-						old_guard
-						infantry_officer
-						infantry_leader
-						organizer
-						defensive_doctrine
-						politically_connected
-						organizer
-					}
-					skill = 5
-					attack_skill = 5
-					defense_skill = 5
-					planning_skill = 3
-					logistics_skill = 7
-				}
-				create_corps_commander = {
-					name = "Ivan Konev"
-					id = 408
-					picture = "Portrait_Soviet_Ivan_Konev.dds"
-					traits = {
-						armor_officer
-						harsh_leader
-						politically_connected
-						panzer_leader
-						trait_reckless
-						ranger
-						trickster
-					}
-					skill = 6
-					attack_skill = 7
-					defense_skill = 2
-					planning_skill = 5
-					logistics_skill = 5
-				}
-				create_corps_commander = {
-					name = "Vasily Kuznetsov"
-					picture = "Portrait_Soviet_Vasily_Kuznetsov.dds"
-					traits = {
-						winter_specialist
-						commando
-						infantry_officer
-						politically_connected
-						infantry_leader
-						media_personality
-						war_hero
-						brilliant_strategist
-					}
-					skill = 5
-					attack_skill = 6
-					defense_skill = 6
-					planning_skill = 4
-					logistics_skill = 4
-				}
-				create_corps_commander = {
-					name = "Markian Popov"
-					picture = "Portrait_Soviet_Matkian_Popov.dds"
-					traits = {
-						infantry_officer
-						brilliant_strategist
-						urban_assault_specialist
-						trait_engineer
-					}
-					skill = 5
-					attack_skill = 6
-					defense_skill = 4
-					planning_skill = 3
-					logistics_skill = 3
-				}
-				create_corps_commander = {
-					name = "Nikolai Berzarin"
-					picture = "Portrait_Soviet_Nikolai_Berzarin.dds"
-					traits = {
-						infantry_officer
-						trait_mountaineer
-						skilled_staffer
-						old_guard
-						trait_cautious
-					}
-					skill = 5
-					attack_skill = 6
-					defense_skill = 4
-					planning_skill = 2
-					logistics_skill = 4
-				}
-				create_corps_commander = {
-					name = "Alexander Gorbatov"
-					picture = "Portrait_Soviet_Alexander_Gorbatov.dds"
-					traits = {
-						career_officer
-						cavalry_officer
-						harsh_leader
-						trait_reckless
-						infantry_leader
-					}
-					skill = 5
-					attack_skill = 4
-					defense_skill = 4
-					planning_skill = 4
-					logistics_skill = 4
-				}
-				create_corps_commander = {
-					name = "Dmitry Lelyushenko"
-					picture = "Portrait_Soviet_Dmitri_Danilovich_Lelyushenko.dds"
-					traits = {
-						armor_officer
-						trait_reckless
-						panzer_leader
-						harsh_leader
-						ranger
-						trickster
-						swamp_fox
-					}
-					skill = 6
-					attack_skill = 4
-					defense_skill = 7
-					planning_skill = 5
-					logistics_skill = 5
-				}
-				create_corps_commander = {
-					name = "Rodion Malinovsky"
-					picture = "Portrait_Soviet_Rodion_Malinovsky.dds"
-					traits = {
-						winter_specialist
-						swamp_fox
-						career_officer
-						old_guard
-						trait_cautious
-						politically_connected
-						organizer
-						ambusher
-					}
-					skill = 5
-					attack_skill = 1
-					defense_skill = 2
-					planning_skill = 2
-					logistics_skill = 7
-				}
-			}
+		custom_effect_tooltip = GDU_spacer
+		custom_effect_tooltip = GDU_defense_of_moscow_tt
+		hidden_effect = {
+		create_field_marshal = {
+			name = "Georgy Zhukov"
+			id = 410
+			picture = "Portrait_Soviet_Gregory_Zhukov.dds"
+			traits = { winter_specialist career_officer media_personality brilliant_strategist harsh_leader politically_connected organizer panzer_leader trait_engineer ranger}
+			skill = 6
+			attack_skill = 8
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 6
+		}
+
+		create_field_marshal = {
+		name = "Boris Shaposhnikov"
+			picture = "Portrait_Soviet_Boris_Shaposhnikov.dds"
+		traits = { winter_specialist trait_cautious career_officer old_guard infantry_officer infantry_leader organizer defensive_doctrine politically_connected organizer}
+		skill = 5
+
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 3
+		logistics_skill = 7
+		}
+
+		create_corps_commander = {
+		name = "Ivan Konev"
+		id = 408
+			picture = "Portrait_Soviet_Ivan_Konev.dds"
+		traits = { armor_officer harsh_leader politically_connected panzer_leader trait_reckless ranger trickster }
+		skill = 6
+		attack_skill = 7
+		defense_skill = 2
+		planning_skill = 5
+		logistics_skill = 5
+		}
+
+		create_corps_commander = {
+		name = "Vasily Kuznetsov"
+			picture = "Portrait_Soviet_Vasily_Kuznetsov.dds"
+		traits = { winter_specialist commando infantry_officer politically_connected infantry_leader media_personality war_hero brilliant_strategist }
+		skill = 5
+
+		attack_skill = 6
+		defense_skill = 6
+		planning_skill = 4
+		logistics_skill = 4
+		}
+
+		create_corps_commander = {
+		name = "Markian Popov"
+			picture = "Portrait_Soviet_Matkian_Popov.dds"
+		traits = { infantry_officer brilliant_strategist urban_assault_specialist trait_engineer}
+		skill = 5
+
+
+		attack_skill = 6
+		defense_skill = 4
+		planning_skill = 3
+		logistics_skill = 3
+		}
+
+		create_corps_commander = {
+		name = "Nikolai Berzarin"
+		picture = "Portrait_Soviet_Nikolai_Berzarin.dds"
+		traits = { infantry_officer trait_mountaineer skilled_staffer old_guard trait_cautious }
+		skill = 5
+
+		attack_skill = 6
+		defense_skill = 4
+		planning_skill = 2
+		logistics_skill = 4
+		}
+
+		create_corps_commander = {
+		name = "Alexander Gorbatov"
+		picture = "Portrait_Soviet_Alexander_Gorbatov.dds"
+		traits = { career_officer cavalry_officer harsh_leader trait_reckless infantry_leader }
+		skill = 5
+
+		attack_skill = 4
+		defense_skill = 4
+		planning_skill = 4
+		logistics_skill = 4
+		}
+
+		create_corps_commander = {
+		name = "Dmitry Lelyushenko"
+			picture = "Portrait_Soviet_Dmitri_Danilovich_Lelyushenko.dds"
+		traits = { armor_officer trait_reckless panzer_leader harsh_leader ranger trickster swamp_fox }
+		skill = 6
+
+		attack_skill = 4
+		defense_skill = 7
+		planning_skill = 5
+		logistics_skill = 5
+		}
+		create_corps_commander = {
+		name = "Rodion Malinovsky"
+			picture = "Portrait_Soviet_Rodion_Malinovsky.dds"
+		traits = { winter_specialist swamp_fox career_officer old_guard trait_cautious politically_connected organizer ambusher }
+		skill = 5
+
+
+		attack_skill = 1
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 7
+		}
+
+
 		}
 	}
-	focus = {
-		id = Holy_war
-		text = "Holy War"
-		icon = GFX_SOV_All_to_the_front
-		prerequisite = {
-			focus = SOV_defense_of_moscow
-		}
-		relative_position_id = SOV_move_industry_to_urals
-		x = 0
-		y = 4
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_ideas = All_for_The_Front
-		}
-	}
-	focus = {
-		id = Rzhev_offensive_operation
-		text = "Rzhev offensive operation"
-		icon = GFX_SOV_Rzhev
-		prerequisite = {
-			focus = Holy_war
-		}
-		prerequisite = {
-			focus = SOV_Motherland_is_calling
-		}
-		prerequisite = {
-			focus = SOV_T-34-85
-		}
-		prerequisite = {
-			focus = SOV_NKVD
-		}
-		prerequisite = {
-			focus = SOV_Chieftain
-		}
-		relative_position_id = Holy_war
-		x = 0
-		y = 2
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_timed_idea = {
-				idea = Rzhev_offensive_operation
-				days = 60
-			}
-		}
-	}
+
+}
+
 	focus = {
 		id = SOV_defense_of_stalingrad
 		icon = GFX_focus_ger_great_red_menace
-		prerequisite = {
-			focus = Rzhev_offensive_operation
-		}
+		prerequisite = { focus = SOV_defense_of_moscow }
+		prerequisite = { focus = SOV_wartime_propaganda }
+		prerequisite = { focus = SOV_extra_tech_slot_2 }
 		available = {
 			OR = {
-				date > 1941.6.14
+			date > 1941.6.14
 				has_war_with = GER
-				ENG = {
-					surrender_progress > 0.15
-				}
-				USA = {
-					surrender_progress > 0.15
-				}
+				ENG = { surrender_progress > 0.15 }
+				USA = { surrender_progress > 0.15 }
 			}
 		}
 		bypass = {
-			GER = {
-				has_capitulated = yes
-			}
+			GER = { has_capitulated = yes }
 		}
-		relative_position_id = Rzhev_offensive_operation
+		relative_position_id = SOV_move_industry_to_urals
 		x = 0
-		y = 1
-		cost = 10
+		y = 3
+		cost = 42.9
 		ai_will_do = {
 			factor = 100
 		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		completion_reward = {
+        completion_reward = {
 			custom_effect_tooltip = SOV_red_army_resurgent_tooltip
 			country_event = gduevents.5
 			swap_ideas = {
@@ -3030,7 +1595,7 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = stalingrad_landdoc_9
-				bonus = 215
+				bonus = 215.00
 				uses = 1
 				technology = modern_blitzkrieg
 				technology = werwolf_guerillas
@@ -3042,80 +1607,29 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					SOV = {
-						has_idea = GDU_SOV_Danger_To_Heartland
-					}
+					SOV = { has_idea = GDU_SOV_Danger_To_Heartland }
 				}
 				remove_ideas = GDU_SOV_Danger_To_Heartland
 			}
 			if = {
 				limit = {
-					SOV = {
-						has_idea = GDU_SOV_Heartland_Falling
-					}
+					SOV = { has_idea = GDU_SOV_Heartland_Falling }
 				}
 				remove_ideas = GDU_SOV_Heartland_Falling
 			}
-			if = {
-				limit = {
-					has_idea = officers_purged
-				}
-				remove_ideas = officers_purged
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_2
-				}
-				remove_ideas = officers_purged_2
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_3
-				}
-				remove_ideas = officers_purged_3
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_4
-				}
-				remove_ideas = officers_purged_4
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_5
-				}
-				remove_ideas = officers_purged_5
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_6
-				}
-				remove_ideas = officers_purged_6
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_7
-				}
-				remove_ideas = officers_purged_7
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_8
-				}
-				remove_ideas = officers_purged_8
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_9
-				}
-				remove_ideas = officers_purged_9
-			}
-			if = {
-				limit = {
-					has_idea = officers_purged_10
-				}
-				remove_ideas = officers_purged_10
-			}
+
+
+			if = { limit = { has_idea = officers_purged } remove_ideas = officers_purged }
+			if = { limit = { has_idea = officers_purged_2 } remove_ideas = officers_purged_2 }
+			if = { limit = { has_idea = officers_purged_3 } remove_ideas = officers_purged_3 }
+			if = { limit = { has_idea = officers_purged_4 } remove_ideas = officers_purged_4 }
+			if = { limit = { has_idea = officers_purged_5 } remove_ideas = officers_purged_5 }
+			if = { limit = { has_idea = officers_purged_6 } remove_ideas = officers_purged_6 }
+			if = { limit = { has_idea = officers_purged_7 } remove_ideas = officers_purged_7 }
+			if = { limit = { has_idea = officers_purged_8 } remove_ideas = officers_purged_8 }
+			if = { limit = { has_idea = officers_purged_9 } remove_ideas = officers_purged_9 }
+			if = { limit = { has_idea = officers_purged_10 } remove_ideas = officers_purged_10 }
+
 			217 = {
 				add_building_construction = {
 					type = bunker
@@ -3134,103 +1648,55 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = GDU_red_army_resurgent_tt
 			hidden_effect = {
+
 				sound_effect = katyusha
-				create_corps_commander = {
-					name = "Konstantin Rokossovsky"
-					id = 402
-					picture = "Portrait_Soviet_Konstantin_Rokossovsky.dds"
-					traits = {
-						armor_officer
-						panzer_leader
-						trait_cautious
-						brilliant_strategist
-						harsh_leader
-						trickster
-						panzer_expert
-						winter_specialist
-						expert_improviser
-						trait_engineer
-						war_hero
-						ranger
-					}
-					skill = 8
-					attack_skill = 8
-					defense_skill = 7
-					planning_skill = 7
-					logistics_skill = 7
-				}
-				create_corps_commander = {
-					name = "Aleksandr Vasilevsky"
-					id = 407
-					picture = "Portrait_Soviet_Aleksandr_Vasilevsky.dds"
-					traits = {
-						winter_specialist
-						armor_officer
-						politically_connected
-						trait_cautious
-						harsh_leader
-						skilled_staffer
-						panzer_leader
-						organizer
-						ranger
-					}
-					skill = 8
-					attack_skill = 5
-					defense_skill = 10
-					planning_skill = 5
-					logistics_skill = 10
-				}
-				create_field_marshal = {
-					name = "Kirill Moskalenko"
-					picture = "Portrait_Soviet_Kirill_Moskalenko.dds"
-					traits = {
-						winter_specialist
-						brilliant_strategist
-						infantry_leader
-						old_guard
-						career_officer
-						ranger
-						skilled_staffer
-					}
-					skill = 6
-					attack_skill = 7
-					defense_skill = 3
-					planning_skill = 6
-					logistics_skill = 6
-				}
+
+		create_corps_commander = {
+		name = "Konstantin Rokossovsky"
+		id = 402
+			picture = "Portrait_Soviet_Konstantin_Rokossovsky.dds"
+		traits = {  armor_officer panzer_leader trait_cautious brilliant_strategist harsh_leader trickster panzer_expert winter_specialist expert_improviser trait_engineer war_hero ranger}
+		skill = 8
+
+		attack_skill = 8
+		defense_skill = 7
+		planning_skill = 7
+		logistics_skill = 7
+		}
+
+		create_corps_commander = {
+		name = "Aleksandr Vasilevsky"
+		id = 407
+			picture = "Portrait_Soviet_Aleksandr_Vasilevsky.dds"
+		traits = { winter_specialist armor_officer politically_connected trait_cautious harsh_leader skilled_staffer panzer_leader organizer ranger}
+		skill = 8
+
+
+		attack_skill = 5
+		defense_skill = 10
+		planning_skill = 5
+		logistics_skill = 10
+		}
+
+		create_field_marshal = {
+		name = "Kirill Moskalenko"
+			picture = "Portrait_Soviet_Kirill_Moskalenko.dds"
+		traits = { winter_specialist brilliant_strategist infantry_leader old_guard career_officer ranger skilled_staffer}
+		skill = 6
+
+		attack_skill = 7
+		defense_skill = 3
+		planning_skill = 6
+		logistics_skill = 6
+		}
 			}
-		}
-	}
-	focus = {
-		id = SOV_Guards
-		text = "Make a Guard"
-		icon = GFX_goal_sov_great_patriotic_war
-		prerequisite = {
-			focus = SOV_defense_of_stalingrad
-		}
-		relative_position_id = SOV_defense_of_stalingrad
-		x = 1
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			date > 1942.6.1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_ideas = Guard
 		}
 	}
 	focus = {
 		id = SOV_production_effort
 		text = production_effort
 		icon = GFX_Soviet_War_Economy
-		prerequisite = {
-			focus = SOV_infrastructure_effort
-			focus = SOV_workers_culture
-		}
+		prerequisite = { focus = SOV_infrastructure_effort focus = SOV_workers_culture }
 		x = -3
 		y = 2
 		relative_position_id = SOV_finish_five_year_plan
@@ -3238,9 +1704,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
+
 		available_if_capitulated = yes
+
 		bypass = {
-			custom_trigger_tooltip = {
+			custom_trigger_tooltip =  {
 				tooltip = production_effort_tt
 				all_owned_state = {
 					free_building_slots = {
@@ -3251,11 +1719,10 @@ focus_tree = {
 				}
 			}
 		}
+
 		complete_tooltip = {
 			every_state = {
-				limit = {
-					has_state_flag = SOV_production_effort_2AF
-				}
+				limit = { has_state_flag = SOV_production_effort_2AF }
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -3264,15 +1731,14 @@ focus_tree = {
 				}
 			}
 		}
+
 		completion_reward = {
 			army_experience = 10
 			if = {
 				limit = {
 					653 = {
 						OR = {
-							NOT = {
-								is_controlled_by = SOV
-							}
+							NOT = { is_controlled_by = SOV }
 							AND = {
 								is_controlled_by = SOV
 								free_building_slots = {
@@ -3324,9 +1790,7 @@ focus_tree = {
 				limit = {
 					572 = {
 						OR = {
-							NOT = {
-								is_controlled_by = SOV
-							}
+							NOT = { is_controlled_by = SOV }
 							AND = {
 								is_controlled_by = SOV
 								free_building_slots = {
@@ -3375,178 +1839,15 @@ focus_tree = {
 				}
 			}
 		}
-		bypass = {
-			NOT = {
-				country_exists = ger
+	bypass = {
+				NOT = { country_exists = ger }
 			}
-		}
 	}
-	focus = {
-		id = SOV_proclaim_victory_over_fascism
-		icon = GFX_Goal_communist_victory
-		prerequisite = {
-			focus = SOV_defense_of_stalingrad
-		}
-		available = {
-			date > 1943.1.1
-		}
-		relative_position_id = SOV_defense_of_stalingrad
-		x = -1
-		y = 1
-		cost = 0
-		completion_reward = {
-			add_ideas = soviet_union_eternal
-		}
-	}
-	focus = {
-		id = SOV_proclaim_victory_over_fascism2
-		icon = GFX_focus_generic_anti_fascist_diplomacy
-		prerequisite = {
-			focus = SOV_proclaim_victory_over_fascism
-		}
-		available = {
-			date > 1943.6.1
-		}
-		relative_position_id = SOV_defense_of_stalingrad
-		x = -1
-		y = 2
-		cost = 0
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = soviet_union_eternal
-				add_idea = soviet_union_eternal2
-			}
-		}
-	}
-	focus = {
-		id = SOV_proclaim_victory_over_fascism3
-		icon = GFX_goal_soviet_committee
-		prerequisite = {
-			focus = SOV_proclaim_victory_over_fascism2
-		}
-		available = {
-			date > 1944.1.1
-		}
-		relative_position_id = SOV_defense_of_stalingrad
-		x = -1
-		y = 3
-		cost = 0
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = soviet_union_eternal2
-				add_idea = soviet_union_eternal3
-			}
-		}
-	}
-	focus = {
-		id = SOV_proclaim_victory_over_fascism4
-		icon = GFX_focus_usa_focus_on_europe1
-		prerequisite = {
-			focus = SOV_proclaim_victory_over_fascism3
-		}
-		available = {
-			date > 1944.6.1
-		}
-		relative_position_id = SOV_defense_of_stalingrad
-		x = -1
-		y = 4
-		cost = 0
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = soviet_union_eternal3
-				add_idea = soviet_union_eternal4
-			}
-		}
-	}
-	focus = {
-		id = SOV_Stalin_Organ
-		text = "Stalin's Organ"
-		icon = GFX_SOV_Katyusha
-		x = -1
-		y = 1
-		relative_position_id = SOV_production_effort
-		prerequisite = {
-			focus = SOV_production_effort
-		}
-		cost = 5
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				NOT = {
-					has_war_with = GER
-				}
-			}
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		completion_reward = {
-			add_tech_bonus = {
-				name = secret
-				bonus = 2
-				uses = 2
-				category = rocketry
-			}
-		}
-	}
-	focus = {
-		id = SOV_t_34
-		text = "T-34"
-		icon = GFX_SOV_t34_85
-		x = 1
-		y = 1
-		relative_position_id = SOV_production_effort
-		prerequisite = {
-			focus = SOV_production_effort
-		}
-		available = {
-			date > 1941.3.1
-		}
-		cost = 1
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				NOT = {
-					has_war_with = GER
-				}
-			}
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		completion_reward = {
-			add_ideas = T-34
-		}
-	}
-	focus = {
-		id = SOV_Workers_Peasants_Red_Army
-		text = "Workers and Peasants Red Army"
-		icon = GFX_Goal_Soviet_guns
-		prerequisite = {
-			focus = SOV_t_34
-		}
-		prerequisite = {
-			focus = SOV_Stalin_Organ
-		}
-		available = {
-		}
-		x = -1
-		y = 1
-		relative_position_id = SOV_t_34
-		cost = 1
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_ideas = Workers_Peasants_Red_Army
-		}
-	}
+
 	focus = {
 		id = SOV_infrastructure_effort
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = {
-			focus = SOV_finish_five_year_plan
-		}
+		prerequisite = { focus = SOV_finish_five_year_plan }
 		x = -2
 		y = 1
 		relative_position_id = SOV_finish_five_year_plan
@@ -3554,9 +1855,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
+
 		available_if_capitulated = yes
+
 		bypass = {
-			custom_trigger_tooltip = {
+			custom_trigger_tooltip =  {
 				tooltip = infrastructure_effort_tt
 				all_owned_state = {
 					free_building_slots = {
@@ -3566,11 +1869,10 @@ focus_tree = {
 				}
 			}
 		}
+
 		complete_tooltip = {
 			every_state = {
-				limit = {
-					has_state_flag = SOV_infrastructure_effort_3Inf
-				}
+				limit = { has_state_flag = SOV_infrastructure_effort_3Inf }
 				add_building_construction = {
 					type = infrastructure
 					level = 3
@@ -3578,6 +1880,7 @@ focus_tree = {
 				}
 			}
 		}
+
 		completion_reward = {
 			651 = {
 				add_building_construction = {
@@ -3585,6 +1888,7 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
+
 				set_state_flag = SOV_infrastructure_effort_3Inf
 			}
 			652 = {
@@ -3593,6 +1897,7 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
+
 				set_state_flag = SOV_infrastructure_effort_3Inf
 			}
 			405 = {
@@ -3601,6 +1906,7 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
+
 				set_state_flag = SOV_infrastructure_effort_3Inf
 			}
 			586 = {
@@ -3609,17 +1915,16 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
+
 				set_state_flag = SOV_infrastructure_effort_3Inf
 			}
 		}
 	}
+
 	focus = {
 		id = SOV_tranformation_of_nature
 		icon = GFX_goal_generic_soviet_construction
-		prerequisite = {
-			focus = SOV_improve_railway
-			focus = SOV_workers_culture
-		}
+		prerequisite = { focus = SOV_improve_railway focus = SOV_workers_culture }
 		x = 3
 		y = 2
 		relative_position_id = SOV_finish_five_year_plan
@@ -3627,9 +1932,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
+
 		available = {
 			controls_state = 404
 		}
+
 		completion_reward = {
 			add_political_power = 150
 			add_resource = {
@@ -3639,392 +1946,167 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = SOV_workers_culture
-		icon = GFX_goal_generic_construction
-		relative_position_id = SOV_finish_five_year_plan
-		prerequisite = {
-			focus = SOV_finish_five_year_plan
-		}
-		x = 0
-		y = 1
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_ideas = workers_culture
-		}
-	}
-	focus = {
-		id = SOV_progress_cult
-		icon = GFX_Noras_USSR_progress_cult
-		prerequisite = {
-			focus = SOV_workers_culture
-		}
-		x = 0
-		y = 3
-		relative_position_id = SOV_finish_five_year_plan
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_ideas = progress_cult_focus
-		}
-	}
-	focus = {
-		id = SOV_socialist_realism
-		icon = GFX_goal_soviet_committee
-		prerequisite = {
-			focus = SOV_stalin_constitution
-		}
-		relative_position_id = SOV_stalin_constitution
-		x = -7
-		y = 1
-		cost = 3
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_political_power = 75
-		}
-	}
-	focus = {
-		id = SOV_Marxism_Leninism
-		text = "Marxism-Leninism"
-		icon = GFX_SOV_Marksism
-		prerequisite = {
-			focus = SOV_socialist_realism
-		}
-		relative_position_id = SOV_socialist_realism
-		x = 0
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_timed_idea = {
-				idea = Marxism-Leninism
-				days = 365
-			}
-		}
-	}
-	focus = {
-		id = SOV_socialist_science
-		icon = GFX_Noras_USSR_socialist_science
-		prerequisite = {
-			focus = SOV_Marxism_Leninism
-		}
-		relative_position_id = SOV_Marxism_Leninism
-		x = -1
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_ideas = socialist_science_focus
-		}
-	}
-	focus = {
-		id = SOV_Pioners
-		icon = GFX_SOV_Pioners
-		text = "Pioners"
-		prerequisite = {
-			focus = SOV_socialist_science
-		}
-		relative_position_id = SOV_socialist_science
-		x = -1
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_ideas = Pioners
-		}
-	}
-	focus = {
-		id = SOV_Stalinism
-		text = "Stalinism"
-		icon = GFX_SOV_stalinization
-		prerequisite = {
-			focus = SOV_Marxism_Leninism
-		}
-		relative_position_id = SOV_Marxism_Leninism
-		x = 1
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_stability = 0.05
-		}
-	}
-	focus = {
-		id = SOV_Palace_of_the_Soviets
-		Text = "House of Soviets"
-		icon = GFX_SOV_Palace_of_the_Soviets
-		prerequisite = {
-			focus = SOV_Stalinism
-		}
-		relative_position_id = SOV_Stalinism
-		x = 1
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			219 = {
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = SOV_politburo
-		text = "Politburo"
-		icon = GFX_SOV_Politburo
-		prerequisite = {
-			focus = SOV_Stalinism
-		}
-		prerequisite = {
-			focus = SOV_socialist_science
-		}
-		relative_position_id = SOV_Stalinism
-		x = -1
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_political_power = 150
-		}
-	}
+
 	focus = {
 		id = SOV_collectivist_propaganda
-		icon = GFX_goal_sov_industry_urals
-		prerequisite = {
-			focus = SOV_politburo
-		}
-		mutually_exclusive = {
-			focus = SOV_Propaganda_Heroism
-		}
-		relative_position_id = SOV_politburo
-		x = 1
+		icon = GFX_goal_commune_politics
+		prerequisite = { focus = SOV_stalin_constitution }
+		relative_position_id = SOV_stalin_constitution
+		x = -3
 		y = 1
-		cost = 5
+
+		cost = 10
 		ai_will_do = {
 			factor = 0.25
 		}
+
 		available_if_capitulated = yes
+
 		completion_reward = {
-			add_ideas = Collectivism
+			add_stability = 0.20
 		}
 	}
+
 	focus = {
 		id = SOV_militarized_schools
-		icon = GFX_goal_sov_red_army_resurgent
-		prerequisite = {
-			focus = SOV_collectivist_propaganda
-		}
-		relative_position_id = SOV_politburo
-		x = 1
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = SOV_collectivist_propaganda }
+		relative_position_id = SOV_stalin_constitution
+		x = -3
 		y = 2
 		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
+
 		available_if_capitulated = yes
+
 		completion_reward = {
 			add_ideas = militarized_schools
 		}
 	}
+
 	focus = {
-		id = SOV_Military_training_36
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = {
-			focus = SOV_militarized_schools
-		}
-		text = "Minsk Maneuvers 1936"
-		relative_position_id = SOV_politburo
-		x = 1
-		y = 3
-		cost = 3
+		id = SOV_workers_culture
+		icon = GFX_goal_generic_construction
+		relative_position_id = SOV_finish_five_year_plan
+		prerequisite = { focus = SOV_finish_five_year_plan }
+		x = 0
+		y = 1
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
+
 		available_if_capitulated = yes
+
 		completion_reward = {
-			create_corps_commander = {
-				name = "Andrey Hrulyov"
-				picture = "Portrait_Soviet_Hrulyov_Andrey.dds"
-				traits = {
-					winter_specialist
-					infantry_officer
-					skilled_staffer
-					organizer
-					trait_engineer
-					career_officer
-				}
-				skill = 4
-				attack_skill = 3
-				defense_skill = 4
-				planning_skill = 2
-				logistics_skill = 5
+			add_ideas = workers_culture
+		}
+	}
+
+	focus = {
+		id = SOV_positive_heroism
+		icon = GFX_goal_generic_army_tanks2
+		x = 26
+		y = 1
+		prerequisite = { focus = SOV_stalin_constitution }
+
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 150
+		    army_experience = 700
+			add_tech_bonus = {
+				bonus = 2.7
+				uses = 1
+				name = mech_army_bonus
+				technology = mechanised_infantry
+			}
+			add_tech_bonus = {
+				bonus = 9.99
+				uses = 1
+				name = katyusha_bonus
+				technology = motorized_rocket_unit
 			}
 		}
 	}
+
 	focus = {
-		id = SOV_Ideal_communism
-		text = "Forward to a bright future"
-		icon = GFX_SOV_traditionalist_socialism
-		prerequisite = {
-			focus = SOV_Military_training_36
+		id = SOV_women_pilots
+		icon = GFX_SOV_sturmovik
+		x = 4
+		y = 4
+		cost = 10
+		relative_position_id = SOV_positive_heroism
+		prerequisite = { focus = SOV_aviation_cult }
+		ai_will_do = {
+			factor = 1
 		}
-		relative_position_id = SOV_Military_training_36
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 500
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 2.85
+				uses = 1
+				technology = aa_cannon_1
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_progress_cult
+		icon = GFX_Noras_USSR_progress_cult
+		prerequisite = { focus = SOV_workers_culture }
 		x = 0
-		y = 1
-		cost = 3
+		y = 3
+		relative_position_id = SOV_finish_five_year_plan
+		cost = 10
 		ai_will_do = {
-			factor = 0.25
+			factor = 1
 		}
+
 		available_if_capitulated = yes
+
 		completion_reward = {
-			add_political_power = 50
-			swap_ideas = {
-				remove_idea = Collectivism
-				add_idea = Collectivism_2
-			}
+			add_ideas = progress_cult_focus
 		}
 	}
+
 	focus = {
-		id = SOV_Propaganda_Heroism
-		icon = GFX_SOV_Zhukov_Heroism
-		Text = "Propaganda of Heroism"
-		mutually_exclusive = {
-			focus = SOV_collectivist_propaganda
-		}
-		prerequisite = {
-			focus = SOV_politburo
-		}
-		relative_position_id = SOV_politburo
-		x = -1
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 0.25
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_ideas = Heroism
-		}
-	}
-	focus = {
-		id = SOV_Heroes_social_labor
-		icon = GFX_SOV_Hero_Medal
-		prerequisite = {
-			focus = SOV_Propaganda_Heroism
-		}
-		text = "Heroes of social labor"
-		relative_position_id = SOV_politburo
-		x = -1
+		id = SOV_socialist_science
+		icon = GFX_Noras_USSR_socialist_science
+		prerequisite = { focus = SOV_socialist_realism }
+		relative_position_id = SOV_stalin_constitution
+		x = 3
 		y = 2
 		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
+
 		available_if_capitulated = yes
+
 		completion_reward = {
-			add_ideas = Heroes_social_labor
+			add_ideas = socialist_science_focus
 		}
 	}
-	focus = {
-		id = SOV_Military_training_35
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = {
-			focus = SOV_Heroes_social_labor
-		}
-		text = "Kiev Maneuvers 1935"
-		relative_position_id = SOV_politburo
-		x = -1
-		y = 3
-		cost = 3
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			create_field_marshal = {
-				name = "Joseph Stalin"
-				picture = "Portrait_SOV_Iosif_ST.dds"
-				traits = {
-					winter_specialist
-					trait_cautious
-					career_officer
-					old_guard
-					infantry_officer
-					infantry_leader
-					organizer
-					defensive_doctrine
-					politically_connected
-					organizer
-				}
-				skill = 5
-				attack_skill = 4
-				defense_skill = 4
-				planning_skill = 3
-				logistics_skill = 4
-			}
-		}
-	}
-	focus = {
-		id = SOV_Heroes
-		icon = GFX_SOV_Heroes_SocLabor
-		Text = "Heroic Nation"
-		prerequisite = {
-			focus = SOV_Military_training_35
-		}
-		relative_position_id = SOV_Military_training_35
-		x = 0
-		y = 1
-		cost = 3
-		ai_will_do = {
-			factor = 0.25
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_stability = 0.05
-			swap_ideas = {
-				remove_idea = Heroism
-				add_idea = Heroism_2
-			}
-		}
-	}
+
 	focus = {
 		id = SOV_extra_tech_slot
 		icon = GFX_Goal_Socialist_Science
-		prerequisite = {
-			focus = SOV_progress_cult
-		}
+		prerequisite = { focus = SOV_progress_cult }
 		text = extra_tech_slot
 		x = -1
 		y = 4
@@ -4033,33 +2115,60 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
 		available_if_capitulated = yes
+
 		completion_reward = {
 			add_research_slot = 1
 		}
 	}
+
 	focus = {
 		id = SOV_extra_tech_slot_2
 		icon = GFX_Goal_Communist_education
 		relative_position_id = SOV_move_industry_to_urals
 		x = 2
-		y = 4
-		cost = 4.4
+		y = 2
+		cost = 4.3
 		ai_will_do = {
 			factor = 1
 		}
+
 		available_if_capitulated = yes
+
+		available = {
+			OR = {
+				date > 1941.6.14
+				has_war_with = GER
+				ENG = { surrender_progress > 0.15 }
+				USA = { surrender_progress > 0.15 }
+			}
+		}
+
 		completion_reward = {
 			add_research_slot = 1
 			582 = {
-				add_resource = {
-					type = tungsten
-					amount = 120
-				}
+					add_resource = {
+						type = tungsten
+						amount = 120
+					}
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 2.5
+				uses = 2
+				technology = advanced_medium_tank_chassis
+				technology = advanced_light_tank_chassis
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 2.0
+				uses = 1
+				technology = advanced_heavy_tank_chassis
 			}
 			add_tech_bonus = {
 				name = patriotic_landdoc_8
-				bonus = 215
+				bonus = 215.00
 				uses = 1
 				technology = nd_conscription
 				technology = backhand_blow
@@ -4070,84 +2179,100 @@ focus_tree = {
 				technology = mechanized_wave
 			}
 		}
-		prerequisite = {
-			focus = SOV_defense_of_moscow
-		}
-		bypass = {
-			NOT = {
-				country_exists = ger
+		prerequisite = { focus = SOV_defense_of_moscow }
+			bypass = {
+				NOT = { country_exists = ger }
 			}
 		}
-	}
+
 	focus = {
-		id = SOV_T-34-85
-		Text = "Tanks for the Motherland"
-		icon = GFX_SOV_IS2
-		relative_position_id = SOV_extra_tech_slot_2
-		x = 1
-		y = 1
-		cost = 2.2
+		id = SOV_aviation_cult
+		icon = GFX_Noras_USSR_aviation_cult
+		prerequisite = { focus = SOV_positive_heroism }
+		x = 3
+		y = 3
+		relative_position_id = SOV_positive_heroism
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
+
 		available_if_capitulated = yes
+
 		completion_reward = {
+			air_experience = 25
+
 			add_tech_bonus = {
-				name = armor_bonus
-				bonus = 2.5
-				uses = 2
-				technology = advanced_medium_tank_chassis
+				name = air_bonus
+				bonus = 2.9
+				uses = 1
+				technology = improved_small_airframe
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_tank_cult
+		icon = GFX_SOV_kv1
+		prerequisite = { focus = SOV_positive_heroism }
+		x = -3
+		y = 3
+		relative_position_id = SOV_positive_heroism
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1938.1.1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 200
+			add_equipment_to_stockpile = {
+				type = motorized_rocket_equipment
+				amount = 1556
+				producer = SOV
+			}
+			add_tech_bonus = {
+				name = heavy_armor_tank_cult
+				bonus = 2.25
+				technology = improved_heavy_tank_chassis
+			}
+			add_tech_bonus = {
+				name = light_armor_tank_cult
+				bonus = 2.25
 				technology = advanced_light_tank_chassis
 			}
-			add_tech_bonus = {
-				name = armor_bonus
-				bonus = 2
-				uses = 1
-				technology = advanced_heavy_tank_chassis
-			}
-		}
-		prerequisite = {
-			focus = SOV_extra_tech_slot_2
-		}
-		bypass = {
-			NOT = {
-				country_exists = ger
-			}
 		}
 	}
+
 	focus = {
-		id = SOV_NKVD
-		Text = "Expand the NKVD"
-		icon = GFX_SOV_NKVD_meme
-		relative_position_id = SOV_extra_tech_slot_2
-		x = -1
+		id = SOV_socialist_realism
+		icon = GFX_goal_soviet_committee
+		prerequisite = { focus = SOV_stalin_constitution }
+		relative_position_id = SOV_stalin_constitution
+		x = 3
 		y = 1
-		cost = 4.4
+
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
+
 		available_if_capitulated = yes
+
 		completion_reward = {
-			add_timed_idea = {
-				idea = Order_227
-				days = 60
-			}
-		}
-		prerequisite = {
-			focus = SOV_extra_tech_slot_2
-		}
-		bypass = {
-			NOT = {
-				country_exists = ger
-			}
+			add_political_power = 150
 		}
 	}
+
 	focus = {
 		id = SOV_improve_railway
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = {
-			focus = SOV_finish_five_year_plan
-		}
+		prerequisite = { focus = SOV_finish_five_year_plan }
 		x = 2
 		y = 1
 		relative_position_id = SOV_finish_five_year_plan
@@ -4155,7 +2280,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
 		available_if_capitulated = yes
+
 		completion_reward = {
 			253 = {
 				add_building_construction = {
@@ -4163,6 +2290,7 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
+
 			}
 			248 = {
 				add_building_construction = {
@@ -4170,6 +2298,8 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
+
+
 			}
 			252 = {
 				add_building_construction = {
@@ -4177,16 +2307,15 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
+
 			}
 		}
 	}
+
 	focus = {
 		id = SOV_Sinteticheskii_Kauchuk
 		icon = GFX_Goal_Mass_Mechanization_effort
-		prerequisite = {
-			focus = SOV_workers_culture
-			focus = SOV_infrastructure_effort
-		}
+		prerequisite = { focus = SOV_workers_culture focus = SOV_infrastructure_effort }
 		x = -1
 		y = 2
 		relative_position_id = SOV_finish_five_year_plan
@@ -4194,37 +2323,34 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
+
 		available_if_capitulated = yes
+
 		completion_reward = {
 			add_ideas = SOV_Sinteticheskii_Kauchuk_idea
 			modify_building_resources = {
-				building = synthetic_refinery
-				resource = rubber
-				amount = 2
-			}
+        	   building = synthetic_refinery
+        	   resource = rubber
+        	   amount = 2
+        	}
 			add_tech_bonus = {
 				name = USA_rubber_reserve_company
-				bonus = 4
+				bonus = 4.00
 				uses = 2
 				technology = improved_rubber_processing
 				technology = advanced_rubber_processing
 				technology = modern_rubber_processing
 			}
-			set_technology = {
-				synth_oil_experiments = 1
-			}
-			set_technology = {
-				rubber_processing = 1
-			}
+
+			set_technology = { synth_oil_experiments = 1 }
+			set_technology = { rubber_processing = 1 }
 		}
 	}
+
 	focus = {
 		id = SOV_Refinery_Programm
 		icon = GFX_Goal_Mass_Mechanization_effort
-		prerequisite = {
-			focus = SOV_workers_culture
-			focus = SOV_infrastructure_effort
-		}
+		prerequisite = { focus = SOV_workers_culture focus = SOV_infrastructure_effort }
 		x = 1
 		y = 2
 		relative_position_id = SOV_finish_five_year_plan
@@ -4232,9 +2358,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
+
 		available_if_capitulated = yes
+
 		bypass = {
-			custom_trigger_tooltip = {
+			custom_trigger_tooltip =  {
 				tooltip = construction_effort_tt
 				all_owned_state = {
 					free_building_slots = {
@@ -4245,6 +2373,7 @@ focus_tree = {
 				}
 			}
 		}
+
 		completion_reward = {
 			248 = {
 				add_extra_state_shared_building_slots = 3
@@ -4275,258 +2404,290 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
-		id = SOV_peoples_commissariat
-		icon = GFX_SOV_worker_1
-		prerequisite = {
-			focus = SOV_progress_cult
-		}
-		x = 1
+		id = SOV_raskovas_aviation_group
+		icon = GFX_goal_generic_air_fighter2
+		relative_position_id = SOV_positive_heroism
+		x = 2
 		y = 4
-		relative_position_id = SOV_finish_five_year_plan
-		cost = 5
+		cost = 10
+		prerequisite = { focus = SOV_aviation_cult }
+
 		ai_will_do = {
 			factor = 1
 		}
+
 		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.00
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_ocean_going_navy
+		icon = GFX_SOV_dockyard
+		relative_position_id = SOV_stalin_constitution
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = { focus = SOV_stalin_constitution }
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 99.99
+				uses = 4
+				technology = basic_heavy_armor_scheme
+				technology = improved_heavy_armor_scheme
+				technology = basic_ship_hull_heavy
+				technology = improved_ship_hull_heavy
+			}
+		}
+	}
+
+
+	focus = {
+		id = SOV_peoples_commissariat
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = SOV_progress_cult }
+		x = 1
+		y = 4
+		relative_position_id = SOV_finish_five_year_plan
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			add_ideas = peoples_commissariat_focus
 		}
 	}
+
 	focus = {
 		id = SOV_far_east_fortification
 		icon = GFX_Goal_Soviet_Defense2
-		prerequisite = {
-			focus = SOV_anti_fascist_diplomacy
-		}
+		prerequisite = { focus = SOV_anti_fascist_diplomacy }
 		x = -1
 		y = 1
 		relative_position_id = SOV_anti_fascist_diplomacy
-		cost = 2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		available = {
-			419 = {
-				is_owned_by = ROOT
-			}
+			419 = { is_owned_by = ROOT }
 		}
 		completion_reward = {
 			218 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 5
-						province = 6136
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 6136
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 2889
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 6106
-						instant_build = yes
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = coastal_bunker
+							level = 5
+							province = 6136
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 6136
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							province = 2889
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							province = 6106
+							instant_build = yes
+						}
 					}
 				}
-			}
 			221 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 5
-						province = 3653
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 3653
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 5
-						province = 772
-						instant_build = yes
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = coastal_bunker
+							level = 5
+							province = 3653
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 3653
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = coastal_bunker
+							level = 5
+							province = 772
+							instant_build = yes
+						}
 					}
 				}
-			}
 			234 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 5
-						province = 719
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 719
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 717
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 2783
-						instant_build = yes
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = coastal_bunker
+							level = 5
+							province = 719
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 719
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							province = 717
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							province = 2783
+							instant_build = yes
+						}
 					}
 				}
-			}
 			229 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 5770
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 2749
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 2148
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 4473
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 4614
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 1536
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 5
-						province = 7661
-						instant_build = yes
-					}
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 5770
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 2749
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 2148
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 4473
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 4614
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 1536
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 7661
+							instant_build = yes
+						}
 				}
 			}
 			230 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 2261
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 6997
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 4660
-						instant_build = yes
-					}
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 2261
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 6997
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 4660
+							instant_build = yes
+						}
 				}
 			}
 			419 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 7604
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 1896
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 1641
-						instant_build = yes
-					}
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 7604
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 1896
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 1641
+							instant_build = yes
+						}
 				}
 			}
 			420 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 4901
-						instant_build = yes
-					}
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 4901
+							instant_build = yes
+						}
 				}
 			}
 		}
 	}
+
+
 	focus = {
 		id = SOV_improve_stalin_line
-		icon = GFX_SOV_Soldier_1
-		prerequisite = {
-			focus = SOV_anti_fascist_diplomacy
-			focus = SOV_anti_capitalist_diplomacy
-		}
-		available = {
-			has_offensive_war = no
-		}
+		icon = GFX_Goal_Soviet_Defense2
+		prerequisite = { focus = SOV_anti_fascist_diplomacy }
+		available = { has_offensive_war = no }
 		x = 1
 		y = 1
 		relative_position_id = SOV_anti_fascist_diplomacy
-		cost = 2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4536,9 +2697,7 @@ focus_tree = {
 			}
 			209 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
+					limit = { is_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 6
@@ -4555,9 +2714,7 @@ focus_tree = {
 			}
 			217 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
+					limit = { is_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 7
@@ -4609,34 +2766,32 @@ focus_tree = {
 				}
 			}
 			94 = {
-				add_building_construction = {
-					type = bunker
-					level = 5
-					province = 3392
-					instant_build = yes
-				}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 3392
+						instant_build = yes
+					}
 			}
 			236 = {
-				add_building_construction = {
-					type = bunker
-					level = 5
-					province = 6516
-					instant_build = yes
-				}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 6516
+						instant_build = yes
+					}
 			}
 			815 = {
-				add_building_construction = {
-					type = bunker
-					level = 5
-					province = 6575
-					instant_build = yes
-				}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 6575
+						instant_build = yes
+					}
 			}
 			195 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
+					limit = { is_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 5
@@ -4700,36 +2855,34 @@ focus_tree = {
 				}
 			}
 			146 = {
-				add_building_construction = {
-					type = bunker
-					level = 5
-					province = 6914
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 5
-					province = 3060
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 5
-					province = 6969
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 5
-					province = 6960
-					instant_build = yes
-				}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 6914
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 3060
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 6969
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 6960
+						instant_build = yes
+					}
 			}
 			264 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
+					limit = { is_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 5
@@ -4752,9 +2905,7 @@ focus_tree = {
 			}
 			244 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
+					limit = { is_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 5
@@ -4777,9 +2928,7 @@ focus_tree = {
 			}
 			263 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
+					limit = { is_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 5
@@ -4788,9 +2937,7 @@ focus_tree = {
 					}
 				}
 				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
+					limit = { is_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 5
@@ -4801,9 +2948,7 @@ focus_tree = {
 			}
 			210 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
+					limit = { is_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 4
@@ -4814,9 +2959,7 @@ focus_tree = {
 			}
 			207 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
+					limit = { is_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 4
@@ -4839,9 +2982,7 @@ focus_tree = {
 			}
 			206 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
+					limit = { is_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 4
@@ -4850,11 +2991,26 @@ focus_tree = {
 					}
 				}
 			}
+			137 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 705
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 6704
+						instant_build = yes
+					}
+				}
+			}
 			202 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
+					limit = { is_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 7
@@ -4874,12 +3030,11 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
+
 			}
 			203 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
+					limit = { is_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 7
@@ -4890,9 +3045,7 @@ focus_tree = {
 			}
 			192 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
+					limit = { is_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 5
@@ -4933,28 +3086,23 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = SOV_operation_countenance
 		icon = GFX_goal_generic_territory_or_war
 		relative_position_id = SOV_move_industry_to_urals
 		x = 4
-		y = 4
+		y = 2
 		cost = 4.3
-		prerequisite = {
-			focus = SOV_defense_of_moscow
-		}
+		prerequisite = { focus = SOV_defense_of_moscow }
 		ai_will_do = {
 			factor = 1
 		}
 		available = {
 			OR = {
 				has_war_with = GER
-				ENG = {
-					surrender_progress > 0.15
-				}
-				USA = {
-					surrender_progress > 0.15
-				}
+				ENG = { surrender_progress > 0.15 }
+				USA = { surrender_progress > 0.15 }
 			}
 		}
 		completion_reward = {
@@ -4966,224 +3114,452 @@ focus_tree = {
 				transfer_state = 416
 			}
 			ENG = {
-				country_event = {
-					id = gduevents.12
-					days = 1
-				}
+				country_event = { id = gduevents.12 days = 1 }
 				annex_country = {
 					target = PER
 					transfer_troops = no
 				}
+
 			}
-		}
+	    }
+
 		bypass = {
 			OR = {
 				266 = {
 					is_owned_by = SOV
 				}
-				GER = {
-					has_war_with = PER
-				}
+				GER = { has_war_with = PER }
 			}
 		}
+
 	}
+
 	focus = {
-		id = SOV_Kuznetsov
-		Text = "Kuznetsov's plan"
-		icon = GFX_SOV_Kuznetsov
-		relative_position_id = SOV_stalin_constitution
-		x = 8
+		id = SOV_anti_capitalist_raids
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = SOV_anti_capitalist_diplomacy }
+		relative_position_id = SOV_anti_capitalist_diplomacy
+		x = 0
 		y = 1
-		cost = 2
-		prerequisite = {
-			focus = SOV_stalin_constitution
-		}
-		available = {
-			date > 1937.1.1
-		}
+
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 0.25
+
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
-			add_ideas = nikolay_kuznetsov
+			add_popularity  = {
+			ideology = communism
+			popularity = 0.10
+		}
+
 		}
 	}
+
 	focus = {
 		id = SOV_expand_red_fleet
 		icon = GFX_soviet_navy_1
-		prerequisite = {
-			focus = SOV_Kuznetsov
-		}
-		x = 0
+		prerequisite = { focus = SOV_stalin_constitution }
+		x = -1
 		y = 1
-		relative_position_id = SOV_Kuznetsov
-		cost = 2
+		relative_position_id = SOV_stalin_constitution
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
+
 		available_if_capitulated = yes
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 99.99
-				uses = 4
-				technology = basic_heavy_armor_scheme
-				technology = improved_heavy_armor_scheme
-				technology = basic_ship_hull_heavy
-				technology = improved_ship_hull_heavy
-			}
-		}
-	}
-	focus = {
-		id = SOV_ocean_going_navy
-		icon = GFX_SOV_dockyard
-		relative_position_id = SOV_expand_red_fleet
-		x = 0
-		y = 1
-		cost = 2
-		prerequisite = {
-			focus = SOV_expand_red_fleet
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
+
 		complete_tooltip = {
 			add_ideas = nevskoye_design_bureau
 			navy_experience = 250
-			add_offsite_building = {
-				type = dockyard
-				level = 10
-			}
+			add_offsite_building = { type = dockyard level = 10 }
 		}
+
 		completion_reward = {
 			add_ideas = nevskoye_design_bureau
 			navy_experience = 250
-			add_offsite_building = {
-				type = dockyard
-				level = 10
-			}
-		}
-	}
-	focus = {
-		id = SOV_Fleet
-		text = "Soviet marines"
-		icon = GFX_SOV_Fleet_Rakov
-		relative_position_id = SOV_ocean_going_navy
-		x = -1
-		y = 1
-		cost = 2
-		prerequisite = {
-			focus = SOV_ocean_going_navy
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			SOV = {
-				has_completed_focus = SOV_Gulag_2
-			}
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 2
-				uses = 2
-				category = marine_tech
-			}
-		}
-	}
-	focus = {
-		id = SOV_Fleet_2
-		text = "Naval artillery for army"
-		icon = GFX_SOV_Rakov
-		relative_position_id = SOV_ocean_going_navy
-		x = 1
-		y = 1
-		cost = 5
-		prerequisite = {
-			focus = SOV_ocean_going_navy
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = artillery
-			}
+			add_offsite_building = { type = dockyard level = 10 }
 		}
 	}
 	### END BRANCH ###
+
 	focus = {
 		id = SOV_wartime_propaganda
-		icon = GFX_goal_sov_increase_production
-		prerequisite = {
-			focus = SOV_defense_of_moscow
-		}
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = SOV_defense_of_moscow }
 		relative_position_id = SOV_move_industry_to_urals
 		x = -2
-		y = 4
+		y = 2
 		cost = 4.3
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			OR = {
+				date > 1941.6.14
+				has_war_with = GER
+				ENG = { surrender_progress > 0.15 }
+				USA = { surrender_progress > 0.15 }
+			}
+		}
+
 		completion_reward = {
-			add_ideas = wartime_propaganda
+        add_ideas = wartime_propaganda
 		}
 		bypass = {
-			NOT = {
-				country_exists = ger
+			NOT = { country_exists = ger }
+		}
+	}
+
+	focus = {
+		id = SOV_rehabilitated_military
+		icon = GFX_Goal_Soviet_guns
+		mutually_exclusive = { focus = SOV_nkvd_primacy }
+		relative_position_id = SOV_positive_heroism
+		prerequisite = { focus = SOV_positive_heroism }
+		x = -1
+		y = 1
+
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				any_claim = yes
+				has_war = yes
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = rehabilitated_military_focus
+		}
+	}
+
+	focus = {
+		id = SOV_military_reorganization
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = SOV_rehabilitated_military }
+		x = 0
+		y = 1
+		relative_position_id = SOV_rehabilitated_military
+		cost = 10
+		ai_will_do = {
+			factor = 0.25
+			modifier = {
+				factor = 1000
+				any_claim = yes
+				has_war = yes
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.00
+				uses = 1
+				category = land_doctrine
+			}
+			army_experience = 20
+		}
+	}
+
+	focus = {
+		id = SOV_nkvd_primacy
+		icon = GFX_Goal_NKVD_Primacy
+		mutually_exclusive = { focus = SOV_rehabilitated_military }
+		relative_position_id = SOV_positive_heroism
+		prerequisite = { focus = SOV_positive_heroism }
+		x = 1
+		y = 1
+
+		cost = 10
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 1000
+				any_claim = yes
+				has_war = yes
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = nkvd
+			add_tech_bonus = {
+				name = nkvd_2
+				bonus = 2.0
+				uses = 1
+				technology = tech_military_police2
+			}
+			add_tech_bonus = {
+				bonus = 1.00
+				uses = 1
+				category = land_doctrine
 			}
 		}
 	}
+
 	focus = {
-		id = SOV_Motherland_is_calling
-		text = "Motherland is calling"
-		icon = GFX_SOV_Motherland_calls
-		prerequisite = {
-			focus = SOV_wartime_propaganda
+		id = SOV_nkvd_divisions
+		icon = GFX_SOV_hat
+		prerequisite = { focus = SOV_nkvd_primacy }
+		x = 0
+		y = 1
+		relative_position_id = SOV_nkvd_primacy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				any_claim = yes
+				has_war = yes
+			}
 		}
-		relative_position_id = SOV_wartime_propaganda
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_nkvd_upgrade_tooltip
+
+			swap_ideas = {
+				remove_idea = nkvd
+				add_idea = nkvd_2
+			}
+			add_tech_bonus = {
+				name = nkvd_3
+				bonus = 1.0
+				uses = 1
+				technology = tech_military_police3
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_lessons_of_war
+		icon = GFX_Goal_sov_art2
+		prerequisite = { focus = SOV_nkvd_divisions focus = SOV_military_reorganization }
+		available = {
+			OR = {
+				date > 1941.1.1
+				has_country_flag = SOV_war_since_purge
+			}
+		}
 		x = -1
 		y = 1
+		relative_position_id = SOV_nkvd_divisions
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				any_claim = yes
+				has_war = yes
+			}
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			if = {
+				limit = {
+					SOV = { has_war_with = FIN }
+				}
+					SOV = { set_country_flag = SOV_war_since_purge}
+					SOV = {
+						country_event = { id = finland.8 days = 7 }
+						white_peace = FIN
+						transfer_state = 146
+						transfer_state = 147
+					}
+					GER = { add_to_faction = FIN }
+					set_global_flag = GDU_Winter_War_Over
+			}
+			set_technology = { mechanised_infantry = 1 }
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				technology = mechanised_infantry2
+			}
+
+			custom_effect_tooltip = GDU_lessons_of_war_tt
+			hidden_effect = {
+			if = {
+				limit = {
+					has_global_flag = finland_started_ai
+					FIN = { is_ai = yes }
+				}
+				FIN = {
+					add_manpower = 500000
+					add_state_core = 146
+					add_state_core = 147
+					set_technology = {
+						jaegers = 1
+						jaegers2 = 1
+						shocktroops = 1
+						shocktroops2 = 1
+						antitank2 = 1
+						antiair2 = 1
+						artillery1 = 1
+						improved_infantry_weapons = 1
+					}
+					add_equipment_to_stockpile = { type = anti_tank_equipment_2 amount = 2000 }
+					load_oob = "FIN_MINI_GDU_SPAWN"
+					add_ideas = FIN_mini_GDU
+				}
+			}
+			GER = { add_to_faction = FIN }
+         # skill 4 generals and field marshals
+			create_corps_commander = {
+			name = "Nikolai Vatutin"
+				picture = "Portrait_Soviet_Nikolai_Fyodorovich_Vatutin.dds"
+			traits = { winter_specialist infantry_officer trait_reckless trait_engineer infantry_leader trickster }
+			skill = 5
+
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		create_corps_commander = {
+		name = "Filipp Golikov"
+		picture = "Portrait_Soviet_Filipp_Golikov.dds"
+		traits = { winter_specialist career_officer brilliant_strategist harsh_leader panzer_leader armor_officer trait_reckless cavalry_officer}
+		skill = 4
+
+		attack_skill = 6
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+		}
+		create_corps_commander = {
+		name = "Nikandr Chibisov"
+		picture = "Portrait_Soviet_Nikandr_Yevlampyevich_Chibisov.dds"
+		traits = { winter_specialist trickster war_hero urban_assault_specialist infantry_leader infantry_officer harsh_leader }
+		skill = 4
+
+
+		attack_skill = 5
+		defense_skill = 2
+		planning_skill = 1
+		logistics_skill = 4
+		}
+	create_corps_commander = {
+		name = "Andrey Vlasov"
+		picture = "Portrait_Soviet_Andrey_Vlasov.dds"
+		traits = { winter_specialist infantry_officer skilled_staffer organizer trait_engineer career_officer}
+		id = 412
+		skill = 4
+
+		attack_skill = 4
+		defense_skill = 3
+		planning_skill = 1
+		logistics_skill = 5
+	}
+	create_corps_commander = {
+		name = "Ivan Fedyuninsky"
+		picture = "Portrait_Soviet_Ivan_Fedyuninsky.dds"
+		traits = { winter_specialist infantry_officer war_hero harsh_leader trait_reckless hill_fighter }
+		skill = 4
+
+		attack_skill = 5
+		defense_skill = 4
+		planning_skill = 2
+		logistics_skill = 2
+	}
+	create_corps_commander = {
+	name = "Maksim Purkayev"
+		picture = "Portrait_Soviet_Maksim_Purkayev.dds"
+	traits = { winter_specialist career_officer ranger trait_reckless infantry_leader inflexible_strategist  }
+	skill = 4
+
+
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 3
+	}
+		create_field_marshal = {
+			name = "Vasily Chuikov"
+			picture = "Portrait_Soviet_Vasily_Chuikov.dds"
+			traits = { winter_specialist brilliant_strategist career_officer infantry_leader panzer_leader trait_engineer urban_assault_specialist trait_cautious}
+			skill = 4
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+
+
+			army_experience = 20
+			add_tech_bonus = {
+				name = USSR_MEME_project
+				bonus = 1.00
+				uses = 1
+				category = nuclear
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.00
+				uses = 1
+				category = land_doctrine
+			}
+	}
+}
+
+	focus = {
+		id = SOV_research_city_experiment
+		icon = GFX_Goal_Socialist_Science
+		prerequisite = { focus = SOV_lessons_of_war }
+		available = {
+
+		}
+		x = 0
+		y = 1
+		relative_position_id = SOV_lessons_of_war
 		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
-		completion_reward = {
-			add_ideas = Motherland_is_calling
-		}
-		bypass = {
-			NOT = {
-				country_exists = ger
-			}
-		}
-	}
-	focus = {
-		id = SOV_Chieftain
-		text = "Chieftain of the People"
-		icon = GFX_goal_sov_cult_of_stalin
-		prerequisite = {
-			focus = SOV_wartime_propaganda
-		}
-		relative_position_id = SOV_wartime_propaganda
-		x = 1
-		y = 1
-		cost = 4.4
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_Ideas = Chieftain_People
-		}
-		bypass = {
-			NOT = {
-				country_exists = ger
-			}
-		}
-	}
-}
 
-### END BRANCH ###
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_research_slot = 1
+
+			add_tech_bonus = {
+				name = secret
+				bonus = 1.00
+				uses = 2
+				category = rocketry
+			}
+						add_tech_bonus = {
+				name = radar_tech_bonus
+				bonus = 1.00
+				uses = 1
+				category = radar_tech
+			}
+			hidden_effect = {
+				FIN = {
+					swap_ideas = {
+						remove_idea = sisu
+						add_idea = sisu_2
+					}
+				}
+			}
+		}
+
+
+
+
+
+	}
+	### END BRANCH ###
+}
