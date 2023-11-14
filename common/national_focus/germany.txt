@@ -2418,9 +2418,6 @@ activate_mission = GER_relocate_industry_from_friesland
 			}
 		}
 	}
-
-		
-
 	
 	
 	focus = {
@@ -2441,6 +2438,61 @@ activate_mission = GER_relocate_industry_from_friesland
 
 		completion_reward = {
 			add_ideas = SOV_Mechanised_Corps_Expanded
+		}
+	}
+	
+		focus = {
+		id = GER_ussr_war_goal
+		icon = GFX_fuhrer_directive21
+		prerequisite = { focus = GER_war_with_france }
+
+		cancel = {
+			NOT = { country_exists = SOV }
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_war_with_france
+		cost = 1
+
+		available = {
+			date > 1941.1.1
+		}
+		historical_ai = {
+			NOT = {
+				any_home_area_neighbor_country = {
+					has_war_with = ROOT
+				}
+			}
+		}
+		bypass = {
+			has_war_with = SOV
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					any_home_area_neighbor_country = {
+						has_war_with = ROOT
+					}
+				}
+			}
+			modifier = {
+				factor = 0 #AI should not pick this focus if it does not share a border with the Soviets
+				NOT = {
+					any_home_area_neighbor_country = {
+						tag = SOV
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				date < 1939.1.1
+			}
+		}
+		completion_reward = {
+			unlock_decision_tooltip = GER_case_barbarossa
 		}
 	}
 
@@ -2680,61 +2732,6 @@ activate_mission = GER_relocate_industry_from_friesland
 				planning_skill = 10
 				logistics_skill = 10
 			}
-		}
-	}
-
-	focus = {
-		id = GER_ussr_war_goal
-		icon = GFX_fuhrer_directive21
-		prerequisite = { focus = GER_war_with_france }
-
-		cancel = {
-			NOT = { country_exists = SOV }
-		}
-		x = 0
-		y = 1
-		relative_position_id = GER_war_with_france
-		cost = 1
-
-		available = {
-			date > 1941.1.1
-		}
-		historical_ai = {
-			NOT = {
-				any_home_area_neighbor_country = {
-					has_war_with = ROOT
-				}
-			}
-		}
-		bypass = {
-			has_war_with = SOV
-		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					any_home_area_neighbor_country = {
-						has_war_with = ROOT
-					}
-				}
-			}
-			modifier = {
-				factor = 0 #AI should not pick this focus if it does not share a border with the Soviets
-				NOT = {
-					any_home_area_neighbor_country = {
-						tag = SOV
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-				date < 1939.1.1
-			}
-		}
-		completion_reward = {
-			unlock_decision_tooltip = GER_case_barbarossa
 		}
 	}
 	
