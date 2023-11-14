@@ -2447,14 +2447,14 @@ activate_mission = GER_relocate_industry_from_friesland
 	focus = {
 		id = GER_Prepare_Endsieg
 		icon = GFX_GER_total_war
-		prerequisite = { focus = GER_Mechanise_the_Army }
+		prerequisite = { focus = GER_ussr_war_goal }
 
 		cancel = {
 			NOT = { country_exists = SOV }
 		}
 		x = 0
 		y = 1
-		relative_position_id = 	GER_Mechanise_the_Army
+		relative_position_id = 	GER_ussr_war_goal
 		cost = 5
 
 		available = {
@@ -2606,8 +2606,8 @@ activate_mission = GER_relocate_industry_from_friesland
 			NOT = { country_exists = SOV }
 		}
 		x = 0
-		y = 2
-		relative_position_id = 	GER_Mechanise_the_Army
+		y = 1
+		relative_position_id = 	GER_Prepare_Endsieg
 		cost = 5
 
 		completion_reward = {
@@ -2639,8 +2639,8 @@ activate_mission = GER_relocate_industry_from_friesland
 			NOT = { country_exists = SOV }
 		}
 		x = 0
-		y = 4
-		relative_position_id = 	GER_Mechanise_the_Army
+		y = 3	
+		relative_position_id = 	GER_Prepare_Endsieg
 		cost = 5
 
 		completion_reward = {
@@ -2665,8 +2665,8 @@ activate_mission = GER_relocate_industry_from_friesland
 				NOT = { country_exists = SOV }
 			}
 			x = 0
-			y = 5
-			relative_position_id = 	GER_Mechanise_the_Army
+			y = 3
+			relative_position_id = 	GER_Prepare_Endsieg
 			cost = 5
 		completion_reward = {
 			sound_effect = untergang
@@ -2742,14 +2742,14 @@ activate_mission = GER_relocate_industry_from_friesland
 	focus = {
 		id = GER_fall_blau
 		icon = GFX_focus_ger_stalingrad
-		prerequisite = { focus = GER_ussr_war_goal }
+		prerequisite = { focus = GER_Mechanise_the_Army }
 
 		cancel = {
 			NOT = { country_exists = SOV }
 		}
 		x = 0
 		y = 1
-		relative_position_id = GER_ussr_war_goal
+		relative_position_id = GER_Mechanise_the_Army
 		cost = 2
 
 		available = {
@@ -3868,10 +3868,10 @@ activate_mission = GER_relocate_industry_from_friesland
 	focus = {
 		id = GER_hitlerjugend
 		icon = GFX_Generic_German_Soldiers2
-		relative_position_id = 	GER_Mechanise_the_Army
+		relative_position_id = 	GER_Prepare_Endsieg
 		prerequisite = { focus = GER_Give_Himmler_a_Chance }
 		x = -1
-		y = 3
+		y = 2
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -3894,10 +3894,10 @@ activate_mission = GER_relocate_industry_from_friesland
 	focus = {
 		id = GER_volksturm
 		icon = GFX_ger_volkssturm
-		relative_position_id = 	GER_Mechanise_the_Army
+		relative_position_id = 	GER_Prepare_Endsieg
 		prerequisite = { focus = GER_Give_Himmler_a_Chance }
 		x = 1
-		y = 3
+		y = 2
 		cost = 5
 		ai_will_do = {
 			factor = 1
