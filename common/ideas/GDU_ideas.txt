@@ -6,6 +6,110 @@ ideas = {
 
 	country = {
 
+		AXIS_attack_bonus_1 = {
+			allowed = {
+				always = yes
+			}
+
+			picture = barbarossa
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.05	
+            }
+		}
+		AXIS_attack_bonus_2 = {
+			allowed = {
+				always = yes
+			}
+
+			picture = barbarossa
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.15	
+            }
+		}
+		AXIS_attack_bonus_3 = {
+			allowed = {
+				always = yes
+			}
+
+			picture = barbarossa
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.1	
+            }
+		}
+		SOV_attack_bonus_1 = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = SPR_anti_fascist_crusade
+			removal_cost = -1
+			
+			
+			modifier = {
+				army_attack_factor = 0.05
+			}
+		}
+		SOV_attack_bonus_2 = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_anti_fascist_crusade
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.15
+			}
+		}
+		SOV_attack_bonus_3 = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_anti_fascist_crusade
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.1
+			}
+		}
 		GDU_fine = {
 			allowed = {
 				always = yes
@@ -19,8 +123,8 @@ ideas = {
 			
 			
 			modifier = {
-				industrial_capacity_factory = -9
-				industrial_capacity_dockyard = -9
+				industrial_capacity_factory = -0.99
+				industrial_capacity_dockyard = -0.99
 			}
 		
 		}
@@ -1762,7 +1866,7 @@ ideas = {
 			
 			modifier = { 
 				stability_factor = 0.10
-				consumer_goods_factor = -0.02
+				consumer_goods_expected_value = -0.02
 				army_core_attack_factor = -0.2
 				army_core_defence_factor = -0.2
 				army_attack_factor = 0.20
@@ -1782,7 +1886,7 @@ ideas = {
 			
 			modifier = { 
 				stability_factor = 0.1
-				consumer_goods_factor = -0.02
+				consumer_goods_expected_value = -0.02
 				army_speed_factor = 0.025
 				production_factory_max_efficiency_factor = 0.075
 				production_speed_fuel_silo_factor = 0.35
@@ -1805,7 +1909,7 @@ ideas = {
 			
 			modifier = { 
 				stability_factor = 0.20
-				consumer_goods_factor = -0.03
+				consumer_goods_expected_value = -0.03
 				army_speed_factor = 0.025
 				production_factory_max_efficiency_factor = 0.1
 				production_speed_fuel_silo_factor = 0.35
@@ -1881,22 +1985,13 @@ ideas = {
 					air_attack = 0.10
 					instant = yes
 				}
-				jet_large_plane_airframe = {
-					air_attack = 0.10
-					instant = yes
-				}				
-				jet_medium_plane_airframe = {
-					air_attack = 0.10
-					instant = yes
-				}
+								
+			
 				cv_small_plane_airframe  = {
 					air_attack = 0.10
 					instant = yes
 				} 
-				cv_large_plane_airframe = {
-					air_attack = 0.10
-					instant = yes
-				}
+
 				small_plane_naval_bomber_airframe = {
 					air_attack = 0.10
 					instant = yes
@@ -1954,23 +2049,13 @@ ideas = {
 				large_plane_airframe = {
 					air_attack = 0.35
 					instant = yes
-				}
-				jet_large_plane_airframe = {
-					air_attack = 0.35
-					instant = yes
 				}				
-				jet_medium_plane_airframe = {
-					air_attack = 0.35
-					instant = yes
-				}
+			
 				cv_small_plane_airframe  = {
 					air_attack = 0.35
 					instant = yes
 				} 
-				cv_large_plane_airframe = {
-					air_attack = 0.35
-					instant = yes
-				}
+				
 				small_plane_naval_bomber_airframe = {
 					air_attack = 0.35
 					instant = yes
@@ -2031,23 +2116,13 @@ ideas = {
 				large_plane_airframe = {
 					air_attack = 0.6
 					instant = yes
-				}
-				jet_large_plane_airframe = {
-					air_attack = 0.6
-					instant = yes
 				}				
-				jet_medium_plane_airframe = {
-					air_attack = 0.6
-					instant = yes
-				}
+				
 				cv_small_plane_airframe  = {
 					air_attack = 0.6
 					instant = yes
 				} 
-				cv_large_plane_airframe = {
-					air_attack = 0.6
-					instant = yes
-				}
+				
 				small_plane_naval_bomber_airframe = {
 					air_attack = 0.6
 					instant = yes
@@ -2107,23 +2182,12 @@ ideas = {
 				large_plane_airframe = {
 					air_attack = 0.85
 					instant = yes
-				}
-				jet_large_plane_airframe = {
-					air_attack = 0.85
-					instant = yes
-				}				
-				jet_medium_plane_airframe = {
-					air_attack = 0.85
-					instant = yes
-				}
+				}			
+				
 				cv_small_plane_airframe  = {
 					air_attack = 0.85
 					instant = yes
 				} 
-				cv_large_plane_airframe = {
-					air_attack = 0.85
-					instant = yes
-				}
 				small_plane_naval_bomber_airframe = {
 					air_attack = 0.85
 					instant = yes
@@ -2161,7 +2225,7 @@ ideas = {
 			picture = gdu_refinery_no
 			
 			modifier = {
-				production_speed_synthetic_refinery_factor = -0.25
+				production_speed_synthetic_refinery_factor = -0.5
 			}
 		} 
 	
@@ -2176,7 +2240,7 @@ ideas = {
 			picture = gdu_refinery_no
 			
 			modifier = {
-				production_speed_synthetic_refinery_factor = -0.25
+				production_speed_synthetic_refinery_factor = -0.5
 			}
 		} 
 	
@@ -2313,7 +2377,7 @@ ideas = {
 			
 
 			modifier = {
-				consumer_goods_factor = 2.0
+				consumer_goods_expected_value = 2.0
 			}
 		}
 
@@ -2948,7 +3012,7 @@ ideas = {
 		
 		EFI_START = {
 			cancel = {
-				date > 1936.01.01
+				date > 1936.01.10
 			}
 
 			allowed = {
@@ -2989,7 +3053,7 @@ ideas = {
 			removal_cost = -1
 	
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_expected_value = -0.05
 			}		
 		}
 	}

@@ -70,10 +70,10 @@ scripted_diplomatic_actions = {
         #############
         can_be_sent = { always = yes }
         complete_effect = {
-			add_opinion_modifier = { 
-				target = ROOT 
-				modifier = given_manpower_country_modifier
-			}
+			#add_opinion_modifier = { 
+			#	target = ROOT 
+			#	modifier = given_manpower_country_modifier
+			#}
 			ROOT = {
 				set_country_flag = {
 					flag = eda_relation_action_cooldown@PREV

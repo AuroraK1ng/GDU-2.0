@@ -551,11 +551,11 @@ country_event = {
 					create_corps_commander = {
 						name = "Edgard de Larminat"
 						picture = "Portrait_France_Generic_land_4.dds"
-						traits = { war_hero politically_connected trait_reckless cavalry_leader armor_officer exiled_leader }
-						skill = 4
-						attack_skill = 5
-						defense_skill = 3
-						planning_skill = 1
+						traits = { career_officer trickster infantry_leader cavalry_officer panzer_leader skilled_staffer old_guard trait_cautious brilliant_strategist }
+						skill = 6
+						attack_skill = 7
+						defense_skill = 4
+						planning_skill = 5
 						logistics_skill = 4
 					}
 					create_corps_commander = {
@@ -579,6 +579,7 @@ country_event = {
 						coordination_skill = 3
 					}
 					set_country_flag = free_france
+					set_cosmetic_tag = FRA_FREE
 					set_capital = { state  = 539}
 					remove_ideas = FRA_matignon_agreements
 					change_tag_from = FRA
@@ -829,54 +830,23 @@ country_event = {
 		name = gduvichy.9.a
 
 	}
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 country_event = {
 	id = gduvichy.10
 	title = gduvichy.10.t
 	desc = gduvichy.10.d
 	picture = GFX_report_event_canadian_soldiers
-
 	hidden = yes
-
 	is_triggered_only = yes
-
 	immediate = {
-
-
-				FRA = {	set_equipment_fraction = 0.0 }
-
-
+		FRA = {	set_equipment_fraction = 0.0 }
 	}
-
 	option = {
 		name = gduvichy.10.a
 
 	}
-
-
-
 }
-
-
-
 
 country_event = {
 	id = gduvichy.11
@@ -889,37 +859,36 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-
-
-				GER = {
-
+		GER = {
 			add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 65000 producer = GER }
-
 			add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 4500 producer = GER }
-
 			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 11000 producer = GER }
-
 			add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 4500 producer = GER }
-
 			add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 7000 producer = GER }
 			add_equipment_to_stockpile = { type = support_equipment_1 amount = 5000 producer = GER }
-
-			add_equipment_to_stockpile = { type = heavy_tank_chassis_1 amount = 300 producer = GER }
-			add_equipment_to_stockpile = { type = light_tank_chassis_2 amount = 2000 producer = GER }
-			add_equipment_to_stockpile = { type = medium_tank_chassis_1 amount = 1500 producer = GER }
-			add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 500 producer = GER }
+			create_equipment_variant = {
+				name = "Panzer III-A" 	
+				type = medium_tank_chassis_1
+				modules = {
+					main_armament_slot = tank_medium_cannon
+					turret_type_slot = tank_medium_three_man_tank_turret
+					special_type_slot_1 = secondary_turret_small_cannon
+					special_type_slot_2 = additional_machine_guns
+					special_type_slot_3 = armor_skirts
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
 				}
-
-
+			}	
+			add_equipment_to_stockpile = { type = medium_tank_chassis_1 variant_name = "Panzer III-A" amount = 1500 producer = GER } 
+			add_equipment_to_stockpile = { type = light_tank_chassis_2 variant_name = "Panzer II" amount = 2000 producer = GER }
+		}
 	}
 
 	option = {
 		name = gduvichy.11.a
 
 	}
-
-
-
 }
 
 
@@ -932,24 +901,17 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-
-				FRA = {
-					transfer_state = 774
-					transfer_state = 268
-					transfer_state = 708
-					transfer_state = 706
-				}
-
-
+		FRA = {
+		transfer_state = 774
+		transfer_state = 268
+		transfer_state = 708
+		transfer_state = 706
+		}
 	}
 
 	option = {
 		name = gduvichy.13.a
-
 	}
-
-
-
 }
 
 
@@ -963,26 +925,20 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-
-				ENG = {
-					add_to_faction = FRA
-				}
-				FRA = {
-					add_to_war = {
-						targeted_alliance = ENG
-						enemy = GER
-					}
-				}
-
+		ENG = {
+			add_to_faction = FRA
+		}
+		FRA = {
+			add_to_war = {
+			targeted_alliance = ENG
+			enemy = GER
+			}
+		}
 	}
 
 	option = {
 		name = gduvichy.14.a
-
 	}
-
-
-
 }
 
 

@@ -1,0 +1,249 @@
+
+ROM_leonidas_works_organization = {
+	include = generic_tank_organization
+	icon = GFX_idea_ROM_leonidas_works
+	allowed = { 
+		tag = ROM
+		has_dlc = "Death or Dishonor"
+	}
+	
+	add_trait = {
+	
+		available = { #Two FROM blocs to provide two different check marks in the UI
+			FROM = {
+				has_completed_focus = GER_Mechanise_the_Army
+			}
+		}
+		
+		token = GER_mio_trait_hotrolled_armor
+		name = GER_mio_trait_hotrolled_armor
+		icon = GFX_generic_mio_department_icon_tank_general_technology
+		special_trait_background = yes
+
+		equipment_bonus = {
+			soft_attack = 0.2
+			hard_attack = 0.2
+			maximum_speed = 0.1
+			defense = 0.25
+			breakthrough = 0.15
+			build_cost_ic = 0.5
+		}
+		position = {
+			x = 9
+			y = 0
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_multilayer_armour
+		name = GER_mio_trait_multilayer_armour
+		icon = GFX_generic_mio_trait_icon_armor_value
+		special_trait_background = yes
+		
+		any_parent = {
+			GER_mio_trait_hotrolled_armor
+		}
+		equipment_bonus = {
+			armor_value = 0.6
+		}
+		position = {
+			x = 9
+			y = 2
+		}
+	}		
+	add_trait = {
+		token = generic_mio_trait_standardized_components
+		name = generic_mio_trait_standardized_components
+		icon = GFX_generic_mio_department_icon_tank_general_line_efficiency
+		
+		position = { x=2 y=2 }
+		relative_position_id = generic_mio_trait_simplified_suspension
+		
+		limit_to_equipment_type = {
+			#light_tank_rocket_chassis
+			medium_tank_rocket_chassis
+			heavy_tank_rocket_chassis
+		}
+		
+		any_parent = { generic_mio_trait_simplified_suspension generic_mio_trait_crew_ergonomics }
+
+		equipment_bonus = {
+			reliability = 0.05
+			soft_attack = -0.1
+			hard_attack = 0.75
+			build_cost_ic = -0.1
+		}
+	}
+}
+
+
+ROM_galati_shipyard_organization = {
+	icon = GFX_idea_generic_coastal_navy
+	include = 	generic_battle_line_ship_organization 
+	allowed = { 
+		tag = ROM
+	}
+	
+	remove_trait = { generic_mio_trait_super_heavy_shells generic_mio_trait_secondary_fire_director_control } 
+	
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+	}
+}
+
+ROM_Braila_organization = {
+	include = generic_black_sea_fleet_organization
+	icon = GFX_idea_generic_sea_focused_navy
+	allowed = { 
+		tag = ROM
+		has_dlc = "Death or Dishonor"
+	}
+}
+
+
+
+              
+                 
+             
+                   
+              
+
+
+
+ ROM_iar_organization = {
+ 	include = generic_light_aircraft_organization
+ 	icon = GFX_idea_ROM_iar
+ 	allowed = { 
+ 		tag = ROM
+ 	}
+ }
+
+ ROM_icar_organization = {
+ 	include = generic_medium_aircraft_organization
+ 	icon = GFX_idea_ROM_ICAR
+ 	allowed = { 
+ 		tag = ROM
+ 		has_dlc = "Death or Dishonor"
+ 	}
+	
+	 add_trait = {
+ 		token = generic_mio_trait_heavily_armed_aircraft
+ 		name = generic_mio_trait_heavily_armed_aircraft
+ 		icon = GFX_generic_mio_department_icon_plane_fighter_combat
+
+ 		position = { x=9 y=0 }
+
+ 		visible = {
+ 			has_dlc = "Death or Dishonor"
+ 		}
+		
+	limit_to_equipment_type = {
+		mio_cat_eq_all_small_plane
+		medium_plane_airframe
+		mio_cat_eq_all_large_plane
+	}
+
+ 		equipment_bonus = {
+ 			air_attack = 0.1
+ 		}
+ 	}
+ }
+
+ ROM_set_organization = {
+ 	include = generic_naval_aircraft_organization
+ 	icon = GFX_idea_ROM_SET
+ 	allowed = { 
+ 		tag = ROM
+ 		has_dlc = "Death or Dishonor"
+ 	}
+	
+	remove_trait = { generic_mio_trait_patrol_fuel_tanks generic_mio_trait_internal_torpedo_mountings generic_mio_agility_wing_design generic_mio_strength_wing_design generic_mio_air_cooled_engines }
+	
+	initial_trait = {
+		name = generic_mio_initial_trait_naval_aircraft_designer
+		
+		limit_to_equipment_type = { small_plane_naval_bomber_airframe cv_small_plane_naval_bomber_airframe }
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+
+	add_trait = {
+		token = ITA_mio_trait_air_race_pedigree
+		name = ITA_mio_trait_air_race_pedigree
+		icon = GFX_generic_mio_department_icon_plane_medium_engine
+		special_trait_background = yes
+		
+		position = { x=-1 y=1 }  
+		relative_position_id = generic_mio_trait_reinforced_fuselage
+		
+		all_parents = { generic_mio_trait_reinforced_fuselage }
+		
+		equipment_bonus = {
+			reliability = -0.1
+			air_range = 0.1
+		}
+	}
+
+	add_trait = {
+		token = ITA_mio_trait_special_aerotorpedoes_unit
+		name = ITA_mio_trait_special_aerotorpedoes_unit
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
+		special_trait_background = yes
+		
+		position = { x=2 y=0 }  
+		relative_position_id = ITA_mio_trait_air_race_pedigree
+		
+		all_parents = { generic_mio_trait_reinforced_fuselage }
+		
+		equipment_bonus = {
+			reliability = -0.05
+			naval_strike_attack = 0.05
+		}
+	}
+
+	add_trait = {
+		token = ITA_mio_trait_remote_operated
+		name = ITA_mio_trait_remote_operated
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		special_trait_background = yes
+		
+		position = { x=1 y=1 }  
+		relative_position_id = ITA_mio_trait_air_race_pedigree
+		
+		all_parents = { ITA_mio_trait_special_aerotorpedoes_unit ITA_mio_trait_air_race_pedigree }
+		
+		equipment_bonus = {
+			build_cost_ic = -0.1
+		}
+	}
+ }
+
+
+######################################################           MATERIAL MIO
+
+ROM_cugir_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_ROM_cugir 
+	allowed = { 
+		original_tag = ROM
+	}
+}
+
+ROM_malaxa_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_ROM_malaxa
+	allowed = { 
+		tag = ROM
+	}
+	initial_trait = {
+
+	}
+}
+

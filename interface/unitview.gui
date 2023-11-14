@@ -30,7 +30,7 @@ guiTypes = {
 			Orientation = upper_left
 			clipping = no
 			show_animation_type = decelerated
-			animation_time = 1
+			animation_time = 400
 			closed_position = { x = 87 y = 0 }
 			open_position = { x = 430 y = 0 }
 			peek_position = { x = 107 y = 0 }
@@ -290,7 +290,7 @@ guiTypes = {
 				show_position = { x = 0 y = 0 }
 				show_animation_type = decelerated
 				hide_animation_type = accelerated
-				animation_time = 1
+				animation_time = 300
 				size = { width=422 height=240 }
 				Orientation = upper_left
 
@@ -298,7 +298,7 @@ guiTypes = {
 					name = "expeditionary_force_button"
 					position = {x=0 y=0}
 					spriteType = "GFX_expeditionary_button_bg"
-					font = "hoi_16mbs"
+					font = "hoi_18mbs"
 					clicksound = click_default
 					text = "REQUEST_EXPEDITIONARIES"
 					borderSize = {x = 20 y = 0}
@@ -350,7 +350,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "armies_count_box"
 			position = { x = 25 y = 9 }
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			maxWidth = 28
 			maxHeight = 23
 			fixedsize = yes
@@ -380,7 +380,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "army_group_count_box"
 			position = { x = 253 y = 13 }
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			maxWidth = 28
 			maxHeight = 23
 			fixedsize = yes
@@ -428,7 +428,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "divisions_count"
 			position = {x=312 y=12}
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			maxWidth = 90
 			maxHeight = 23
 			format = center
@@ -508,6 +508,7 @@ guiTypes = {
 		}
 
 		buttonType = {
+			hide=yes
 			name = "assign_staff_office"
 			position = { x=38 y = 81}
 			quadTextureSprite ="GFX_give_role_leader_strip"
@@ -543,7 +544,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "leader_skill"
 			position = {x=196 y=41}
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			maxWidth = 30
 			maxHeight = 23
 			format = center
@@ -684,25 +685,11 @@ guiTypes = {
 			}
 		}
 
-		OverlappingElementsBoxType = {
-			name = "divisions_summary"
-			position = { x=79 y=75 }
-			size = { x=192 y=27 }
-			spacing = 0
-		}
-
-		positionType = {
-			name = "divisions_summary_max_item_count"
-			 # x is used to set the max number of items that will be displayed in the divisions_summary. Any items
-			 # beyond that are not displayed.
-			position = { x=11 y=0 }
-		}
-
 		buttonType = {
 			name = "select_all_button"
 			position = {x=260 y=77}
 			spriteType = "GFX_select_all_armylist_short_btn"
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			clicksound = click_default
 		}
 		positionType = {
@@ -751,45 +738,21 @@ guiTypes = {
 			name = "select_all_wings_button"
 			position = {x=387 y=77}
 			spriteType = "GFX_army_select_wings_btn"
-			buttonFont = "hoi_16mbs"
-			clicksound = click_default
-		}
-	}
-
-	containerWindowType = {
-		name = "divisions_summary_item"
-		size = { width=31 height=27 }
-
-		buttonType = { # Resized in code to avoid overlapping button area with its neighbors and to fill the container's full height.
-			name = "button"
-			quadTextureSprite = "GFX_tiled_window_transparent"
+			buttonFont = "hoi_18mbs"
 			clicksound = click_default
 		}
 
-		iconType = {
-			name ="selection_marker"
-			spriteType = "GFX_army_badge_division_summary_item_selected"
-			position = { x=0 y=-1 }
-			orientation = center_down
-			centerposition = yes
-			alwaystransparent = yes
+		OverlappingElementsBoxType = {
+			name = "divisions_summary"
+			position = { x=79 y=75 }
+			size = { x=192 y=27 }
+			spacing = 0
 		}
-
-		iconType = {
-			name ="icon"
-			position = { x=1 y=2 }
-			alwaystransparent = yes
-		}
-
-		instantTextBoxType = {
-			name = "count"
-			position = { x=0 y=11 }
-			maxWidth = 31
-			font = "hoi_16mbs"
-			format = center
-			fixedsize = yes
-			truncate = no
-			alwaystransparent = yes
+		positionType = {
+			name = "divisions_summary_max_item_count"
+			 # x is used to set the max number of items that will be displayed in the divisions_summary. Any items
+			 # beyond that are not displayed.
+			position = { x=11 y=0 }
 		}
 	}
 
@@ -844,7 +807,7 @@ guiTypes = {
 					show_position = { x = 0 y = 25 }
 					show_animation_type = decelerated
 					hide_animation_type = accelerated
-					animation_time = 1
+					animation_time = 300
 					size = { width=219 height=270 }
 					verticalScrollbar = "right_vertical_slider"
 					scroll_wheel_factor = 50
@@ -872,7 +835,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "selected_division_count"
 				position = {x=75 y=13}
-				font = "hoi_16mbs"
+				font = "hoi_18mbs"
 				maxWidth = 130
 				maxHeight = 23
 				format = left
@@ -909,7 +872,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "transport_weight"
 				position = {x=245 y=14}
-				font = "hoi_16mbs"
+				font = "hoi_18mbs"
 				maxWidth = 62
 				maxHeight = 23
 				format = center
@@ -1199,7 +1162,7 @@ guiTypes = {
 			show_position = {x=0 y=0}
 			show_animation_type = decelerated
 			hide_animation_type = decelerated
-			animation_time = 1
+			animation_time = 300
 			size = { width=422 height=222 }
 
 			background = {
@@ -1217,7 +1180,7 @@ guiTypes = {
 				name = "title"
 				position = { x = 20 y = 14 }
 				textureFile = ""
-				font = "hoi_16mbs"
+				font = "hoi_18mbs"
 				borderSize = {x = 0 y = 0}
 				text = "REQUEST_EXPEDITIONARIES"
 				maxWidth = 500
@@ -1272,7 +1235,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "total_units"
 				position = { x=29 y=179 }
-				font = "hoi_16mbs"
+				font = "hoi_18mbs"
 				borderSize = {x = 0 y = 0}
 				text = "TOTAL_UNITS"
 				maxWidth = 245
@@ -1317,7 +1280,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "country_name"
 			position = { x=63 y=10 }
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			text = "Kazakhstan"
 			maxWidth = 245
@@ -1415,7 +1378,7 @@ guiTypes = {
 			spriteType = "GFX_UV_unit_entry_bg"
 			clicksound = click_default
 		}
-
+		
 		instantTextboxType = {
 			name = "unit_name"
 			position = {x=180 y=2}
@@ -1450,8 +1413,8 @@ guiTypes = {
 			spriteType = "GFX_unit_infantry_icon_medium" # <- Replaced in code
 			position = { x=21 y=-6 }
 			clicksound = click_default
-		}
-
+		}		
+		
 		iconType = {
 			name = "fake_unit_icon_indicator"
 			spriteType = "GFX_unit_infantry_icon_medium"
@@ -1594,7 +1557,13 @@ guiTypes = {
 			quadTextureSprite ="GFX_unitlist_colonial_flag_frame"
 			position = { x=69 y=13 }
 		}
-
+		
+		buttonType = {
+			name = "available_medals"
+			spriteType = "GFX_assign_medal_indicator"
+			position = { x=79 y=4 }
+		}
+		
 		iconType = {
 			name = "exile_force_flag_frame"
 			quadTextureSprite ="GFX_unitlist_exile_flag_frame"
@@ -1675,7 +1644,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "archetype_name"
 			position = { x = 10 y = 5 }
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			fixedsize = yes
@@ -1687,7 +1656,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "archetype_amount"
 			position = { x = 190 y = 5 }
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 72
@@ -1730,7 +1699,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "equipment_name"
 			position = { x =104 y = 0 }
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 110
@@ -1742,7 +1711,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "equipment_amount"
 			position = { x = 178 y = 0 }
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 80
@@ -1771,7 +1740,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "equipment_name"
-			position = { x = -100 y = -20 }
+			position = { x = -75 y = -20 }
 			font = "hoi_24header"
 			borderSize = {x = 0 y = 0}
 			text = "name"
@@ -1856,7 +1825,7 @@ guiTypes = {
 			spriteType = "GFX_unit_stats_view_tabs"
 			position = { x=10 y=487 }
 			buttonText = "UNIT_STATS_STATS_TAB"
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 		}
 
 		buttonType = {
@@ -1864,7 +1833,7 @@ guiTypes = {
 			spriteType = "GFX_unit_stats_view_tabs"
 			position = { x=130 y=487 }
 			buttonText = "UNIT_STATS_TEMPLATE_TAB"
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 		}
 
 		buttonType = {
@@ -1872,8 +1841,9 @@ guiTypes = {
 			spriteType = "GFX_unit_stats_view_tabs"
 			position = { x=250 y=487 }
 			buttonText = "UNIT_STATS_HISTORY_TAB"
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 		}
+
 		Background = {
 			name = "unit_stats_bg"
 			quadTextureSprite = "GFX_unit_stats_bg"
@@ -1912,7 +1882,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "experience"
 			position = { x = 385 y = 41 }
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			text = ""
 			maxWidth = 150
 			maxHeight = 20
@@ -1934,7 +1904,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "commanding_officer_title_text"
 			position = { x = 574 y = 39 }
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			text = "COMMANDER_TITLE_TEXT_DIVISION"
 			maxWidth = 340
 			maxHeight = 20
@@ -1970,6 +1940,7 @@ guiTypes = {
 		}
 
 		buttonType = {
+			hide=yes
 			name = "promote_officer"
 			quadTextureSprite ="GFX_leader_selection_button"
 			position = { x=740 y=34 }
@@ -1991,7 +1962,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "commanding_officer"
 			position = { x = 632  y = 72 }
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			text = ""
 			maxWidth = 190
 			maxHeight = 20
@@ -2081,7 +2052,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "combat_header_label"
 				position = { x = 105 y = 47 }
-				font = "hoi_16mbs"
+				font = "hoi_18mbs"
 				text = "COMBAT_HEADER"
 				maxWidth = 372
 				maxHeight = 20
@@ -2092,7 +2063,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "support_header_label"
 				position = { x = -12 y = 47 }
-				font = "hoi_16mbs"
+				font = "hoi_18mbs"
 				text = "SUPPORT_HEADER"
 				maxWidth = 110
 				maxHeight = 20
@@ -2102,17 +2073,17 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "support_grid"
-				position = { x = 2 y = 78 }
-				size = { width = 50 height = 100%% }
-				slotsize = { width = 75 height = 45 }
+				position = { x = 4 y = 78 }
+				size = { width = 85 height = 100%% }
+				slotsize = { width = 82 height = 51 }
 				format = "UPPER_LEFT"
 			}
 
 			gridboxtype = {
 				name = "regiments_grid"
-				position = { x = 150 y = 78 }
-				size = { width = 500 height = 100%% }
-				slotsize = { width = 75 height = 45 }
+				position = { x = 110 y = 78 }
+				size = { width = 445 height = 100%% }
+				slotsize = { width = 82 height = 51 }
 				format = "UPPER_LEFT"
 			}
 		}
@@ -2236,7 +2207,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "history_kill_count"
 					position = { x = 272 y = 10 }
-					font = "hoi_16mbs"
+					font = "hoi_18mbs"
 					text = "Kill Count"
 					maxWidth = 260
 					maxHeight = 20
@@ -2246,7 +2217,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "history_experience_count"
 					position = { x = 272 y = 30 }
-					font = "hoi_16mbs"
+					font = "hoi_18mbs"
 					text = "Experience Count"
 					maxWidth = 260
 					maxHeight = 20
@@ -2271,7 +2242,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "base_medals_label"
 					position = { x = 14 y = 59 }
-					font = "hoi_16mbs"
+					font = "hoi_18mbs"
 					text = "INSTANCED_MEDALS"
 					maxWidth = 100
 					maxHeight = 20
@@ -2320,7 +2291,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "adjuster_label"
 				position = { x = 10 y = 0 }
-				font = "hoi_16mbs"
+				font = "hoi_18mbs"
 				text = "PRODUCTION_ADJUSTERS_LABEL"
 				maxWidth = 150
 				maxHeight = 20
@@ -2368,7 +2339,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "current_manpower"
 			position = { x = 643 y = 8 }
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			text = "Stuff"
 			maxWidth = 60
 			maxHeight = 20
@@ -2384,7 +2355,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "equipment_ratio"
 			position = { x = 768 y = 8 }
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			text = "Stuff"
 			maxWidth = 60
 			maxHeight = 20
@@ -2441,7 +2412,7 @@ guiTypes = {
 				show_position = { x = 0 y = 25 }
 				show_animation_type = decelerated
 				hide_animation_type = accelerated
-				animation_time = 1
+				animation_time = 300
 				size = { width=219 height=300 }
 				verticalScrollbar = "right_vertical_slider"
 				scroll_wheel_factor = 50
@@ -2516,7 +2487,7 @@ guiTypes = {
 				show_position = { x = 0 y = 30 }
 				show_animation_type = decelerated
 				hide_animation_type = accelerated
-				animation_time = 1
+				animation_time = 300
 				size = { width=250 height=300 }
 				verticalScrollbar = "right_vertical_slider"
 				scroll_wheel_factor = 45
@@ -2541,7 +2512,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "empty"
 					position = { x = 10 y = 130 }
-					font = "hoi_16mbs"
+					font = "hoi_18mbs"
 					borderSize = {x = 0 y = 0}
 					maxWidth = 210
 					maxHeight = 60
@@ -2581,7 +2552,7 @@ guiTypes = {
 			name = "name"
 			position = { x = 65 y = 5 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			text = "Maus"
 			maxWidth = 120
@@ -2650,7 +2621,7 @@ guiTypes = {
 			Orientation = "LOWER_LEFT"
 			quadTextureSprite = "GFX_unit_stats_view_tabs"
 			buttonText = "NAVAL_STATS_LABEL"
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 		}
 
 		buttonType = {
@@ -2659,7 +2630,7 @@ guiTypes = {
 			Orientation = "LOWER_LEFT"
 			quadTextureSprite = "GFX_unit_stats_view_tabs"
 			buttonText = "NAVAL_HISTORY_LABEL"
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 		}
 
 		buttonType = {
@@ -2668,7 +2639,7 @@ guiTypes = {
 			Orientation = "LOWER_LEFT"
 			quadTextureSprite = "GFX_unit_stats_view_tabs"
 			buttonText = "NAVAL_TERRAIN_LABEL"
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 		}
 
 		buttonType = {
@@ -2677,7 +2648,7 @@ guiTypes = {
 			Orientation = "LOWER_LEFT"
 			quadTextureSprite = "GFX_unit_stats_view_tabs"
 			buttonText = "NAVAL_DESIGN_LABEL"
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			frame = 2
 		}
 
@@ -2703,7 +2674,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "experience"
 			position = { x = 385 y = 41 }
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			text = ""
 			maxWidth = 150
 			maxHeight = 20
@@ -2724,7 +2695,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "current_manpower"
 			position = { x = 50 y = 369 }
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			text = "Stuff"
 			maxWidth = 60
 			maxHeight = 20
@@ -2897,7 +2868,7 @@ guiTypes = {
 				name = "title"
 				position = { x = 15 y = 7 }
 				textureFile = ""
-				font = "hoi_16mbs"
+				font = "hoi_18mbs"
 				borderSize = {x = 0 y = 0}
 				text = "AIR_WINGS"
 				maxWidth = 210
@@ -2971,7 +2942,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "count"
 			position = {x=80 y=19}
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			maxWidth = 100
 			maxHeight = 23
 			format = left
@@ -2981,7 +2952,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = {x=80 y=4}
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			maxWidth = 185
 			maxHeight = 23
 			fixedsize = yes
@@ -3061,7 +3032,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "date_field"
 			position = { x = 75 y = 5 }
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			borderSize = { x = 0 y = 0 }
 			text = "Maus"
 			maxWidth = 100
@@ -3106,7 +3077,7 @@ guiTypes = {
 			name = "name"
 			position = { x = 44 y = 5 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			text = "Maus"
 			maxWidth = 370
@@ -3132,7 +3103,7 @@ guiTypes = {
 			name = "cost"
 			position = { x = 390 y = 15 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			text = "888.8"
 			maxWidth = 80
@@ -3163,7 +3134,7 @@ guiTypes = {
 			name = "number"
 			position = { x = 0 y = 20 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			#borderSize = {x = 0 y = 0}
 			text = "x9"
 			maxWidth = 40

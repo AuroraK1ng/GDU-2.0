@@ -145,28 +145,30 @@ guiTypes = {
 		
 		buttonType = {
 			name = "no_leader_button"
-			position = { x = -250 y = -32 }
+			position = { x = -390 y = -32 }
 			quadTextureSprite ="GFX_button_221x34"
-			buttonFont = "hoi_16mbs"
+			buttonFont = "hoi_18mbs"
 			Orientation = "LOWER_RIGHT"
 			buttonText = "UNASSIGN"
 			pdx_tooltip = "UNASSIGN"
 		}
 		
 		buttonType = {
+			hide=yes
 			name = "new_leader_button"
 			position = { x = -535 y = -32 }
 			quadTextureSprite = "GFX_button_261x34"
-			buttonFont = "hoi_16mbs"
+			buttonFont = "hoi_18mbs"
 			Orientation = "LOWER_RIGHT"
 			buttonText = "UNIT_LEADER_NEW_LEADER"
 		}
 		
 		buttonType = {
+			hide=yes
 			name = "show_divisional_commanders_button"
 			position = { x = -535 y = -31 }
 			quadTextureSprite = "GFX_button_261x34"
-			buttonFont = "hoi_16mbs"
+			buttonFont = "hoi_18mbs"
 			Orientation = "LOWER_RIGHT"
 			buttonText = "UNIT_LEADER_NEW_LEADER_DIVC"
 		}
@@ -184,15 +186,15 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "show_assigned_text"
-			position = { x = 380 y = 10 }
+			position = { x = 325 y = 10 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			text = "SHOW_ACTIVE"
-			maxWidth = 100
+			maxWidth = 140
 			maxHeight = 20
 			fixedsize = yes
-			format = left
+			format = right
 		}
 		
 		checkboxType = {
@@ -238,6 +240,7 @@ guiTypes = {
 		}	
 
 		buttonType = {
+			hide=yes
 			name = "generate_advisor_button"
 			position = {x=13 y=65}	
 			quadTextureSprite ="GFX_give_role_leader_strip"
@@ -260,6 +263,7 @@ guiTypes = {
 			frame = 1
 		}
 		buttonType = {
+			hide=yes
 			name = "promote_btn"
 			position = {x=414 y=56}	
 			quadTextureSprite ="GFX_leader_selection_button"
@@ -283,7 +287,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "divisions_count"
 			position = {x=424 y=17}
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			maxWidth = 85
 			maxHeight = 23
 			format = centre
@@ -544,9 +548,9 @@ guiTypes = {
 		
 		buttonType = {
 			name = "no_leader_button"
-			position = { x = -250 y = -32 }
+			position = { x = -390 y = -32 }
 			quadTextureSprite ="GFX_button_221x34"
-			buttonFont = "hoi_16mbs"
+			buttonFont = "hoi_18mbs"
 			Orientation = "LOWER_RIGHT"
 			buttonText = "UNASSIGN"
 			pdx_tooltip = "UNASSIGN"
@@ -554,10 +558,11 @@ guiTypes = {
 		}	
 		
 		buttonType = {
+			hide=yes
 			name = "new_leader_button"
 			position = { x = -535 y = -32 }
 			quadTextureSprite = "GFX_button_261x34"
-			buttonFont = "hoi_16mbs"
+			buttonFont = "hoi_18mbs"
 			Orientation = "LOWER_RIGHT"
 			buttonText = "UNIT_LEADER_NEW_LEADER"
 			clicksound = click_default
@@ -578,7 +583,7 @@ guiTypes = {
 			name = "show_assigned_text"
 			position = { x = 380 y = 10 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			text = "SHOW_ACTIVE"
 			maxWidth = 100
@@ -640,6 +645,7 @@ guiTypes = {
 		}
 	
 		buttonType = {
+			hide=yes
 			name = "generate_advisor_button"
 			position = {x=13 y=65}	
 			quadTextureSprite ="GFX_give_role_leader_strip"
@@ -651,7 +657,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "divisions_count"
 			position = {x=424 y=17}
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			maxWidth = 85
 			maxHeight = 23
 			format = centre
@@ -881,7 +887,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "resume_mission_txt"
 			position = {x=150 y=564 }
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			format = left
 			text = "OPERATIVE_RESUME_MISSION_AFTER_OPERATION_CHECKBOX_LABEL"
 			pdx_tooltip = "OPERATIVE_RESUME_MISSION_AFTER_OPERATION_TOOLTIP"
@@ -1163,26 +1169,6 @@ guiTypes = {
 				format = "UPPER_LEFT"
 			}
 		}
-		
-		#buttonType = {
-		#	name = "no_leader_button"
-		#	position = { x = -250 y = -32 }
-		#	quadTextureSprite ="GFX_button_221x34"
-		#	buttonFont = "hoi_16mbs"
-		#	Orientation = "LOWER_RIGHT"
-		#	buttonText = "UNASSIGN"
-		#	pdx_tooltip = "UNASSIGN"
-		#}
-		
-		#buttonType = {
-		#	name = "new_leader_button"
-		#	position = { x = -535 y = -32 }
-		#	quadTextureSprite = "GFX_button_261x34"
-		#	buttonFont = "hoi_16mbs"
-		#	Orientation = "LOWER_RIGHT"
-		#	buttonText = "UNIT_LEADER_NEW_LEADER"
-		#}
-		
 		buttonType = {
 			name = "close_button"
 			position = { x = -38 y = 4 }
@@ -1247,6 +1233,30 @@ guiTypes = {
 			frame = 1
 			#alwaystransparent = yes
 		}
+		
+		buttonType = {
+			name = "details_btn"
+			position = {x=318 y=56 }
+			quadTextureSprite ="GFX_leader_selection_button"
+			buttonText = DIVISION_DETAILS 
+			buttonFont = "hoi_16mbs"	
+			clicksound = click_default	
+			pdx_tooltip = "OPEN_LEADER_DETAILS"		
+			frame = 1
+		}
+		
+		buttonType = {
+			hide=yes
+			name = "promote_btn"
+			position = {x=414 y=56}	
+			quadTextureSprite ="GFX_leader_selection_button"
+			buttonText = UNIT_LEADER_PROMOTE
+			buttonFont = "hoi_16mbs"	
+			clicksound = click_default		
+			frame = 1
+			alwaystransparent = no
+		}
+		
 		iconType = {
 			name = "unit_level"
 			spriteType = "GFX_unit_level"
@@ -1299,7 +1309,13 @@ guiTypes = {
 			size = { width = 340 height = 94 }
 			clipping = yes
 			
-			
+			expandButton = {
+				name = "expand_button"
+				position = { x = -55 y = 2 }  
+				spriteType = "GFX_add_medal_button"
+				clicksound = click_default
+				pdx_tooltip = "GRANT_CITATION"
+			}
 
 			expandedWindow = {
 				name = "expanded_window"

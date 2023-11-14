@@ -6,8 +6,7 @@ bookmarks = {
 		picture = "GFX_select_date_1936"
 		default_country = "GER"
 		default = yes
-
-		"FRA"={
+		"FRA" = {
 			history = "FRA_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
@@ -21,7 +20,7 @@ bookmarks = {
 				FRA_devalue_the_franc
 			}
 		}
-		"USA"={
+		"USA" = {
 			history = "USA_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
@@ -30,12 +29,12 @@ bookmarks = {
 				undisturbed_isolation
 			}
 			focuses = {
-				USA_two_ocean_navy_act 
+				USA_two_ocean_navy_act
 				USA_lend_lease_act
-				USA_the_giant_wakes 
+				USA_the_giant_wakes
 			}
 		}
-		"ENG"={
+		"ENG" = {
 			history = "ENG_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
@@ -44,17 +43,16 @@ bookmarks = {
 				george_v
 			}
 			focuses = {
-				general_rearmament_focus 
-				fighter_command_focus 
+				general_rearmament_focus
+				fighter_command_focus
 				tizard_mission_focus
 			}
 		}
-
-		"GER"={
+		"GER" = {
 			history = "GER_GATHERING_STORM_DESC"
 			ideology = fascism
 			ideas = {
-				GER_mefo_bills_1 
+				GER_mefo_bills_1
 				sour_loser
 				general_staff
 			}
@@ -64,7 +62,7 @@ bookmarks = {
 				GER_ussr_war_goal
 			}
 		}
-		"ITA"={
+		"ITA" = {
 			history = "ITA_GATHERING_STORM_DESC"
 			ideology = fascism
 			ideas = {
@@ -73,11 +71,11 @@ bookmarks = {
 			}
 			focuses = {
 				ITA_mare_nostrum
-				ITA_slovenia_dalmatia_claims 
+				ITA_slovenia_dalmatia_claims
 				ITA_pact_of_steel
 			}
 		}
-		"JAP"={
+		"JAP" = {
 			history = "JAP_GATHERING_STORM_DESC"
 			ideology = fascism
 			ideas = {
@@ -90,7 +88,7 @@ bookmarks = {
 				JAP_the_zero
 			}
 		}
-		"SOV"={
+		"SOV" = {
 			history = "SOV_GATHERING_STORM_DESC"
 			ideology = communism
 			ideas = {
@@ -99,12 +97,11 @@ bookmarks = {
 			focuses = {
 				SOV_great_purge
 				SOV_defense_of_stalingrad
-				SOV_proclaim_victory_over_fascism 
+				SOV_proclaim_victory_over_fascism
 			}
 		}
-
 		# minors from DLC ####
-		"CAN"={
+		"CAN" = {
 			minor = yes
 			history = "CAN_GATHERING_STORM_DESC"
 			ideology = democratic
@@ -115,7 +112,7 @@ bookmarks = {
 			focuses = {
 			}
 		}
-		"AST"={
+		"AST" = {
 			minor = yes
 			history = "AST_GATHERING_STORM_DESC"
 			ideology = democratic
@@ -125,7 +122,7 @@ bookmarks = {
 			focuses = {
 			}
 		}
-		"NZL"={
+		"NZL" = {
 			minor = yes
 			history = "NZL_GATHERING_STORM_DESC"
 			ideology = democratic
@@ -140,7 +137,7 @@ bookmarks = {
 				NZL_expand_the_university_of_auckland
 			}
 		}
-		"SAF"={
+		"SAF" = {
 			minor = yes
 			history = "SAF_GATHERING_STORM_DESC"
 			ideology = democratic
@@ -152,7 +149,7 @@ bookmarks = {
 				SAF_secure_interests_in_africa
 			}
 		}
-		"RAJ"={
+		"RAJ" = {
 			minor = yes
 			history = "RAJ_GATHERING_STORM_DESC"
 			ideology = neutrality
@@ -165,8 +162,7 @@ bookmarks = {
 				RAJ_the_smiling_buddha
 			}
 		}
-
-		"HUN"={
+		"HUN" = {
 			minor = yes
 			history = "HUN_GATHERING_STORM_DESC"
 			ideology = neutrality
@@ -178,8 +174,7 @@ bookmarks = {
 				HUN_renounce_the_treaty_of_trianon
 			}
 		}
-
-		"ROM"={
+		"ROM" = {
 			minor = yes
 			history = "ROM_GATHERING_STORM_DESC"
 			ideology = neutrality
@@ -192,9 +187,38 @@ bookmarks = {
 				ROM_preserve_greater_romania
 			}
 		}
-
+		"BUL" = {
+			minor = yes
+			history = "BUL_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				BUL_second_national_catastrophe
+				BUL_imro_01
+				BUL_army_restrictions
+			}
+			focuses = {
+				BUL_negotiate_bulgarian_rearmament
+				BUL_power_to_the_tsar
+				BUL_the_third_bulgarian_empire
+			}
+		}
+		"SPR" = {
+			minor = yes
+			history = "SPAIN_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				GDU_volunteer_nation
+				SPA_carlism_1
+				SPR_political_violence
+			}
+			focuses = {
+				SPA_unify_the_nationalist_front
+				SPA_join_the_axis
+				SPA_adopt_the_26_points
+			}
+		}
 		effect = {
-			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			randomize_weather = 22345			# <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
 		}
 	}

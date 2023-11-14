@@ -1,360 +1,258 @@
 ideas = {
-
 	country = {
-	
 		CAN_synthetic_rubber = {
-			
-			
 			allowed = {
 				always = yes
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-			
 			picture = FRA_motorized_focus
-			
 			modifier = {
-				production_speed_synthetic_refinery_factor = 0.20
+				production_speed_synthetic_refinery_factor = 0.2
 			}
-		}		
-	
+		}
 		CAN_great_depression_1 = {
-
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-
 			picture = great_depression
-
 			modifier = {
-				consumer_goods_factor = 0.40
+				consumer_goods_expected_value = 0.4
 				production_speed_industrial_complex_factor = 1.35
-				conversion_cost_mil_to_civ_factor = 2.0
+				conversion_cost_mil_to_civ_factor = 2
 				production_speed_arms_factory_factor = -0.8
-				industrial_capacity_factory = -0.20
-				industrial_capacity_dockyard = -0.20
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
 			}
 		}
-
 		CAN_great_depression_2 = {
-
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-
 			picture = great_depression
-
 			modifier = {
-				consumer_goods_factor = 0.35
+				consumer_goods_expected_value = 0.35
 				production_speed_industrial_complex_factor = 1.35
-				conversion_cost_mil_to_civ_factor = 2.0
+				conversion_cost_mil_to_civ_factor = 2
 				production_speed_arms_factory_factor = -0.8
-				industrial_capacity_factory = -0.20
-				industrial_capacity_dockyard = -0.20
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
 			}
 		}
-		
 		CAN_great_depression_3 = {
-
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-
 			picture = great_depression
-
 			modifier = {
-				consumer_goods_factor = 0.30
+				consumer_goods_expected_value = 0.3
 				production_speed_industrial_complex_factor = 1.35
-				conversion_cost_mil_to_civ_factor = 2.0
+				conversion_cost_mil_to_civ_factor = 2
 				production_speed_arms_factory_factor = -0.8
-				industrial_capacity_factory = -0.20
-				industrial_capacity_dockyard = -0.20
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
 			}
 		}
-		
 		CAN_great_depression_4 = {
-
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-
 			picture = great_depression
-
 			modifier = {
-				consumer_goods_factor = 0.20
+				consumer_goods_expected_value = 0.2
 				production_speed_industrial_complex_factor = 1.35
-				conversion_cost_mil_to_civ_factor = 2.0				
-				industrial_capacity_factory = -0.10
+				conversion_cost_mil_to_civ_factor = 2
+				industrial_capacity_factory = -0.1
 				production_speed_arms_factory_factor = -0.8
-				industrial_capacity_dockyard = -0.10
+				industrial_capacity_dockyard = -0.1
 			}
 		}
-
 		CAN_war_fueled_economy_idea = {
-
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-
 			picture = great_depression
-
 			modifier = {
 				production_speed_arms_factory_factor = 0.15
-
 			}
 		}
-
 		CAN_patriation = {
-
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
-				NOT = { has_government = democratic }
+				NOT = {
+					has_government = democratic
+				}
 			}
-
 			removal_cost = -1
-
 			picture = can_patriation
-
-			rule = { can_decline_call_to_war = yes }
-
+			rule = {
+				can_decline_call_to_war = yes
+			}
 			modifier = {
 				autonomy_gain = 1
 			}
 		}
-
 		CAN_conscription_crisis = {
-
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-
 			picture = tfv_can_conscription_crisis
-
 			modifier = {
-				conscription_factor = -0.30
+				conscription_factor = -0.3
 			}
 		}
-
 		CAN_conscription_crisis_mended = {
-
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-
 			picture = tfv_can_conscription_crisis
-
 			modifier = {
-				conscription_factor = -0.10
+				conscription_factor = -0.1
 			}
 		}
-
 		CAN_defence_of_canada_regulations_democratic = {
-
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
-				 has_government = democratic
+				has_government = democratic
 			}
-
 			removal_cost = -1
-
 			picture = can_defence_of_canada_regulations_democratic
-
 			modifier = {
 				communism_drift = -0.01
 				fascism_drift = -0.01
-				foreign_subversive_activites = -0.50
+				foreign_subversive_activites = -0.5
 			}
 		}
-
 		CAN_defence_of_canada_regulations_fascism = {
-
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				has_government = fascism
 			}
-
 			removal_cost = -1
-
 			picture = can_defence_of_canada_regulations_fascism
-
 			modifier = {
 				democratic_drift = -0.01
 				communism_drift = -0.01
-				foreign_subversive_activites = -0.50
+				foreign_subversive_activites = -0.5
 			}
 		}
-
 		CAN_defence_of_canada_regulations_communism = {
-
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				has_government = communism
 			}
-
 			removal_cost = -1
-
 			picture = can_defence_of_canada_regulations_communism
-
 			modifier = {
 				democratic_drift = -0.01
 				fascism_drift = -0.01
-				foreign_subversive_activites = -0.50
+				foreign_subversive_activites = -0.5
 			}
 		}
-
 		CAN_war_bonds_1 = {
-
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-
 			picture = generic_goods_red_bonus
-
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_expected_value = -0.05
 			}
 		}
-
 		CAN_war_bonds_2 = {
-
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-
 			picture = generic_goods_red_bonus
-
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_expected_value = -0.05
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
 			}
 		}
-
 		CAN_national_resources_mobilization_act = {
-
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-
 			picture = generic_production_bonus
-
 			modifier = {
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
 				conscription_factor = 0.05
 			}
 		}
-
 		CAN_wartime_prices_and_trade_board = {
-
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-
 			picture = can_wartime_prices_and_trade_board
-
 			modifier = {
 				min_export = -0.05
 				global_building_slots_factor = 0.2
 			}
 		}
-
 		CAN_bits_and_pieces_program = {
-
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-
 			picture = generic_production_bonus
-
 			modifier = {
 				production_factory_start_efficiency_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.05
@@ -362,86 +260,60 @@ ideas = {
 				industrial_capacity_dockyard = 0.03
 			}
 		}
-
 		CAN_commit_to_the_war = {
-
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-
 			picture = generic_manpower_bonus
-
 			modifier = {
 				conscription_factor = 0.05
 			}
-
 		}
-
 		CAN_send_in_the_zombies = {
-
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-
 			picture = can_send_in_the_zombies
-
 			modifier = {
 				conscription_factor = 0.15
 				conscription = 0.01
 			}
 		}
-
 		CAN_the_plan = {
-
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				is_in_faction_with = ENG
 			}
-
 			removal_cost = -1
-
 			picture = generic_air_bonus
-
-
 			equipment_bonus = {
-				small_plane_airframe  = {
+				small_plane_airframe = {
 					air_agility = 0.05
-					air_attack = 0.05 
+					air_attack = 0.05
 					air_range = 0.05
 					instant = yes
 				}
 			}
-
 		}
-
 		CAN_degauss_ship_hulls = {
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-
 			picture = generic_degauss_ship_hulls
-
 			equipment_bonus = {
 				destroyer = {
 					sub_detection = 0.1
@@ -449,308 +321,250 @@ ideas = {
 				light_cruiser = {
 					sub_detection = 0.1
 				}
-				heavy_cruiser = {
-					sub_detection = 0.1
-				}
 			}
 		}
-
 		CAN_trade_fleet = {
-
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
-
 			picture = escort_effort_focus
-
 			equipment_bonus = {
 				convoy = {
-					build_cost_ic = -0.25 instant = yes
+					build_cost_ic = -0.25
+					instant = yes
 				}
 			}
 		}
 	}
-
 	political_advisor = {
-
-
-
-		
 	}
-
 	theorist = {
-
-		
 	}
 	# MILITARY
 	army_chief = {
-
-		
 	}
-
 	air_chief = {
-
 	}
-
 	navy_chief = {
-
-		
 	}
-
 	high_command = {
-
-
-	
 	}
-
 	# TECHNOLOGY
 	tank_manufacturer = {
-
 		designer = yes
-
 		vickers_armstrong_can = {
-
 			picture = generic_tank_manufacturer_1
-
-
 			allowed = {
 				original_tag = CAN
 			}
-
 			research_bonus = {
 				armor = 0.15
 			}
-on_add = { hidden_effect = { make_tank_designers_free = yes } }
-
-			traits = { medium_tank_manufacturer }
-
+			on_add = {
+				hidden_effect = {
+					make_tank_designers_free = yes
+				}
+			}
+			traits = {
+				medium_tank_manufacturer
+			}
 			# quite the useless tanks the vickers 6-ton
 		}
 	}
-
 	industrial_concern = {
-
-
-
 		montreal_lab = {
-
 			picture = generic_industrial_concern_1
-
 			allowed = {
 				original_TAG = CAN
 				has_dlc = "Together for Victory"
 			}
-
-
-
 			research_bonus = {
 				electronics = 0.15
 			}
-
-			traits = { electronics_concern }
-
+			traits = {
+				electronics_concern
+			}
 			modifier = {
 			}
 		}
-
 	}
-
 	materiel_manufacturer = {
-
 		designer = yes
-
 		inglis_company = {
-
 			picture = generic_infantry_equipment_manufacturer_2
-
 			allowed = {
 				original_TAG = CAN
 				has_dlc = "Together for Victory"
 			}
-
-
-
 			research_bonus = {
-				support_tech = 0.10
+				support_tech = 0.1
 			}
-
-			traits = { support_equipment_manufacturer }
-			on_add = { hidden_effect = { make_material_designers_free = yes } }
+			traits = {
+				support_equipment_manufacturer
+			}
+			on_add = {
+				hidden_effect = {
+					make_material_designers_free = yes
+				}
+			}
 		}
-
 		small_arms_limited = {
-
 			picture = generic_infantry_equipment_manufacturer_1
-
 			allowed = {
 				original_TAG = CAN
 				has_dlc = "Together for Victory"
 			}
-
-
-
 			research_bonus = {
 				infantry_weapons = 0.15
 			}
-
-			traits = { infantry_equipment_manufacturer }
-			on_add = { hidden_effect = { make_material_designers_free = yes } }
+			traits = {
+				infantry_equipment_manufacturer
+			}
+			on_add = {
+				hidden_effect = {
+					make_material_designers_free = yes
+				}
+			}
 		}
 	}
-
 	naval_manufacturer = {
-
 		designer = yes
-
 		kingston_shipbuilding = {
 			picture = generic_naval_manufacturer_2
-
-		cost = 75
-
+			cost = 75
 			allowed = {
 				original_tag = CAN
 			}
-
 			research_bonus = {
 				naval_equipment = 0.15
 			}
-on_add = { hidden_effect = { make_naval_designers_free = yes } }
-
-			equipment_bonus = {
-
+			on_add = {
+				hidden_effect = {
+					make_naval_designers_free = yes
+				}
 			}
-
-			traits = { pacific_fleet_naval_manufacturer }
+			equipment_bonus = {
+			}
+			traits = {
+				pacific_fleet_naval_manufacturer
+			}
 		}
-
 		halifax_shipyard_limited = {
 			picture = generic_naval_manufacturer_3
-			
-		cost = 75
-
-
+			cost = 75
 			allowed = {
 				original_tag = CAN
 			}
-
 			research_bonus = {
 				naval_equipment = 0.15
 			}
-on_add = { hidden_effect = { make_naval_designers_free = yes } }
-
+			on_add = {
+				hidden_effect = {
+					make_naval_designers_free = yes
+				}
+			}
 			equipment_bonus = {
 				# destroyers
 			}
-
-			traits = { convoy_escort_naval_manufacturer }
+			traits = {
+				convoy_escort_naval_manufacturer
+			}
 		}
 	}
-
 	aircraft_manufacturer = {
-
 		designer = yes
-
 		havilland_canada = {
 			picture = generic_air_manufacturer_1
-
-
-
 			allowed = {
 				original_tag = CAN
 			}
-
 			research_bonus = {
 				air_equipment = 0.15
 			}
-on_add = { hidden_effect = { make_air_designers_free = yes } }
-
-			traits = { medium_aircraft_manufacturer }
-
+			on_add = {
+				hidden_effect = {
+					make_air_designers_free = yes
+				}
+			}
+			traits = {
+				medium_aircraft_manufacturer
+			}
 			# heavy fighters like mosquito
-
 			ai_will_do = {
 				factor = 1
 			}
 		}
-
 		canadian_car_foundry = {
-			
-			cost = 100 
-			
+			cost = 100
 			allowed = {
 				original_TAG = CAN
 			}
-			
-
-			
 			research_bonus = {
 				air_equipment = 0.15
 			}
-on_add = { hidden_effect = { make_air_designers_free = yes } }
-			
-			traits = { supermarine_aircraft_manufacturer }
-			
+			on_add = {
+				hidden_effect = {
+					make_air_designers_free = yes
+				}
+			}
+			traits = {
+				supermarine_aircraft_manufacturer
+			}
 			modifier = {
 			}
 		}
-
 		CAN_fairchild_aircraft_ltd = {
 			picture = generic_air_manufacturer_2
-
 			cost = 150
-
 			allowed = {
 				original_tag = CAN
 				has_dlc = "Together for Victory"
 			}
-
 			available = {
 				has_completed_focus = CAN_fund_fairchilds_development
 			}
-
 			research_bonus = {
 				air_equipment = 0.15
 			}
-on_add = { hidden_effect = { make_air_designers_free = yes } }
-
-			traits = { naval_aircraft_manufacturer }
-
+			on_add = {
+				hidden_effect = {
+					make_air_designers_free = yes
+				}
+			}
+			traits = {
+				naval_aircraft_manufacturer
+			}
 			# fighter/interceptors like Hurricane
-
 			ai_will_do = {
 				factor = 1
 			}
 		}
-
 		CAN_handley_page = {
 			picture = generic_air_manufacturer_3
-
 			cost = 150
-
 			allowed = {
 				original_tag = CAN
 				has_dlc = "Together for Victory"
 			}
-
 			available = {
 				has_completed_focus = CAN_cookie_carriers
 			}
-
 			research_bonus = {
 				air_equipment = 0.15
 			}
-on_add = { hidden_effect = { make_air_designers_free = yes } }
-
-			traits = { heavy_aircraft_manufacturer }
-
+			on_add = {
+				hidden_effect = {
+					make_air_designers_free = yes
+				}
+			}
+			traits = {
+				heavy_aircraft_manufacturer
+			}
 			# fighter/interceptors like Hurricane
-
 			ai_will_do = {
 				factor = 1
 			}

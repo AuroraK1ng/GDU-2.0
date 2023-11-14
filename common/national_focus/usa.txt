@@ -647,7 +647,10 @@ focus_tree = {
 				JAP = { has_war_with = CHI }
 				JAP = { controls_state = 608 }
 				JAP = { controls_state = 613 }
+				has_start_date > 1936.1.1.12
 			}
+			
+		
 			has_political_power > 25
 			has_government = democratic
 			has_completed_focus = USA_agricultural_adjustment_act
@@ -1182,7 +1185,7 @@ focus_tree = {
 			navy_experience = 50
 			army_experience = 50
 			air_experience = 10
-			391 = {
+			372 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
@@ -1191,7 +1194,7 @@ focus_tree = {
 				}
 				set_state_flag = USA_arsenal_of_democracy_3AF
 			}
-			394 = {
+			372 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
@@ -1200,7 +1203,7 @@ focus_tree = {
 				}
 				set_state_flag = USA_arsenal_of_democracy_3AF
 			}
-			371 = {
+			370 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -1209,7 +1212,7 @@ focus_tree = {
 				}
 				set_state_flag = USA_arsenal_of_democracy_3AF
 			}
-			375 = {
+			370 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -1307,7 +1310,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			army_experience = 10
-			395 = {
+			372 = {
 				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
@@ -2551,16 +2554,16 @@ focus_tree = {
 				bonus = 2.5
 				ahead_reduction = 0.5
 				uses = 1
-				technology = heavy_fighter1x
-				technology = heavy_fighter2x
-				technology = heavy_fighter3x
+				technology = basic_medium_airframe
+				technology = improved_medium_airframe
+				technology = advanced_medium_airframe
 			}
 			add_tech_bonus = {
 				name = USA_escort_fighters
 				bonus = 2.5
 				uses = 1
-				technology = heavy_fighter2x
-				technology = heavy_fighter3x
+				technology = improved_medium_airframe
+				technology = advanced_medium_airframe
 			}			
 		}
 	}
@@ -2665,8 +2668,6 @@ focus_tree = {
 			else = {
 				has_political_power > -25
 			}
-			controls_state = 378
-			controls_state = 358
 			OR = {
 				date < 1936.11.1
 				date > 1937.5.2
@@ -2980,14 +2981,18 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 				ahead_reduction = 0.5
-				category = naval_bomber
+				technology = air_torpedoe_1
+				technology = air_torpedoe_2
+				technology = air_torpedoe_3
 				category = naval_air
 			}
 			add_tech_bonus = {
 				name = USA_bureau_of_aeronautics
 				bonus = 1.0
 				uses = 1
-				category = naval_bomber
+				technology = air_torpedoe_1
+				technology = air_torpedoe_2
+				technology = air_torpedoe_3
 				category = naval_air
 			}			
 		}
@@ -3228,7 +3233,8 @@ focus_tree = {
 				name = jet_fighter_bonus
 				bonus = 2.5
 				uses = 1
-				technology = jet_fighter1
+				technology = modern_small_airframe
 			}		
 		}
 	}		
+}

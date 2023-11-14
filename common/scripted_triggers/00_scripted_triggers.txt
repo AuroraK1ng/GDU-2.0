@@ -12,11 +12,14 @@
 #		exampel_trigger = yes
 #	}
 #
-
 can_ROOT_get_wargoal_on_THIS = {
 	exists = yes
-	NOT = { is_in_faction_with = ROOT }
-	NOT = { is_subject_of = ROOT }
+	NOT = {
+		is_in_faction_with = ROOT
+	}
+	NOT = {
+		is_subject_of = ROOT
+	}
 }
 
 #Country scope
@@ -37,7 +40,9 @@ has_not_initiated_border_incident_with_FROM = {
 		tooltip = not_initiated_border_incident_with_FROM
 		NOT = {
 			any_state = {
-				check_variable = { FROM.defender_state_vs_@PREV = id }
+				check_variable = {
+					FROM.defender_state_vs_@PREV = id
+				}
 			}
 		}
 	}
@@ -48,7 +53,9 @@ has_not_initiated_border_incident_with_ROOT = {
 		tooltip = not_initiated_border_incident_with_ROOT
 		NOT = {
 			any_state = {
-				check_variable = { ROOT.defender_state_vs_@PREV = id }
+				check_variable = {
+					ROOT.defender_state_vs_@PREV = id
+				}
 			}
 		}
 	}
@@ -58,7 +65,12 @@ has_not_initiated_border_incident_with_ROOT = {
 has_ROOT_at_least_1_div_in_current_state_scope = {
 	custom_trigger_tooltip = {
 		tooltip = at_least_one_division_in_state
-		ROOT = { divisions_in_state = { state = PREV size > 0 } }
+		ROOT = {
+			divisions_in_state = {
+				state = PREV
+				size > 0
+			}
+		}
 	}
 }
 
@@ -67,16 +79,36 @@ check_has_focus_tree_to_switch_to_fascism = {
 }
 
 check_has_focus_tree_to_switch_to_democratic = {
-	NOT = { tag = MAN }
-	NOT = { tag = FRA }
-	NOT = { tag = USA }
-	NOT = { tag = ENG }
-	NOT = { tag = CAN }
-	NOT = { tag = SAF }
-	NOT = { tag = AST }
-	NOT = { tag = NZL }
-	NOT = { tag = RAJ }
-	NOT = { tag = CZE }
+	NOT = {
+		tag = MAN
+	}
+	NOT = {
+		tag = FRA
+	}
+	NOT = {
+		tag = USA
+	}
+	NOT = {
+		tag = ENG
+	}
+	NOT = {
+		tag = CAN
+	}
+	NOT = {
+		tag = SAF
+	}
+	NOT = {
+		tag = AST
+	}
+	NOT = {
+		tag = NZL
+	}
+	NOT = {
+		tag = RAJ
+	}
+	NOT = {
+		tag = CZE
+	}
 	NOT = {
 		AND = {
 			tag = HUN
@@ -98,10 +130,18 @@ check_has_focus_tree_to_switch_to_democratic = {
 }
 
 check_has_focus_tree_to_switch_to_communism = {
-	NOT = { tag = PRC }
-	NOT = { tag = SIK }
-	NOT = { tag = MAN }
-	NOT = { tag = SOV }
+	NOT = {
+		tag = PRC
+	}
+	NOT = {
+		tag = SIK
+	}
+	NOT = {
+		tag = MAN
+	}
+	NOT = {
+		tag = SOV
+	}
 	NOT = {
 		AND = {
 			tag = RAJ
@@ -199,58 +239,53 @@ is_csa_state = {
 
 has_naval_treaty_trigger = {
 	OR = {
-		
 	}
 }
+
 SOV_is_on_historical_plan_trigger = {
 	OR = {
 		AND = {
 			is_historical_focus_on = yes
 		}
 		has_country_flag = SOV_AI_RANDOM_COMMUNIST_HISTORICAL
-		
 	}
 }
+
 USA_is_on_historical_plan_trigger = {
 	OR = {
 		AND = {
 			is_historical_focus_on = yes
-			
 		}
 		has_country_flag = USA_AI_DEMOCRATIC_HISTORICAL
-		
 	}
 }
+
 ROM_is_on_historical_plan_trigger = {
 	has_dlc = "Death or Dishonor"
 	OR = {
 		AND = {
 			is_historical_focus_on = yes
-			
 		}
 		has_country_flag = ROM_AI_RANDOM_FASCIST_HISTORICAL
-		
 	}
 }
+
 HUN_is_on_historical_plan_trigger = {
 	has_dlc = "Death or Dishonor"
 	OR = {
 		AND = {
 			is_historical_focus_on = yes
-			
 		}
 		has_country_flag = HUN_AI_RANDOM_FASCIST_HISTORICAL
-		
 	}
 }
+
 ENG_is_on_historical_plan_trigger = {
 	OR = {
 		AND = {
 			is_historical_focus_on = yes
-			
 		}
 		has_country_flag = ENG_AI_DEMOCRATIC_HISTORICAL
-		
 	}
 }
 
@@ -264,7 +299,9 @@ anti_submarine_strategy_required_trigger = {
 	OR = {
 		AND = {
 			tag = ENG
-			not = { is_in_faction_with = GER }
+			not = {
+				is_in_faction_with = GER
+			}
 			GER = {
 				has_navy_size = {
 					type = submarine
@@ -274,7 +311,9 @@ anti_submarine_strategy_required_trigger = {
 		}
 		AND = {
 			tag = USA
-			not = { is_in_faction_with = GER }
+			not = {
+				is_in_faction_with = GER
+			}
 			GER = {
 				has_navy_size = {
 					type = submarine
@@ -284,7 +323,9 @@ anti_submarine_strategy_required_trigger = {
 		}
 		AND = {
 			tag = JAP
-			not = { is_in_faction_with = USA }
+			not = {
+				is_in_faction_with = USA
+			}
 		}
 		AND = {
 			has_war = yes
@@ -302,45 +343,69 @@ anti_submarine_strategy_required_trigger = {
 the_axis_no_finefr = {
 	always = no
 }
+
 holnor = {
 	always = no
 }
+
 finefr = {
 	always = no
 }
+
 WTT_is_ROOT_current_leader_of_china = {
 	always = no
 }
+
 TUR_cannot_form_kurdish_collaboration_government = {
 	always = no
 }
+
 WTT_is_chinese_warlord = {
 	always = no
 }
+
 SWI_is_country_to_balance = {
 	always = no
 }
+
 is_literally_china = {
 	always = no
 }
+
 the_geacps = {
-	always = no
+	OR = {
+		original_tag = JAP
+		original_tag = MAN
+	}
 }
+
 ai_air_doctrine_tier_1_trigger = {
 	always = no
 }
+
 ai_air_doctrine_tier_2_trigger = {
 	always = no
 }
+
 normally_played_allies = {
 	always = no
 }
+
 the_axis = {
-	always = no
+	OR = {
+		original_tag = GER
+		original_tag = ITA
+		original_tag = SPR
+		original_tag = ROM
+		original_tag = HUN
+		original_tag = BUL
+	}
 }
+
 is_chinese_warlord = {
 	always = no
 }
+
 should_USA_invade_europe_or_africa = {
 	USA = {
 		OR = {
@@ -369,15 +434,27 @@ should_USA_invade_europe_or_africa = {
 			OR = {
 				AND = {
 					has_government = democratic
-					ENG = { has_government = democratic }
+					ENG = {
+						has_government = democratic
+					}
 					OR = {
-						GER = { has_government = fascism }
-						ITA = { has_government = fascism }
+						GER = {
+							has_government = fascism
+						}
+						ITA = {
+							has_government = fascism
+						}
 					}
 				}
-				is_in_array = { potential_and_current_enemies = GER }
-				is_in_array = { potential_and_current_enemies = ITA }
-				is_in_array = { potential_and_current_enemies = SPR }
+				is_in_array = {
+					potential_and_current_enemies = GER
+				}
+				is_in_array = {
+					potential_and_current_enemies = ITA
+				}
+				is_in_array = {
+					potential_and_current_enemies = SPR
+				}
 			}
 		}
 	}
@@ -450,40 +527,29 @@ enemy_has_equal_or_better_radar_tech_trigger = {
 				}
 			}
 		}
-		else_if = {
-			limit = {
-				ROOT = {
-					has_tech = improved_decimetric_radar
-					NOT = {
-						has_tech = advanced_decimetric_radar
-					}
-				}
-			}
-			FROM = {
-				OR = {
-					has_tech = improved_decimetric_radar
-					has_tech = advanced_decimetric_radar
-				}
-			}
-		}
 		#no more steps needed because end of research tree is reached
 	}
 }
 
-is_available_to_collaboration_government = { # occupied_countries.1 should be updated along with this
+is_available_to_collaboration_government = {
+	# occupied_countries.1 should be updated along with this
 	NOT = {
 		AND = {
-			FROM = { original_tag = YUG }
+			FROM = {
+				original_tag = YUG
+			}
 			original_tag = ITA
 		}
 		AND = {
-			FROM = { original_tag = DNZ }
+			FROM = {
+				original_tag = DNZ
+			}
 			original_tag = POL
 		}
 		TUR_cannot_form_kurdish_collaboration_government = yes
 		any_country_with_original_tag = {
 			original_tag_to_check = FROM
-			is_puppet_of = PREV # if already created one do not create another
+			is_puppet_of = PREV			# if already created one do not create another
 			has_autonomy_state = autonomy_collaboration_government
 		}
 	}
@@ -492,8 +558,9 @@ is_available_to_collaboration_government = { # occupied_countries.1 should be up
 has_large_ally_not_pick_closed_economy = {
 	any_of_scopes = {
 		array = faction_members
-
-		NOT = { tag = PREV }
+		NOT = {
+			tag = PREV
+		}
 		num_of_military_factories > 30
 	}
 }
@@ -527,7 +594,9 @@ is_core_or_compliance_60 = {
 		tooltip = is_core_or_compliance_60_tt
 		OR = {
 			controller = {
-				PREV = { is_core_of = PREV }
+				PREV = {
+					is_core_of = PREV
+				}
 			}
 			compliance > 60
 		}
@@ -550,19 +619,27 @@ has_same_ideology = {
 		OR = {
 			AND = {
 				has_government = democratic
-				ROOT = { has_government = democratic }
+				ROOT = {
+					has_government = democratic
+				}
 			}
 			AND = {
 				has_government = fascism
-				ROOT = { has_government = fascism }
+				ROOT = {
+					has_government = fascism
+				}
 			}
 			AND = {
 				has_government = communism
-				ROOT = { has_government = communism }
+				ROOT = {
+					has_government = communism
+				}
 			}
 			AND = {
 				has_government = neutrality
-				ROOT = { has_government = neutrality }
+				ROOT = {
+					has_government = neutrality
+				}
 			}
 		}
 	}
@@ -597,7 +674,7 @@ state_is_in_the_mediterranean_sea = {
 	custom_trigger_tooltip = {
 		tooltip = state_is_in_the_mediterranean_sea_tt
 		OR = {
-			state = 118 #GIBRALTAR
+			state = 118			#GIBRALTAR
 			state = 173
 			state = 168
 			state = 167
@@ -671,7 +748,9 @@ state_is_in_the_mediterranean_sea = {
 is_major_not_original_tag_root = {
 	is_major = yes
 	hidden_trigger = {
-		NOT = { original_tag = ROOT }
+		NOT = {
+			original_tag = ROOT
+		}
 	}
 }
 
@@ -719,7 +798,6 @@ has_war_with_non_exiled_country = {
 			is_government_in_exile = no
 		}
 	}
-
 }
 
 is_at_peace_exiled_countries_excluded = {
@@ -753,21 +831,21 @@ is_alpine_state = {
 	}
 	hidden_trigger = {
 		OR = {
-			state = 21 #Bouche-du-Rhone - FRA
-			state = 851 #Var - FRA 
-			state = 735 #Savoy - FRA 
-			state = 32 #Alpes - FRA 
-			state = 158 #Piemonte - ITA
-			state = 159 #Lombardia - ITA 
-			state = 850 #Trentino - ITA 
-			state = 39 #Alto Adige - ITA
-			state = 847 #Western Swiss Alps - SWi
-			state = 151 #Eastern Swiss Alps - SWI 
-			state = 846 #Ticino - SWI
-			state = 848 #Vorarlberg - AUS
-			state = 153 #Tyrol - AUS 
-			state = 152 #Upper Austria - AUS 
-			state = 4 #Lower Austria 
+			state = 21			#Bouche-du-Rhone - FRA
+			state = 851			#Var - FRA 
+			state = 735			#Savoy - FRA 
+			state = 32			#Alpes - FRA 
+			state = 158			#Piemonte - ITA
+			state = 159			#Lombardia - ITA 
+			state = 850			#Trentino - ITA 
+			state = 39			#Alto Adige - ITA
+			state = 847			#Western Swiss Alps - SWi
+			state = 151			#Eastern Swiss Alps - SWI 
+			state = 846			#Ticino - SWI
+			state = 848			#Vorarlberg - AUS
+			state = 153			#Tyrol - AUS 
+			state = 152			#Upper Austria - AUS 
+			state = 4			#Lower Austria 
 		}
 	}
 }
@@ -801,7 +879,8 @@ state_has_any_resource = {
 	}
 }
 
-country_can_be_reasonable_target_of_wargoal = { #Expected scopes: Target country is THIS, country getting wargoal is PREV
+country_can_be_reasonable_target_of_wargoal = {
+	#Expected scopes: Target country is THIS, country getting wargoal is PREV
 	NOT = {
 		has_war_with = ROOT
 		is_in_faction_with = PREV
@@ -814,42 +893,42 @@ country_can_be_reasonable_target_of_wargoal = { #Expected scopes: Target country
 
 is_unlikely_country_tag = {
 	OR = {
-	    tag = BRI
-	    tag = CAT
-	    tag = NAV
-	    tag = GLC
-	    tag = ADU
-	    tag = BRI
-	    tag = OCC
-	    tag = COR
-	    tag = DNZ
-	    tag = KSH
-	    tag = CKK
-	    tag = FER
-	    tag = YAK
-	    tag = VLA
-	    tag = KKP
-	    tag = YAM
-	    tag = TAY
-	    tag = OVO
-	    tag = NEN
-	    tag = KOM
-	    tag = CHU
-	    tag = MEL
-	    tag = RIF
-	    tag = HAR
-	    tag = TIG
-	    tag = AFA
-	    tag = BEG
-	    tag = GBA
-	    tag = SID
-	    tag = ORO
-	    tag = QEM
-	    tag = LBV
-	    tag = PAP
-	    tag = TOS
-	    tag = SPM
-	    tag = TTS
+		tag = BRI
+		tag = CAT
+		tag = NAV
+		tag = GLC
+		tag = ADU
+		tag = BRI
+		tag = OCC
+		tag = COR
+		tag = DNZ
+		tag = KSH
+		tag = CKK
+		tag = FER
+		tag = YAK
+		tag = VLA
+		tag = KKP
+		tag = YAM
+		tag = TAY
+		tag = OVO
+		tag = NEN
+		tag = KOM
+		tag = CHU
+		tag = MEL
+		tag = RIF
+		tag = HAR
+		tag = TIG
+		tag = AFA
+		tag = BEG
+		tag = GBA
+		tag = SID
+		tag = ORO
+		tag = QEM
+		tag = LBV
+		tag = PAP
+		tag = TOS
+		tag = SPM
+		tag = TTS
 		tag = BSK
 		tag = TAT
 		tag = UDM

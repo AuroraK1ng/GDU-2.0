@@ -57,7 +57,6 @@ focus_tree = {
 			add_ideas = GDU_Commonwealth_Navy_Manpower1		
 			custom_effect_tooltip = NZL_transfer_ships_tt
 			hidden_effect = {
-				load_oob = "NZ_LightCruisers"
 			}
 			723 = {
 				add_resource = {
@@ -520,7 +519,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					ENG = { has_tech = tactical_bomber1 }
+					ENG = { has_tech = basic_medium_airframe }
 				}
 				add_equipment_to_stockpile = {
 					type = tac_bomber_equipment_1
@@ -728,8 +727,8 @@ focus_tree = {
 				name = NZL_defend_our_islands
 				bonus = 1.00 
 				uses = 2
-				technology = naval_bomber1
-				technology = naval_bomber2
+				technology = air_torpedoe_1
+				technology = air_torpedoe_2
 			}
 		}
 	}
@@ -813,8 +812,8 @@ focus_tree = {
 				name = NZL_heavy_bombers
 				bonus = 0.5  
 				uses = 2
-				technology = strategic_bomber1
-				technology = strategic_bomber2
+				technology = basic_large_airframe
+				technology = improved_large_airframe
 			}
 		}
 	}

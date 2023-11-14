@@ -1,0 +1,423 @@
+#####################
+###  ##  #  # # #  ## 
+#  #  # ## # # # #   
+#  #### # ## ##   #  
+#  #  # #  # # #   # 
+#  #  # #  # # # ## 
+#################### 
+GER_porsche_organization = {
+	include = generic_heavy_tank_organization
+	icon = GFX_idea_porsche
+	allowed = {
+		OR = {
+			tag = GER
+			tag = SPR
+			tag = ROM
+			tag = HUN
+			tag = BUL
+		}
+		NOT = {
+			original_tag = CZE
+		}
+	}
+	add_trait = {
+		token = generic_mio_trait_high_explosive_shells
+		name = generic_mio_trait_high_explosive_shells
+		icon = GFX_generic_mio_department_icon_tank_general_weapons
+
+		position = { x=1 y=2 }
+		relative_position_id = generic_mio_trait_commander_cupola
+
+		any_parent = { generic_mio_trait_commander_cupola generic_mio_trait_simplified_layout }
+		
+		available = { #Two FROM blocs to provide two different check marks in the UI
+			FROM = {
+				has_completed_focus = GER_Mechanise_the_Army
+			}
+		}
+
+		#mutually_exclusive = { generic_mio_trait_apcr_hvap_shells }
+		
+		equipment_bonus = {
+			armor_value = 0.45
+			soft_attack = 0.30
+			hard_attack = 0.30
+			defense = 0.25
+			breakthrough = 0.05
+			reliability = -0.4
+			build_cost_ic = 0.45
+		}
+	}
+}
+
+GER_man_organization = {
+	include = generic_tank_organization
+	icon = GFX_idea_GER_MAN
+		allowed = {
+			OR = {
+				tag = GER
+				tag = SPR
+				tag = ITA
+				tag = HUN
+				tag = BUL
+			}
+		}
+	tree_header_text = {
+		text = mio_header_tank_construction
+		x = 3
+	}
+	tree_header_text = {
+		text = mio_header_equipment_and_specialization
+		x = 7
+	}
+	tree_header_text = {
+		text = mio_header_armor
+		x = 9
+	}
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+	add_trait = {
+	
+		available = { #Two FROM blocs to provide two different check marks in the UI
+			FROM = {
+				has_completed_focus = GER_Mechanise_the_Army
+			}
+		}
+		
+		token = GER_mio_trait_hotrolled_armor
+		name = GER_mio_trait_hotrolled_armor
+		icon = GFX_generic_mio_department_icon_tank_general_technology
+		special_trait_background = yes
+
+		equipment_bonus = {
+			soft_attack = 0.2
+			hard_attack = 0.2
+			maximum_speed = 0.1
+			defense = 0.25
+			breakthrough = 0.15
+			build_cost_ic = 0.5
+		}
+		position = {
+			x = 9
+			y = 0
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_multilayer_armour
+		name = GER_mio_trait_multilayer_armour
+		icon = GFX_generic_mio_trait_icon_armor_value
+		special_trait_background = yes
+		
+		any_parent = {
+			GER_mio_trait_hotrolled_armor
+		}
+		equipment_bonus = {
+			armor_value = 0.6
+		}
+		position = {
+			x = 9
+			y = 2
+		}
+	}		
+	add_trait = {
+		token = generic_mio_trait_standardized_components
+		name = generic_mio_trait_standardized_components
+		icon = GFX_generic_mio_department_icon_tank_general_line_efficiency
+		
+		position = { x=2 y=2 }
+		relative_position_id = generic_mio_trait_simplified_suspension
+		
+		limit_to_equipment_type = {
+			#light_tank_rocket_chassis
+			medium_tank_rocket_chassis
+			heavy_tank_rocket_chassis
+		}
+		
+		any_parent = { generic_mio_trait_simplified_suspension generic_mio_trait_crew_ergonomics }
+
+		equipment_bonus = {
+			reliability = 0.05
+			soft_attack = -0.1
+			hard_attack = 0.75
+			build_cost_ic = -0.1
+		}
+	}
+}
+
+GER_daimler_benz_organization = {
+	include = generic_mobile_tank_organization
+	icon = GFX_idea_daimler_benz	# TODO change
+	allowed = {
+		OR = {
+			tag = GER
+			tag = SPR
+			tag = ROM
+			tag = HUN
+			tag = BUL
+		}
+	}
+	tree_header_text = {
+		text = mio_header_tank_construction
+		x = 3
+	}
+	tree_header_text = {
+		text = mio_header_equipment_and_specialization
+		x = 7
+	}
+	tree_header_text = {
+		text = mio_header_armor
+		x = 9
+	}
+	
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+}
+
+#####################
+## #  # ### ###   ## 
+#   #  #  #  #  # #   
+#  ####  #  ###   #  
+# #  #  #  #      # 
+##  #  # ### #    ##  
+#####################
+GER_germaniawerft_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_germaniawerft
+	allowed = {
+		tag = GER
+	}
+}
+
+GER_blohm_und_voss_organization = {
+	include = generic_raider_ship_organization
+	icon = GFX_idea_blohm_und_voss
+	allowed = {
+		tag = GER
+	}
+}
+
+###########################
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+###########################
+GER_messerschmitt_organization = {
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_messerschmitt
+	allowed = {
+		tag = GER
+	}
+	add_trait = {
+		token = GER_mio_trait_maintenance_first_design
+		name = GER_mio_trait_maintenance_first_design
+		icon = GFX_generic_mio_department_icon_plane_fighter_line_efficiency
+		special_trait_background = yes
+		position = {
+			x = -1
+			y = 1
+		}
+		relative_position_id = generic_mio_trait_expanded_production_facilities
+		all_parents = {
+			generic_mio_trait_expanded_production_facilities
+		}
+		equipment_bonus = {
+			maximum_speed = 0.05
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_fuselage_based_weapons
+		name = GER_mio_trait_fuselage_based_weapons
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+		special_trait_background = yes
+		position = {
+			x = 1
+			y = 1
+		}
+		relative_position_id = generic_mio_trait_expanded_production_facilities
+		any_parent = {
+			generic_mio_trait_expanded_production_facilities
+		}
+		equipment_bonus = {
+			air_attack = 0.05
+		}
+	}
+}
+
+GER_junkers_organization = {
+	include = generic_medium_aircraft_organization
+	icon = GFX_idea_junkers
+	allowed = {
+		OR = {
+			tag = GER
+			AND = {
+				tag = AOI
+				has_dlc = "By Blood Alone"
+			}
+		}
+	}
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = {
+					NOT = {
+						original_tag = GER
+					}
+				}
+			}
+			FROM = {
+				NOT = {
+					has_war_with = GER
+				}
+			}
+		}
+		IF = {
+			limit = {
+				FROM = {
+					NOT = {
+						original_tag = GER
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_invited_mio_tt
+				FROM = {
+					has_country_flag = has_invited_GER_junkers_organization_flag
+				}
+			}
+		}
+	}
+	
+	
+	add_trait = {
+		token = GER_mio_trait_psychological_warfare
+		name = GER_mio_trait_psychological_warfare
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+		special_trait_background = yes
+		position = {
+			x = 0
+			y = 1
+		}
+		
+		any_parent = { generic_mio_trait_mixed_material_construction }
+		
+		relative_position_id = generic_mio_trait_mixed_material_construction
+		
+		limit_to_equipment_type = { small_plane_cas_airframe cv_small_plane_cas_airframe }
+		
+		equipment_bonus = {
+			air_ground_attack = 0.05
+			air_attack = -0.05
+			reliability = 0.05
+		}
+	}
+	
+	add_trait = {
+		token = generic_mio_trait_streamlined_fuselage
+		name = generic_mio_trait_streamlined_fuselage
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		position = { x=1 y=2 }
+		relative_position_id = generic_mio_trait_expanded_cockpit
+
+		any_parent = { generic_mio_trait_expanded_cockpit generic_mio_trait_metal_nose_replacement }
+
+		limit_to_equipment_type = { medium_plane_airframe }
+
+		equipment_bonus = {
+			maximum_speed = 0.1
+		}
+	}
+}
+
+GER_focke_wulf_organization = {
+	include = generic_multi_role_aircraft_organization
+	icon = GFX_idea_focke_wulf
+	allowed = {
+		tag = GER
+	}
+}
+
+GER_heinkel_organization = {
+	include = generic_heavy_aircraft_organization
+	icon = GFX_idea_heinkel
+	allowed = {
+		tag = GER
+	}
+	available = {
+	}
+}
+
+GER_dornier_organization = {
+	include = generic_naval_aircraft_organization
+	icon = GFX_idea_dornier
+	allowed = {
+		tag = GER
+	}
+}
+
+################################### 
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+###################################
+GER_rheinmetall_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_rheinmetall
+	allowed = {
+		OR = {
+			original_tag = GER
+			original_tag = HUN
+		}
+	}
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = {
+					NOT = {
+						original_tag = GER
+					}
+				}
+			}
+			FROM = {
+				NOT = {
+					has_war_with = GER
+				}
+			}
+		}
+	}
+}
+
+GER_mauser_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_mauser
+	allowed = {
+		OR = {
+			original_tag = GER
+		}
+	}
+}
+
+GER_opel_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_opel
+	allowed = {
+		OR = {
+			original_tag = GER
+			original_tag = ROM
+		}
+	}
+	available = {
+	}
+}

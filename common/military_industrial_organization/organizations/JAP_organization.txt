@@ -1,0 +1,186 @@
+JAP_osaka_army_arsenal_organization = {
+	include = generic_tank_refurbishment_plant_organization
+	icon = GFX_idea_osaka_army_arsenal
+	allowed = {	
+		the_geacps = yes
+		has_dlc = "Arms Against Tyranny"
+	}
+} 
+JAP_kure_naval_arsenal_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_kure_naval_arsenal
+	allowed = {	
+		the_geacps = yes
+		has_dlc = "Arms Against Tyranny"
+	}
+	
+	add_trait = { 
+		token = ENG_mio_trait_flared_bow
+		name = ENG_mio_trait_flared_bow
+		icon = GFX_generic_mio_trait_icon_armor_value
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+		
+		limit_to_equipment_type = { capital_ship }
+
+		equipment_bonus = {
+			armor_value = 0.03
+		}
+	}
+}
+
+JAP_yokosuka_naval_arsenal_organization = {
+	include = generic_escort_ship_organization
+	icon = GFX_idea_yokosuka_naval_arsenal
+	allowed = {
+		the_geacps = yes
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+JAP_maizuru_naval_arsenal_organization = {
+	include = generic_raider_ship_organization
+	icon = GFX_idea_maizuru_naval_arsenal
+	
+	allowed = {	 
+		the_geacps = yes
+	}
+}
+
+
+JAP_sasebo_naval_arsenal_organization = {
+	include = generic_refurbishment_repair_organization
+	icon = GFX_idea_sasebo_naval_arsenal
+	allowed = {	 
+		the_geacps = yes
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+
+
+#######################################################################PLANES
+
+
+JAP_mitsubishi_organization = {
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_mitsubishi
+	
+	allowed = {	 
+		tag = JAP 
+	}
+
+	initial_trait = {
+		name = generic_mio_initial_trait_light_aircraft_designer
+
+		equipment_bonus = {
+			air_agility = 0.1
+		}
+	}	
+} 
+
+JAP_aichi_organization = {
+	include = generic_multi_role_aircraft_organization
+	icon = GFX_idea_aichi
+	allowed = {	
+		tag = JAP
+	}
+	
+	remove_trait = { generic_mio_trait_variable_pitch_propellers }
+}
+
+JAP_nakajima_organization = {
+	include = generic_naval_aircraft_organization
+	icon = GFX_idea_nakajima
+	allowed = {	
+		tag = JAP
+		has_dlc = "Arms Against Tyranny"
+	}
+	
+	remove_trait = { generic_mio_trait_patrol_fuel_tanks generic_mio_trait_internal_torpedo_mountings generic_mio_agility_wing_design generic_mio_strength_wing_design generic_mio_air_cooled_engines }
+
+	add_trait = {
+		token = ITA_mio_trait_air_race_pedigree
+		name = ITA_mio_trait_air_race_pedigree
+		icon = GFX_generic_mio_department_icon_plane_medium_engine
+		special_trait_background = yes
+		
+		position = { x=-1 y=1 }  
+		relative_position_id = generic_mio_trait_reinforced_fuselage
+		
+		all_parents = { generic_mio_trait_reinforced_fuselage }
+		
+		equipment_bonus = {
+			reliability = -0.1
+			air_range = 0.1
+		}
+	}
+
+	add_trait = {
+		token = ITA_mio_trait_special_aerotorpedoes_unit
+		name = ITA_mio_trait_special_aerotorpedoes_unit
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
+		special_trait_background = yes
+		
+		position = { x=2 y=0 }  
+		relative_position_id = ITA_mio_trait_air_race_pedigree
+		
+		all_parents = { generic_mio_trait_reinforced_fuselage }
+		
+		equipment_bonus = {
+			reliability = -0.05
+			naval_strike_attack = 0.05
+		}
+	}
+}
+
+JAP_yokosuka_organization = {
+	include = generic_medium_aircraft_organization
+	icon = GFX_idea_yokosuka
+	allowed = {	
+		tag = JAP
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+
+
+ 
+
+                
+                       
+                   
+                         
+                 
+
+
+
+
+JAP_tokyo_arsenal_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_tokyo_arsenal
+	allowed = {	
+		the_geacps = yes
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+JAP_osaka_army_arsenal_artillery_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_osaka_army_arsenal
+	allowed = {	
+		the_geacps = yes
+		has_dlc = "Arms Against Tyranny"
+	}
+} 
+
+JAP_nissan_organization = {
+	include = generic_motorized_mechanized_organization 
+	icon = GFX_idea_nissan
+	allowed = {	 
+		the_geacps = yes
+	}
+	
+
+}

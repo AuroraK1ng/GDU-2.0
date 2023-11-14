@@ -1,0 +1,97 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+SAF_iscor_organization = {
+    name = SAF_iscor_organization
+    include = generic_medium_tank_organization
+    icon = GFX_idea_SAF_idea_iscor
+    allowed = {
+        original_TAG = SAF
+        has_dlc = "Together for Victory"
+    }
+	
+	remove_trait = { 
+		generic_mio_trait_power_traverse
+		generic_mio_trait_all_round_cupola
+		generic_mio_trait_simplified_turret_design
+		generic_mio_trait_specialist_shells
+		generic_mio_trait_improved_gun_metallurgy
+		generic_mio_trait_advanced_shells
+		generic_mio_trait_armor_steel_working
+		generic_mio_trait_spaced_armor
+		generic_mio_trait_crew_survival_layout
+		generic_mio_trait_sloped_side_armor
+		generic_mio_trait_truck_engines
+		generic_mio_trait_aircraft_engines
+		generic_mio_trait_improved_suspension
+	}
+	
+	add_trait = {
+		token = USA_mio_trait_strict_design_specifications
+		name = USA_mio_trait_strict_design_specifications
+		icon = GFX_generic_mio_trait_icon_reliability
+		special_trait_background = yes
+		position = {
+			x = 0
+			y = 0
+		}
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+	add_trait = {
+		token = USA_mio_trait_expanded_production_facilities
+		name = USA_mio_trait_expanded_production_facilities
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		special_trait_background = yes
+		position = {
+			x = 0
+			y = 1
+		}
+		equipment_bonus = {
+			soft_attack = 0.05
+		}
+	}
+}
+
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################

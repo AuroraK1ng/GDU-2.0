@@ -23,31 +23,31 @@ country_event = {
 	option = { 
 		name = tfv_raj.1.b
 		trigger = {
-			has_tech = early_fighter
-			NOT = { has_tech = fighter1}
+			has_tech = iw_small_airframe
+			NOT = { has_tech = basic_small_airframe }
 		}
 		add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 20 producer = ENG }
 	}
 	option = { 
 		name = tfv_raj.1.b
 		trigger = {
-			has_tech = fighter1
-			NOT = { has_tech = fighter2}
+			has_tech = basic_small_airframe
+			NOT = { has_tech = improved_small_airframe }
 		}
 		add_equipment_to_stockpile = { type = fighter_equipment_1 amount = 20 producer = ENG }
 	}
 	option = { 
 		name = tfv_raj.1.b
 		trigger = {
-			has_tech = fighter2
-			NOT = { has_tech = fighter3}
+			has_tech = improved_small_airframe 
+			NOT = { has_tech = advanced_small_airframe }
 		}
 		add_equipment_to_stockpile = { type = fighter_equipment_2 amount = 20 producer = ENG }
 	}
 	option = { 
 		name = tfv_raj.1.b
 		trigger = {
-			has_tech = fighter3
+			has_tech = advanced_small_airframe
 		}
 		add_equipment_to_stockpile = { type = fighter_equipment_3 amount = 20 producer = ENG }
 	}
@@ -65,31 +65,31 @@ country_event = {
 	option = { 
 		name = tfv_raj.2.a
 		trigger = {
-			has_tech = early_fighter
-			NOT = { has_tech = fighter1}
+			has_tech = iw_small_airframe
+			NOT = { has_tech = basic_small_airframe } 
 		}
 		add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 20 producer = ENG }
 	}
 	option = { 
 		name = tfv_raj.2.a
 		trigger = {
-			has_tech = fighter1
-			NOT = { has_tech = fighter2}
+			has_tech = basic_small_airframe
+			NOT = { has_tech = improved_small_airframe }
 		}
 		add_equipment_to_stockpile = { type = fighter_equipment_1 amount = 20 producer = ENG }
 	}
 	option = { 
 		name = tfv_raj.2.a
 		trigger = {
-			has_tech = fighter2
-			NOT = { has_tech = fighter3}
+			has_tech = improved_small_airframe
+			NOT = { has_tech = advanced_small_airframe }
 		}
 		add_equipment_to_stockpile = { type = fighter_equipment_2 amount = 20 producer = ENG }
 	}
 	option = { 
 		name = tfv_raj.2.a
 		trigger = {
-			has_tech = fighter3
+			has_tech = advanced_small_airframe
 		}
 		add_equipment_to_stockpile = { type = fighter_equipment_3 amount = 20 producer = ENG }
 	}

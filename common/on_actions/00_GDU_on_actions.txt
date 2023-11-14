@@ -33,22 +33,19 @@ on_actions = {
 	}	
 	on_startup = {
 		effect = {
-			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = GER state = 724  }} }
-			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = ENG state = 336  }} }
-			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = ENG state = 375  }} }
-			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = ENG state = 368  }} }
-			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = ENG state = 379  }} }
-			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = ENG state = 377  }} }
-			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = ENG state = 380  }} }
-			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = ENG state = 391  }} }
-			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = ENG state = 360  }} }
-			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = ENG state = 393  }} }
-			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = ENG state = 672  }} }
-			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = ENG state = 261  }} }
-			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = ENG state = 376  }} }
-			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = ENG state = 387  }} }
-			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = ENG state = 623  }} }
-every_country = {
+			#if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = GER state = 724  }} }
+			#if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = ENG state = 336  }} }
+			#if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = USA state = 375  }} }
+			#if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = USA state = 379  }} }
+			#if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = USA state = 377  }} }
+			#if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = USA state = 380  }} }
+			#if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = USA state = 391  }} }
+			#if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = USA state = 393  }} }
+			#if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = ENG state = 672  }} }
+			#if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = USA state = 261  }} }
+			#if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = USA state = 376  }} }
+			#if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { target = USA state = 387  }} }
+			every_country = {
                     add_ideas = { EFI_START }
 				}
 								
@@ -273,7 +270,14 @@ every_country = {
 			add_to_array = { global.afrika_states_array = 446 } #Cairo
 			add_to_array = { global.afrika_states_array = 447 } #Alexandria
 			
-			
+			## Barbarossa System 
+			set_variable = { var = GER.Barb_score_value value = 0 }
+			set_variable = { var = SOV.Barb_score_value value = 0 }
+
+
+
+
+
 			GER = { startup_on_actions = yes } # Germany does startup scripted effects from on_startup_scripted_effects.txt file. Right now this only includes simulating population growth, since pop growth is deleted for possible desynch/performance reasons.
 
 		

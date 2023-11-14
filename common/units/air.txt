@@ -95,21 +95,21 @@ sub_units = {
 		sprite = medium_plane
 		priority = 1
 		active = yes
-		type = fighter
+		type = heavy_fighter
 		need = { medium_plane_fighter_airframe = 1 }
 		categories = { category_heavy_fighter }
 		land_air_wing_size = 100
 	}
 
-	#scout_plane = {
-	#	sprite = light_plane
-	#	priority = 1
-	#	active = yes
-	#	type = scout_plane
-	#	need = { medium_plane_scout_plane_airframe = 1 }
-	#	categories = { category_scout_plane }
-	#	land_air_wing_size = 10
-	#}
+	scout_plane = {
+		sprite = light_plane
+		priority = 1
+		active = yes
+		type = scout_plane
+		need = { medium_plane_scout_plane_airframe = 1 }
+		#categories = { category_scout_plane }
+		land_air_wing_size = 10
+	}
 
 	# Large airframe
 

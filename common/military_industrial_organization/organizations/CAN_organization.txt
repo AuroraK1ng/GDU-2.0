@@ -1,0 +1,201 @@
+CAN_kingston_shipbuilding_organization = {
+	name = CAN_kingston_shipbuilding_organization
+	include = generic_escort_ship_organization
+	icon = GFX_idea_kingston_shipbuilding
+	allowed = {
+		original_TAG = CAN
+	}
+}
+
+CAN_halifax_shipyard_organization = {
+	name = CAN_halifax_shipyard_organization
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_halifax_shipyard
+	allowed = {
+		original_TAG = CAN
+	}
+}
+
+CAN_de_havilland_organization = {
+	name = CAN_de_havilland_organization
+ 	include = generic_medium_aircraft_organization
+ 	icon = GFX_idea_de_havilland
+ 	allowed = {
+ 		original_TAG = CAN
+ 	}
+}
+
+ CAN_canadian_car_foundry_organization = {
+ 	name = CAN_canadian_car_foundry_organization
+ 	include = generic_light_aircraft_organization
+ 	icon = GFX_idea_canadian_car_foundry
+ 	allowed = {
+ 		original_TAG = CAN
+ 	}
+		remove_trait = { generic_mio_trait_maximum_wing_loads }
+	
+	initial_trait = {
+		name = generic_mio_initial_trait_light_aircraft_designer
+		
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+
+	add_trait = { 
+		token = ENG_mio_trait_seaplane_origins
+		name = ENG_mio_trait_seaplane_origins
+		icon = GFX_generic_mio_trait_icon_air_agility
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_ongoing_developmental_upgrades
+
+		all_parents = { generic_mio_trait_ongoing_developmental_upgrades }
+
+		equipment_bonus = {
+			air_agility = 0.05
+		}
+	}
+
+	add_trait = { 
+		token = ENG_mio_trait_elliptical_wings
+		name = ENG_mio_trait_elliptical_wings
+		icon = GFX_generic_mio_trait_icon_air_agility
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		equipment_bonus = {
+			maximum_speed = 0.05		
+		}
+	}
+
+	add_trait = { 
+		token = ENG_mio_trait_supercharger
+		name = ENG_mio_trait_supercharger
+		icon = GFX_generic_mio_trait_icon_air_agility
+		special_trait_background = yes
+
+		position = { x=9 y=1 }
+
+		equipment_bonus = {
+			maximum_speed = 0.05	
+		}
+	}
+ }
+
+ CAN_fairchild_aircraft_ltd_organization = {
+ 	name = CAN_fairchild_aircraft_ltd_organization
+ 	include = generic_naval_aircraft_organization
+ 	icon = GFX_idea_generic_air_manufacturer_2
+ 	allowed = {
+ 		original_TAG = CAN
+ 		has_dlc = "Together for Victory"
+ 	}
+	
+	remove_trait = { generic_mio_trait_patrol_fuel_tanks generic_mio_trait_internal_torpedo_mountings generic_mio_agility_wing_design generic_mio_strength_wing_design generic_mio_air_cooled_engines }
+
+	add_trait = {
+		token = ENG_mio_trait_elliptical_wings
+		name = ENG_mio_trait_elliptical_wings
+		icon = GFX_generic_mio_department_icon_plane_medium_engine
+		special_trait_background = yes
+		
+		position = { x=-1 y=1 }  
+		relative_position_id = generic_mio_trait_reinforced_fuselage
+		
+		all_parents = { generic_mio_trait_reinforced_fuselage }
+		
+		equipment_bonus = {
+			reliability = -0.05
+			air_range = 0.1
+		}
+	}
+
+	add_trait = {
+		token = ENG_mio_trait_supercharger
+		name = ENG_mio_trait_supercharger
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
+		special_trait_background = yes
+		
+		position = { x=2 y=0 }  
+		relative_position_id = ENG_mio_trait_elliptical_wings
+		
+		all_parents = { generic_mio_trait_reinforced_fuselage }
+		
+		equipment_bonus = {
+			reliability = -0.05
+			naval_strike_attack = 0.05
+		}
+	}
+ }
+
+ CAN_handley_page_organization = {
+ 	name = CAN_handley_page_organization
+ 	include = generic_medium_aircraft_organization
+ 	icon = GFX_idea_generic_air_manufacturer_3
+ 	allowed = {
+ 		original_TAG = CAN
+ 		has_dlc = "Together for Victory"
+ 	}
+	add_trait = { 
+		token = ENG_mio_trait_elliptical_wings
+		name = ENG_mio_trait_elliptical_wings
+		icon = GFX_generic_mio_trait_icon_air_agility
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+		
+		limit_to_equipment_type = {
+			small_plane_cas_airframe
+			cv_small_plane_cas_airframe
+		}
+
+		equipment_bonus = {
+			maximum_speed = 0.05		
+		}
+	}
+
+	add_trait = { 
+		token = ENG_mio_trait_supercharger
+		name = ENG_mio_trait_supercharger
+		icon = GFX_generic_mio_trait_icon_air_agility
+		special_trait_background = yes
+
+		position = { x=9 y=1 }
+		
+		limit_to_equipment_type = {
+			small_plane_cas_airframe
+			cv_small_plane_cas_airframe
+		}
+
+		equipment_bonus = {
+			maximum_speed = 0.05	
+		}
+	}
+ }
+
+
+CAN_inglis_company_organization = {
+	name = CAN_inglis_company_organization
+	include = generic_support_equipment_organization
+	icon = GFX_idea_inglis_company
+	allowed = {
+		tag = CAN
+	}
+}
+
+CAN_small_arms_limited_organization = {
+	name = CAN_small_arms_limited_organization
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_small_arms_limited
+	allowed = {
+		original_TAG = CAN
+		has_dlc = "Together for Victory"
+	}
+}

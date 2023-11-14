@@ -1,0 +1,138 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+
+
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+# SPR_secn_vanilla_organization = {
+# 	include = generic_task_force_ship_organization
+# 	icon = GFX_idea_generic_naval_manufacturer_3
+# 	allowed = {	
+# 		always =  no
+# 	}
+# }
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+SPR_casa_vanilla_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_2
+ 	allowed = {	
+		always=  no
+ 	}
+ }
+
+ SPR_casa_organization = {
+ 	include = generic_medium_aircraft_organization
+ 	icon = GFX_idea_SPR_casa
+ 	allowed = {	
+		has_dlc = "La Resistance"
+		tag = SPR
+ 	}
+ }
+
+ SPR_hispano_aviacion_organization = {
+ 	include = generic_light_aircraft_organization
+	icon = GFX_idea_SPR_hispano_aviacion
+ 	allowed = {
+ 		has_dlc = "La Resistance"
+ 		tag = SPR
+	}
+ }
+ 
+ SPR_llama_gabilondo_y_cia_organization = {
+	include = generic_multi_role_aircraft_organization
+	icon = GFX_idea_SPR_llama_gabilondo_y_cia_sa
+	allowed ={
+		OR = {
+			original_tag = SPR
+			original_tag = HUN
+			original_tag = BUL
+		}
+	}
+	
+	remove_trait = { generic_mio_trait_variable_pitch_propellers generic_mio_trait_medium_airframe }
+
+	available = {
+
+	}
+}
+
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+SPR_star_bonifacio_echeverria_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_SPR_star_bonifacio_echeverria
+	allowed = {	
+		has_dlc = "La Resistance"
+		tag = SPR
+	}
+
+	available = {
+
+	}
+}
+
+SPR_esperanza_y_cia_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_SPR_esperanza_y_cia
+	allowed = {	
+		has_dlc = "La Resistance"
+		tag = SPR
+	}
+
+	available = {
+
+	}
+}
+
+SPR_hispano_suiza_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_SPR_hispano_suiza
+	
+	allowed = {
+		AND = {
+			has_dlc = "La Resistance"
+			tag = SPR
+		}					
+	}
+
+	available = {
+		
+	}
+
+}

@@ -1,181 +1,189 @@
-characters={
-	ROM_gheorghe_tatarescu={
-		name=ROM_gheorghe_tatarescu
-		portraits={
-			civilian={
-				large="GFX_Portrait_romania_gheorghe_tatarescu"
+characters = {
+	ROM_gheorghe_tatarescu = {
+		name = ROM_gheorghe_tatarescu
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_romania_gheorghe_tatarescu"
 			}
 		}
-		country_leader={
-			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-1
+		country_leader = {
+			ideology = conservatism
+			expire = "1965.1.1.1"
+			id = -1
 		}
 	}
-
-	ROM_constantin_ion_parhon={
-		name=ROM_constantin_ion_parhon
-		portraits={
-			civilian={
-				large="GFX_Portrait_romania_constantin_ion_parhon"
+	ROM_constantin_ion_parhon = {
+		name = ROM_constantin_ion_parhon
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_romania_constantin_ion_parhon"
 			}
 		}
-		country_leader={
-			ideology=leninism
-			expire="1965.1.1.1"
-			id=-1
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1.1"
+			id = -1
 		}
 	}
-
-	ROM_albert_speer={ 
-		name=ROM_albert_speer
-		portraits={
-			army={
-				small="GFX_idea_speer"
+	ROM_albert_speer = {
+		name = ROM_albert_speer
+		portraits = {
+			army = {
+				small = "GFX_idea_speer"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = speer
 			allowed = {
 				original_tag = ROM
 			}
-			available = { 
-				NOT = { has_start_date > 1936.1.1.12 }
+			available = {
 				date > 1941.6.1
-				GER = { has_idea = tot_economic_mobilisation }
+				GER = {
+					has_idea = tot_economic_mobilisation
+				}
 			}
 			traits = {
-				total_war_organizer 
+				total_war_organizer
 			}
-		}		
-	}
-
-	ROM_king_michael={
-		name=ROM_king_michael
-		portraits={
-			civilian={
-				large="GFX_Portrait_romania_michael_i"
-			}
-		}
-		country_leader={
-			ideology=liberalism
-			expire="1965.1.1.1"
-			id=-1
-		}
-		country_leader={
-			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
 		}
 	}
-
-	ROM_armand_calinescu={
-		name=ROM_armand_calinescu
-		portraits={
-			civilian={
-				large="GFX_Portrait_romania_armand_calinescu"
-			}
-			army={
-				small="GFX_idea_ROM_armand_calinescu"
+	ROM_king_michael = {
+		name = ROM_king_michael
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_romania_michael_i"
 			}
 		}
-		advisor={
+		country_leader = {
+			ideology = liberalism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	ROM_armand_calinescu = {
+		name = ROM_armand_calinescu
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_romania_armand_calinescu"
+			}
+			army = {
+				small = "GFX_idea_ROM_armand_calinescu"
+			}
+		}
+		advisor = {
 			slot = political_advisor
 			idea_token = ROM_armand_calinescu
 			allowed = {
 				original_tag = ROM
 			}
 			traits = {
-				prince_of_terror 
+				prince_of_terror
 			}
 		}
-
-		country_leader={
-			ideology=centrism
-			expire="1965.1.1.1"
-			id=-1
+		country_leader = {
+			ideology = centrism
+			expire = "1965.1.1.1"
+			id = -1
 		}
 	}
-
-	ROM_octavian_goga={
-		name=ROM_octavian_goga
-		portraits={
-			civilian={
-				large="GFX_Portrait_romania_octavian_goga"
+	ROM_octavian_goga = {
+		name = ROM_octavian_goga
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_romania_octavian_goga"
 			}
 		}
-		country_leader={
-			ideology=fascism_ideology
-			traits={ anti_democrat }
-			expire="1965.1.1.1"
-			id=-1
+		country_leader = {
+			ideology = fascism_ideology
+			traits = {
+				anti_democrat
+			}
+			expire = "1965.1.1.1"
+			id = -1
 		}
 	}
-
-	ROM_corneliu_codreanu={
-		name=ROM_corneliu_codreanu
-		portraits={
-			civilian={
-				large="GFX_Portrait_romania_corneliu_zelea_codreanu"
+	ROM_corneliu_codreanu = {
+		name = ROM_corneliu_codreanu
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_romania_corneliu_zelea_codreanu"
 			}
 		}
-		country_leader={
-			ideology=fascism_ideology
-			expire="1965.1.1.1"
-			id=-1
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1965.1.1.1"
+			id = -1
 		}
 	}
-
-	ROM_petre_dumitrescu={
-		name=ROM_petre_dumitrescu
-		portraits={
-			army={
-				large="GFX_Portrait_romania_petre_dumitrescu"
-				small="GFX_idea_ROM_petre_dumitrescu"
+	ROM_petre_dumitrescu = {
+		name = ROM_petre_dumitrescu
+		portraits = {
+			army = {
+				large = "GFX_Portrait_romania_petre_dumitrescu"
+				small = "GFX_idea_ROM_petre_dumitrescu"
 			}
 		}
-		field_marshal={ #13/13
-			traits={ inflexible_strategist fast_planner infantry_leader cavalry_leader logistics_wizard unyielding_defender  }
-			skill=6
-			attack_skill=3
-			defense_skill=8
-			planning_skill=3
-			logistics_skill=5
-			legacy_id=-1
+		field_marshal = {
+			#13/13
+			traits = {
+				inflexible_strategist
+				fast_planner
+				infantry_leader
+				cavalry_leader
+				logistics_wizard
+				unyielding_defender
+			}
+			skill = 6
+			attack_skill = 3
+			defense_skill = 8
+			planning_skill = 3
+			logistics_skill = 5
+			legacy_id = -1
 		}
 	}
-
-	ROM_ioan_mihail_racovita={
-		name=ROM_ioan_mihail_racovita
-		portraits={
-			army={
-				large="GFX_Portrait_romania_ioan_mihail_racovita"
-				small="GFX_idea_ROM_ioan_mihail_racovita"
+	ROM_ioan_mihail_racovita = {
+		name = ROM_ioan_mihail_racovita
+		portraits = {
+			army = {
+				large = "GFX_Portrait_romania_ioan_mihail_racovita"
+				small = "GFX_idea_ROM_ioan_mihail_racovita"
 			}
 		}
-		corps_commander={ #17/17
-			traits={ infantry_leader infantry_expert trait_engineer naval_invader trait_mountaineer hill_fighter urban_assault_specialist  }
-			skill=6
-			attack_skill=7
-			defense_skill=4
-			planning_skill=8
-			logistics_skill=8
-			legacy_id=-1
+		corps_commander = {
+			#17/17
+			traits = {
+				infantry_leader
+				infantry_expert
+				trait_engineer
+				naval_invader
+				trait_mountaineer
+				hill_fighter
+				urban_assault_specialist
+			}
+			skill = 6
+			attack_skill = 7
+			defense_skill = 4
+			planning_skill = 8
+			logistics_skill = 8
+			legacy_id = -1
 		}
 	}
-
-
 	### THEORISTS ###
-
-	ROM_gheorghe_potopeanu={
-		name=ROM_gheorghe_potopeanu
-		portraits={
-			army={
-				small="GFX_idea_ROM_gheorghe_potopeanu"
+	ROM_gheorghe_potopeanu = {
+		name = ROM_gheorghe_potopeanu
+		portraits = {
+			army = {
+				small = "GFX_idea_ROM_gheorghe_potopeanu"
 			}
 		}
-		advisor={
+		advisor = {
 			cost = 150
 			slot = theorist
 			idea_token = ROM_gheorghe_potopeanu
@@ -191,14 +199,14 @@ characters={
 			}
 		}
 	}
-	ROM_gheorghe_potopeanu_highcommand={
-		name=ROM_gheorghe_potopeanu
-		portraits={
-			army={
-				small="GFX_idea_ROM_gheorghe_potopeanu"
+	ROM_gheorghe_potopeanu_highcommand = {
+		name = ROM_gheorghe_potopeanu
+		portraits = {
+			army = {
+				small = "GFX_idea_ROM_gheorghe_potopeanu"
 			}
 		}
-		advisor= {
+		advisor = {
 			cost = 150
 			slot = high_command
 			idea_token = ROM_gheorghe_potopeanu
@@ -211,15 +219,14 @@ characters={
 			}
 		}
 	}
-
-	ROM_emanoil_ionescu={
-		name=ROM_emanoil_ionescu
-		portraits={
-			army={
-				small="GFX_idea_ROM_emanoil_ionescu"
+	ROM_emanoil_ionescu = {
+		name = ROM_emanoil_ionescu
+		portraits = {
+			army = {
+				small = "GFX_idea_ROM_emanoil_ionescu"
 			}
 		}
-		advisor={
+		advisor = {
 			cost = 150
 			slot = theorist
 			idea_token = ROM_emanoil_ionescu
@@ -235,19 +242,16 @@ characters={
 			}
 		}
 	}
-
-
 	### ARMY CHIEFS ###
-
-	ROM_constantin_sanatescu={
-		name=ROM_constantin_sanatescu
-		portraits={
-			army={
-				small="GFX_idea_ROM_constantin_sanatescu"
-				large="GFX_Portrait_romania_constantin_sanatescu"
+	ROM_constantin_sanatescu = {
+		name = ROM_constantin_sanatescu
+		portraits = {
+			army = {
+				small = "GFX_idea_ROM_constantin_sanatescu"
+				large = "GFX_Portrait_romania_constantin_sanatescu"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = army_chief
 			idea_token = ROM_constantin_sanatescu
 			allowed = {
@@ -258,34 +262,41 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
-		corps_commander={ #17/17
-			traits={ bearer_of_artillery infantry_leader infantry_expert urban_assault_specialist trait_engineer ranger organizer expert_improviser }
-			skill=6
-			attack_skill=6
-			defense_skill=5
-			planning_skill=7
-			logistics_skill=10
-			legacy_id=-1
+		corps_commander = {
+			#17/17
+			traits = {
+				bearer_of_artillery
+				infantry_leader
+				infantry_expert
+				urban_assault_specialist
+				trait_engineer
+				ranger
+				organizer
+				expert_improviser
+			}
+			skill = 6
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 7
+			logistics_skill = 10
+			legacy_id = -1
 		}
-		
 	}
-
-	ROM_ion_antonescu={
-		name=ROM_ion_antonescu
-		portraits={
-			army={
-				small="GFX_idea_ROM_ion_antonescu"
-				large="GFX_Portrait_romania_ion_antonescu"
+	ROM_ion_antonescu = {
+		name = ROM_ion_antonescu
+		portraits = {
+			army = {
+				small = "GFX_idea_ROM_ion_antonescu"
+				large = "GFX_Portrait_romania_ion_antonescu"
 			}
-			civilian={
-				large="GFX_Portrait_romania_ion_antonescu"
+			civilian = {
+				large = "GFX_Portrait_romania_ion_antonescu"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = army_chief
 			idea_token = ROM_ion_antonescu
 			allowed = {
@@ -296,32 +307,36 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-		
-		field_marshal={ #13/13
-			traits={ brilliant_strategist infantry_leader infantry_expert organizer thorough_planner aggressive_assaulter   }
-			skill=6
-			attack_skill=6
-			defense_skill=2
-			planning_skill=6
-			logistics_skill=5
-			legacy_id=-1
+		field_marshal = {
+			#13/13
+			traits = {
+				brilliant_strategist
+				infantry_leader
+				infantry_expert
+				organizer
+				thorough_planner
+				aggressive_assaulter
+			}
+			skill = 6
+			attack_skill = 6
+			defense_skill = 2
+			planning_skill = 6
+			logistics_skill = 5
+			legacy_id = -1
 		}
 	}
-
-
 	### NAVY CHIEFS ###
-
-	ROM_nicolae_sova={
-		name=ROM_nicolae_sova
-		portraits={
-			army={
-				small="GFX_idea_ROM_nicolae_sova"
+	ROM_nicolae_sova = {
+		name = ROM_nicolae_sova
+		portraits = {
+			army = {
+				small = "GFX_idea_ROM_nicolae_sova"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = navy_chief
 			idea_token = ROM_nicolae_sova
 			allowed = {
@@ -332,20 +347,19 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
 	}
-
-	ROM_horia_macellariu={
-		name=ROM_horia_macellariu
-		portraits={
-			army={
-				small="GFX_idea_ROM_horia_macellariu"
-				large="GFX_Portrait_romania_horia_macellariu"
+	ROM_horia_macellariu = {
+		name = ROM_horia_macellariu
+		portraits = {
+			army = {
+				small = "GFX_idea_ROM_horia_macellariu"
+				large = "GFX_Portrait_romania_horia_macellariu"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = navy_chief
 			idea_token = ROM_horia_macellariu
 			allowed = {
@@ -356,32 +370,31 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-		
-		navy_leader={
-			traits={ gentlemanly spotter }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			maneuvering_skill=2
-			coordination_skill=1
-			legacy_id=-1
+		navy_leader = {
+			traits = {
+				gentlemanly
+				spotter
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 1
+			legacy_id = -1
 		}
 	}
-
-
 	### AIR CHIEFS ###
-
-	ROM_ermil_gheorghiu={
-		name=ROM_ermil_gheorghiu
-		portraits={
-			army={
-				small="GFX_idea_ROM_ermil_gheorghiu"
+	ROM_ermil_gheorghiu = {
+		name = ROM_ermil_gheorghiu
+		portraits = {
+			army = {
+				small = "GFX_idea_ROM_ermil_gheorghiu"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = air_chief
 			idea_token = ROM_ermil_gheorghiu
 			allowed = {
@@ -392,19 +405,18 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
 	}
-
-	ROM_gheorghe_jienescu={
-		name=ROM_gheorghe_jienescu
-		portraits={
-			army={
-				small="GFX_idea_ROM_gheorghe_jienescu"
+	ROM_gheorghe_jienescu = {
+		name = ROM_gheorghe_jienescu
+		portraits = {
+			army = {
+				small = "GFX_idea_ROM_gheorghe_jienescu"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = air_chief
 			idea_token = ROM_gheorghe_jienescu
 			allowed = {
@@ -415,23 +427,20 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
 	}
-
-
 	### MILITARY HIGH COMMAND ###
-
-	ROM_gheorghe_avramescu={
-		name=ROM_gheorghe_avramescu
-		portraits={
-			army={
-				small="GFX_idea_ROM_gheorghe_avramescu"
-				large="GFX_Portrait_romania_gheorghe_avramescu"
+	ROM_gheorghe_avramescu = {
+		name = ROM_gheorghe_avramescu
+		portraits = {
+			army = {
+				small = "GFX_idea_ROM_gheorghe_avramescu"
+				large = "GFX_Portrait_romania_gheorghe_avramescu"
 			}
 		}
-		advisor={	
+		advisor = {
 			slot = high_command
 			idea_token = ROM_gheorghe_avramescu
 			ledger = army
@@ -443,29 +452,35 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
-		corps_commander={ #17/17
-			traits={  panzer_leader hill_fighter ranger panzer_expert camouflage_expert expert_improviser }
-			skill=6
-			attack_skill=5
-			defense_skill=6
-			planning_skill=3
-			logistics_skill=5
-			legacy_id=-1
+		corps_commander = {
+			#17/17
+			traits = {
+				panzer_leader
+				hill_fighter
+				ranger
+				panzer_expert
+				camouflage_expert
+				expert_improviser
+			}
+			skill = 6
+			attack_skill = 5
+			defense_skill = 6
+			planning_skill = 3
+			logistics_skill = 5
+			legacy_id = -1
 		}
 	}
-
-	ROM_gheorghe_mihail={
-		name=ROM_gheorghe_mihail
-		portraits={
-			army={
-				small="GFX_idea_ROM_gheorghe_mihail"
+	ROM_gheorghe_mihail = {
+		name = ROM_gheorghe_mihail
+		portraits = {
+			army = {
+				small = "GFX_idea_ROM_gheorghe_mihail"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = high_command
 			idea_token = ROM_gheorghe_mihail
 			ledger = army
@@ -477,19 +492,18 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-	}	
-	
-	ROM_paul_teodorescu={
-		name=ROM_paul_teodorescu
-		portraits={
-			army={
-				small="GFX_idea_ROM_paul_teodorescu"
+	}
+	ROM_paul_teodorescu = {
+		name = ROM_paul_teodorescu
+		portraits = {
+			army = {
+				small = "GFX_idea_ROM_paul_teodorescu"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = high_command
 			idea_token = ROM_paul_teodorescu
 			ledger = air
@@ -501,19 +515,18 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
 	}
-
-	ROM_gheorghe_vasiliu={
-		name=ROM_gheorghe_vasiliu
-		portraits={
-			army={
-				small="GFX_idea_ROM_gheorghe_vasiliu"
+	ROM_gheorghe_vasiliu = {
+		name = ROM_gheorghe_vasiliu
+		portraits = {
+			army = {
+				small = "GFX_idea_ROM_gheorghe_vasiliu"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = high_command
 			idea_token = ROM_gheorghe_vasiliu
 			ledger = air
@@ -525,24 +538,20 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
 	}
-
-
 	### POLITICAL ADVISORS ###
-
 	# Calinescu up there
-
-	ROM_iuliu_maniu={
-		name=ROM_iuliu_maniu
-		portraits={
-			army={
-				small="GFX_idea_ROM_iuliu_maniu"
+	ROM_iuliu_maniu = {
+		name = ROM_iuliu_maniu
+		portraits = {
+			army = {
+				small = "GFX_idea_ROM_iuliu_maniu"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = ROM_iuliu_maniu
 			allowed = {
@@ -559,19 +568,18 @@ characters={
 				}
 			}
 			traits = {
-				democratic_reformer 
+				democratic_reformer
 			}
 		}
 	}
-
-	ROM_gheorghe_gheorghiu_dej={
-		name=ROM_gheorghe_gheorghiu_dej
-		portraits={
-			army={
-				small="GFX_idea_ROM_gheorghe_gheorghiu_dej"
+	ROM_gheorghe_gheorghiu_dej = {
+		name = ROM_gheorghe_gheorghiu_dej
+		portraits = {
+			army = {
+				small = "GFX_idea_ROM_gheorghe_gheorghiu_dej"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = ROM_gheorghe_gheorghiu_dej
 			available = {
@@ -581,38 +589,36 @@ characters={
 				original_tag = ROM
 			}
 			traits = {
-				communist_revolutionary 
+				communist_revolutionary
 			}
 		}
 	}
-
-	ROM_gheorghe_argeseanu={
-		name=ROM_gheorghe_argeseanu
-		portraits={
-			army={
-				small="GFX_idea_ROM_gheorghe_argeseanu"
+	ROM_gheorghe_argeseanu = {
+		name = ROM_gheorghe_argeseanu
+		portraits = {
+			army = {
+				small = "GFX_idea_ROM_gheorghe_argeseanu"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = ROM_gheorghe_argeseanu
 			allowed = {
 				original_tag = ROM
 			}
 			traits = {
-				silent_workhorse 
+				silent_workhorse
 			}
 		}
 	}
-
-	ROM_nicolae_malaxa={
-		name=ROM_nicolae_malaxa
-		portraits={
-			army={
-				small="GFX_idea_ROM_nicolae_malaxa"
+	ROM_nicolae_malaxa = {
+		name = ROM_nicolae_malaxa
+		portraits = {
+			army = {
+				small = "GFX_idea_ROM_nicolae_malaxa"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = ROM_nicolae_malaxa
 			allowed = {
@@ -620,41 +626,39 @@ characters={
 				has_dlc = "Death or Dishonor"
 			}
 			traits = {
-				captain_of_industry 
+				captain_of_industry
 			}
 		}
 	}
-
-	ROM_petru_groza={
-		name=ROM_petru_groza
-		portraits={
-			army={
-				small="GFX_idea_ROM_petru_groza"
+	ROM_petru_groza = {
+		name = ROM_petru_groza
+		portraits = {
+			army = {
+				small = "GFX_idea_ROM_petru_groza"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = ROM_petru_groza
 			allowed = {
 				original_tag = ROM
 			}
 			traits = {
-				backroom_backstabber 
+				backroom_backstabber
 			}
 			ai_will_do = {
-				factor = 0.000
+				factor = 0
 			}
 		}
 	}
-
-	ROM_mihail_sturdza={
-		name=ROM_mihail_sturdza
-		portraits={
-			army={
-				small="GFX_idea_ROM_mihail_sturdza"
+	ROM_mihail_sturdza = {
+		name = ROM_mihail_sturdza
+		portraits = {
+			army = {
+				small = "GFX_idea_ROM_mihail_sturdza"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
 			idea_token = ROM_mihail_sturdza
 			available = {
@@ -677,11 +681,60 @@ characters={
 				original_tag = ROM
 			}
 			traits = {
-				fascist_demagogue 
+				fascist_demagogue
 			}
 			ai_will_do = {
-				factor = 0.000
+				factor = 0
 			}
 		}
 	}
+	ROM_nicolae_ciuperca_AFRICA = {
+		name = "Nicolae Ciuperca AFRICA"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ROM/AFRICA_Portrait_Romania_Nicolae_Ciuperca.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				panzer_leader
+				armor_officer
+				career_officer
+				trait_cautious
+				substance_abuser
+				harsh_leader
+				commando
+				desert_fox
+			}
+			skill = 4
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	ROM_nicolae_macici_AFRICA = {
+		name = "Nicolae Macici AFRICA"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ROM/AFRICA_Portrait_Romania_Nicolae_Macici.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				harsh_leader
+				infantry_officer
+				media_personality
+				infantry_leader
+				trait_reckless
+				desert_fox
+			}
+			skill = 6
+			attack_skill = 7
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 3
+		}
+	}
+
 }

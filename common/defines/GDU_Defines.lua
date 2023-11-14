@@ -27,7 +27,8 @@ NDefines.NIntel.DYNAMIC_INTEL_SOURCE_EVENT_ABSOLUTE_MAXIMUMS = { 200, 200, 200, 
 
 NDefines.NIntel.DYNAMIC_INTEL_SOURCE_EVENT_MULT_DECAY = 1.0
 NDefines.NProduction.BASE_LICENSE_IC_COST = 0
-
+NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_VALUE = 0		-- The minimum number of factories we have to put on consumer goods, by value.	
+NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT = 0 		-- The minimum number of factories we have to put on consumer goods, in percent.	
 --- Letting people see some stuff on ledger
 NDefines.NGame.GAME_SPEED_SECONDS = { 2.0, 0.5, 0.2, 0.03, 0.0 }	
 
@@ -137,11 +138,7 @@ NDefines.NDiplomacy.MASTER_BUILD_AUTONOMY_FACTOR = 0.0            -- scales auto
 
 NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 15  -- increased from 15 to 35 8/3/2019
 
-NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_BASE = 100
-NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_TRASHHOLD = 0
-NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_PENALTY = 0
-NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROLLED = 0
-NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROL_DIFF = 0
+
 
 
 NDefines.NCountry.BASE_FUEL_CAPACITY = 150000						-- base amount of fuel capacity 50k to 500k
@@ -196,7 +193,7 @@ NDefines.NProduction.LICENSE_EQUIPMENT_TECH_SPEED_PER_YEAR = -0.000
 NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 50
 NDefines.NProduction.MAX_MIL_FACTORIES_PER_LINE = 150
 NDefines.NProduction.DEFAULT_MAX_NAV_FACTORIES_PER_LINE = 50
-NDefines.NProduction.CONVERSION_SPEED_BONUS = 1
+NDefines.NProduction.CONVERSION_SPEED_BONUS = 0
 NDefines.NProduction.EQUIPMENT_MODULE_ADD_XP_COST = 0.0					-- XP cost for adding a new equipment module in an empty slot when creating an equipment variant.
 NDefines.NProduction.EQUIPMENT_MODULE_REPLACE_XP_COST = 0.0				-- XP cost for replacing one equipment module with an unrelated module when creating an equipment variant.
 NDefines.NProduction.EQUIPMENT_MODULE_CONVERT_XP_COST = 0.0				-- XP cost for converting one equipment module to a related module when creating an equipment variant.
@@ -235,8 +232,6 @@ NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 1000		-- how many divisions a
 NDefines.NMilitary.CORPS_COMMANDER_ARMIES_CAP = -1				-- how many armies a corps commander is limited to. 0 = inf, < 0 = blocked
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 1			-- how many divisions a field marshall is limited to. 0 = inf, < 0 = blocked
 NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 10				-- how many armies a field marshall is limited to. 0 = inf, < 0 = blocked
-NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 7;
-
 -- stacking penalty to nerf 20w
 
 NDefines.NMilitary.COMBAT_STACKING_START = 3						-- vanilla is 8 -- at what nr of divisions stacking penalty starts
@@ -267,6 +262,7 @@ NDefines.NMilitary.CONSTANT_XP_RATIO_FOR_MULTIPLE_LEADERS_IN_SAME_COMBAT = 0.0 -
 NDefines.NMilitary.MULTIPLE_COMBATS_PENALTY = -0.35                -- defender penalty if attacked from multiple directions
 
 NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 7
+NDefines.NMilitary.MIN_DIVISION_BRIGADE_HEIGHT = 5		-- Min height of regiments in division designer.
 
 NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 1.5
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 1000
@@ -364,26 +360,16 @@ NDefines.NNavy.FIELD_EXPERIENCE_SCALE = 0
 NDefines.NNavy.XP_GAIN_FACTOR = 0.3
 NDefines.NNavy.TRAINING_DAILY_COUNTRY_EXP_FACTOR = 0.2
 NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_GAIN_DAILY = 0.2
-
-
-
-
-
-
-
-
-
-
+NDefines.NAir.ACE_DEATH_CHANCE_BASE = 0				-- Base chance % for ace pilot die when an airplane is shot down in the Ace wing.
+NDefines.NAir.ACE_DEATH_BY_OTHER_ACE_CHANCE = 0				-- chance to an ace dying by another ace if it was hit by ace in combat
+NDefines.NAir.ACE_DEATH_CHANCE_PLANES_MULT = 0		-- The more airplanes was lost in a single airplanes (more bloody it was) the higher chance of Ace to die.
+NDefines.NAir.ACE_EARN_CHANCE_BASE = 0				-- Base chance % for ace pilot to be created. Happens only when successfully kill airplane/ship or damage the buildings.
+NDefines.NAir.ACE_EARN_CHANCE_PLANES_MULT = 0	
+NDefines.NAir.SUPPLY_NEED_FACTOR = 0.28				-- How much supply planes need
 NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_FACTOR = 0.8 -- original 0.8 Anti Air Gun Damage factor. DOES NOTHING 
 NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_CHANCE = 0.1 -- original 0.1 Anti Air Gun hit chance. DOES NOTHING 
 NDefines.NAir.ANTI_AIR_ATTACK_TO_DAMAGE_REDUCTION_FACTOR = 1 -- original 1.00 Balancing value to convert equipment stat anti_air_attack to the damage reduction modifier apply to incoming air attacks against units with AA.
-
 NDefines.NAir.ANTI_AIR_MAXIMUM_DAMAGE_REDUCTION_FACTOR = 0.8 -- .8 ( og GDU 0.75 ) Maximum damage reduction factor applied to incoming air attacks against units with AA.
-
-
-
-
-
 
 -- Convoy Priorities START --- this is edited from vanilla to make lend lease be the last priority with convoys, so that you don't get your trade for resources stopped if you are getting too much LL
 NDefines.NNavy.NAVAL_INVASION_PRIORITY = 1									-- Default convoy priority for naval invasions
@@ -610,21 +596,7 @@ NDefines.NNavy.SPOTTING_SPEED_EFFECT_FOR_INITIAL_NAVAL_INVASION_SPOTTING = 0.05 
 
 NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0.00									-- Chances one ship get damage each hour while on training
 
-NDefines.NAI.DIVISION_UPGRADE_MIN_XP = 400
-NDefines.NAI.DIVISION_CREATE_MIN_XP = 500
-NDefines.NAI.VARIANT_UPGRADE_MIN_XP = 500
-NDefines.NAI.VP_GARRISON_VALUE_FACTOR = 2.0
-NDefines.NAI.PLAN_ATTACK_MIN_ORG_FACTOR_HIGH = 0.40
-NDefines.NAI.PLAN_ATTACK_MIN_STRENGTH_FACTOR_HIGH = 0.30
-NDefines.NAI.ORG_UNIT_WEAK = 0.30
-NDefines.NAI.STR_UNIT_WEAK = 0.40
-NDefines.NAI.STR_UNIT_STRONG = 0.80
-NDefines.NAI.AT_WAR_THREAT_FACTOR = 4.0
-NDefines.NAI.ATTACK_HEAVILY_DEFENDED_LIMIT = 0.9
-NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROLLED = 0
-NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROL_DIFF = 0
-NDefines.NAI.GIVE_STATE_CONTROL_BASE_SCORE = 1
-NDefines.NAI.MAX_VOLUNTEER_ARMY_FRACTION = 0.0001
+
 
 NDefines.NNavy.AMPHIBIOUS_LANDING_PENALTY = -0.37								-- amphibious landing penalty
 
@@ -640,8 +612,8 @@ NDefines.NNavy.GUN_HIT_PROFILES = { -- hit profiles for guns, if target ih profi
 NDefines.NNavy.DEPTH_CHARGES_HIT_PROFILE = 300.0    -- hit profile for depth charges	
 NDefines.NNavy.BASE_GUN_COOLDOWNS = { -- number of hours for a gun to be ready after shooting
 		3.2,	-- big guns
-		2.5,	-- torpedos
-		1.2,	-- small guns
+		2.7,	-- torpedos
+		1.4,	-- small guns
 	}
 			
 NDefines.NNavy.COMBAT_BASE_HIT_CHANCE = 1.0                                    -- base chance for hit
@@ -688,9 +660,9 @@ NDefines.NNavy.POSITIONING_PENALTY_HOURLY_DECAY_FOR_NEWLY_JOINED_SHIPS			= 1.0 -
 
 
 
-NDefines.NNavy.DAMAGE_PENALTY_ON_MINIMUM_POSITIONING = 0.45 					-- damage penalty at 0% positioning | 0.75
-NDefines.NNavy.SCREENING_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.35  	-- screening efficiency (screen to capital ratio) at 0% positioning | 0.5
-NDefines.NNavy.AA_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.45  			-- AA penalty at 0% positioning | 0.75
+NDefines.NNavy.DAMAGE_PENALTY_ON_MINIMUM_POSITIONING = 0.5 					-- damage penalty at 0% positioning | 0.7
+NDefines.NNavy.AA_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.5  			-- AA penalty at 0% positioning | 0.7
+NDefines.NNavy.SCREENING_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.4  	-- screening efficiency (screen to capital ratio) at 0% positioning | 0.5
 
 NDefines.NNavy.CONVOY_HIT_PROFILE = 250.0  									-- convoys has this contant hit profile
 NDefines.NNavy.CONVOY_SINKING_SPILLOVER = 1.5                 				-- Damaged convoys roll for if they sink in the end of combat by accumulating the damage. This scales that chance. 
@@ -705,12 +677,7 @@ NDefines.NNavy.MAX_ORG_ON_MANUAL_MOVE = 1.0									-- org will clamped to this 
 NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0				-- initially countries will allocate this ratio of dockyards for repairs
 
 --- AI defines
-
-NDefines.NAI.ACCESS_SCORE_FOR_DEMOCRATIC_COUNTRIES = 0						-- was 500 in vanilla, trying to stop mil access from AI
-NDefines.NAI.TOO_INSIGNIFICANT_ARMY_RATIO_BEGIN = 0.0					-- was 0.75 in vanilla, if army ratio is of a country is larger than this threshold, it will be less reluctant to accept certain diplo actions
-NDefines.NAI.TOO_INSIGNIFICANT_MAX_PENALTY = 999						-- was 350 in vanilla, max penalty that will be applied for thinking a country is too insignificant
-
-
+-- sildim aq
 
 
 NDefines.NCountry.SCORCHED_EARTH_STATE_COST = 100 -- Cost to scorch earth
@@ -731,7 +698,6 @@ NDefines.NNavy.SUPPLY_NEED_FACTOR = 0.0
 --- New Supply defines
 
 NDefines.NMilitary.COMBAT_SUPPLY_LACK_ATTACKER_ATTACK = -0.20
-NDefines.NAI.FIX_SUPPLY_BOTTLENECK_SATURATION_THRESHOLD = 0.75
 NDefines.NSupply.CAPITAL_SUPPLY_BASE = 8.0
 NDefines.NSupply.CAPITAL_SUPPLY_CIVILIAN_FACTORIES = 0.9
 NDefines.NSupply.CAPITAL_SUPPLY_MILITARY_FACTORIES = 0.9
@@ -772,3 +738,7 @@ NDefines.NSupply.DAYS_TO_START_GIVING_SUPPLY_AFTER_MOVING_SUPPLY_CAPITAL = 4
 NDefines.NSupply.SUPPLY_PATH_MAX_DISTANCE = 10
 NDefines.NSupply.ALERT_VERY_LOW_SUPPLY_LEVEL = 0.5
 NDefines.NSupply.ALERT_LOW_SUPPLY_LEVEL = 0.9
+
+NDefines.NIndustrialOrganisation.ASSIGN_DESIGN_TEAM_PP_COST_PER_DAY = 0.05
+NDefines.NIndustrialOrganisation.DESIGN_TEAM_CHANGE_XP_COST = 0 -- vanilla 5		-- Flat cost added to the XP cost of a new equipment design 
+NDefines.NIndustrialOrganisation.FUNDS_FROM_MANUFACTURER_PER_IC_PER_DAY = 0.1	 -- vanilla 0.1	-- Funds added to MIO when a manufacturer is attached to a production line. Added every day proportional to IC produced.
