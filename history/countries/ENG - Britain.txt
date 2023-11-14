@@ -72,9 +72,6 @@ set_technology = {
 	early_bombs = 1
 	air_torpedoe_1 = 1	# navbomber 1 guns
 	heavy_bombs = 1	#cas 1 guns
-}
-
-set_technology = {
 	early_ship_hull_light = 1
 	basic_ship_hull_light = 1
 	early_ship_hull_submarine = 1
@@ -499,6 +496,7 @@ if = {
 			engine_type_slot = engine_1_1x
 			special_type_slot_1 = empty
 		}
+		icon = "GFX_ENG_early_fighter_medium"
 		obsolete = yes
 	}
 	add_equipment_to_stockpile = {
@@ -515,6 +513,7 @@ if = {
 			engine_type_slot = engine_1_1x
 			special_type_slot_1 = empty
 		}
+		icon = "GFX_ENG_fighter1_medium"
 		obsolete = yes
 	}
 	add_equipment_to_stockpile = {
@@ -529,10 +528,10 @@ if = {
 		modules = {
 			fixed_main_weapon_slot = heavy_mg_4x
 			engine_type_slot = engine_2_1x
-			special_type_slot_1 = self_sealing_fuel_tanks_small
+			special_type_slot_1 = armor_plate_small
 			special_type_slot_2 = lmg_defense_turret
-
 		}
+		icon = "GFX_ENG_fighter1_medium"
 	}
 	add_equipment_to_stockpile = {
 		type = small_plane_airframe_1
@@ -546,10 +545,10 @@ if = {
 			fixed_main_weapon_slot = armor_piercing_bomb_locks
 			engine_type_slot = engine_2_1x
 			special_type_slot_1 = dive_brakes_small
-			special_type_slot_2 = self_sealing_fuel_tanks_small
+			special_type_slot_2 = lmg_defense_turret
 		}
 		obsolete = yes
-		icon = "GFX_ENG_CAS1_medium"
+		icon = "GFX_ENG_CAS_equipment_1_medium"
 	}
 	add_equipment_to_stockpile = {
 		type = small_plane_cas_airframe_1
@@ -590,7 +589,7 @@ if = {
 		name = "Handley Page Heyford"
 		type = medium_plane_airframe_0
 		modules = {
-			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_main_weapon_slot = small_bomb_bay
 			engine_type_slot = engine_1_2x
 			special_type_slot_1 = empty
 		}
@@ -609,7 +608,7 @@ if = {
 			engine_type_slot = engine_2_2x
 			special_type_slot_1 = empty
 		}
-		icon = "GFX_ENG_heavy_fighter1_medium"
+		icon = "GFX_ENG_tactical_bomber1_medium"
 	}
 	add_equipment_to_stockpile = {
 		type = medium_plane_airframe_1

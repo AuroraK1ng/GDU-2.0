@@ -226,41 +226,85 @@ add_equipment_to_stockpile = {
 	producer = USA
 }
 
+create_equipment_variant = {
+	name = "A17"
+	type = small_plane_cas_airframe_1
+	modules = {
+		fixed_main_weapon_slot = armor_piercing_bomb_locks
+		engine_type_slot = engine_2_1x
+		special_type_slot_1 = dive_brakes_small
+		special_type_slot_2 = armor_plate_small
+	}
+	icon = "GFX_USA_CAS_equipment_1_medium"
+}
+
 add_equipment_to_stockpile = {
-	type = CAS_equipment_1
+	type = small_plane_cas_airframe_1
 	amount = 100
 	producer = USA
 }
 
+create_equipment_variant = {
+	name = "B-18 Bolo"
+	type = medium_plane_airframe_0
+	modules = {
+		fixed_main_weapon_slot = small_bomb_bay
+		engine_type_slot = engine_2_2x
+	}
+	icon = "GFX_USA_early_bomber_medium"
+}
+
 add_equipment_to_stockpile = {
-	type = tac_bomber_equipment_0
+	type = medium_plane_airframe_0
 	amount = 250
 	producer = USA
 }
 
-add_equipment_to_stockpile = {
-	type = heavy_fighter_equipment_1
-	amount = 100
-	producer = USA
+create_equipment_variant = {
+	name = "Lightning"
+	type = medium_plane_fighter_airframe_1
+	modules = {
+		fixed_main_weapon_slot = heavy_mg_4x
+		fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+		engine_type_slot = engine_2_2x
+		special_type_slot_1 = lmg_defense_turret_2x
+		special_type_slot_2 = armor_plate_medium
+	}
+	icon = "GFX_USA_heavy_fighter_equipment_1_medium"
 }
 
 add_equipment_to_stockpile = {
-	type = nav_bomber_equipment_1
+	type = medium_plane_fighter_airframe_1
 	amount = 100
 	producer = USA
+}
+create_equipment_variant = {
+	name = "F3F"
+	type = cv_small_plane_airframe_1
+	modules = {
+		fixed_main_weapon_slot = heavy_mg_4x
+		engine_type_slot = engine_2_1x
+		special_type_slot_1 = lmg_defense_turret
+	}
+	icon = "GFX_USA_fighter1_medium"
+}
+
+create_equipment_variant = {
+	name = "Catalina"
+	type = cv_small_plane_naval_bomber_airframe_1
+	modules = {
+		fixed_main_weapon_slot = torpedo_mounting
+		engine_type_slot = engine_1_1x
+	}
+	icon = "GFX_USA_nav_bomber_equipment_1_medium"		#TODO GABRIEL: change if art in before release
 }
 
 add_equipment_to_stockpile = {
-	type = cv_fighter_equipment_1
-	amount = 100
+	type = cv_small_plane_naval_bomber_airframe_1
+	amount = 200
 	producer = USA
 }
 
-add_equipment_to_stockpile = {
-	type = cv_nav_bomber_equipment_1
-	amount = 100
-	producer = USA
-}
 
 add_equipment_to_stockpile = {
 	type = artillery_equipment_1
@@ -295,42 +339,6 @@ add_equipment_to_stockpile = {
 add_equipment_to_stockpile = {
 	type = motorized_equipment_1
 	amount = 1118
-	producer = USA
-}
-
-add_equipment_to_stockpile = {
-	type = CAS_equipment_1
-	amount = 100
-	producer = USA
-}
-
-add_equipment_to_stockpile = {
-	type = tac_bomber_equipment_0
-	amount = 250
-	producer = USA
-}
-
-add_equipment_to_stockpile = {
-	type = heavy_fighter_equipment_1
-	amount = 100
-	producer = USA
-}
-
-add_equipment_to_stockpile = {
-	type = nav_bomber_equipment_1
-	amount = 100
-	producer = USA
-}
-
-add_equipment_to_stockpile = {
-	type = cv_fighter_equipment_1
-	amount = 100
-	producer = USA
-}
-
-add_equipment_to_stockpile = {
-	type = cv_nav_bomber_equipment_1
-	amount = 100
 	producer = USA
 }
 

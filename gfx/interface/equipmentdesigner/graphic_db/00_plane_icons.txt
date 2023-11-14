@@ -55,72 +55,61 @@ GER = {
 	small_plane_airframe = {
 		pool = {
 			icons = {
-				
-				
-				GFX_GER_jet_plane_2_medium
-				GFX_GER_jet_plane_1_medium
-				GFX_GER_rocket_plane_1_medium
-				GFX_GER_fighter3_medium
-				
-				
+				GFX_GER_CAS_equipment_3_medium
+				GFX_GER_CAS_equipment_2_medium
+				GFX_GER_CAS_equipment_1_medium
+				GFX_GER_fighter3_medium				
 				GFX_GER_fighter2_medium
-				
-				
-				GFX_GER_light_plane_1_medium
-				GFX_GER_light_plane_2_medium
-				GFX_GER_light_plane_3_medium
-				GFX_GER_light_plane_6_medium
-				GFX_GER_light_plane_5_medium
-				GFX_GER_light_plane_4_medium
 				GFX_GER_fighter1_medium
 				GFX_GER_early_fighter_medium
+				GFX_GER_jet_plane_1_medium
+				GFX_GER_rocket_plane_1_medium
+				GFX_GER_jet_plane_2_medium
+				GFX_GER_light_plane_5_medium
+				GFX_GER_light_plane_4_medium
+				GFX_GER_light_plane_3_medium
+				GFX_GER_light_plane_2_medium
+				GFX_GER_light_plane_1_medium
+				GFX_GER_nav_bomber_equipment_3_medium
+				GFX_GER_nav_bomber_equipment_2_medium
+				GFX_GER_nav_bomber_equipment_1_medium
 			}
 			models = {
 				GER_light_plane_entity
-				GER_jet_plane_entity
 			}
 		}
 	}
 	cv_small_plane_airframe = {
 		pool = {
 			icons = {
-				
-				
-				GFX_GER_jet_plane_2_medium
-				GFX_GER_jet_plane_1_medium
-				GFX_GER_fighter3_medium
-				
+				GFX_GER_cv_CAS_equipment_3_medium
+				GFX_GER_cv_CAS_equipment_2_medium
+				GFX_GER_cv_CAS_equipment_1_medium
+				GFX_GER_fighter3_medium				
 				GFX_GER_fighter2_medium
-				
-				GFX_GER_light_plane_1_medium
-				GFX_GER_light_plane_2_medium
-				GFX_GER_light_plane_3_medium
-				GFX_GER_light_plane_6_medium
-				GFX_GER_light_plane_5_medium
-				GFX_GER_light_plane_4_medium
 				GFX_GER_fighter1_medium
-				GFX_GER_early_fighter_medium
+				GFX_GER_jet_plane_1_medium
+				GFX_GER_jet_plane_2_medium
+				GFX_GER_rocket_plane_1_medium
+				GFX_GER_cv_nav_bomber_equipment_3_medium
+				GFX_GER_cv_nav_bomber_equipment_2_medium
+				GFX_GER_cv_nav_bomber_equipment_1_medium
 			}
 			models = {
 				GER_light_plane_entity
-				GER_jet_plane_entity
 			}
 		}
 	}
 	medium_plane_airframe = {
 		pool = {
 			icons = {
-				GFX_GER_tactical_bomber3_medium
-				
-				GFX_GER_tactical_bomber2_medium
-				GFX_GER_medium_plane_1_medium
-				GFX_GER_medium_plane_2_medium
-				GFX_GER_medium_plane_3_medium
-				GFX_GER_medium_plane_4_medium
+				GFX_GER_heavy_fighter_equipment_1_medium
+				GFX_GER_heavy_fighter_equipment_2_medium
+				GFX_GER_heavy_fighter_equipment_3_medium
 				GFX_GER_jet_medium_plane_1_medium
-				
+				GFX_GER_tactical_bomber3_medium				
+				GFX_GER_tactical_bomber2_medium
 				GFX_GER_tactical_bomber1_medium
-				
 				GFX_GER_early_bomber_medium
 				GFX_GER_scout_plane1_medium
 				GFX_GER_scout_plane2_medium
@@ -132,30 +121,28 @@ GER = {
 	}
 	large_plane_airframe = {
 		pool = {
-			icons = {
-				
+			icons = {				
+				GFX_GER_transport_plane_equipment_1_medium
 				GFX_GER_heavy_plane_1_medium
-				
-				GFX_GER_heavy_plane_2_medium
-				
-				
 			}
 			models = {
 				GER_heavy_plane_entity
 			}
 		}
-	}
-	
+	}	
 }
 
 SOV = {
 	small_plane_airframe = {
 		pool = {
 			icons = {
-				
-				GFX_SOV_fighter3_medium
-				
+				GFX_SOV_CAS_equipment_3_medium
+				GFX_SOV_CAS_equipment_2_medium
+				GFX_SOV_CAS_equipment_1_medium
+				GFX_SOV_fighter3_medium				
 				GFX_SOV_fighter2_medium
+				GFX_SOV_fighter1_medium
+				GFX_SOV_early_fighter_medium
 				GFX_SOV_jet_plane_1_medium
 				GFX_SOV_rocket_plane_1_medium
 				GFX_SOV_jet_plane_2_medium
@@ -164,9 +151,9 @@ SOV = {
 				GFX_SOV_light_plane_3_medium
 				GFX_SOV_light_plane_2_medium
 				GFX_SOV_light_plane_1_medium
-				GFX_SOV_fighter1_medium
-				
-				GFX_SOV_early_fighter_medium
+				GFX_SOV_nav_bomber_equipment_3_medium
+				GFX_SOV_nav_bomber_equipment_2_medium
+				GFX_SOV_nav_bomber_equipment_1_medium
 			}
 			models = {
 				SOV_light_plane_entity
@@ -176,21 +163,18 @@ SOV = {
 	cv_small_plane_airframe = {
 		pool = {
 			icons = {
-				
-				GFX_SOV_fighter3_medium
+				GFX_SOV_cv_CAS_equipment_3_medium
+				GFX_SOV_cv_CAS_equipment_2_medium
+				GFX_SOV_cv_CAS_equipment_1_medium
+				GFX_SOV_cv_fighter_equipment_3_medium				
+				GFX_SOV_cv_fighter_equipment_2_medium
+				GFX_SOV_cv_fighter_equipment_1_medium
 				GFX_SOV_jet_plane_1_medium
-				GFX_SOV_rocket_plane_1_medium
 				GFX_SOV_jet_plane_2_medium
-				
-				GFX_SOV_fighter2_medium
-				GFX_SOV_light_plane_5_medium
-				GFX_SOV_light_plane_4_medium
-				GFX_SOV_light_plane_3_medium
-				GFX_SOV_light_plane_2_medium
-				GFX_SOV_light_plane_1_medium
-				GFX_SOV_fighter1_medium
-				
-				GFX_SOV_early_fighter_medium
+				GFX_SOV_rocket_plane_1_medium
+				GFX_SOV_cv_nav_bomber_equipment_3_medium
+				GFX_SOV_cv_nav_bomber_equipment_2_medium
+				GFX_SOV_cv_nav_bomber_equipment_1_medium
 			}
 			models = {
 				SOV_light_plane_entity
@@ -200,17 +184,13 @@ SOV = {
 	medium_plane_airframe = {
 		pool = {
 			icons = {
-				
-				
-				
+				GFX_SOV_heavy_fighter_equipment_1_medium
+				GFX_SOV_heavy_fighter_equipment_2_medium
+				GFX_SOV_heavy_fighter_equipment_3_medium
 				GFX_SOV_jet_medium_plane_1_medium
-				GFX_SOV_tactical_bomber3_medium
-				
+				GFX_SOV_tactical_bomber3_medium				
 				GFX_SOV_tactical_bomber2_medium
-				GFX_SOV_medium_plane_1_medium
-				
 				GFX_SOV_tactical_bomber1_medium
-				
 				GFX_SOV_early_bomber_medium
 				GFX_SOV_scout_plane1_medium
 				GFX_SOV_scout_plane2_medium
@@ -222,11 +202,7 @@ SOV = {
 	}
 	large_plane_airframe = {
 		pool = {
-			icons = {
-				
-				
-				
-				GFX_SOV_modern_large_airframe_medium
+			icons = {				
 				GFX_SOV_transport_plane_equipment_1_medium
 				GFX_SOV_heavy_plane_1_medium
 			}
@@ -241,79 +217,58 @@ USA = {
 	small_plane_airframe = {
 		pool = {
 			icons = {
-				
-				
-				GFX_USA_jet_plane_2_medium
-				GFX_USA_jet_plane_1_medium
-				
-				
-				GFX_USA_fighter3_medium
-				
-				
-				
-				
+				GFX_USA_CAS_equipment_3_medium
+				GFX_USA_CAS_equipment_2_medium
+				GFX_USA_CAS_equipment_1_medium
+				GFX_USA_fighter3_medium				
 				GFX_USA_fighter2_medium
-				
 				GFX_USA_fighter1_medium
-				GFX_USA_light_plane_1_medium
+				GFX_USA_early_fighter_medium
+				GFX_USA_jet_plane_1_medium
+				GFX_USA_jet_plane_2_medium
 				GFX_USA_light_plane_4_medium
 				GFX_USA_light_plane_3_medium
 				GFX_USA_light_plane_2_medium
-				
-				
-				GFX_USA_early_fighter_medium
+				GFX_USA_light_plane_1_medium
+				GFX_USA_nav_bomber_equipment_3_medium
+				GFX_USA_nav_bomber_equipment_2_medium
+				GFX_USA_nav_bomber_equipment_1_medium
 			}
 			models = {
 				USA_light_plane_entity
 			}
 		}
 	}
-
 	cv_small_plane_airframe = {
 		pool = {
 			icons = {
-				
-				
-				GFX_USA_jet_plane_2_medium
-				GFX_USA_jet_plane_1_medium
-				
-				
-				GFX_USA_fighter3_medium
-				
-				
-				
-				
+				GFX_USA_cv_CAS_equipment_3_medium
+				GFX_USA_cv_CAS_equipment_2_medium
+				GFX_USA_cv_CAS_equipment_1_medium
+				GFX_USA_fighter3_medium				
 				GFX_USA_fighter2_medium
-				
 				GFX_USA_fighter1_medium
-				GFX_USA_light_plane_4_medium
-				GFX_USA_light_plane_3_medium
-				GFX_USA_light_plane_2_medium
-				GFX_USA_light_plane_1_medium
-				
-				
-				GFX_USA_early_fighter_medium
+				GFX_USA_jet_plane_1_medium
+				GFX_USA_jet_plane_2_medium
+				GFX_USA_cv_nav_bomber_equipment_3_medium
+				GFX_USA_cv_nav_bomber_equipment_2_medium
+				GFX_USA_cv_nav_bomber_equipment_1_medium
 			}
 			models = {
 				USA_light_plane_entity
 			}
 		}
 	}
-
 	medium_plane_airframe = {
 		pool = {
 			icons = {
-				GFX_USA_tactical_bomber3_medium
+				GFX_USA_heavy_fighter_equipment_1_medium
+				GFX_USA_heavy_fighter_equipment_2_medium
+				GFX_USA_heavy_fighter_equipment_3_medium
 				GFX_USA_jet_medium_plane_1_medium
-				
+				GFX_USA_tactical_bomber3_medium				
 				GFX_USA_tactical_bomber2_medium
-				
-				GFX_USA_medium_plane_3_medium
-				GFX_USA_medium_plane_2_medium
-				GFX_USA_medium_plane_1_medium
 				GFX_USA_tactical_bomber1_medium
-				
-				
 				GFX_USA_early_bomber_medium
 				GFX_USA_scout_plane1_medium
 				GFX_USA_scout_plane2_medium
@@ -325,129 +280,72 @@ USA = {
 	}
 	large_plane_airframe = {
 		pool = {
-			icons = {
-				
-				
-				
+			icons = {				
+				GFX_USA_transport_plane_equipment_1_medium
 				GFX_USA_heavy_plane_1_medium
-				GFX_USA_heavy_plane_2_medium
-				GFX_USA_heavy_plane_3_medium
-				GFX_USA_modern_large_airframe_medium
-				GFX_USA_iw_large_airframe_medium
-				
-				
 			}
 			models = {
 				USA_heavy_plane_entity
 			}
 		}
 	}
-	
 }
 
 ENG = {
 	small_plane_airframe = {
 		pool = {
 			icons = {
-				
-				
+				GFX_ENG_CAS_equipment_3_medium
+				GFX_ENG_CAS_equipment_2_medium
+				GFX_ENG_CAS_equipment_1_medium
+				GFX_ENG_fighter3_medium				
+				GFX_ENG_fighter2_medium
+				GFX_ENG_fighter1_medium
+				GFX_ENG_early_fighter_medium
 				GFX_ENG_jet_plane_1_medium
-				
-				
-				
-				
-				
-				GFX_ENG_light_plane_6_medium
 				GFX_ENG_light_plane_5_medium
 				GFX_ENG_light_plane_4_medium
-				GFX_ENG_light_plane_2_medium
 				GFX_ENG_light_plane_3_medium
+				GFX_ENG_light_plane_2_medium
 				GFX_ENG_light_plane_1_medium
-				
-				
-				
+				GFX_ENG_nav_bomber_equipment_3_medium
+				GFX_ENG_nav_bomber_equipment_2_medium
+				GFX_ENG_nav_bomber_equipment_1_medium
 			}
 			models = {
 				ENG_light_plane_entity
-				ENG_jet_plane_entity
-			}
-		}
-	}
-	small_plane_airframe = {
-		pool = {
-			weight = 0.5
-			limit = {
-				has_dlc = "Together for Victory"
-			}
-			icons = {
-				GFX_AST_CAS2_medium
-				GFX_AST_fighter3_medium
-				GFX_AST_fighter1_medium	
-				GFX_RAJ_fighter1_medium
-			}
-			models = {
-				RAJ_fighter_equipment_0_entity
-				AST_fighter_equipment_1_entity
-				AST_CAS_equipment_entity
 			}
 		}
 	}
 	cv_small_plane_airframe = {
 		pool = {
 			icons = {
-				
-				
+				GFX_ENG_cv_CAS_equipment_3_medium
+				GFX_ENG_cv_CAS_equipment_2_medium
+				GFX_ENG_cv_CAS_equipment_1_medium
+				GFX_ENG_fighter3_medium				
+				GFX_ENG_fighter2_medium
+				GFX_ENG_fighter1_medium
 				GFX_ENG_jet_plane_1_medium
-				
-				
-				
-				
-				
-				GFX_ENG_light_plane_1_medium
-				GFX_ENG_light_plane_6_medium
-				GFX_ENG_light_plane_5_medium
-				GFX_ENG_light_plane_4_medium
-				GFX_ENG_light_plane_2_medium
-				GFX_ENG_light_plane_3_medium
-				
-				
-				
+				GFX_ENG_cv_nav_bomber_equipment_3_medium
+				GFX_ENG_cv_nav_bomber_equipment_2_medium
+				GFX_ENG_cv_nav_bomber_equipment_1_medium
 			}
 			models = {
 				ENG_light_plane_entity
-				ENG_jet_plane_entity
-			}
-		}
-	}
-	cv_small_plane_airframe = {
-		pool = {
-			weight = 0.5
-			limit = {
-				has_dlc = "Together for Victory"
-			}
-			icons = {
-				GFX_AST_CAS2_medium
-				GFX_AST_fighter3_medium
-				GFX_AST_fighter1_medium	
-				GFX_RAJ_fighter1_medium
-			}
-			models = {
-				RAJ_fighter_equipment_0_entity
-				AST_fighter_equipment_1_entity
-				AST_CAS_equipment_entity
 			}
 		}
 	}
 	medium_plane_airframe = {
 		pool = {
 			icons = {
-				GFX_ENG_tactical_bomber3_medium
+				GFX_ENG_heavy_fighter_equipment_1_medium
+				GFX_ENG_heavy_fighter_equipment_2_medium
+				GFX_ENG_heavy_fighter_equipment_3_medium
 				GFX_ENG_jet_medium_plane_1_medium
-				
+				GFX_ENG_tactical_bomber3_medium				
 				GFX_ENG_tactical_bomber2_medium
-				
 				GFX_ENG_tactical_bomber1_medium
-				
 				GFX_ENG_early_bomber_medium
 				GFX_ENG_scout_plane1_medium
 				GFX_ENG_scout_plane2_medium
@@ -459,15 +357,9 @@ ENG = {
 	}
 	large_plane_airframe = {
 		pool = {
-			icons = {
-				
-				
-				GFX_ENG_modern_large_airframe_medium
+			icons = {				
+				GFX_ENG_transport_plane_equipment_1_medium
 				GFX_ENG_heavy_plane_1_medium
-				GFX_ENG_iw_large_airframe_medium
-				
-				GFX_ENG_heavy_plane_2_medium
-				GFX_ENG_heavy_plane_3_medium
 			}
 			models = {
 				ENG_heavy_plane_entity
@@ -480,21 +372,18 @@ FRA = {
 	small_plane_airframe = {
 		pool = {
 			icons = {
-				GFX_FRA_light_jet_plane_medium
-				
-				
-				GFX_FRA_modern_small_airframe_medium
-				GFX_FRA_fighter3_medium
-				
-				
+				GFX_FRA_CAS_equipment_3_medium
+				GFX_FRA_CAS_equipment_2_medium
+				GFX_FRA_CAS_equipment_1_medium
+				GFX_FRA_fighter3_medium				
 				GFX_FRA_fighter2_medium
-				GFX_FRA_light_plane_2_medium
 				GFX_FRA_fighter1_medium
-				GFX_FRA_light_plane_1_medium
-				
-				
 				GFX_FRA_early_fighter_medium
-				
+				GFX_FRA_light_plane_2_medium
+				GFX_FRA_light_plane_1_medium
+				GFX_FRA_nav_bomber_equipment_3_medium
+				GFX_FRA_nav_bomber_equipment_2_medium
+				GFX_FRA_nav_bomber_equipment_1_medium
 			}
 			models = {
 				FRA_light_plane_entity
@@ -504,21 +393,15 @@ FRA = {
 	cv_small_plane_airframe = {
 		pool = {
 			icons = {
-				GFX_FRA_light_jet_plane_medium
-				GFX_FRA_light_plane_2_medium
-				
-				GFX_FRA_modern_small_airframe_medium
-				
-				GFX_FRA_light_plane_1_medium
-				GFX_FRA_fighter3_medium
-				
-				
+				GFX_FRA_cv_CAS_equipment_3_medium
+				GFX_FRA_cv_CAS_equipment_2_medium
+				GFX_FRA_cv_CAS_equipment_1_medium
+				GFX_FRA_fighter3_medium				
 				GFX_FRA_fighter2_medium
 				GFX_FRA_fighter1_medium
-				
-				
-				GFX_FRA_early_fighter_medium
-				
+				GFX_FRA_cv_nav_bomber_equipment_3_medium
+				GFX_FRA_cv_nav_bomber_equipment_2_medium
+				GFX_FRA_cv_nav_bomber_equipment_1_medium
 			}
 			models = {
 				FRA_light_plane_entity
@@ -528,16 +411,13 @@ FRA = {
 	medium_plane_airframe = {
 		pool = {
 			icons = {
-				GFX_FRA_tactical_bomber3_medium
-				GFX_FRA_modern_medium_airframe_medium
-				
+				GFX_FRA_heavy_fighter_equipment_1_medium
+				GFX_FRA_heavy_fighter_equipment_2_medium
+				GFX_FRA_heavy_fighter_equipment_3_medium
+				GFX_FRA_tactical_bomber3_medium				
 				GFX_FRA_tactical_bomber2_medium
-				
-				GFX_FRA_medium_plane_1_medium
 				GFX_FRA_tactical_bomber1_medium
-				
 				GFX_FRA_early_bomber_medium
-				GFX_FRA_medium_jet_plane_medium
 				GFX_FRA_scout_plane1_medium
 				GFX_FRA_scout_plane2_medium
 			}
@@ -548,15 +428,9 @@ FRA = {
 	}
 	large_plane_airframe = {
 		pool = {
-			icons = {
+			icons = {				
+				GFX_FRA_transport_plane_equipment_1_medium
 				GFX_FRA_heavy_plane_1_medium
-				GFX_FRA_heavy_plane_2_medium
-				GFX_FRA_heavy_plane_3_medium
-				
-				
-				GFX_FRA_modern_large_airframe_medium
-				GFX_FRA_iw_large_airframe_medium
-				
 			}
 			models = {
 				FRA_heavy_plane_entity
@@ -569,24 +443,20 @@ JAP = {
 	small_plane_airframe = {
 		pool = {
 			icons = {
-				
-				GFX_JAP_jet_plane_1_medium
-				
-				GFX_JAP_fighter3_medium
-				
-				
-				
+				GFX_JAP_CAS_equipment_3_medium
+				GFX_JAP_CAS_equipment_2_medium
+				GFX_JAP_CAS_equipment_1_medium
+				GFX_JAP_fighter3_medium				
 				GFX_JAP_fighter2_medium
-				
-				GFX_JAP_light_plane_1_medium
-				GFX_JAP_light_plane_2_medium
-				GFX_JAP_light_plane_3_medium
-				
-				
-				
 				GFX_JAP_fighter1_medium
-				
 				GFX_JAP_early_fighter_medium
+				GFX_JAP_jet_plane_1_medium
+				GFX_JAP_light_plane_3_medium
+				GFX_JAP_light_plane_2_medium
+				GFX_JAP_light_plane_1_medium
+				GFX_JAP_nav_bomber_equipment_3_medium
+				GFX_JAP_nav_bomber_equipment_2_medium
+				GFX_JAP_nav_bomber_equipment_1_medium
 			}
 			models = {
 				JAP_light_plane_entity
@@ -596,24 +466,16 @@ JAP = {
 	cv_small_plane_airframe = {
 		pool = {
 			icons = {
-				
-				GFX_JAP_jet_plane_1_medium
-				
-				GFX_JAP_fighter3_medium
-				
-				
-				
+				GFX_JAP_cv_CAS_equipment_3_medium
+				GFX_JAP_cv_CAS_equipment_2_medium
+				GFX_JAP_cv_CAS_equipment_1_medium
+				GFX_JAP_fighter3_medium				
 				GFX_JAP_fighter2_medium
-				
-				GFX_JAP_light_plane_1_medium
-				GFX_JAP_light_plane_2_medium
-				GFX_JAP_light_plane_3_medium
-				
-				
-				
 				GFX_JAP_fighter1_medium
-				
-				GFX_JAP_early_fighter_medium
+				GFX_JAP_jet_plane_1_medium
+				GFX_JAP_cv_nav_bomber_equipment_3_medium
+				GFX_JAP_cv_nav_bomber_equipment_2_medium
+				GFX_JAP_cv_nav_bomber_equipment_1_medium
 			}
 			models = {
 				JAP_light_plane_entity
@@ -623,15 +485,12 @@ JAP = {
 	medium_plane_airframe = {
 		pool = {
 			icons = {
-				GFX_JAP_tactical_bomber3_medium
-				
+				GFX_JAP_heavy_fighter_equipment_1_medium
+				GFX_JAP_heavy_fighter_equipment_2_medium
+				GFX_JAP_heavy_fighter_equipment_3_medium
+				GFX_JAP_tactical_bomber3_medium				
 				GFX_JAP_tactical_bomber2_medium
-				
 				GFX_JAP_tactical_bomber1_medium
-				
-				
-				
-				
 				GFX_JAP_early_bomber_medium
 				GFX_JAP_scout_plane1_medium
 				GFX_JAP_scout_plane2_medium
@@ -643,12 +502,9 @@ JAP = {
 	}
 	large_plane_airframe = {
 		pool = {
-			icons = {
-				
-				
+			icons = {				
+				GFX_JAP_transport_plane_equipment_1_medium
 				GFX_JAP_heavy_plane_1_medium
-				GFX_JAP_heavy_plane_2_medium
-				
 			}
 			models = {
 				JAP_heavy_plane_entity
@@ -661,26 +517,18 @@ ITA = {
 	small_plane_airframe = {
 		pool = {
 			icons = {
-				
-				GFX_ITA_jet_plane_1_medium
-				
-				
-				
-				
-				
-				
-				
-				
-								
+				GFX_ITA_CAS_equipment_3_medium
+				GFX_ITA_CAS_equipment_2_medium
+				GFX_ITA_CAS_equipment_1_medium
 				GFX_ITA_fighter3_medium				
-				
 				GFX_ITA_fighter2_medium
-				GFX_ITA_fighter1_medium			
-				
-				GFX_ITA_light_plane_1_medium
-				
+				GFX_ITA_fighter1_medium
 				GFX_ITA_early_fighter_medium
-				GFX_ITA_iw_small_airframe_medium
+				GFX_ITA_jet_plane_1_medium
+				GFX_ITA_light_plane_1_medium
+				GFX_ITA_nav_bomber_equipment_3_medium
+				GFX_ITA_nav_bomber_equipment_2_medium
+				GFX_ITA_nav_bomber_equipment_1_medium
 			}
 			models = {
 				ITA_light_plane_entity
@@ -690,26 +538,16 @@ ITA = {
 	cv_small_plane_airframe = {
 		pool = {
 			icons = {
-				
-				GFX_ITA_jet_plane_1_medium
-				
-				
-				
-				
-				
-				
-				
-				
-					
-				GFX_ITA_fighter3_medium
-				
+				GFX_ITA_cv_CAS_equipment_3_medium
+				GFX_ITA_cv_CAS_equipment_2_medium
+				GFX_ITA_cv_CAS_equipment_1_medium
+				GFX_ITA_fighter3_medium				
 				GFX_ITA_fighter2_medium
 				GFX_ITA_fighter1_medium
-				
-				GFX_ITA_light_plane_1_medium
-				
-				GFX_ITA_early_fighter_medium
-				GFX_ITA_iw_small_airframe_medium
+				GFX_ITA_jet_plane_1_medium
+				GFX_ITA_cv_nav_bomber_equipment_3_medium
+				GFX_ITA_cv_nav_bomber_equipment_2_medium
+				GFX_ITA_cv_nav_bomber_equipment_1_medium
 			}
 			models = {
 				ITA_light_plane_entity
@@ -719,18 +557,15 @@ ITA = {
 	medium_plane_airframe = {
 		pool = {
 			icons = {
-				GFX_ITA_tactical_bomber3_medium
-				
+				GFX_ITA_heavy_fighter_equipment_1_medium
+				GFX_ITA_heavy_fighter_equipment_2_medium
+				GFX_ITA_heavy_fighter_equipment_3_medium
+				GFX_ITA_tactical_bomber3_medium				
 				GFX_ITA_tactical_bomber2_medium
-				
 				GFX_ITA_tactical_bomber1_medium
-				
-				
-				GFX_ITA_medium_plane_1_medium
-				
-				
 				GFX_ITA_early_bomber_medium
-				GFX_ITA_iw_medium_airframe_medium
+				GFX_ITA_scout_plane1_medium
+				GFX_ITA_scout_plane2_medium
 			}
 			models = {
 				ITA_medium_plane_entity
@@ -739,14 +574,9 @@ ITA = {
 	}
 	large_plane_airframe = {
 		pool = {
-			icons = {
-				
-				
-				GFX_ITA_modern_large_airframe_medium
-				GFX_ITA_iw_large_airframe_medium
-				
+			icons = {				
+				GFX_ITA_transport_plane_equipment_1_medium
 				GFX_ITA_heavy_plane_1_medium
-				GFX_ITA_heavy_plane_2_medium
 			}
 			models = {
 				ITA_heavy_plane_entity
@@ -763,22 +593,22 @@ AST = {
 			icons = {
 				
 				
-				GFX_ENG_jet_plane_1_medium
+				GFX_SOV_jet_plane_1_medium
 				
 				
 				
 				
 				
-				GFX_ENG_light_plane_4_medium
-				GFX_ENG_light_plane_2_medium
-				GFX_ENG_light_plane_3_medium
-				GFX_ENG_light_plane_1_medium
+				GFX_SOV_light_plane_4_medium
+				GFX_SOV_light_plane_2_medium
+				GFX_SOV_light_plane_3_medium
+				GFX_SOV_light_plane_1_medium
 				
 				
 				
 			}
 			models = {
-				ENG_light_plane_entity
+				SOV_light_plane_entity
 			}
 		}
 	}
@@ -804,22 +634,22 @@ AST = {
 			icons = {
 				
 				
-				GFX_ENG_jet_plane_1_medium
+				GFX_SOV_jet_plane_1_medium
 				
 				
 				
 				
 				
-				GFX_ENG_light_plane_1_medium
-				GFX_ENG_light_plane_4_medium
-				GFX_ENG_light_plane_2_medium
-				GFX_ENG_light_plane_3_medium
+				GFX_SOV_light_plane_1_medium
+				GFX_SOV_light_plane_4_medium
+				GFX_SOV_light_plane_2_medium
+				GFX_SOV_light_plane_3_medium
 				
 				
 				
 			}
 			models = {
-				ENG_light_plane_entity
+				SOV_light_plane_entity
 			}
 		}
 	}
@@ -843,19 +673,19 @@ AST = {
 	medium_plane_airframe = {
 		pool = {
 			icons = {
-				GFX_ENG_tactical_bomber3_medium
-				GFX_ENG_jet_medium_plane_1_medium
+				GFX_SOV_tactical_bomber3_medium
+				GFX_SOV_jet_medium_plane_1_medium
 				
-				GFX_ENG_tactical_bomber2_medium
+				GFX_SOV_tactical_bomber2_medium
 				
-				GFX_ENG_tactical_bomber1_medium
+				GFX_SOV_tactical_bomber1_medium
 				
-				GFX_ENG_early_bomber_medium
+				GFX_SOV_early_bomber_medium
 				GFX_ITA_scout_plane1_medium
 				GFX_ITA_scout_plane2_medium
 			}
 			models = {
-				ENG_medium_plane_entity
+				SOV_medium_plane_entity
 			}
 		}
 	}
@@ -864,11 +694,11 @@ AST = {
 			icons = {
 				
 				
-				GFX_ENG_heavy_plane_1_medium
+				GFX_SOV_heavy_plane_1_medium
 				
 			}
 			models = {
-				ENG_heavy_plane_entity
+				SOV_heavy_plane_entity
 			}
 		}
 	}
@@ -880,22 +710,22 @@ RAJ = {
 			icons = {
 				
 				
-				GFX_ENG_jet_plane_1_medium
+				GFX_SOV_jet_plane_1_medium
 				
 				
 				
 				
 				
-				GFX_ENG_light_plane_4_medium
-				GFX_ENG_light_plane_2_medium
-				GFX_ENG_light_plane_3_medium
-				GFX_ENG_light_plane_1_medium
+				GFX_SOV_light_plane_4_medium
+				GFX_SOV_light_plane_2_medium
+				GFX_SOV_light_plane_3_medium
+				GFX_SOV_light_plane_1_medium
 				
 				
 				
 			}
 			models = {
-				ENG_light_plane_entity
+				SOV_light_plane_entity
 			}
 		}
 	}
@@ -918,22 +748,22 @@ RAJ = {
 			icons = {
 				
 				
-				GFX_ENG_jet_plane_1_medium
+				GFX_SOV_jet_plane_1_medium
 				
 				
 				
 				
 				
-				GFX_ENG_light_plane_1_medium
-				GFX_ENG_light_plane_4_medium
-				GFX_ENG_light_plane_2_medium
-				GFX_ENG_light_plane_3_medium
+				GFX_SOV_light_plane_1_medium
+				GFX_SOV_light_plane_4_medium
+				GFX_SOV_light_plane_2_medium
+				GFX_SOV_light_plane_3_medium
 				
 				
 				
 			}
 			models = {
-				ENG_light_plane_entity
+				SOV_light_plane_entity
 			}
 		}
 	}
@@ -954,17 +784,17 @@ RAJ = {
 	medium_plane_airframe = {
 		pool = {
 			icons = {
-				GFX_ENG_tactical_bomber3_medium
-				GFX_ENG_jet_medium_plane_1_medium
+				GFX_SOV_tactical_bomber3_medium
+				GFX_SOV_jet_medium_plane_1_medium
 				
-				GFX_ENG_tactical_bomber2_medium
+				GFX_SOV_tactical_bomber2_medium
 				
-				GFX_ENG_tactical_bomber1_medium
+				GFX_SOV_tactical_bomber1_medium
 				
-				GFX_ENG_early_bomber_medium
+				GFX_SOV_early_bomber_medium
 			}
 			models = {
-				ENG_medium_plane_entity
+				SOV_medium_plane_entity
 			}
 		}
 	}
@@ -973,11 +803,11 @@ RAJ = {
 			icons = {
 				
 				
-				GFX_ENG_heavy_plane_1_medium
+				GFX_SOV_heavy_plane_1_medium
 				
 			}
 			models = {
-				ENG_heavy_plane_entity
+				SOV_heavy_plane_entity
 			}
 		}
 	}
@@ -989,22 +819,22 @@ CAN = {
 			icons = {
 				
 				
-				GFX_ENG_jet_plane_1_medium
+				GFX_SOV_jet_plane_1_medium
 				
 				
 				
 				
 				
-				GFX_ENG_light_plane_4_medium
-				GFX_ENG_light_plane_2_medium
-				GFX_ENG_light_plane_3_medium
-				GFX_ENG_light_plane_1_medium
+				GFX_SOV_light_plane_4_medium
+				GFX_SOV_light_plane_2_medium
+				GFX_SOV_light_plane_3_medium
+				GFX_SOV_light_plane_1_medium
 				
 				
 				
 			}
 			models = {
-				ENG_light_plane_entity
+				SOV_light_plane_entity
 			}
 		}
 	}
@@ -1013,39 +843,39 @@ CAN = {
 			icons = {
 				
 				
-				GFX_ENG_jet_plane_1_medium
+				GFX_SOV_jet_plane_1_medium
 				
 				
 				
 				
 				
-				GFX_ENG_light_plane_1_medium
-				GFX_ENG_light_plane_4_medium
-				GFX_ENG_light_plane_2_medium
-				GFX_ENG_light_plane_3_medium
+				GFX_SOV_light_plane_1_medium
+				GFX_SOV_light_plane_4_medium
+				GFX_SOV_light_plane_2_medium
+				GFX_SOV_light_plane_3_medium
 				
 				
 				
 			}
 			models = {
-				ENG_light_plane_entity
+				SOV_light_plane_entity
 			}
 		}
 	}
 	medium_plane_airframe = {
 		pool = {
 			icons = {
-				GFX_ENG_tactical_bomber3_medium
-				GFX_ENG_jet_medium_plane_1_medium
+				GFX_SOV_tactical_bomber3_medium
+				GFX_SOV_jet_medium_plane_1_medium
 				
-				GFX_ENG_tactical_bomber2_medium
+				GFX_SOV_tactical_bomber2_medium
 				
-				GFX_ENG_tactical_bomber1_medium
+				GFX_SOV_tactical_bomber1_medium
 				
-				GFX_ENG_early_bomber_medium
+				GFX_SOV_early_bomber_medium
 			}
 			models = {
-				ENG_medium_plane_entity
+				SOV_medium_plane_entity
 			}
 		}
 	}
@@ -1054,11 +884,11 @@ CAN = {
 			icons = {
 				
 				
-				GFX_ENG_heavy_plane_1_medium
+				GFX_SOV_heavy_plane_1_medium
 				
 			}
 			models = {
-				ENG_heavy_plane_entity
+				SOV_heavy_plane_entity
 			}
 		}
 	}
@@ -1070,22 +900,22 @@ SAF = {
 			icons = {
 				
 				
-				GFX_ENG_jet_plane_1_medium
+				GFX_SOV_jet_plane_1_medium
 				
 				
 				
 				
 				
-				GFX_ENG_light_plane_4_medium
-				GFX_ENG_light_plane_2_medium
-				GFX_ENG_light_plane_3_medium
-				GFX_ENG_light_plane_1_medium
+				GFX_SOV_light_plane_4_medium
+				GFX_SOV_light_plane_2_medium
+				GFX_SOV_light_plane_3_medium
+				GFX_SOV_light_plane_1_medium
 				
 				
 				
 			}
 			models = {
-				ENG_light_plane_entity
+				SOV_light_plane_entity
 			}
 		}
 	}
@@ -1094,39 +924,39 @@ SAF = {
 			icons = {
 				
 				
-				GFX_ENG_jet_plane_1_medium
+				GFX_SOV_jet_plane_1_medium
 				
 				
 				
 				
 				
-				GFX_ENG_light_plane_1_medium
-				GFX_ENG_light_plane_4_medium
-				GFX_ENG_light_plane_2_medium
-				GFX_ENG_light_plane_3_medium
+				GFX_SOV_light_plane_1_medium
+				GFX_SOV_light_plane_4_medium
+				GFX_SOV_light_plane_2_medium
+				GFX_SOV_light_plane_3_medium
 				
 				
 				
 			}
 			models = {
-				ENG_light_plane_entity
+				SOV_light_plane_entity
 			}
 		}
 	}
 	medium_plane_airframe = {
 		pool = {
 			icons = {
-				GFX_ENG_tactical_bomber3_medium
-				GFX_ENG_jet_medium_plane_1_medium
+				GFX_SOV_tactical_bomber3_medium
+				GFX_SOV_jet_medium_plane_1_medium
 				
-				GFX_ENG_tactical_bomber2_medium
+				GFX_SOV_tactical_bomber2_medium
 				
-				GFX_ENG_tactical_bomber1_medium
+				GFX_SOV_tactical_bomber1_medium
 				
-				GFX_ENG_early_bomber_medium
+				GFX_SOV_early_bomber_medium
 			}
 			models = {
-				ENG_medium_plane_entity
+				SOV_medium_plane_entity
 			}
 		}
 	}
@@ -1135,11 +965,11 @@ SAF = {
 			icons = {
 				
 				
-				GFX_ENG_heavy_plane_1_medium
+				GFX_SOV_heavy_plane_1_medium
 				
 			}
 			models = {
-				ENG_heavy_plane_entity
+				SOV_heavy_plane_entity
 			}
 		}
 	}
@@ -1151,22 +981,22 @@ NZL = {
 			icons = {
 				
 				
-				GFX_ENG_jet_plane_1_medium
+				GFX_SOV_jet_plane_1_medium
 				
 				
 				
 				
 				
-				GFX_ENG_light_plane_4_medium
-				GFX_ENG_light_plane_2_medium
-				GFX_ENG_light_plane_3_medium
-				GFX_ENG_light_plane_1_medium
+				GFX_SOV_light_plane_4_medium
+				GFX_SOV_light_plane_2_medium
+				GFX_SOV_light_plane_3_medium
+				GFX_SOV_light_plane_1_medium
 				
 				
 				
 			}
 			models = {
-				ENG_light_plane_entity
+				SOV_light_plane_entity
 			}
 		}
 	}
@@ -1175,39 +1005,39 @@ NZL = {
 			icons = {
 				
 				
-				GFX_ENG_jet_plane_1_medium
+				GFX_SOV_jet_plane_1_medium
 				
 				
 				
 				
 				
-				GFX_ENG_light_plane_1_medium
-				GFX_ENG_light_plane_4_medium
-				GFX_ENG_light_plane_2_medium
-				GFX_ENG_light_plane_3_medium
+				GFX_SOV_light_plane_1_medium
+				GFX_SOV_light_plane_4_medium
+				GFX_SOV_light_plane_2_medium
+				GFX_SOV_light_plane_3_medium
 				
 				
 				
 			}
 			models = {
-				ENG_light_plane_entity
+				SOV_light_plane_entity
 			}
 		}
 	}
 	medium_plane_airframe = {
 		pool = {
 			icons = {
-				GFX_ENG_tactical_bomber3_medium
-				GFX_ENG_jet_medium_plane_1_medium
+				GFX_SOV_tactical_bomber3_medium
+				GFX_SOV_jet_medium_plane_1_medium
 				
-				GFX_ENG_tactical_bomber2_medium
+				GFX_SOV_tactical_bomber2_medium
 				
-				GFX_ENG_tactical_bomber1_medium
+				GFX_SOV_tactical_bomber1_medium
 				
-				GFX_ENG_early_bomber_medium
+				GFX_SOV_early_bomber_medium
 			}
 			models = {
-				ENG_medium_plane_entity
+				SOV_medium_plane_entity
 			}
 		}
 	}
@@ -1216,11 +1046,11 @@ NZL = {
 			icons = {
 				
 				
-				GFX_ENG_heavy_plane_1_medium
+				GFX_SOV_heavy_plane_1_medium
 				
 			}
 			models = {
-				ENG_heavy_plane_entity
+				SOV_heavy_plane_entity
 			}
 		}
 	}

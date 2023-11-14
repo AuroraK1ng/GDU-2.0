@@ -116,9 +116,6 @@ set_technology = {
 	gwtank_chassis = 1
 	basic_light_tank_chassis = 1
 	armored_car1 = 1
-}
-
-set_technology = {
 	basic_torpedo = 1
 	basic_battery = 1
 	basic_light_battery = 1
@@ -478,45 +475,107 @@ add_equipment_to_stockpile = {
 	producer = JAP
 }
 
-add_equipment_to_stockpile = {
-	type = fighter_equipment_1
+create_equipment_variant = {
+	name = "Ki-27"
+	type = small_plane_airframe_1
+	modules = {
+		fixed_main_weapon_slot = heavy_mg_4x
+		engine_type_slot = engine_2_1x
+		special_type_slot_1 = lmg_defense_turret
+		special_type_slot_2 = armor_plate_small
+	}
+	icon = "GFX_JAP_fighter1_medium"
+}
+
+add_equipment_to_stockpile = { 
+	type = small_plane_airframe_1
 	amount = 300
 	producer = JAP
 }
 
-add_equipment_to_stockpile = {
-	type = CAS_equipment_1
-	amount = 200
-	producer = JAP
+create_equipment_variant = {
+	name = "Ki-32"
+	type = small_plane_cas_airframe_1
+	modules = {
+		fixed_main_weapon_slot = armor_piercing_bomb_locks
+		engine_type_slot = engine_2_1x
+		special_type_slot_1 = dive_brakes_small
+		special_type_slot_2 = armor_plate_small
+	}
+	icon = "GFX_JAP_CAS_equipment_1_medium"
 }
 
 add_equipment_to_stockpile = {
-	type = tac_bomber_equipment_1
+	type = small_plane_cas_airframe_1
 	amount = 300
 	producer = JAP
 }
 
+create_equipment_variant = {
+	name = "Ki-21"
+	type = medium_plane_airframe_1
+	modules = {
+		fixed_main_weapon_slot = medium_bomb_bay
+		engine_type_slot = engine_2_2x
+	}
+	icon = "GFX_JAP_tactical_bomber1_medium"
+}
+
 add_equipment_to_stockpile = {
-	type = heavy_fighter_equipment_1
+	type = medium_plane_airframe_1
+	amount = 300
+	producer = JAP
+}
+
+create_equipment_variant = {
+	name = "Ki-38"
+	type = medium_plane_fighter_airframe_1
+	modules = {
+		fixed_main_weapon_slot = heavy_mg_4x
+		fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+		engine_type_slot = engine_2_2x
+		special_type_slot_1 = lmg_defense_turret_2x
+		special_type_slot_2 = armor_plate_medium
+	}
+	icon = "GFX_JAP_heavy_fighter_equipment_1_medium"
+}
+
+add_equipment_to_stockpile = {
+	type = medium_plane_fighter_airframe_1
 	amount = 250
 	producer = JAP
 }
 
+create_equipment_variant = {
+	name = "A5M"
+	type = cv_small_plane_airframe_1
+	modules = {
+		fixed_main_weapon_slot = heavy_mg_4x
+		engine_type_slot = engine_2_1x
+		special_type_slot_1 = lmg_defense_turret
+	}
+	icon = "GFX_JAP_fighter1_medium"
+}
+
 add_equipment_to_stockpile = {
-	type = cv_fighter_equipment_1
+	type = cv_small_plane_airframe_1
 	amount = 250
 	producer = JAP
 }
 
-add_equipment_to_stockpile = {
-	type = cv_nav_bomber_equipment_1
-	amount = 250
-	producer = JAP
+create_equipment_variant = {
+	name = "B5N"
+	type = cv_small_plane_naval_bomber_airframe_1
+	modules = {
+		fixed_main_weapon_slot = torpedo_mounting
+		engine_type_slot = engine_1_1x
+	}
+	icon = "GFX_JAP_nav_bomber_equipment_1_medium"		#TODO GABRIEL: change if art in before release
 }
 
 add_equipment_to_stockpile = {
-	type = cv_CAS_equipment_1
-	amount = 100
+	type = cv_small_plane_naval_bomber_airframe_1
+	amount = 250
 	producer = JAP
 }
 
