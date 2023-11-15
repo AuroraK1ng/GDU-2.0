@@ -405,7 +405,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HUN_industrial_revitalization
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 70
@@ -488,7 +488,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = HUN_industrial_revitalization
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 60
@@ -515,7 +515,7 @@ focus_tree = {
 				limit = {
 					has_state_flag = HUN_support_domestic_industry_IC
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -533,7 +533,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
@@ -679,7 +679,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HUN_announce_the_gyor_program
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -702,7 +702,7 @@ focus_tree = {
 				limit = {
 					has_state_flag = HUN_civilian_industry_IC
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
@@ -720,7 +720,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
@@ -791,7 +791,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = HUN_civilian_industry
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 70
@@ -957,10 +957,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = HUN_domestic_arms_industry_AF1
@@ -973,10 +973,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = HUN_domestic_arms_industry_AF2
@@ -996,7 +996,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HUN_domestic_arms_industry
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 60
@@ -2011,6 +2011,28 @@ focus_tree = {
 		}
 	}
 
+		focus = {
+		id = HUN_Arrow_Cross
+    	icon = GFX_HUN_Arrow_cross
+		text = "Arrow Cross"
+		prerequisite = { focus = HUN_home_defense }
+		x = 20
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+				available = {
+				date > 1941.8.1
+				has_war_with = SOV
+				}
+		available_if_capitulated = yes
+			completion_reward = {
+		add_ideas = HUN_Arrow_Cross
+
+		}
+	}
+
 	focus = {
 		id = HUN_danuvia_submachine_guns
 		icon = GFX_goal_generic_small_arms
@@ -2090,7 +2112,27 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = HUN_Halder’s_Telegram
+    	icon = GFX_goal_ger_war_industry
+		text = "Halder’s Telegram"
+		prerequisite = { focus = HUN_artillery_effort }
+		x = 18
+		y = 7
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
 
+		available_if_capitulated = yes
+		available = {
+				date > 1940.11.1
+				}
+			completion_reward = {
+			add_ideas = HUN_Halder_Telegram
+			
+		}
+	}
 	focus = {
 		id = HUN_light_infantry_divisions_doctrine
 		icon = GFX_HUN_infantry
@@ -2218,6 +2260,435 @@ focus_tree = {
 				uses = 1
 				category = para_tech
 			}
+		}
+	}
+	focus = {
+		id = HUN_Total_War
+		text = "Hungarian Totalen Krieg"
+		icon = GFX_GER_total_war
+		x = 23
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+		 date > 1941.1.1
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		154 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+		add_ideas = HUN_Totalen_Krieg
+			
+		}
+	}
+	focus = {
+		id = HUN_Yug_Lessons
+		Text = "Lessons of Yugoslavian War"
+		icon = GFX_HUN_defense
+		prerequisite = { focus = HUN_Total_War }
+		relative_position_id = HUN_Total_War
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = HUN_war_Yugo
+		}
+	}
+	focus = {
+		id = HUN_Eastern_War_Ussr
+		text = "Strike the Commies!"
+		icon = GFX_GER_czech
+		prerequisite = { focus = HUN_Total_War }
+		relative_position_id = HUN_Total_War
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 90
+		}
+		available = {
+				has_war_with = SOV
+			
+		}
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+
+		completion_reward = {
+			add_ideas = HUN_war_commi
+		}
+	}
+	focus = {
+		id = HUN_Ostarbeiters
+		text = "Ostarbeiters "
+		icon = GFX_HUN_rural
+		prerequisite = { focus = HUN_Yug_Lessons }
+		prerequisite = { focus = HUN_Eastern_War_Ussr }
+		relative_position_id = HUN_Eastern_War_Ussr
+		x = 1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+		available = {
+		 GER = {
+				controls_state = 91
+					
+			}
+		GER = {
+				controls_state = 202
+					
+			}
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+
+		completion_reward = {
+		45 = { add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				}
+				45 = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			
+		}
+	}
+		focus = {
+		id = HUN_Assault_Brigades
+		Text = "Assault brigades"
+		icon = GFX_HUN_infantry
+		prerequisite = { focus = HUN_Ostarbeiters }
+		relative_position_id = HUN_Ostarbeiters
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 1.00
+				uses = 2
+				category = infantry_weapons
+			}
+		add_tech_bonus = {
+				bonus = 1.00
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = HUN_Autarky_2
+		Text = "Everything for Hungary"
+		icon = GFX_Noras_economicintervention
+		prerequisite = { focus = HUN_Ostarbeiters }
+		relative_position_id = HUN_Ostarbeiters
+		x = 2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+
+		completion_reward = {
+			664 = { 
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HUN_Eastern_Reforms
+		Text = "Lessons of Barbarossa"
+		icon = GFX_Noras_hungarianwargames
+		prerequisite = { focus = HUN_Ostarbeiters }
+		relative_position_id = HUN_Ostarbeiters
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+
+		completion_reward = {
+			add_ideas = HUN_ref_arm
+		}
+	}
+	focus = {
+		id = HUN_Autarky1
+		Text = "Hungarian Autarky"
+		icon = GFX_HUN_greater_hungary
+		prerequisite = { focus = HUN_Assault_Brigades }
+		relative_position_id = HUN_Assault_Brigades
+		mutually_exclusive = { focus = HUN_Axis_Support }
+		x = 1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+
+		completion_reward = {
+		43 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+			
+		}
+	}
+	focus = {
+		id = HUN_Axis_Support
+		Text = "Axis Support"
+		icon = GFX_European_Axis
+		prerequisite = { focus = HUN_Assault_Brigades }
+		relative_position_id = HUN_Assault_Brigades
+		mutually_exclusive = { focus = HUN_Autarky1 }
+		x = -1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+
+		completion_reward = {
+			43 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			39 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			50 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}		
+		}
+	}
+	focus = {
+		id = HUN_Axis_Shadow
+		text = "In the Shadows"
+		icon = GFX_HUN_germany
+		prerequisite = { focus = HUN_Axis_Support }
+		x = 0
+		y = 1
+		relative_position_id = HUN_Axis_Support
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+
+		153 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+		39 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+			
+		}
+	}
+	focus = {
+		id = HUN_Spread_Wings
+		text = "Spreading Wings"
+		icon = GFX_HUN_army
+		prerequisite = { focus = HUN_Autarky1 }
+		x = 0
+		y = 1
+		relative_position_id = HUN_Autarky1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 100
+			155 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+				add_ideas = HUN_Spread_wings
+			
 		}
 	}
 

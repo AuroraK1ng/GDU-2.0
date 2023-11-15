@@ -83,6 +83,12 @@ ROM_galati_shipyard_organization = {
 		tag = ROM
 	}
 	
+	available = { #Two FROM blocs to provide two different check marks in the UI
+		FROM = {
+			has_completed_focus = ROM_coastal_defense_navy
+		}
+	}
+	
 	remove_trait = { generic_mio_trait_super_heavy_shells generic_mio_trait_secondary_fire_director_control } 
 	
 	initial_trait = {
@@ -98,6 +104,12 @@ ROM_Braila_organization = {
 	allowed = { 
 		tag = ROM
 		has_dlc = "Death or Dishonor"
+	}
+	
+	available = { #Two FROM blocs to provide two different check marks in the UI
+		FROM = {
+			has_completed_focus = ROM_black_sea_dominance
+		}
 	}
 }
 

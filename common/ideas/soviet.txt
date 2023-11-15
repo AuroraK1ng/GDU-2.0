@@ -16,8 +16,356 @@ ideas = {
 			}
 			
 		}
-		
+		Collectivism_2 = {
+			picture = workers_culture
 
+			allowed = {
+
+			}
+		
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.04
+				conversion_cost_mil_to_civ_factor = -0.2
+				production_speed_industrial_complex_factor = 0.1
+				stability_factor = -0.05
+			}
+			
+		}
+		Collectivism = {
+			picture = workers_culture
+
+			allowed = {
+
+			}
+		
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.02
+				conversion_cost_mil_to_civ_factor = -0.2
+				production_speed_industrial_complex_factor = 0.05
+				stability_factor = -0.1
+			}
+			
+		}
+		Defense_departament = {
+
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			picture = stavka
+
+			modifier = {
+				experience_gain_army_factor = 0.025
+				max_planning = 0.025
+			}
+			research_bonus = {
+				land_doctrine = 0.05
+				naval_doctrine = 0.05
+				air_doctrine = 0.05
+
+			}
+			
+		}
+		Marxism-Leninism = {
+			picture = generic_manpower_bonus
+
+			allowed = {
+
+			}
+		
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.02
+				production_speed_industrial_complex_factor = 0.1
+			}
+			
+		}
+		Gulags = {
+			picture = workers_culture
+
+			allowed = {
+
+			}
+		
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.03
+				production_speed_buildings_factor = -0.05
+			}
+			
+		}
+		Convict_Workers = {
+			picture = SOV_tankograd
+
+			allowed = {
+
+			}
+		
+			removal_cost = -1
+			modifier = {
+			industrial_capacity_factory = 0.15
+			stability_factor = -0.05
+			}
+			
+		}
+		Stalin_tyranny = {
+			picture = smallarms_factory
+
+			allowed = {
+
+			}
+		
+			removal_cost = -1
+			modifier = {
+			production_speed_arms_factory_factor = 0.025
+			production_speed_dockyard_factor = 0.025
+			conscription = -0.002
+			}
+			
+		}
+		Pioners = {
+			picture = soviet_research
+
+			allowed = {
+
+			}
+		
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+			}
+			
+		}
+		Heroism_2 = {
+			picture = workers_culture
+
+			allowed = {
+
+			}
+		
+			removal_cost = -1
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.35
+				production_speed_arms_factory_factor = 0.10
+				production_speed_dockyard_factor = 0.25
+				conscription = 0.02
+			}
+			
+		}
+		Heroism = {
+			picture = workers_culture
+
+			allowed = {
+
+			}
+		
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+				production_speed_dockyard_factor = 0.25
+				conversion_cost_civ_to_mil_factor = -0.2
+
+			}
+			
+		}
+
+		Workers_Peasants_Red_Army = {
+			picture = smallarms_factory
+
+			allowed = {
+
+			}
+		
+			removal_cost = -1
+
+			equipment_bonus = {	
+				infantry_equipment   = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				support_equipment   = {
+					build_cost_ic = -0.15
+					instant = yes
+				}	
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				anti_tank_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				artillery_equipment  = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+		}
+		All_for_The_Front = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				industrial_capacity_factory = 0.15
+				conversion_cost_civ_to_mil_factor = -0.5
+			}
+		}
+		Guard = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				max_planning = 0.05
+				army_morale_factor = 0.025
+				land_reinforce_rate = 0.025
+			}
+		}
+		T-34 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = EFR_STO
+
+			equipment_bonus = {	
+				armor = {
+					instant = yes
+					build_cost_ic = -0.05
+				}							
+			}
+		}
+		Motherland_is_calling  = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				army_org_factor = 0.05
+				army_morale_factor = 0.025
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		Rzhev_offensive_operation = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				max_planning = 0.05
+				army_attack_factor = 0.075
+				army_defence_factor = -0.05
+			}
+		}
+	     Order_227  = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+			army_org_factor = 0.05
+			army_morale_factor = -0.075
+			}
+		}
+		
+		Heroes_social_labor = {
+			
+			picture = workers_culture
+			
+			allowed = {
+				original_tag = "SOV"
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+				
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.15
+				industrial_capacity_factory = 0.025
+
+			}
+			
+		}
+		Chieftain_People = {
+			
+			picture = Chieftain_People
+			
+			allowed = {
+				original_tag = "SOV"
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+				
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.35		
+				production_speed_buildings_factor = 0.10
+
+			}
+			
+		}
 		GDU_SOV_Danger_To_Heartland = {
 			removal_cost = -1
 
@@ -205,6 +553,7 @@ ideas = {
 			
 		}
 
+
 		
 		soviet_union_eternal = { 
 			
@@ -368,7 +717,7 @@ ideas = {
 			picture = SOV_lost_control
 
 			modifier = {
-				conscription = 0.015
+				conscription = 0.010
 			}
 		}
 	    SOV_order_227 = {
@@ -402,7 +751,7 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory = 0.25
+				industrial_capacity_factory = 0.15
 				mobilization_laws_cost_factor = -0.25
 			}
 		}
@@ -476,7 +825,7 @@ ideas = {
 
 			modifier = {
 				subversive_activites_upkeep = -0.5
-				land_reinforce_rate = 0.35
+				land_reinforce_rate = 0.20
 			}
 		}
 
@@ -569,8 +918,8 @@ ideas = {
 			picture = generic_morale_bonus
 
 			modifier = {
-				land_reinforce_rate = 0.07
-				army_morale_factor = 0.10
+				land_reinforce_rate = 0.05
+				army_morale_factor = 0.05
 			}
 		}
 
@@ -629,6 +978,7 @@ ideas = {
 				land_doctrine = -1.10
 				naval_doctrine = -0.05
 				air_doctrine = -0.05
+
 			}
 
 		}
