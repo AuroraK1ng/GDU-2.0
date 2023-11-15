@@ -1386,7 +1386,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		}
 	}
 	focus = {
-		id = GER_war_in_the_east_2
+		id = GER_Reequip_Opel_Blitz
 		Text = "Mobile Infantry"
 		icon = GFX_Generic_German_Soldiers2
 		prerequisite = { focus = GER_battle_russia  focus = GER_battle_russia2 }
@@ -1407,14 +1407,13 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	
 	focus = {
-		id = GER_war_in_the_east_3
+		id = GER_Reequip_Panzers
 		Text = "Mass Panther Production"
 		icon = GFX_ger_goal_heavy_tank
-		prerequisite = { focus = GER_war_in_the_east_2 }
-		prerequisite = { focus = GER_ostarbeiter }
+		prerequisite = { focus = GER_Reequip_Opel_Blitz focus = GER_Reequip_Luftwaffe focus = GER_ostarbeiter }
 		x = -1
 		y = 1
-		relative_position_id = GER_war_in_the_east_2
+		relative_position_id = GER_Reequip_Opel_Blitz
 		cost = 5
 
 		available = {
@@ -1438,14 +1437,13 @@ activate_mission = GER_relocate_industry_from_friesland
 		}
 	}
 	focus = {
-		id = GER_war_in_the_east_4
+		id = GER_East_Hospitals
 		Text = "Achtung, Panzer!"
 		icon = GFX_ger_achtung_panzer
-		prerequisite = { focus = GER_war_in_the_east_2 }
-		prerequisite = { focus = GER_war_in_the_east_5 }
+		prerequisite = { focus = GER_Reequip_Opel_Blitz focus = GER_Reequip_Luftwaffe focus = GER_ostarbeiter }
 		x = 1
 		y = 1
-		relative_position_id = GER_war_in_the_east_2
+		relative_position_id = GER_Reequip_Opel_Blitz
 		cost = 5
 
 		available = {
@@ -1558,7 +1556,7 @@ activate_mission = GER_relocate_industry_from_friesland
 			}
 		}
 		focus = {
-		id = GER_war_in_the_east_5
+		id = GER_Reequip_Luftwaffe
 		Text = "Improvement of the Luftwaffe"
 		icon = GFX_goal_luftwaffe
 		prerequisite = { focus = GER_Luftwaffe }
@@ -2424,10 +2422,10 @@ activate_mission = GER_relocate_industry_from_friesland
 		id = GER_Mechanise_the_Army
 		text = "Panzergrenadiers"
 		icon = GFX_GER_Panzergrenadiers
-		prerequisite = { focus = GER_war_in_the_east_4 focus = GER_war_in_the_east_3 }
+		prerequisite = { focus = GER_East_Hospitals focus = GER_Reequip_Panzers }
 		x = -1
 		y = 1
-		relative_position_id = GER_war_in_the_east_4
+		relative_position_id = GER_East_Hospitals
 		cost = 3
 
 		available = {
