@@ -1,4 +1,13 @@
 on_actions = {
+		on_startup = {
+			effect = {
+				every_country = {
+					cross_faction_trade_disabled = yes
+				}
+			}
+		
+		}
+	
 	on_paradrop = {
 	    effect = {
 			if = {  

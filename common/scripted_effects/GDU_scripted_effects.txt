@@ -2,12 +2,21 @@
 declare_war_on_all_allies = {
 	if = {
 		#Make sure we dont declare war on UK a second time
-		limit = { NOT = { has_war_with = ENG } }
+		limit = {
+			NOT = {
+				has_war_with = ENG
+			}
+		}
 		log = "[?ROOT.GetName] was NOT at war with ENG"
-		declare_war_on = { target = ENG type = annex_everything }
+		declare_war_on = {
+			target = ENG
+			type = annex_everything
+		}
 	}
 	if = {
-		limit = { has_war = yes }
+		limit = {
+			has_war = yes
+		}
 		ROOT_call_allies_both_sides = yes
 	}
 }
@@ -20,25 +29,29 @@ ROOT_call_allies_both_sides = {
 ROOT_call_all_allies_against_ENG = {
 	for_each_scope_loop = {
 		array = ROOT.allies
-
 		if = {
-			limit = { NOT = { original_tag = ITA } }
+			limit = {
+				NOT = {
+					original_tag = ITA
+				}
+			}
 			add_to_war = {
 				targeted_alliance = ROOT
 				enemy = ENG
 			}
 		}
-
 	}
 }
 
 ENG_call_all_allies_against_ROOT = {
 	for_each_scope_loop = {
-	    array = ENG.allies
-
-
+		array = ENG.allies
 		if = {
-			limit = { NOT = { original_tag = USA } }
+			limit = {
+				NOT = {
+					original_tag = USA
+				}
+			}
 			add_to_war = {
 				targeted_alliance = ENG
 				enemy = ROOT
@@ -47,16 +60,17 @@ ENG_call_all_allies_against_ROOT = {
 	}
 }
 
-Afrika_Score_Monthly_Tally = { 
+Afrika_Score_Monthly_Tally = {
 	for_each_scope_loop = {
 		array = global.afrika_states_array
 		if = {
 			limit = {
 				is_controlled_by_axis_country = yes
 			}
-			add_to_variable = { GER.Afrika_score_value = 1 }
+			add_to_variable = {
+				GER.Afrika_score_value = 1
+			}
 		}
-
 	}
 	for_each_scope_loop = {
 		array = global.afrika_states_array
@@ -64,7 +78,285 @@ Afrika_Score_Monthly_Tally = {
 			limit = {
 				is_controlled_by_allied_country = yes
 			}
-			add_to_variable = { ENG.Afrika_score_value = 1 }
+			add_to_variable = {
+				ENG.Afrika_score_value = 1
+			}
 		}
+	}
+}
+
+embargo_axis = {
+	add_opinion_modifier = {
+		target = GER
+		modifier = embargo
+	}
+	add_opinion_modifier = {
+		target = GER
+		modifier = hostile_status
+	}
+	add_opinion_modifier = {
+		target = GER
+		modifier = sanctions
+	}
+	add_opinion_modifier = {
+		target = ITA
+		modifier = embargo
+	}
+	add_opinion_modifier = {
+		target = ITA
+		modifier = hostile_status
+	}
+	add_opinion_modifier = {
+		target = ITA
+		modifier = sanctions
+	}
+	add_opinion_modifier = {
+		target = ROM
+		modifier = embargo
+	}
+	add_opinion_modifier = {
+		target = ROM
+		modifier = hostile_status
+	}
+	add_opinion_modifier = {
+		target = ROM
+		modifier = sanctions
+	}
+	add_opinion_modifier = {
+		target = HUN
+		modifier = embargo
+	}
+	add_opinion_modifier = {
+		target = HUN
+		modifier = hostile_status
+	}
+	add_opinion_modifier = {
+		target = HUN
+		modifier = sanctions
+	}
+	add_opinion_modifier = {
+		target = BUL
+		modifier = embargo
+	}
+	add_opinion_modifier = {
+		target = BUL
+		modifier = hostile_status
+	}
+	add_opinion_modifier = {
+		target = BUL
+		modifier = sanctions
+	}
+	add_opinion_modifier = {
+		target = SPR
+		modifier = embargo
+	}
+	add_opinion_modifier = {
+		target = SPR
+		modifier = hostile_status
+	}
+	add_opinion_modifier = {
+		target = SPR
+		modifier = sanctions
+	}
+	add_opinion_modifier = {
+		target = FIN
+		modifier = embargo
+	}
+	add_opinion_modifier = {
+		target = FIN
+		modifier = hostile_status
+	}
+	add_opinion_modifier = {
+		target = FIN
+		modifier = sanctions
+	}
+	add_opinion_modifier = {
+		target = JAP
+		modifier = embargo
+	}
+	add_opinion_modifier = {
+		target = JAP
+		modifier = hostile_status
+	}
+	add_opinion_modifier = {
+		target = JAP
+		modifier = sanctions
+	}
+}
+
+embargo_allies = {
+	add_opinion_modifier = {
+		target = USA
+		modifier = embargo
+	}
+	add_opinion_modifier = {
+		target = USA
+		modifier = hostile_status
+	}
+	add_opinion_modifier = {
+		target = USA
+		modifier = sanctions
+	}
+	add_opinion_modifier = {
+		target = ENG
+		modifier = embargo
+	}
+	add_opinion_modifier = {
+		target = ENG
+		modifier = hostile_status
+	}
+	add_opinion_modifier = {
+		target = ENG
+		modifier = sanctions
+	}
+	add_opinion_modifier = {
+		target = FRA
+		modifier = embargo
+	}
+	add_opinion_modifier = {
+		target = FRA
+		modifier = hostile_status
+	}
+	add_opinion_modifier = {
+		target = FRA
+		modifier = sanctions
+	}
+	add_opinion_modifier = {
+		target = CAN
+		modifier = embargo
+	}
+	add_opinion_modifier = {
+		target = CAN
+		modifier = hostile_status
+	}
+	add_opinion_modifier = {
+		target = CAN
+		modifier = sanctions
+	}
+	add_opinion_modifier = {
+		target = SAF
+		modifier = embargo
+	}
+	add_opinion_modifier = {
+		target = SAF
+		modifier = hostile_status
+	}
+	add_opinion_modifier = {
+		target = SAF
+		modifier = sanctions
+	}
+	add_opinion_modifier = {
+		target = RAJ
+		modifier = embargo
+	}
+	add_opinion_modifier = {
+		target = RAJ
+		modifier = hostile_status
+	}
+	add_opinion_modifier = {
+		target = RAJ
+		modifier = sanctions
+	}
+	add_opinion_modifier = {
+		target = AST
+		modifier = embargo
+	}
+	add_opinion_modifier = {
+		target = AST
+		modifier = hostile_status
+	}
+	add_opinion_modifier = {
+		target = AST
+		modifier = sanctions
+	}
+	add_opinion_modifier = {
+		target = NZL
+		modifier = embargo
+	}
+	add_opinion_modifier = {
+		target = NZL
+		modifier = hostile_status
+	}
+	add_opinion_modifier = {
+		target = NZL
+		modifier = sanctions
+	}
+	add_opinion_modifier = {
+		target = SOV
+		modifier = embargo
+	}
+	add_opinion_modifier = {
+		target = SOV
+		modifier = hostile_status
+	}
+	add_opinion_modifier = {
+		target = SOV
+		modifier = sanctions
+	}
+}
+
+cross_faction_trade_disabled = {
+	#ALLIES
+	ENG = {
+		embargo_axis = yes
+	}
+	FRA = {
+		embargo_axis = yes
+	}
+	USA = {
+		embargo_axis = yes
+	}
+	CAN = {
+		embargo_axis = yes
+	}
+	AST = {
+		embargo_axis = yes
+	}
+	SAF = {
+		embargo_axis = yes
+	}
+	RAJ = {
+		embargo_axis = yes
+	}
+	NZL = {
+		embargo_axis = yes
+	}
+	SOV = {
+		embargo_axis = yes
+	}
+	SOU = {
+		embargo_axis = yes
+	}
+	#AXIS
+	GER = {
+		embargo_allies = yes
+	}
+	ITA = {
+		embargo_allies = yes
+	}
+	FIN = {
+		embargo_allies = yes
+	}
+	HUN = {
+		embargo_allies = yes
+	}
+	BUL = {
+		embargo_allies = yes
+	}
+	ROM = {
+		embargo_allies = yes
+	}
+	SPR = {
+		embargo_allies = yes
+	}
+	JAP = {
+		embargo_allies = yes
+	}
+	#ins trade blocked
+	INS = {
+		embargo_axis = yes
+	}
+	INS = {
+		embargo_allies = yes
 	}
 }

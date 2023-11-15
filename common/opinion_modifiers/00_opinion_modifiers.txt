@@ -9,13 +9,12 @@
 # trade = yes/no
 
 opinion_modifiers = {
-
 	cheat_opinion_modifier_good = {
 		value = 200
 	}
 
 	hostile_status = { #special used for civil wars that are on hold and blocks faction stuff
-		value = -100
+		value = -200
 	}
 
 	unstable_alliance = {
@@ -610,11 +609,11 @@ opinion_modifiers = {
 	##### TRADE MODIFIERS
 	embargo = {
 		trade = yes
-		value = -100
+		value = -1000
 	}
 	sanctions = {
 		trade = yes
-		value = -100
+		value = -1000
 	}
 	minor_sanctions = {
 		trade = yes

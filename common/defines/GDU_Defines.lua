@@ -742,3 +742,7 @@ NDefines.NSupply.ALERT_LOW_SUPPLY_LEVEL = 0.9
 NDefines.NIndustrialOrganisation.ASSIGN_DESIGN_TEAM_PP_COST_PER_DAY = 0.05
 NDefines.NIndustrialOrganisation.DESIGN_TEAM_CHANGE_XP_COST = 0 -- vanilla 5		-- Flat cost added to the XP cost of a new equipment design 
 NDefines.NIndustrialOrganisation.FUNDS_FROM_MANUFACTURER_PER_IC_PER_DAY = 0.1	 -- vanilla 0.1	-- Funds added to MIO when a manufacturer is attached to a production line. Added every day proportional to IC produced.
+NDefines.NDiplomacy.MIN_TRUST_VALUE = -500 							-- WAS -100 | Min trust value cap.	
+NDefines.NDiplomacy.MIN_OPINION_VALUE = -500 							-- WAS -100 | Min opinion value cap.
+NDefines.NTrade.RELATION_TRADE_FACTOR = 2							-- 	WAS 1 | Trade factor is modified by Opinion value times this	
+NDefines.NTrade.BASE_TRADE_FACTOR = 100					-- WAS 150 | This is the base trade factor	
