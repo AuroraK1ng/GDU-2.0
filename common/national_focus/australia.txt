@@ -28,7 +28,7 @@ focus_tree = {
 	focus = {
 		id = AST_army
 		Text = "Memories of Gallipoli"
-		icon = GFX_AST_Gallipoli
+		icon = GFX_ENG_egypt
 		x = 2
 		y = 0
 
@@ -52,14 +52,14 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 50
-		add_tech_bonus = {
-				bonus = 0.2
+			add_tech_bonus = {
+				bonus = 0.50
 				uses = 1
 				category = land_doctrine
 			}
 			add_tech_bonus = {
 				uses = 1
-				bonus = 0.40
+				bonus = 0.50
 				category = infantry_weapons
 			}	
 		}
@@ -147,7 +147,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AST_ANZAC_1
-		text = "Victory in unity"
+		text = "Victory in Unity!"
 		icon = GFX_AST_anzac
 		prerequisite = { focus = AST_ANZAC }
 		prerequisite = { focus = AST_cac_boomerang }
@@ -335,7 +335,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AST_british_exp
-		text = "British experience"
+		text = "British Experience"
 		icon = GFX_AST_British_experience
 		prerequisite = { focus = AST_additional_militia_training }
 		prerequisite = { focus = AST_ANZAC }
@@ -372,7 +372,7 @@ focus_tree = {
 	}
 	focus = {
 		id = AST_teamwork
-		Text = "Work together"
+		Text = "Work Together!"
 		icon = GFX_AST_factories
 		prerequisite = { focus = AST_british_exp }
 		prerequisite = { focus = AST_ANZAC_1 }
@@ -1374,7 +1374,7 @@ focus_tree = {
 		id = AST_death_from_down_under
 		icon = GFX_goal_generic_CAS
 		prerequisite = { focus = AST_volunteer_air_observers_corps }
-		x = -2
+		x = -3
 		y = 5
 		relative_position_id = AST_expand_the_raaf
 
@@ -2097,7 +2097,7 @@ focus_tree = {
 		id = AST_army_inventions_directorate
 		icon = GFX_focus_research
 		prerequisite = { focus = AST_industries_assistance_corporation }
-		x = 17
+		x = 19
 		y = 1
 
 		cost = 10
@@ -2107,7 +2107,7 @@ focus_tree = {
 		}
 
 		available = {
-			#NOT = { has_global_flag = mini_GDU }
+			NOT = { has_global_flag = mini_GDU }
 		}
 
 		bypass = {
@@ -3145,11 +3145,10 @@ focus_tree = {
 
 
 		completion_reward = {
-		AST = {	add_ideas = AST_War_Heroes }	
-		
-				}
-
-		
+			AST = {	
+				add_ideas = AST_War_Heroes 
+			}			
+		}	
 	}
 
 	############################

@@ -265,7 +265,7 @@ focus_tree = {
 		relative_position_id = RAJ_two_nation_theory
 
 		cost = 5
-				available = {
+		available = {
 			date > 1941.08.01
 			RAJ = {
 				controls_state = 288
@@ -276,19 +276,13 @@ focus_tree = {
 			factor = 25
 		}
 
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
 
-
-
 		completion_reward = {
-			add_ideas = RAJ_Jungle_Rats
-			
-				}
-
-		
+			add_ideas = RAJ_Jungle_Rats			
+		}		
 	}
 
 	focus = {
@@ -439,21 +433,13 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { has_tech = early_ship_hull_cruiser }
-				add_equipment_production = {
-					equipment = {
-						type = light_cruiser_2
+				431 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
 					}
-					requested_factories = 1
-					progress = 0.95
-					amount = 1
-				}
-				add_equipment_production = {
-					equipment = {
-						type = light_cruiser_2
-					}
-					requested_factories = 1
-					progress = 0.95
-					amount = 1
 				}
 			}
 		}
@@ -972,9 +958,8 @@ focus_tree = {
 
 		available = {
 		Date > 1941.02.01
-		RAJ = {
-				controls_state = 431
-					
+			RAJ = {
+				controls_state = 431					
 			}
 		}
 
@@ -991,7 +976,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = RAJ_Expand_Art
+			add_ideas = RAJ_Expand_Art_Arsenals
 		}
 	}
 	focus = {

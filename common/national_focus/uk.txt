@@ -317,7 +317,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = limited_rearmament_focus
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -452,7 +452,7 @@ focus_tree = {
 	}
 	focus = {
 		id = uk_Parliamentary_elections
-		text = "Parliamentary elections"
+		text = "Parliamentary Elections"
 		prerequisite = { focus = uk_empire_focus }
 		icon = GFX_ENG_Parliamentary
 		relative_position_id = uk_empire_focus
@@ -472,7 +472,7 @@ focus_tree = {
 	}
 	focus = {
 		id = uk_British_stoicism
-		text = "British stoicism"
+		text = "British Stoicism"
 		prerequisite = { focus = uk_Parliamentary_elections }
 		available = {
 				has_war = yes
@@ -506,17 +506,19 @@ focus_tree = {
 		}
 
 		available = {
-		JAP = {
+			JAP = {
 				controls_state = 327
 				controls_state = 336
 				controls_state = 669
-				controls_state = 439
-				controls_state = 285
+				OR = {
+					controls_state = 439
+					controls_state = 285
+				}
 			}
 		}
 
 		completion_reward = {
-		add_Ideas = British_Lion	
+			add_Ideas = British_Lion	
 		}
 	}
 	
@@ -997,7 +999,9 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		add_timed_idea = { idea = prepare_for_war days = 180 }
+			add_timed_idea = { 
+				idea = UK_Prepare_For_War days = 180 
+			}
 		}
 	}
 	focus = {
@@ -1635,7 +1639,7 @@ focus_tree = {
 		prerequisite = { focus = bomber_command_focus }
 		relative_position_id = air_rearmament_focus
 		x = 1
-		y = 4
+		y = 3
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1649,7 +1653,6 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 250
-			set_technology = { jet_engines = 1 }
 			add_tech_bonus = {
 				name = fighter3_bonus
 				bonus = 1
@@ -3900,7 +3903,7 @@ focus_tree = {
 	# END IRAQ/IRAN/USSR INTERVENTION #
 focus = {
 		id = ENG_general_staff
-		text = "General staff"
+		text = "The General Staff"
 		available = {
 			
 		}
@@ -3992,7 +3995,7 @@ focus = {
 	}
 	focus = {
 		id = ENG_new_rifle
-		text = "New Rifle"
+		text = "EM-2 Rifle"
 		available = {
 			
 		}
@@ -4010,7 +4013,7 @@ focus = {
 			factor = 1
 		}
 		completion_reward = {
-		add_tech_bonus = {
+			add_tech_bonus = {
 				name = ENG_inf
 				uses = 2
 				bonus = 1.00
@@ -4020,7 +4023,7 @@ focus = {
 	}
 	focus = {
 		id = ENG_women_in_army
-		text = "Women in the army"
+		text = "Women in the Army"
 		available = {
 			
 		}
@@ -4037,12 +4040,12 @@ focus = {
 			factor = 1
 		}
 		completion_reward = {
-		add_ideas = Women_in_army	
+			add_ideas = UK_Women_in_army	
 		}
 	}
 	focus = {
 		id = ENG_Modern_warfare
-		text = "Modern warfare"
+		text = "Modern Warfare"
 		available = {
 			
 		}
@@ -4083,10 +4086,10 @@ focus = {
 		will_lead_to_war_with = NOR
 		prerequisite = { focus = uk_empire_focus }
 		icon = GFX_goal_generic_more_territorial_claims
-		x = -6
+		x = -3
 		y = 1
 		relative_position_id = uk_empire_focus
-		cost = 0.2
+		cost = 1
 		ai_will_do = {
 			factor = 1
 		}
