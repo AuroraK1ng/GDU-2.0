@@ -831,8 +831,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = JAP_infantry
-		text = "Special training"
+		id = JAP_SF_Inf
+		text = "Special Forces Training"
 		icon = GFX_JAP_support_bat
 		prerequisite = { focus = JAP_army_expansion_law }
 		x = -1
@@ -870,8 +870,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = JAP_infantry_1
-		Text = "Form support batalions"
+		id = JAP_Support_Inf
+		Text = "Form Support Batallions"
 		icon = GFX_JAP_special_inf
 		prerequisite = { focus = JAP_army_expansion_law }
 		x = 1
@@ -879,8 +879,6 @@ focus_tree = {
 		relative_position_id = JAP_army_expansion_law
 
 		cost = 5
-
-
 
 		available = {
 
@@ -911,11 +909,11 @@ focus_tree = {
 	focus = {
 		id = JAP_military_industry
 		icon = GFX_JAP_mil_ind
-		text = "Preparation of army warehouses"
-		prerequisite = { focus = JAP_infantry_1 focus = JAP_infantry}
+		text = "Preparation of Military Warehouses"
+		prerequisite = { focus = JAP_Support_Inf focus = JAP_SF_Inf}
 		x = 1
 		y = 1
-		relative_position_id = JAP_infantry
+		relative_position_id = JAP_SF_Inf
 
 		cost = 15
 
@@ -938,15 +936,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		add_ideas = Warehouses
-		612 = {
-				add_extra_state_shared_building_slots = 6
+		add_ideas = Jap_Warehouses
+			612 = {
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
 					level = 4
 					instant_build = yes
-			}
 				}
+			}
 		}
 	}
 	focus = {
@@ -958,7 +956,7 @@ focus_tree = {
 		prerequisite = { focus = JAP_supremacy_of_technology }
 		x = 1
 		y = 2
-		relative_position_id = JAP_infantry
+		relative_position_id = JAP_SF_Inf
 
 		cost = 5
 
@@ -981,21 +979,19 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		add_ideas = Samurai
+			add_ideas = Jap_The_Samurai
 		}
 	}
 	focus = {
 		id = JAP_emperor_ancestors
-	    text = "In the name of the Emperor and ancestors"
+	    text = "For the Emperor and the Ancestors!"
 		icon = GFX_JAP_Emperor
 		prerequisite = { focus = JAP_Way_Samurai }
 		x = 0
 		y = 1
 		relative_position_id = JAP_Way_Samurai
 
-		cost = 5
-
-
+		cost = 3
 
 		available = {
 
@@ -1014,7 +1010,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		add_timed_idea = { idea = Emperor days = 365 }
+			add_timed_idea = { idea = Jap_The_Emperor days = 180 }
 		}
 	}
 	focus = {
@@ -1054,10 +1050,10 @@ focus_tree = {
 	focus = {
 		id = JAP_modern_artillery
 		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus =JAP_infantry  }
+		prerequisite = { focus =JAP_SF_Inf  }
 		x = -1
 		y = 1
-		relative_position_id = JAP_infantry
+		relative_position_id = JAP_SF_Inf
 
 		cost = 5
 
@@ -1084,7 +1080,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_modern_artillery
-				bonus = 1.5
+				bonus = 1.0
 				uses = 3
 				category = artillery
 			}
@@ -1095,10 +1091,10 @@ focus_tree = {
 		id = JAP_modern_inf
 		icon = GFX_JAP_inf_modern
 		text = "Modern Weapons"
-		prerequisite = { focus =JAP_infantry_1  }
+		prerequisite = { focus =JAP_Support_Inf  }
 		x = 1
 		y = 1
-		relative_position_id = JAP_infantry_1
+		relative_position_id = JAP_Support_Inf
 
 		cost = 5
 
@@ -3207,16 +3203,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_agility_focus
 
-		cost = 5
-
-
+		cost = 10
 
 		available = {
 
-		}
-
-		bypass = {
-			has_tech = cv_fighter2
 		}
 
 		cancel_if_invalid = no
@@ -3229,7 +3219,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = JAP_the_zero_tt
-			hidden_effect = { set_technology = { cv_fighter2 = 1 } }
+			hidden_effect = { set_technology = { improved_small_airframe = 1 } }
 		}
 	}
 
@@ -3265,11 +3255,16 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = JAP_bomber_modernization
+				name = bomber_bonus
 				bonus = 1.5
-				uses = 2
-				category = cas_bomber
-				category = tactical_bomber
+				uses = 1
+				technology = aa_cannon_1
+			}
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.5
+				uses = 1
+				technology = improved_medium_airframe
 			}
 		}
 	}
@@ -3309,7 +3304,7 @@ focus_tree = {
 				name = JAP_strategic_bomber_effort
 				bonus = 1.0
 				uses = 2
-				category = cat_strategic_bomber
+				technology = improved_large_airframe
 			}
 		}
 	}
@@ -3349,7 +3344,7 @@ focus_tree = {
 				name = JAP_heavy_fighter_effort
 				bonus = 1.5
 				uses = 2
-				category = cat_heavy_fighter
+				technology = improved_medium_airframe
 			}
 		}
 	}
@@ -3387,7 +3382,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = JAP_fighters
 			hidden_effect = {
-				set_technology = { fighter2 = 1 }
+				set_technology = { improved_small_airframe = 1 }
 			}
 		}
 	}
@@ -3423,7 +3418,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_technology = { cv_fighter3 = 1 }
 			set_technology = { advanced_small_airframe = 1 }
 		}
 	}
