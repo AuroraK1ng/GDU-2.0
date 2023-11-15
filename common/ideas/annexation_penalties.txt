@@ -1,42 +1,45 @@
 ideas = {
 	country = {
 		usa_special_forces = {
-			allowed = { always = yes }
+			allowed = {
+				always = yes
+			}
 			picture = ast_volunteer_defence_corps
 			removal_cost = -1
-			modifier = { special_forces_cap = 0.25 }
+			modifier = {
+				special_forces_cap = 0.25
+			}
 		}
-
-
-		
-
 		generic_neutral_country = {
-			allowed = { always = yes }
+			allowed = {
+				always = yes
+			}
 			removal_cost = -1
 			picture = generic_goods_red_bonus
 			modifier = {
-				drift_defence_factor = 2.0
-				enemy_justify_war_goal_time = 5.0
-				join_faction_tension = 2.00
+				drift_defence_factor = 2
+				enemy_justify_war_goal_time = 5
+				join_faction_tension = 2
 				#lend_lease_tension = 2.00
-				send_volunteers_tension = 2.00
-				guarantee_tension = 2.0
-				ai_badass_factor = 0.01    # Will receive 1% of the threat from others
+				send_volunteers_tension = 2
+				guarantee_tension = 2
+				ai_badass_factor = 0.01				# Will receive 1% of the threat from others
 				ai_get_ally_desire_factor = -200
-				political_power_factor = -2.00
-				consumer_goods_expected_value = 1.00
+				political_power_factor = -2
+				consumer_goods_expected_value = 1
 			}
 		}
-
 		annex_canada_idea = {
-			allowed = { always = yes }
+			allowed = {
+				always = yes
+			}
 			removal_cost = -1
 			picture = generic_goods_red_bonus
-
 		}
-
 		annex_british_raj_idea = {
-			allowed = { always = yes }
+			allowed = {
+				always = yes
+			}
 			removal_cost = -1
 			picture = generic_goods_red_bonus
 			modifier = {
@@ -44,9 +47,10 @@ ideas = {
 				special_forces_min = 160
 			}
 		}
-
 		annex_south_africa_idea = {
-			allowed = { always = yes }
+			allowed = {
+				always = yes
+			}
 			removal_cost = -1
 			picture = generic_goods_red_bonus
 			modifier = {
@@ -54,15 +58,17 @@ ideas = {
 				special_forces_min = 160
 			}
 		}
-
 		annex_australia_idea = {
-			allowed = { always = yes }
+			allowed = {
+				always = yes
+			}
 			removal_cost = -1
 			picture = generic_goods_red_bonus
 		}
-
 		annex_new_zealand_idea = {
-			allowed = { always = yes }
+			allowed = {
+				always = yes
+			}
 			removal_cost = -1
 			picture = generic_goods_red_bonus
 			modifier = {
@@ -70,9 +76,10 @@ ideas = {
 				special_forces_min = 160
 			}
 		}
-
 		annex_france_idea = {
-			allowed = { always = yes }
+			allowed = {
+				always = yes
+			}
 			removal_cost = -1
 			picture = generic_goods_red_bonus
 			modifier = {
@@ -81,9 +88,10 @@ ideas = {
 				special_forces_min = 160
 			}
 		}
-
 		annex_bulgaria_idea = {
-			allowed = { always = yes }
+			allowed = {
+				always = yes
+			}
 			removal_cost = -1
 			picture = generic_goods_red_bonus
 			modifier = {
@@ -92,9 +100,10 @@ ideas = {
 				special_forces_min = 160
 			}
 		}
-
 		annex_hungary_idea = {
-			allowed = { always = yes }
+			allowed = {
+				always = yes
+			}
 			removal_cost = -1
 			picture = generic_goods_red_bonus
 			modifier = {
@@ -103,16 +112,16 @@ ideas = {
 				special_forces_min = 160
 			}
 		}
-		
 		annex_raj_stukov_idea = {
-			allowed = { always = yes }
+			allowed = {
+				always = yes
+			}
 			removal_cost = -1
 			picture = generic_goods_red_bonus
 			modifier = {
 				consumer_goods_expected_value = 0.05
 				stability_factor = -0.05
 			}
-		}		
-
+		}
 	}
 }
