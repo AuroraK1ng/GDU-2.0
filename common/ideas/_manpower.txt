@@ -1,58 +1,38 @@
 ideas = {
-
 	mobilization_laws = {
 		law = yes
-
 		disarmed_nation = {
-
 			cost = 150
 			removal_cost = -1
 			level = 7
-
 			modifier = {
 				conscription = 0.015
-				
-
 			}
-
 			cancel_if_invalid = no
 		}
-
 		volunteer_only = {
-
 			cost = 150
 			removal_cost = -1
 			level = 6
-
 			ai_will_do = {
-   				factor = 1
+				factor = 1
 			}
-
 			modifier = {
 				conscription = 0.03
-
 			}
-
 			default = yes
-
 			cancel_if_invalid = no
 		}
-
 		limited_conscription = {
-
 			cost = 150
 			removal_cost = -1
 			level = 5
-
 			modifier = {
 				conscription = 0.05
 			}
-
 			cancel_if_invalid = no
 		}
-
 		extensive_conscription = {
-
 			available = {
 				#has_manpower_for_recruit_change_to = { value = 0.05 group = mobilization_laws }
 				OR = {
@@ -83,28 +63,20 @@ ideas = {
 					}
 					date > 1941.1.1
 				}
-
 			}
-
 			ai_will_do = {
-   				factor = 1
+				factor = 1
 			}
-
 			cost = 150
 			removal_cost = -1
 			level = 4
-
 			modifier = {
 				conscription = 0.075
 				training_time_factor = 0.1
 			}
-
 			cancel_if_invalid = no
 		}
-
 		service_by_requirement = {
-
-
 			available = {
 				#has_manpower_for_recruit_change_to =  { value = 0.1 group = mobilization_laws }
 				OR = {
@@ -112,7 +84,6 @@ ideas = {
 					has_government = communism
 					has_war = yes
 				}
-
 				if = {
 					limit = {
 						original_tag = AST
@@ -120,7 +91,6 @@ ideas = {
 					}
 					has_completed_focus = AST_fight_work_or_perish
 				}
-
 				if = {
 					limit = {
 						original_tag = CAN
@@ -138,17 +108,13 @@ ideas = {
 					}
 					date > 1941.1.1
 				}
-
 			}
-
 			ai_will_do = {
-   				factor = 1
+				factor = 1
 			}
-
 			cost = 150
 			removal_cost = -1
 			level = 3
-
 			modifier = {
 				conscription = 0.1
 				training_time_factor = 0.2
@@ -162,23 +128,16 @@ ideas = {
 				special_forces_attack_factor = 0.01
 				special_forces_defence_factor = 0.01
 				motorized_attack_factor = 0.01
-				motorized_defence_factor = 0.01		
+				motorized_defence_factor = 0.01
 				army_core_attack_factor = 0.015
 				army_core_defence_factor = 0.015
-				army_morale_factor = 0.015				
-			}	
-
+				army_morale_factor = 0.015
+			}
 			cancel_if_invalid = no
 		}
-		
-	
-
 		all_adults_serve = {
-
-
 			available = {
 				has_war = yes
-
 				if = {
 					limit = {
 						original_tag = AST
@@ -186,7 +145,6 @@ ideas = {
 					}
 					has_completed_focus = AST_fight_work_or_perish
 				}
-
 				if = {
 					limit = {
 						original_tag = CAN
@@ -204,17 +162,13 @@ ideas = {
 					}
 					date > 1941.1.1
 				}
-
 			}
-
 			ai_will_do = {
-   				factor = 1
+				factor = 1
 			}
-
 			cost = 150
 			removal_cost = -1
 			level = 2
-
 			modifier = {
 				conscription = 0.125
 				max_dig_in = -6
@@ -228,21 +182,16 @@ ideas = {
 				special_forces_attack_factor = 0.02
 				special_forces_defence_factor = 0.02
 				motorized_attack_factor = 0.02
-				motorized_defence_factor = 0.02						
+				motorized_defence_factor = 0.02
 				army_core_attack_factor = 0.03
 				army_core_defence_factor = 0.03
-				army_morale_factor = 0.03				
+				army_morale_factor = 0.03
 			}
-
 			cancel_if_invalid = no
 		}
-
 		scraping_the_barrel = {
-
-
 			available = {
 				has_war = yes
-
 				if = {
 					limit = {
 						original_tag = AST
@@ -250,7 +199,6 @@ ideas = {
 					}
 					has_completed_focus = AST_fight_work_or_perish
 				}
-
 				if = {
 					limit = {
 						original_tag = CAN
@@ -268,17 +216,13 @@ ideas = {
 					}
 					date > 1941.1.1
 				}
-
 			}
-
 			ai_will_do = {
-   				factor = 1
+				factor = 1
 			}
-
 			cost = 150
 			removal_cost = -1
 			level = 1
-
 			modifier = {
 				conscription = 0.15
 				max_dig_in = -9
@@ -292,15 +236,12 @@ ideas = {
 				special_forces_attack_factor = 0.03
 				special_forces_defence_factor = 0.03
 				motorized_attack_factor = 0.03
-				motorized_defence_factor = 0.03						
+				motorized_defence_factor = 0.03
 				army_core_attack_factor = 0.045
 				army_core_defence_factor = 0.045
 				army_morale_factor = 0.045
 			}
-
 			cancel_if_invalid = no
 		}
-		
-
 	}
 }
