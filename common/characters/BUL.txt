@@ -155,7 +155,7 @@ characters = {
 			expire = "1966.1.1.1"
 			id = -1
 		}
-		corps_commander = {
+		field_marshal = {
 			traits = {
 				panzer_leader
 				trait_engineer
@@ -164,10 +164,10 @@ characters = {
 				cavalry_officer
 				trait_reckless
 				skilled_staffer
-				desert_fox
+				ranger
 			}
-			skill = 6
-			attack_skill = 6
+			skill = 5
+			attack_skill = 4
 			defense_skill = 3
 			planning_skill = 4
 			logistics_skill = 4
@@ -180,20 +180,22 @@ characters = {
 				large = "gfx/leaders/BUL/AFRICA_Portrait_Bulgaria_Hristo_Lukov.dds"
 			}
 		}
-		corps_commander = {
+		field_marshal = {
 			traits = {
-				naval_invader
+				panzer_leader
 				trait_engineer
-				commando
-				infantry_officer
+				trickster
+				cavalry_leader
+				cavalry_officer
 				trait_reckless
+				skilled_staffer
 				desert_fox
 			}
-			skill = 6
-			attack_skill = 6
-			defense_skill = 7
-			planning_skill = 3
-			logistics_skill = 3
+			skill = 5
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
 		}
 	}
 	##     ## ##    ## #### ########    ##       ########    ###    ########  ######## ########   ######  
@@ -287,16 +289,18 @@ characters = {
 		}
 		field_marshal = {
 			traits = {
-				career_officer
+				old_guard
+				inflexible_strategist
 				politically_connected
-				trait_BUL_tsar_loyalist
-				fortress_buster
+				defensive_doctrine
+				organizer
+				ranger
 			}
-			skill = 4
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 3
+			skill = 5
+			attack_skill = 3
+			defense_skill = 6
+			planning_skill = 2
+			logistics_skill = 7
 			legacy_id = 1201
 		}
 	}
@@ -1528,10 +1532,11 @@ characters = {
 				cavalry_officer
 				trait_reckless
 				skilled_staffer
+				ranger
 			}
 			skill = 5
-			attack_skill = 6
-			defense_skill = 2
+			attack_skill = 4
+			defense_skill = 3
 			planning_skill = 4
 			logistics_skill = 4
 		}
@@ -1553,10 +1558,11 @@ characters = {
 				cavalry_officer
 				trait_reckless
 				skilled_staffer
+				desert_fox
 			}
 			skill = 5
-			attack_skill = 6
-			defense_skill = 2
+			attack_skill = 4
+			defense_skill = 3
 			planning_skill = 4
 			logistics_skill = 4
 		}
