@@ -27,8 +27,7 @@ ideas = {
 			modifier = {
 				consumer_goods_expected_value = -0.04
 				conversion_cost_mil_to_civ_factor = -0.2
-				production_speed_industrial_complex_factor = 0.1
-				stability_factor = -0.05
+				production_speed_industrial_complex_factor = 0.05
 			}
 			
 		}
@@ -43,8 +42,7 @@ ideas = {
 			modifier = {
 				consumer_goods_expected_value = -0.02
 				conversion_cost_mil_to_civ_factor = -0.2
-				production_speed_industrial_complex_factor = 0.05
-				stability_factor = -0.1
+				production_speed_industrial_complex_factor = 0.025
 			}
 			
 		}
@@ -75,7 +73,7 @@ ideas = {
 			
 		}
 		Marxism-Leninism = {
-			picture = generic_manpower_bonus
+			picture = Marxism-Leninism
 
 			allowed = {
 
@@ -83,13 +81,13 @@ ideas = {
 		
 			removal_cost = -1
 			modifier = {
-				consumer_goods_expected_value = 0.02
-				production_speed_industrial_complex_factor = 0.1
+				consumer_goods_expected_value = 0.020
+				production_speed_buildings_factor = 0.10
 			}
 			
 		}
 		Gulags = {
-			picture = workers_culture
+			picture = Gulags
 
 			allowed = {
 
@@ -103,7 +101,7 @@ ideas = {
 			
 		}
 		Convict_Workers = {
-			picture = SOV_tankograd
+			picture = Gulags
 
 			allowed = {
 
@@ -111,13 +109,15 @@ ideas = {
 		
 			removal_cost = -1
 			modifier = {
-			industrial_capacity_factory = 0.15
-			stability_factor = -0.05
+				industrial_capacity_factory = 0.05
+				stability_factor = -0.05
+				consumer_goods_expected_value = -0.03
+				production_speed_buildings_factor = -0.05
 			}
 			
 		}
 		Stalin_tyranny = {
-			picture = smallarms_factory
+			picture = Broken_Church
 
 			allowed = {
 
@@ -125,14 +125,14 @@ ideas = {
 		
 			removal_cost = -1
 			modifier = {
-			production_speed_arms_factory_factor = 0.025
-			production_speed_dockyard_factor = 0.025
-			conscription = -0.002
+				production_speed_arms_factory_factor = 0.025
+				production_speed_dockyard_factor = 0.025
+				conscription = -0.002
 			}
 			
 		}
-		Pioners = {
-			picture = soviet_research
+		Pioneers = {
+			picture = soviet_research2
 
 			allowed = {
 
@@ -145,7 +145,7 @@ ideas = {
 			
 		}
 		Heroism_2 = {
-			picture = workers_culture
+			picture = soviet_heroism
 
 			allowed = {
 
@@ -153,15 +153,15 @@ ideas = {
 		
 			removal_cost = -1
 			modifier = {
-				conversion_cost_civ_to_mil_factor = -0.35
-				production_speed_arms_factory_factor = 0.10
-				production_speed_dockyard_factor = 0.25
+				conversion_cost_civ_to_mil_factor = -0.1
+				production_speed_arms_factory_factor = 0.05
+				production_speed_dockyard_factor = 0.1
 				conscription = 0.02
 			}
 			
 		}
 		Heroism = {
-			picture = workers_culture
+			picture = soviet_heroism
 
 			allowed = {
 
@@ -169,9 +169,9 @@ ideas = {
 		
 			removal_cost = -1
 			modifier = {
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.25
-				conversion_cost_civ_to_mil_factor = -0.2
+				production_speed_arms_factory_factor = 0.025
+				production_speed_dockyard_factor = 0.05
+				conversion_cost_civ_to_mil_factor = -0.05
 
 			}
 			
@@ -228,7 +228,7 @@ ideas = {
 				conversion_cost_civ_to_mil_factor = -0.5
 			}
 		}
-		Guard = {
+		SOV_Red_Guard = {
 			removal_cost = -1
 
 			allowed = {
@@ -239,15 +239,16 @@ ideas = {
 				has_government = communism
 			}
 
-			picture = generic_manpower_bonus
+			picture = stavka
 
 			modifier = {
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+				planning_speed = 0.05
 				max_planning = 0.05
-				army_morale_factor = 0.025
-				land_reinforce_rate = 0.025
 			}
 		}
-		T-34 = {
+		Tankograd = {
 			removal_cost = -1
 			allowed = {
 				always = no
@@ -275,13 +276,13 @@ ideas = {
 				has_government = communism
 			}
 
-			picture = generic_manpower_bonus
+			picture = stavka
 
 			modifier = {
-				army_org_factor = 0.05
+				army_org_factor = 0.025
 				army_morale_factor = 0.025
-				army_attack_factor = 0.05
-				army_defence_factor = 0.05
+				planning_speed = 0.025
+				max_planning = 0.025
 			}
 		}
 		Rzhev_offensive_operation = {
@@ -346,7 +347,7 @@ ideas = {
 		}
 		Chieftain_People = {
 			
-			picture = stavka
+			picture = Vozhd
 			
 			allowed = {
 				original_tag = "SOV"
@@ -674,7 +675,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = Idea_sov_Mass_Mechanization_effort
+			picture = sov_Mass_Mechanization_effort
 
 			modifier = {
 				production_speed_synthetic_refinery_factor = 0.45
@@ -751,8 +752,9 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory = 0.15
+				industrial_capacity_factory = 0.30
 				mobilization_laws_cost_factor = -0.25
+				conversion_cost_civ_to_mil_factor = -0.25
 			}
 		}
 		workers_culture = {
@@ -918,7 +920,7 @@ ideas = {
 			picture = generic_morale_bonus
 
 			modifier = {
-				land_reinforce_rate = 0.05
+				land_reinforce_rate = 0.1
 				army_morale_factor = 0.05
 			}
 		}

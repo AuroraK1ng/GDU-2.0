@@ -31,9 +31,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOV_Gulag_3
+		id = SOV_Church_Ban
 		icon = GFX_SOV_Stalin_purge
-		text = "Stalin's tyranny"
+		text = "Purge the Church!"
 		prerequisite = {
 			focus = SOV_stalin_constitution
 		}
@@ -58,13 +58,13 @@ focus_tree = {
 	focus = {
 		id = SOV_Gulag
 		icon = GFX_SOV_Giant
-		text = "Gulags"
+		text = "The Gulags"
 		prerequisite = {
-			focus = SOV_Gulag_3
+			focus = SOV_Church_Ban
 		}
 		x = 0
 		y = 1
-		relative_position_id = SOV_Gulag_3
+		relative_position_id = SOV_Church_Ban
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -77,7 +77,7 @@ focus_tree = {
 	focus = {
 		id = SOV_Gulag_1
 		icon = GFX_GENERIC_SOV_Industry
-		text = "Convict workers"
+		text = "Convict Workers"
 		prerequisite = {
 			focus = SOV_Gulag
 		}
@@ -90,11 +90,14 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 		completion_reward = {
-			add_ideas = Convict_Workers
+			swap_ideas = {
+				remove_idea = Gulags
+				add_idea = Convict_Workers
+			}
 		}
 	}
 	focus = {
-		id = SOV_Gulag_2
+		id = SOV_Labour_Camps
 		icon = GFX_SOV_Increase_Military_Spending
 		text = "Increase Military Spending"
 		prerequisite = {
@@ -111,7 +114,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = -0.05
 			580 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
 					level = 1
@@ -119,7 +122,7 @@ focus_tree = {
 				}
 			}
 			579 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
 					level = 1
@@ -127,7 +130,7 @@ focus_tree = {
 				}
 			}
 			577 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
 					level = 1
@@ -135,7 +138,7 @@ focus_tree = {
 				}
 			}
 			574 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
 					level = 1
@@ -156,13 +159,13 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_stalin_constitution
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		available_if_capitulated = yes
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 100
 		}
 	}
 	focus = {
@@ -257,24 +260,6 @@ focus_tree = {
 					modifier = anti_capitalist_diplomacy_focus
 				}
 			}
-			USA = {
-				add_opinion_modifier = {
-					target = SOV
-					modifier = anti_capitalist_diplomacy_capitalists
-				}
-			}
-			ENG = {
-				add_opinion_modifier = {
-					target = SOV
-					modifier = anti_capitalist_diplomacy_capitalists
-				}
-			}
-			FRA = {
-				add_opinion_modifier = {
-					target = SOV
-					modifier = anti_capitalist_diplomacy_capitalists
-				}
-			}
 		}
 	}
 	focus = {
@@ -306,11 +291,6 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_stalin_constitution
 		}
-		available = {
-			SOV = {
-				has_completed_focus = SOV_great_purge
-			}
-		}
 		x = 12
 		y = 1
 		relative_position_id = SOV_stalin_constitution
@@ -324,7 +304,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOV_Army_ref_2
+		id = SOV_Rokossovsky
 		Text = "Rehabilitate Rokossovsky"
 		icon = GFX_SOV_Rokossovsky
 		prerequisite = {
@@ -343,8 +323,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOV_Army_ref_3
-		Text = "Konev's experience"
+		id = SOV_Konev
+		Text = "Konev's Innovation"
 		icon = GFX_SOV_konev
 		prerequisite = {
 			focus = SOV_positive_heroism
@@ -373,15 +353,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOV_Army_ref_2_1
+		id = SOV_Tank_Cult
 		text = "Tank Cult"
 		icon = GFX_SOV_kv1
 		prerequisite = {
-			focus = SOV_Army_ref_2
+			focus = SOV_Rokossovsky
 		}
 		x = -1
 		y = 1
-		relative_position_id = SOV_Army_ref_2
+		relative_position_id = SOV_Rokossovsky
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -410,18 +390,18 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOV_Army_ref_2_2
+		id = SOV_Chuikov_Gun
 		icon = GFX_SOV_Chuikov
-		text = "Chuikov's proposals"
+		text = "Chuikov's Proposal"
 		prerequisite = {
-			focus = SOV_Army_ref_2_1
+			focus = SOV_Tank_Cult
 		}
 		prerequisite = {
-			focus = SOV_Army_ref_2-3_1
+			focus = SOV_Mass_Assault
 		}
 		x = 0
 		y = 2
-		relative_position_id = SOV_Army_ref_2_1
+		relative_position_id = SOV_Tank_Cult
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -437,16 +417,16 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOV_Army_ref_2-3
-		text = "Army reorganization"
+		id = SOV_Military_Reorg
+		text = "Army Reorganization"
 		icon = GFX_SOV_solgier_Hero
 		prerequisite = {
-			focus = SOV_Army_ref_2
-			focus = SOV_Army_ref_3
+			focus = SOV_Rokossovsky
+			focus = SOV_Konev
 		}
 		x = 1
 		y = 1
-		relative_position_id = SOV_Army_ref_2
+		relative_position_id = SOV_Rokossovsky
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -462,15 +442,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOV_Army_ref_2-3_1
+		id = SOV_Mass_Assault
 		icon = GFX_SOV_Zhukov_1
-		Text = "Mass Assault"
+		Text = "Mass Assault Doctrine"
 		prerequisite = {
-			focus = SOV_Army_ref_2-3
+			focus = SOV_Military_Reorg
 		}
 		x = 0
 		y = 1
-		relative_position_id = SOV_Army_ref_2-3
+		relative_position_id = SOV_Military_Reorg
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -485,15 +465,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOV_Army_ref_2-3_2
+		id = SOV_New_Equipment
 		icon = GFX_SOV_equipment
-		Text = "New equipment"
+		Text = "New Equipment"
 		prerequisite = {
-			focus = SOV_Army_ref_2-3
+			focus = SOV_Mass_Assault
 		}
 		x = 0
 		y = 2
-		relative_position_id = SOV_Army_ref_2-3
+		relative_position_id = SOV_Military_Reorg
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -513,15 +493,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOV_Army_ref_3_1
-		Text = "Commissars of the NKVD"
+		id = SOV_NKVD_Primacy
+		Text = "NKVD Commissars"
 		icon = GFX_Goal_NKVD_Primacy
 		prerequisite = {
-			focus = SOV_Army_ref_3
+			focus = SOV_Konev
 		}
 		x = 1
 		y = 1
-		relative_position_id = SOV_Army_ref_3
+		relative_position_id = SOV_Konev
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -538,18 +518,18 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOV_Army_ref_3_2
+		id = SOV_Expand_NKVD
 		text = "NKVD divisions"
 		icon = GFX_SOV_hat
 		prerequisite = {
-			focus = SOV_Army_ref_3_1
+			focus = SOV_NKVD_Primacy
 		}
 		prerequisite = {
-			focus = SOV_Army_ref_2-3_1
+			focus = SOV_Mass_Assault
 		}
 		x = 0
 		y = 2
-		relative_position_id = SOV_Army_ref_3_1
+		relative_position_id = SOV_NKVD_Primacy
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -574,13 +554,13 @@ focus_tree = {
 		text = "Lessons of War"
 		icon = GFX_SOV_Upgrade_inf
 		prerequisite = {
-			focus = SOV_Army_ref_3_2
+			focus = SOV_Expand_NKVD
 		}
 		prerequisite = {
-			focus = SOV_Army_ref_2-3_1
+			focus = SOV_Mass_Assault
 		}
 		prerequisite = {
-			focus = SOV_Army_ref_2_2
+			focus = SOV_Chuikov_Gun
 		}
 		available = {
 			OR = {
@@ -590,7 +570,7 @@ focus_tree = {
 		}
 		x = 0
 		y = 2
-		relative_position_id = SOV_Army_ref_2-3_1
+		relative_position_id = SOV_Mass_Assault
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -797,26 +777,21 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOV_Army_ref_5
-		Text = "Stalin's defense department"
+		id = sov_new_def_dept
+		Text = "Stalin's Defense Department"
 		icon = GFX_SOV_Stalin_Note
 		prerequisite = {
-			focus = SOV_Army_ref_2_2
+			focus = SOV_Chuikov_Gun
 		}
 		prerequisite = {
 			focus = SOV_Fleet_2
 		}
 		x = -1
 		y = 1
-		relative_position_id = SOV_Army_ref_2_2
-		cost = 3
+		relative_position_id = SOV_Chuikov_Gun
+		cost = 5
 		ai_will_do = {
 			factor = 1
-		}
-		available = {
-			SOV = {
-				has_completed_focus = SOV_raskovas_aviation_group
-			}
 		}
 		available_if_capitulated = yes
 		completion_reward = {
@@ -827,10 +802,10 @@ focus_tree = {
 	#	id = SOV_Army_ref_6
 	#	Text = "STAVKA"
 	#	icon = 	GFX_SOV_Politburo
-	#	prerequisite = { focus = SOV_Army_ref_5 }
+	#	prerequisite = { focus = sov_new_def_dept }
 	#	x = 0
 	#	y = 1
-	#	relative_position_id = SOV_Army_ref_5
+	#	relative_position_id = sov_new_def_dept
 	#	cost = 3
 	#	ai_will_do = {
 	#		factor = 1
@@ -892,20 +867,20 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_lessons_of_war
-		cost = 0
+		cost = 1
 		available = {
 			has_completed_focus = SOV_defense_of_moscow
 		}
 		search_filters = {
 		}
 		completion_reward = {
-			add_ideas = SOV_Mechanised_Corps_Expanded
+			custom_effect_tooltip = SOV_BTR_In_Army
 		}
 	}
 	focus = {
-		id = SOV_improove_avia
+		id = SOV_improve_aviation
 		icon = GFX_SOV_Vasily_2
-		text = "New people in aviation"
+		text = "New People in Aviation"
 		prerequisite = {
 			focus = SOV_stalin_constitution
 		}
@@ -916,9 +891,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		available = {
-			date > 1937.6.1
-		}
 		available_if_capitulated = yes
 		completion_reward = {
 			air_experience = 250
@@ -928,11 +900,11 @@ focus_tree = {
 		id = SOV_aviation_cult
 		icon = GFX_Noras_USSR_aviation_cult
 		prerequisite = {
-			focus = SOV_improove_avia
+			focus = SOV_improve_aviation
 		}
 		x = 0
 		y = 1
-		relative_position_id = SOV_improove_avia
+		relative_position_id = SOV_improve_aviation
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -952,7 +924,7 @@ focus_tree = {
 		icon = GFX_SOV_sturmovik
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 		relative_position_id = SOV_aviation_cult
 		prerequisite = {
 			focus = SOV_aviation_cult
@@ -976,7 +948,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_raskovas_aviation_group
-		Text = "Vasily Stalin's proposals"
+		Text = "Vasily Stalin's Proposals"
 		icon = GFX_SOV_Vasily_1
 		relative_position_id = SOV_aviation_cult
 		x = -1
@@ -1216,7 +1188,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_great_purge
 		}
-		cost = 4.7
+		cost = 4.3
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -1873,94 +1845,18 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = SOV_defense_Odesa
-		icon = GFX_Goal_Soviet_Defense
-		prerequisite = {
-			focus = SOV_move_industry_to_urals
-		}
-		text = "Defense of Odesa"
-		relative_position_id = SOV_move_industry_to_urals
-		x = 0
-		y = 1
-		cost = 2
-		ai_will_do = {
-			factor = 0
-		}
-		completion_reward = {
-			137 = {
-				add_building_construction = {
-					type = bunker
-					level = 6
-					province = 705
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 6704
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 6724
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 2
-					province = 705
-					instant_build = yes
-				}
-			}
-			234 = {
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 6741
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 2
-					province = 719
-					instant_build = yes
-				}
-			}
-			218 = {
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = 6136
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = 585
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = 3093
-					instant_build = yes
-				}
-			}
-		}
-	}
+	
 	focus = {
 		id = SOV_defense_Kiev
 		icon = GFX_RUS_tank
 		prerequisite = {
-			focus = SOV_defense_Odesa
+			focus = SOV_move_industry_to_urals
 		}
 		text = "Defense of Kiev"
-		relative_position_id = SOV_defense_Odesa
+			relative_position_id = SOV_move_industry_to_urals
 		x = 0
 		y = 1
-		cost = 2
+		cost = 4.3
 		ai_will_do = {
 			factor = 0
 		}
@@ -2026,6 +1922,66 @@ focus_tree = {
 				remove_ideas = officers_purged_10
 			}
 			add_ideas = officers_purged_9
+						137 = {
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 705
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 6704
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 6724
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 705
+					instant_build = yes
+				}
+			}
+			234 = {
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 6741
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 719
+					instant_build = yes
+				}
+			}
+			218 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6136
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 585
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3093
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -2044,7 +2000,7 @@ focus_tree = {
 		}
 		relative_position_id = SOV_move_industry_to_urals
 		x = -4
-		y = 4
+		y = 3
 		cost = 4.3
 		ai_will_do = {
 			factor = 0
@@ -2062,9 +2018,6 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_defense_Kiev
 		}
-		prerequisite = {
-			focus = SOV_defense_Odesa
-		}
 		available = {
 			OR = {
 				date > 1941.6.14
@@ -2078,7 +2031,7 @@ focus_tree = {
 			}
 		}
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = SOV_move_industry_to_urals
 		cost = 10
 		ai_will_do = {
@@ -2937,36 +2890,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = Holy_war
-		text = "Holy War"
-		icon = GFX_SOV_All_to_the_front
-		prerequisite = {
-			focus = SOV_defense_of_moscow
-		}
-		relative_position_id = SOV_move_industry_to_urals
-		x = 0
-		y = 4
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			add_ideas = All_for_The_Front
-		}
-	}
-	focus = {
 		id = Rzhev_offensive_operation
-		text = "Rzhev offensive operation"
+		text = "Rzhev Offensive Operation"
 		icon = GFX_SOV_Rzhev
-		prerequisite = {
-			focus = Holy_war
-		}
 		prerequisite = {
 			focus = SOV_Motherland_is_calling
 		}
 		prerequisite = {
-			focus = SOV_T-34-85
+			focus = SOV_Modern_Tanks
 		}
 		prerequisite = {
 			focus = SOV_NKVD
@@ -2974,10 +2905,10 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_Chieftain
 		}
-		relative_position_id = Holy_war
+		relative_position_id = SOV_defense_of_moscow
 		x = 0
-		y = 2
-		cost = 5
+		y = 3
+		cost = 4.3
 		ai_will_do = {
 			factor = 1
 		}
@@ -3203,7 +3134,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Guards
-		text = "Make a Guard"
+		text = "Red Guards"
 		icon = GFX_goal_sov_great_patriotic_war
 		prerequisite = {
 			focus = SOV_defense_of_stalingrad
@@ -3215,12 +3146,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		available = {
-			date > 1942.6.1
-		}
 		available_if_capitulated = yes
 		completion_reward = {
-			add_ideas = Guard
+			swap_ideas = {
+				remove_idea = Motherland_is_calling
+				add_idea = SOV_Red_Guard 
+			}
 		}
 	}
 	focus = {
@@ -3490,8 +3421,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOV_t_34
-		text = "T-34"
+		id = SOV_Tankograd
+		text = "Expand the Tankograd"
 		icon = GFX_SOV_t34_85
 		x = 1
 		y = 1
@@ -3502,7 +3433,7 @@ focus_tree = {
 		available = {
 			date > 1941.3.1
 		}
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -3515,15 +3446,15 @@ focus_tree = {
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		completion_reward = {
-			add_ideas = T-34
+			add_ideas = Tankograd
 		}
 	}
 	focus = {
 		id = SOV_Workers_Peasants_Red_Army
-		text = "Workers and Peasants Red Army"
+		text = "Workers and Peasants of the Red Army"
 		icon = GFX_Goal_Soviet_guns
 		prerequisite = {
-			focus = SOV_t_34
+			focus = SOV_Tankograd
 		}
 		prerequisite = {
 			focus = SOV_Stalin_Organ
@@ -3532,13 +3463,13 @@ focus_tree = {
 		}
 		x = -1
 		y = 1
-		relative_position_id = SOV_t_34
+		relative_position_id = SOV_Tankograd
 		cost = 1
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
-			add_ideas = Workers_Peasants_Red_Army
+			custom_effect_tooltip = SOV_Increased_Production
 		}
 	}
 	focus = {
@@ -3666,7 +3597,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_finish_five_year_plan
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -3684,13 +3615,13 @@ focus_tree = {
 		relative_position_id = SOV_stalin_constitution
 		x = -7
 		y = 1
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		available_if_capitulated = yes
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 100
 		}
 	}
 	focus = {
@@ -3734,9 +3665,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOV_Pioners
+		id = SOV_Pioneers
 		icon = GFX_SOV_Pioners
-		text = "Pioners"
+		text = "Pioneers Groups"
 		prerequisite = {
 			focus = SOV_socialist_science
 		}
@@ -3749,7 +3680,7 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 		completion_reward = {
-			add_ideas = Pioners
+			add_ideas = Pioneers
 		}
 	}
 	focus = {
@@ -3788,10 +3719,10 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = {
 			219 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -3856,24 +3787,6 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = {
 			add_ideas = militarized_schools
-		}
-	}
-	focus = {
-		id = SOV_Military_training_36
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = {
-			focus = SOV_militarized_schools
-		}
-		text = "Minsk Maneuvers 1936"
-		relative_position_id = SOV_politburo
-		x = 1
-		y = 3
-		cost = 3
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
 			create_corps_commander = {
 				name = "Andrey Hrulyov"
 				picture = "Portrait_Soviet_Hrulyov_Andrey.dds"
@@ -3895,15 +3808,15 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Ideal_communism
-		text = "Forward to a bright future"
+		text = "Towards Bright Future!"
 		icon = GFX_SOV_traditionalist_socialism
 		prerequisite = {
-			focus = SOV_Military_training_36
+			focus = SOV_militarized_schools
 		}
-		relative_position_id = SOV_Military_training_36
+		relative_position_id = SOV_militarized_schools
 		x = 0
 		y = 1
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 0.25
 		}
@@ -3919,7 +3832,7 @@ focus_tree = {
 	focus = {
 		id = SOV_Propaganda_Heroism
 		icon = GFX_SOV_Zhukov_Heroism
-		Text = "Propaganda of Heroism"
+		Text = "Heroism Propaganda"
 		mutually_exclusive = {
 			focus = SOV_collectivist_propaganda
 		}
@@ -3955,24 +3868,6 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = {
 			add_ideas = Heroes_social_labor
-		}
-	}
-	focus = {
-		id = SOV_Military_training_35
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = {
-			focus = SOV_Heroes_social_labor
-		}
-		text = "Kiev Maneuvers 1935"
-		relative_position_id = SOV_politburo
-		x = -1
-		y = 3
-		cost = 3
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
 			create_field_marshal = {
 				name = "Joseph Stalin"
 				picture = "Portrait_SOV_Iosif_ST.dds"
@@ -4001,12 +3896,12 @@ focus_tree = {
 		icon = GFX_SOV_Heroes_SocLabor
 		Text = "Heroic Nation"
 		prerequisite = {
-			focus = SOV_Military_training_35
+			focus = SOV_Heroes_social_labor
 		}
-		relative_position_id = SOV_Military_training_35
+		relative_position_id = SOV_Heroes_social_labor
 		x = 0
 		y = 1
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 0.25
 		}
@@ -4043,7 +3938,7 @@ focus_tree = {
 		icon = GFX_Goal_Communist_education
 		relative_position_id = SOV_move_industry_to_urals
 		x = 2
-		y = 4
+		y = 3
 		cost = 4.4
 		ai_will_do = {
 			factor = 1
@@ -4080,13 +3975,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOV_T-34-85
-		Text = "Tanks for the Motherland"
+		id = SOV_Modern_Tanks
+		Text = "Develop Modern Tanks"
 		icon = GFX_SOV_IS2
 		relative_position_id = SOV_extra_tech_slot_2
 		x = 1
 		y = 1
-		cost = 2.2
+		cost = 4.3
 		ai_will_do = {
 			factor = 1
 		}
@@ -4117,7 +4012,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_NKVD
-		Text = "Expand the NKVD"
+		Text = "Order 227"
 		icon = GFX_SOV_NKVD_meme
 		relative_position_id = SOV_extra_tech_slot_2
 		x = -1
@@ -4938,7 +4833,7 @@ focus_tree = {
 		icon = GFX_goal_generic_territory_or_war
 		relative_position_id = SOV_move_industry_to_urals
 		x = 4
-		y = 4
+		y = 3
 		cost = 4.3
 		prerequisite = {
 			focus = SOV_defense_of_moscow
@@ -4989,7 +4884,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Kuznetsov
-		Text = "Kuznetsov's plan"
+		Text = "Kuznetsov's Plan"
 		icon = GFX_SOV_Kuznetsov
 		relative_position_id = SOV_stalin_constitution
 		x = 8
@@ -4997,9 +4892,6 @@ focus_tree = {
 		cost = 2
 		prerequisite = {
 			focus = SOV_stalin_constitution
-		}
-		available = {
-			date > 1937.1.1
 		}
 		ai_will_do = {
 			factor = 1
@@ -5066,12 +4958,12 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Fleet
-		text = "Soviet marines"
+		text = "Sovietskyie Marines"
 		icon = GFX_SOV_Fleet_Rakov
 		relative_position_id = SOV_ocean_going_navy
 		x = -1
 		y = 1
-		cost = 2
+		cost = 5
 		prerequisite = {
 			focus = SOV_ocean_going_navy
 		}
@@ -5080,7 +4972,7 @@ focus_tree = {
 		}
 		available = {
 			SOV = {
-				has_completed_focus = SOV_Gulag_2
+				has_completed_focus = SOV_Labour_Camps
 			}
 		}
 		available_if_capitulated = yes
@@ -5094,7 +4986,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Fleet_2
-		text = "Naval artillery for army"
+		text = "Naval Artillery for the Army"
 		icon = GFX_SOV_Rakov
 		relative_position_id = SOV_ocean_going_navy
 		x = 1
@@ -5124,7 +5016,7 @@ focus_tree = {
 		}
 		relative_position_id = SOV_move_industry_to_urals
 		x = -2
-		y = 4
+		y = 3
 		cost = 4.3
 		ai_will_do = {
 			factor = 1
@@ -5140,7 +5032,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Motherland_is_calling
-		text = "Motherland is calling"
+		text = "Rodina is Calling"
 		icon = GFX_SOV_Motherland_calls
 		prerequisite = {
 			focus = SOV_wartime_propaganda
@@ -5148,7 +5040,7 @@ focus_tree = {
 		relative_position_id = SOV_wartime_propaganda
 		x = -1
 		y = 1
-		cost = 5
+		cost = 4.3
 		ai_will_do = {
 			factor = 1
 		}
@@ -5163,7 +5055,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Chieftain
-		text = "Chieftain of the People"
+		text = "People's Vozhd"
 		icon = GFX_goal_sov_cult_of_stalin
 		prerequisite = {
 			focus = SOV_wartime_propaganda

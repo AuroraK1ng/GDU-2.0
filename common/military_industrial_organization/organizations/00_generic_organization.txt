@@ -240,6 +240,7 @@ generic_infantry_tank_organization = {
 		
 		equipment_bonus = {
 			hard_attack = 0.05
+			soft_attack = 0.05
 		}
 
 
@@ -256,6 +257,7 @@ generic_infantry_tank_organization = {
 
 		equipment_bonus = {
 			hard_attack = 0.05
+			soft_attack = 0.05
 		}
 	}
 
@@ -4434,11 +4436,6 @@ generic_artillery_organization = {
 		
 		mutually_exclusive = { generic_mio_trait_advanced_barrel_forging generic_mio_trait_big_guns }
 
-		limit_to_equipment_type = { 
-			anti_tank_equipment
-			anti_air_equipment
-		}
-
 		equipment_bonus = {
 			soft_attack = 0.02
 			hard_attack = 0.02
@@ -4616,12 +4613,12 @@ generic_infantry_equipment_organization = {
 		name = generic_mio_trait_bolt_action
 		icon = GFX_generic_mio_department_icon_infantry_line_efficiency
 
-		position = { x=-1 y=2 }
+		position = { x=-2 y=2 }
 		relative_position_id = generic_mio_trait_reinforced_stocks
 
 		all_parents = { generic_mio_trait_reinforced_stocks }
 
-		mutually_exclusive = { generic_mio_trait_semi_auto }
+		mutually_exclusive = { generic_mio_trait_semi_auto generic_mio_trait_vehicle_mounted_capabilities }
 
 		equipment_bonus = {
 			soft_attack = -0.1
@@ -4634,16 +4631,33 @@ generic_infantry_equipment_organization = {
 		name = generic_mio_trait_semi_auto
 		icon = GFX_generic_mio_trait_icon_soft_attack
 
-		position = { x=1 y=2 }
+		position = { x=2 y=2 }
 		relative_position_id = generic_mio_trait_reinforced_stocks
 
 		all_parents = { generic_mio_trait_reinforced_stocks }
 
-		mutually_exclusive = { generic_mio_trait_bolt_action }
+		mutually_exclusive = { generic_mio_trait_bolt_action generic_mio_trait_vehicle_mounted_capabilities }
 
 		equipment_bonus = {
 			soft_attack = 0.05
 			build_cost_ic = 0.1
+		}
+	}
+	
+	trait = {
+		token = generic_mio_trait_vehicle_mounted_capabilities
+		name = generic_mio_trait_vehicle_mounted_capabilities
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		position = { x=0 y=2 }
+		relative_position_id = generic_mio_trait_reinforced_stocks
+
+		all_parents = { generic_mio_trait_reinforced_stocks }
+		
+		mutually_exclusive = { generic_mio_trait_semi_auto generic_mio_trait_bolt_action }
+
+		equipment_bonus = {
+			breakthrough = 0.025
 		}
 	}
 
