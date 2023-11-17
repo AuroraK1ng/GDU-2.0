@@ -3842,7 +3842,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			#NOT = { has_global_flag = mini_GDU }
+			NOT = { has_global_flag = mini_GDU }
 		}
 
 		available_if_capitulated = yes
@@ -4078,7 +4078,7 @@ focus = {
 		id = ENG_norwegian_intervention
 		available = {
 			GER = { has_war_with = ENG }
-			date > 1940.2.1
+			date > 1940.6.1
 		}
 		bypass = {
 			NOR = { has_war_with = GER }
@@ -4089,7 +4089,7 @@ focus = {
 		x = -3
 		y = 1
 		relative_position_id = uk_empire_focus
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
