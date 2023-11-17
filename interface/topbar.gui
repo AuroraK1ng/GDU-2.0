@@ -812,16 +812,14 @@ guiTypes = {
 					oversound = ui_menu_over
 				}
 				
-				iconType = {
+				buttonType = {
 					name = "diplomacy_button"
-					#quadTextureSprite ="GFX_topbar_diplomacy"
-					spriteType ="GFX_topbar_diplomacy"
-
+					quadTextureSprite ="GFX_topbar_diplomacy"
 					position = { x= 6 y = 0 }
 					Orientation = "UPPER_LEFT"
 				#	shortcut = "e"
-					#clicksound = click_close
-					#oversound = ui_menu_over
+					clicksound = click_close
+					oversound = ui_menu_over
 				}
 				containerWindowType = {
 					name = "non_delivering_contracts"
@@ -928,15 +926,14 @@ guiTypes = {
 					oversound = ui_menu_over
 				}
 				
-				iconType = {
+				buttonType = {
 					name = "officer_corp_button"
 					position = { x = 340 y = 0 }
-					# quadTextureSprite ="GFX_staff_office_button"
-					spriteType ="GFX_staff_office_button"
+					quadTextureSprite ="GFX_staff_office_button"
 					Orientation = "UPPER_LEFT"
-					#shortcut = "shift+e"
-					#clicksound = click_close
-					#oversound = ui_menu_over
+					shortcut = "shift+e"
+					clicksound = click_close
+					oversound = ui_menu_over
 				}
 			}
 			
