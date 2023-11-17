@@ -813,14 +813,23 @@ guiTypes = {
 				}
 				
 				buttonType = {
+					hide=yes
 					name = "diplomacy_button"
 					quadTextureSprite ="GFX_topbar_diplomacy"
 					position = { x= 6 y = 0 }
 					Orientation = "UPPER_LEFT"
-				#	shortcut = "e"
+					shortcut = "e"
 					clicksound = click_close
 					oversound = ui_menu_over
 				}
+				#
+				iconType = {
+					name = "diplomacy_buttonx"
+					spriteType ="GFX_topbar_diplomacy"
+					position = { x= 6 y = 0 }
+					Orientation = "UPPER_LEFT"
+				}
+
 				containerWindowType = {
 					name = "non_delivering_contracts"
 					position = { x=9 y=4 }
@@ -927,6 +936,7 @@ guiTypes = {
 				}
 				
 				buttonType = {
+					hide=yes
 					name = "officer_corp_button"
 					position = { x = 340 y = 0 }
 					quadTextureSprite ="GFX_staff_office_button"
@@ -934,6 +944,14 @@ guiTypes = {
 					shortcut = "shift+e"
 					clicksound = click_close
 					oversound = ui_menu_over
+				}
+				# 
+				iconType = {
+ 					name = "officer_corp_buttonx"
+					position = { x = 340 y = 0 }
+					spriteType ="GFX_staff_office_button"
+					Orientation = "UPPER_LEFT"
+					
 				}
 			}
 			
