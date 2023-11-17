@@ -1136,7 +1136,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			defense = 8
+			defense = 7
 			breakthrough = 5
 			build_cost_ic = 2
 		}
@@ -1171,7 +1171,6 @@ equipment_modules = {
 			reliability = 0.2
 			build_cost_ic = 1.25
 		}
-		xp_cost = 0
 		multiply_stats = {
 			
 		}
@@ -1183,7 +1182,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			defense = 10
+			defense = 7
 			build_cost_ic = 1.25
 		}
 		multiply_stats = {
@@ -1191,4 +1190,43 @@ equipment_modules = {
 		}
 	}
 	
+	tank_cheap_materials = {
+		abbreviation = "ds"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			breakthrough = -5.0
+			defense = -2.0
+		}
+		build_cost_resources = {
+			steel = -1
+		}		
+	}
+
+	expanded_fuel_tank = {
+		abbreviation = "fuel"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			fuel_capacity = 100
+			build_cost_ic = 1.25
+			maximum_speed = -0.5
+		}
+		multiply_stats = {
+			
+		}
+	}
+
+	extra_ammo_storage = {
+		abbreviation = "extra"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			reliability = -0.25
+			breakthrough = 12
+			build_cost_ic = 1.25
+		}
+	}	
 }
