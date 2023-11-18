@@ -1581,7 +1581,7 @@ focus_tree = {
 	focus = {
 		id = AST_cockatoo_island_shipyards
 		icon = GFX_Noras_cockatoo_shipyards
-		x = 13
+		x = 14
 		y = 0
 
 		cost = 5
@@ -1609,10 +1609,10 @@ focus_tree = {
 			285 = {
 				add_resource = {
 					type = steel
-					amount = 4
+					amount = 10
 				}			
 			}
-			navy_experience = 25
+			navy_experience = 250
 			285 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -1623,15 +1623,14 @@ focus_tree = {
 			}
 		}
 
-		completion_reward = {
-			add_ideas = AST_Navy_Manpower1		
+		completion_reward = {	
 			285 = {
 				add_resource = {
 					type = steel
-					amount = 4
+					amount = 10
 				}		
 			}				
-			navy_experience = 25
+			navy_experience = 250
 			285 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -1643,13 +1642,83 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = AST_navy_spending
+		Text = "Increase Naval Spending "
+		icon = GFX_usa_fund_navy
+		relative_position_id = AST_cockatoo_island_shipyards
+		x = -2
+		y = 1
+		prerequisite = { focus = AST_cockatoo_island_shipyards }
+		cost = 5
 
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+
+		}
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {	
+			add_timed_idea = { 
+				idea = AST_Naval_Spending days = 200
+			}
+		}
+	}
+
+	focus = {
+		id = AST_Radar
+		Text = "Radio Detection Test"
+		icon = GFX_naval_radar
+		relative_position_id = AST_navy_spending
+		x = 0
+		y = 1
+		prerequisite = { focus = AST_navy_spending }
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+
+		}
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {	
+		522 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		add_tech_bonus = {
+				uses = 2
+				bonus = 1.0
+				category = radar_tech
+			}	
+		}
+	}
+
+	
+	
+	
+	
+	
 	focus = {
 		id = AST_protect_overseas_commerce
 		icon = GFX_goal_AST_state_of_RAN
 		prerequisite = { focus = AST_cockatoo_island_shipyards }
 		
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = AST_cockatoo_island_shipyards
 
@@ -1672,19 +1741,25 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = AST_Navy_Manpower2		
+		522 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
 			285 = {
 				add_resource = {
 					type = steel
-					amount = 2
+					amount = 8
 				}			
 			}		
 			add_tech_bonus = {
 				name = AST_protect_overseas_commerce
-				bonus = 1.00
+				bonus = 1.0
 				uses = 2
-				category = fleet_in_being_tree
-				category = convoy_defense_tree
+				category = naval_doctrine
 			}
 		}
 	}
@@ -1693,7 +1768,7 @@ focus_tree = {
 		id = AST_fly_the_jolly_roger
 		icon = GFX_Noras_Jolly_Roger
 		prerequisite = { focus = AST_cockatoo_island_shipyards }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = AST_cockatoo_island_shipyards
 
@@ -1716,18 +1791,25 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = AST_Navy_Manpower3			
+		522 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
 			285 = {
 				add_resource = {
 					type = steel
-					amount = 2
+					amount = 8
 				}			
 			}				
 			add_tech_bonus = {
 				name = AST_fly_the_jolly_roger
 				bonus = 1.00
 				uses = 2
-				category = submarine_doctrine
+				category = naval_doctrine
 			}
 		}
 	}
@@ -1735,8 +1817,8 @@ focus_tree = {
 	focus = {
 		id = AST_scrap_iron_flotilla
 		icon = GFX_goal_generic_navy_cruiser
-		prerequisite = { focus = AST_protect_overseas_commerce focus = AST_fly_the_jolly_roger }
-		x = -1
+		prerequisite = { focus = AST_protect_overseas_commerce }
+		x = 0
 		y = 2
 		relative_position_id = AST_cockatoo_island_shipyards
 
@@ -1759,7 +1841,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = AST_Navy_Manpower4		
 			285 = {
 				add_resource = {
 					type = steel
@@ -1767,30 +1848,24 @@ focus_tree = {
 				}
 				add_resource = {
 					type = oil
-					amount = 3
+					amount = 4
 				}				
 			}				
 			add_tech_bonus = {
 				name = AST_scrap_iron_flotilla
 				bonus = 1.00
 				ahead_reduction = 1
-				uses = 1
-				technology = improved_ship_hull_light
-			}
-			add_tech_bonus = {
-				name = AST_scrap_iron_flotilla
-				bonus = 1.00
-				uses = 1
-				technology = improved_ship_hull_light
-			}			
+				uses = 2
+				category = dd_tech
+			}		
 		}
 	}
 
 	focus = {
 		id = AST_royal_australian_submarine_service
 		icon = GFX_goal_generic_wolf_pack
-		prerequisite = { focus = AST_protect_overseas_commerce focus = AST_fly_the_jolly_roger }
-		x = 1
+		prerequisite = { focus = AST_fly_the_jolly_roger }
+		x = 2
 		y = 2
 		relative_position_id = AST_cockatoo_island_shipyards
 
@@ -1813,7 +1888,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = AST_Navy_Manpower5		
 			285 = {
 				add_resource = {
 					type = steel
@@ -1826,14 +1900,8 @@ focus_tree = {
 			}				
 			add_tech_bonus = {
 				name = AST_royal_australian_submarine_service
-				bonus = 1.00
-				ahead_reduction = 1
-				uses = 1
-				technology = improved_ship_hull_submarine
-			}
-			add_tech_bonus = {
-				name = AST_royal_australian_submarine_service
-				bonus = 1.00
+				bonus = 2.00
+				ahead_reduction = 2
 				uses = 1
 				technology = improved_ship_hull_submarine
 			}			
@@ -1843,7 +1911,7 @@ focus_tree = {
 	focus = {
 		id = AST_naval_auxiliary_patrol
 		icon = GFX_goal_generic_fortify_city
-		prerequisite = { focus = AST_royal_australian_submarine_service focus = AST_scrap_iron_flotilla }
+		prerequisite = { focus = AST_royal_australian_submarine_service focus = AST_scrap_iron_flotilla focus = AST_Radar }
 		x = 0
 		y = 3
 		relative_position_id = AST_cockatoo_island_shipyards
@@ -1871,17 +1939,27 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = AST_Navy_Manpower6		
+			add_ideas = AST_Navy_Manpower1	
+			522 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
 			285 = {
 				add_resource = {
-					type = steel
-					amount = 7
-				}
-				add_resource = {
 					type = oil
-					amount = 2
+					amount = 5
 				}				
-			}				
+			}
+			519 = {
+				add_resource = {
+					type = rubber
+					amount = 10
+				}				
+			}
 			add_ideas = AST_naval_auxiliary_patrol
 		}
 	}
@@ -1890,7 +1968,7 @@ focus_tree = {
 		id = AST_cruisers
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = AST_naval_auxiliary_patrol }
-		x = -1
+		x = 0
 		y = 4
 		relative_position_id = AST_cockatoo_island_shipyards
 
@@ -1912,39 +1990,31 @@ focus_tree = {
 		continue_if_invalid = yes
 		available_if_capitulated = no
 
-		completion_reward = {
-			add_ideas = AST_Navy_Manpower7		
+		completion_reward = {		
 			285 = {
 				add_resource = {
 					type = steel
-					amount = 6
+					amount = 10
 				}
 				add_resource = {
 					type = oil
-					amount = 1
+					amount = 5
 				}				
-			}				
+			}						
 			add_tech_bonus = {
 				name = AST_cruisers
-				bonus = 1.00
-				ahead_reduction = 1
-				uses = 1
-				technology = improved_ship_hull_cruiser
+				bonus = 1.5
+				uses = 2
+				category = cl_tech
 			}
-			add_tech_bonus = {
-				name = AST_cruisers
-				bonus = 1.00
-				uses = 1
-				technology = improved_ship_hull_cruiser
-			}			
 		}
 	}
 	focus = {
 		id = AST_dock
 		Text = "British shipyards"
 		icon = GFX_AST_Dock
-		prerequisite = { focus = AST_cruisers focus = AST_pacific_area_navy}
-		x = 1
+		prerequisite = { focus = AST_cruisers focus = AST_pacific_area_navy focus = AST_Heavy_ships }
+		x = 0
 		y = 1
 		relative_position_id = AST_cruisers
 
@@ -1966,7 +2036,17 @@ focus_tree = {
 		continue_if_invalid = yes
 		available_if_capitulated = no
 
-		completion_reward = {	
+		completion_reward = {
+		285 = {
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
+				add_resource = {
+					type = oil
+					amount = 5
+				}				
+			}
 		522 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -1981,7 +2061,7 @@ focus_tree = {
 		id = AST_pacific_area_navy
 		icon = GFX_goal_base_strike
 		prerequisite = { focus = AST_naval_auxiliary_patrol }
-		x = 1
+		x = 2
 		y = 4
 		relative_position_id = AST_cockatoo_island_shipyards
 
@@ -2004,26 +2084,148 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = AST_Navy_Manpower8		
-			285 = {
+		285 = {
 				add_resource = {
 					type = steel
-					amount = 6
+					amount = 10
 				}
 				add_resource = {
 					type = oil
-					amount = 1
+					amount = 5
 				}				
-			}				
+			}
+		519 = {
+				add_resource = {
+					type = rubber
+					amount = 10
+				}				
+			}
+		 add_tech_bonus = {
+				name = AST_pacific_area_navy
+				bonus = 1.5
+				uses = 1
+				category = cv_tech
+			}
 			add_tech_bonus = {
 				name = AST_pacific_area_navy
 				bonus = 1.00
-				uses = 1
+				uses = 2
 				category = naval_doctrine
 			}
 		}
 	}
+	focus = {
+		id = AST_fleet_coop
+		Text = "Fleet Cooperation"
+		icon = GFX_usa_amphib
+		relative_position_id = AST_pacific_area_navy
+		x = 0
+		y = 1
+		prerequisite = { focus = AST_pacific_area_navy }
+		cost = 5
 
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+
+		}
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {	
+		add_tech_bonus = {
+				name = AST_USMC
+				bonus = 1.00
+				uses = 1
+				category = tp_tech
+			}	
+		}
+	}
+	focus = {
+		id = AST_Heavy_ships
+		Text = "Prioritise Heavy Ships "
+		icon = GFX_america_goal_navy
+		relative_position_id = AST_naval_auxiliary_patrol
+		x = -2
+		y = 1
+		prerequisite = { focus = AST_naval_auxiliary_patrol }
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+
+		}
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {	
+		285 = {
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
+				add_resource = {
+					type = oil
+					amount = 5
+				}				
+			}
+		add_tech_bonus = {
+				name = AST_cruisers
+				bonus = 1.00
+				ahead_reduction = 2
+				uses = 1
+				category = bb_tech
+			}	
+		}
+	}
+	focus = {
+		id = AST_guns
+		Text = "Naval Guns"
+		icon = GFX_ITA_Dominance
+		relative_position_id = AST_Heavy_ships
+		x = 0
+		y = 1
+		prerequisite = { focus = AST_Heavy_ships }
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+
+		}
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {	
+		285 = {
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
+				add_resource = {
+					type = oil
+					amount = 5
+				}				
+			}
+		add_tech_bonus = {
+				name = AST_cruisers
+				bonus = 1.00
+				uses = 2
+				category = ship_modules_tech
+			}		
+		}
+	}
+	
 
 	############################
 	##### INDUSTRY SECTION #####
@@ -2033,7 +2235,7 @@ focus_tree = {
 	focus = {
 		id = AST_standard_gauge_railway
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 16
+		x = 18
 		y = 0
 
 		cost = 5
@@ -2097,7 +2299,7 @@ focus_tree = {
 		id = AST_army_inventions_directorate
 		icon = GFX_focus_research
 		prerequisite = { focus = AST_industries_assistance_corporation }
-		x = 19
+		x = 21
 		y = 1
 
 		cost = 10
@@ -2572,7 +2774,7 @@ focus_tree = {
 	focus = {
 		id = AST_establish_advisory_war_council
 		icon = GFX_AST_nation
-		x = 25
+		x = 27
 		y = 0
 
 		cost = 10
@@ -3158,7 +3360,7 @@ focus_tree = {
 	focus = {
 		id = AST_support_the_policy_of_appeasement
 		icon = GFX_Noras_aussie_appeasement
-		x = 32
+		x = 33
 		y = 0
 
 		cost = 5
