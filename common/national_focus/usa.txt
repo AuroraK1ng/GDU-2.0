@@ -2224,44 +2224,13 @@ focus_tree = {
 			
 		}
 	}
-	focus = {
-		id = USA_tank_destroyer_doctrine
-		icon = GFX_focus_usa_tank_destroyer_doctrine
-		x = 2
-		y = 3
-		prerequisite = { focus = USA_tank_experiments }
-		mutually_exclusive = { focus = USA_main_battle_tanks }
-		relative_position_id = USA_selective_training_act
-		cost = 10
 
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = tank_destroyer_board
-		}
-	}
 	focus = {
 		id = USA_main_battle_tanks
 		icon = GFX_mbt
-		x = 4
+		x = 2
 		y = 3
 		prerequisite = { focus = USA_tank_experiments }
-		mutually_exclusive = { focus = USA_tank_destroyer_doctrine }
 		relative_position_id = USA_selective_training_act
 		cost = 10
 
@@ -2282,8 +2251,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = detroit_arsenal
+			custom_effect_tooltip = "Enables Tank Destroyer Board Military Industrial Organisation"	
 		}
 	}
 	focus = {
@@ -2291,7 +2259,7 @@ focus_tree = {
 		icon = GFX_usa_armored_infantry
 		x = 2
 		y = 4
-		prerequisite = { focus = USA_main_battle_tanks focus = USA_tank_destroyer_doctrine }
+		prerequisite = { focus = USA_main_battle_tanks }
 		relative_position_id = USA_selective_training_act
 		cost = 10
 
