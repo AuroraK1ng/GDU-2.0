@@ -1,0 +1,372 @@
+﻿focus_tree = {
+	id = Norway_focus
+
+	country = {
+		factor = 0
+ modifier = {
+			add = 10
+			tag = NOR
+			
+		}
+		
+	}
+
+
+	#POLITICAL FOCUS#
+	focus = {
+		id = NOR_treaty_london
+		Text = " Treaty with London "
+		icon = GFX_ENG_Stoicism
+		x = 0
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = { 
+		    add_stability = 0.10
+			add_political_power = 120 
+		}
+	}
+	focus = {
+		id = NOR_speech_in_british
+		Text = "Speech in the British Parliament "
+		icon = GFX_ENG_Parliamentary
+		prerequisite = { focus = NOR_treaty_london }
+		x = 0
+		y = 1
+		relative_position_id = NOR_treaty_london
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = { 
+
+		}
+	}
+	focus = {
+		id = NOR_political
+		Text = "Adopt British Experience"
+		icon = GFX_AST_British_experience
+		prerequisite = { focus = NOR_speech_in_british }
+		x = 0
+		y = 1
+		relative_position_id = NOR_speech_in_british
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = { 
+
+		}
+	}
+
+
+
+
+	#INDUSTRY FOCUS#
+	focus = {
+		id = NOR_agreement_british_comp
+		Text = " Agreement With British Companies"
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 4
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = { 
+		add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	}
+	focus = {
+		id = NOR_norwegian_road
+		Text = "Norwegian roads"
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = NOR_agreement_british_comp }
+		x = -1
+		y = 1
+		relative_position_id = NOR_agreement_british_comp
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = { 
+		110 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = NOR_infra_dev
+		Text = "Infrastructure Development"
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = NOR_agreement_british_comp }
+		x = 1
+		y = 1
+		relative_position_id = NOR_agreement_british_comp
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = { 
+		142 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		143 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = NOR_Bergen_mil_factories
+		Text = "Bergen Military Factories"
+		icon = GFX_AST_Prepare_for_defense
+		prerequisite = { focus = NOR_infra_dev focus = NOR_norwegian_road }
+		x = -1
+		y = 1
+		relative_position_id = NOR_infra_dev
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = { 
+		142 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = NOR_invest_mil
+		Text = "Military Investment"
+		icon = GFX_AST_factories
+		prerequisite = { focus = NOR_Bergen_mil_factories }
+		x = 0
+		y = 1
+		relative_position_id = NOR_Bergen_mil_factories
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+		completion_reward = { 
+		add_offsite_building = { type = arms_factory level = 4 }
+		}
+	}
+
+
+
+	#ARMY FOCUS#
+	focus = {
+		id = NOR_lessons_Of_war
+		Text = "Memory of the Great War"
+		icon = GFX_AST_Gallipoli
+		x = 9
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = { 
+		army_experience = 25
+		add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = NOR_winter_Equipment
+		Text = "Winter Equipment"
+		icon = GFX_ENG_new_Rifle
+	    prerequisite = { focus = NOR_lessons_Of_war }
+		x = -2
+		y = 1
+		relative_position_id = NOR_lessons_Of_war
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = { 
+		army_experience = 25
+		add_tech_bonus = {
+				bonus = 1.00 
+				ahead_reduction = 1
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = NOR_Modern_Artillery_Systems
+		Text = "Modern Artillery Systems"
+		icon = GFX_goal_generic_army_artillery2
+	    prerequisite = { focus = NOR_lessons_Of_war }
+		x = 2
+		y = 1
+		relative_position_id = NOR_lessons_Of_war
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = { 
+		army_experience = 25
+		add_tech_bonus = {
+				bonus = 1.00 
+				uses = 1
+				category = artillery
+			}
+		add_tech_bonus = {
+				bonus = 1.00 
+				ahead_reduction = 1
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+
+	#FOCUS AFTER CAP#
+	focus = {
+		id = NOR_army
+		Text = "Found A Modern Army"
+		icon = GFX_goal_Generic_Scouts
+		x = 14
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		completion_reward = { 
+		add_tech_bonus = {
+				bonus = 2.00
+				uses = 2
+				category = cat_special_forces_generic
+			}
+		add_tech_bonus = {
+				bonus = 1.00
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+	focus = {
+		id = Nor_women_in_army
+		text = "Women in the Army"
+		available = {
+			
+		}
+
+		available_if_capitulated = yes
+
+		prerequisite = { focus = NOR_army }
+		icon = GFX_ENG_women_in_army
+		x = -1
+		y = 1
+		relative_position_id = NOR_army
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = UK_Women_in_army	
+		}
+	}
+	focus = {
+		id = Nor_Military_production
+		text = "Military Production"
+		available = {
+			
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = NOR_army }
+		icon = GFX_focus_focus_fra_maquis
+		x = 1
+		y = 1
+		relative_position_id = NOR_army
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_offsite_building = { type = arms_factory level = 3 }	
+		}
+	}
+	focus = {
+		id = Nor_Bofors
+		text = "Treaty with Bofors"
+		available = {
+			
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = Nor_Military_production }
+		icon = GFX_JAP_mil_ind
+		x = 0
+		y = 1
+		relative_position_id = Nor_Military_production
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = Mass_Produced_Equipment		
+		}
+	}
+	focus = {
+		id = Nor_army_tactics
+		text = "New Army Tactics"
+		available = {
+			
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = Nor_women_in_army }
+		prerequisite = { focus = NOR_Modern_Artillery_Systems }
+		icon = GFX_focus_prc_infiltration
+		x = 1
+		y = 1
+		relative_position_id = NOR_Modern_Artillery_Systems
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	
+	
+	
