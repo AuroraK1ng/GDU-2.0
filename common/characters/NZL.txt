@@ -73,7 +73,7 @@ characters = {
 				small = GFX_portrait_NZL_bernard_freyberg_small
 			}
 		}
-		corps_commander = {
+		field_marshal = {
 			traits = {
 				jungle_rat
 				organizer
@@ -81,7 +81,8 @@ characters = {
 				skilled_staffer
 				politically_connected
 				media_personality
-				panzer_leader
+				
+				infantry_leader
 			}
 			skill = 6
 			attack_skill = 6
@@ -100,12 +101,13 @@ characters = {
 		}
 		field_marshal = {
 			traits = {
-				jungle_rat
+				desert_fox
 				organizer
 				inflexible_strategist
 				skilled_staffer
 				politically_connected
 				media_personality
+				infantry_leader
 			}
 			skill = 6
 			attack_skill = 6
@@ -125,6 +127,7 @@ characters = {
 		corps_commander = {
 			traits = {
 				jungle_rat
+				naval_invader
 				organizer
 				inflexible_strategist
 				skilled_staffer
@@ -133,7 +136,7 @@ characters = {
 				infantry_leader
 			}
 			skill = 6
-			attack_skill = 6
+			attack_skill = 7
 			defense_skill = 6
 			planning_skill = 4
 			logistics_skill = 5
@@ -151,16 +154,18 @@ characters = {
 			traits = {
 				naval_invader
 				desert_fox
+				organizer
+				inflexible_strategist
+				skilled_staffer
+				politically_connected
+				media_personality
 				infantry_leader
-				infantry_officer
-				career_officer
-				war_hero
 			}
-			skill = 4
-			attack_skill = 5
-			defense_skill = 5
-			planning_skill = 2
-			logistics_skill = 3
+			skill = 6
+			attack_skill = 7
+			defense_skill = 6
+			planning_skill = 4
+			logistics_skill = 5
 		}
 	}
 	NZL_william_stevens = {
@@ -172,11 +177,18 @@ characters = {
 			}
 		}
 		corps_commander = {
-			skill = 7
-			attack_skill = 7
-			defense_skill = 7
-			planning_skill = 7
-			logistics_skill = 7
+		traits = {
+				panzer_leader
+				armor_officer
+				trickster
+				trait_cautious
+				career_officer
+			}
+			skill = 6
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
 			legacy_id = -1
 		}
 	}
@@ -196,11 +208,11 @@ characters = {
 				trait_cautious
 				career_officer
 			}
-			skill = 4
+			skill = 6
 			attack_skill = 6
 			defense_skill = 5
-			planning_skill = 2
-			logistics_skill = 3
+			planning_skill = 5
+			logistics_skill = 5
 		}
 	}
 	NZL_edmund_rupert_drummond = {
@@ -630,7 +642,7 @@ characters = {
 				original_tag = NZL
 			}
 			traits = {
-				army_commando_2
+				army_commando_3
 			}
 			cost = 150
 			ai_will_do = {
@@ -653,7 +665,7 @@ characters = {
 				original_tag = NZL
 			}
 			traits = {
-				army_infantry_2
+				army_infantry_3
 			}
 			cost = 150
 			ai_will_do = {
@@ -676,7 +688,7 @@ characters = {
 				original_tag = NZL
 			}
 			traits = {
-				ideological_crusader
+				war_industrialist
 			}
 		}
 	}
