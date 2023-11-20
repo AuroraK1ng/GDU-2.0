@@ -3117,19 +3117,23 @@ focus_tree = {
 	############################
 
 	focus = {
-		id = CAN_halifax_shipyards
-		icon = GFX_goal_generic_construct_naval_dockyard
+		id = CAN_royal_Navy
+		text = "Canada Royal Navy"
+		icon = GFX_Noras_cockatoo_shipyards
 		x = 30
 		y = 0
 
 		cost = 5
 
 		ai_will_do = {
-			factor = 9
+			factor = 1
 		}
 
 		available = {
-
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
 		}
 
 		bypass = {
@@ -3138,71 +3142,141 @@ focus_tree = {
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		complete_tooltip = {
-			navy_experience = 25
-			random_state = {
-				limit = {
-					has_state_flag = CAN_halifax_shipyards_DY
-				}
-				add_extra_state_shared_building_slots = 3
+			472 = {
+				add_resource = {
+					type = steel
+					amount = 20
+				}			
+			}
+			navy_experience = 250
+			472 = {
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = dockyard
-					level = 3
+					level = 5
 					instant_build = yes
 				}
 			}
 		}
 
-		completion_reward = {
-			add_ideas = GDU_Commonwealth_Navy_Manpower1 
-			navy_experience = 25
-			random_owned_controlled_state = {
-				prioritize = { 464 }
-				limit = {
-					is_coastal = yes
-					free_building_slots = {
-						building = dockyard
-						size > 2
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = CAN_halifax_shipyards_DY
-			}
-			467 = {
+		completion_reward = {	
+			472 = {
 				add_resource = {
 					type = steel
-					amount = 25
-				}					
-			}
-			467 = {
-				add_resource = {
-					type = tungsten
-					amount = 25
+					amount = 20
+				}		
+			}				
+			navy_experience = 250
+			472 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
 				}
-			}			
+				set_state_flag = CAN_cockatoo_island_shipyards_DY
+			}
+		}
+	}
+	focus = {
+		id = CAN_navy_spending
+		Text = "Increase Naval Spending "
+		icon = GFX_usa_fund_navy
+		relative_position_id = CAN_royal_Navy
+		x = -2
+		y = 1
+		prerequisite = { focus = CAN_royal_Navy }
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+
+		}
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {	
+			472 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+			}
+			472 = {
+				add_resource = {
+					type = steel
+					amount = 20
+				}			
+			}	
 		}
 	}
 
 	focus = {
-		id = CAN_destroyer_effort
-		icon = GFX_goal_generic_navy_anti_submarine
-		prerequisite = { focus = CAN_halifax_shipyards }
+		id = CAN_Radar
+		Text = "Radio Detection Test"
+		icon = GFX_naval_radar
+		relative_position_id = CAN_navy_spending
 		x = 0
 		y = 1
-		relative_position_id = CAN_halifax_shipyards
+		prerequisite = { focus = CAN_navy_spending }
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+
+		}
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {	
+		683 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		add_tech_bonus = {
+				uses = 2
+				bonus = 1.0
+				category = radar_tech
+			}	
+		}
+	}
+
+	
+	
+	 
+	
+	
+	focus = {
+		id = CAN_protect_convoy
+		text = "Protect Convoy"
+		icon = GFX_goal_AST_state_of_RAN
+		prerequisite = { focus = CAN_royal_Navy }
+		
+		x = 0
+		y = 1
+		relative_position_id = CAN_royal_Navy
 
 		cost = 5
 
 		ai_will_do = {
-			factor = 25
+			factor = 1
 		}
 
 		available = {
@@ -3217,45 +3291,90 @@ focus_tree = {
 		continue_if_invalid = yes
 		available_if_capitulated = yes
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
-			add_ideas = GDU_Commonwealth_Navy_Manpower2		
-			add_tech_bonus = {
-				name = CAN_destroyer_effort
-				bonus = 2.00
-				uses = 1
-				technology = improved_ship_hull_light
-			}		
-			467 = {
-				add_resource = {
-					type = steel
-					amount = 10
-				}					
+		471 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
 			}
-			467 = {
+			141 = {
 				add_resource = {
 					type = tungsten
-					amount = 10
-				}					
-			}			
+					amount = 20
+				}
+			}
+			141 = {
+				add_resource = {
+					type = chromium
+					amount = 20
+				}
+			}
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 2
+				category = cl_tech
+			}
 		}
 	}
 
 	focus = {
-		id = CAN_light_cruiser_effort
+		id = CAN_doctrine
+		Text = "Naval Training"
+		icon = GFX_AST_Dock
+		prerequisite = { focus = CAN_royal_Navy }
+		x = 2
+		y = 1
+		relative_position_id = CAN_royal_Navy
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+
+		completion_reward = {
+			469 = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}			
+			}				
+			add_tech_bonus = {
+				bonus = 1.00
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = CAN_destr
+		Text = "Make New Destroyers"
 		icon = GFX_goal_generic_navy_cruiser
-		prerequisite = { focus = CAN_destroyer_effort }
-		x = -1
+		prerequisite = { focus = CAN_protect_convoy }
+		x = 0
 		y = 2
-		relative_position_id = CAN_halifax_shipyards
+		relative_position_id = CAN_royal_Navy
 
 		cost = 5
 
 		ai_will_do = {
-			factor = 25
+			factor = 1
 		}
 
 		available = {
@@ -3268,260 +3387,89 @@ focus_tree = {
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
+		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = GDU_Commonwealth_Navy_Manpower3		
-			add_tech_bonus = {
-				name = CAN_light_cruiser_effort
-				bonus = 2.00
-				uses = 1
-				technology = improved_ship_hull_cruiser
-			}			
-			469 = {
+			466 = {
 				add_resource = {
 					type = steel
-					amount = 5
+					amount = 8
 				}
 				add_resource = {
-					type = tungsten
-					amount = 5
-				}				
-				add_resource = {
 					type = oil
-					amount = 2
-				}					
-			}			
-		}
-	}
-
-	focus = {
-		id = CAN_heavy_cruiser_effort
-		icon = GFX_goal_generic_occupy_states_coastal
-		prerequisite = { focus = CAN_destroyer_effort }
-		x = 1
-		y = 2
-		relative_position_id = CAN_halifax_shipyards
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_ideas = GDU_Commonwealth_Navy_Manpower3				
+					amount = 8
+				}				
+			}				
 			add_tech_bonus = {
-				name = CAN_heavy_cruiser_effort
-				bonus = 2.00
-				uses = 1
-				technology = improved_ship_hull_cruiser
+				bonus = 1.00
+				ahead_reduction = 1
+				uses = 2
+				category = dd_tech
 			}		
-			469 = {
+		}
+	}
+
+	focus = {
+		id = CAN_royal_submarine_service
+		text = "Royal Submarine Service"
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = CAN_doctrine }
+		x = 2
+		y = 2
+		relative_position_id = CAN_royal_Navy
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			121 = {
 				add_resource = {
 					type = steel
-					amount = 5
+					amount = 8
 				}
 				add_resource = {
-					type = tungsten
-					amount = 5
+					type = oil
+					amount = 4
 				}				
-				add_resource = {
-					type = oil
-					amount = 2
-				}					
 			}				
-		}
-	}
-
-	focus = {
-		id = CAN_escort_fleet
-		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = { focus = CAN_light_cruiser_effort }
-		mutually_exclusive = { focus = CAN_fleet_in_being }
-		x = -1
-		y = 3
-		relative_position_id = CAN_halifax_shipyards
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				has_war_with = GER
-				factor = 2
-			}
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_ideas = GDU_Commonwealth_Navy_Manpower4		
-			navy_experience = 25
 			add_tech_bonus = {
-				name = CAN_escort_fleet
-				bonus = 1.00
-				uses = 2
-				category = convoy_defense_tree
-			}
-			469 = {
-				add_resource = {
-					type = steel
-					amount = 5
-				}
-				add_resource = {
-					type = oil
-					amount = 2
-				}					
-			}				
+				name = CAN_royal_australian_submarine_service
+				bonus = 2.00
+				ahead_reduction = 2
+				uses = 1
+				technology = improved_ship_hull_submarine
+			}			
 		}
 	}
 
 	focus = {
-		id = CAN_fleet_in_being
-		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = CAN_light_cruiser_effort }
-		mutually_exclusive = { focus = CAN_escort_fleet }
-		x = 1
+		id = CAN_naval_patrol
+		Text = "Canadian Coastal patrol"
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = CAN_royal_submarine_service focus = CAN_destr focus = CAN_Radar }
+		x = 0
 		y = 3
-		relative_position_id = CAN_halifax_shipyards
+		relative_position_id = CAN_royal_Navy
 
 		cost = 5
 
 		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_ideas = GDU_Commonwealth_Navy_Manpower4		
-			navy_experience = 25
-			add_tech_bonus = {
-				name = CAN_fleet_in_being
-				bonus = 1.00
-				uses = 2
-				category = cat_fleet_in_being
-			}
-			469 = {
-				add_resource = {
-					type = steel
-					amount = 5
-				}
-				add_resource = {
-					type = oil
-					amount = 2
-				}					
-			}				
-		}
-	}
-
-	focus = {
-		id = CAN_degauss_ship_hulls
-		icon = GFX_goal_generic_navy_anti_submarine
-		prerequisite = { focus = CAN_escort_fleet focus = CAN_fleet_in_being }
-		x = -1
-		y = 4
-		relative_position_id = CAN_halifax_shipyards
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_ideas = GDU_Commonwealth_Navy_Manpower5		
-			add_ideas = CAN_degauss_ship_hulls
-			469 = {
-				add_resource = {
-					type = steel
-					amount = 6
-				}
-				add_resource = {
-					type = oil
-					amount = 2
-				}					
-			}				
-		}
-	}
-
-	focus = {
-		id = CAN_trade_fleet
-		icon = GFX_goal_generic_positive_trade_relations
-		prerequisite = { focus = CAN_escort_fleet focus = CAN_fleet_in_being }
-		x = 1
-		y = 4
-		relative_position_id = CAN_halifax_shipyards
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 25
+			factor = 1
 		}
 
 		available = {
@@ -3541,33 +3489,130 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = GDU_Commonwealth_Navy_Manpower5		
-			add_ideas = CAN_trade_fleet
-			469 = {
-				add_resource = {
-					type = steel
-					amount = 6
+			add_ideas = GDU_Commonwealth_Navy_Manpower1	
+			464 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
 				}
+			}
+			121 = {
 				add_resource = {
 					type = oil
-					amount = 2
-				}					
-			}				
+					amount = 5
+				}				
+			}
 		}
 	}
 
 	focus = {
-		id = CAN_united_shipyards
-		icon = GFX_goal_generic_construct_naval_dockyard
-		prerequisite = { focus = CAN_trade_fleet focus = CAN_degauss_ship_hulls }
+		id = CAN_lessons_naval_war
+		Text = "Lessons Of Naval War"
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = CAN_naval_patrol }
 		x = 0
-		y = 5
-		relative_position_id = CAN_halifax_shipyards
+		y = 4
+		relative_position_id = CAN_royal_Navy
 
 		cost = 5
 
 		ai_will_do = {
-			factor = 25
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {		
+			342 = {
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+				add_resource = {
+					type = oil
+					amount = 5
+				}				
+			}						
+			add_tech_bonus = {
+				bonus = 1.00
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	focus = {
+		id = CAN_dock
+		Text = "British shipyards"
+		icon = GFX_AST_Dock
+		prerequisite = { focus = CAN_lessons_naval_war focus = CAN_pacific_area_navy focus = CAN_Heavy_ships }
+		x = 0
+		y = 1
+		relative_position_id = CAN_lessons_naval_war
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		342 = {
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
+				add_resource = {
+					type = oil
+					amount = 5
+				}				
+			}
+		522 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}			
+		}
+	}
+	focus = {
+		id = CAN_pacific_area_navy
+		text = "Pacific Fleet"
+		icon = GFX_goal_base_strike
+		prerequisite = { focus = CAN_naval_patrol }
+		x = 2
+		y = 4
+		relative_position_id = CAN_royal_Navy
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
 		}
 
 		available = {
@@ -3582,55 +3627,137 @@ focus_tree = {
 		continue_if_invalid = yes
 		available_if_capitulated = yes
 
-		complete_tooltip = {
-			navy_experience = 25
-			random_state = {
-				limit = {
-					has_state_flag = CAN_united_shipyards_DY
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-
 		completion_reward = {
-			add_ideas = GDU_Commonwealth_Navy_Manpower6		
-			navy_experience = 25
-			random_owned_controlled_state = {
-				limit = {
-					is_coastal = yes
-					free_building_slots = {
-						building = dockyard
-						size > 2
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = CAN_united_shipyards_DY
-			}
-			470 = {
+		342 = {
 				add_resource = {
 					type = steel
-					amount = 30
+					amount = 10
 				}
 				add_resource = {
-					type = tungsten
-					amount = 30
+					type = oil
+					amount = 5
 				}				
+			}
+		 add_tech_bonus = {
+				bonus = 1.5
+				uses = 1
+				category = cv_tech
+			}
+			add_tech_bonus = {
+				bonus = 1.00
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	focus = {
+		id = CAN_fleet_coop
+		Text = "Fleet Cooperation"
+		icon = GFX_usa_amphib
+		relative_position_id = CAN_pacific_area_navy
+		x = 0
+		y = 1
+		prerequisite = { focus = CAN_pacific_area_navy }
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+
+		}
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {	
+		add_tech_bonus = {
+				name = CAN_USMC
+				bonus = 1.00
+				uses = 1
+				category = tp_tech
+			}	
+		}
+	}
+	focus = {
+		id = CAN_Heavy_ships
+		Text = "Prioritise Heavy Ships "
+		icon = GFX_america_goal_navy
+		relative_position_id = CAN_naval_patrol
+		x = -2
+		y = 1
+		prerequisite = { focus = CAN_naval_patrol }
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+
+		}
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {	
+		342 = {
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
 				add_resource = {
 					type = oil
-					amount = 20
-				}					
-			}				
+					amount = 5
+				}				
+			}
+		add_tech_bonus = {
+				name = CAN_cruisers
+				bonus = 1.00
+				uses = 1
+				category = bb_tech
+			}	
+		}
+	}
+	focus = {
+		id = CAN_guns
+		Text = "Naval Guns"
+		icon = GFX_ITA_Dominance
+		relative_position_id = CAN_Heavy_ships
+		x = 0
+		y = 1
+		prerequisite = { focus = CAN_Heavy_ships }
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+
+		}
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {	
+		342 = {
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
+				add_resource = {
+					type = oil
+					amount = 5
+				}				
+			}
+		add_tech_bonus = {
+				name = CAN_cruisers
+				bonus = 1.00
+				uses = 2
+				category = ship_modules_tech
+			}		
 		}
 	}
 
