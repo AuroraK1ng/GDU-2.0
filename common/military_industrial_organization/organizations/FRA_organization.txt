@@ -117,7 +117,10 @@ FRA_hotchkiss_organization = {
 	
 	available = {
 		from = {
-			has_completed_focus = FRA_infantry_tanks
+			OR = {
+				has_completed_focus = FRA_infantry_tanks 
+				has_completed_focus = FRA_france_libre
+			}
 		}
 	}
 	
@@ -180,7 +183,10 @@ FRA_apx_organization = {
 	
 	available = {
 		FROM = {
-			has_completed_focus = FRA_battle_of_maneuver
+			OR = {
+				has_completed_focus = FRA_battle_of_maneuver 
+				has_completed_focus = FRA_france_libre
+			}
 		}
 	}
 	

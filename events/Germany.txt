@@ -1046,27 +1046,6 @@ country_event = {
 	picture = GFX_report_event_german_inspect_troops
 
 	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			CZE = {
-				set_technology = { basic_medium_tank_chassis = 1 }
-				create_equipment_variant = {
-					name = "LT-38 E"
-					type = medium_tank_chassis_1
-					parent_version = 0
-					#upgrades = {
-					#	tank_gun_upgrade = 2
-					#	tank_armor_upgrade = 4
-					#	tank_engine_upgrade = 3
-					#	tank_reliability_upgrade = 6
-					#}
-				}
-			}
-			
-		}
-
-	}
 	
 	option = {
 		name = germany.55.b
