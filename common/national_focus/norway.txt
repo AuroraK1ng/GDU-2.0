@@ -26,7 +26,7 @@
 		
 		completion_reward = { 
 		    add_stability = 0.10
-			add_political_power = 120 
+			add_political_power = 150 
 		}
 	}
 	focus = {
@@ -80,6 +80,9 @@
 		}
 		
 		completion_reward = { 
+		337 = {
+				add_extra_state_shared_building_slots = 5
+			}
 		add_offsite_building = { type = industrial_complex level = 2 }
 		}
 	}
@@ -97,6 +100,9 @@
 		}
 		
 		completion_reward = { 
+		337 = {
+				add_extra_state_shared_building_slots = 5
+			}
 		110 = {
 				add_building_construction = {
 					type = infrastructure
@@ -114,12 +120,20 @@
 		x = 1
 		y = 1
 		relative_position_id = NOR_agreement_british_comp
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = { 
+		337 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
 		142 = {
 				add_building_construction = {
 					type = infrastructure
@@ -144,12 +158,15 @@
 		x = -1
 		y = 1
 		relative_position_id = NOR_infra_dev
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 
 		completion_reward = { 
+		337 = {
+				add_extra_state_shared_building_slots = 5
+			}
 		142 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -218,8 +235,7 @@
 		completion_reward = { 
 		army_experience = 25
 		add_tech_bonus = {
-				bonus = 1.00 
-				ahead_reduction = 1
+				bonus = 1
 				uses = 1
 				category = infantry_weapons
 			}
@@ -241,14 +257,8 @@
 		completion_reward = { 
 		army_experience = 25
 		add_tech_bonus = {
-				bonus = 1.00 
-				uses = 1
-				category = artillery
-			}
-		add_tech_bonus = {
-				bonus = 1.00 
-				ahead_reduction = 1
-				uses = 1
+				bonus = 1.50 
+				uses = 2
 				category = artillery
 			}
 		}
@@ -260,11 +270,14 @@
 		id = NOR_army
 		Text = "Found A Modern Army"
 		icon = GFX_goal_Generic_Scouts
-		x = 14
+		x = 15
 		y = 0
 		cost = 5
 		ai_will_do = {
 			factor = 1
+		}
+		available = {
+		has_war = yes
 		}
 		available_if_capitulated = yes
 		completion_reward = { 
@@ -291,7 +304,7 @@
 
 		prerequisite = { focus = NOR_army }
 		icon = GFX_ENG_women_in_army
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = NOR_army
 		cost = 5
@@ -311,7 +324,7 @@
 		available_if_capitulated = yes
 		prerequisite = { focus = NOR_army }
 		icon = GFX_focus_focus_fra_maquis
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = NOR_army
 		cost = 5
@@ -319,7 +332,66 @@
 			factor = 1
 		}
 		completion_reward = {
-		add_offsite_building = { type = arms_factory level = 3 }	
+		337 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = Nor_Grandsons_Vikings
+		text = "Grandsons Of The Vikings"
+		available = {
+			
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = NOR_army }
+		icon = GFX_focus_focus_fra_maquis
+		x = 0
+		y = 1
+		relative_position_id = NOR_army
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		if = {
+				limit = {
+					has_idea = nor_bad_debuffs2
+				}
+				remove_ideas = nor_bad_debuffs2
+			}
+		if = {
+				limit = {
+					has_idea = nor_bad_debuffs
+				}
+				remove_ideas = nor_bad_debuffs
+			}
+			add_ideas = NOR_spec_ops
+		}
+	}
+	focus = {
+		id = Nor_Homeland
+		text = "Let's Go Back To Our Homeland"
+		available = {
+			
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = Nor_Grandsons_Vikings }
+		icon = GFX_focus_focus_fra_maquis
+		x = 0
+		y = 1
+		relative_position_id = Nor_Grandsons_Vikings
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = NOR_crofter
 		}
 	}
 	focus = {
@@ -339,7 +411,7 @@
 			factor = 1
 		}
 		completion_reward = {
-			add_ideas = Mass_Produced_Equipment		
+			add_ideas = NOR_army_buffs		
 		}
 	}
 	focus = {

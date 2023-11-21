@@ -39,11 +39,11 @@ hidden_ideas = {
 		nor_bad_debuffs2 = {
 			picture = chi_army_corruption
 			modifier = {
-				max_dig_in = -12
-				army_attack_factor = -0.8
-				army_defence_factor = -0.8
-				army_org_factor = -0.8
-				max_command_power = -80
+				max_dig_in = -6
+				army_attack_factor = -0.5
+				army_defence_factor = -0.5
+				army_org_factor = -0.5
+				max_command_power = -40
 				command_power_gain_mult = -0.8
 				industrial_capacity_dockyard = -1.2
 				production_speed_naval_base_factor = -1.2
@@ -53,7 +53,8 @@ hidden_ideas = {
 			picture = ast_volunteer_defence_corps
 			modifier = {
 				special_forces_training_time_factor = -0.2
-				max_command_power = 20
+				special_forces_attack_factor = 0.05
+				special_forces_defence_factor = 0.05
 			}
 		}
 		NOR_army_buffs = {
@@ -78,22 +79,6 @@ hidden_ideas = {
 					instant = yes
 				}
 				anti_air_equipment = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
-				mechanized_equipment = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
-				light_tank_chassis = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
-				medium_tank_chassis = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
-				amphibious_mechanized_equipment = {
 					build_cost_ic = -0.15
 					instant = yes
 				}
