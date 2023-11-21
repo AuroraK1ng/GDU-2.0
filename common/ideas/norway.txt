@@ -1,4 +1,12 @@
 ideas = {
+
+hidden_ideas = { 
+	GDU_NOR_Cap = {
+	  available = { NOT = { surrender_progress > 0.25 }}
+	  on_remove ={ GDU_script_norway_cap = yes }
+	}
+}
+
 	country = {
 		NOR_training = {
 			picture = FRA_army_of_aggression_focus
@@ -23,10 +31,9 @@ ideas = {
 		nor_bad_debuffs = {
 			picture = generic_disjointed_gov
 			modifier = {
-				surrender_limit = 1
+				army_core_attack_factor = -0.1 
+				army_core_defence_factor = -0.1 
 				war_support_factor = -0.05
-				industrial_capacity_dockyard = -1.2
-				conversion_cost_civ_to_mil_factor = 3
 			}
 		}
 		nor_bad_debuffs2 = {
@@ -38,10 +45,8 @@ ideas = {
 				army_org_factor = -0.8
 				max_command_power = -80
 				command_power_gain_mult = -0.8
+				industrial_capacity_dockyard = -1.2
 				production_speed_naval_base_factor = -1.2
-			}
-			available = {
-				owns_state = 110
 			}
 		}
 		NOR_spec_ops = {

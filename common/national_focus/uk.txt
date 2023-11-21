@@ -4078,6 +4078,7 @@ focus = {
 		id = ENG_norwegian_intervention
 		available = {
 			GER = { has_war_with = ENG }
+			NOR = { is_ai = yes }
 			date > 1940.6.1
 		}
 		bypass = {
@@ -4094,11 +4095,7 @@ focus = {
 			factor = 1
 		}
 		completion_reward = {
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = NOR
-				expire = 0
-			}
+			annex_country = { target = NOR transfer_troops = no }
 		}
 	}
 
