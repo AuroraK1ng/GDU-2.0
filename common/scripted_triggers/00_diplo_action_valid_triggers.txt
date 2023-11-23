@@ -42,7 +42,7 @@ is_diplomatic_action_valid_REQUEST_ACCESS_TO_LICENCE_PRODUCTION = { OR = { AND =
 #is_diplomatic_action_valid_join_ally_war = { always = no } #Nope
 #is_diplomatic_action_valid_join_ally = { always = no } #Nope
 
-#is_diplomatic_action_valid_send_exp_force = { always = yes } #should be correct as send_exp_force can be used in diplomacy_scripted_triggers, but this does not work for diplo_action_valid_triggers
+is_diplomatic_action_valid_send_exp_force = { always = yes } #should be correct as send_exp_force can be used in diplomacy_scripted_triggers, but this does not work for diplo_action_valid_triggers
 #is_diplomatic_action_valid_RETURN_EXP_FORCE = { is_in_faction_with = yes     } #should be correct as RETURN_EXP_FORCE can be used in diplomacy_scripted_triggers, but this does not work for diplo_action_valid_triggers
 #is_diplomatic_action_valid_declare_war = { always = no } #will completely disable declare war and hide the button, not very useful
 #is_diplomatic_action_valid_send_volunteers = { always = no }  #should be correct as send_volunteers can be used in diplomacy_scripted_triggers, but this does not work for diplo_action_valid_triggers
