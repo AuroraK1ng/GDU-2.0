@@ -32,7 +32,7 @@ NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT
 --- Letting people see some stuff on ledger
 NDefines.NGame.GAME_SPEED_SECONDS = { 2.0, 0.4, 0.2, 0.03, 0.0 }	
 
-NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 14					     	 -- WAS 60 	| less messages lying around at the top of your screen
+NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 15 -- WAS 14 	| less messages lying around at the top of your screen | CHANGE FOR CHECKSUMM
 
 
 ------ Recently Added -----
