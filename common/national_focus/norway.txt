@@ -20,7 +20,7 @@
 		id = NOR_treaty_london
 		Text = " Treaty with London "
 		icon = GFX_ENG_Stoicism
-		x = 0
+		x = 1
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -36,10 +36,8 @@
 		id = NOR_speech_in_british
 		Text = "Speech in the British Parliament "
 		icon = GFX_ENG_Parliamentary
-		prerequisite = { focus = NOR_treaty_london }
-		x = 0
-		y = 1
-		relative_position_id = NOR_treaty_london
+		x = 3
+		y = 0
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -52,13 +50,85 @@
 		}
 	}
 	focus = {
+		id = NOR_National_unity
+		Text = "Invest in Victory"
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = NOR_treaty_london }
+		x = -1
+		y = 1
+		relative_position_id = NOR_treaty_london
+		available = {
+			has_war = yes
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = { 
+		add_stability = 0.10
+		add_ideas = AST_invest_in_victory
+		}
+	}
+	focus = {
+		id = NOR_british_wing
+		Text = "Under Britain's wing"
+		icon = GFX_ENG_Strengthening_Commonwealth
+		prerequisite = { focus = NOR_National_unity }
+		x = 0
+		y = 1
+		relative_position_id = NOR_National_unity
+		available = {
+			has_war = yes
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = { 
+		add_political_power = 150
+		337 = {
+		add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = NOR_research_slot
+		Text = "Invite French Scientists"
+		icon = GFX_focus_research
+		prerequisite = { focus = NOR_speech_in_british }
+		prerequisite = { focus = NOR_treaty_london }
+		x = -1
+		y = 1
+		relative_position_id = NOR_speech_in_british
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = { 
+		add_research_slot = 1
+		add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	focus = {
 		id = NOR_UK_expirience
 		Text = "Adopt British Experience"
 		icon = GFX_AST_British_experience
-		prerequisite = { focus = NOR_speech_in_british }
+		prerequisite = { focus = NOR_research_slot }
 		x = 0
 		y = 1
-		relative_position_id = NOR_speech_in_british
+		relative_position_id = NOR_research_slot
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -73,7 +143,68 @@
 			}
 		}
 	}
-
+	focus = {
+		id = NOR_Trade_contract
+		Text = "Trade contract"
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = NOR_speech_in_british }
+		x = 1
+		y = 1
+		relative_position_id = NOR_speech_in_british
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = { 
+		337 = {
+		       add_resource = {
+					type = tungsten
+					amount = 20
+				}
+		        add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		468 = {
+		        add_resource = {
+					type = steel
+					amount = 20
+				}
+		        add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = NOR_General_Corp
+		Text = "General Corp"
+		icon = GFX_ENG_General_staff
+		prerequisite = { focus = NOR_Trade_contract }
+		x = 0
+		y = 1
+		relative_position_id = NOR_Trade_contract
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = { 
+		add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
 
 
 
@@ -86,7 +217,7 @@
 		id = NOR_Industrialisation
 		Text = "Industrialisation of Norway"
 		icon = GFX_goal_generic_construction
-		x = 4
+		x = 8
 		y = 0
 		cost = 5
 		ai_will_do = {
@@ -128,6 +259,12 @@
 		}
 		
 		completion_reward = { 
+		144 = {
+				add_resource = {
+					type = aluminium
+					amount = 20
+				}
+				}
 		337 = {
 				add_extra_state_shared_building_slots = 5
 				add_resource = {
@@ -152,6 +289,12 @@
 		}
 		
 		completion_reward = { 
+		144 = {
+				add_resource = {
+					type = tungsten
+					amount = 20
+				}
+				}
 		337 = {
 				add_extra_state_shared_building_slots = 5
 				add_resource = {
@@ -199,6 +342,38 @@
 		}
 	}
 	focus = {
+		id = NOR_heavy_industry
+		Text = "Heavy Industry"
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = NOR_Industry_improve }
+		x = 0
+		y = 1
+		relative_position_id = NOR_Industry_improve
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = { 
+		337 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}	
+			}
+		143 = {
+		        add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
 		id = NOR_infra_dev
 		Text = "Infrastructure Development"
 		icon = GFX_goal_generic_construct_infrastructure
@@ -211,7 +386,13 @@
 			factor = 1
 		}
 		
-		completion_reward = { 
+		completion_reward = {
+		144 = {
+				add_resource = {
+					type = tungsten
+					amount = 20
+				}
+				}
 		337 = {
 				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
@@ -248,6 +429,39 @@
 		x = 1
 		y = 1
 		relative_position_id = NOR_infra_dev
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = { 
+		337 = {
+				add_extra_state_shared_building_slots = 2
+			}
+		337 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		110 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = NOR_army_facilities
+		Text = "New Army Facilities"
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = NOR_army_Industry_improve }
+		x = 0
+		y = 1
+		relative_position_id = NOR_army_Industry_improve
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -341,9 +555,68 @@
 		Text = "Military Investment From UK"
 		icon = GFX_AST_factories
 		prerequisite = { focus = NOR_Industry_factories }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = NOR_Industry_factories
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		has_war = yes
+		}
+		
+		available_if_capitulated = yes
+		completion_reward = { 
+		add_offsite_building = { type = arms_factory level = 4 }
+		}
+	}
+	focus = {
+		id = NOR_American_machines
+		icon = GFX_military_construction
+		prerequisite = { focus = NOR_Industry_factories }
+		text = "American machines"
+		x = 1
+		y = 1
+		relative_position_id = NOR_Industry_factories
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+		Date > 1941.01.01
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			337 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = NOR_production_can
+		Text = "Set Up Production In Canada"
+		icon = GFX_AST_Prepare_for_defense
+		prerequisite = { focus = NOR_invest_mil focus = NOR_American_machines }
+		x = 1
+		y = 1
+		relative_position_id = NOR_invest_mil
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -356,7 +629,6 @@
 	}
 
 
-
 	#ARMY FOCUS#
 
 
@@ -365,7 +637,7 @@
 		id = NOR_lessons_Of_war
 		Text = "Memory of the Great War"
 		icon = GFX_AST_Gallipoli
-		x = 10
+		x = 14
 		y = 0
 		cost = 5
 		ai_will_do = {
@@ -588,6 +860,32 @@
 		}
 	}
 	focus = {
+		id = Nor_artillery_development
+		text = "Artillery Development"
+		available = {
+			
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = NOR_Betting_on_infantry }
+		icon =  GFX_goal_generic_army_artillery2
+		x = 0
+		y = 1
+		relative_position_id = NOR_Betting_on_infantry
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = secret
+				bonus = 1
+				uses = 2
+				category = rocketry
+				category = artillery
+			}
+		}
+	}
+	focus = {
 		id = NOR_Modern_Artillery_Systems
 		Text = "Modern Artillery Systems"
 		icon = GFX_goal_generic_army_artillery2
@@ -619,7 +917,7 @@
 		id = NOR_army
 		Text = "Found A Modern Army"
 		icon = GFX_goal_Generic_Scouts
-		x = 16
+		x = 20
 		y = 0
 		cost = 5
 		ai_will_do = {
@@ -631,7 +929,7 @@
 		available_if_capitulated = yes
 		completion_reward = { 
 		add_tech_bonus = {
-				bonus = 2.00
+				bonus = 1.00
 				uses = 2
 				category = cat_special_forces_generic
 			}
@@ -658,11 +956,7 @@
 		}
 		completion_reward = {
 			add_ideas = UK_Women_in_army
-			add_tech_bonus = {
-				bonus = 1.00
-				uses = 2
-				category = support_tech
-			}
+			
 		}
 	}
 	focus = {
@@ -673,7 +967,7 @@
 		}
 		available_if_capitulated = yes
 		prerequisite = { focus = NOR_army }
-		icon = GFX_focus_focus_fra_maquis
+		icon = GFX_AST_Prepare_for_defense
 		x = 2
 		y = 1
 		relative_position_id = NOR_army
@@ -704,7 +998,7 @@
 		}
 		available_if_capitulated = yes
 		prerequisite = { focus = NOR_army }
-		icon = GFX_focus_focus_fra_maquis
+		icon = GFX_goal_generic_small_arms
 		x = 0
 		y = 1
 		relative_position_id = NOR_army
@@ -754,7 +1048,7 @@
 		x = 0
 		y = 1
 		relative_position_id = Nor_Grandsons_Vikings
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -825,9 +1119,169 @@
 		}
 		completion_reward = {
 			add_tech_bonus = {
+				bonus = 2
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = Nor_port_raids
+		text = "Port Raids"
+		available = {
+			
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = Nor_army_tactics }
+		icon = GFX_goal_generic_amphibious_assault
+		x = 1
+		y = 1
+		relative_position_id = Nor_army_tactics
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = tp_tech
+			}
+		add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				technology = marines2
+				technology = marines3
+			}
+		}
+	}
+	focus = {
+		id = Nor_Special_Operations_Forces
+		text = "Special Operations Forces"
+		available = {
+			
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = Nor_army_tactics }
+		icon =  GFX_Generic_American_Soldier2
+		x = -1
+		y = 1
+		relative_position_id = Nor_army_tactics
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 2.00
+				uses = 1
+				category = cat_special_forces_generic
+			}
+			add_tech_bonus = {
+				bonus = 2.00
+				uses = 1
+				technology = improved_special_forces
+				technology = survival_training
+			}
+			
+		
+		}
+	}
+	focus = {
+		id = NOR_Special_Forces_gear
+		Text = "Special Forces Gear"
+		icon = GFX_ENG_new_Rifle
+	    prerequisite = { focus = Nor_Special_Operations_Forces }
+		x = -1
+		y = 1
+		relative_position_id = Nor_Special_Operations_Forces
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = { 
+		add_tech_bonus = {
 				bonus = 1
 				uses = 2
-				category = land_doctrine
+				technology = infantry_at
+				technology = infantry_at2
+			}
+		}
+	}
+	
+	focus = {
+		id = Nor_support_bat
+		text = "Support Batalion"
+		available = {
+			
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = Nor_Special_Operations_Forces focus = Nor_port_raids }
+		icon =  GFX_goal_generic_consumer_goods
+		x = 1
+		y = 1
+		relative_position_id = Nor_Special_Operations_Forces
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 1.00
+				uses = 2
+				category = support_tech
+				}
+		}
+	}
+	focus = {
+		id = Nor_rocket
+		text = "Study Rocket Artillery "
+		available = {
+			
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = Nor_port_raids }
+		icon =  GFX_goal_generic_army_artillery
+		x = 1
+		y = 1
+		relative_position_id = Nor_port_raids
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = secret
+				bonus = 2
+				uses = 2
+				category = rocketry
+			}
+		}
+	}
+	focus = {
+		id = Nor_special_army_training
+		text = "New Special Army training"
+		available = {
+			
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = Nor_support_bat }
+		prerequisite = { focus = NOR_Special_Forces_gear }
+		icon = GFX_focus_prc_infiltration
+		x = 1
+		y = 1
+		relative_position_id = NOR_Special_Forces_gear
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 2.00
+				uses = 1
+				technology = survival_training
+				technology = elite_forces
 			}
 		}
 	}

@@ -8,23 +8,22 @@ nor_Defence = {
 		}
 		
 		available = {
-		NOR = { is_ai = no }
-			has_war_with = GER
-			NOR = {
-				has_full_control_of_state = 110
+			NOT = {
+				NOR = { is_ai = no }
+				has_war_with = GER
+				NOR = {
+					has_full_control_of_state = 110
+				}
 			}
-			
 		}
+
 		activation = {
-		has_war_with = GER
+			has_war_with = GER
 		}
-		bypass = {
-            110 = { is_owned_by = GER }
-        }
+		
 		days_mission_timeout = 7
 		fire_only_once = yes
-
-		cost = 0
+		
 
 		ai_will_do = {
 			factor = 1
@@ -34,7 +33,7 @@ nor_Defence = {
 			tag = NOR
 		}
 
-		complete_effect = {
+		 timeout_effect = {
 			337 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -44,6 +43,7 @@ nor_Defence = {
 				}
 			}
 		}
+		 
 			
 	}
 	nor_Defence_1 = {
@@ -54,19 +54,19 @@ nor_Defence = {
 		}
 		
 		available = {
-		NOR = { is_ai = no }
-			has_war_with = GER
-			NOR = {
-				has_full_control_of_state = 110
+			NOT = {
+				NOR = { is_ai = no }
+				has_war_with = GER
+				NOR = {
+					has_full_control_of_state = 110
+				}
 			}
-			
 		}
+
 		activation = {
-		has_war_with = GER
+			has_war_with = GER
 		}
-		bypass = {
-            110 = { is_owned_by = GER }
-        }
+		
 		days_mission_timeout = 14
 		fire_only_once = yes
 
@@ -108,19 +108,18 @@ nor_Defence = {
 		}
 		
 		available = {
-		NOR = { is_ai = no }
-			has_war_with = GER
-			NOR = {
-				has_full_control_of_state = 110
+			NOT = {
+				NOR = { is_ai = no }
+				has_war_with = GER
+				NOR = {
+					has_full_control_of_state = 110
+				}
 			}
-			
 		}
 		activation = {
-		has_war_with = GER
+			has_war_with = GER
 		}
-		bypass = {
-            110 = { is_owned_by = GER }
-        }
+		
 		days_mission_timeout = 21
 		fire_only_once = yes
 
@@ -152,19 +151,18 @@ nor_Defence = {
 		allowed = {
 			tag = NOR
 		}
-		bypass = {
-            110 = { is_owned_by = GER }
-        }
+		
 		days_mission_timeout = 28
 		available = {
-		NOR = { is_ai = no }
-			has_war_with = GER
-			NOR = {
-				has_full_control_of_state = 110
+			NOT = {
+				NOR = { is_ai = no }
+				has_war_with = GER
+				NOR = {
+					has_full_control_of_state = 110
+				}
 			}
-			
 		}
-		cancel_if_invalid = yes 
+		 
 
 		fire_only_once = yes
 		
@@ -178,7 +176,7 @@ nor_Defence = {
 			tag = NOR
 		}
 		activation = {
-		has_war_with = GER
+			has_war_with = GER
 		}
 		complete_effect = {
 		337 = {
@@ -207,19 +205,18 @@ nor_Defence = {
 		}
 		
 		available = {
-		NOR = { is_ai = no }
-			has_war_with = GER
-			NOR = {
-				has_full_control_of_state = 110
+			NOT = {
+				NOR = { is_ai = no }
+				has_war_with = GER
+				NOR = {
+					has_full_control_of_state = 110
+				}
 			}
-			
 		}
 		activation = {
-		has_war_with = GER
+			has_war_with = GER
 		}
-		bypass = {
-            110 = { is_owned_by = GER }
-        }
+		
 		days_mission_timeout = 35
 		fire_only_once = yes
 
@@ -253,20 +250,19 @@ nor_Defence = {
 		}
 		days_mission_timeout = 42
 		available = {
-		NOR = { is_ai = no }
-			has_war_with = GER
-			NOR = {
-				has_full_control_of_state = 110
+			NOT = {
+				NOR = { is_ai = no }
+				has_war_with = GER
+				NOR = {
+					has_full_control_of_state = 110
+				}
 			}
-			
 		}
 		activation = {
-		has_war_with = GER
+			has_war_with = GER
 		}
 
-		bypass = {
-            110 = { is_owned_by = GER }
-        }
+		
 		fire_only_once = yes
 
 		cost = 0
