@@ -28,7 +28,7 @@ hidden_ideas = {
 				production_factory_efficiency_gain_factor = 20
 			}
 		}
-		nor_bad_debuffs = {
+		nor_bad_debuffs0 = {
 			picture = generic_disjointed_gov
 			modifier = {
 				army_core_attack_factor = -0.1 
@@ -49,10 +49,43 @@ hidden_ideas = {
 				production_speed_naval_base_factor = -1.2
 			}
 		}
+		nor_bad_debuffs1 = {
+			picture = chi_army_corruption
+			modifier = {
+				max_dig_in = -6
+				army_attack_factor = -0.3
+				army_defence_factor = -0.3
+				army_org_factor = -0.3
+				max_command_power = -20
+			}
+		}
+		nor_bad_debuffs = {
+			picture = chi_army_corruption
+			modifier = {
+				max_dig_in = -3
+				army_attack_factor = -0.2
+				army_defence_factor = -0.2
+				army_org_factor = -0.15
+			}
+		}
 		NOR_spec_ops = {
 			picture = ast_volunteer_defence_corps
 			modifier = {
 				special_forces_training_time_factor = -0.2
+				special_forces_attack_factor = 0.05
+				special_forces_defence_factor = 0.05
+			}
+		}
+		NOR_spec_ops_1 = {
+			picture = ast_volunteer_defence_corps
+			modifier = {
+				special_forces_attack_factor = 0.05
+				special_forces_defence_factor = 0.05
+			}
+		}
+		NOR_spec_ops_2 = {
+			picture = ast_volunteer_defence_corps
+			modifier = {
 				special_forces_attack_factor = 0.05
 				special_forces_defence_factor = 0.05
 			}
@@ -101,6 +134,15 @@ hidden_ideas = {
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.1
 				amphibious_invasion = 0.2
+			}
+		}
+		NOR_Unbreakable_will = {
+			picture = generic_victors_of_ww1
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				War_support_factor = 1
+				stability_factor = 1
 			}
 		}
 	}

@@ -1,1 +1,301 @@
 
+foreign_politics = {
+nor_Defence = {
+		icon = generic_operation
+
+		allowed = {
+			tag = NOR
+		}
+		
+		available = {
+		NOR = { is_ai = no }
+			has_war_with = GER
+			NOR = {
+				has_full_control_of_state = 110
+			}
+			
+		}
+		activation = {
+		has_war_with = GER
+		}
+		bypass = {
+            110 = { is_owned_by = GER }
+        }
+		days_mission_timeout = 7
+		fire_only_once = yes
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		visible = {
+			tag = NOR
+		}
+
+		complete_effect = {
+			337 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+			
+	}
+	nor_Defence_1 = {
+		icon = generic_operation
+
+		allowed = {
+			tag = NOR
+		}
+		
+		available = {
+		NOR = { is_ai = no }
+			has_war_with = GER
+			NOR = {
+				has_full_control_of_state = 110
+			}
+			
+		}
+		activation = {
+		has_war_with = GER
+		}
+		bypass = {
+            110 = { is_owned_by = GER }
+        }
+		days_mission_timeout = 14
+		fire_only_once = yes
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		visible = {
+			tag = NOR
+		}
+
+		complete_effect = {
+		NOR = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 10000 producer = NOR } }
+		if = {
+				limit = {
+					has_idea = nor_bad_debuffs2
+				}
+				remove_ideas = nor_bad_debuffs2
+			}
+			add_ideas = nor_bad_debuffs1
+			337 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+			
+	}
+	nor_Defence_2 = {
+		icon = generic_operation
+
+		allowed = {
+			tag = NOR
+		}
+		
+		available = {
+		NOR = { is_ai = no }
+			has_war_with = GER
+			NOR = {
+				has_full_control_of_state = 110
+			}
+			
+		}
+		activation = {
+		has_war_with = GER
+		}
+		bypass = {
+            110 = { is_owned_by = GER }
+        }
+		days_mission_timeout = 21
+		fire_only_once = yes
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		visible = {
+			tag = NOR
+		}
+
+		complete_effect = {
+			337 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+			
+	}
+	nor_Defence_3 = {
+		icon = generic_operation
+
+		allowed = {
+			tag = NOR
+		}
+		bypass = {
+            110 = { is_owned_by = GER }
+        }
+		days_mission_timeout = 28
+		available = {
+		NOR = { is_ai = no }
+			has_war_with = GER
+			NOR = {
+				has_full_control_of_state = 110
+			}
+			
+		}
+		cancel_if_invalid = yes 
+
+		fire_only_once = yes
+		
+		cost = 0
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		visible = {
+			tag = NOR
+		}
+		activation = {
+		has_war_with = GER
+		}
+		complete_effect = {
+		337 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		if = {
+				limit = {
+					has_idea = nor_bad_debuffs1
+				}
+				remove_ideas = nor_bad_debuffs1
+			}
+			add_ideas = nor_bad_debuffs
+			add_ideas = NOR_spec_ops_1
+		}
+			}
+		nor_Defence_4 = {
+		icon = generic_operation
+
+		allowed = {
+			tag = NOR
+		}
+		
+		available = {
+		NOR = { is_ai = no }
+			has_war_with = GER
+			NOR = {
+				has_full_control_of_state = 110
+			}
+			
+		}
+		activation = {
+		has_war_with = GER
+		}
+		bypass = {
+            110 = { is_owned_by = GER }
+        }
+		days_mission_timeout = 35
+		fire_only_once = yes
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		visible = {
+			tag = NOR
+		}
+
+		complete_effect = {
+			337 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+			
+	}
+	nor_Defence_5 = {
+		icon = generic_operation
+
+		allowed = {
+			tag = NOR
+		}
+		days_mission_timeout = 42
+		available = {
+		NOR = { is_ai = no }
+			has_war_with = GER
+			NOR = {
+				has_full_control_of_state = 110
+			}
+			
+		}
+		activation = {
+		has_war_with = GER
+		}
+
+		bypass = {
+            110 = { is_owned_by = GER }
+        }
+		fire_only_once = yes
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		visible = {
+			tag = NOR
+		}
+
+		complete_effect = {
+		337 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		if = {
+				limit = {
+					has_idea = nor_bad_debuffs
+				}
+				remove_ideas = nor_bad_debuffs
+			}
+			add_ideas = nor_bad_debuffs0
+			add_ideas = NOR_spec_ops_2
+		}
+			}
+	}
