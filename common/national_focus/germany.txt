@@ -275,7 +275,7 @@ focus_tree = {
 		icon = GFX_ger_artillery_expansion
 		prerequisite = { focus = GER_west_wall }
 		available = {
-			date > 1940.8.1
+			has_completed_focus = Victory_in_France
 		}
 		cancel_if_invalid = no
 		x = -1
