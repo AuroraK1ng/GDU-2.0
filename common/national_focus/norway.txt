@@ -1063,7 +1063,7 @@
 		id = Nor_Homeland
 		text = "Let's Go Back To Our Homeland"
 		available = {
-			
+		date > 1942.1.1	
 		}
 		available_if_capitulated = yes
 		prerequisite = { focus = NOR_Modern_warfare }
@@ -1117,6 +1117,7 @@
 			factor = 1
 		}
 		completion_reward = {
+		add_ideas = GDU_Commonwealth_Navy_Manpower1	
 			add_tech_bonus = {
 				bonus = 2
 				uses = 1
