@@ -34,10 +34,27 @@ nor_Defence = {
 		}
 
 		 timeout_effect = {
+			110 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+			110 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
 			337 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
@@ -80,7 +97,7 @@ nor_Defence = {
 			tag = NOR
 		}
 
-		complete_effect = {
+		timeout_effect = {
 		NOR = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 10000 producer = NOR } }
 		if = {
 				limit = {
@@ -89,11 +106,28 @@ nor_Defence = {
 				remove_ideas = nor_bad_debuffs2
 			}
 			add_ideas = nor_bad_debuffs1
+			110 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+			110 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
 			337 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -133,11 +167,28 @@ nor_Defence = {
 			tag = NOR
 		}
 
-		complete_effect = {
+		timeout_effect = {
+			142 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+			142 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
 			337 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
@@ -178,11 +229,17 @@ nor_Defence = {
 		activation = {
 			has_war_with = GER
 		}
-		complete_effect = {
-		337 = {
+		timeout_effect = {
+			143 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 2
+						}
+					}
+			337 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
@@ -230,11 +287,17 @@ nor_Defence = {
 			tag = NOR
 		}
 
-		complete_effect = {
+		timeout_effect = {
+			143 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 2
+						}
+					}
 			337 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
@@ -275,7 +338,7 @@ nor_Defence = {
 			tag = NOR
 		}
 
-		complete_effect = {
+		timeout_effect = {
 		337 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
