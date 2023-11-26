@@ -1,47 +1,132 @@
 ﻿capital = 110
+oob = "NOR_1936"
+set_rule = { can_join_factions = no }
 set_research_slots = 3
+set_rule = { can_be_spymaster = no }
+
+	#store_core_states_on_game_start = yes
+	# Setting Independent Norway Dmod variables 
+	set_variable = { NOR.NOR_independent_norway_dmod_consumer_goods_factor = 0 } 
+	set_variable = { NOR.NOR_independent_norway_dmod_production_speed_industrial_complex_factor = 0 } 
+	set_variable = { NOR.NOR_independent_norway_dmod_production_speed_infrastructure_factor = 0 } 
+	set_variable = { NOR.NOR_independent_norway_dmod_research_speed_factor = 0 } 
+	set_variable = { NOR.NOR_independent_norway_dmod_production_speed_supply_node = 0} 
+
+	# Setting Airforce Dmod variables 
+	set_variable = { NOR.NOR_army_air_force_dmod_license_air_purchase_cost = 0 }
+	set_variable = { NOR.NOR_army_air_force_dmod_production_speed_air_base_factor = 0 }
+	set_variable = { NOR.NOR_army_air_force_dmod_production_speed_anti_air_building_factor = 0 }
+	set_variable = { NOR.NOR_army_air_force_dmod_air_doctrine_cost_factor = 0 }
+	set_variable = { NOR.NOR_army_air_force_dmod_air_ace_bonuses_factor = 0 }
+	set_variable = { NOR.NOR_army_air_force_dmod_air_ace_generation_chance_factor = 0 }
+	set_variable = { NOR.NOR_army_air_force_dmod_air_attack_factor = 0 }
+	set_variable = { NOR.NOR_army_air_force_dmod_air_defence_factor = 0 }
+	set_variable = { NOR.NOR_army_air_force_dmod_air_nav_efficiency = 0 }
+
+
+create_intelligence_agency = yes
+add_to_tech_sharing_group = commonwealth_research
+set_stability = 0.50
+set_war_support = 0.1
+
+#Country Leaders 
+recruit_character = NOR_johan_nygaardsvold
+recruit_character = NOR_vidkun_quisling
+recruit_character = NOR_adam_egede_nissen
+#other 
+recruit_character = NOR_elias_corneliussen
+recruit_character = NOR_skule_storheil
+recruit_character = NOR_ole_reistad
+recruit_character = NOR_henry_diesen
+recruit_character = NOR_wilhelm_von_tangen_hansteen
+recruit_character = NOR_konrad_sundlo
+recruit_character = NOR_hjalmar_riiser_larsen
+recruit_character = NOR_bjarne_oen
+recruit_character = NOR_edgar_otto
+recruit_character = NOR_king_haakon_vii
+
+recruit_character = NOR_prince_olav
+recruit_character = NOR_josef_terboven
+recruit_character = NOR_jonas_lie
+recruit_character = NOR_peder_furubotn
+recruit_character = NOR_jeanette_olsen
+recruit_character = NOR_sverre_riisnaes
+recruit_character = NOR_birger_meidell
+recruit_character = NOR_ragnar_skancke 
+recruit_character = NOR_rasmus_hatledal
+recruit_character = NOR_bjorn_christophersen
+recruit_character = NOR_joakim_lehmkuhl
+recruit_character =	NOR_einar_gerhardsen
+recruit_character = NOR_otto_ruge
+recruit_character = NOR_kristian_laake
+recruit_character = NOR_odd_prytz
+recruit_character = NOR_wilhelm_teige
+recruit_character = NOR_sverre_eriksen
+recruit_character = NOR_izaak_reijnders
+recruit_character = NOR_henri_winkelman
+recruit_character = NOR_petrus_wilhelmus_best
+recruit_character = NOR_godfried_van_voorst_tot_voorst
+recruit_character = NOR_carl_gustav_fleischer
+recruit_character = NOR_adolf_indrebo
+recruit_character = NOR_armaments_nor
+recruit_character = NOR_birger_ljungberg
+recruit_character = NOR_stabber_nor
+recruit_character = NOR_jacob_von_der_lippe
+recruit_character = NOR_smooth_nor
+recruit_character = NOR_nor_air_tacticalbombing
+recruit_character = NOR_crusader_nor
+recruit_character = NOR_gentlemen_nor
+recruit_character = NOR_halavdan_koht
+# Navy Leaders
+recruit_character = NOR_françois_darlan
+recruit_character = NOR_leonard_w._murray
+recruit_character = NOR_harry_dewolf
+recruit_character = NOR_harold_farncomb
+recruit_character = NOR_victor_crutchley 
+recruit_character = NOR_karel_doorman
+recruit_character = NOR_conrad_helfrich
+recruit_character = NOR_peter_phipps
+recruit_character = NOR_guy_hallifax
 add_ideas = {
 	limited_conscription
+	nor_bad_debuffs2
+	airandnavy_idea
+	GDU_NOR_Cap
+	GDU_neutrality
 }
-set_stability = 0.9
-set_war_support = 0.1
+
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-	tech_support = 1
+	tech_support = 1		
 	tech_engineers = 1
-	tech_recon = 1
+	gwtank_chassis = 1
+	basic_light_tank_chassis = 1
 	basic_train = 1
-}
-
-set_technology = {
+	iw_small_airframe = 1 
+	iw_medium_airframe = 1 
+	tech_recon = 1
 	early_ship_hull_light = 1
 	basic_ship_hull_light = 1
 	early_ship_hull_submarine = 1
 	early_ship_hull_cruiser = 1
 	basic_battery = 1
 	basic_torpedo = 1
-	coastal_defense_ships = 1
 }
 
-add_ideas = {
-	GDU_neutrality
-}
-
-set_convoys = 200# biggest merchant marine in the world
-set_stability = 0.7
+#####SUPPLY EQUIPMENT ADDED TO GIVE MINORS A BASIC STOCKPILE TO WORK WITH EARLY GAME#####
+#########################################################################################
+set_convoys = 200	
 set_politics = {
 	ruling_party = democratic
 	last_election = "1933.10.16"
 	election_frequency = 36
 	elections_allowed = yes
 }
-
 set_popularities = {
-	democratic = 96
-	fascism = 2
-	communism = 2
+	democratic = 80
+	fascism = 5
+	communism = 15
 }
-

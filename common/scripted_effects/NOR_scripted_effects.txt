@@ -1,0 +1,50 @@
+GDU_script_norway_cap = {
+	if = {
+		limit = { 
+			NOT = {  
+				NOR = { 
+					has_country_flag = norway_just_capped 
+				} 
+			}  
+		}
+		if = { 
+			limit = { 
+				NOR = { is_ai = yes  }
+			} 
+			annex_country = { target = NOR } 
+			337 = { 
+				add_building_construction = { 
+					type = arms_factory 
+					level = 2 
+					instant_build = yes 
+				} 
+				add_building_construction = { 
+					type = industrial_complex 
+					level = 2 
+					instant_build = yes 
+				} 
+				add_extra_state_shared_building_slots = 4 
+			}  
+		}  
+		if = { limit = { NOR = {is_ai = no }} 
+		NOR =  { 
+			set_country_flag = norway_just_capped 
+			set_capital = { state = 337 }
+			swap_ideas = {
+				remove_idea = nor_bad_debuffs2
+				add_idea = nor_bad_debuffs
+			}
+		} 
+			if = { 
+				limit = { 
+					NOR = {  is_in_faction = no }
+				} 
+				ENG = { 
+					add_to_faction = NOR 
+					puppet = NOR 
+				}
+			}
+		}
+		GER = { transfer_state = 144 transfer_state = 142 transfer_state = 110 transfer_state = 143 transfer_state = 790 }					
+	}
+}
