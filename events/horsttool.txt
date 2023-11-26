@@ -1,61 +1,136 @@
 add_namespace = horsttool
+
 news_event = {
-	id = horsttool.1
+	id = horsttool.31
+	title = "Country Color Changed"
+	
+	desc = "[From.Getname] changed the color of [From.From.Owner.Getname] to [FROM.color_selected]"
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Okay...?"
+		 }
+		
+	}
+country_event = {   
+	id = horsthelp.2
+	title = horsthelp.2.t
+	desc = horsthelp.2.d
+
+	picture = GFX_report_event_physics_lab_01 
+
+	is_triggered_only = yes
+    fire_only_once = no
+
+    option = {
+		name =  horsthelp.2.a	
+	}
+}
+news_event = {
+	id = horsttool.11
 	title = "Horsttool"
-	desc = " [From.Getname] gave [Root.cheat_selected] to [From.From.Owner.Getname]"
+	
+	desc = " [From.Getname] gave five military factories to [From.From.Owner.Getname]"
 	picture = GFX_news_event_001
+	
 	major = yes
+	
 	is_triggered_only = yes
+	
 	option = {
-		name = "Okay..."
-		clear_variable=this.selected_cheat
-		clear_variable=this.target_country
-	}
+		name = "Okay...?"
+		 }
+		
 }
 news_event = {
-	id = horsttool.2
-	title = "Historical Focus"
-	desc = "Troll Host. Historical focusses are not activated...    Time to rehost"
+	id = horsttool.12
+	title = "Horsttool"
+	
+	desc = " [From.Getname] gave one civilian factory to [From.From.Owner.Getname]"
 	picture = GFX_news_event_001
+	
 	major = yes
+	
 	is_triggered_only = yes
+	
 	option = {
-		name = "Wow..."
-	}
+		name = "Okay...?"
+		 }
+		
+
 }
-news_event = {
-	id = horsttool.5
-	title = "HostTool"
-	desc = " [From.Getname] annexed [?ROOT.marked_states^num] states to [From.From.Owner.Getname]"
-	picture = GFX_news_event_001
-	major = yes
-	is_triggered_only = yes
-	option = {
-		name = "OK..."
-		clear_variable=this.target_country
-	}
-}	
-news_event = {
-	id = horsttool.3
-	title = "Host Tool"
-	desc = " [From.Getname] annexed a country to [From.From.From.Owner.Getname]"
-	picture = GFX_news_event_001
-	major = yes
-	is_triggered_only = yes
-	option = {
-		name = "OK..."
-		clear_variable=this.target_country
-	}
+news_event = {		
+	id = news.4006
+	title = news.4006.t
+	desc = ""
+	picture = GFX_news_event_italian_tank_desert
+   
+		   major =  yes
+		   is_triggered_only = yes
+	   option = { name = "Ok"  }
 }
-news_event = {
-	id = horsttool.4
-	title = "Host Tool"
-	desc = " [From.Getname] cored [?ROOT.marked_states^num] states to [From.From.Owner.Getname]"
-	picture = GFX_news_event_001
-	major = yes
-	is_triggered_only = yes
-	option = {
-		name = "OK..."
-		clear_variable=this.target_country
-	}
+news_event = {		
+	id = news.4007
+	title = news.4007.t
+	desc = ""
+	picture = GFX_news_event_italian_tank_desert
+   
+		   major =  yes
+		   is_triggered_only = yes
+	   option = { name = "Ok"  }
 }
+news_event = {		
+	id = news.4003
+	title = news.4003.t
+	desc = ""
+	picture = GFX_news_event_italian_tank_desert
+   
+		   major =  yes
+		   is_triggered_only = yes
+	   option = { name = "Ok"  }
+}
+news_event = {		
+	id = news.4113
+	title = news.4113.t
+	desc = ""
+	picture = GFX_news_event_italian_tank_desert
+   
+		   major =  yes
+		   is_triggered_only = yes
+	   option = { name = "Ok"  }
+}
+news_event = {	
+	id = news.4002
+	title = news.4002.t
+	desc = "a"
+	picture = GFX_news_event_italian_tank_desert
+   
+		   major =  yes
+		   is_triggered_only = yes
+	   option = { name = "Ok"  }
+}
+news_event = {		
+	id = news.4004
+	title = news.4004.t
+	desc = ""
+	picture = GFX_news_event_italian_tank_desert
+   
+		   major =  yes
+		   is_triggered_only = yes
+	   option = { name = "Ok"  }
+}
+news_event = {		
+	id = news.4005
+	title = news.4005.t
+	desc = ""
+	picture = GFX_news_event_italian_tank_desert
+   
+		   major =  yes
+		   is_triggered_only = yes
+	   option = { name = "Ok"  }
+}
+

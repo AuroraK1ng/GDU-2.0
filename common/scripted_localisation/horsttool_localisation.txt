@@ -1,3 +1,5 @@
+####HORST TOOL####
+
 defined_text = { # state
 	name = mark_state_tooltip
 
@@ -11,7 +13,19 @@ defined_text = { # state
 		localization_key = mark_state_yes
 	}
 }
+defined_text = { # Country
+	name = GetLeftDesc
+	text = {
+		localization_key = POL_san_left_desc
+	}
+}
 
+defined_text = { # Country
+	name = GetRightDesc
+	text = {
+		localization_key = POL_san_right_desc
+	}
+}
 defined_text = { # global
 	name = transfer_states_tooltip
 
@@ -25,6 +39,20 @@ defined_text = { # global
 		localization_key = transfer_states_on
 	}
 }
+defined_text = { # global
+	name = command_limit_tooltip
+
+	text = {
+		trigger = {
+			has_country_flag = show_admiral_list
+		}
+		localization_key = command_limit_off
+	}
+	text = {
+		localization_key = command_limit_on
+	}
+}
+
 
 defined_text = { # global
 	name = ST_TOOLTIP
@@ -65,7 +93,7 @@ defined_text = { # global
 	text = {
 		trigger = {
 			OR={check_variable = {Root.selected_cheat=1}
-				Root={has_country_flag=cheating}}
+			Root={has_country_flag=cheating}}
 		}
 		localization_key = CHEAT1
 	}
@@ -81,59 +109,118 @@ defined_text = { # global
 		}
 		localization_key = CHEAT3
 	}
-	text = {
+		text = {
 		trigger = {
 			check_variable = {Root.selected_cheat=4}
 		}
 		localization_key = CHEAT4
 	}
-	text = {
+			text = {
 		trigger = {
 			check_variable = {Root.selected_cheat=5}
 		}
 		localization_key = CHEAT5
 	}
+}
+
+
+
+
+
+defined_text = { # global
+	name = color_selected
 	text = {
 		trigger = {
-			check_variable = {Root.selected_cheat=6}
+			check_variable = {Root.selected_color=0}
+			NOT={Root={has_global_flag=colorblindness}}
 		}
-		localization_key = CHEAT6
+		localization_key = COLOR_SELECT
 	}
 	text = {
 		trigger = {
-			check_variable = {Root.selected_cheat=7}
+			OR={check_variable = {Root.selected_color=1}
+			Root={has_global_flag=colorblindness}}
 		}
-		localization_key = CHEAT7
+		localization_key = COLOR1
 	}
 	text = {
 		trigger = {
-			check_variable = {Root.selected_cheat=8}
+			check_variable = {Root.selected_color=2}
 		}
-		localization_key = CHEAT8
+		localization_key = COLOR2
 	}
 	text = {
 		trigger = {
-			check_variable = {Root.selected_cheat=9}
+			check_variable = {Root.selected_color=3}
 		}
-		localization_key = CHEAT9
-	}
-	text = {
-		trigger = {
-			check_variable = {Root.selected_cheat=10}
-		}
-		localization_key = CHEAT10
-	}
-	text = {
-		trigger = {
-			check_variable = {Root.selected_cheat=11}
-		}
-		localization_key = CHEAT11
+		localization_key = COLOR3
 	}
 		text = {
 		trigger = {
-			check_variable = {Root.selected_cheat=12}
+			check_variable = {Root.selected_color=4}
 		}
-		localization_key = CHEAT12
+		localization_key = COLOR4
+	}
+			text = {
+		trigger = {
+			check_variable = {Root.selected_color=5}
+		}
+		localization_key = COLOR5
+	}
+				text = {
+		trigger = {
+			check_variable = {Root.selected_color=6}
+		}
+		localization_key = COLOR6
+	}
+				text = {
+		trigger = {
+			check_variable = {Root.selected_color=7}
+		}
+		localization_key = COLOR7
+	}
+				text = {
+		trigger = {
+			check_variable = {Root.selected_color=8}
+		}
+		localization_key = COLOR8
+	}
+					text = {
+		trigger = {
+			check_variable = {Root.selected_color=9}
+		}
+		localization_key = COLOR9
+	}
+	
+	
+}
+defined_text = { # global
+	name = pause_selected
+	text = {
+		trigger = {
+			check_variable = {SWE.pause_blocker_variable=0}
+			NOT={Root={has_global_flag=blocking_pauses}}
+		}
+		localization_key = PAUSE_SELECT
+	}
+	text = {
+		trigger = {
+			check_variable = {SWE.pause_blocker_variable=1}
+		}
+		localization_key = PAUSE1
+	}
+	text = {
+		trigger = {
+			check_variable = {SWE.pause_blocker_variable=2}
+		}
+		localization_key = PAUSE2
+	}
+	
+		text = {
+		trigger = {
+			check_variable = {SWE.pause_blocker_variable=3}
+		}
+		localization_key = PAUSE3
 	}
 	
 }

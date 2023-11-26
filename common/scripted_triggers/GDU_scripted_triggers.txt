@@ -3,6 +3,8 @@ is_controlled_by_allied_country = { CONTROLLER = { is_in_faction_with_allies = y
 is_controlled_by_axis_country = { CONTROLLER = { is_in_faction_with_axis = yes } }
 is_controlled_by_axis_or_japan = { CONTROLLER = { is_in_faction_with_axis_or_japan = yes } }
 
+immune_to_pause_block = { OR = { has_country_flag = host tag = FRA tag = GER tag = ENG tag = SOV tag = USA tag = ITA  tag = JAP } }
+
 #Dont change the order of these. They go from the most likely to most unlikely for efficiency
 is_in_faction_with_allies = {
 	OR = {

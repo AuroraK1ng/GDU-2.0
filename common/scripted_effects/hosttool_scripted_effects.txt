@@ -1,3 +1,8 @@
+HMP_anti_building_exploit_effect = { 
+every_country = {
+	add_equipment_to_stockpile= { type = convoy_1  amount = 1 }
+}
+}
 generic_bonus_1 = {
 	add_tech_bonus = { 
 	name = "Generic 100 Bonus" bonus = 1 uses = 1
@@ -5,9 +10,12 @@ generic_bonus_1 = {
 	category = artillery category = naval_equipment	
 	category = motorized_equipment   category =	armor 
 	category = electronics	category = nuclear 
-#	category = land_doctrine category = infantry_weapons 
+	category = land_doctrine category = infantry_tech 
 	category = air_doctrine category = naval_doctrine   
 	category = tp_tech   category = support_tech 
+	category = infantry_weapons category = cat_special_forces_generic
+	category = cat_mechanized_equipment category = mot_rockets
+	category = train_tech
 	}
 }
 
@@ -18,9 +26,12 @@ generic_bonus_3 = {
 	category = artillery category = naval_equipment	
 	category = motorized_equipment   category =	armor 
 	category = electronics	category = nuclear 
-#	category = land_doctrine category = infantry_weapons 
+	category = land_doctrine category = infantry_tech 
 	category = air_doctrine category = naval_doctrine   
 	category = tp_tech   category = support_tech 
+	category = infantry_weapons category = cat_special_forces_generic
+	category = cat_mechanized_equipment category = mot_rockets
+	category = train_tech
 	}
 }
 generic_bonus_2y = {
@@ -30,9 +41,12 @@ generic_bonus_2y = {
 	category = artillery category = naval_equipment	
 	category = motorized_equipment   category =	armor 
 	category = electronics	category = nuclear 
-#	category = land_doctrine category = infantry_weapons 
+	category = land_doctrine category = infantry_tech 
 	category = air_doctrine category = naval_doctrine   
 	category = tp_tech   category = support_tech 
+	category = infantry_weapons category = cat_special_forces_generic
+	category = cat_mechanized_equipment category = mot_rockets
+	category = train_tech
 	}
 }
 
@@ -43,8 +57,12 @@ generic_bonus_999 = {
 	category = artillery category = naval_equipment	
 	category = motorized_equipment   category =	armor 
 	category = electronics	category = nuclear 
-#	category = land_doctrine category = infantry_weapons 
+	category = land_doctrine category = infantry_tech 
 	category = air_doctrine category = naval_doctrine   
 	category = tp_tech   category = support_tech 
+	category = infantry_weapons category = cat_special_forces_generic
+	category = cat_mechanized_equipment category = mot_rockets
+	category = train_tech
 	}
 }
+
