@@ -69,12 +69,12 @@ characters={
 				cost = 150
 		}
 		corps_commander={
-			traits={ politically_connected }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=2
+			traits={ infantry_leader infantry_expert organizer trait_engineer trickster guerilla_fighter }
+			skill=6
+			attack_skill=4
+			defense_skill=8
+			planning_skill=6
+			logistics_skill=6
 			legacy_id=-1
 		}
 		portraits={
@@ -194,147 +194,6 @@ characters={
 			}
 		}
 	}	
-	
-NOR_george_patton={
-		name="george_patton"
-		portraits={
-			army={
-				large=GFX_portrait_USA_george_s_patton
-				small="GFX_idea_george_patton"
-			}
-		}
-		corps_commander={ 
-		traits = {  trickster panzer_leader panzer_expert trait_reckless  urban_assault_specialist adaptable expert_improviser }
-		skill = 9
-		attack_skill = 9
-		defense_skill = 5
-		planning_skill = 6
-		logistics_skill = 8
-		}
-	}
-
-NOR_dwight_eisenhower={
-		name="dwight_eisenhower"
-		portraits={
-			army={
-				small="GFX_idea_dwight_eisenhower"
-				large=GFX_portrait_USA_dwight_d_eisenhower
-			}
-		}
-	field_marshal = {
-	traits = { logistics_wizard skilled_staffer organizer fast_planner offensive_doctrine inspirational_leader organisational_leader trait_cautious panzer_leader panzer_expert  }
-	skill = 9
-	attack_skill = 8
-	defense_skill = 5
-	planning_skill = 9
-	logistics_skill = 6
-	}
-}
-	NOR_omar_bradley={
-		name="omar_bradley"
-		portraits={
-			army={
-				small="GFX_idea_omar_bradley"
-				large=GFX_portrait_USA_omar_bradley
-			}
-		}
-		corps_commander={ 
-		traits = {  trait_engineer fortress_buster fake_skilled_staffer trait_cautious brilliant_strategist ranger harsh_leader infantry_leader infantry_expert }
-		skill = 9
-		attack_skill = 8
-		defense_skill = 6
-		planning_skill = 6
-		logistics_skill = 8
-		}
-	}
-
-	NOR_douglas_macarthur={
-		name=USA_douglas_macarthur
-		portraits={
-			army={
-				small="GFX_idea_douglas_macarthur"
-			}
-			army={
-				large="gfx/leaders/USA/Portrait_USA_Douglas_MacArthur.dds"
-			}
-		}		
-		field_marshal = { 
-		traits = { organizer fake_skilled_staffer logistics_wizard fast_planner infantry_leader infantry_expert trickster expert_improviser offensive_doctrine brilliant_strategist aggressive_assaulter  }
-		skill = 9
-		attack_skill = 9
-		defense_skill = 7
-		planning_skill = 5
-		logistics_skill = 7
-		}
-	}
-	NOR_bernard_montgomery={
-		name=ENG_bernard_montgomery
-		portraits={
-			army={
-				small="GFX_idea_bernard_montgomery"
-			}
-			army={
-				large="gfx/leaders/ENG/Portrait_Britain_Bernard_Montgomery.dds"
-			}
-		}
-		field_marshal={ 
-		traits = { logistics_wizard trait_cautious inflexible_strategist panzer_leader infantry_leader infantry_expert panzer_expert unyielding_defender inspirational_leader organisational_leader }
-		skill = 9
-		attack_skill = 7
-		defense_skill = 9
-		planning_skill = 6
-		logistics_skill = 6
-		}
-		
-	}
-	NOR_george_giffard={
-		name = "George Giffard" #POINT VALUE 20
-		portraits={
-			army={
-				large="gfx/leaders/ENG/Portrait_Britain_George_Giffard.dds"
-			}
-		}
-		corps_commander = { 
-		traits = { trait_engineer urban_assault_specialist trickster infantry_leader infantry_expert organizer trait_mountaineer desert_fox   }
-		skill = 7
-		attack_skill = 6 
-		defense_skill = 4 
-		planning_skill = 5 
-		logistics_skill = 7 
-		}
-	}
-		NOR_harold_alexander = {  #North Africa
-		name = "Harold Alexander" # Aristocrat  ###POINT VALUE: 20
-		portraits={
-			army={
-				large="gfx/leaders/ENG/Portrait_Britain_Harold_Alexander.dds"
-			}
-		} #Point Value:
-		 field_marshal = { 
-		traits = { offensive_doctrine organisational_leader trickster infantry_leader infantry_expert organizer thorough_planner logistics_wizard  trait_mountaineer desert_fox   }
-		skill = 7
-		attack_skill = 6
-		defense_skill = 4 
-		planning_skill = 5
-		logistics_skill = 7
-		}
-	}
-		NOR_oliver_leese = {
-		name = "Oliver Leese" # Aristocrat ###POINT VALUE:  20
-		portraits={
-			army={
-				large="gfx/leaders/ENG/Portrait_Britain_Oliver_Leese.dds"
-			}
-		} #Point Value:
-		corps_commander = { 
-		traits = {  panzer_leader panzer_expert trait_mountaineer expert_improviser desert_fox urban_assault_specialist trait_engineer fortress_buster harsh_leader }
-		skill = 7 
-		attack_skill = 6
-		defense_skill = 4
-		planning_skill = 5
-		logistics_skill = 7
-		}
-	}
 
 
 
@@ -360,28 +219,38 @@ NOR_dwight_eisenhower={
 			}
 		}
 		corps_commander={ #15/15
-			traits={ infantry_leader infantry_expert fortress_buster   trait_engineer   bearer_of_artillery organizer     }
-			skill=5
-			attack_skill=3
+			traits={ infantry_leader infantry_expert fortress_buster   trait_engineer   bearer_of_artillery organizer  urban_assault_specialist   }
+			skill=6
+			attack_skill=5
 			defense_skill=4
-			planning_skill=3
-			logistics_skill=6
+			planning_skill=4
+			logistics_skill=8
+			legacy_id=-1
+		}
+	}
+	NOR_otto_ruge_AFICANUS={
+		name="Otto Ruge AFRICA"
+
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_4"
+			}
+			army={
+				large="gfx/leaders/NOR/portrait_norway_ruge_AFRICANUS.dds"
+			}
+		}
+		corps_commander={ #15/15
+			traits={ infantry_leader infantry_expert fortress_buster   trait_engineer   bearer_of_artillery organizer  urban_assault_specialist   }
+			skill=6
+			attack_skill=5
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=8
 			legacy_id=-1
 		}
 	}
 	NOR_kristian_laake={
 		name="Kristian Laake"
-		advisor={
-			slot = army_chief
-			idea_token = NOR_kristian_laake
-			allowed  = {
-					original_tag  = NOR 
-				}
-				cost = 150
-				traits  = {
-					army_chief_defensive_2 
-				}
-		}
 		portraits={
 			army={
 				small="GFX_idea_generic_army_europe_1"
@@ -391,16 +260,35 @@ NOR_dwight_eisenhower={
 			}
 		}
 		corps_commander={ #15/15
-			traits={ panzer_leader panzer_expert trait_mountaineer adaptable   }
-			skill=5
-			attack_skill=2
-			defense_skill=5
-			planning_skill=7
-			logistics_skill=2
+			traits={ infantry_leader infantry_expert naval_invader invader_ii organizer   }
+			skill=6
+			attack_skill=7
+			defense_skill=4
+			planning_skill=5
+			logistics_skill=5
 			legacy_id=-1
 		}
 	}
-
+	NOR_kristian_laake_AFRICANUS={
+		name="Kristian Laake AFRICA"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_1"
+			}
+			army={
+				large="gfx/leaders/NOR/portrait_norway_Laake_AFRICANUS.dds"
+			}
+		}
+		corps_commander={ #15/15
+			traits={ infantry_leader infantry_expert naval_invader invader_ii organizer   }
+			skill=6
+			attack_skill=7
+			defense_skill=4
+			planning_skill=5
+			logistics_skill=5
+			legacy_id=-1
+		}
+	}
 	NOR_adam_egede_nissen={ # Stalinist Communist
 		name=NOR_adam_egede_nissen
 		portraits={
@@ -460,247 +348,8 @@ NOR_dwight_eisenhower={
 		}
 	}
 	
-	NOR_markos_drakos={
-		name="Markos Drakos"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_europe_generic_land_4.dds"
-			}
-			army={
-				large="gfx/leaders/GRE/portrait_gre_markos_drakos.dds"
-			}
-		}
-		field_marshal={ #12/12
-			traits={ infantry_leader infantry_expert trait_mountaineer hill_fighter jungle_rat fast_planner inspirational_leader organisational_leader  }
-			skill=5
-			attack_skill=3
-			defense_skill=2
-			planning_skill=5
-			logistics_skill=6
-			legacy_id=-1
-		}
-	}
-	NOR_alexandros_papagos={
-		name="Alexandros Papagos"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_GRE_alexandros_papagos.dds"
-			}
-			army={
-				large="gfx/leaders/GRE/portrait_gre_alexandros_papagos.dds"
-			}
-		}
-		field_marshal={ #12/12
-			traits={ old_guard inflexible_strategist infantry_leader ambusher logistics_wizard unyielding_defender   }
-			skill=5
-			attack_skill=2
-			defense_skill=4
-			planning_skill=4
-			logistics_skill=6
-			legacy_id=-1
-		}
-	}
-	NOR_charles_de_gaulle={
-		name="Charles De Gaulle"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_FRA_charles_de_gaulle.dds"
-			}
-			army={
-				large="gfx/leaders/FRA/Portrait_France_Charles_De_Gaulle.dds"
-			}
-		}
-		field_marshal={ #12.5/12
-			traits={ brilliant_strategist harsh_leader panzer_leader panzer_expert desert_fox logistics_wizard aggressive_assaulter   }
-			skill=5
-			attack_skill=6
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=4
-			legacy_id=-1
-		}
-		}
-
-	NOR_alphonse_juin={
-		name="Alphonse Juin"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_FRA_alphonse_juin.dds"
-			}
-			army={
-				large="gfx/leaders/FRA/Portrait_France_Alphonse_Juin.dds"
-			}
-		}
-		field_marshal={ #12/12
-			traits={ combined_arms_expert   cavalry_leader  trait_cautious logistics_wizard defensive_doctrine   }
-			skill=5
-			attack_skill=4
-			defense_skill=6
-			planning_skill=1
-			logistics_skill=5
-			legacy_id=-1
-		}
-	}
-	NOR_izaak_reijnders={
-		name="Izaak Reijnders"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_HOL_izaak_reijnders.dds"
-			}
-			army={
-				large="gfx/leaders/HOL/portrait_hol_izaak_reijnders.dds"
-			}
-		}
-		field_marshal={ #12.5/12
-			traits={ old_guard inflexible_strategist trait_reckless infantry_leader infantry_expert inspirational_leader   offensive_doctrine unyielding_defender  }
-			skill=5
-			attack_skill=2
-			defense_skill=6
-			planning_skill=6
-			logistics_skill=2
-			legacy_id=-1
-		}
-	}
-	NOR_henri_winkelman={
-		name="Henri Winkelman"
-		portraits={
-			army={
-				small="GFX_portrait_hol_henri_winkelman_small"
-			}
-			army={
-				large="GFX_portrait_hol_henri_winkelman"
-			}
-		}
-		field_marshal={ #12/12
-			traits={ trait_cautious infantry_leader ambusher scavenger organisational_leader defensive_doctrine  guerilla_fighter }
-			skill=5
-			attack_skill=1
-			defense_skill=7
-			planning_skill=2
-			logistics_skill=6
-			legacy_id=-1
-		}
-	}
-	NOR_jean_de_lattre_de_tassigny={
-		name="Jean de Lattre de Tassigny"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_FRA_jean_de_lattre_de_tassigny.dds"
-			}
-			army={
-				large="gfx/leaders/FRA/Portrait_France_Jean_de_Lattre_de_Tassigny.dds"
-			}
-		}
-		corps_commander={ #15/15
-			traits={ panzer_leader desert_fox panzer_expert hill_fighter expert_improviser }
-			skill=5
-			attack_skill=4
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=5
-			legacy_id=-1
-		}
-	}
-	NOR_philippe_leclerc={
-		name="Philippe Leclerc"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_FRA_philippe_leclerc.dds"
-			}
-			army={
-				large="gfx/leaders/FRA/portrait_france_philippe_leclerc.dds"
-			}
-		}
-		corps_commander={ #15/15
-			traits={ infantry_leader ambusher  fake_skilled_staffer trait_reckless  desert_fox  hill_fighter }
-			skill=5
-			attack_skill=3
-			defense_skill=5
-			planning_skill=3
-			logistics_skill=5
-			legacy_id=-1
-		}
-	}
-	NOR_petrus_wilhelmus_best={
-		name="Petrus Wilhelmus Best"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_HOL_petrus_wilhelmus_best.dds"
-			}
-			army={
-				large="gfx/leaders/HOL/portrait_hol_petrus_wilhelmus_best.dds"
-			}
-		}
-		corps_commander={ #15/15
-			traits={ fake_skilled_staffer organizer infantry_leader ambusher jungle_rat  skirmisher }
-			skill=5
-			attack_skill=4
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=5
-			legacy_id=-1
-		}
-	}
-	NOR_mariepierre_koenig={
-		name="Marie-Pierre Koenig"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_FRA_marie_pierre_koenig.dds"
-			}
-			army={
-				large="gfx/leaders/FRA/portrait_fra_marie_pierre_koenig.dds"
-			}
-		}
-		corps_commander={ #15/15
-			traits={ adaptable panzer_expert trait_engineer panzer_leader }
-			skill=5
-			attack_skill=2
-			defense_skill=3
-			planning_skill=9
-			logistics_skill=2
-			legacy_id=-1
-		}
-	}
-	NOR_antoinemariebenoît_besson={
-		name="Antoine-Marie-Benoît Besson"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_FRA_generic_land_2.dds"
-			}
-			army={
-				large="gfx/leaders/FRA/Portrait_France_Generic_land_2.dds"
-			}
-		}
-		corps_commander={ #15/15
-			traits={ inflexible_strategist cavalry_leader combined_arms_expert  desert_fox ambusher }
-			skill=5
-			attack_skill=3
-			defense_skill=5
-			planning_skill=3
-			logistics_skill=6
-			legacy_id=-1
-		}
-	}
-	NOR_godfried_van_voorst_tot_voorst={
-		name="Godfried van Voorst tot Voorst"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_HOL_godfried_van_voorst_tot_voorst.dds"
-			}
-			army={
-				large="gfx/leaders/HOL/portrait_hol_godfried_van_voorst_tot_voorst.dds"
-			}
-		}
-		corps_commander={ #15/15
-			traits={ brilliant_strategist trait_engineer panzer_leader panzer_expert trait_mountaineer jungle_rat  }
-			skill=5
-			attack_skill=4
-			defense_skill=2
-			planning_skill=4
-			logistics_skill=6
-			legacy_id=-1
-		}
-	}
+	
+	
 	NOR_carl_gustav_fleischer={
 		name="Carl Gustav Fleischer"
 		portraits={
@@ -712,75 +361,36 @@ NOR_dwight_eisenhower={
 			}
 		}
 		corps_commander={ #15/15
-			traits={ infantry_leader infantry_expert trait_mountaineer hill_fighter naval_invader invader_ii organizer }
-			skill=5
-			attack_skill=3
-			defense_skill=2
+			traits={ infantry_leader infantry_expert trait_mountaineer hill_fighter organizer }
+			skill=6
+			attack_skill=6
+			defense_skill=4
 			planning_skill=4
 			logistics_skill=6
 			legacy_id=-1
 		}
 	}
-	NOR_charalambos_katsimitros={
-		name="Charalambos Katsimitros"
+	NOR_carl_gustav_fleischer_AFRICANUS={
+		name="Carl Gustav Fleischer AFRICA"
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_europe_generic_land_4.dds"
 			}
 			army={
-				large="gfx/leaders/GRE/portrait_gre_charalambos_katsimitros.dds"
-			}
-		}
-		corps_commander={  #15/15
-			traits={ infantry_leader infantry_expert swamp_fox trait_mountaineer jungle_rat  organizer }
-			skill=5
-			attack_skill=3
-			defense_skill=3
-			planning_skill=5
-			logistics_skill=5
-			legacy_id=-1
-		}
-	}
-	NOR_henri_giraud={
-		name="Henri Giraud"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_FRA_henri_giraud.dds"
-			}
-			army={
-				large="gfx/leaders/FRA/portrait_france_henri_giraud.dds"
+				large="gfx/leaders/NOR/portrait_norway_carl_gustav_AFRICANUS.tga"
 			}
 		}
 		corps_commander={ #15/15
-			traits={ trait_cautious infantry_leader ambusher  trait_mountaineer hill_fighter commando guerilla_fighter }
-			skill=5
-			attack_skill=3
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=7
+			traits={ infantry_leader infantry_expert trait_mountaineer hill_fighter organizer }
+			skill=6
+			attack_skill=6
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=6
 			legacy_id=-1
 		}
 	}
-	NOR_georges_catroux={
-		name="Georges Catroux"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_FRA_alphonse_joseph_georges.dds"
-			}
-			army={
-				large="gfx/leaders/FRA/Portrait_France_Alphonse_Joseph_Georges.dds"
-			}
-		}
-		corps_commander={ #15/15
-			traits={ fake_skilled_staffer trait_reckless desert_fox infantry_leader trait_mountaineer  infantry_expert }
-			skill=5
-			attack_skill=3
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=7
-			legacy_id=-1
-		}
-	}
+	
 	NOR_adolf_indrebo={
 		advisor={
 			slot = political_advisor
@@ -855,42 +465,7 @@ NOR_dwight_eisenhower={
 			}
 		}
 	}
-	NOR_jacob_ager_laurantzon={
-		name=NOR_jacob_ager_laurantzon
-		portraits={
-			army={
-				large=GFX_portrait_NOR_jacob_ager_laurantzon
-				small=GFX_portrait_NOR_jacob_ager_laurantzon_small
-			}
-		}
-		corps_commander={
-			traits={ trait_reckless }
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=-1
-		}
-	}
-		NOR_jacob_hivden_haug={
-		name=NOR_jacob_hivden_haug
-		corps_commander={
-			traits={ career_officer }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=-1
-		}
-		portraits={
-			army={
-				large="GFX_portrait_NOR_jacob_hvinden_haug"
-				small="GFX_portrait_NOR_jacob_hvinden_haug_small"
-			}
-		}
-	}
+	
 		NOR_rasmus_hatledal={
 		name=NOR_rasmus_hatledal
 		advisor={
@@ -1150,11 +725,33 @@ NOR_dwight_eisenhower={
 			id=-1
 		}
 		field_marshal={ #12.5/12
-			traits={ brilliant_strategist infantry_leader infantry_expert  thorough_planner aggressive_assaulter  }
-			skill=5
-			attack_skill=5
-			defense_skill=3
-			planning_skill=4
+			traits={ brilliant_strategist infantry_leader thorough_planner aggressive_assaulter ambusher hill_fighter organizer logistics_wizard }
+			skill=6
+			attack_skill=4
+			defense_skill=4
+			planning_skill=8
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	NOR_king_haakon_vii_AFRICANUS={
+		name="King Haakon VII AFRICA"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_4.dds"
+			}
+			army={
+				large="gfx/leaders/NOR/portrait_norway_Haakon_vii_AFRICANUS.tga"
+			}
+
+		}
+				
+		field_marshal={ #12.5/12
+			traits={ brilliant_strategist infantry_leader thorough_planner aggressive_assaulter ambusher hill_fighter organizer logistics_wizard }
+			skill=6
+			attack_skill=4
+			defense_skill=4
+			planning_skill=8
 			logistics_skill=4
 			legacy_id=-1
 		}
