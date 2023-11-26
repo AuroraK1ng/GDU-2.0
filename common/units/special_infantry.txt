@@ -10,7 +10,7 @@ sub_units = {
 		special_forces = yes
 		
 		ai_priority = 2
-		priority = 3000
+		priority = 601
 		active = no
 
 		type = {
@@ -43,39 +43,73 @@ sub_units = {
 		breakthrough = 0.20
 	
 		need = {
-			infantry_equipment = 300
+			infantry_equipment = 250
 		}
-
 		desert = {
 			movement = 0.2
 		}
 
-		marsh = {
-			attack = 0.05
-			movement = 0.05
-		}
 		forest = {
-			attack = 0.05
-			defence = 0.05
+			attack = 0.75
+			defence = 0.75
+			movement = 0.2
+		}
+		hills = {
+			movement = 0.1
+		}
+		mountain = {
+			movement = 0.1
+		}
+		gibraltar = {
 			movement = 0.05
+		}		
+		marsh = {
+			attack = 0.075
+			defence = 0.75
+			movement = 0.15
+		}
+		plains = {
+			movement = 0.30
+		}
+		urban = {
+			movement = 0.2
+		}
+		river = {
+			movement = -0.05
 		}
 		amphibious = {
+			movement = -0.05
 			attack = 0.2
-		}			
+		}
+		jungle = {
+			movement = 0.1
+		}
 		
-
 		desert_africa = {
 			movement = 0.2
 		}
 
-		marsh_africa = {
-			attack = 0.05
-			movement = 0.05
-		}
 		forest_africa = {
-			attack = 0.05
-			defence = 0.05
-			movement = 0.05
+			attack = 0.75
+			defence = 0.75
+			movement = 0.2
+		}
+		hills_africa = {
+			movement = 0.1
+		}
+		mountain_africa = {
+			movement = 0.1
+		}
+		marsh_africa = {
+			attack = 0.075
+			defence = 0.75
+			movement = 0.15
+		}
+		plains_africa = {
+			movement = 0.30
+		}
+		urban_africa = {
+			movement = 0.2
 		}	
 	}
 	
@@ -85,7 +119,7 @@ sub_units = {
 		special_forces = yes
 		
 		ai_priority = 2
-		priority = 3000
+		priority = 601
 		active = no
 
 		type = {
@@ -118,34 +152,72 @@ sub_units = {
 		breakthrough = 0.20
 	
 		need = {
-			infantry_equipment = 300
+			infantry_equipment = 250
 		}
-
 		desert = {
 			movement = 0.2
 		}
 
-		jungle = {
-			attack = 0.075
-			defence = 0.05
+		forest = {
+			movement = 0.10
+		}
+		hills = {
 			movement = 0.1
+		}
+		mountain = {
+			movement = 0.1
+		}
+		gibraltar = {
+			movement = 0.05
+		}		
+		marsh = {
+			movement = 0.05
+		}
+		plains = {
+			movement = 0.30
+		}
+		urban = {
+			movement = 0.2
 		}
 		river = {
 			movement = 0.1
 		}
 		amphibious = {
+			movement = -0.05
 			attack = 0.2
 		}
-
-
+		jungle = {
+			attack = 0.075
+			defence = 0.075
+			movement = 0.25
+		}
+		
 		desert_africa = {
 			movement = 0.2
 		}
 
+		forest_africa = {
+			movement = 0.10
+		}
+		hills_africa = {
+			movement = 0.1
+		}
+		mountain_africa = {
+			movement = 0.1
+		}
+		marsh_africa = {
+			movement = 0.05
+		}
+		plains_africa = {
+			movement = 0.30
+		}
+		urban_africa = {
+			movement = 0.2
+		}
 		jungle_africa = {
 			attack = 0.075
-			defence = 0.05
-			movement = 0.1
+			defence = 0.075
+			movement = 0.25
 		}
 	}
 	
@@ -155,7 +227,7 @@ sub_units = {
 		special_forces = yes
 		
 		ai_priority = 50
-		priority = 3000
+		priority = 601
 		active = no
 
 		type = {
@@ -191,37 +263,75 @@ sub_units = {
 		breakthrough = 0.2 
 	
 		need = {
-			infantry_equipment = 300
+			infantry_equipment = 250
 		}
-
 		desert = {
 			movement = 0.2
 		}
 
+		forest = {
+			movement = 0.10
+		}
+		hills = {
+			movement = 0.1
+		}
+		mountain = {
+			movement = 0.1
+		}
+		gibraltar = {
+			movement = 0.05
+		}		
+		marsh = {
+			movement = 0.05
+		}
+		plains = {
+			movement = 0.30
+		}
 		urban = {
 			attack = 0.15
-			movement = 0.1
-			defence = 0.1
+			movement = 0.3
+			defence = 0.10
 			#Please dont use these to guard coastal urban tiles or I will take this away
 		}
-		fort = {
-			attack = 0.15
-			movement = 0.1
+		river = {
+			movement = -0.05
 		}
 		amphibious = {
+			movement = -0.05
 			attack = 0.2
 		}
-		
+		jungle = {
+			movement = 0.1
+		}
 		
 		desert_africa = {
 			movement = 0.2
 		}
 
+		forest_africa = {
+			movement = 0.10
+		}
+		hills_africa = {
+			movement = 0.1
+		}
+		mountain_africa = {
+			movement = 0.1
+		}
+		marsh_africa = {
+			movement = 0.05
+		}
+		plains_africa = {
+			movement = 0.30
+		}
 		urban_africa = {
 			attack = 0.15
-			movement = 0.1
-			defence = 0.1
+			movement = 0.3
+			defence = 0.10
 			#Please dont use these to guard coastal urban tiles or I will take this away
+		}
+		fort = {
+			attack = 0.15
+			movement = 0.1
 		}
 	}
 	
@@ -231,7 +341,7 @@ sub_units = {
 		special_forces = yes
 		
 		ai_priority = 2
-		priority = 3000
+		priority = 601
 		active = no
 
 		type = {
@@ -264,23 +374,69 @@ sub_units = {
 		breakthrough = 0.20
 	
 		need = {
-			infantry_equipment = 300
+			infantry_equipment = 250
 		}
-
 		desert = {
 			attack = 0.075
 			defence = 0.075
-			movement = 0.35
+			movement = 0.4
+		}
+
+		forest = {
+			movement = 0.10
+		}
+		hills = {
+			movement = 0.1
+		}
+		mountain = {
+			movement = 0.1
+		}
+		gibraltar = {
+			movement = 0.05
+		}		
+		marsh = {
+			movement = 0.05
+		}
+		plains = {
+			movement = 0.30
+		}
+		urban = {
+			movement = 0.2
+		}
+		river = {
+			movement = -0.05
+		}
+		amphibious = {
+			attack = 0.2
+			movement = -0.05
+		}
+		jungle = {
+			movement = 0.1
 		}
 		
 		desert_africa = {
 			attack = 0.075
 			defence = 0.075
-			movement = 0.35
+			movement = 0.4
 		}
-		
-		amphibious = {
-			attack = 0.2
+
+		forest_africa = {
+			movement = 0.10
+		}
+		hills_africa = {
+			movement = 0.1
+		}
+		mountain_africa = {
+			movement = 0.1
+		}
+		marsh_africa = {
+			movement = 0.05
+		}
+		plains_africa = {
+			movement = 0.30
+		}
+		urban_africa = {
+			movement = 0.2
 		}
 	}
 }
