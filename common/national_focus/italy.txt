@@ -1165,7 +1165,7 @@ focus_tree = {
 	focus = {
 		id = ITA_Duce
     	icon = GFX_ITA_Duce_scream
-		text = "II Duce Supremo"
+		text = "Duce Supremo"
 		prerequisite = { focus = ITA_special_forces }
 		prerequisite = { focus = ITA_Blackshirts }
 		x = 6
@@ -1254,20 +1254,6 @@ focus_tree = {
 				bonus = 1.00
 				uses = 1
 				category = infantry_weapons
-			}
-			add_tech_bonus = {
-				name = Africa_Lesson
-				bonus = 1.00
-				uses = 1
-				category = cat_special_forces_generic
-
-			}
-			add_tech_bonus = {
-				name = Africa_Lesson
-				bonus = 1.00
-				uses = 1
-				category = support_tech
-
 			}
 			add_tech_bonus = {
 				name = Africa_Lesson
@@ -2079,7 +2065,7 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		x = 18
+		x = 19
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -2097,13 +2083,12 @@ focus_tree = {
 	focus = {
 		id = ITA_slovenia_dalmatia_claims
 		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = ITA_albania_war_goal }
 		available = {
 			GER = { has_completed_focus = GER_danzig_or_war }
 			ITA = { has_war_with = ENG }
 		}
-		x = 19
-		y = 2
+		x = 10
+		y = 6
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -2126,7 +2111,7 @@ focus_tree = {
 		id = ITA_bulgaria_friend
 		icon = GFX_goal_ita_befriend_bulg
 		prerequisite = { focus = ITA_albania_war_goal }
-		x = 17
+		x = 16
 		y = 2
 		cost = 5
 		ai_will_do = {
@@ -2166,7 +2151,7 @@ focus_tree = {
 		id = ITA_albania_war_goal
 		icon = GFX_Noras_albania
 		prerequisite = { focus = ITA_victoryinETH }
-		x = 18
+		x = 19
 		y = 1
 
 		available = {
@@ -2205,7 +2190,191 @@ focus_tree = {
 			add_named_threat = { threat = 2 name = Albania_Annexation }
 		}
 	}
+	focus = {
+		id = ITA_africa_corps
+		text = "Africa Corps Improvement"
+		icon = GFX_ITA_panzerIV
+		prerequisite = { focus = ITA_albania_war_goal }
+		x = 18
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
 
+		available_if_capitulated = yes
+
+		completion_reward = {
+		663  = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+			}	
+		451  = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+			}
+		add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = cat_armored_cars
+			}
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				technology = desertinfantry_at2
+				technology = desertinfantry_at3
+			}	
+		}
+	}
+	focus = {
+		id = ITA_africa_corps_to
+		text = "Italian-German Corps"
+		icon = GFX_focus_ITA_africa_corp
+		prerequisite = { focus = ITA_africa_corps }
+		x = 18
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_tech_bonus = {
+				name = Africa_Lesson
+				bonus = 1.00
+				uses = 1
+				category = cat_special_forces_generic
+
+			}
+			add_tech_bonus = {
+				name = Africa_Lesson
+				bonus = 1.00
+				uses = 2
+				category = support_tech
+
+			}	
+		}
+	}
+	
+	focus = {
+		id = ITA_eulogising_duce
+		text = "Eulogising The Duce"
+		icon = GFX_ITA_Duce_scream
+		prerequisite = { focus = ITA_albania_war_goal }
+		x = 20
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1	
+			
+		}
+	}
+	focus = {
+		id = ITA_Outreach_to_the_younger_generation
+		text = "Outreach To The Younger Generation"
+		icon = GFX_Italian_Soldiers
+		prerequisite = { focus = ITA_eulogising_duce }
+		x = 20
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			add_ideas = ITA_Younger_Generation
+			
+		}
+	}
+	focus = {
+		id = ITA_join_ita_navy
+		text = "An Appeal To Join The Italian Navy"
+		icon = GFX_ITA_New_dockyards
+		prerequisite = { focus = ITA_albania_war_goal }
+		x = 22
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 100
+			add_tech_bonus = {
+				bonus = 1.00
+				uses = 2
+				category = ship_modules_tech
+			}
+			add_tech_bonus = {
+				bonus = 1.00
+				uses = 1
+				category = tp_tech
+			}
+			159 = {
+				add_resource = {
+					type = chromium
+					amount = 20
+				}
+			}
+		}
+	}
+	focus = {
+		id = ITA_imc_improve
+		text = "Italian Marine Corps Improvement"
+		icon = GFX_focus_ITA_stato_maggiore_italiano
+		prerequisite = { focus = ITA_join_ita_navy }
+		x = 22
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 100
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				technology = infantry_at
+				technology = infantry_at2
+			}
+			add_tech_bonus = {
+				bonus = 1.00
+				uses = 1
+				technology = survival_training
+				technology = elite_forces
+			}
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				technology = marines2
+				technology = marines3
+			}
+		}
+	}
+	
 	focus = {
 		id = ITA_pact_of_steel
 		icon = GFX_Noras_pactofsteel
@@ -2218,7 +2387,7 @@ focus_tree = {
 				country_exists = GER
 			}
 		}
-		x = 17
+		x = 16
 		y = 3
 		cost = 1
 		ai_will_do = {
@@ -2253,7 +2422,6 @@ focus_tree = {
 	focus = {
 		id = ITA_greece_war_goal
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		prerequisite = { focus = ITA_pact_of_steel }
 		available = {
 			GER = { has_completed_focus = GER_danzig_or_war }
 			ITA = { has_war_with = ENG }
@@ -2262,8 +2430,8 @@ focus_tree = {
 			NOT = { country_exists = GRE }
 		}		
 		will_lead_to_war_with = GRE
-		x = 19
-		y = 4
+		x = 12
+		y = 6
 		cost = 5
 		ai_will_do = {
 			factor = 10
