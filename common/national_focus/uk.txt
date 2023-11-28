@@ -4076,8 +4076,9 @@ focus = {
 
 	focus = {
 		id = ENG_norwegian_intervention
+		text = "Annex Faroe Islands"
 		available = {
-			GER = { has_war_with = ENG }
+			337 = { is_owned_and_controlled_by = NOR }
 			NOR = { is_ai = yes }
 			date > 1940.6.1
 		}
@@ -4095,7 +4096,7 @@ focus = {
 			factor = 1
 		}
 		completion_reward = {
-			annex_country = { target = NOR transfer_troops = no }
+			transfer_state = 337
 		}
 	}
 
