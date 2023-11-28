@@ -189,7 +189,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				planning_speed = 0.1
-				training_time_factor = -0.1
+				#training_time_factor = -0.1
 				max_planning = 0.05
 			}
 		}
@@ -242,6 +242,20 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				conscription = 0.02
+			}
+		}
+		ITA_Younger_Generation = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				conscription_factor = 0.05
+				training_time_factor = 0.05
 			}
 		}
 		vittoria_mutilata = {

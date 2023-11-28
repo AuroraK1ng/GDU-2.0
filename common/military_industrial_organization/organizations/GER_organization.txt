@@ -91,6 +91,8 @@ GER_man_organization = {
 		name = GER_mio_trait_hotrolled_armor
 		icon = GFX_generic_mio_department_icon_tank_general_technology
 		special_trait_background = yes
+		
+		mutually_exclusive = { generic_mio_trait_high_explosive_shells }
 
 		equipment_bonus = {
 			soft_attack = 0.2
@@ -143,6 +145,25 @@ GER_man_organization = {
 			soft_attack = -0.1
 			hard_attack = 0.75
 			build_cost_ic = -0.1
+		}
+	}
+	add_trait = {
+		token = generic_mio_trait_high_explosive_shells
+		name = generic_mio_trait_high_explosive_shells
+		icon = GFX_generic_mio_department_icon_tank_general_weapons
+		
+		available = { #Two FROM blocs to provide two different check marks in the UI
+			FROM = {
+				has_completed_focus = GER_Mechanise_the_Army
+			}
+		}
+		
+		mutually_exclusive = { GER_mio_trait_hotrolled_armor }
+		
+		position = { x=7 y=0 }
+		
+		equipment_bonus = {
+			ap_attack = 0.1
 		}
 	}
 }
