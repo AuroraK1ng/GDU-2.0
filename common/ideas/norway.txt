@@ -48,6 +48,9 @@ hidden_ideas = {
 				industrial_capacity_dockyard = -1.2
 				production_speed_naval_base_factor = -1.2
 			}
+			research_bonus = {
+				land_doctrine = -0.25
+			}
 		}
 		nor_bad_debuffs1 = {
 			picture = chi_army_corruption
@@ -66,6 +69,42 @@ hidden_ideas = {
 				army_attack_factor = -0.3
 				army_defence_factor = -0.3
 				army_org_factor = -0.3
+			}
+		}
+		nor_debuffs_aftercap = {
+			picture = chi_army_corruption
+			modifier = {
+				army_org_factor = -0.15
+				War_support_factor = -0.20
+				consumer_goods_expected_value = 0.2
+				industrial_capacity_factory = -0.2
+			}
+			research_bonus = {
+				land_doctrine = -0.15
+			}
+		}
+		nor_debuffs_aftercap_1 = {
+			picture = chi_army_corruption
+			modifier = {
+				army_org_factor = -0.15
+				consumer_goods_expected_value = 0.2
+				industrial_capacity_factory = -0.2
+			}
+			research_bonus = {
+				land_doctrine = -0.15
+			}
+		}
+		nor_debuffs_aftercap_2 = {
+			picture = chi_army_corruption
+			modifier = {
+				consumer_goods_expected_value = 0.2
+				industrial_capacity_factory = -0.2
+			}
+		}
+		nor_debuffs_aftercap_3 = {
+			picture = chi_army_corruption
+			modifier = {
+				industrial_capacity_factory = -0.2
 			}
 		}
 		NOR_spec_ops = {
@@ -131,8 +170,8 @@ hidden_ideas = {
 		NOR_crofter = {
 			picture = generic_victors_of_ww1
 			modifier = {
-				army_core_attack_factor = 0.1
-				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
 				amphibious_invasion = 0.2
 			}
 		}
@@ -141,8 +180,8 @@ hidden_ideas = {
 			modifier = {
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.05
-				War_support_factor = 0.5
-				stability_factor = 0.5
+				War_support_factor = 0.20
+				stability_factor = 0.20
 			}
 		}
 	}
