@@ -112,21 +112,21 @@ political_actions = {
 #bloat
 
 NOR_sudoku = {
-		icon = border_war
-		allowed = {	
-			original_tag = NOR
+	icon = border_war
+	allowed = {	
+		original_tag = NOR
+	}
+	visible = {
+		NOR = { has_war = yes }
+	}
+	available = { 
+		controls_state = 110 
+		NOT = {
+			has_idea = nor_bad_debuffs
 		}
-		visible = {
-			NOR = { has_war = yes }
-		}
-		available = { 
-			controls_state = 110 
-			NOT = {
-				has_idea = nor_bad_debuffs
-			}
-		}
-		fire_only_once = yes
-		cost = 0
+	}
+	fire_only_once = yes
+	cost = 0
 	complete_effect = {
 		GER = { transfer_state = 110 }
 		GER = { transfer_state = 142 }

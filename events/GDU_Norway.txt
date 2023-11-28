@@ -1,0 +1,16 @@
+add_namespace = gdunorway
+
+country_event = {
+	id = gdunorway.1
+	title = gdunorway.10.t
+	desc = gdunorway.10.d
+	picture = GFX_report_event_canadian_soldiers
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		NOR = {	set_equipment_fraction = 0.0 }
+	}
+	option = {
+		name = gdunorway.10.a
+	}
+}

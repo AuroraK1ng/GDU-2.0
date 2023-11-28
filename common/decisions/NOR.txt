@@ -1,6 +1,5 @@
-
 foreign_politics = {
-nor_Defence = {
+	nor_Defence = {
 		icon = generic_operation
 
 		allowed = {
@@ -32,19 +31,19 @@ nor_Defence = {
 			tag = NOR
 		}
 
-		 timeout_effect = {
+		timeout_effect = {
 			110 = { 
-						remove_building = {
-							type = arms_factory
-							level = 1
-						}
-					}
+				remove_building = {
+					type = arms_factory
+					level = 1
+				}
+			}
 			110 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 1
-						}
-					}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
 			337 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -58,9 +57,7 @@ nor_Defence = {
 					instant_build = yes
 				}
 			}
-		}
-		 
-			
+		}		
 	}
 	nor_Defence_1 = {
 		icon = generic_operation
@@ -94,28 +91,21 @@ nor_Defence = {
 		}
 
 		timeout_effect = {
-		NOR = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 10000 producer = NOR } }
-		if = {
-				limit = {
-					has_idea = nor_bad_debuffs2
+			NOR = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 10000 producer = NOR } }
+			110 = { 
+				remove_building = {
+					type = arms_factory
+					level = 1
 				}
-				remove_ideas = nor_bad_debuffs2
 			}
-			add_ideas = nor_bad_debuffs1
 			110 = { 
-						remove_building = {
-							type = arms_factory
-							level = 1
-						}
-					}
-			110 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 1
-						}
-					}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
 			337 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 1
@@ -127,8 +117,7 @@ nor_Defence = {
 					instant_build = yes
 				}
 			}
-		}
-			
+		}	
 	}
 	nor_Defence_2 = {
 		icon = generic_operation
@@ -161,28 +150,18 @@ nor_Defence = {
 		}
 
 		timeout_effect = {
+		NOR = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 10000 producer = NOR } }
 			142 = { 
-						remove_building = {
-							type = arms_factory
-							level = 1
-						}
-					}
-			142 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 1
-						}
-					}
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
 			337 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -204,8 +183,7 @@ nor_Defence = {
 					has_full_control_of_state = 110
 				}
 			}
-		}
-		 
+		}		 
 
 		fire_only_once = yes
 
@@ -220,31 +198,36 @@ nor_Defence = {
 			has_war_with = GER
 		}
 		timeout_effect = {
+			NOR = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 10000 producer = NOR } }
+			144 = { 
+				remove_building = {
+					type = arms_factory
+					level = 1
+				}
+			}
 			143 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
 			337 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
-		if = {
-				limit = {
-					has_idea = nor_bad_debuffs1
-				}
-				remove_ideas = nor_bad_debuffs1
-			}
-			add_ideas = nor_bad_debuffs
 			add_ideas = NOR_spec_ops_1
 		}
 	}
-		nor_Defence_4 = {
+	nor_Defence_4 = {
 		icon = generic_operation
 
 		allowed = {
@@ -275,12 +258,13 @@ nor_Defence = {
 		}
 
 		timeout_effect = {
+			NOR = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 10000 producer = NOR } }
 			143 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
 			337 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -323,22 +307,80 @@ nor_Defence = {
 		}
 
 		timeout_effect = {
-		337 = {
+			NOR = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 10000 producer = NOR } }
+			144 = { 
+				remove_building = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			143 = { 
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			337 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = NOR_spec_ops_2
+		}
+	}
+	nor_Defence_6 = {
+		icon = generic_operation
+
+		allowed = {
+			tag = NOR
+		}
+		days_mission_timeout = 50
+		available = {
+			NOT = {
+				NOR = { is_ai = yes } 
+				NOR = {
+					has_full_control_of_state = 110
+				}
+			}
+		}
+		activation = {
+			has_war_with = GER
+		}
+
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		visible = {
+			tag = NOR
+		}
+
+		timeout_effect = {
+			337 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
-			}
-		if = {
-				limit = {
-					has_idea = nor_bad_debuffs
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
-				remove_ideas = nor_bad_debuffs
 			}
-			add_ideas = nor_bad_debuffs0
-			add_ideas = NOR_spec_ops_2
+			GDU_script_norway_cap = yes 
 		}
 	}
 }

@@ -10,8 +10,10 @@ GDU_script_norway_cap = {
 		if = { 
 			limit = { 
 				NOR = { is_ai = yes  }
-			} 
-			annex_country = { target = NOR } 
+			}
+			NOR =  { 
+				set_country_flag = norway_just_capped 
+			}
 			337 = { 
 				add_building_construction = { 
 					type = arms_factory 
@@ -32,10 +34,9 @@ GDU_script_norway_cap = {
 			set_capital = { state = 337 }
 			swap_ideas = {
 				remove_idea = nor_bad_debuffs2
-				remove_idea = nor_bad_debuffs1
-				remove_idea = nor_bad_debuffs
-				add_idea = nor_bad_debuffs0
+				add_idea = nor_bad_debuffs1
 			}
+			add_ideas = nor_debuffs_aftercap
 		} 
 			if = { 
 				limit = { 
@@ -43,7 +44,11 @@ GDU_script_norway_cap = {
 				} 
 				ENG = { 
 					add_to_faction = NOR 
-					puppet = NOR 
+					set_autonomy = {
+						target = NOR
+						autonomous_state = autonomy_dominion
+						freedom_level = 0.4
+					} 
 				}
 			}
 		}

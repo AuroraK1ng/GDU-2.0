@@ -122,7 +122,7 @@
 		}
 	}
 	focus = {
-		id = NOR_UK_expirience
+		id = NOR_UK_Experience
 		Text = "Adopt British Experience"
 		icon = GFX_AST_British_experience
 		prerequisite = { focus = NOR_research_slot }
@@ -563,7 +563,7 @@
 		id = NOR_American_machines
 		icon = GFX_military_construction
 		prerequisite = { focus = NOR_Industry_factories }
-		text = "American machines"
+		text = "American Machines"
 		x = 1
 		y = 1
 		relative_position_id = NOR_Industry_factories
@@ -777,7 +777,7 @@
 		text = "Treaty With The British Armourers"
 		available = {
 			NOR = {
-				has_completed_focus = NOR_UK_expirience
+				has_completed_focus = NOR_UK_Experience
 			}
 		}
 		
@@ -918,7 +918,8 @@
 			factor = 1
 		}
 		available = {
-		has_war = yes
+			has_war = yes
+			has_country_flag = norway_just_capped 
 		}
 		available_if_capitulated = yes
 		completion_reward = { 
@@ -1001,39 +1002,16 @@
 			factor = 1
 		}
 		completion_reward = {
-		if = {
-				limit = {
-					has_idea = nor_bad_debuffs2
-				}
-				remove_ideas = nor_bad_debuffs2
-			}
-		if = {
-				limit = {
-					has_idea = nor_bad_debuffs
-				}
-				remove_ideas = nor_bad_debuffs
-			}
-		if = {
-				limit = {
-					has_idea = nor_bad_debuffs1
-				}
-				remove_ideas = nor_bad_debuffs1
-			}
-			add_ideas = nor_debuffs_aftercap
-			if = {
-				limit = {
-					NOT = {
-						has_idea = nor_bad_debuffs0
-						}
-				}
-				add_ideas = nor_bad_debuffs0
+			swap_ideas = {
+				remove_idea = nor_bad_debuffs1
+				add_idea = nor_bad_debuffs0
 			}
 		}
 	}
 	focus = {
-		id = NOR_UK_commands
-		Text = "British Commanders"
-		icon = GFX_AST_British_experience
+		id = NOR_Army_propaganda
+		Text = "Army Propaganda"
+		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = Nor_Grandsons_Vikings }
 		x = 1
 		y = 1
@@ -1044,9 +1022,10 @@
 		}
 		
 		completion_reward = { 
-			add_war_support = 0.10
-			add_ideas = NOR_spec_ops
-		
+			swap_ideas = {
+				remove_idea = nor_debuffs_aftercap
+				add_idea = nor_debuffs_aftercap_1
+			}
 		}
 	}
 	focus = {
@@ -1084,10 +1063,10 @@
 		id = NOR_UK_training
 		Text = "Army Training Treaty"
 		icon = GFX_focus_chi_british_cooperation
-		prerequisite = { focus = NOR_UK_commands }
+		prerequisite = { focus = NOR_Army_propaganda }
 		x = 1
 		y = 1
-		relative_position_id = NOR_UK_commands
+		relative_position_id = NOR_Army_propaganda
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -1095,19 +1074,19 @@
 		
 		completion_reward = { 
 			swap_ideas = {
-					remove_idea = nor_debuffs_aftercap_1
-					add_idea = nor_debuffs_aftercap_2
-				}
+				remove_idea = nor_debuffs_aftercap_1
+				add_idea = nor_debuffs_aftercap_2
+			}
 		}
 	}
 	focus = {
 		id = NOR_africa_warfare
 		Text = "Africa Warfare"
 		icon = GFX_AST_Promote
-		prerequisite = { focus = NOR_UK_commands focus = NOR_Modern_warfare }
+		prerequisite = { focus = NOR_Army_propaganda focus = NOR_Modern_warfare }
 		x = -1
 		y = 1
-		relative_position_id = NOR_UK_commands
+		relative_position_id = NOR_Army_propaganda
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -1122,11 +1101,10 @@
 			}	
 		}
 	}
-	
 	focus = {
-		id = NOR_Army_propaganda
-		Text = "Army Propaganda"
-		icon = GFX_goal_generic_propaganda
+		id = NOR_UK_commands
+		Text = "British Commanders"
+		icon = GFX_AST_British_experience
 		prerequisite = { focus = NOR_Modern_warfare }
 		x = -1
 		y = 1
@@ -1137,21 +1115,20 @@
 		}
 		
 		completion_reward = { 
-			swap_ideas = {
-					remove_idea = nor_debuffs_aftercap
-					add_idea = nor_debuffs_aftercap_1
-				}
+			add_war_support = 0.10
+			add_ideas = NOR_spec_ops
+		
 		}
 	}
 	focus = {
 		id = NOR_Allied_aid
 		Text = "Allied Aid"
 		icon = GFX_america_goal_american_industry
-		prerequisite = { focus = NOR_Army_propaganda }
+		prerequisite = { focus = NOR_UK_commands }
 		prerequisite = { focus = NOR_UK_training }
 		x = -1
 		y = 2
-		relative_position_id = NOR_UK_commands
+		relative_position_id = NOR_Army_propaganda
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -1170,8 +1147,6 @@
 		Text = "Unite a Nation"
 		icon = GFX_focus_generic_support_the_left_right
 		prerequisite = { focus = NOR_Allied_aid }
-		prerequisite = { focus = NOR_Army_propaganda }
-		prerequisite = { focus = NOR_UK_training }
 		x = 0
 		y = 1
 		relative_position_id = NOR_Allied_aid

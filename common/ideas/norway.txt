@@ -3,7 +3,7 @@ ideas = {
 hidden_ideas = { 
 	GDU_NOR_Cap = {
 	  available = { NOT = { surrender_progress > 0.25 }}
-	  on_remove ={ GDU_script_norway_cap = yes }
+	  on_remove = { GDU_script_norway_cap = yes }
 	}
 }
 
@@ -31,8 +31,8 @@ hidden_ideas = {
 		nor_bad_debuffs0 = {
 			picture = generic_disjointed_gov
 			modifier = {
-				army_core_attack_factor = -0.8
-				army_core_defence_factor = -0.8
+				army_core_attack_factor = -0.2
+				army_core_defence_factor = -0.2
 				war_support_factor = -0.05
 			}
 		}
@@ -104,7 +104,7 @@ hidden_ideas = {
 		nor_debuffs_aftercap_3 = {
 			picture = chi_army_corruption
 			modifier = {
-				industrial_capacity_factory = -0.2
+				industrial_capacity_factory = -0.1
 			}
 		}
 		NOR_spec_ops = {
