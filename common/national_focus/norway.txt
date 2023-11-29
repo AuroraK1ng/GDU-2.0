@@ -3,7 +3,7 @@
 
 	country = {
 		factor = 0
- modifier = {
+		modifier = {
 			add = 10
 			tag = NOR
 			
@@ -123,7 +123,6 @@
 	}
 	focus = {
 		id = NOR_UK_Experience
-		Text = "Adopt British Experience"
 		icon = GFX_AST_British_experience
 		prerequisite = { focus = NOR_research_slot }
 		x = 0
@@ -540,7 +539,6 @@
 	}
 	focus = {
 		id = NOR_invest_mil
-		Text = "Military Investment From UK"
 		icon = GFX_AST_factories
 		prerequisite = { focus = NOR_Industry_factories }
 		x = -1
@@ -983,7 +981,6 @@
 	}
 	focus = {
 		id = Nor_Grandsons_Vikings
-		text = "Grandsons Of The Vikings"
 		available = {
 		NOT ={
 		NOR = {
@@ -1205,6 +1202,43 @@
 			add_ideas = NOR_army_buffs		
 		}
 	}
+	focus = {
+		id = NOR_synthetic_rubber
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = Nor_Bofors }
+		x = 0
+		y = 1
+		relative_position_id = Nor_Bofors
+		cost = 10
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			has_war_with = JAP
+		}
+
+		completion_reward = {
+			#modify_building_resources = {
+        	#   building = synthetic_refinery
+        	#   resource = oil
+        	#   amount = -2
+        	#}
+			swap_ideas = {
+				remove_idea = GDU_refinery_prebuild_disincentive
+				add_idea = ENG_synthetic_rubber
+			}
+			add_tech_bonus = {
+				name = eng_rubber
+				bonus = 1
+				uses = 1
+				technology = rubber_processing
+				technology = improved_rubber_processing
+				technology = advanced_rubber_processing
+				technology = modern_rubber_processing
+			}
+		}
+	}	
 	focus = {
 		id = Nor_army_tactics
 		text = "New Army Tactics"
