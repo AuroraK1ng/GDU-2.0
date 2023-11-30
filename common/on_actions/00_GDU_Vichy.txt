@@ -50,8 +50,15 @@ on_actions = {
 			
 			if = {
 				limit = {
-					NOR = {
-						has_country_flag = norway_just_capped 
+					AND = {
+						NOT ={
+							NOR = {
+								has_country_flag = norway_just_capped 
+							}
+						}
+						NOR = {
+							has_full_control_of_state = 110
+						}
 					}
 				}
 				NOR = {	set_equipment_fraction = 0.0 }

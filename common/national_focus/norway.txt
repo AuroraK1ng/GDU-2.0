@@ -982,11 +982,7 @@
 	focus = {
 		id = Nor_Grandsons_Vikings
 		available = {
-		NOT ={
-		NOR = {
-				has_full_control_of_state = 110
-			}	
-		}
+
 		}
 		available_if_capitulated = yes
 		prerequisite = { focus = NOR_army }
@@ -1133,10 +1129,9 @@
 		
 		completion_reward = { 
 			swap_ideas = {
-					remove_idea = nor_debuffs_aftercap_2
-					add_idea = nor_debuffs_aftercap_3
-				}
-		
+				remove_idea = nor_debuffs_aftercap_2
+				add_idea = nor_debuffs_aftercap_3
+			}	
 		}
 	}
 	focus = {
@@ -1155,8 +1150,11 @@
 		date > 1942.1.1	
 		}
 		completion_reward = { 
-				add_stability = 0.10
-				remove_ideas = nor_debuffs_aftercap_3
+			add_stability = 0.10
+			swap_ideas = {
+				remove_idea = nor_debuffs_aftercap_3
+				add_idea = nor_debuffs_aftercap_4
+			}	
 		}
 	}
 	focus = {
