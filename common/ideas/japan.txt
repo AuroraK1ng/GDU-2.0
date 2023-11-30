@@ -179,7 +179,8 @@ ideas = {
 			removal_cost = -1
 			picture = generic_navy_carrier_bonus
 			modifier = {
-				sortie_efficiency = 0.1
+				#sortie_efficiency = 0.1
+				naval_strike_attack_factor = 0.1 # Was 0, Sortie efficiency broken. revert when fixed.
 			}
 		}
 		JAP_zaibatsus = {
@@ -1131,8 +1132,8 @@ ideas = {
 			removal_cost = -1
 			picture = generic_navy_carrier_bonus
 			modifier = {
-				sortie_efficiency = 0.2
-				naval_strike_attack_factor = 0.12
+				#sortie_efficiency = 0.2
+				naval_strike_attack_factor = 0.25 # Was 0.12, Sortie efficiency broken. revert when fixed.
 				naval_strike_targetting_factor = 0.12
 				naval_strike_agility_factor = 0.12
 				navy_screen_attack_factor = 0.2
