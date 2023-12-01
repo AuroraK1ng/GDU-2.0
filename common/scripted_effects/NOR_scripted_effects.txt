@@ -11,8 +11,19 @@ GDU_script_norway_cap = {
 			limit = { 
 				NOR = { is_ai = yes  }
 			}
+			NOR = {	set_equipment_fraction = 0.0 }
+			NOR = {	set_equipment_fraction = 0.0 }
+			NOR = {	set_equipment_fraction = 0.0 }
+			NOR = {	set_equipment_fraction = 0.0 }
+			NOR = {	set_equipment_fraction = 0.0 }
 			NOR =  { 
-				set_country_flag = norway_just_capped 
+				set_country_flag = norway_just_capped
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 20000 producer = NOR } 
+				add_equipment_to_stockpile = { type = support_equipment amount = 1000 producer = NOR } 
+				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 2500 producer = NOR }
+				add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 2000 producer = NOR }
+				add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 1000 producer = NOR }
+				add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 500 producer = NOR }				
 			}
 			337 = { 
 				add_building_construction = { 
@@ -28,7 +39,12 @@ GDU_script_norway_cap = {
 				add_extra_state_shared_building_slots = 4 
 			}  
 		}  
-		if = { limit = { NOR = {is_ai = no }} 
+		if = { limit = { NOR = {is_ai = no }}
+		NOR = {	set_equipment_fraction = 0.0 }
+		NOR = {	set_equipment_fraction = 0.0 }
+		NOR = {	set_equipment_fraction = 0.0 }
+		NOR = {	set_equipment_fraction = 0.0 }
+		NOR = {	set_equipment_fraction = 0.0 }		
 		NOR =  { 
 			set_country_flag = norway_just_capped 
 			set_capital = { state = 337 }
@@ -37,6 +53,16 @@ GDU_script_norway_cap = {
 				add_idea = nor_bad_debuffs1
 			}
 			add_ideas = nor_debuffs_aftercap
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 20000 producer = NOR } 
+			add_equipment_to_stockpile = { type = support_equipment amount = 1000 producer = NOR } 
+			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 2500 producer = NOR }
+			add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 2000 producer = NOR }
+			add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 1000 producer = NOR }
+			add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 500 producer = NOR }
+			add_timed_idea = {
+				idea = FRA_retrain days = 30
+				idea = FRA_efficiency_gain days = 30						
+			}
 		} 
 			if = { 
 				limit = { 
@@ -52,6 +78,18 @@ GDU_script_norway_cap = {
 				}
 			}
 		}
-		GER = { transfer_state = 144 transfer_state = 142 transfer_state = 110 transfer_state = 143 transfer_state = 790 }					
+		GER = { 
+			transfer_state = 144 
+			transfer_state = 142 
+			transfer_state = 110 
+			transfer_state = 143 
+			transfer_state = 790 
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 20000 producer = GER } 
+			add_equipment_to_stockpile = { type = support_equipment amount = 1000 producer = GER } 
+			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 2500 producer = GER }
+			add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 2000 producer = GER }
+			add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 1000 producer = GER }
+			add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 500 producer = GER }	
+		}					
 	}
 }

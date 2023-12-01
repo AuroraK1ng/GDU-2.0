@@ -50,46 +50,6 @@ on_actions = {
 			
 			if = {
 				limit = {
-					AND = {
-						NOT ={
-							NOR = {
-								has_country_flag = norway_just_capped 
-							}
-						}
-						NOR = {
-							has_full_control_of_state = 110
-						}
-					}
-				}
-				NOR = {	set_equipment_fraction = 0.0 }
-				NOR = {	set_equipment_fraction = 0.0 }
-				NOR = {	set_equipment_fraction = 0.0 }
-				NOR = {	set_equipment_fraction = 0.0 }
-				NOR = {	set_equipment_fraction = 0.0 }
-				GER = {
-					add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 20000 producer = GER } 
-					add_equipment_to_stockpile = { type = support_equipment amount = 1000 producer = GER } 
-					add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 2500 producer = GER }
-					add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 2000 producer = GER }
-					add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 1000 producer = GER }
-					add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 500 producer = GER }					
-				}
-				NOR = {
-					add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 20000 producer = NOR } 
-					add_equipment_to_stockpile = { type = support_equipment amount = 1000 producer = NOR } 
-					add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 2500 producer = NOR }
-					add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 2000 producer = NOR }
-					add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 1000 producer = NOR }
-					add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 500 producer = NOR }
-					add_timed_idea = {
-						idea = FRA_retrain days = 30
-						idea = FRA_efficiency_gain days = 30						
-					}
-				}				
-			}
-			
-			if = {
-				limit = {
 					AND = { 
 						NOT = { has_global_flag = fall_of_france } 					
 						FRA = { surrender_progress > 0.33 } 
