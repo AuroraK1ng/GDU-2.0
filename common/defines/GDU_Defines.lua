@@ -424,7 +424,7 @@ NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 3.0 --makes redeployement of fighters
 NDefines.NAir.AIR_MORE_GROUND_CREWS_COST = 500.0 -- Disables ground crews. They're cancerous. 
 NDefines.NAir.ACCIDENT_CHANCE_BASE = 0.025
 NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.05 -- Vanilla = 1
-NDefines.NAir.COMBAT_DAMAGE_SCALE_CARRIER = 1.8
+NDefines.NAir.COMBAT_DAMAGE_SCALE_CARRIER = 2.0
 
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0							-- Days to deploy one air wing
 
