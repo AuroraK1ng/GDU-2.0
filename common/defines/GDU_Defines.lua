@@ -408,7 +408,6 @@ NDefines.NNavy.FUEL_COST_MULT = 0.05 -- fuel multiplier for all naval missions
 NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0.1
 
 --- Modifier Changes 
-																	-- Modifier changes 
 NDefines.NMilitary.UNIT_DIGIN_CAP = 2.0
 NDefines.NMilitary.PLANNING_MAX = 0.17                           	-- can get more from techs
 
@@ -425,7 +424,7 @@ NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 3.0 --makes redeployement of fighters
 NDefines.NAir.AIR_MORE_GROUND_CREWS_COST = 500.0 -- Disables ground crews. They're cancerous. 
 NDefines.NAir.ACCIDENT_CHANCE_BASE = 0.025
 NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.05 -- Vanilla = 1
-NDefines.NAir.COMBAT_DAMAGE_SCALE_CARRIER = 3
+NDefines.NAir.COMBAT_DAMAGE_SCALE_CARRIER = 1.8
 
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0							-- Days to deploy one air wing
 
@@ -474,7 +473,7 @@ NDefines.NAir.MISSION_COMMAND_POWER_COSTS = {  -- command power cost per plane t
 
 NDefines.NNavy.SPOTTING_ENEMY_SPOTTING_MULTIPLIER_FOR_RUNNING_AWAY = 0.10		-- enemy spotting is multiplied by this value to simulate running away
 
-NDefines.NNavy.NAVAL_STRIKE_CARRIER_MULTIPLIER = 4.0              -- damage bonus when planes are in naval combat where their carrier is present (and can thus sortie faster and more effectively)
+NDefines.NAir.NAVAL_STRIKE_CARRIER_MULTIPLIER = 4.0              -- damage bonus when planes are in naval combat where their carrier is present (and can thus sortie faster and more effectively)
 
 NDefines.NAir.NAVAL_COMBAT_EXTERNAL_PLANES_JOIN_RATIO = 0.15		-- Max planes that can join a combat comparing to the total strength of the ships
 NDefines.NAir.NAVAL_COMBAT_EXTERNAL_PLANES_JOIN_RATIO_PER_DAY = 0.45 -- max extra plane % that can join every day
@@ -485,11 +484,11 @@ NDefines.NAir.NAVAL_STRIKE_DETECTION_BALANCE_FACTOR = 0.08		-- Value used to sca
 
 NDefines.NAir.CARRIER_HOURS_DELAY_AFTER_EACH_COMBAT = 6         	-- how often carrier planes do battle inside naval combat
 NDefines.NNavy.CARRIER_STACK_PENALTY = 8  							-- The most efficient is 4 carriers in combat. 5+ brings the penalty to the amount of wings in battle.
-NDefines.NNavy.CARRIER_STACK_PENALTY_EFFECT = 0.99 					-- Each carrier above the optimal amount decreases the amount of airplanes being able to takeoff by such %.
+NDefines.NNavy.CARRIER_STACK_PENALTY_EFFECT = 0.1 					-- Each carrier above the optimal amount decreases the amount of airplanes being able to takeoff by such %.
 NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CAPITALS = 2.0 	-- this screen ratio to num capital/carriers is needed for full screening beyond screen line
 NDefines.NNavy.CAPITAL_RATIO_FOR_FULL_SCREENING_FOR_CARRIERS = 2.0
 
-NDefines.NNavy.NAVAL_COMBAT_AIR_CAPITAL_TARGET_SCORE = 800
+NDefines.NNavy.NAVAL_COMBAT_AIR_CAPITAL_TARGET_SCORE = 250
 NDefines.NNavy.NAVAL_COMBAT_AIR_CARRIER_TARGET_SCORE = 1
 
 NDefines.NNavy.SUPREMACY_PER_SHIP_PER_MANPOWER = 0.0							-- supremacy of a ship is calculated using its IC, manpower and a base define
@@ -556,7 +555,7 @@ NDefines.NNavy.SUBMARINE_BASE_TORPEDO_REVEAL_CHANCE = 0.05		-- Chance of a subma
 NDefines.NNavy.NAVAL_COMBAT_AIR_SUB_DETECTION_MAX = 10.0
 NDefines.NNavy.NAVAL_COMBAT_AIR_SUB_DETECTION_SLOPE = 10.0						-- lower means sharper curve (ramps up very fast, then flatten out very fast). Must be >0
 NDefines.NNavy.NAVAL_COMBAT_AIR_SUB_DETECTION_EXTERNAL_FACTOR = 1.0				-- Factor applied to the stats of external air planes
-BASE_CARRIER_SORTIE_EFFICIENCY = 0.8 -- Temp Fix as Sortie Broken in Vanilla    -- factor of planes that can sortie by default from a carrier
+NDefines.NNavy.BASE_CARRIER_SORTIE_EFFICIENCY = 0.8 -- Temp Fix as Sortie Broken in Vanilla    -- factor of planes that can sortie by default from a carrier
 NDefines.NNavy.NAVAL_COMBAT_AIR_SUB_DETECTION_INTERNAL_EFFICIENCY_FACTOR = 3.0	-- Factor of Carrier's sortie efficiency on the stats bellow
 NDefines.NNavy.NAVAL_COMBAT_AIR_AGILITY_TO_SUB_DETECTION = 0.0					-- Factor to apply to the agility of air planes active in a naval combat to deduce their contibution to sub detection
 NDefines.NNavy.NAVAL_COMBAT_AIR_STRIKE_ATTACK_TO_SUB_DETECTION = 0.0			-- Same, but for strike attack (aka naval attack)
