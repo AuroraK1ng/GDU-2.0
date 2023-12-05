@@ -1,0 +1,59 @@
+division_template = {
+	name = "Bovington Armoured Division"		
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_armor = { x = 0 y = 2 }
+		medium_armor = { x = 0 y = 3 }
+		medium_armor = { x = 0 y = 4 }
+		medium_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+		medium_armor = { x = 1 y = 2 }
+		medium_armor = { x = 1 y = 3 }
+		medium_armor = { x = 1 y = 4 }
+		mechanized = { x = 2 y = 0 }
+		mechanized = { x = 2 y = 1 }
+		mechanized = { x = 2 y = 2 }
+		mechanized = { x = 2 y = 3 }
+		mechanized = { x = 2 y = 4 }
+		mechanized = { x = 3 y = 0 }
+		mechanized = { x = 3 y = 1 }
+		medium_sp_anti_air_brigade = { x = 4 y = 0 }			
+		medium_sp_anti_air_brigade = { x = 4 y = 1 }
+		medium_sp_anti_air_brigade = { x = 4 y = 2 }
+
+
+
+	}
+		support = {
+		engineer = { x = 0 y = 0 } 
+		recon = { x = 0 y = 1 }
+		support_heavy_armor = { x = 0 y = 2 }
+		flamethrower_inf = { x = 0 y = 3 }
+		maintenance_company = { x = 0 y = 4 }
+		logistics_company = { x = 0 y = 5 }
+		field_hospital = { x = 0 y = 6 }
+		
+		
+	}
+}
+units = {
+	division = {
+		start_equipment_factor = 1.0
+		start_experience_factor = 1.0
+		start_manpower_factor = 1.0	
+		location = 3422
+		division_template = "Bovington Armoured Division"
+		
+	}
+	division = {
+		start_equipment_factor = 1.0	
+		start_experience_factor = 1.0
+		start_manpower_factor = 1.0
+		location = 3422
+		division_template = "Bovington Armoured Division"
+		
+	}
+	
+}

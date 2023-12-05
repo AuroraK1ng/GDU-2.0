@@ -367,7 +367,7 @@ focus_tree = {
 		completion_reward = {
 		army_experience = 50	
 		add_tech_bonus = {
-				bonus = 0.2
+				bonus = 0.5
 				uses = 1
 				category = land_doctrine
 			}	
@@ -456,7 +456,7 @@ focus_tree = {
 		prerequisite = { focus = uk_empire_focus }
 		icon = GFX_ENG_Parliamentary
 		relative_position_id = uk_empire_focus
-		x = 3
+		x = 4
 		y = 1
 		cost = 5
 		ai_will_do = {
@@ -2379,7 +2379,7 @@ focus_tree = {
 
 		}
 		icon = GFX_goal_generic_position_armies
-		x = 7
+		x = -5
 		y = 1
 		offset = {
 			x = 2
@@ -2401,13 +2401,13 @@ focus_tree = {
 			add_ideas = ENG_service_overseas_idea
 		}
 	}
-	
 	focus = {
-		id = uk_protect_suez
+		id = uk_protect_home
+		text = "Protect The Homeland"
 		prerequisite = { focus = uk_empire_focus }
-		icon = GFX_british_fortifications
-		x = 6
-		y = 2
+		icon = GFX_ENG_soldier_1
+		x = 10
+		y = 1
 		relative_position_id = uk_empire_focus
 		cost = 5
 		completion_reward = {
@@ -2427,6 +2427,87 @@ focus_tree = {
 				}
 				add_ideas = ENG_fortify_the_empire_1
 			}
+			135 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 3501
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 6
+					province = 3501
+					instant_build = yes
+				}
+			}
+			126 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 3209
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					province = 3209
+					instant_build = yes
+				}
+			}
+			127 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 6050
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					province = 6050
+					instant_build = yes
+				}
+			}
+			123 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 540
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					province = 540
+					instant_build = yes
+				}
+			}
+			125 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 271
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					province = 271
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = uk_protect_suez
+		prerequisite = { focus = uk_protect_home }
+		icon = GFX_british_fortifications
+		x = -3
+		y = 1
+		relative_position_id = uk_protect_home
+		cost = 5
+		completion_reward = {
 			447 = {
 				add_building_construction = {
 					type = coastal_bunker
@@ -2584,57 +2665,12 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = uk_rock_focus
-		prerequisite = { focus = uk_protect_suez }
-		available = {
-			118 = { is_owned_and_controlled_by = ENG }
-		}
-		icon = GFX_british_fortifications
-		x = -1
-		y = 1
-		relative_position_id = uk_protect_suez
-		cost = 5
-		completion_reward = {
-			118 = {
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 601
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					level = 4
-					province = 4135
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					level = 4
-					province = 600
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = anti_air_building
-					level = 5
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = ENG_reconsolidate_egypt
 		icon = GFX_ENG_egypt
 		text = ENG_reconsolidate_egypt
 		prerequisite = { focus = uk_protect_suez }
-		x = 0
-		y = 2
+		x = -1
+		y = 1
 		cost = 5		
 		relative_position_id = uk_protect_suez
 		ai_will_do = {
@@ -2673,13 +2709,12 @@ focus_tree = {
 				SPR = { remove_ideas = GDU_triumph_egypt2 }					
 		}
 	}
-
 	focus = {
 		id = ENG_fortify_yemen
 		prerequisite = { focus = uk_protect_suez }
 		icon = GFX_british_fortifications
-		x = 2
-		y = 2
+		x = 1
+		y = 1
 		relative_position_id = uk_protect_suez
 		cost = 3
 		completion_reward = {
@@ -2735,17 +2770,61 @@ focus_tree = {
 
 		}
 	}
+	focus = {
+		id = uk_rock_focus
+		prerequisite = { focus = uk_protect_home }
+		available = {
+			118 = { is_owned_and_controlled_by = ENG }
+		}
+		icon = GFX_british_fortifications
+		x = 0
+		y = 1
+		relative_position_id = uk_protect_home
+		cost = 5
+		completion_reward = {
+			118 = {
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 601
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 4
+					province = 4135
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 4
+					province = 600
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
 
 	focus = {
 		id = uk_malta_focus
-		prerequisite = { focus = uk_protect_suez }
+		prerequisite = { focus = uk_rock_focus }
 		available = {
 			116 = { is_owned_and_controlled_by = ENG }
 		}
 		icon = GFX_british_fortifications
-		x = 1
+		x = 0
 		y = 1
-		relative_position_id = uk_protect_suez
+		relative_position_id = uk_rock_focus
 		cost = 3
 
 		available_if_capitulated = yes
@@ -2783,7 +2862,7 @@ focus_tree = {
 		text = "Strengthening the Commonwealth"
 		prerequisite = { focus = uk_empire_focus }
 		icon = GFX_ENG_Strengthening_Commonwealth
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = uk_empire_focus
 		cost = 5
@@ -2816,16 +2895,16 @@ focus_tree = {
 
 	focus = {
 		id = uk_asia_focus
-		prerequisite = { focus = uk_empire_focus }
+		prerequisite = { focus = uk_protect_home }
 
 		available = {
 
 		}
 
 		icon = GFX_goal_generic_construct_civilian
-		x = 9
-		y = 2
-		relative_position_id = uk_empire_focus
+		x = 3
+		y = 1
+		relative_position_id = uk_protect_home
 		cost = 5
 
 		available_if_capitulated = yes
@@ -2894,7 +2973,120 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = ENG_defense_asia
+		Text = "Defence of The Crown in Asia"
+		prerequisite = { focus = uk_asia_focus }
+		available = {
+			
+		}
+		bypass = {
+			
+		}
 
+		continue_if_invalid = yes
+
+		icon = GFX_ENG_Soldier_3
+		x = -1
+		y = 1
+		relative_position_id = uk_asia_focus
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			431 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 4
+					instant_build = yes
+				}
+			}
+			430 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_asian_operation
+		Text = "Preparations For The Asian Operation "
+		prerequisite = { focus = uk_asia_focus }
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_ENG_soldier_2
+		x = 1
+		y = 1
+		relative_position_id = uk_asia_focus
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 3
+				technology = jungletroops
+				technology = jungletroops2
+				technology = jungletroops3
+			}
+		}
+	}
+	focus = {
+		id = ENG_maintaining_imperial_integrity
+		prerequisite = { focus = ENG_asian_operation focus = ENG_defense_asia}
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			NOT = {
+				any_country = {
+					is_subject_of = ENG
+				}
+			}
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_chi_british_cooperation
+		x = 1
+		y = 1
+		relative_position_id = ENG_defense_asia
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}
 	focus = {
 		id = ENG_synthetic_rubber
 		icon = GFX_focus_generic_rubber
@@ -3704,7 +3896,297 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = ENG_at_war
+		text = "Unite the Commonwealth"
+		prerequisite = { focus = ENG_imperial_conference }
+		prerequisite = { focus = ENG_Modern_warfare }
 
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+
+		available = {
+			
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_ENG_Airborne_prepare
+
+		x = -3
+		y = 1
+		relative_position_id = ENG_imperial_conference
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	factor = 0
+			#}
+		}
+		completion_reward = {
+			AST = { add_stability = 0.05
+					add_war_support = 0.05
+				   }
+			NZL = { add_stability = 0.05
+					add_war_support = 0.05
+				   }
+			RAJ = { add_stability = 0.05
+					add_war_support = 0.05
+				   }
+			SAF = { add_stability = 0.05
+					add_war_support = 0.05
+				   }
+			CAN = { add_stability = 0.05
+					add_war_support = 0.05
+				   }
+			ENG = { add_stability = 0.05
+					add_war_support = 0.05
+				   }
+
+		}
+	}
+	focus = {
+		id = ENG_SAS
+		text = "S.A.S. in Africa"
+		prerequisite = { focus = ENG_at_war }
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+
+		available = {
+			
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_ENG_2
+
+		x = 0
+		y = 1
+		relative_position_id = ENG_at_war
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	factor = 0
+			#}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = airborne_bonus
+				bonus = 2.0
+				uses = 2
+				technology = paratroopers2
+				technology = paratroopers3				
+			}
+		}
+	}
+	focus = {
+		id = ENG_Scotish
+		text = "Scottish Army Corps"
+		prerequisite = { focus = ENG_at_war }
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+
+		available = {
+			
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_ENG
+
+		x = 2
+		y = 1
+		relative_position_id = ENG_at_war
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	factor = 0
+			#}
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ENG_Welsh
+		text = "Welsh Army Corps"
+		prerequisite = { focus = ENG_at_war }
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+
+		available = {
+			
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_ENG_1
+
+		x = -2
+		y = 1
+		relative_position_id = ENG_at_war
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	factor = 0
+			#}
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ENG_Bovington
+		text = "Bovington Armoured Division"
+		prerequisite = { focus = ENG_Welsh }
+		prerequisite = { focus = ENG_SAS }
+		prerequisite = { focus = ENG_Scotish }
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+
+		available = {
+			
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_ENG_Kromwel
+
+		x = 0
+		y = 1
+		relative_position_id = ENG_SAS
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	factor = 0
+			#}
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ENG_canadian_engineers
+		text = "Support Canadian Corps of Engineers"
+		prerequisite = { focus = ENG_SAS }
+		prerequisite = { focus = ENG_Scotish }
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+
+		available = {
+			
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_ENG_Churchill_tank
+
+		x = 1
+		y = 1
+		relative_position_id = ENG_Scotish
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	factor = 0
+			#}
+		}
+		completion_reward = {
+			CAN = {
+			add_tech_bonus = {
+				bonus = 1.00
+				uses = 2
+				category = support_tech
+
+			}
+		 }
+	}
+}
+	focus = {
+		id = ENG_support_anzac
+		text = "Support ANZAC With Equipment"
+		prerequisite = { focus = ENG_SAS }
+		prerequisite = { focus = ENG_Welsh }
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+
+		available = {
+			
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_ENG_crusader_aa
+
+		x = -1
+		y = 1
+		relative_position_id = ENG_Welsh
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	factor = 0
+			#}
+		}
+		completion_reward = {
+			AST = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 10000 producer = ENG } }
+			AST = { add_equipment_to_stockpile = { type = artillery_equipment_2 amount = 500 producer = ENG } }
+			NZL = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 10000 producer = ENG } }
+			NZL = { add_equipment_to_stockpile = { type = artillery_equipment_2 amount = 500 producer = ENG } }
+		}
+	}
+	focus = {
+		id = ENG_sherman
+		text = "American Sherman With British Touches"
+		prerequisite = { focus = ENG_Bovington }
+		prerequisite = { focus = ENG_canadian_engineers }
+		prerequisite = { focus = ENG_support_anzac }
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+
+		available = {
+			
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_ENG_Firefly
+
+		x = 0
+		y = 2
+		relative_position_id = ENG_Bovington
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	factor = 0
+			#}
+		}
+		completion_reward = {
+			
+		}
+	}
+	
 	### DEMOCRATIC BRANCH - STEADY AS SHE GOES ###
 
 	### GLOBAL DEFENSE BRANCH ###
@@ -3852,43 +4334,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = ENG_maintaining_imperial_integrity
-		prerequisite = { focus = uk_asia_focus }
-		available = {
-			is_subject = no
-		}
-		bypass = {
-			NOT = {
-				any_country = {
-					is_subject_of = ENG
-				}
-			}
-		}
-
-		continue_if_invalid = yes
-
-		icon = GFX_focus_chi_british_cooperation
-		x = 0
-		y = 1
-		relative_position_id = uk_asia_focus
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = naval_doc_bonus
-				bonus = 1.0
-				uses = 1
-				category = naval_doctrine
-			}
-
-
-
-
-		}
-	}
+	
 
 
 
