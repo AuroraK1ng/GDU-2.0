@@ -2106,7 +2106,15 @@ focus_tree = {
 				}
 				remove_ideas = officers_purged_10
 			}
+			if = {
+				limit = {
+					has_idea = kliment_voroshilov
+				}
+				remove_ideas = kliment_voroshilov
+			}
 			add_ideas = officers_purged_10
+			add_ideas = georgy_zhukov_highcommand
+			add_political_power = -150
 			custom_effect_tooltip = GDU_spacer
 			hidden_effect = {
 				sound_effect = rokossovsky_moscow_battle
