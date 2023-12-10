@@ -65,6 +65,7 @@ scripted_gui = {
 				
 				add_cores_click = {
 					owner={
+						news_event = { id = news.4111 }
 						set_temp_variable = { ROOT.taker = this}
 						for_each_loop={
 							array=ROOT.marked_states
@@ -81,8 +82,8 @@ scripted_gui = {
 						}
 					}
 				}
-							fix_production_click = { owner = { news_event = { id = news.4003 } add_timed_idea = { idea = fix_production_idea days = 1 }}  }
-							fix_xp_click = { owner = { news_event = { id = news.4113 } army_experience = 25 }  }
+				fix_production_click = { owner = { news_event = { id = news.4003 } add_timed_idea = { idea = fix_production_idea days = 1 }}  }
+				fix_xp_click = { owner = { news_event = { id = news.4113 } army_experience = 25 }  }
 	
 				award_states_click = {
 	
@@ -127,7 +128,7 @@ scripted_gui = {
 				}
 				
 			
-					annex_country_click = {
+				annex_country_click = {
 					
 					owner={ set_variable = { ROOT.taker = this}}
 					var:ROOT.marked_states^0={owner={set_variable={ROOT.target=this   } news_event = { id = news.4007 }  }}
@@ -135,9 +136,9 @@ scripted_gui = {
 					else={
 						var:ROOT.target={
 							var:ROOT.taker={
-								every_state = { limit = { is_core_of = var:ROOT.target} add_core_of = var:ROOT.taker}
+								#every_state = { limit = { is_core_of = var:ROOT.target} add_core_of = var:ROOT.taker}
 								annex_country={	target=PREV	transfer_troops=yes	}
-								add_to_variable = { paratrooper_div_cap = PREV.paratrooper_div_cap }
+								#add_to_variable = { paratrooper_div_cap = PREV.paratrooper_div_cap }
 								}
 							}
 						}
