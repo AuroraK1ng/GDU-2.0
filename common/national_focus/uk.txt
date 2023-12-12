@@ -375,8 +375,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_tank_focus
-		prerequisite = { focus = ENG_lessons_of_war }
-		prerequisite = { focus = ENG_motorized_focus }
+		prerequisite = { focus = ENG_lessons_of_war focus = ENG_motorized_focus }
 		icon = GFX_ENG_Royal_tank_regiment
 		x = 1
 		y = 1
@@ -986,15 +985,71 @@ focus_tree = {
 			add_research_slot = 1
 		}
 	}
+	
 	focus = {
-		id = uk_prepare_for_war
-		text = "Prepare for New War"
-		icon = GFX_ENG_Preppare_for_war
+		id = naval_rearmament_focus
 		prerequisite = { focus = limited_rearmament_focus }
+		icon = GFX_royal_navy
 		x = 5
 		y = 1
 		relative_position_id = limited_rearmament_focus
 		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = ENG_naval_rearmament_focus_1dockyard }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 50
+			add_ideas = ENG_expand_the_repair_yards
+			338 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = ENG_naval_rearmament_focus_1dockyard
+			}
+			132 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = ENG_naval_rearmament_focus_1dockyard
+			}			
+		}
+	}
+	
+	focus = {
+		id = uk_prepare_for_war
+		text = "Prepare for New War"
+		icon = GFX_ENG_Preppare_for_war
+		prerequisite = { focus = naval_rearmament_focus }
+		x = 7
+		y = 2
+		relative_position_id = limited_rearmament_focus
+		cost = 5
+		
+		available = {				
+			date > 1937.1.1
+		}
 
 		available_if_capitulated = yes
 
@@ -1006,7 +1061,7 @@ focus_tree = {
 	}
 	focus = {
 		id = general_rearmament_focus
-		prerequisite = { focus = uk_prepare_for_war }
+		prerequisite = { focus = naval_rearmament_focus }
 		available = {
 			if = {
 				limit = {
@@ -1034,7 +1089,7 @@ focus_tree = {
 		icon = GFX_General_Rearm
 		x =-2
 		y = 1
-		relative_position_id = uk_prepare_for_war
+		relative_position_id = naval_rearmament_focus
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -1662,61 +1717,10 @@ focus_tree = {
 					
 		}
 	}	
-	
-	focus = {
-		id = naval_rearmament_focus
-		prerequisite = { focus = uk_prepare_for_war }
-		icon = GFX_royal_navy
-		x = 7
-		y = 2
-		relative_position_id = limited_rearmament_focus
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-
-
-		complete_tooltip = {
-			every_state = {
-				limit = { has_state_flag = ENG_naval_rearmament_focus_1dockyard }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-
-		completion_reward = {
-			navy_experience = 50
-			add_ideas = ENG_expand_the_repair_yards
-			338 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = ENG_naval_rearmament_focus_1dockyard
-			}
-			132 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = ENG_naval_rearmament_focus_1dockyard
-			}			
-		}
-	}
 
 	focus = {
 		id = ENG_secure_the_imperial_shipping_routes
-		prerequisite = { focus = naval_rearmament_focus }
+		prerequisite = { focus = uk_prepare_for_war }
 		icon = GFX_ENG_navy
 		x = -1
 		y = 1
@@ -1727,15 +1731,10 @@ focus_tree = {
 				NOT = { has_dlc = "Man the Guns" }
 			}
 		}
-		relative_position_id = naval_rearmament_focus
+		relative_position_id = uk_prepare_for_war
 		cost = 5
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-				
-				date > 1937.1.1
 		}
 
 		available_if_capitulated = no
@@ -1819,11 +1818,11 @@ focus_tree = {
 
 	focus = {
 		id = uk_destroyer_focus
-		prerequisite = { focus = naval_rearmament_focus }
+		prerequisite = { focus = uk_prepare_for_war }
 		icon = GFX_focus_generic_destroyer
 		x = 1
 		y = 1
-		relative_position_id = naval_rearmament_focus
+		relative_position_id = uk_prepare_for_war
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -1957,11 +1956,11 @@ focus_tree = {
 	}
 	focus = {
 		id = uk_amphibious_focus
-		prerequisite = { focus = naval_rearmament_focus }
+		prerequisite = { focus = uk_prepare_for_war }
 		icon = GFX_ENG_marines
 		x = 3
 		y = 1
-		relative_position_id = naval_rearmament_focus
+		relative_position_id = uk_prepare_for_war
 		cost = 10
 		ai_will_do = {
 			factor = 1
