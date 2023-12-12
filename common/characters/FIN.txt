@@ -15,35 +15,67 @@ characters = {
 			traits = {
 				army_chief_offensive_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
 		}
+		corps_commander = {
+			traits = { 
+				winter_specialist 
+				ranger 
+				panzer_leader 
+				armor_officer 
+				skilled_staffer 
+				organizer 
+				harsh_leader 
+			}
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+		}
 	}
 	FIN_carl_mannerheim={
 		name = FIN_carl_mannerheim
-
-	advisor={
-		slot = army_chief
-		idea_token = FIN_carl_mannerheim
-		allowed  = {
+		advisor={
+			slot = army_chief
+			idea_token = FIN_carl_mannerheim
+			allowed  = {
 				original_tag  = FIN 
 			}
-			cost = 100
+			cost = 150
 			traits  = {
 				army_chief_defensive_3 
 			}
-	}
-	portraits = {
-		army = {
-			large = GFX_portrait_FIN_carl_mannerheim
-			small = GFX_idea_carl_mannerheim
+		}
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_carl_mannerheim
+				small = GFX_idea_carl_mannerheim
 			}
 		}
-	
+		field_marshal = {
+			traits = { 
+				defensive_doctrine 
+				skilled_staffer 
+				inflexible_strategist 
+				war_hero 
+				politically_connected 
+				old_guard 
+				ranger 
+				trait_cautious 
+				winter_specialist 
+			}
+			skill = 6
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 5
+		}
 	}
-	FIN_aksel_airo_hc={
+	FIN_aksel_airo_hc = {
 		name = FIN_aksel_airo_hc
 		portraits = {
 			army = {
@@ -51,7 +83,7 @@ characters = {
 				small = GFX_portrait_FIN_aksel_airo_small
 			}
 		}
-			advisor = {			
+		advisor = {			
 			slot = army_chief
 			idea_token = FIN_aksel_airo
 			allowed = {
@@ -60,10 +92,28 @@ characters = {
 			traits = {
 				army_chief_planning_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
+		}
+		field_marshal = {
+			traits = { 
+				winter_specialist 
+				ranger 
+				infantry_leader 
+				infantry_officer 
+				trickster 
+				trait_cautious 
+				old_guard 
+				skilled_staffer 
+				media_personality
+			}
+			skill = 5
+			attack_skill = 3
+			defense_skill = 6
+			planning_skill = 1
+			logistics_skill = 6
 		}
 	}
 	FIN_lauri_malmberg = {
@@ -82,7 +132,7 @@ characters = {
 			traits = {
 				army_chief_drill_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -104,7 +154,7 @@ characters = {
 			traits = {
 				navy_chief_commerce_raiding_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -127,7 +177,7 @@ characters = {
 			traits = {
 				army_commando_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -147,9 +197,9 @@ characters = {
 				original_tag = FIN
 			}
 			traits = {
-				air_chief_all_weather_3
+				air_chief_all_weather_1
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -193,7 +243,7 @@ characters = {
 			traits = {
 				army_chief_planning_1
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -217,10 +267,26 @@ characters = {
 			traits = {
 				army_regrouping_3
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
+		}
+		corps_commander = {
+			traits = {  
+				winter_specialist 
+				ranger 
+				panzer_leader 
+				armor_officer 
+				skilled_staffer 
+				trait_reckless 
+				harsh_leader 
+			}
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 4
 		}
 	}
 	FIN_harald_ohquist = {
@@ -240,10 +306,24 @@ characters = {
 			traits = {
 				army_entrenchment_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
+		}
+		corps_commander = {
+			traits = { 
+				winter_specialist 
+				ranger 
+				skilled_staffer 
+				infantry_officer 
+				politically_connected
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
 		}
 	}
 	FIN_frans_helminen = {
@@ -263,7 +343,7 @@ characters = {
 			traits = {
 				army_concealment_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -286,7 +366,7 @@ characters = {
 			traits = {
 				army_logistics_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -307,9 +387,9 @@ characters = {
 				original_tag = FIN
 			}
 			traits = {
-				army_infantry_3
+				army_infantry_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -320,13 +400,16 @@ characters = {
 			slot = theorist
 			idea_token = FIN_akseli_anttila
 			ledger  = army 
-				allowed  = {
-					original_tag  = FIN 
-				}
-	            cost = 150
-				traits  = {
-					superior_firepower_expert 
-				}
+			allowed  = {
+				original_tag  = FIN 
+			}
+	           cost = 150
+			traits  = {
+				superior_firepower_expert 
+			}
+			research_bonus = {
+				land_doctrine = 0.1
+			}
 		}
 		name="FIN_akseli_anttila"
 		portraits={
@@ -343,7 +426,7 @@ characters = {
 			}
 		}
 		advisor = {
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = FIN_vaino_valve
 			ledger = navy
@@ -352,6 +435,9 @@ characters = {
 			}
 			traits = {
 				grand_battle_plan_expert
+			}
+			research_bonus = {
+				land_doctrine = 0.1
 			}
 		}
 	}
@@ -454,6 +540,53 @@ characters = {
 				fin_sec_winter_war
 			}
 		}
-}
-
+	}
+	FIN_ruben_lagus = {
+		name = FIN_ruben_lagus
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_ruben_lagus
+				small = GFX_portrait_FIN_ruben_lagus_small
+			}
+		}
+		corps_commander = {
+			traits = { 
+				winter_specialist 
+				ranger 
+				trait_reckless 
+				infantry_officer
+			}
+			skill = 4
+			attack_skill = 8
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	FIN_paavo_talvela = {
+		name = FIN_paavo_talvela
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_paavo_talvela
+				small = GFX_portrait_FIN_paavo_talvela_small
+			}
+		}
+		field_marshal = {
+			traits = { 
+				old_guard 
+				inflexible_strategist 
+				infantry_leader 
+				trait_cautious 
+				career_officer 
+				organizer 
+				infantry_leader 
+				skilled_staffer 
+			}
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
 }

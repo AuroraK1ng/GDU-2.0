@@ -17,7 +17,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 1
 		y = 0
-		cost = 5
+		cost = 10
 		bypass = {
 			custom_trigger_tooltip = {
 				tooltip = infrastructure_effort_tt
@@ -67,6 +67,87 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -79,6 +160,9 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 1
+		}
+		available = {
+			date > 1940.1.1
 		}
 		completion_reward = {
 			add_ideas = civilian_kitchens_idea
@@ -107,10 +191,18 @@ focus_tree = {
 
 		completion_reward = {
 			111 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
+					instant_build = yes
+				}
+			}
+			146 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -128,13 +220,20 @@ focus_tree = {
 			factor = 2
 		}
 
-
 		completion_reward = {
 			111 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
+					instant_build = yes
+				}
+			}
+			146 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -147,23 +246,25 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		x = 2
 		y = 1
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 2
 		}
 
-
 		completion_reward = {
 			111 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			146 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
@@ -183,13 +284,20 @@ focus_tree = {
 			factor = 2
 		}
 
-
 		completion_reward = {
-			111 = {
+						111 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 2
+					instant_build = yes
+				}
+			}
+			146 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -235,7 +343,7 @@ focus_tree = {
 
 		x = 0
 		y = 3
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -270,7 +378,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		x = 4
 		y = 0
-		cost = 5
+		cost = 10
 		completion_reward = {
 	        add_ideas = FIN_mannerheim_legacy_idea
 	        add_tech_bonus = {
@@ -288,7 +396,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_eastern_defense }
 		x = 4
 		y = 1
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 5
@@ -310,19 +418,19 @@ focus_tree = {
 		prerequisite = { focus = FIN_ski_infantry }
 		x = 6
 		y = 1
-		cost = 5
+		cost = 10
 		completion_reward = {
 			army_experience = 150
 			add_tech_bonus = {
 				name = POL_anti_tank_guns
-				bonus = 1.00 
-				uses = 6
+				bonus = 0.75 
+				uses = 4
 				category = cat_anti_tank
 			}
 			add_tech_bonus = {
 				name = POL_anti_air_guns
-				bonus = 1.00 
-				uses = 6
+				bonus = 0.75 
+				uses = 4
 				category = cat_anti_air
 			}
 			add_tech_bonus = {
@@ -346,7 +454,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_frantic_planning focus = FIN_molotov_cocktails }
 		x = 4
 		y = 2
-		cost = 5
+		cost = 10
 		completion_reward = {
             add_ideas = FIN_white_guard_idea
 
@@ -354,7 +462,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = land_doc_bonus
 				bonus = 1.00 
-				uses = 10
+				uses = 2
 				category = land_doctrine
 			}
 		}
@@ -367,7 +475,7 @@ focus_tree = {
 		x = 6
 		y = 2
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -393,13 +501,11 @@ focus_tree = {
 			army_experience = 200
 			add_stability = 0.05
 			add_war_support = 0.05
-			hidden_effect = {
-			
-			set_technology = {
-				molotov_cocktails_tech = 1
-	
+			hidden_effect = {			
+				set_technology = {
+					molotov_cocktails_tech = 1	
+				}
 			}
-		}
 			custom_effect_tooltip = FIN_oy_alkoholiliike_ns_tt
 		}
 	}
@@ -409,16 +515,15 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 6
 		y = 0
-		cost = 5
+		cost = 10
 		completion_reward = {
 			army_experience = 100
 			add_tech_bonus = {
 				name = POL_standardisation_of_equipment
 				bonus = 1.00 
-				uses = 4
+				uses = 3
 				category = infantry_weapons
 			}
-
             add_tech_bonus = {
 				name = special_forces_bonus
 				bonus = 1.00 
@@ -426,7 +531,7 @@ focus_tree = {
 				technology = jaegers
 				technology = jaegers2
 			}
-		add_tech_bonus = {
+			add_tech_bonus = {
 				name = special_forces_bonus
 				bonus = 1.00 
 				uses = 1
@@ -452,7 +557,7 @@ focus_tree = {
 		}
 		x = 3
 		y = 3
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -601,7 +706,7 @@ focus_tree = {
 		icon = GFX_goal_generic_intelligence_exchange
 		x = 10
 		y = 0
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_political_power = 150
 		}
@@ -616,7 +721,7 @@ focus_tree = {
 
 		x = 11
 		y = 1
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
@@ -638,7 +743,7 @@ focus_tree = {
         mutually_exclusive = { focus = FIN_nationalist_support }
 		x = 9
 		y = 1
-		cost = 5
+		cost = 10
 		completion_reward = {
 			if = {
 				limit = { NOT = { has_idea = neutrality_idea } }
@@ -654,7 +759,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_cautious_politics }
 		x = 9
 		y = 2
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_ideas = deterrence
 		}
@@ -675,7 +780,7 @@ focus_tree = {
 
 		x = 9
 		y = 3
-		cost = 5
+		cost = 10
 		completion_reward = {
 			if = {
 				limit = { NOT = { has_idea = neutrality_idea } }
@@ -700,7 +805,7 @@ focus_tree = {
 		}
 		x = 11
 		y = 3
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}
@@ -716,8 +821,11 @@ focus_tree = {
 		prerequisite = { focus =   FIN_nationalist_support }
 		x = 11
 		y = 2
-		cost = 5
+		cost = 10
         completion_reward = {
+			add_ideas = {
+				FIN_Axis_Power
+			}
 			if = {
 				limit = { has_government = fascism }
 				add_popularity = {
@@ -735,13 +843,13 @@ focus_tree = {
 		}
 	}
 
-focus = {
+	focus = {
 		id = FIN_the_lotta_svard
 		icon = GFX_goal_generic_special_forces
         prerequisite = { focus = FIN_civilian_kitchens }
 		x = 5
 		y = 4
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -757,12 +865,10 @@ focus = {
 		}
 
 		completion_reward = {
-
-
 			111 = {
 				add_building_construction = {
 					type = anti_air_building
-					level = 2
+					level = 5
 					instant_build = yes
 				}
 			}
@@ -772,7 +878,7 @@ focus = {
 	focus = {
 		id = FIN_limited_motorization
 		icon = GFX_goal_generic_army_motorized
-		bypass = { has_tech = motorised_infantry }
+		#bypass = { has_tech = motorised_infantry }
 		x = 15
 		y = 0
 		cost = 10
@@ -785,7 +891,7 @@ focus = {
 		}
 	}
 
-    	focus = {
+    focus = {
 		id = FIN_study_foreign_vehicles
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = FIN_limited_motorization }
@@ -812,15 +918,15 @@ focus = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
-				bonus = 1.00 
-				uses = 1
+				bonus = 1.25 
+				uses = 2
 				category = artillery
 			}
 		}
 	}
 
 
-    	focus = {
+    focus = {
 		id = FIN_further_artillery_support
 		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = FIN_tuli_isku }
@@ -854,33 +960,15 @@ focus = {
 			add_tech_bonus = {
 				name = tank_bonus
 				bonus = 0.5
-				uses = 1
-				technology = improved_medium_tank
-			}
-			add_tech_bonus = {
-				name = tank_bonus
-				bonus = 0.75
 				uses = 2
-				technology = improved_heavy_tank
-				technology = advanced_light_tank
+				technology = improved_medium_tank_chassis
+				technology = improved_heavy_tank_chassis
 			}
-
-
-        custom_effect_tooltip = FIN_gwtank
-
-        hidden_effect = {
-
-        set_technology = {
-
-        gwtank = 1
-
-        }
-        }
-
+			custom_effect_tooltip = FIN_gwtank
 		}
 	}
 
-    	focus = {
+    focus = {
 		id = FIN_theft_and_learning
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = FIN_import_tanks }
@@ -897,15 +985,11 @@ focus = {
 
          add_tech_bonus = {
 				name = armor_bonus
-				bonus = 1.00 
-				uses = 1
-				technology = advanced_light_tank
-				technology = improved_medium_tank
-				technology = advanced_medium_tank				
-				technology = improved_heavy_tank
-				technology = advanced_heavy_tank
-				technology = advanced_light_tank_a
-
+				bonus = 0.50 
+				uses = 2
+				technology = advanced_medium_tank_chassis
+				technology = advanced_heavy_tank_chassis
+				technology = advanced_light_tank_chassis
 			}
 		}
 
@@ -991,7 +1075,7 @@ focus = {
 		}
 	}
 
-       	focus = {
+       focus = {
 		id = FIN_paratroopers_and_air_bases
 		icon = GFX_goal_generic_air_production
 		prerequisite = { focus = FIN_aviation_effort }
@@ -1042,26 +1126,14 @@ focus = {
 		y = 2
 		cost = 10
 		completion_reward = {
-        custom_effect_tooltip = FIN_fighter
+        #custom_effect_tooltip = FIN_fighter
 			add_tech_bonus = {
 				name = fighter_bonus
 				bonus = 1.00 
 				uses = 1
-				technology = early_fighter
-				technology = fighter1
-				technology = fighter2
-				technology = heavy_fighter1
-				technology = heavy_fighter2
+				technology = improved_small_airframe
+				technology = improved_medium_airframe
 			}
-
-                    hidden_effect = {
-
-        set_technology = {
-
-        early_fighter = 1
-
-        }
-        }
 		}
 	}
 
@@ -1074,23 +1146,12 @@ focus = {
 		y = 2
 		cost = 10
 		completion_reward = {
-			custom_effect_tooltip = FIN_bomber
+			#custom_effect_tooltip = FIN_bomber
 			add_tech_bonus = {
 				name = bomber_bonus
 				bonus = 1.00 
 				uses = 1
-				technology = CAS1
-				technology = CAS2
-				technology = tactical_bomber1
-				technology = tactical_bomber2
-				technology = strategic_bomber1
-				technology = strategic_bomber2
-			}
-
-			hidden_effect = {
-				set_technology = {
-					early_bomber = 1
-				}
+				technology = aa_cannon_1
 			}
 		}
 	}
@@ -1217,7 +1278,7 @@ focus = {
 		x = 9
 		y = 4
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 70
@@ -1249,7 +1310,7 @@ focus = {
 		prerequisite = { focus = FIN_propaganda_machine focus = FIN_pacifist_sentiment }
 		x = 11
 		y = 4
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_political_power = 150
 		}

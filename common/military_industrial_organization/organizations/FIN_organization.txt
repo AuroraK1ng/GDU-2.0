@@ -77,123 +77,6 @@ FIN_crichton_vulcan_organization = { #Coastal Defense Ships & Subs
 		text = mio_header_high_speed_focus
 		x = 8
 	}
-
-	override_trait = {
-		token = generic_mio_trait_long_range_raiding
-
-		position = { x=2 y=0 }
-	}
-
-	add_trait = { 
-		token = FIN_mio_trait_andros_engines
-		name = FIN_mio_trait_andros_engines
-		icon = GFX_generic_mio_department_icon_ship_general_engine
-		special_trait_background = yes
-
-		position = { x=2 y=1 }
-		relative_position_id = generic_mio_trait_long_range_raiding
-
-		any_parent = { generic_mio_trait_long_range_raiding generic_mio_trait_high_speed_raiding }
-		
-		available = {
-
-		}
-
-		equipment_bonus = {
-			naval_range = 0.05
-			naval_speed = 0.05
-			fuel_consumption = -0.05
-		}
-	}
-
-	add_trait = { 
-		token = FIN_mio_trait_wartsila_engine_production
-		name = FIN_mio_trait_wartsila_engine_production
-		icon = GFX_generic_mio_department_icon_ship_general_production
-		special_trait_background = yes
-
-		position = { x=-2 y=1 }
-		relative_position_id = generic_mio_trait_high_speed_raiding
-
-		any_parent = { generic_mio_trait_long_range_raiding generic_mio_trait_high_speed_raiding }
-		
-		available = {
-
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-			production_efficiency_gain_factor = 0.05
-		}
-	}
-
-	add_trait = { 
-		token = FIN_mio_trait_rapid_raiders
-		name = FIN_mio_trait_rapid_raiders
-		icon = GFX_generic_mio_department_icon_ship_general_offense
-		special_trait_background = yes
-
-		position = { x=-2 y=0 }
-		relative_position_id = generic_mio_trait_long_range_raiding
-		
-		mutually_exclusive = { FIN_mio_trait_deep_sea_raiders }
-
-		available = {
-
-		}
-
-		limit_to_equipment_type = { screen_ship }
-
-		equipment_bonus = {
-			naval_speed = 0.05
-			lg_attack = 0.05
-			surface_detection = 0.05
-			sub_detection = 0.05
-		}
-	}
-
-	add_trait = { 
-		token = FIN_mio_trait_deep_sea_raiders
-		name = FIN_mio_trait_deep_sea_raiders
-		icon = GFX_generic_mio_department_icon_ship_submarine_survivability
-		special_trait_background = yes
-
-		position = { x=1 y=0 }
-		relative_position_id = FIN_mio_trait_rapid_raiders
-
-		mutually_exclusive = { FIN_mio_trait_rapid_raiders }
-		
-		available = {
-
-		}
-
-		limit_to_equipment_type = { submarine }
-
-		equipment_bonus = {
-			naval_speed = 0.05
-			surface_detection = 0.05
-			sub_visibility = -0.05
-			torpedo_attack = 0.05
-		}
-	}
-
-	add_trait = { 
-		token = FIN_mio_trait_modernization_program
-		name = FIN_mio_trait_modernization_program
-		icon = GFX_generic_mio_department_icon_ship_general_production
-		special_trait_background = yes
-
-		position = { x=1 y=0 }
-		relative_position_id = generic_mio_trait_high_speed_raiding
-		
-		available = {
-
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-	}
 }
 
 
@@ -208,7 +91,7 @@ FIN_crichton_vulcan_organization = { #Coastal Defense Ships & Subs
 ###########################
 
  FIN_valtion_lentokonetehdas_organization = { #Light Aircraft
- 	include = generic_general_aircraft_organization
+ 	include = generic_light_aircraft_organization
 	icon = GFX_idea_FIN_valtion_lentokonetehdas
  	allowed = {	
 		tag = FIN
@@ -280,15 +163,15 @@ FIN_valtion_kivaaritehdas_organization = { #Infantry Equipment
 		icon = GFX_generic_mio_department_icon_infantry_materials
 		special_trait_background = yes
 
-		position = { x=8 y=0 }
+		position = { x=9 y=0 }
 		
 		available = {
-
+			date > 1940.1.1
 		}
 
 		production_bonus = {
-			production_capacity_factor = 0.05
-			production_resource_need_factor = -0.1
+			production_capacity_factor = 0.025
+			production_resource_need_factor = -0.05
 		}
 	}
 
@@ -297,8 +180,10 @@ FIN_valtion_kivaaritehdas_organization = { #Infantry Equipment
 		name = FIN_mio_trait_modernization_program
 		icon = GFX_generic_mio_department_icon_infantry_production
 		special_trait_background = yes
+		
+		all_parents = { FIN_mio_trait_salvaged_and_retooled }
 
-		position = { x=1 y=0 }
+		position = { x=0 y=1 }
 		relative_position_id = FIN_mio_trait_salvaged_and_retooled
 		
 		available = {
@@ -306,7 +191,7 @@ FIN_valtion_kivaaritehdas_organization = { #Infantry Equipment
 		}
 
 		production_bonus = {
-			production_capacity_factor = 0.05
+			production_capacity_factor = 0.025
 		}
 	}
 }
@@ -351,15 +236,15 @@ FIN_valtion_tykkitehdas_organization = { #AT (Artillery)
 		icon = GFX_generic_mio_trait_icon_resources
 		special_trait_background = yes
 
-		position = { x=8 y=0 }
+		position = { x=9 y=0 }
 		
 		available = {
-
+			date > 1940.1.1
 		}
 
 		production_bonus = {
-			production_capacity_factor = 0.05
-			production_resource_need_factor = -0.1
+			production_capacity_factor = 0.025
+			production_resource_need_factor = -0.05
 		}
 	}
 
@@ -369,7 +254,7 @@ FIN_valtion_tykkitehdas_organization = { #AT (Artillery)
 		icon = GFX_generic_mio_trait_icon_production_capacity
 		special_trait_background = yes
 
-		position = { x=1 y=0 }
+		position = { x=0 y=1 }
 		relative_position_id = FIN_mio_trait_salvaged_and_retooled
 		
 		available = {
@@ -377,7 +262,7 @@ FIN_valtion_tykkitehdas_organization = { #AT (Artillery)
 		}
 
 		production_bonus = {
-			production_capacity_factor = 0.05
+			production_capacity_factor = 0.025
 		}
 	}
 }

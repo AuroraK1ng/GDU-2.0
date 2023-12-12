@@ -71,6 +71,12 @@ JAP_mitsubishi_organization = {
 	allowed = {	 
 		tag = JAP 
 	}
+	
+	available = {
+		from = {
+			has_completed_focus = JAP_agility_focus 
+		}
+	}
 
 	initial_trait = {
 		name = generic_mio_initial_trait_light_aircraft_designer
@@ -86,6 +92,12 @@ JAP_aichi_organization = {
 	icon = GFX_idea_aichi
 	allowed = {	
 		tag = JAP
+	}
+	
+	available = {
+		from = {
+			has_completed_focus = JAP_range_focus 
+		}
 	}
 	
 	remove_trait = { generic_mio_trait_variable_pitch_propellers }
