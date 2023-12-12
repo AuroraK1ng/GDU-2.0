@@ -1,53 +1,474 @@
 ﻿capital = 111
+
+oob = "FIN_1936"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "FIN_1936_naval_mtg"
+	else = {
+		set_naval_oob = "FIN_1936_naval_legacy"
+	}
+}
+
+add_intel = {
+	target = SPR
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = BUl
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = USA
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = ENG
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = SOV
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = RAJ
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = ITA
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = GER
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = ROM
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = HUN
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = JAP
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = CAN
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = FRA
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = SAF
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = AST
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = NZL
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = NOR
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_intel = {
+	target = FIN
+	civilian_intel = 200
+	army_intel = 200
+	navy_intel = 200
+	airforce_intel = 200
+}
+
+add_opinion_modifier = { target = SOV modifier = embargo }
+add_opinion_modifier = { target = SOV modifier = sanctions_relations }
+add_opinion_modifier = { target = SOV modifier = large_decrease }
+add_opinion_modifier = { target = SOV modifier = hostile_status }
+
+add_opinion_modifier = { target = JAP modifier = embargo }
+add_opinion_modifier = { target = JAP modifier = sanctions }
+add_opinion_modifier = { target = JAP modifier = minor_sanctions }
+
 set_research_slots = 3
+
+set_stability = 0.6
+set_war_support = 0.71
+
+add_timed_idea = { idea = airandnavy_idea days = 1320 }
 set_technology = {
+	air_superiority = 1
+	fort_construction = 1
+	interwar_antiair = 1
+	interwar_antitank = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	gw_artillery = 1
-	interwar_antiair = 1
 	tech_support = 1
 	tech_recon = 1
 	tech_engineers = 1
+	support_weapons = 1
+	motorised_infantry = 1
+	interwar_antiair = 1
+	trench_warfare = 1 
+	armored_car1 = 1
+	jaegers = 1
+	shocktroops = 1
+	marines = 1
 	basic_train = 1
-}
-set_convoys = 5
-add_ideas = {
-	limited_conscription
-	sisu
-	GDU_neutrality
+	fuel_silos = 1
+	fuel_refining = 1
+	
 }
 
-set_popularities = {
-	democratic = 10
-	fascism = 10
-	communism = 1
-	neutrality = 79
+add_opinion_modifier = { target = GER modifier = huge_increase  }
+add_opinion_modifier = { target = GER modifier = huge_increase  }
+add_opinion_modifier = { target = GER modifier = huge_increase  }
+
+set_convoys = 200
+
+add_ideas = {
+	sisu
+	FIN_communism_banned
+	extensive_conscription
+    no_finnish_justification
+    free_trade
 }
-recruit_character = FIN_risto_heikki_ryti
-recruit_character = FIN_aimo_aaltonen
-recruit_character = FIN_vilho_annala
-recruit_character = FIN_kyosti_kallio
-recruit_character = FIN_carl_mannerheim
-recruit_character = FIN_erik_heinrichs
-recruit_character = FIN_vilho_petter_nenonen
-recruit_character = FIN_olavi_arho
-recruit_character = FIN_valio_porvari
-recruit_character = FIN_jarl_lundqvist
-recruit_character = FIN_hugo_osterman
-recruit_character = FIN_lauri_malmberg
-recruit_character = FIN_olavi_sarko
-recruit_character = FIN_vaino_valve
-recruit_character = FIN_akseli_anttila
-recruit_character = FIN_harald_ohquist
-recruit_character = FIN_eero_rahola
-recruit_character = FIN_karl_oesch
-recruit_character = FIN_lauri_tiainen
-recruit_character = FIN_ralf_torngren
-recruit_character = FIN_antti_hackzell
-recruit_character = FIN_ake_henrik_gartz
+
+add_equipment_to_stockpile = {
+         type = artillery_equipment_1
+         amount = 1400
+         producer = FIN
+}  
+add_equipment_to_stockpile = {
+         type = support_equipment
+         amount = 356
+         producer = FIN
+} 
+
+add_equipment_to_stockpile = {
+         type = infantry_equipment_1
+         amount = 27000
+         producer = FIN
+} 
+add_equipment_to_stockpile = {
+         type = anti_air_equipment_1
+         amount = 730
+         producer = FIN
+} 
+add_equipment_to_stockpile = {
+	type = anti_tank_equipment_1
+	amount = 860
+	producer = FIN
+} 
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1933.7.1"
 	election_frequency = 36
 	elections_allowed = yes
+}
+
+set_popularities = {
+    democratic = 12
+    fascism = 13
+    communism = 1
+    neutrality = 74
+}
+
+create_country_leader = {
+	name = "Risto Heikki Ryti"
+	desc = "POLITICS_RISTO_HEIKKI_RYT_DESC"
+	picture = "Portrait_Finland_Risto_Heikki_Ryti.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Aimo Aaltonen"
+	desc = "POLITICS_AIMO_AALTONEN_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Vilho Annala"
+	desc = "POLITICS_VILHO_ANNALA_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Kyösti Kallio "
+	desc = "POLITICS_KYÖSTI_KALLIO_DESC"
+	picture = "gfx/leaders/FIN/Portrait_Finland_Kyosti_Kallio.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		#
+	}
+}
+
+recruit_character = FIN_hugo_osterman
+recruit_character = FIN_carl_mannerheim
+recruit_character = FIN_aksel_airo_hc
+recruit_character = FIN_lauri_malmberg
+recruit_character = FIN_olavi_arho
+recruit_character = FIN_lauri_tiainen
+recruit_character = FIN_jarl_lundqvist
+recruit_character = FIN_fin_army_armored
+recruit_character = FIN_vilho_petter_nenonen
+recruit_character = FIN_karl_lennart_oesch
+recruit_character = FIN_johan_arajuuri
+recruit_character = FIN_alpo_marttinen
+recruit_character = FIN_frans_helminen
+recruit_character = FIN_harald_ohquist
+recruit_character = FIN_akseli_anttila
+recruit_character = FIN_vaino_valve
+recruit_character = FIN_ake_henrik_gartz
+recruit_character = FIN_antti_hackzell
+recruit_character = FIN_armaments_fin
+recruit_character = FIN_vaino_tanner 
+recruit_character = FIN_miina_sillanpaa
+
+create_field_marshal = {
+	name = "Carl Gustaf Mannerheim General"
+	traits = { defensive_doctrine skilled_staffer inflexible_strategist war_hero politically_connected old_guard ranger trait_cautious winter_specialist ranger}
+	skill = 6
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 4
+	logistics_skill = 5
+}
+
+create_field_marshal = {
+	name = "Aksel Airo General"
+	picture = "Portrait_Finland_Aksel_Airo.tga"
+	traits = { winter_specialist ranger infantry_leader infantry_officer trickster trait_cautious old_guard skilled_staffer media_personality}
+	skill = 5
+
+	attack_skill = 3
+	defense_skill = 6
+	planning_skill = 1
+	logistics_skill = 6
+}
+
+create_field_marshal = {
+	name = "Paavo Talvela General" 
+	picture = "Portrait_Finland_Paavo_Talvela.tga"
+	traits = { old_guard inflexible_strategist infantry_leader trait_cautious career_officer organizer infantry_leader skilled_staffer } 
+	skill = 5
+    attack_skill = 5
+    defense_skill = 4
+    planning_skill = 4
+    logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Karl Lennart Oesch General"
+	picture = "Portrait_Finland_Karl_Lennart_Oesch.tga"
+	traits = {  winter_specialist ranger panzer_leader armor_officer skilled_staffer trait_reckless harsh_leader }
+	skill = 5
+
+    attack_skill = 5
+    defense_skill = 4
+    planning_skill = 3
+    logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Ruben Lagus General"
+	picture = "Portrait_Finland_Ruben_Lagus.tga"
+	traits = { winter_specialist ranger trait_reckless infantry_officer}
+	skill = 4
+
+    attack_skill = 8
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Aaro Pajari General" 
+	picture = "Portrait_Finland_Aaro_Pajari.tga"
+	traits = { winter_specialist ranger war_hero infantry_officer urban_assault_specialist trait_cautious}
+	skill = 4
+
+    attack_skill = 4
+    defense_skill = 4
+    planning_skill = 2
+    logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Hjalmar Siilasvuo General"
+	picture = "Portrait_Finland_Hjalmar_Siilasvuo.tga"
+	traits = { winter_specialist ranger organizer cavalry_officer skilled_staffer infantry_leader infantry_officer trait_cautious}
+	skill = 4
+
+    attack_skill = 3
+    defense_skill = 4
+    planning_skill = 4
+    logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Erik Heinrichs General"
+	picture = "Portrait_Finland_Erik_Heinrichs.tga"
+	traits = { winter_specialist ranger commando old_guard skilled_staffer career_officer }
+	skill = 4
+
+    attack_skill = 4
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Harald Öhquist General"
+	picture = "Portrait_Finland_Harald_Ohquist.tga"
+	traits = { winter_specialist ranger skilled_staffer infantry_officer politically_connected}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Niilo Hersalo General"
+	picture = "Portrait_Finland_Niilo_Hersalo.tga"
+	traits = {winter_specialist ranger commando politically_connected infantry_leader trait_cautious career_officer}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 7
+}
+
+create_corps_commander = {
+	name = "Ernst Linder General"
+	picture = "Portrait_Finland_Ernst_Linder.tga"
+	traits = { winter_specialist ranger career_officer cavalry_leader skilled_staffer harsh_leader substance_abuser}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 5
+}
+
+create_corps_commander = {
+	name = "Harry Alfthan General"
+	picture = "Portrait_Finland_Harry_Alfthan.tga"
+	traits = {winter_specialist ranger skilled_staffer infantry_leader trickster infantry_officer old_guard }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 5
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Hugo Österman General"
+	picture = "Portrait_Finland_Hugo_Osterman.tga"
+	traits = { winter_specialist ranger panzer_leader armor_officer skilled_staffer organizer harsh_leader }
+	skill = 5
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Wiljo Tuompo General"
+	picture = "Portrait_Finland_Wiljo_Tuompo.tga"
+	traits = {winter_specialist ranger substance_abuser infantry_officer organizer career_officer war_hero }
+	skill = 3
+
+    attack_skill = 3
+    defense_skill = 3
+    planning_skill = 3
+    logistics_skill = 1
 }

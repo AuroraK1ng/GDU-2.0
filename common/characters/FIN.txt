@@ -1,213 +1,12 @@
-characters={
-	FIN_risto_heikki_ryti={
-		name=FIN_risto_heikki_ryti
-		portraits={
-			civilian={
-				large=GFX_portrait_FIN_risto_heikki_ryti
-			}
-		}
-		country_leader={
-			ideology=liberalism
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-
-	FIN_aimo_aaltonen={
-		name=FIN_aimo_aaltonen
-		portraits={
-			civilian={
-				large=GFX_portrait_FIN_aimo_aaltonen
-			}
-		}
-		country_leader={
-			ideology=marxism
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-
-	FIN_vilho_annala={
-		name=FIN_vilho_annala
-		portraits={
-			civilian={
-				large=GFX_portrait_FIN_vilho_annala
-			}
-		}
-		country_leader={
-			ideology=fascism_ideology
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-
-	FIN_kyosti_kallio={
-		name=FIN_kyosti_kallio
-		portraits={
-			civilian={
-				large=GFX_portrait_FIN_kyosti_kallio
-			}
-		}
-		country_leader={
-			ideology=centrism
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-
-	FIN_carl_mannerheim={
-		name=FIN_carl_mannerheim
-		portraits={
-			army={
-				large=GFX_portrait_FIN_carl_mannerheim
-				small="GFX_idea_carl_mannerheim"
-			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = FIN_carl_mannerheim
-			allowed = {
-				original_tag = FIN
-			}
-			traits = {
-				army_chief_defensive_3
-			}
-			cost = 200
-			ai_will_do = {
-				factor = 1.000
-			}
-		}	
-		field_marshal={
-			traits={ inflexible_strategist trait_cautious war_hero trickster winter_specialist defensive_doctrine }
-			skill=5
-			attack_skill=3
-			defense_skill=5
-			planning_skill=5
-			logistics_skill=3
-			legacy_id=58
-		}
-	}
-
-	FIN_erik_heinrichs={
-		name=FIN_erik_heinrichs
-		portraits={
-			army={
-				large=GFX_portrait_FIN_erik_heinrichs
-				small=GFX_portrait_FIN_erik_heinrichs_small
-			}
-		}
-		corps_commander={
-			traits={ winter_specialist ranger }
-			skill=4
-			attack_skill=4
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=-1
-		}
-	}
-
-	FIN_vilho_petter_nenonen={
-		name=FIN_vilho_petter_nenonen
-		portraits={
-			army={
-				large=GFX_portrait_FIN_vilho_petter_nenonen
-				small=GFX_portrait_FIN_vilho_petter_nenonen_small
-			}
-		}
-		corps_commander={
-			traits={ commando winter_specialist }
-			skill=3
-			attack_skill=3
-			defense_skill=1
-			planning_skill=4
-			logistics_skill=2
-			legacy_id=-1
-		}
-	}
-
-
-	### THEORISTS ###
-
-	FIN_akseli_anttila={
-		name=FIN_akseli_anttila
-		portraits={
-			army={
-				small="GFX_idea_generic_army_europe_2"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = FIN_akseli_anttila
-			ledger = army
-			allowed = {
-				original_tag = FIN
-			}
-			
-			traits = {
-				military_theorist
-			}
-		}		
-	}
-
-	FIN_vaino_valve={
-		name=FIN_vaino_valve
-		portraits={
-			army={
-				small="GFX_idea_generic_navy_europe_2"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = FIN_vaino_valve
-			ledger = navy
-			allowed = {
-				original_tag = FIN
-			}
-			traits = {
-				naval_theorist
-			}
-		}		
-	}
-
-
-	### ARMY CHIEFS ###
-
-	# Mannerheim up there
-
-	FIN_lauri_malmberg={
-		name=FIN_lauri_malmberg
-		portraits={
-			army={
-				small="GFX_idea_generic_army_europe_2"
-			}
-		}
-		advisor={	
-			slot = army_chief
-			idea_token = FIN_lauri_malmberg
-			allowed = {
-				original_tag = FIN
-			}
-			traits = {
-				army_chief_drill_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
-	}
-
+characters = {
 	FIN_hugo_osterman={
-		name=FIN_hugo_osterman
-		portraits={
-			army={
-				small="GFX_idea_generic_army_europe_2"
+		name = FIN_hugo_osterman
+		portraits = {
+			army = {
+				small = GFX_portrait_FIN_hugo_osterman_small
 			}
 		}
-		advisor={			
+		advisor = {			
 			slot = army_chief
 			idea_token = FIN_hugo_osterman
 			allowed = {
@@ -218,22 +17,85 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				base = 1.000
 			}
 		}
 	}
-	
+	FIN_carl_mannerheim={
+		name = FIN_carl_mannerheim
 
-	### NAVY CHIEFS ###
-
-	FIN_olavi_arho={
-		name=FIN_olavi_arho
-		portraits={
-			army={
-				small="GFX_idea_generic_navy_europe_2"
+	advisor={
+		slot = army_chief
+		idea_token = FIN_carl_mannerheim
+		allowed  = {
+				original_tag  = FIN 
+			}
+			cost = 100
+			traits  = {
+				army_chief_defensive_3 
+			}
+	}
+	portraits = {
+		army = {
+			large = GFX_portrait_FIN_carl_mannerheim
+			small = GFX_idea_carl_mannerheim
 			}
 		}
-		advisor={
+	
+	}
+	FIN_aksel_airo_hc={
+		name = FIN_aksel_airo_hc
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_aksel_airo
+				small = GFX_portrait_FIN_aksel_airo_small
+			}
+		}
+			advisor = {			
+			slot = army_chief
+			idea_token = FIN_aksel_airo
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				army_chief_planning_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+	FIN_lauri_malmberg = {
+		name = FIN_lauri_malmberg
+		portraits = {
+			army = {
+				small = GFX_portrait_FIN_lauri_malmberg_small
+			}
+		}
+		advisor = {	
+			slot = army_chief
+			idea_token = FIN_lauri_malmberg
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				army_chief_drill_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+	FIN_olavi_arho = {
+		name = FIN_olavi_arho
+		portraits = {
+			army = {
+				small = GFX_portrait_FIN_olavi_arho_small
+			}
+		}
+		advisor = {
 			slot = navy_chief
 			idea_token = FIN_olavi_arho
 			allowed = {
@@ -244,142 +106,18 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
-			}
-		}		
-	}
-
-	FIN_eero_rahola={
-		name=FIN_eero_rahola
-		portraits={
-			army={
-				small="GFX_idea_generic_navy_europe_1"
+				base = 1.000
 			}
 		}
-		advisor={
-			slot = navy_chief
-			idea_token = FIN_eero_rahola
-			allowed = {
-				original_tag = FIN
-			}
-			traits = {
-				navy_chief_decisive_battle_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
 	}
-
-
-	### AIR CHIEFS ###
-
-	FIN_jarl_lundqvist={
-		name=FIN_jarl_lundqvist
-		portraits={
-			army={
-				small="GFX_idea_generic_air_europe_3"
+	FIN_lauri_tiainen = {
+		name = FIN_lauri_tiainen
+		portraits = {
+			army = {
+				small = GFX_portrait_FIN_lauri_tiainen_small
 			}
 		}
-		advisor={
-			slot = air_chief
-			idea_token = FIN_jarl_lundqvist
-			allowed = {
-				original_tag = FIN
-			}
-			traits = {
-				air_chief_all_weather_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
-	}
-	
-	FIN_olavi_sarko={
-		name=FIN_olavi_sarko
-		portraits={
-			army={
-				small="GFX_idea_generic_air_europe_1"
-			}
-		}
-		advisor={
-			slot = air_chief
-			idea_token = FIN_olavi_sarko
-			allowed = {
-				original_tag = FIN
-			}
-			traits = {
-				air_chief_ground_support_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
-	}
-
-
-	### MILITARY HIGH COMMAND ###
-
-	FIN_karl_oesch={
-		name=FIN_karl_oesch
-		portraits={
-			army={
-				small="GFX_idea_generic_army_europe_3"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = FIN_karl_oesch
-			ledger = army
-			allowed = {
-				original_tag = FIN
-			}
-			traits = {
-				army_regrouping_3
-			}
-			cost = 200
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
-	}
-
-	FIN_valio_porvari={
-		name=FIN_valio_porvari
-		portraits={
-			army={
-				small="GFX_idea_generic_air_europe_1"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = FIN_valio_porvari
-			ledger = air
-			allowed = {
-				original_tag = FIN
-			}
-			traits = {
-				air_air_superiority_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
-	}
-
-	FIN_lauri_tiainen={
-		name=FIN_lauri_tiainen
-		portraits={
-			army={
-				small="GFX_idea_generic_army_europe_1"
-			}
-		}
-		advisor={
+		advisor = {
 			slot = high_command
 			idea_token = FIN_lauri_tiainen
 			ledger = army
@@ -391,19 +129,108 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
-			}
-		}		
-	}
-
-	FIN_harald_ohquist={
-		name=FIN_harald_ohquist
-		portraits={
-			army={
-				small="GFX_idea_generic_army_europe_5"
+				base = 1.000
 			}
 		}
+	}	
+	FIN_jarl_lundqvist = {
+		name = FIN_jarl_lundqvist
+		portraits = {
+			army = {
+				small = GFX_portrait_FIN_jarl_lundqvist_small
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = FIN_jarl_lundqvist
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				air_chief_all_weather_3
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+	FIN_fin_army_armored={
 		advisor={
+			slot = high_command
+			idea_token = fin_army_armored
+			cost = 75
+			ledger  = army 
+				allowed  = {
+					original_tag  = FIN 
+				}
+				traits  = {
+					army_armored_1 
+				}
+		}
+		name="Kalle Rautio"
+		portraits={
+			army={
+				small="GFX_idea_MEX_pablo_gonzalez"
+			}
+		}
+	}
+	FIN_vilho_petter_nenonen={ 
+		name = FIN_vilho_petter_nenonen
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_vilho_petter_nenonen
+				small = GFX_portrait_FIN_vilho_petter_nenonen_small
+			}
+		}
+			advisor = {
+			slot = high_command
+			idea_token = FIN_vilho_petter_nenonen
+			ledger = army
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				army_chief_planning_1
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+	FIN_karl_lennart_oesch={
+		name = FIN_karl_oesch
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_karl_lennart_oesch
+				small = GFX_portrait_FIN_karl_oesch_small
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = FIN_karl_oesch
+			ledger = army
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				army_regrouping_3
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+	FIN_harald_ohquist = {
+		name = FIN_harald_ohquist
+		portraits = {
+			army = {
+				small = GFX_portrait_FIN_harald_ohquist_small
+			}
+		}
+		advisor = {
 			slot = high_command
 			idea_token = FIN_harald_ohquist
 			ledger = army
@@ -411,76 +238,222 @@ characters={
 				original_tag = FIN
 			}
 			traits = {
-				army_regrouping_2
+				army_entrenchment_2
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
-			}
-		}		
-	}
-
-
-	### POLITICAL ADVISORS ###
-
-	FIN_ralf_torngren={
-		name=FIN_ralf_torngren
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_1"
+				base = 1.000
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = FIN_ralf_torngren
-			allowed  = {
-				original_tag  = FIN
-			}
-			traits  = {
-				ideological_crusader 
-			}
-		}		
 	}
-
-	FIN_ake_henrik_gartz={
-		name=FIN_ake_henrik_gartz
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_2"
+	FIN_frans_helminen = {
+		name = FIN_frans_helminen
+		portraits = {
+			army = {
+				small = GFX_portrait_FIN_frans_helminen_small
 			}
 		}
+		advisor = {
+			slot = high_command
+			idea_token = FIN_frans_helminen
+			ledger = army
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				army_concealment_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+	FIN_alpo_marttinen = {
+		name = FIN_alpo_marttinen
+		portraits = {
+			army = {
+				small = GFX_portrait_FIN_alpo_marttinen_small
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = FIN_alpo_marttinen
+			ledger = army
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+	FIN_johan_arajuuri = {
+		name = FIN_johan_arajuuri
+		portraits = {
+			army = {
+				small = GFX_portrait_FIN_johan_arajuuri_small
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = FIN_johan_arajuuri
+			ledger = army
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				army_infantry_3
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+	FIN_akseli_anttila={
 		advisor={
-			slot = political_advisor
+			slot = theorist
+			idea_token = FIN_akseli_anttila
+			ledger  = army 
+				allowed  = {
+					original_tag  = FIN 
+				}
+	            cost = 150
+				traits  = {
+					superior_firepower_expert 
+				}
+		}
+		name="FIN_akseli_anttila"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+	}
+	FIN_vaino_valve = {
+		name = FIN_vaino_valve
+		portraits = {
+			army = {
+				small = GFX_portrait_FIN_vaino_valve_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = theorist
+			idea_token = FIN_vaino_valve
+			ledger = navy
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				grand_battle_plan_expert
+			}
+		}
+	}
+	FIN_ake_henrik_gartz = {
+		name = FIN_ake_henrik_gartz
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FIN_ake_henrik_gartz_small
+			}
+		}
+		advisor = {
+			slot = political_advisor #NO PARTY
 			idea_token = FIN_ake_henrik_gartz
-			allowed  = {
-				original_tag  = FIN
+			allowed = {
+				original_tag = FIN
 			}
-			traits  = {
+			traits = {
 				captain_of_industry 
 			}
-		}		
+		}
 	}
-
 	FIN_antti_hackzell={
-		name=FIN_antti_hackzell
+		name = FIN_antti_hackzell
+	portraits = {
+		civilian = {
+			small = GFX_portrait_FIN_antti_hackzell_small
+		}
+	}
+	advisor = {
+		slot = political_advisor #NATIONAL COALITION
+		idea_token = FIN_antti_hackzell
+		allowed = {
+			original_tag = FIN
+		}
+		traits = {
+			silent_workhorse 
+			}
+		}
+	}
+	FIN_armaments_fin={
+		advisor={
+			slot = political_advisor
+			idea_token = armaments_fin
+			allowed  = {
+					original_tag  = FIN
+				}
+				traits  = {
+					armaments_organizer 
+				}
+		}
+		name="Kusti Lassila"
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_europe_3"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = FIN_antti_hackzell
-			allowed  = {
-				original_tag  = FIN
-			}
-			traits  = {
-				silent_workhorse 
-			}
-		}		
 	}
+	FIN_vaino_tanner = {
+		name = FIN_vaino_tanner
+		portraits = {
+			civilian = {
+				large = GFX_portrait_FIN_vaino_tanner
+				small = GFX_portrait_FIN_vaino_tanner_small
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = FIN_vaino_tanner
+			allowed = {
+				original_tag = FIN
+			}
+			cost = 150
+			traits = {
+				war_industrialist
+			}
+		}
+	}	
+	FIN_miina_sillanpaa = {
+		name = FIN_miina_sillanpaa
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FIN_miina_sillanpaa_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = FIN_miina_sillanpaa
+			allowed = {
+				original_tag = FIN
+			}
+			available = {
+				OR = {
+					GER = { has_war_with = SOV }
+					date > 1941.6.22
+				}
+			}
+			cost = -1
+			traits = {
+				fin_sec_winter_war
+			}
+		}
+}
 
-	# Ideology-pushing advisors auto-generated
-
-	# Illusive Gentleman auto-generated	
 }
