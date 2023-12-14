@@ -81,7 +81,7 @@
 		x = 3
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 9
@@ -699,7 +699,7 @@
 		y = 5
 		relative_position_id = ROM_civil_works
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -763,7 +763,7 @@
 		x = 10
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 9
@@ -899,7 +899,7 @@
 		y = 1
 		relative_position_id = ROM_institute_royal_dictatorship
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1042,30 +1042,6 @@
 
 		completion_reward = {
 			#Remove ideas or display tooltip warning that it will happen
-			if = {
-				limit = {
-					has_idea = ROM_securitate
-				}
-				remove_ideas = ROM_securitate
-				else = {
-					if = {
-						limit = {
-							has_idea = ROM_constitutional_guarantees
-						}
-						remove_ideas = ROM_constitutional_guarantees
-						else = {
-							custom_effect_tooltip = ROM_appoint_german_friendly_government_tooltip
-						}
-					}
-				}
-			}
-			if = {
-				limit = { NOT = { has_idea = ROM_flexible_foreign_policy_2 } }
-				swap_ideas = {
-					remove_idea = ROM_flexible_foreign_policy
-					add_idea = ROM_flexible_foreign_policy_2
-				}
-			}
 			add_popularity = {
 				popularity = 0.35
 				ideology = fascism
@@ -1074,23 +1050,6 @@
 			show_ideas_tooltip = ROM_mihail_sturdza
 			add_opinion_modifier = { modifier = ROM_appoint_german_friendly_government target = GER }
 			GER = { add_opinion_modifier = { modifier = ROM_appoint_german_friendly_government target = ROOT } }
-
-			#Cancel guarantees
-			diplomatic_relation = {
-				country = YUG
-				relation = guarantee
-				active = no
-			}
-			diplomatic_relation = {
-				country = CZE
-				relation = guarantee
-				active = no
-			}
-			diplomatic_relation = {
-				country = GRE
-				relation = guarantee
-				active = no
-			}
 		}
 	}
 
@@ -1220,7 +1179,7 @@
 				add_idea = ROM_figurehead_king_michael
 				remove_idea = ROM_king_carol_ii_hedonist
 			}
-			remove_ideas = ROM_the_sentinel_of_the_motherland
+			#remove_ideas = ROM_the_sentinel_of_the_motherland
 			add_timed_idea = { idea = ROM_king_carol_emptied_accounts days = 45 }
 		}
 	}
@@ -1839,7 +1798,7 @@
 		y = 1
 		relative_position_id = ROM_army_maneuvers
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 9
@@ -1939,7 +1898,7 @@
 		x = 0
 		y = 1
 		prerequisite = { focus = ROM_ITA_Weapons }
-		cost = 10
+		cost = 5
 		relative_position_id = ROM_ITA_Weapons
 		ai_will_do = {
 			factor = 9
