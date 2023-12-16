@@ -4012,7 +4012,7 @@ focus_tree = {
 			#}
 		}
 		completion_reward = {
-			
+			custom_effect_tooltip = "Allows Conscription of Scottish Elite Mountaneers"
 		}
 	}
 	focus = {
@@ -4043,7 +4043,7 @@ focus_tree = {
 			#}
 		}
 		completion_reward = {
-			
+			custom_effect_tooltip = "Allows Conscription of Welshmen"
 		}
 	}
 	focus = {
@@ -4068,7 +4068,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ENG_SAS
-		cost = 5
+		cost = 2.9
 		ai_will_do = {
 			factor = 1
 			#modifier = {
@@ -4076,7 +4076,7 @@ focus_tree = {
 			#}
 		}
 		completion_reward = {
-			
+			custom_effect_tooltip = "Creates Foundation for Bovington Armoured Training Camp"
 		}
 	}
 	focus = {
@@ -4139,7 +4139,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ENG_Welsh
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			#modifier = {
@@ -4147,6 +4147,7 @@ focus_tree = {
 			#}
 		}
 		completion_reward = {
+			custom_effect_tooltip = "Support Oceania Minors with Weapons 2 and Artillery 2 if it is researched!"
 			AST = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 10000 producer = ENG } }
 			AST = { add_equipment_to_stockpile = { type = artillery_equipment_2 amount = 500 producer = ENG } }
 			NZL = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 10000 producer = ENG } }
@@ -4155,7 +4156,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_sherman
-		text = "American Sherman With British Touches"
+		text = "American Sherman With a British Touch"
 		prerequisite = { focus = ENG_Bovington }
 		prerequisite = { focus = ENG_canadian_engineers }
 		prerequisite = { focus = ENG_support_anzac }
@@ -4173,7 +4174,7 @@ focus_tree = {
 		icon = GFX_ENG_Firefly
 
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = ENG_Bovington
 		cost = 5
 		ai_will_do = {
@@ -4183,7 +4184,7 @@ focus_tree = {
 			#}
 		}
 		completion_reward = {
-			
+			custom_effect_tooltip = "Enables Production of a Better Quality Medium Tank through our Military Industrial Organisation"
 		}
 	}
 	

@@ -581,12 +581,12 @@ political_actions = {
 	}
 }
 ENG_Home_defense = {
-Form_Scottish_Army_Corps = {
+	Form_Scottish_Army_Corps = {
 		icon = GFX_decision_SWE_set_army_budget												
 		ai_will_do = { factor = 0 }												
 		custom_cost_trigger = {
 			num_of_civilian_factories_available_for_projects > 20
-		  }					
+		}					
 		custom_cost_text = decision_cost_CIV_20					
 		fire_only_once = no
 		available = {
@@ -604,17 +604,21 @@ Form_Scottish_Army_Corps = {
 			civilian_factory_use = 20
 		}
 		complete_effect = {
-			ENG = {
-				load_oob = "ENG_Form_scottish"			
+			custom_effect_tooltip = "Summon Eight Elite Highland Mountaneers"
+			hidden_effect = {
+				ENG = {
+					load_oob = "ENG_Form_scottish"			
+				}
 			}
 		}
 	}
-Form_Welsh_Army_Corps = {
+	
+	Form_Welsh_Army_Corps = {
 		icon = GFX_decision_SWE_set_army_budget												
 		ai_will_do = { factor = 0 }												
 		custom_cost_trigger = {
 			num_of_civilian_factories_available_for_projects > 20
-		  }					
+		}					
 		custom_cost_text = decision_cost_CIV_20					
 		fire_only_once = no
 		available = {
@@ -632,18 +636,21 @@ Form_Welsh_Army_Corps = {
 			civilian_factory_use = 20
 		}
 		complete_effect = {
-			ENG = {
-				load_oob = "ENG_Form_welsh"			
+			custom_effect_tooltip = "Conscript 8 Welsh Divisions"
+			hidden_effect = {
+				ENG = {
+					load_oob = "ENG_Form_welsh"			
+				}
 			}
 		}
 	}
-Form_Bovington = {
+	Form_Bovington = {
 		icon = GFX_decision_generic_tank												
 		ai_will_do = { factor = 0 }												
 		custom_cost_trigger = {
 			num_of_civilian_factories_available_for_projects > 30
-		  }					
-		custom_cost_text = decision_cost_CIV_30					
+		}					
+		custom_cost_text = decision_cost_CIV_20					
 		fire_only_once = yes
 		available = {
 			tag = ENG
@@ -661,22 +668,22 @@ Form_Bovington = {
 		}
 		complete_effect = {
 		set_global_flag = Bovington_finished
-				123 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
+			123 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
 				}
+			}
 		}
 	}
-Form_armored_division = {
+	Form_armored_division = {
 		icon = GFX_decision_generic_tank												
 		ai_will_do = { factor = 0 }												
 		custom_cost_trigger = {
-			num_of_civilian_factories_available_for_projects > 45
-		  }					
-		custom_cost_text = decision_cost_CIV_45				
+			num_of_civilian_factories_available_for_projects > 40
+		}					
+		custom_cost_text = decision_cost_CIV_40			
 		fire_only_once = no
 		available = {
 			tag = ENG
@@ -690,11 +697,14 @@ Form_armored_division = {
 		}
 		days_remove = 60
 		modifier = {
-			civilian_factory_use = 45
+			civilian_factory_use = 40
 		}
 		complete_effect = {
+			custom_effect_tooltip = "Graduate Two Elite Bovington Armour Divisions!"
+			hidden_effect = {
 				ENG = {
-				load_oob = "ENG_Bovington_division"			
+					load_oob = "ENG_Bovington_division"			
+				}
 			}
 		}
 	}
