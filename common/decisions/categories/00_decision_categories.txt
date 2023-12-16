@@ -17,6 +17,20 @@ GER_atlantik_wall_category = {
 		always = yes
 	}
 }
+ENG_Home_defense = {
+	icon = GFX_decision_category_generic_mountain_fortification
+
+	picture = GFX_decision_cat_picture_ger_atlantik_wall
+
+	visible = {
+		ENG = {has_completed_focus = ENG_at_war }
+	}
+
+	allowed = {
+		original_tag = ENG
+		always = yes
+	}
+}
 USA_foreign_politics = {
 		icon = GFX_decision_usa_congress
 	picture = GFX_decision_cat_picture_usa_pentagon

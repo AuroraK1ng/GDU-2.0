@@ -4781,10 +4781,13 @@ GER_atlantik_wall_category = {
 			always = yes
 		}
 		complete_effect = {
-			GER = {
-				load_oob = "GER_Atlantikwall_Deployment"
-				load_oob = "GER_Atlantikwall_Deployment"
-				add_manpower = -112000					
+			custom_effect_tooltip = "Spawn 2W Divisions to cover the Atlantikwall"
+			hidden_effect = {
+				GER = {
+					load_oob = "GER_Atlantikwall_Deployment"
+					load_oob = "GER_Atlantikwall_Deployment"
+					add_manpower = -112000					
+				}
 			}
 		}
 	}
@@ -5295,11 +5298,9 @@ GER_atlantik_wall_category = {
 		icon = GFX_decision_generic_tank												
 		ai_will_do = { factor = 0 }												
 		custom_cost_trigger = {
-			num_of_civilian_factories_available_for_projects > 40
-		  }
-					
-		custom_cost_text = decision_cost_CIV_40
-					
+			num_of_civilian_factories_available_for_projects > 30
+		}					
+		custom_cost_text = decision_cost_CIV_30					
 		fire_only_once = no
 		available = {
 			tag = GER
@@ -5318,8 +5319,11 @@ GER_atlantik_wall_category = {
 			civilian_factory_use = 30
 		}
 		complete_effect = {
-			GER = {
-				load_oob = "GER_Form_New_Panzers"			
+			custom_effect_tooltip = "Summon Two SS-Panzer Divisions in Paris"
+			hidden_effect = {
+				GER = {
+					load_oob = "GER_Form_New_Panzers"			
+				}
 			}
 		}
 	}
@@ -5327,9 +5331,9 @@ GER_atlantik_wall_category = {
 		icon = GFX_decision_SWE_set_army_budget												
 		ai_will_do = { factor = 0 }												
 		custom_cost_trigger = {
-			num_of_civilian_factories_available_for_projects > 40
-		  }					
-		custom_cost_text = decision_cost_CIV_40					
+			num_of_civilian_factories_available_for_projects > 30
+		}					
+		custom_cost_text = decision_cost_CIV_30					
 		fire_only_once = no
 		available = {
 			tag = GER
@@ -5348,8 +5352,11 @@ GER_atlantik_wall_category = {
 			civilian_factory_use = 30
 		}
 		complete_effect = {
-			GER = {
-				load_oob = "GER_Form_Jaegers"			
+			custom_effect_tooltip = "Summon Twenty SS-Fallschirmjager Divisions in Paris"
+			hidden_effect = {
+				GER = {
+					load_oob = "GER_Form_Jaegers"			
+				}
 			}
 		}
 	}
