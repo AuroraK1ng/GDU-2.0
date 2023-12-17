@@ -72,7 +72,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = AST_army
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -400,26 +400,26 @@ focus_tree = {
 
 		completion_reward = {
 		521 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 2
 					instant_build = yes
 				}
 			}	
 			723 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 2
 					instant_build = yes
 				}
 			}
 			119 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1612,10 +1612,10 @@ focus_tree = {
 			}
 			navy_experience = 250
 			285 = {
-				add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 5
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -1630,10 +1630,10 @@ focus_tree = {
 			}				
 			navy_experience = 250
 			285 = {
-				add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 5
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = AST_cockatoo_island_shipyards_DY
@@ -1902,8 +1902,7 @@ focus_tree = {
 			}				
 			add_tech_bonus = {
 				name = AST_royal_australian_submarine_service
-				bonus = 2.00
-				ahead_reduction = 2
+				bonus = 1.00
 				uses = 1
 				technology = improved_ship_hull_submarine
 			}			
@@ -2058,10 +2057,10 @@ focus_tree = {
 				}				
 			}
 		522 = {
-				add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 5
+					level = 3
 					instant_build = yes
 				}
 			}			
