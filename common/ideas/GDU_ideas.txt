@@ -37,6 +37,39 @@ ideas = {
 				production_speed_dockyard_factor = -0.4
 			}
 		}
+		GDU_Compass_idea = {
+			allowed = {
+				always = yes
+			}
+			picture = generic_org_of_african_unity
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+			army_strength_factor = -0.10
+			army_defence_factor = -0.07
+			army_attack_factor = 0.05
+			supply_consumption_factor = -0.05
+			army_org_regain = 0.05
+			supply_node_range = 0.10
+			air_mission_efficiency = -0.03
+			cas_damage_reduction = 0.05
+			}
+		}
+		ENG_noasia_GDU = {
+			allowed = {
+				always = yes
+			}
+			picture = great_depression
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_arms_factory_factor = -0.4
+				production_speed_industrial_complex_factor = 0.3
+				production_speed_dockyard_factor = -1.0
+			}
+		}
 		AXIS_attack_bonus_1 = {
 			allowed = {
 				always = yes

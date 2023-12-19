@@ -32,7 +32,13 @@ sealion_score_modifier_spirit = {
 	army_core_attack_factor = sealion_score_modifier
 	army_core_defence_factor = sealion_score_modifier
 }
-
+GDU_noasia_africa = {
+	enable = { always = yes }
+	icon = "GFX_unplanned_offensive"
+	army_speed_factor = -0.2
+	dig_in_speed_factor = 0.5
+	army_attack_speed_factor = -0.1
+}
 allied_afrika_modifier_spirit = {
 	enable = { always = yes }
 	icon = "GFX_goal_generic_position_armies"

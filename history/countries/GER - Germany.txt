@@ -863,3 +863,15 @@ add_intel = {
 	navy_intel = 200
 	airforce_intel = 200
 }
+1936.1.1.13 = {
+	remove_from_faction = BUL
+	remove_from_faction = HUN
+	set_autonomy = {
+		target = BUL
+		autonomy_state = autonomy_free
+	}
+	set_autonomy = {
+		target = HUN
+		autonomy_state = autonomy_free
+	}
+}

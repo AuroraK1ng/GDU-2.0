@@ -5,7 +5,6 @@ on_actions = {
 					cross_faction_trade_disabled = yes
 				}
 			}
-		
 		}
 	
 	on_paradrop = {
@@ -42,6 +41,50 @@ on_actions = {
 	}	
 	on_startup = {
 		effect = {
+			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = GER state = 724  }} }
+			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = ENG state = 336  }} }
+			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = ENG state = 375  }} }
+			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = ENG state = 379  }} }
+			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = ENG state = 377  }} }
+			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = ENG state = 380  }} }
+			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = ENG state = 391  }} }
+			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = ENG state = 393  }} }
+			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = ENG state = 672  }} }
+			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = ENG state = 261  }} }
+			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = ENG state = 376  }} }
+			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = ENG state = 387  }} }
+			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = ENG state = 360  }} }
+			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = ENG state = 368  }} }
+
+			if = { limit = { has_start_date > 1936.1.1.12 }
+			452 = {
+				add_dynamic_modifier = { modifier = GDU_noasia_africa days = 1800 }
+			}
+			447 = {
+				add_dynamic_modifier = { modifier = GDU_noasia_africa days = 1800 }
+			}
+			446 = {
+				add_dynamic_modifier = { modifier = GDU_noasia_africa days = 1800 }
+			}
+			456 = {
+				add_dynamic_modifier = { modifier = GDU_noasia_africa days = 1800 }
+			}
+			453 = {
+				add_dynamic_modifier = { modifier = GDU_noasia_africa days = 1800 }
+			}
+			454 = {
+				add_dynamic_modifier = { modifier = GDU_noasia_africa days = 1800 }
+			}
+			455 = {
+				add_dynamic_modifier = { modifier = GDU_noasia_africa days = 1800 }
+			}
+			451 = {
+				add_dynamic_modifier = { modifier = GDU_noasia_africa days = 1800 }
+			}
+			663 = {
+				add_dynamic_modifier = { modifier = GDU_noasia_africa days = 1800 }
+			}
+		}
 			every_country = {
                     add_ideas = { EFI_START }
 				}
