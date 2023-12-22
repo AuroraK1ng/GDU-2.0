@@ -624,7 +624,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			army_experience = 125
+			army_experience = 250
 			navy_experience = 100
 		}
 	}
@@ -813,7 +813,7 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = tank_bonus
-				bonus = 0.75
+				bonus = 1.00
 				uses = 1
 				technology = improved_heavy_tank_chassis
 			}
@@ -834,7 +834,7 @@ focus_tree = {
 			factor = 0.2
 		}
 		completion_reward = {
-			army_experience = 125
+			army_experience = 250
 			navy_experience = 100
 		}
 	}
@@ -911,15 +911,15 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
-						bonus = 1
-						name = tank_bonus
-						technology = basic_medium_tank_chassis
-					}
+				bonus = 1.25
+				name = tank_bonus
+				technology = basic_medium_tank_chassis
+			}
 			add_tech_bonus = {
-						bonus = 0.5
-						name = tank_bonus
-						technology = improved_medium_tank_chassis
-					}
+				bonus = 0.75
+				name = tank_bonus
+				technology = improved_medium_tank_chassis
+			}
 		}
 	}
 	focus = {
@@ -946,6 +946,7 @@ focus_tree = {
 	}	
 	focus = {
 		id = FRA_infantry_tanks
+		text = "Invest in Hotchkiss"
 		icon = GFX_focus_prc_infiltration
 		x = 17
 		y = 2
@@ -973,17 +974,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			set_technology = {
+				tech_special_forces = 1
+			}
 			add_tech_bonus = {
 				name = FRA_chindits
 				bonus = 1.00
 				uses = 4
 				category = cat_special_forces_generic
-			}
-			add_tech_bonus = {
-				name = FRA_chindits
-				bonus = 1.00
-				uses = 1
-				category = mountaineers_tech
 			}
 		}
 	}
@@ -1000,12 +998,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			set_technology = {
+				improved_special_forces = 1
+			}
 			add_tech_bonus = {
 				name = FRA_fusiliers_marine
-				category = tp_tech
-				category = marine_tech
-				uses = 2
-				bonus = 1
+				bonus = 1.00
+				uses = 4
+				category = cat_special_forces_generic
 			}
 		}
 	}

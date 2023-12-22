@@ -83,6 +83,7 @@ set_technology = {
 	iw_medium_airframe = 1
 	basic_medium_airframe = 1
 	early_bombs = 1
+	survivability_studies = 1
 	early_ship_hull_light = 1
 	basic_ship_hull_light = 1
 	early_ship_hull_submarine = 1
@@ -101,6 +102,11 @@ set_technology = {
 	basic_cruiser_armor_scheme = 1
 	mtg_transport = 1
 	cruiser_submarines = 1
+	air_superiority = 1
+	forward_interception = 1
+	fighter_ace_initiative = 1
+	dogfighting_experience = 1
+	multialtitude_flying = 1
 }
 
 recruit_character = FRA_philippe_petain
@@ -172,6 +178,31 @@ create_equipment_variant = {
 	}
 }
 
+create_equipment_variant = {
+	name = "Hanriot H.220"
+	type = small_plane_cas_airframe_1
+	modules = {
+		fixed_main_weapon_slot = armor_piercing_bomb_locks
+		engine_type_slot = engine_2_1x
+		special_type_slot_1 = dive_brakes_small
+		special_type_slot_2 = lmg_defense_turret
+	}
+	obsolete = no
+	icon = "GFX_FRA_CAS_equipment_1_medium"
+}
+
+create_equipment_variant = {
+	name = "Dewoitine D.520"
+	type = small_plane_airframe_1
+	modules = {
+		fixed_main_weapon_slot = heavy_mg_4x
+		engine_type_slot = engine_2_1x
+		special_type_slot_1 = self_sealing_fuel_tanks_small
+		special_type_slot_2 = lmg_defense_turret
+	}
+	icon = "GFX_FRA_fighter1_medium"
+}
+
 add_equipment_to_stockpile = {
 	type = artillery_equipment_1
 	amount = 5500
@@ -223,6 +254,18 @@ add_equipment_to_stockpile = {
 add_equipment_to_stockpile = {
 	type = heavy_tank_chassis_1
 	amount = 500
+	producer = FRA
+}
+
+add_equipment_to_stockpile = {
+	type = small_plane_airframe_1
+	amount = 1000
+	producer = FRA
+}
+	
+add_equipment_to_stockpile = {
+	type = small_plane_cas_airframe_1
+	amount = 300
 	producer = FRA
 }
 
