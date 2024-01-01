@@ -82,8 +82,8 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_acquire_modern_tools
-		icon = GFX_goal_generic_production2
-		x = 7
+		icon = GFX_ITA_selling
+		x = 4
 		y = 0
 		cost = 5
 		available = {
@@ -113,12 +113,12 @@ focus_tree = {
 	focus = {
 		id = BUL_Restoring_production
 		text = "Restoring Production"
-		icon = GFX_goal_generic_production2
+		icon = GFX_ITA_ger_invest
 		mutually_exclusive = {
 			focus = BUL_Invite_foreign_specialists
 		}
 		prerequisite = { focus = BUL_acquire_modern_tools }
-		x = -7
+		x = -2
 		y = 1
 		relative_position_id = BUL_acquire_modern_tools
 		cost = 10
@@ -150,7 +150,7 @@ focus_tree = {
 			focus = BUL_Restoring_production
 		}
 		prerequisite = { focus = BUL_acquire_modern_tools }
-		x = -3
+		x = 2
 		y = 1
 		relative_position_id = BUL_acquire_modern_tools
 		cost = 5
@@ -216,7 +216,7 @@ focus_tree = {
 	focus = {
 		id = BUL_local_produc_1
 		text = "Support for Local Producers"
-		icon = GFX_goal_generic_production2
+		icon = GFX_ITA_ger_invest
 		
 		prerequisite = { focus = BUL_local_produc }
 		x = 0
@@ -250,7 +250,7 @@ focus_tree = {
 	focus = {
 		id = BUL_ger_engeneer
 		text = "Invitation of Germany Engineers"
-		icon = GFX_goal_generic_production2
+		icon = GFX_ITA_new_ger_aircraft
 		
 		prerequisite = { focus = BUL_Invite_foreign_specialists }
 		x = -1
@@ -264,12 +264,20 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = ger_engineers
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
 		id = BUL_ita_engeneer
 		text = "Invitation of Italian Engineers"
-		icon = GFX_goal_generic_production2
+		icon = GFX_ITA_selling
 		
 		prerequisite = { focus = BUL_Invite_foreign_specialists }
 		x = 1
@@ -288,7 +296,7 @@ focus_tree = {
 	focus = {
 		id = BUL_machine_tools
 		text = "Purchase of Machine Tools"
-		icon = GFX_goal_generic_production2
+		icon = GFX_ITA_selling_aircraft
 		
 		prerequisite = { focus = BUL_ger_engeneer }
 		prerequisite = { focus = BUL_ita_engeneer }
@@ -315,7 +323,7 @@ focus_tree = {
 	focus = {
 		id = BUL_Production_facilities
 		text = "Production Facilities"
-		icon = GFX_goal_generic_production2
+		icon = GFX_Factory_Complex
 		
 		prerequisite = { focus = BUL_machine_tools focus = BUL_local_produc_1 }
 		x = 2
@@ -339,4 +347,840 @@ focus_tree = {
 			remove_ideas = Destroyed_industry_1
 		}
 	}
+
+	focus = {
+		id = BUL_army
+		text = "Restoring Army"
+		icon = GFX_Bul_prigozin
+		x = 15
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = Ger_coop
+				bonus = 0.50
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = BUL_atashe
+		text = "Invite The Atashe"
+		icon = GFX_focus_ITA_atache
+		prerequisite = { focus = BUL_army  }
+		x = -4
+		y = 1
+		relative_position_id = BUL_army
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_tech_bonus = {
+				name = Ger_coop
+				bonus = 1.00
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = BUL_Lessons_of_War
+		text = "Lessons of War"
+		icon = GFX_BUL_pz4
+		prerequisite = { focus = BUL_army  }
+		x = 0
+		y = 1
+		relative_position_id = BUL_army
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		swap_ideas = {
+				remove_idea = Destroyed_army
+				add_idea = Destroyed_army_1
+			}
+		
+		}
+	}
+	focus = {
+		id = BUL_design_offices
+		text = "Open Own Arms Facility"
+		icon = GFX_Factory_Complex
+		prerequisite = { focus = BUL_army  }
+		x = 4
+		y = 1
+		relative_position_id = BUL_army
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = Own_arms
+		}
+	}
+	focus = {
+		id = BUL_Foreign_aid
+		text = "Foreign Aid"
+		icon = GFX_BUL_pz2
+		prerequisite = { focus = BUL_atashe  }
+		x = -2
+		y = 1
+		relative_position_id = BUL_atashe
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 1.00
+				uses = 1
+				category = infantry_weapons
+			}
+			BUL = { add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 10000 producer = GER } }
+			BUL = { add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 500 producer = GER } }
+			BUL = { add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 500 producer = GER } }
+		}
+	}
+	focus = {
+		id = BUL_Foreign_aid_1
+		text = "Joint Production of Armaments"
+		icon = GFX_BUL_wespe
+		prerequisite = { focus = BUL_Foreign_aid  }
+		prerequisite = { focus = BUL_ita_engeneer  }
+		x = -1
+		y = 1
+		relative_position_id = BUL_Foreign_aid
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			48 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			2 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BUL_special_force
+		text = "The Creation of Special Forces"
+		icon = GFX_Form_panzergrenadier
+		prerequisite = { focus = BUL_atashe  }
+		x = 0
+		y = 2
+		relative_position_id = BUL_atashe
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_tech_bonus = {
+				name = special_bonus
+				bonus = 1.00
+				uses = 2
+				category = cat_special_forces_generic
+			}	
+		}
+	}
+	focus = {
+		id = BUL_special_Training
+		text = "Special Forces - Special Training"
+		icon = GFX_BUL_mp40
+		prerequisite = { focus = BUL_special_force  }
+		x = 0
+		y = 2
+		relative_position_id = BUL_special_force
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 2.00
+				uses = 2
+				technology = survival_training
+				technology = elite_forces
+			}
+		}
+	}
+	focus = {
+		id = BUL_exercise_1938
+		text = "Military Training 1938"
+		icon = GFX_BUL_modern_tank
+		prerequisite = { focus = BUL_atashe }
+		prerequisite = { focus = BUL_Lessons_of_War }
+		x = 2
+		y = 1
+		relative_position_id = BUL_atashe
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 1.00
+				uses = 1
+				category = land_doctrine
+			}
+			swap_ideas = {
+				remove_idea = Destroyed_army_1
+				add_idea = Destroyed_army_2
+			}
+		}
+	}
+	focus = {
+		id = BUL_new_game_rules
+		text = "New Game Rules"
+		icon = GFX_BUL_bmp2
+		prerequisite = { focus = BUL_exercise_1938 }
+		prerequisite = { focus = BUL_special_force }
+		x = 0
+		y = 2
+		relative_position_id = BUL_exercise_1938
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 2.
+				uses = 1
+				name = mech_army_bonus
+				technology = mechanised_infantry2
+			}
+			add_tech_bonus = {
+				bonus = 2
+				uses = 1
+				name = mech_army_bonus
+				technology = mechanised_infantry
+			}
+		}
+	}
+	focus = {
+		id = BUL_rocket_arty
+		text = "WUNDERWAFFE"
+		icon = GFX_BUL_rocket
+		prerequisite = { focus = BUL_new_game_rules }
+		prerequisite = { focus = BUL_special_Training }
+		x = 0
+		y = 2
+		relative_position_id = BUL_new_game_rules
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 2.0
+				uses = 1
+				technology = motorized_rocket_unit
+			}
+		add_tech_bonus = {
+				name = WUNDERWAFFE
+				bonus = 1.00
+				uses = 3
+				category = rocketry
+			}
+		}
+	}
+	focus = {
+		id = BUL_Academy
+		text = "Military Academy"
+		icon = GFX_Bul_new_people
+		prerequisite = { focus = BUL_Lessons_of_War }
+		prerequisite = { focus = BUL_exercise_1938 }
+		prerequisite = { focus = BUL_China }
+		x = 0
+		y = 2
+		relative_position_id = BUL_Lessons_of_War
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Destroyed_army_2
+				add_idea = Destroyed_army_3
+			}
+		}
+	}
+	focus = {
+		id = BUL_New_War
+		text = "New Army"
+		icon = GFX_BUL_victory
+		prerequisite = { focus = BUL_Academy }
+		x = 0
+		y = 2
+		relative_position_id = BUL_Academy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				remove_idea = Destroyed_army_3
+				add_ideas = New_Army
+		}
+	}
+	focus = {
+		id = BUL_China
+		text = "Experience of War in China"
+		icon = GFX_BUL_leiga
+		prerequisite = { focus = BUL_design_offices }
+		prerequisite = { focus = BUL_Lessons_of_War }
+		x = -2
+		y = 1
+		relative_position_id = BUL_design_offices
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_tech_bonus = {
+				name = arty_bonus
+				bonus = 1.00
+				uses = 3
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = BUL_modern_branch
+		text = "Modern Branches of the Military"
+		icon = GFX_BUL_cufus
+		prerequisite = { focus = BUL_China }
+		x = 0
+		y = 2
+		relative_position_id = BUL_China
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 1.00
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = BUL_Local_Developing
+		text = "Local Developing"
+		icon = GFX_BUL_pak40
+		prerequisite = { focus = BUL_design_offices }
+		x = 0
+		y = 2
+		relative_position_id = BUL_design_offices
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 1.00
+				uses = 2
+				category = infantry_weapons
+			}
+		add_tech_bonus = {
+				name = arty_bonus
+				bonus = 1.00
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = BUL_New_Tactics
+		text = "New Tactics"
+		icon = GFX_BUL_stug3
+		prerequisite = { focus = BUL_Local_Developing }
+		x = 0
+		y = 2
+		relative_position_id = BUL_Local_Developing
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = BUL_spec_ops
+		}
+	}
+	focus = {
+		id = BUL_boris_ref
+		text = "Boris Reforms"
+		icon = GFX_BUL_Boris
+		available = {
+		}
+		bypass = {
+		}
+		x = 24
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1	
+		}
+	}
+	focus = {
+		id = BUL_central
+		text = "Moderate policy"
+		icon = GFX_Bul_gde_tanki
+		available = {
+		}
+		mutually_exclusive = {
+			focus = BUL_radical
+		}
+		prerequisite = { focus = BUL_boris_ref }
+		x = -3
+		y = 1
+		relative_position_id = BUL_boris_ref
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_stability = 0.1	
+		}
+	}
+	focus = {
+		id = BUL_care_workers
+		text = "Caring for Workers"
+		icon = GFX_Factory_Complex
+		available = {
+		}
+		prerequisite = { focus = BUL_central }
+		x = 0
+		y = 1
+		relative_position_id = BUL_central
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BUL_trade_coop
+		text = "Trade Co-operation"
+		icon = GFX_Bul_hitler
+		available = {
+		}
+		prerequisite = { focus = BUL_central }
+		x = 2
+		y = 1
+		relative_position_id = BUL_central
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		add_ideas = free_trade
+		}
+	}
+	focus = {
+		id = BUL_new_faces
+		text = "New Faces"
+		icon = GFX_Bul_new_people
+		available = {
+		}
+		prerequisite = { focus = BUL_central focus = BUL_radical }
+		x = 3
+		y = 2
+		relative_position_id = BUL_central
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		add_ideas = BUL_dobri_bozhilov
+		}
+	}
+	focus = {
+		id = BUL_Anti-Semitism
+		text = "Anti-Semitism"
+		icon = GFX_Tsar_Boris_1
+		available = {
+		}
+		prerequisite = { focus = BUL_trade_coop }
+		prerequisite = { focus = BUL_care_workers }
+		x = -1
+		y = 1
+		relative_position_id = BUL_trade_coop
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		add_political_power = 100
+		add_ideas = BUL_national
+		}
+	}
+	focus = {
+		id = BUL_Troubles
+		text = "All the Troubles are Because of the USSR"
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		available = {
+		}
+		prerequisite = { focus = BUL_Anti-Semitism }
+		x = 0
+		y = 1
+		relative_position_id = BUL_Anti-Semitism
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		add_ideas = BUL_Sov_Revanchism
+		}
+	}
+	focus = {
+		id = BUL_war_economy
+		text = "Mobilize Economy"
+		icon = GFX_BUL_kar98k
+		available = {
+		}
+		prerequisite = { focus = BUL_Troubles }
+		x = 0
+		y = 1
+		relative_position_id = BUL_Troubles
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = war_economy
+		}
+	}
+	focus = {
+		id = BUL_radical
+		text = "Radical policy"
+		icon = GFX_Bul_central
+		available = {
+		}
+		mutually_exclusive = {
+			focus = BUL_central
+		}
+		prerequisite = { focus = BUL_boris_ref }
+		x = 3
+		y = 1
+		relative_position_id = BUL_boris_ref
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_war_support = 0.1	
+		}
+	}
+	focus = {
+		id = BUL_revanchism_against_cap
+		text = "Revanchism Against the Capitalists"
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		available = {
+		}
+		
+		prerequisite = { focus = BUL_radical }
+		x = 0
+		y = 1
+		relative_position_id = BUL_radical
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			add_ideas = BUL_ENG_Revanchism
+		}
+	}
+	focus = {
+		id = BUL_relying_national
+		text = "Relying on Nationalists"
+		icon = GFX_GER_new_army
+		available = {
+		}
+		
+		prerequisite = { focus = BUL_revanchism_against_cap }
+		x = -1
+		y = 1
+		relative_position_id = BUL_revanchism_against_cap
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = BUL_Radical
+		}
+	}
+	focus = {
+		id = BUL_Arm_farright
+		text = "Arm the Far-right"
+		icon = GFX_Bul_new_uniform
+		available = {
+		}
+		
+		prerequisite = { focus = BUL_revanchism_against_cap }
+		x = 1
+		y = 1
+		relative_position_id = BUL_revanchism_against_cap
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}	
+		}
+	}
+	
+	focus = {
+		id = BUL_total_mobilization
+		text = "All IN"
+		icon = GFX_Bul_prigozin
+		available = {
+			has_war = yes
+		}
+		
+		prerequisite = { focus = BUL_Arm_farright focus = BUL_relying_national}
+		x = -1
+		y = 1
+		relative_position_id = BUL_Arm_farright
+		cost = 15
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = tot_economic_mobilisation
+		}
+	}
+	focus = {
+		id = BUL_air_innovation
+		icon = GFX_BUL_bf109
+		text = air_innovation
+		x = 31
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 100
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 2.00
+				uses = 1
+				technology = improved_small_airframe
+			}	
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 2.00
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = BUL_naval_air_effort
+		icon = GFX_nav_bomber
+		text = naval_air_effort
+		prerequisite = { focus = BUL_air_innovation }
+		x = -2
+		y = 1
+		relative_position_id = BUL_air_innovation
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 100
+
+			add_tech_bonus = {
+				name = ITA_naval_air_effort
+				bonus = 1.00
+				uses = 2
+				technology = air_torpedoe_1
+				technology = air_torpedoe_2
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_air_innovation_2
+		icon = GFX_BUL_ju87
+		text = air_innovation_2
+		prerequisite = { focus = BUL_air_innovation }
+		x = 2
+		y = 1
+		relative_position_id = BUL_air_innovation
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 2.00
+				uses = 1
+				technology = advanced_small_airframe
+			}	
+			
+		}
+	}
+	focus = {
+		id = BUL_air_innovation_3
+		icon = GFX_BUL_f18
+		text = "Improved Air Tactics"
+		prerequisite = { focus = BUL_air_innovation_2 focus = BUL_naval_air_effort }
+		x = -2
+		y = 1
+		relative_position_id = BUL_air_innovation_2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.00
+				uses = 2
+				category = air_doctrine
+			}
+			
+		}
+	}
+	focus = {
+		id = BUL_jet_engine_effort
+		Text = "Jet Engine"
+		icon = GFX_italy_jet
+		prerequisite = { focus = BUL_air_innovation_3 }
+		x = 0
+		y = 1
+		relative_position_id = BUL_air_innovation_3
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		# Caproni Campini N.1
+			add_tech_bonus = {
+				name = ITA_jet_engine_effort
+				bonus = 1.00
+				uses = 1
+				technology = jet_engines
+				technology = modern_small_airframe
+			}
+		}
+	}
+
+
+
+
 }

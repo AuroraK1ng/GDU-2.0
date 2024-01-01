@@ -2260,7 +2260,7 @@ focus_tree = {
 		}
 
 		available = {
-			date > 1938.6.1
+			date > 1937.6.1
 		}
 
 		completion_reward = {
@@ -2271,11 +2271,11 @@ focus_tree = {
 		id = ITA_join_ita_navy
 		text = "Appeal to Join Italian Navy"
 		icon = GFX_ITA_New_dockyards
-		prerequisite = { focus = ITA_effort_Marines }
-		prerequisite = { focus = ITA_capital_ships }
-		x = 1
+		prerequisite = { focus = ITA_light_ship_effort }
+		prerequisite = { focus = ITA_escort_effort }
+		x = -1
 		y = 1
-		relative_position_id = ITA_effort_Marines
+		relative_position_id = ITA_light_ship_effort
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -2474,7 +2474,7 @@ focus_tree = {
 		id = ITA_light_ship_effort
 		icon = GFX_goal_generic_navy_cruiser
 		prerequisite = { focus = ITA_atlantic_fleet }
-		prerequisite = { focus = ITA_join_ita_navy }
+		prerequisite = { focus = ITA_Invest_Docks }
 		x = -1
 		y = 1
 		relative_position_id = ITA_atlantic_fleet
@@ -2565,15 +2565,16 @@ focus_tree = {
 			}				
 		}
 	}
-	focus = {
+	 focus = {
 		id = ITA_Invest_Docks
 		Text = "Shipyard Expansion"
 		icon = GFX_ITA_Shipyard
-		prerequisite = { focus = ITA_light_ship_effort }
-		prerequisite = { focus = ITA_escort_effort }
-		x = -1
+		
+		prerequisite = { focus = ITA_effort_Marines }
+		prerequisite = { focus = ITA_capital_ships }
+		x = 1
 		y = 1
-		relative_position_id = ITA_light_ship_effort
+		relative_position_id = ITA_effort_Marines
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -2670,7 +2671,7 @@ focus_tree = {
 		icon = GFX_Ita_fleet_leader
 		prerequisite = { focus = ITA_Build_Docks }
 		prerequisite = { focus = ITA_Mediterranean }
-		prerequisite = { focus = ITA_Invest_Docks }
+		prerequisite = { focus = ITA_join_ita_navy }
 		x = 0
 		y = 1
 		relative_position_id = ITA_Build_Docks

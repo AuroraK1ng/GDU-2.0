@@ -7,29 +7,27 @@ ideas = {
 	##   ### ##     ##    ##     ##  ##     ## ##   ### ##     ## ##          ##    ## ##         ##  ##    ##   ##     ##    ##    ## 
 	##    ## ##     ##    ##    ####  #######  ##    ## ##     ## ########     ######  ##        #### ##     ## ####    ##     ######  
 	country = {
-		#DLC
-
-	Destroyed_industry = {
-			picture = BUL_second_national_catastrophe
+		Destroyed_industry = {
+			picture = bul_second_national_catastrophe
 			allowed = {
 				original_tag = BUL
 			}
 			removal_cost = -1
 			modifier = {
-				production_speed_buildings_factor = -0.1
+				production_speed_buildings_factor = -0.2
 				production_factory_efficiency_gain_factor = -0.2
 				production_factory_max_efficiency_factor = -0.2
 				consumer_goods_expected_value = 0.1
 			}
 		}
 	Destroyed_industry_1 = {
-			picture = BUL_second_national_catastrophe
+			picture = bul_second_national_catastrophe
 			allowed = {
 				original_tag = BUL
 			}
 			removal_cost = -1
 			modifier = {
-				production_speed_buildings_factor = -0.05
+				production_speed_buildings_factor = -0.1
 				production_factory_efficiency_gain_factor = -0.1
 				production_factory_max_efficiency_factor = -0.1
 				consumer_goods_expected_value = 0.05
@@ -53,7 +51,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				production_speed_buildings_factor = 0.05
+				production_speed_buildings_factor = 0.1
 			}
 		}
 	ger_engineers =  {
@@ -66,5 +64,220 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.05
 			}
 		}
-	
+	Destroyed_army = {
+			picture = tfv_can_conscription_crisis
+			allowed = {
+				original_tag = BUL
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = -0.15
+				army_org_factor = -0.2
+				production_speed_arms_factory_factor = -0.25
+				production_speed_dockyard_factor = -0.25
+			}
+			research_bonus = {
+				land_doctrine = -0.5
+			}
+		}
+	Destroyed_army_1 = {
+			picture = tfv_can_conscription_crisis
+			allowed = {
+				original_tag = BUL
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.2
+				production_speed_arms_factory_factor = -0.15
+				production_speed_dockyard_factor = -0.1
+				
+			}
+			research_bonus = {
+				land_doctrine = -0.5
+			}
+		}
+	Destroyed_army_2 = {
+			picture = tfv_can_conscription_crisis
+			allowed = {
+				original_tag = BUL
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.1
+			}
+			research_bonus = {
+				land_doctrine = -0.2
+			}
+		}
+	Destroyed_army_3 = {
+			picture = tfv_can_conscription_crisis
+			allowed = {
+				original_tag = BUL
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.1
+			}
+		}
+	Own_arms =  {
+			picture = bul_national_industry
+			allowed = {
+				original_tag = BUL
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+	New_Army = {
+			allowed = {
+				original_tag = BUL
+			}
+			removal_cost = -1
+			modifier = {
+				training_time_factor = -0.15
+				research_speed_factor = 0.05
+			}
+			research_bonus = {
+				artillery = 0.1
+				land_doctrine = 0.1
+			}
+		}
+	BUL_spec_ops = {
+			picture = ast_volunteer_defence_corps
+			modifier = {
+				special_forces_attack_factor = 0.05
+				special_forces_defence_factor = 0.05
+			}
+		}
+	BUL_Sov_Revanchism = {
+
+			allowed_civil_war = {
+				
+			}
+			picture = Waffen_SS
+			modifier = {
+			industrial_capacity_factory = 0.05
+				
+			}
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.025
+				defense_bonus_against = 0.025
+				}
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+				}
+			targeted_modifier = {
+				tag = USA
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+				}
+			targeted_modifier = {
+				tag = AST
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+				}
+			targeted_modifier = {
+				tag = RAJ
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+				}
+			targeted_modifier = {
+				tag = CAN
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+				}
+			targeted_modifier = {
+				tag = SAF
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+				}
+		}
+	BUL_ENG_Revanchism = {
+
+			allowed_civil_war = {
+				
+			}
+			picture = Waffen_SS
+			modifier = {
+			industrial_capacity_factory = 0.05
+				
+			}
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+				}
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+				}
+			targeted_modifier = {
+				tag = USA
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+				}
+			targeted_modifier = {
+				tag = AST
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+				}
+			targeted_modifier = {
+				tag = RAJ
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+				}
+			targeted_modifier = {
+				tag = CAN
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+				}
+			targeted_modifier = {
+				tag = SAF
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+				}
+		}
+	BUL_Radical = {
+		picture = Waffen_SS
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+			
+
+
+         	modifier = {
+            	conscription = 0.03
+				army_attack_factor = 0.025
+				army_defence_factor = 0.025
+			}
+		}
+	BUL_national = {
+		picture = Waffen_SS
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+			
+
+
+         	modifier = {
+            	conscription = 0.05
+			}
+		}
 }
