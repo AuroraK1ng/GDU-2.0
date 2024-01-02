@@ -104,7 +104,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -118,7 +118,7 @@ focus_tree = {
 			focus = BUL_Invite_foreign_specialists
 		}
 		prerequisite = { focus = BUL_acquire_modern_tools }
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = BUL_acquire_modern_tools
 		cost = 10
@@ -150,7 +150,7 @@ focus_tree = {
 			focus = BUL_Restoring_production
 		}
 		prerequisite = { focus = BUL_acquire_modern_tools }
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = BUL_acquire_modern_tools
 		cost = 5
@@ -182,7 +182,7 @@ focus_tree = {
 		}
 		icon = GFX_Noras_Bulgarian_University
 		relative_position_id = BUL_Restoring_production
-		x = 1
+		x = 3
 		y = 1
 		cost = 5
 		available = {
@@ -195,34 +195,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = BUL_local_produc
-		text = "Restoration of Production"
+		id = BUL_Expand_industry
+		text = "Industry Effort"
 		icon = GFX_goal_generic_production2
 		
 		prerequisite = { focus = BUL_Restoring_production }
-		x = 0
-		y = 2
+		x = -1
+		y = 1
 		relative_position_id = BUL_Restoring_production
 		cost = 5
-		available = {
-		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		completion_reward = {
-			add_ideas = Local_producers
-		}
-	}
-	focus = {
-		id = BUL_local_produc_1
-		text = "Support for Local Producers"
-		icon = GFX_ITA_ger_invest
-		
-		prerequisite = { focus = BUL_local_produc }
-		x = 0
-		y = 1
-		relative_position_id = BUL_local_produc
-		cost = 10
 		available = {
 		}
 		search_filters = {
@@ -237,6 +218,116 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+		}
+	}
+	focus = {
+		id = BUL_Expand_mines
+		text = "Mines Effort"
+		icon = GFX_ITA_African_mines
+		
+		prerequisite = { focus = BUL_Expand_industry }
+		x = 0
+		y = 1
+		relative_position_id = BUL_Expand_industry
+		cost = 10
+		available = {
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			48 = {
+				add_resource = {
+					type = steel
+					amount = 30
+				}				
+			}
+			212 = {
+				add_resource = {
+					type = steel
+					amount = 30
+				}				
+			}
+		}
+	}
+	focus = {
+		id = BUL_nation_industry
+		text = "National Industry"
+		icon = GFX_AST_factories
+		
+		prerequisite = { focus = BUL_Expand_mines }
+		x = 0
+		y = 1
+		relative_position_id = BUL_Expand_mines
+		cost = 5
+		available = {
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			48 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			212 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BUL_local_produc
+		text = "Restoration of Production"
+		icon = GFX_goal_generic_production2
+		
+		prerequisite = { focus = BUL_Restoring_production }
+		x = 1
+		y = 2
+		relative_position_id = BUL_Restoring_production
+		cost = 5
+		available = {
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_ideas = Local_producers
+		}
+	}
+	focus = {
+		id = BUL_Employment_creation
+		text = "Employment Creation"
+		icon = GFX_ITA_selling_aircraft
+		
+		prerequisite = { focus = BUL_local_produc }
+		x = 0
+		y = 1
+		relative_position_id = BUL_local_produc
+		cost = 5
+		available = {
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+		48 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 			48 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -244,6 +335,29 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
+			}
+		}
+	}
+	focus = {
+		id = BUL_local_produc_1
+		text = "Support for Local Producers"
+		icon = GFX_ITA_ger_invest
+		
+		prerequisite = { focus = BUL_Employment_creation }
+		prerequisite = { focus = BUL_nation_industry }
+		x = -1
+		y = 2
+		relative_position_id = BUL_local_produc
+		cost = 10
+		available = {
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Local_producers
+				add_idea = Local_producers_1
 			}
 		}
 	}
@@ -296,12 +410,12 @@ focus_tree = {
 	focus = {
 		id = BUL_machine_tools
 		text = "Purchase of Machine Tools"
-		icon = GFX_ITA_selling_aircraft
+		icon = GFX_AST_Prepare_for_defense
 		
 		prerequisite = { focus = BUL_ger_engeneer }
 		prerequisite = { focus = BUL_ita_engeneer }
 		x = 1
-		y = 2
+		y = 1
 		relative_position_id = BUL_ger_engeneer
 		cost = 10
 		available = {
@@ -321,12 +435,88 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = BUL_Ita_invest
+		text = "Italian Investments"
+		icon = GFX_Expand_the_industrial_base
+		
+		prerequisite = { focus = BUL_machine_tools }
+		prerequisite = { focus = BUL_Foreign_aid_1 }
+		x = 1
+		y = 1
+		relative_position_id = BUL_machine_tools
+		cost = 10
+		available = {
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ita_engineers
+				add_idea = ita_engineers_1
+			}
+		}
+	}
+	focus = {
+		id = BUL_mil_prod
+		text = "Deploy Military Production"
+		icon = GFX_AST_factories
+		
+		prerequisite = { focus = BUL_machine_tools }
+		x = -1
+		y = 1
+		relative_position_id = BUL_machine_tools
+		cost = 5
+		available = {
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			48 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = BUL_ger_machine_tools
+		text = "Ordering German Machine Tools"
+		icon = GFX_goal_ger_war_industry
+		
+		prerequisite = { focus = BUL_mil_prod } 
+		prerequisite = { focus = BUL_Ita_invest } 
+		x = 1
+		y = 1
+		relative_position_id = BUL_mil_prod
+		cost = 5
+		available = {
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			48 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
 		id = BUL_Production_facilities
 		text = "Production Facilities"
 		icon = GFX_Factory_Complex
 		
-		prerequisite = { focus = BUL_machine_tools focus = BUL_local_produc_1 }
-		x = 2
+		prerequisite = { focus = BUL_ger_machine_tools focus = BUL_local_produc_1 }
+		x = 3
 		y = 1
 		relative_position_id = BUL_local_produc_1
 		cost = 10
@@ -446,7 +636,7 @@ focus_tree = {
 		text = "Foreign Aid"
 		icon = GFX_BUL_pz2
 		prerequisite = { focus = BUL_atashe  }
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = BUL_atashe
 		cost = 5
@@ -787,7 +977,7 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		x = 24
+		x = 26
 		y = 0
 		cost = 5
 		ai_will_do = {
@@ -795,7 +985,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 100
-			add_stability = 0.1	
 		}
 	}
 	focus = {
@@ -808,7 +997,7 @@ focus_tree = {
 			focus = BUL_radical
 		}
 		prerequisite = { focus = BUL_boris_ref }
-		x = -3
+		x = -5
 		y = 1
 		relative_position_id = BUL_boris_ref
 		cost = 5
@@ -817,6 +1006,70 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.1	
+		}
+	}
+	focus = {
+		id = BUL_radical
+		text = "Radical policy"
+		icon = GFX_Bul_central
+		available = {
+		}
+		mutually_exclusive = {
+			focus = BUL_central
+		}
+		prerequisite = { focus = BUL_boris_ref }
+		x = 5
+		y = 1
+		relative_position_id = BUL_boris_ref
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_war_support = 0.1	
+		}
+	}
+	focus = {
+		id = BUL_Troubles
+		text = "All the Troubles are Because of the USSR"
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		available = {
+		}
+		mutually_exclusive = {
+			focus = BUL_revanchism_against_cap
+		}
+		prerequisite = { focus = BUL_central focus = BUL_radical }
+		x = 4
+		y = 1
+		relative_position_id = BUL_central
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		add_ideas = BUL_Sov_Revanchism
+		}
+	}
+	focus = {
+		id = BUL_revanchism_against_cap
+		text = "Revanchism Against the Capitalists"
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		available = {
+		}
+		mutually_exclusive = {
+			focus = BUL_Troubles
+		}
+		prerequisite = { focus = BUL_central focus = BUL_radical }
+		x = -4
+		y = 1
+		relative_position_id = BUL_radical
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			add_ideas = BUL_ENG_Revanchism
 		}
 	}
 	focus = {
@@ -869,8 +1122,8 @@ focus_tree = {
 		available = {
 		}
 		prerequisite = { focus = BUL_central focus = BUL_radical }
-		x = 3
-		y = 2
+		x = 5
+		y = 3
 		relative_position_id = BUL_central
 		cost = 5
 		ai_will_do = {
@@ -882,7 +1135,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Anti-Semitism
-		text = "Anti-Semitism"
+		text = "National Unity"
 		icon = GFX_Tsar_Boris_1
 		available = {
 		}
@@ -896,26 +1149,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-		add_political_power = 100
 		add_ideas = BUL_national
-		}
-	}
-	focus = {
-		id = BUL_Troubles
-		text = "All the Troubles are Because of the USSR"
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		available = {
-		}
-		prerequisite = { focus = BUL_Anti-Semitism }
-		x = 0
-		y = 1
-		relative_position_id = BUL_Anti-Semitism
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-		add_ideas = BUL_Sov_Revanchism
 		}
 	}
 	focus = {
@@ -924,10 +1158,10 @@ focus_tree = {
 		icon = GFX_BUL_kar98k
 		available = {
 		}
-		prerequisite = { focus = BUL_Troubles }
+		prerequisite = { focus = BUL_Anti-Semitism }
 		x = 0
 		y = 1
-		relative_position_id = BUL_Troubles
+		relative_position_id = BUL_Anti-Semitism
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -937,30 +1171,85 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = BUL_radical
-		text = "Radical policy"
-		icon = GFX_Bul_central
+		id = BUL_boris_support
+		text = "Support Tsar"
+		icon = GFX_BUL_Boris
 		available = {
 		}
-		mutually_exclusive = {
-			focus = BUL_central
+		bypass = {
 		}
-		prerequisite = { focus = BUL_boris_ref }
-		x = 3
+		prerequisite = { focus = BUL_war_economy }
+		x = 0
 		y = 1
-		relative_position_id = BUL_boris_ref
-		cost = 10
+		relative_position_id = BUL_war_economy
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
 		completion_reward = {
-			add_war_support = 0.1	
+			add_political_power = 100
+			add_stability = 0.1	
 		}
 	}
 	focus = {
-		id = BUL_revanchism_against_cap
-		text = "Revanchism Against the Capitalists"
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		id = BUL_army_expand
+		text = "Increasing the Military Budget"
+		icon = GFX_JAP_mil_ind
+		available = {
+		}
+		prerequisite = { focus = BUL_boris_support }
+		x = 0
+		y = 1
+		relative_position_id = BUL_boris_support
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = Mass_Produced_Equipment		
+		}
+	}
+	
+	focus = {
+		id = BUL_panzerdivision
+		text = "Experience of the Panzerdivision"
+		icon = GFX_BUL_pz4
+		prerequisite = { focus = BUL_radical  }
+		x = -2
+		y = 1
+		relative_position_id = BUL_radical
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 1.25
+				uses = 1
+				technology = improved_medium_tank_chassis
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				technology = improved_heavy_tank_chassis
+				technology = advanced_light_tank_chassis
+			}
+			add_tech_bonus = {
+				bonus = 2.0
+				uses = 2
+				technology = advanced_medium_tank_chassis
+				technology = advanced_heavy_tank_chassis			
+			}
+		
+		}
+	}
+	focus = {
+		id = BUL_relying_national
+		text = "Relying on Nationalists"
+		icon = GFX_GER_new_army
 		available = {
 		}
 		
@@ -973,28 +1262,27 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_war_support = 0.1
-			add_ideas = BUL_ENG_Revanchism
+			add_political_power = 100
+			add_ideas = BUL_Radical
 		}
 	}
 	focus = {
-		id = BUL_relying_national
-		text = "Relying on Nationalists"
-		icon = GFX_GER_new_army
+		id = BUL_national_interests
+		text = "Protecting National Interests"
+		icon = GFX_goal_generic_construct_military
 		available = {
 		}
 		
-		prerequisite = { focus = BUL_revanchism_against_cap }
-		x = -1
+		prerequisite = { focus = BUL_relying_national }
+		x = 0
 		y = 1
-		relative_position_id = BUL_revanchism_against_cap
-		cost = 10
+		relative_position_id = BUL_relying_national
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
 		completion_reward = {
-			add_political_power = 100
-			add_ideas = BUL_Radical
+			add_ideas = ROM_fortify_the_borders
 		}
 	}
 	focus = {
@@ -1004,10 +1292,10 @@ focus_tree = {
 		available = {
 		}
 		
-		prerequisite = { focus = BUL_revanchism_against_cap }
+		prerequisite = { focus = BUL_national_interests }
 		x = 1
 		y = 1
-		relative_position_id = BUL_revanchism_against_cap
+		relative_position_id = BUL_national_interests
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -1023,6 +1311,25 @@ focus_tree = {
 			}	
 		}
 	}
+	focus = {
+		id = BUL_Radical_brigades
+		text = "Radical brigades"
+		icon = GFX_Generic_German_Soldiers2
+		available = {
+		}
+		
+		prerequisite = { focus = BUL_national_interests }
+		x = -1
+		y = 1
+		relative_position_id = BUL_national_interests
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = BUL_Radical_brigades
+		}
+	}
 	
 	focus = {
 		id = BUL_total_mobilization
@@ -1032,7 +1339,7 @@ focus_tree = {
 			has_war = yes
 		}
 		
-		prerequisite = { focus = BUL_Arm_farright focus = BUL_relying_national}
+		prerequisite = { focus = BUL_Arm_farright focus = BUL_Radical_brigades }
 		x = -1
 		y = 1
 		relative_position_id = BUL_Arm_farright
@@ -1048,7 +1355,7 @@ focus_tree = {
 		id = BUL_air_innovation
 		icon = GFX_BUL_bf109
 		text = air_innovation
-		x = 31
+		x = 35
 		y = 0
 		cost = 5
 		ai_will_do = {

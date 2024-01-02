@@ -20,6 +20,20 @@ ideas = {
 				consumer_goods_expected_value = 0.1
 			}
 		}
+		BUL_Radical_brigades = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				conscription_factor = 0.05
+				training_time_factor = -0.15
+			}
+		}
 	Destroyed_industry_1 = {
 			picture = bul_second_national_catastrophe
 			allowed = {
@@ -40,7 +54,18 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				production_speed_buildings_factor = 0.05
+				production_speed_industrial_complex_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+	Local_producers_1 =  {
+			picture = bul_national_industry
+			allowed = {
+				original_tag = BUL
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_industrial_complex_factor = 0.20
 				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
@@ -52,6 +77,16 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				production_speed_buildings_factor = 0.1
+			}
+		}
+	ita_engineers_1 =  {
+			picture = bul_national_industry
+			allowed = {
+				original_tag = BUL
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
 			}
 		}
 	ger_engineers =  {
