@@ -5295,6 +5295,8 @@ generic_armored_car_organization = {
 		icon = GFX_generic_mio_trait_icon_reliability
 		
 		mutually_exclusive = { generic_mio_trait_crew_ergonomics }
+		
+		limit_to_equipment_type = { armored_car }
 
 		equipment_bonus = {
 			build_cost_ic = -0.05
@@ -5308,6 +5310,8 @@ generic_armored_car_organization = {
 		icon = GFX_generic_mio_trait_icon_defense
 		
 		mutually_exclusive = { generic_mio_trait_simplified_suspension }
+		
+		limit_to_equipment_type = { armored_car }
 
 		equipment_bonus = {
 			build_cost_ic = 0.05
@@ -5322,6 +5326,8 @@ generic_armored_car_organization = {
 		name = generic_mio_trait_reinforced_wheels
 		icon = GFX_generic_mio_department_icon_armored_car_engine
 		any_parent = { generic_mio_trait_simplified_suspension }
+		
+		limit_to_equipment_type = { armored_car }
 
 		equipment_bonus = {
 			build_cost_ic = -0.05
@@ -5338,7 +5344,8 @@ generic_armored_car_organization = {
 		name = generic_mio_trait_command_upgrades
 		icon = GFX_generic_mio_trait_icon_breakthrough
 		any_parent = { generic_mio_trait_crew_ergonomics }
-
+		
+		limit_to_equipment_type = { armored_car }
 
 		equipment_bonus = {
 			maximum_speed = 0.05
@@ -5356,6 +5363,8 @@ generic_armored_car_organization = {
 
 		position = { x=0 y=1 }
 		relative_position_id = generic_mio_trait_reinforced_wheels
+		
+		limit_to_equipment_type = { armored_car }
 
 		equipment_bonus = {
 			build_cost_ic = -0.05
@@ -5372,6 +5381,8 @@ generic_armored_car_organization = {
 		any_parent = { generic_mio_trait_command_upgrades }
 		
 		mutually_exclusive = { generic_mio_trait_heavy_anti_tank_gun }
+		
+		limit_to_equipment_type = { armored_car }
 
 		position = { x=0 y=1 }
 		relative_position_id = generic_mio_trait_command_upgrades
@@ -5387,6 +5398,8 @@ generic_armored_car_organization = {
 		icon = GFX_generic_mio_department_icon_armored_car_offense
 
 		all_parents = { generic_mio_trait_crew_ergonomics }
+		
+		limit_to_equipment_type = { armored_car }
 
 		position = { x=1 y=1 }
 		relative_position_id = generic_mio_trait_crew_ergonomics
@@ -5404,6 +5417,8 @@ generic_armored_car_organization = {
 		any_parent = { generic_mio_trait_long_barreled_guns }
 		
 		mutually_exclusive = { generic_mio_trait_quality_improvements }
+		
+		limit_to_equipment_type = { armored_car }	
 
 		position = { x=0 y=1 }
 		relative_position_id = generic_mio_trait_long_barreled_guns

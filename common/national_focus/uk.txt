@@ -345,7 +345,7 @@ focus_tree = {
 			}
 		}
 	}
-		focus = {
+	focus = {
 		id = ENG_lessons_of_war
 		text = "Lessons of the Great War"
 		prerequisite = { focus = limited_rearmament_focus }
@@ -1655,7 +1655,13 @@ focus_tree = {
 
 		completion_reward = {
 			navy_experience = 250
-			air_experience = 250
+			add_tech_bonus = {
+				name = ENG_nav_focus
+				bonus = 1.00
+				uses = 1
+				technology = air_torpedoe_1
+				technology = air_torpedoe_2
+			}
 		}
 	}
 

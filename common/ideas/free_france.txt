@@ -1,6 +1,7 @@
 ideas = {
 	country = {
 		FRA_FREE_army = {
+			picture = test
 			allowed = {
 				original_tag = FRA
 				always = no
@@ -14,6 +15,46 @@ ideas = {
 				military_leader_cost_factor = 4
 				drift_defence_factor = 0.25
 				mobilization_laws_cost_factor = -0.25
+			}
+		}
+		FRA_Counter_Offensive = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = eng_chiefs_of_staff_committee
+			modifier = {
+				army_attack_factor = 0.075
+				army_defence_factor = 0.075
+			}
+		}
+		FRA_Spec_Ops = {
+			picture = ast_volunteer_defence_corps
+			modifier = {
+				special_forces_attack_factor = 0.07
+				special_forces_defence_factor = 0.07
+			}
+		}
+		FRA_Tank_Ops = {
+			picture = SOV_tankograd
+			modifier = {
+				army_armor_attack_factor = 0.04
+				army_armor_defence_factor = 0.04
+				motorized_attack_factor = 0.04
+				motorized_defence_factor = 0.04
+				mechanized_attack_factor = 0.04
+				mechanized_defence_factor = 0.04
+			}
+		}
+		FRA_Supply_System = {
+			picture = generic_build_infrastructure
+			allowed_civil_war = {
+			}
+			modifier = {
+				supply_consumption_factor = -0.075
 			}
 		}
 		FRA_expand_the_repair_yards = {
