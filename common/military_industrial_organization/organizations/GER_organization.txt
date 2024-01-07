@@ -169,12 +169,67 @@ GER_man_organization = {
 	}
 }
 
+GER_man_organization2 = {
+	include = generic_tank_organization
+	icon = GFX_idea_fiat
+		allowed = {
+			OR = {
+				tag = GER
+				tag = SPR
+				tag = HUN
+				tag = BUL
+				tag = FIN
+			}
+		}
+	tree_header_text = {
+		text = mio_header_tank_construction
+		x = 3
+	}
+	tree_header_text = {
+		text = mio_header_equipment_and_specialization
+		x = 7
+	}
+	tree_header_text = {
+		text = mio_header_armor
+		x = 9
+	}
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}		
+	add_trait = {
+		token = generic_mio_trait_standardized_components
+		name = generic_mio_trait_standardized_components
+		icon = GFX_generic_mio_department_icon_tank_general_line_efficiency
+		
+		position = { x=2 y=2 }
+		relative_position_id = generic_mio_trait_simplified_suspension
+		
+		limit_to_equipment_type = {
+			#light_tank_rocket_chassis
+			medium_tank_rocket_chassis
+			heavy_tank_rocket_chassis
+		}
+		
+		any_parent = { generic_mio_trait_simplified_suspension generic_mio_trait_crew_ergonomics }
+
+		equipment_bonus = {
+			reliability = 0.05
+			soft_attack = -0.1
+			hard_attack = 0.75
+			build_cost_ic = -0.1
+		}
+	}
+}
+
 GER_daimler_benz_organization = {
 	include = generic_mobile_tank_organization
 	icon = GFX_idea_daimler_benz	# TODO change
 	allowed = {
 		OR = {
 			tag = GER
+			tag = ITA
 			tag = SPR
 			tag = ROM
 			tag = HUN
