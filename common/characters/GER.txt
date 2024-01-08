@@ -1638,6 +1638,31 @@ characters = {
 			}
 		}
 	}
+	GER_albert_speer_no_asia = {
+		name = GER_albert_speer
+		portraits = {
+			army = {
+				small = "GFX_idea_speer"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = speer_1
+			allowed = {
+				has_start_date > 1936.1.1.12 
+				original_tag = GER
+			}
+			available = {
+				date > 1941.6.1
+				GER = {
+					has_idea = tot_economic_mobilisation
+				}
+			}
+			traits = {
+				total_war_organizer_1
+			}
+		}
+	}
 	GER_hjalmar_schacht = {
 		name = GER_hjalmar_schacht
 		portraits = {
