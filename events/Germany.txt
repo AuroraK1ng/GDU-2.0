@@ -1120,6 +1120,17 @@ country_event = {
 				transfer_state = 71
 				transfer_state = 73
 				transfer_state = 664
+			}
+			else_if = {
+				limit = {
+			    	has_start_date > 1936.1.1.12
+				}
+				GER = {
+					transfer_state = 70
+					transfer_state = 71
+					transfer_state = 73
+					transfer_state = 664
+				}
 			}			
 		}		
 		
