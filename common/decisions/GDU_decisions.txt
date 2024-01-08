@@ -2161,7 +2161,6 @@ foreign_politics = {
 
 		available = {
 			PER = { exists = yes }
-			OR = {
 				NOT = {
 					447 = { is_fully_controlled_by = ENG }
 				}
@@ -2178,7 +2177,6 @@ foreign_politics = {
    				 	}
     				date > 1941.10.1
 				}
-			}
 			has_completed_focus = uk_service_focus
 			OR = {
 				444 = { is_controlled_by = RAJ }
@@ -2217,7 +2215,9 @@ foreign_politics = {
 			has_start_date > 1936.1.1.12
 			EFR = { exists = yes }
 			OR = {
-			ITA = { NOT = { has_full_control_of_state = 448 has_full_control_of_state = 450 has_full_control_of_state = 451} }
+			ITA = { NOT = { has_full_control_of_state = 448 } }
+			ITA = { NOT = { has_full_control_of_state = 450 } }
+			ITA = { NOT = { has_full_control_of_state = 451 } } 
 			date > 1942.4.1
 			}
 		}
