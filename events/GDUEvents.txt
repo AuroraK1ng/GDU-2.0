@@ -1177,7 +1177,13 @@ country_event = {
 	is_triggered_only = yes
 
 	fire_only_once = no
-
+	immediate = {
+		IF =  { limit = {has_start_date > 1936.1.1.12 } 
+		ENG = { remove_resource_rights = 336 }
+		ENG = { remove_resource_rights = 672 }
+		ENG = { complete_national_focus = ENG_synthetic_rubber } 
+		}
+	}
 	option = {
 		name = gduevents.36.a
 
@@ -2951,7 +2957,6 @@ country_event = {
 	is_triggered_only = yes
 
 	fire_only_once = no
-
 	option = {
 		name = gduevents.63.a
 
