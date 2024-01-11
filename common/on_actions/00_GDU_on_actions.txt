@@ -41,6 +41,7 @@ on_actions = {
 	}	
 	on_startup = {
 		effect = {
+			FRA = {  every_state = { limit = { OR ={ state = 16 state = 785 state = 29 state = 18 state = 17 state = 554 state = 680 state = 677 state = 553 state = 28 state = 27 state = 24  state = 15 state = 14 state = 30 state = 23 state = 33 state = 26 state = 20 state = 32 state = 735 state = 21 state = 22 state = 20 state = 25 state = 31 state = 19 state = 1 state = 461 state = 459 state = 460 state = 458 state = 805 state = 655 state = 513 state = 462 }  } add_dynamic_modifier = { modifier = no_fra_mainland_buildings days = 1335 }  } }
 			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = GER state = 724  }} }
 			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = ENG state = 336  }} }
 			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = ENG state = 375  }} }
