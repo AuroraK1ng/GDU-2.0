@@ -4578,7 +4578,7 @@ focus = {
 			factor = 1
 		}
 		completion_reward = {
-			USA = {transfer_state = 843}		
+			if = { limit = { NOT = { has_start_date > 1936.1.1.12 } } USA = {transfer_state = 843} }	
 			set_technology = {
 				decimetric_radar = 1
 			}
