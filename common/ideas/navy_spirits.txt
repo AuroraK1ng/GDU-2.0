@@ -1,0 +1,222 @@
+ideas = {
+	naval_academy_spirit = {
+		instilled_aggression_spirit = {
+			ledger = navy
+			modifier = {
+				naval_enemy_retreat_chance = -0.1
+				spotting_chance = 0.1
+			}
+			cost = 500
+		}
+		calculated_restraint_spirit = {
+			ledger = navy
+			modifier = {
+				naval_retreat_speed = 0.25
+			}
+			cost = 500
+		}
+		signals_training_spirit = {
+			ledger = navy
+			modifier = {
+				naval_speed_factor = 0.05
+			}
+			cost = 500
+		}
+		fleet_in_being_academy_spirit = {
+			ledger = navy
+			modifier = {
+				naval_morale_factor = 0.1
+				naval_critical_effect_factor = -0.1
+			}
+			cost = 500
+		}
+		trade_interdiction_academy_spirit = {
+			ledger = navy
+			equipment_bonus = {
+				ship_hull_heavy = {
+					convoy_raiding_coordination = 0.1
+				}
+				
+				ship_hull_cruiser = {
+					convoy_raiding_coordination = 0.1
+				}
+				
+				ship_hull_light = {
+					convoy_raiding_coordination = 0.1
+				}
+				ship_hull_submarine = {
+					convoy_raiding_coordination = 0.1
+				}
+				ship_hull_carrier = {
+					convoy_raiding_coordination = 0.1
+				}					
+			}
+			cost = 500
+		}
+		base_strike_academy_spirit = {
+			ledger = navy	
+			modifier = {
+				naval_strike_attack_factor = 0.1
+			}
+			cost = 500
+		}
+		best_of_the_best_naval_academy_spirit = {
+			ledger = navy
+			modifier = {
+				naval_critical_score_chance_factor = 0.1
+			}
+			cost = 500
+		}
+		naval_academy_scholarships_spirit = {
+			ledger = navy
+			modifier = {
+				positioning = 0.1
+			}
+			cost = 500
+		}		
+	}
+
+	navy_spirit = { #Macro bonuses mostly?
+	
+		jeune_ecole_spirit = {
+			ledger = navy
+			modifier = {
+				convoy_escort_efficiency = 0.20 
+			}
+			cost = 500
+		}
+		
+		big_gun_club_spirit = {
+		ledger = navy
+			modifier = {
+				shore_bombardment_bonus = 0.15 
+			}
+			cost = 500
+		}
+		
+		#aviation_enthusiasts_spirit = {
+		#ledger = navy
+		#	modifier = {
+		#		fighter_sortie_efficiency = 0.1
+		#	}
+		#}
+		
+		wolfpacks_spirit = {
+			ledger = navy
+			modifier = {
+				sub_retreat_speed = 0.1
+				navy_submarine_attack_factor = 0.1
+			}
+			cost = 500
+		}
+		
+		flexible_contracts_spirit = {
+			ledger = navy
+			modifier = {
+				production_speed_dockyard_factor = 0.05
+			}
+			cost = 500
+		}
+		integrated_designers_spirit = {
+			ledger = navy
+			visible = { has_dlc = "Man the Guns" }
+			research_bonus = {
+				ship_modules_tech = 0.1
+				naval_equipment = 0.1
+			}
+			cost = 500
+		}
+		naval_refit_yards_spirit = {
+			ledger = navy
+			modifier = {
+				refit_speed = 0.1
+				repair_speed_factor = 0.15
+			}
+			cost = 500
+		}	
+		fleet_in_being_navy_spirit = {
+			ledger = navy
+			modifier = {
+				navy_max_range = 1000
+			}
+			cost = 500
+		}		
+		base_strike_navy_spirit = {
+			ledger = navy
+			modifier = {
+				naval_morale_factor	 = 0.1
+			}
+			cost = 500
+		}	
+	}
+
+	naval_command_spirit = { 
+		close_combat_navy_spirit = {
+			ledger = navy	
+			modifier ={
+				navy_screen_attack_factor = 0.05
+				naval_torpedo_screen_penetration_factor = 0.05
+				naval_torpedo_hit_chance_factor = 0.05
+			}
+			cost = 500
+		}
+		surprise_attacks_spirit = { 
+			ledger = navy		
+			modifier = {
+				navy_submarine_attack_factor = 0.15
+			}
+			cost = 500
+		}
+		surface_raiders_spirit = {
+			ledger = navy	
+			modifier = {
+				naval_speed_factor = 0.1
+				naval_retreat_speed = 0.1
+			}
+			cost = 500
+		}				
+		efficient_communications_spirit = {
+			ledger = navy	
+			modifier = {
+				naval_enemy_fleet_size_ratio_penalty_factor = 0.1
+				positioning = 0.1
+				naval_retreat_speed = 0.1	
+			}
+			cost = 500
+		}	
+		decisive_battle_spirit = {
+			ledger = navy	
+			modifier = {
+				naval_hit_chance = 0.1
+				naval_critical_score_chance_factor = 0.1
+				naval_retreat_chance = -0.15
+				naval_retreat_speed = -0.15
+			}
+			cost = 500
+		}
+		night_fighting_spirit = {
+			ledger = navy
+			modifier = {
+				night_spotting_chance = 0.2
+				naval_night_attack = 0.05
+				navy_visibility = -0.05
+			}
+			cost = 500
+		}
+		discrete_valor_spirit = {
+			modifier = {
+				naval_retreat_chance = 0.5
+				naval_retreat_speed = 0.5
+			}
+			cost = 500
+		}
+		inclimate_weather_experience_spirit = {
+			ledger = navy
+			modifier = {
+				navy_weather_penalty = -0.2
+				naval_strike_targetting_factor = 0.1
+			}
+			cost = 500
+		}		
+	}
+}

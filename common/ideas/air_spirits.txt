@@ -1,0 +1,143 @@
+ideas = {
+	air_force_spirit = {
+		independent_air_force_spirit = {	
+			ledger = air
+			equipment_bonus = {
+				small_plane_airframe = {
+					air_agility = 0.05
+				}
+				medium_plane_airframe = {
+					air_agility = 0.05
+				}
+				large_plane_airframe = {
+					air_agility = 0.05
+				}
+			}
+			cost = 250
+		}
+		industrial_destruction_spirit = {
+			ledger = air
+			research_bonus = {
+				heavy_air = 0.05
+			}
+			modifier = {
+				air_bombing_targetting = 0.1
+			}
+			modifier = {
+			}
+			cost = 250
+		}
+		dive_bombing_spirit = {
+			ledger = air
+			modifier = {
+				air_cas_present_factor = 0.05
+			}
+			cost = 250
+		}
+		material_destruction_spirit = {
+			ledger = air
+			modifier = {
+				strategic_bomb_visibility  = -0.05
+				air_nav_efficiency = 0.1
+				air_bombing_targetting = 0.05
+			}
+			cost = 250
+		}
+		industry_liasons_spirit = {
+			ledger = air
+			research_bonus = {
+				light_air = 0.15
+				medium_air = 0.15
+			}
+			cost = 250
+		}	
+		effective_training_programs_spirit = {
+			ledger = air
+			modifier = {
+				experience_gain_air = 0.2
+				air_training_xp_gain_factor = 0.2
+			}
+			cost = 250
+		}
+		branch_independence_spirit = {
+			ledger = air
+			modifier = {
+				sortie_efficiency = 0.05
+				naval_strike_attack_factor = 0.05
+				naval_strike_targetting_factor = 0.05
+			}
+			cost = 250
+		}
+		air_crew_surveys_spirit = {
+			ledger = air
+			modifier = {
+				experience_gain_air = 0.1
+				army_bonus_air_superiority_factor = 0.1
+			}
+			cost = 250
+		}
+	}
+
+	air_force_command_spirit = {
+		battlefield_air_interdiction_spirit = {
+			ledger = air
+			modifier = {
+				air_cas_efficiency = 0.05
+				air_cas_present_factor = 0.05
+			}
+			cost = 250
+		}
+		cag_night_fighting_spirit = {
+			ledger = air
+			modifier = {
+				air_carrier_night_penalty_reduction_factor = 0.25
+			}
+			cost = 250
+		}
+		veteran_air_instructors_spirit = {
+			ledger = air
+			modifier = {
+				air_range_factor = 0.10 
+			}
+			cost = 250
+		}
+		centralized_control_spirit = {
+			ledger = air
+			modifier = {
+				air_superiority_detect_factor = 0.05
+				air_interception_detect_factor = 0.05
+				air_mission_efficiency = 0.05
+			}
+			cost = 250
+		}
+		home_defence_spirit = {
+			ledger = air
+			modifier = {
+				air_home_defence_factor = 0.05 #aces in vanilla now 
+			}
+			cost = 250
+		}
+		air_power_projection_spirit = {
+			ledger = air
+			modifier = {
+				air_power_projection_factor = 0.05
+
+			}
+			cost = 250
+		}
+		massed_strike_spirit = {
+			ledger = air
+			modifier = {
+				army_bonus_air_superiority_factor = 0.10
+			}
+			cost = 250
+		}
+		strategic_strike_spirit = { 
+			ledger = air
+			modifier = {
+				air_strategic_bomber_bombing_factor = 0.1
+			}
+			cost = 250
+		}
+	}
+}

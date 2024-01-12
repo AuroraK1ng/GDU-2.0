@@ -503,21 +503,36 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
 		available = {
-			JAP = {
-				controls_state = 327
-				controls_state = 336
-				controls_state = 669
-				OR = {
-					controls_state = 439
-					controls_state = 285
+			IF =  { limit = { NOT = { has_start_date > 1936.1.1.12 } }
+				JAP = {
+					controls_state = 327
+					controls_state = 336
+					controls_state = 669
+					OR = {
+						controls_state = 439
+						controls_state = 285
+					}
+				}
+			}
+			IF =  { limit = {has_start_date > 1936.1.1.12 } 
+				ENG = {
+					controls_state = 1
+					controls_state = 114
+					controls_state = 115
 				}
 			}
 		}
-
 		completion_reward = {
-			add_Ideas = British_Lion	
+			IF =  { limit = { NOT = { has_start_date > 1936.1.1.12 } }
+				add_Ideas = British_Lion
+			}
+			IF =  { limit = {has_start_date > 1936.1.1.12 }
+				swap_ideas = {
+					remove_idea = ENG_no_Asia
+					add_idea = British_Lion
+				}
+			}
 		}
 	}
 	
