@@ -181,10 +181,10 @@ ideas = {
 		}
 
 		mobile_warfare_army_spirit = {
-			visible = {OR = { has_tech = mobile_warfare tag = DEN }  }
+			visible = { OR = { has_tech = mobile_warfare tag = DEN }  }
 			ledger = army
 			modifier = {
-				army_armor_speed_factor = 0.05
+				army_armor_speed_factor = 0.025
 			}
 			cost = 50
 		}
@@ -268,8 +268,8 @@ ideas = {
 		maneuver_warfare_spirit = {
 			visible = { OR = { has_tech = mobile_warfare tag = DEN } }
 			modifier = {
-				planning_speed = 0.1
-				army_speed_factor = 0.05
+				planning_speed = 0.05
+				army_speed_factor = 0.025
 				coordination_bonus = 0.05
 			}
 			cost = 50
