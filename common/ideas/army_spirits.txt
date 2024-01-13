@@ -77,7 +77,7 @@ ideas = {
 			visible = { OR = { has_tech = mobile_warfare tag = DEN }  }
 			equipment_bonus = {			
 				armor = {
-					build_cost_ic = -0.01  
+					build_cost_ic = -0.025  
 					instant = yes
 				}
 			}
@@ -104,7 +104,7 @@ ideas = {
 			ledger = army
 			visible = { OR  ={  has_tech = mass_assault tag = DEN}  }
 			modifier = {
-				modifier_army_sub_unit_infantry_speed_factor = 0.05  
+				modifier_army_sub_unit_infantry_speed_factor = 0.01  
 			}
 			cost = 50
 		}
@@ -114,7 +114,7 @@ ideas = {
 		professional_officer_corps_spirit = {
 			ledger = army
 			modifier = {
-				experience_gain_army_factor = 0.1
+				experience_gain_army = 0.2
 				command_power_gain = 0.2
 			}
 			cost = 50
