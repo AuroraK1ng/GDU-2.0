@@ -255,6 +255,119 @@ ideas = {
 				army_core_defence_factor = 0.05
 			}
 		}
+		GDU_Endsieg_Minors = {
+			allowed = {
+				always = no
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.3
+				army_core_attack_factor = 0.3
+				surrender_limit = 0.2
+			}
+		}
+		GDU_Endsieg_Spain = {
+			allowed = {
+				always = no
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.1
+				army_attack_factor = 0.1
+			}
+		}
+		GDU_GER_Endsieg = {
+			allowed = {
+				always = no
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.3
+				local_resources = 0.1
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+				land_bunker_effectiveness_factor = 0.2
+			}
+		}
+		GDU_GER_Endsieg_Hitler = {
+			allowed = {
+				always = no
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.5
+				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.15
+				land_bunker_effectiveness_factor = 0.2
+				consumer_goods_expected_value = -0.05
+				production_speed_buildings_factor = 0.1
+				air_mission_efficiency = 0.05
+				air_close_air_support_org_damage_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.2 
+			}
+		}
+		GER_attack = {
+			allowed = {
+				always = no
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.10
+			}
+		}
+		GER_defense = {
+			allowed = {
+				always = no
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.10
+			}
+		}
+		GER_ardennenoffensive = {
+			picture = Blitzkrieg3
+		  
+		  allowed = {
+			always = no
+		  }
+		  allowed_civil_war = {
+			has_government = fascism
+		  }
+		  removal_cost = -1
+  
+		  modifier = {
+			army_attack_factor = 0.15
+			army_defence_factor = 0.15
+		  }
+		  targeted_modifier = {
+			tag = SOV
+			attack_bonus_against = -0.15
+			defense_bonus_against = -0.15
+		  }  
+		  
+	    }
+	    GER_steiner_idea = {
+		picture = generic_fascism_drift_2
+		allowed = {
+			original_tag = GER
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+			army_attack_factor = 0.2 
+		}
+	}
 		GDU_abandoned_by_BEF = {
 			allowed = {
 				always = no
@@ -333,8 +446,8 @@ ideas = {
 			removal_cost = -1
 			targeted_modifier = {
 				tag = SOV
-				attack_bonus_against = 0.075
-				defense_bonus_against = 0.075
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
 			}
 			modifier = {
 				army_speed_factor = 0.05

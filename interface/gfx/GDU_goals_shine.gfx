@@ -18677,7 +18677,37 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
-
+	SpriteType = { 
+		name = "GFX_GER_festung_europa_shine"
+		texturefile = "gfx/interface/goals/GER_festung_europa.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GER_festung_europa.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+ 
+		animation = {  
+			animationmaskfile = "gfx/interface/goals/GER_festung_europa.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
 	SpriteType = {
 		name = "GFX_Noras_albania_shine"
 		texturefile = "gfx/interface/goals/Focus_ita_albanian_occupation.dds"
@@ -18709,7 +18739,41 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
-
+	SpriteType = { 
+		name = "GFX_GER_ammunitions_miracle_shine"
+		texturefile = "gfx/interface/goals/GER_ammunitions_miracle.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GER_ammunitions_miracle.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+ 
+		animation = {  
+			animationmaskfile = "gfx/interface/goals/GER_ammunitions_miracle.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = { name = "GFX_GER_hitlers_meddling_shine" texturefile = "gfx/interface/goals/GER_hitlers_meddling.dds"   effectFile = "gfx/FX/buttonstate.lua"		legacy_lazy_load = no
+	animation = { animationmaskfile = "gfx/interface/goals/GER_hitlers_meddling.dds"    animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   animationrotation = -90.0 animationlooping = no	animationtime = 0.75 animationdelay = 0	animationblendmode = "add" animationtype = "scrolling" animationrotationoffset = { x = 0.0 y = 0.0 } animationtexturescale = { x = 1.0 y = 1.0 } }
+	animation = { animationmaskfile = "gfx/interface/goals/GER_hitlers_meddling.dds"    animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   animationrotation = 90.0 animationlooping = no	animationtime = 0.75 animationdelay = 0	animationblendmode = "add" animationtype = "scrolling" animationrotationoffset = { x = 0.0 y = 0.0 } animationtexturescale = { x = 1.0 y = 1.0 } }
+}
 	SpriteType = {
 		name = "GFX_Noras_pactofsteel_shine"
 		texturefile = "gfx/interface/goals/Focus_ita_pact_of_steel.dds"
@@ -18837,5 +18901,4 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
-
 }

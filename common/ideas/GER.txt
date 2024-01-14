@@ -286,6 +286,38 @@ ideas = {
 				}
 			}
 		}
+		GER_jaegerprogramm = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = air_support_focus
+			equipment_bonus = {
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.20
+				}
+			}
+		}
+		GER_batlle_in_air = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = air_support_focus
+			modifier = {
+				air_mission_efficiency = 0.1
+				air_mission_xp_gain_factor = 0.5
+				static_anti_air_damage_factor = 0.2
+				cas_damage_reduction = 0.1
+			}
+		}
 		GER_reequip_INF_idea = {
 			picture = smallarms_factory
 			allowed = {
@@ -804,8 +836,8 @@ ideas = {
 				conscription_factor = 0.025
 				political_power_gain = 1
 				drift_defence_factor = 0.5
-				army_core_defence_factor = 0.1
-				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
 			}
 		}
 		GER_air_innovations_2_idea = {
@@ -904,6 +936,35 @@ ideas = {
 				conscription = 0.01
 			}
 		}
+		GER_recruit_hitlerjugend = {
+			removal_cost = -1
+			allowed = {
+				always = no				# Unlocked via focus
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = Waffen_SS
+			modifier = {
+				conscription = 0.02
+				industrial_capacity_factory = 0.10
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		GER_volksturm = {
+			removal_cost = -1
+			allowed = {
+				always = no				# Unlocked via focus
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = Waffen_SS
+			modifier = {
+				conscription = 0.02
+				production_lack_of_resource_penalty_factor = -0.6 
+			}
+		}
 		GER_foreign_ss2 = {
 			removal_cost = -1
 			allowed = {
@@ -915,6 +976,46 @@ ideas = {
 			picture = Waffen_SS
 			modifier = {
 				conscription = 0.01
+			}
+		}
+		GER_last_stand = {
+			removal_cost = -1
+			allowed = {
+				always = no				# Unlocked via focus
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = saf_ossewabrandwag
+			modifier = {
+				army_core_defence_factor = 0.2
+				army_core_attack_factor = 0.2
+			}
+		}
+		GER_foreign_ss3 = {
+			removal_cost = -1
+			allowed = {
+				always = no				# Unlocked via focus
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = Waffen_SS
+			modifier = {
+				conscription = 0.1
+			}
+		}
+		GER_foreign_ss4 = {
+			removal_cost = -1
+			allowed = {
+				always = no				# Unlocked via focus
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = Waffen_SS
+			modifier = {
+				conscription = 0.05
 			}
 		}
 		GDU_hitlerjugend = {
