@@ -40,6 +40,14 @@ allied_afrika_modifier_spirit = {
         air_strategic_bomber_bombing_factor = ENG.allied_afrika_modifier_bonus
         shore_bombardment_bonus = ENG.allied_afrika_shorebombardment_bonus
 }
+GER_defend_berlin = { #STATE MODIFIER
+    enable = { always = yes }
+    icon = GFX_modifiers_SOV_civilian_labor_in_defense
+    recruitable_population_factor = 0.03
+    army_core_defence_factor = 0.05
+    max_dig_in = 4
+    supply_factor = 0.08
+}
 GER_DDAY_Wall = {
 	icon = "GFX_goal_generic_position_armies"
 	dig_in_speed_factor = 0.5

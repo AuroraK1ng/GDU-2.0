@@ -936,6 +936,35 @@ ideas = {
 				conscription = 0.01
 			}
 		}
+		GER_recruit_hitlerjugend = {
+			removal_cost = -1
+			allowed = {
+				always = no				# Unlocked via focus
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = Waffen_SS
+			modifier = {
+				conscription = 0.02
+				industrial_capacity_factory = 0.10
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		GER_volksturm = {
+			removal_cost = -1
+			allowed = {
+				always = no				# Unlocked via focus
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = Waffen_SS
+			modifier = {
+				conscription = 0.02
+				production_lack_of_resource_penalty_factor = -0.6 
+			}
+		}
 		GER_foreign_ss2 = {
 			removal_cost = -1
 			allowed = {
@@ -947,6 +976,20 @@ ideas = {
 			picture = Waffen_SS
 			modifier = {
 				conscription = 0.01
+			}
+		}
+		GER_last_stand = {
+			removal_cost = -1
+			allowed = {
+				always = no				# Unlocked via focus
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = saf_ossewabrandwag
+			modifier = {
+				army_core_defence_factor = 0.2
+				army_core_attack_factor = 0.2
 			}
 		}
 		GER_foreign_ss3 = {

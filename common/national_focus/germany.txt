@@ -977,7 +977,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		id = Victory_in_France 
 		text = "Victory in France"
 		icon = GFX_goal_strike_france
-		x = -3
+		x = 0
 		y = 2
 		cost = 1
 		ai_will_do = {
@@ -2908,17 +2908,19 @@ activate_mission = GER_relocate_industry_from_friesland
 		}
 		x = 0
 		y = 2
-		cost = 5
+		cost = 1
 
 		completion_reward = {
-			sound_effect = artillerieberlin
-			GER = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_2 amount = 100000 producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = medium_tank_equipment_3 amount = 10000 producer = GER
-				}
+			sound_effect = untergang
+			create_corps_commander = {
+				name = "Felix Steiner"
+				picture = "portrait_ger_felix_steiner.dds"
+				traits = { trickster panzer_leader ranger trait_engineer substance_abuser career_officer trait_reckless combined_arms_expert urban_assault_specialist}
+				skill = 8
+				attack_skill = 10
+				defense_skill = 10
+				planning_skill = 10
+				logistics_skill = 10
 			}
 		}
 	}
@@ -2935,17 +2937,15 @@ activate_mission = GER_relocate_industry_from_friesland
 			y = 1
 			relative_position_id = 	GER_Summon_Steiner
 			cost = 5
-		completion_reward = {
-			sound_effect = untergang
-			create_corps_commander = {
-				name = "Felix Steiner"
-				picture = "portrait_ger_felix_steiner.dds"
-				traits = { trickster panzer_leader ranger trait_engineer substance_abuser career_officer trait_reckless combined_arms_expert urban_assault_specialist}
-				skill = 8
-				attack_skill = 10
-				defense_skill = 10
-				planning_skill = 10
-				logistics_skill = 10
+			completion_reward = {
+			sound_effect = artillerieberlin
+			GER = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_2 amount = 100000 producer = GER
+				}
+				add_equipment_to_stockpile = {
+					type = medium_tank_chassis amount = 10000 producer = GER
+				}
 			}
 		}
 	}
@@ -2984,12 +2984,12 @@ activate_mission = GER_relocate_industry_from_friesland
 			x = 2
 			y = 1
 			relative_position_id = GER_Summon_Steiner
-			cost = 1
+			cost = 5
 	
 			available_if_capitulated = yes
 	
 			completion_reward = {
-
+				add_ideas = GER_last_stand
 			}
 		} 
 		focus = {
@@ -3004,6 +3004,10 @@ activate_mission = GER_relocate_industry_from_friesland
 			cost =5
 	
 			completion_reward = {
+				hidden_effect = {
+					load_oob = "GER_Form_SS"
+				}
+				custom_effect_tooltip = "Deploys 60 SS Divisions"
 				unlock_decision_category_tooltip = SS_recruitment_pfu
 			}
 		}
@@ -4203,7 +4207,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = GER_foreign_ss1
+			add_ideas = GER_recruit_hitlerjugend
 			GER = { add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 20000 producer = GER } }
 			hidden_effect = {
 				sound_effect = hitlerjugend
@@ -4229,7 +4233,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = GER_foreign_ss2
+			add_ideas = GER_volksturm
 			GER = { add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 20000 producer = GER } }
 		}
 	}
