@@ -6,7 +6,21 @@ on_actions = {
 				}
 			}
 		}
-	
+	on_naval_invasion = { 
+		effect ={ 
+			if = { 
+				limit = { OR ={  british_coastline_not_south = yes   }  } 
+				teleport_armies = {limit = { is_in_faction_with_axis = yes  } to_state = 64 }     every_country = {  delete_unit = { state = 64 disband = yes  } } 
+				PREV = { 
+					if = { limit ={  NOT = { OR = { state = 582 state = 323 }}}  transfer_state_to = ENG   }  
+					if = { limit ={  state = 582 POL = { owns_state =  582 }  } transfer_state_to = POL }
+					else = { transfer_state_to = ENG }
+					if = { limit ={  state = 323 NOR = { owns_state =  323 }  } transfer_state_to = NOR }
+					else = { transfer_state_to = ENG }
+				} 	
+			}
+		}
+	}
 	on_paradrop = {
 	    effect = {
 			if = {  
@@ -41,7 +55,8 @@ on_actions = {
 	}	
 	on_startup = {
 		effect = {
-			FRA = {  every_state = { limit = { OR ={ state = 16 state = 785 state = 29 state = 18 state = 17 state = 554 state = 680 state = 677 state = 553 state = 28 state = 27 state = 24  state = 15 state = 14 state = 30 state = 23 state = 33 state = 26 state = 20 state = 32 state = 735 state = 21 state = 22 state = 20 state = 25 state = 31 state = 19 state = 1 state = 461 state = 459 state = 460 state = 458 state = 805 state = 655 state = 513 state = 462 }  } add_dynamic_modifier = { modifier = no_fra_mainland_buildings days = 1335 }  } }
+			FRA = { every_state = { limit = { OR = { state = 16 state = 785 state = 29 state = 18 state = 17 state = 554 state = 680 state = 677 state = 553 state = 27 state = 24  state = 15 state = 14 state = 30 state = 23 state = 33 state = 26 state = 20 state = 32 state = 735 state = 21 state = 22 state = 20 state = 25 state = 31 state = 19 state = 1 state = 461 state = 459 state = 460 state = 458 state = 805 state = 655 state = 513 state = 462 }  } add_dynamic_modifier = { modifier = no_fra_mainland_buildings days = 1335 }  } }
+			FRA = { every_state = { limit = { OR = { state = 28 }  } add_dynamic_modifier = { modifier = FRA_Maginot_Line days = 1500 }  } }
 			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = GER state = 724  }} }
 			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = ENG state = 336  }} }
 			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = ENG state = 375  }} }
@@ -57,7 +72,6 @@ on_actions = {
 			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = ENG state = 360  }} }
 			if = { limit = { has_start_date > 1936.1.1.12 } SWE = { give_resource_rights = { receiver = ENG state = 368  }} }
 			if = { limit = { has_start_date > 1936.1.1.12 } ENG = { set_technology = { rubber_processing = 1 improved_rubber_processing = 1}} }
-			if = { limit = { has_start_date > 1936.1.1.12 } }
 			every_country = {
                     add_ideas = { EFI_START }
 				}

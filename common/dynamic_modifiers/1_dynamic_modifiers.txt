@@ -51,12 +51,16 @@ GER_defend_berlin = { #STATE MODIFIER
 GER_DDAY_Wall = {
 	icon = "GFX_goal_generic_position_armies"
 	dig_in_speed_factor = 0.5
-	max_dig_in_factor = 2.0
-	
+	max_dig_in_factor = 2.0	
 }
 no_fra_mainland_buildings = { # on Province
 	icon = "GFX_focus_ICE_the_armed_forces_of_iceland"
 	local_building_slots_factor = -2
+}
+FRA_Maginot_Line = {
+	icon = "GFX_idea_generic_wall_line"
+	dig_in_speed_factor = 50.0
+	max_dig_in_factor = 50.0
 }
 axis_afrika_modifier_spirit = {
 	enable = { always = yes }

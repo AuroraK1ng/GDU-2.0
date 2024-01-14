@@ -625,7 +625,7 @@ create_equipment_variant = {
 	modules = {
 		fixed_main_weapon_slot = light_mg_4x
 		engine_type_slot = engine_2_1x
-		special_type_slot_1 = lmg_defense_turret
+		special_type_slot_1 = self_sealing_fuel_tanks_small
 	}
 	icon = "GFX_SOV_early_fighter_medium"
 }
@@ -819,4 +819,8 @@ add_intel = {
 	army_intel = 200
 	navy_intel = 200
 	airforce_intel = 200
+}
+
+1936.1.1.13 = {
+	add_ideas = { SOV_no_Asia }
 }
