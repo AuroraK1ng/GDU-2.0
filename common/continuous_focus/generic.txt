@@ -37,11 +37,13 @@ continuous_focus_palette = {
 		available_if_capitulated = yes
 	}
 
-	#thanks trashy
 	focus = {
 		id = continuous_recruitment_drive	
 		icon = GFX_focus_ger_oppose_hitler
-		modifier = { mobilization_speed = 1.0	}
+		modifier = { 
+			mobilization_speed = 1.0
+			weekly_manpower = 2500			
+		}
 		#available = { NOT = { AND ={  tag = EFR date < 1940.1.1 }}   }
 		daily_cost = 1	
 		available_if_capitulated = yes

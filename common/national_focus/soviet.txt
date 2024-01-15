@@ -4862,6 +4862,29 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SOV_Strike_Axis
+		text = "Strike the Eagle Down!"
+		icon = GFX_focus_attack_germany
+		relative_position_id = SOV_move_industry_to_urals
+		x = 0
+		y = 3
+		cost = 2
+		prerequisite = {
+			focus = SOV_defense_of_moscow
+		}
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_named_threat = { threat = 100 name = Barbarossa }
+ 			declare_war_on = {
+				target = GER
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
 		id = SOV_operation_countenance
 		icon = GFX_goal_generic_territory_or_war
 		relative_position_id = SOV_move_industry_to_urals

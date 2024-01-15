@@ -337,19 +337,18 @@ focus_tree = {
 	focus = {
 		id = GER_gothic_line
 		icon = GFX_gothic_line
-
 		prerequisite = { focus = GER_west_wall }
 
-		x = 13
+		x = 14
 		y = 4
 
 		cost = 5
 
 		available = {
-				ITA = {
-					has_war_with = ENG
-				}
-	}
+			ITA = {
+				has_war_with = ENG
+			}
+		}
 
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -977,8 +976,9 @@ activate_mission = GER_relocate_industry_from_friesland
 		id = Victory_in_France 
 		text = "Victory in France"
 		icon = GFX_goal_strike_france
-		x = 0
-		y = 2
+		prerequisite = { focus = GER_german_war_economy }
+		x = 1
+		y = 1
 		cost = 1
 		ai_will_do = {
 			factor = 1
@@ -986,7 +986,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		available = {		
 			always = no						
 		}
-		relative_position_id = GER_prepare_high_castle
+		relative_position_id = GER_german_war_economy
 		completion_reward = {
 			add_timed_idea = {
 				idea = EFR_Reparations days = 365
@@ -998,7 +998,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		id = GER_air_innovation
 		icon = GFX_goal_luftwaffe
 		prerequisite = { focus = GER_rhineland }
-		x = 21
+		x = 22
 		y = 1
 		cost = 5
 		ai_will_do = {
@@ -1117,7 +1117,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		id = GER_naval_air_effort
 		text = naval_air_effort
 		icon = GFX_ger_arado
-		prerequisite = { focus = GER_tactical_air_effort }
+		prerequisite = { focus = GER_strategic_air_effort focus = GER_tactical_air_effort }
 		x = 0
 		y = 2
 		relative_position_id = GER_tactical_air_effort
@@ -1300,7 +1300,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		Text = "Axis Power"
 		icon = GFX_European_Axis
 		prerequisite = { focus = GER_army_innovation_2 }
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = GER_army_innovation_2
 		cost = 10
@@ -1400,180 +1400,11 @@ activate_mission = GER_relocate_industry_from_friesland
 		}
 	}
 	
-	focus = {
-		id = GER_Reequip_Panzers
-		Text = "Mass Panther Production"
-		icon = GFX_ger_goal_heavy_tank
-		prerequisite = { focus = GER_Reequip_Opel_Blitz focus = GER_Reequip_Luftwaffe focus = GER_ostarbeiter }
-		x = 0
-		y = 1
-		relative_position_id = GER_ostarbeiter
-		cost = 5
-
-		available = {
-			GER = { has_war_with = SOV }
-			GER = {
-				controls_state = 221
-				}
-		    GER = {
-				controls_state = 242
-				}
-			GER = {
-				controls_state = 12
-				}
-		}
-		
-		search_filters = {}
-
-		completion_reward = {
-		add_ideas = Massive_production
-		add_ideas = SOV_Mechanised_Corps_Expanded
-			
-		}
-	}
-	focus = {
-		id = GER_East_Hospitals
-		Text = "Achtung, Panzer!"
-		icon = GFX_ger_achtung_panzer
-		prerequisite = { focus = GER_Reequip_Opel_Blitz focus = GER_Reequip_Luftwaffe focus = GER_ostarbeiter }
-		x = 1
-		y = 1
-		relative_position_id = GER_Reequip_Opel_Blitz
-		cost = 5
-
-		available = {
-			GER = { has_war_with = SOV }
-		}
-		
-		search_filters = {}
-
-		completion_reward = {
-		army_experience = 500
-		add_tech_bonus = {
-				name = HUN_motorized_support_bonus
-				bonus = 1.00
-				uses = 2
-				category = hospital_tech
-				category = logistics_tech
-			}
-			
-		}
-	}
-	focus = {
-		id = GER_battle_russia
-		icon = GFX_goal_ger_rasaineinei2
-		relative_position_id = GER_war_in_the_east
-		prerequisite = { focus = GER_war_in_the_east }
-		mutually_exclusive = { focus = GER_battle_russia2 }
-		x = -1
-		y = 1
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			has_war_with = SOV
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			army_experience = 500
-			set_technology = {
-				improved_medium_tank_chassis = 1
-			}
-			202 = {
-				add_resource = {
-					type = tungsten
-					amount = 50
-				}
-			}
-			add_tech_bonus = {
-				name = Rasenai_Panther_bonus
-				bonus = 3
-				uses = 2
-				technology = advanced_medium_tank_chassis
-				technology = advanced_light_tank_chassis
-			}
-			add_tech_bonus = {
-				name = at_bonus
-				bonus = 1.75
-				uses = 4
-				category = cat_anti_tank
-			}
-		}
-	}
-
-	focus = {
-		id = GER_battle_russia2
-		icon = GFX_goal_ger_rasaineinei2
-		relative_position_id = GER_war_in_the_east
-		prerequisite = { focus = GER_war_in_the_east }
-		mutually_exclusive = { focus = GER_battle_russia }
-		x = 1
-		y = 1
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			has_war_with = SOV
-		}
-			
-		available_if_capitulated = yes
-
-		completion_reward = {
-			army_experience = 500
-			set_technology = {
-				improved_heavy_tank_chassis = 1
-			}
-			202 = {
-				add_resource = {
-					type = chromium
-					amount = 40
-				}
-			}
-			add_tech_bonus = {
-				name = Brody_KingTiger_bonus
-				bonus = 3
-				uses = 2
-				technology = advanced_heavy_tank_chassis
-				technology = advanced_light_tank_chassis
-			}
-			add_tech_bonus = {
-				name = at_bonus
-				bonus = 3
-				uses = 4
-				category = cat_anti_tank
-			}
-		}
-	}
-	
-	focus = {
-		id = GER_Reequip_Luftwaffe
-		Text = "Improvement of the Luftwaffe"
-		icon = GFX_goal_luftwaffe
-		prerequisite = { focus = GER_Luftwaffe }
-		x = 0
-		y = 2
-		relative_position_id = GER_Luftwaffe
-		cost = 5
-
-		available = {
-			GER = { has_war_with = SOV }
-			date > 1941.9.1
-		}
-		
-		search_filters = {}
-
-		completion_reward = {
-		add_ideas = GER_reequip_AIR_idea
-		}
-	}
-
-	focus = {
+		focus = {
 		id = GER_integrate_war_economies
 		icon = GFX_ROM_axis
 		prerequisite = { focus = GER_Axis_power }
-		x = -3
+		x = -2
 		y = 2
 		relative_position_id = GER_army_innovation_2
 		cost = 10
@@ -1803,7 +1634,7 @@ activate_mission = GER_relocate_industry_from_friesland
 			}
 		}
 	}
-
+	
 	focus = {
 		id = GER_ostarbeiter
 		Text = "Ostarbeiter"
@@ -1828,14 +1659,181 @@ activate_mission = GER_relocate_industry_from_friesland
 			add_ideas = GER_ostarbeiter
 		}
 	}
+	
+	focus = {
+		id = GER_Reequip_Panzers
+		Text = "Mass Panther Production"
+		icon = GFX_ger_goal_heavy_tank
+		prerequisite = { focus = GER_Reequip_Opel_Blitz focus = GER_Reequip_Luftwaffe focus = GER_ostarbeiter }
+		x = 1
+		y = 1
+		relative_position_id = GER_ostarbeiter
+		cost = 5
+
+		available = {
+			GER = { has_war_with = SOV }
+			GER = {
+				controls_state = 221
+			}
+		    GER = {
+				controls_state = 242
+			}
+			GER = {
+				controls_state = 12
+			}
+		}
+		
+		search_filters = {}
+
+		completion_reward = {
+			add_ideas = Massive_production
+			add_ideas = SOV_Mechanised_Corps_Expanded
+		}
+	}
+	focus = {
+		id = GER_East_Hospitals
+		Text = "Achtung, Panzer!"
+		icon = GFX_ger_achtung_panzer
+		prerequisite = { focus = GER_Reequip_Opel_Blitz focus = GER_Reequip_Luftwaffe focus = GER_ostarbeiter }
+		x = 1
+		y = 1
+		relative_position_id = GER_Reequip_Opel_Blitz
+		cost = 5
+
+		available = {
+			GER = { has_war_with = SOV }
+		}
+		
+		search_filters = {}
+
+		completion_reward = {
+		army_experience = 500
+		add_tech_bonus = {
+				name = HUN_motorized_support_bonus
+				bonus = 1.00
+				uses = 2
+				category = hospital_tech
+				category = logistics_tech
+			}
+			
+		}
+	}
+	focus = {
+		id = GER_battle_russia
+		icon = GFX_goal_ger_rasaineinei2
+		relative_position_id = GER_war_in_the_east
+		prerequisite = { focus = GER_war_in_the_east }
+		mutually_exclusive = { focus = GER_battle_russia2 }
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war_with = SOV
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			army_experience = 500
+			set_technology = {
+				improved_medium_tank_chassis = 1
+			}
+			202 = {
+				add_resource = {
+					type = tungsten
+					amount = 50
+				}
+			}
+			add_tech_bonus = {
+				name = Rasenai_Panther_bonus
+				bonus = 3
+				uses = 2
+				technology = advanced_medium_tank_chassis
+				technology = advanced_light_tank_chassis
+			}
+			add_tech_bonus = {
+				name = at_bonus
+				bonus = 1.75
+				uses = 4
+				category = cat_anti_tank
+			}
+		}
+	}
+
+	focus = {
+		id = GER_battle_russia2
+		icon = GFX_goal_ger_rasaineinei2
+		relative_position_id = GER_war_in_the_east
+		prerequisite = { focus = GER_war_in_the_east }
+		mutually_exclusive = { focus = GER_battle_russia }
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war_with = SOV
+		}
+			
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 500
+			set_technology = {
+				improved_heavy_tank_chassis = 1
+			}
+			202 = {
+				add_resource = {
+					type = chromium
+					amount = 40
+				}
+			}
+			add_tech_bonus = {
+				name = Brody_KingTiger_bonus
+				bonus = 3
+				uses = 2
+				technology = advanced_heavy_tank_chassis
+				technology = advanced_light_tank_chassis
+			}
+			add_tech_bonus = {
+				name = at_bonus
+				bonus = 3
+				uses = 4
+				category = cat_anti_tank
+			}
+		}
+	}
+	
+	focus = {
+		id = GER_Reequip_Luftwaffe
+		Text = "Improvement of the Luftwaffe"
+		icon = GFX_goal_luftwaffe
+		prerequisite = { focus = GER_Luftwaffe }
+		x = 0
+		y = 2
+		relative_position_id = GER_Luftwaffe
+		cost = 5
+
+		available = {
+			GER = { has_war_with = SOV }
+			date > 1941.9.1
+		}
+		
+		search_filters = {}
+
+		completion_reward = {
+		add_ideas = GER_reequip_AIR_idea
+		}
+	}
 
 	focus = {
 		id = GER_extra_tech_slot_2
 		icon = GFX_goal_ger_push_limits
-		prerequisite = { focus = GER_army_innovation_2 }
-		prerequisite = { focus = GER_air_innovation_2 }
-		x = 0
-		y = 2
+		prerequisite = { focus = GER_army_innovation_2 focus = GER_air_innovation_2 focus = GER_naval_air_effort }
+		x = 1
+		y = 1
 		relative_position_id = GER_air_innovation_2
 		cost = 10
 		ai_will_do = {
@@ -1933,7 +1931,8 @@ activate_mission = GER_relocate_industry_from_friesland
 	focus = {
 		id = GER_wunderwaffe
 		icon = GFX_GER_heisenberg_device
-		prerequisite = { focus = GER_rocketry_focus focus = GER_me262 }
+		prerequisite = { focus = GER_rocketry_focus }
+		prerequisite = { focus = GER_me262 }
 		x = 1
 		y = 1
 		relative_position_id = GER_rocketry_focus
@@ -2468,14 +2467,14 @@ activate_mission = GER_relocate_industry_from_friesland
 	focus = {
 		id = GER_Prepare_Endsieg
 		icon = GFX_GER_total_war
-		prerequisite = { focus = GER_fall_blau }
+		prerequisite = { focus = GER_Reequip_Panzers focus = GER_East_Hospitals }
 
 		cancel = {
 			NOT = { country_exists = SOV }
 		}
-		x = 0
+		x = 1
 		y = 1
-		relative_position_id = 	GER_fall_blau
+		relative_position_id = 	GER_Reequip_Panzers
 		cost = 5
 
 		available = {
@@ -2506,7 +2505,7 @@ activate_mission = GER_relocate_industry_from_friesland
 	focus = {
 		id = GER_Give_Himmler_a_Chance
 		icon = GFX_GER_ammunitions_miracle
-		prerequisite = { focus = GER_East_Hospitals  }
+		#prerequisite = { focus = GER_East_Hospitals  }
 		prerequisite = { focus = GER_Prepare_Endsieg  }
 		mutually_exclusive = { focus = GER_Give_Hitler_a_Chance }
 		available = {
@@ -2516,7 +2515,7 @@ activate_mission = GER_relocate_industry_from_friesland
 				}
 			}
 		}
-		x = 4
+		x = 1
 		y = 1
 		relative_position_id = 	GER_Prepare_Endsieg
 		cost = 5
@@ -2531,31 +2530,32 @@ activate_mission = GER_relocate_industry_from_friesland
 				traits = { }
 			}
 			GER = {
-				add_timed_idea = { idea = GDU_GER_Endsieg days = 355 }
+				add_timed_idea = { idea = GDU_GER_Endsieg days = 365 }
 			}
 			ROM = {
 				add_ideas = GER_foreign_ss3
-				add_timed_idea = { idea = GDU_Endsieg_Minors days = 355 }
+				add_timed_idea = { idea = GDU_Endsieg_Minors days = 365 }
 			}
 			BUL = {
 				add_ideas = GER_foreign_ss3
-				add_timed_idea = { idea = GDU_Endsieg_Minors days = 355 }
+				add_timed_idea = { idea = GDU_Endsieg_Minors days = 365 }
 			}
 			HUN = {
 				add_ideas = GER_foreign_ss3
-				add_timed_idea = { idea = GDU_Endsieg_Minors days = 355 }
+				add_timed_idea = { idea = GDU_Endsieg_Minors days = 365 }
 			}
 			SPR = {
 				add_ideas = GER_foreign_ss3
-				add_timed_idea = { idea = GDU_Endsieg_Spain days = 355 }
+				add_timed_idea = { idea = GDU_Endsieg_Spain days = 365 }
 			}
 		}
 	}
 	focus = {
 		id = GER_Give_Hitler_a_Chance
+		text = "Support the Furher's Plan!"
 		icon = GFX_GER_hitlers_meddling
 		prerequisite = { focus = GER_Prepare_Endsieg  }
-		x = 2
+		x = -1
 		y = 1
 		relative_position_id = 	GER_Prepare_Endsieg
 		cost = 5
@@ -2570,14 +2570,15 @@ activate_mission = GER_relocate_industry_from_friesland
 		completion_reward = {
 			GER = {
 				add_ideas = GER_foreign_ss4
-				add_timed_idea = { idea = GDU_GER_Endsieg_Hitler days = 355 }
+				add_timed_idea = { idea = GDU_GER_Endsieg_Hitler days = 365 }
 			}
 		}
 	}
 	focus = {
 		id = GER_festungwesteneuropa
+		text = "Festung Westen Europa"
 		icon = GFX_GER_festung_europa
-		prerequisite = { focus = GER_Give_Hitler_a_Chance focus = GER_Give_Himmler_a_Chance  }
+		prerequisite = { focus = GER_Give_Hitler_a_Chance }
 		x = -2
 		y = 1
 		relative_position_id = GER_Give_Hitler_a_Chance
@@ -2689,8 +2690,9 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_festungosteuropa
+		text = "Festung Ost Europa"
 		icon = GFX_GER_festung_europa
-		prerequisite = { focus = GER_Give_Hitler_a_Chance focus = GER_Give_Himmler_a_Chance  }
+		prerequisite = { focus = GER_Give_Himmler_a_Chance  }
 		x = 2
 		y = 1
 		relative_position_id = GER_Give_Himmler_a_Chance
@@ -2846,6 +2848,7 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_attack
+		text = "Counter Attack!"
 		icon = GFX_focus_SWE_attack_landsorganisationen
 		prerequisite = { focus = GER_festungosteuropa   }
 		x = 2
@@ -2867,6 +2870,7 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_defense
+		text = "Focus on Defense"
 		icon = GFX_focus_SOV_the_defense_of_moscow
 		prerequisite = { focus = GER_festungwesteneuropa  }
 		x = -2
@@ -2888,6 +2892,7 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_reorganizecivilianindustries
+		Text = "Reorganise Civilian Industry"
 		icon = GFX_focus_POL_warsaw_main_station
 		prerequisite = { focus = GER_Give_Himmler_a_Chance focus = GER_Give_Hitler_a_Chance }
 		x = 1
@@ -2959,6 +2964,7 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_appointottoskorzeny
+		Text = "Appoint Otto Skorzeny"
 		icon = GFX_focus_generic_armored_air_support 
 		prerequisite = { focus = GER_festungosteuropa }
 		x = 0
@@ -2968,127 +2974,136 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_timed_idea { idea = GER_batlle_in_air days = 90 }
+			add_timed_idea = { 
+				idea = GER_batlle_in_air days = 90 
 			}
 		}
-	
-		focus = {
-			id = GER_festungberlin
-			icon = GFX_focus_SWE_hedgehog_defense
-			prerequisite = { focus = GER_Summon_Steiner }
-			x = -2
-			y = 1
-			relative_position_id = GER_Summon_Steiner
-			cost = 1
-			completion_reward = {		
+	}
+	focus = {
+		id = GER_festungberlin
+		Text = "Defend Berlin!"
+		icon = GFX_focus_SWE_hedgehog_defense
+		prerequisite = { focus = GER_Summon_Steiner }
+		x = -2
+		y = 1
+		relative_position_id = GER_Summon_Steiner
+		cost = 1
+		completion_reward = {		
 			64 = { add_dynamic_modifier = { modifier = GER_defend_berlin } }	
-			}
 		}
-		focus = {
-			id = GER_festungdesdeutschenvaterland
-			icon = GFX_focus_FIN_coastal_defense
+	}
+	focus = {
+		id = GER_festungdesdeutschenvaterland
+		text = "Last Stand..."
+		icon = GFX_focus_FIN_coastal_defense
 	
-			prerequisite = { focus = GER_Summon_Steiner }
-			x = 2
-			y = 1
-			relative_position_id = GER_Summon_Steiner
-			cost = 5
+		prerequisite = { focus = GER_Summon_Steiner }
+		x = 2
+		y = 1
+		relative_position_id = GER_Summon_Steiner
+		cost = 5
 	
-			available_if_capitulated = yes
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_last_stand
+		}
+	} 
+	focus = {
+		id = GER_ss_focus
+		Text = "Further SS Recruitment"
+		icon = GFX_focus_generic_fascist_troops
 	
-			completion_reward = {
-				add_ideas = GER_last_stand
-			}
-		} 
-		focus = {
-			id = GER_ss_focus
-			icon = GFX_focus_generic_fascist_troops
-	
-			relative_position_id = GER_festungwesteneuropa
-			prerequisite = { focus = GER_festungwesteneuropa }
-			x = 0
-			y = 1
+		relative_position_id = GER_festungwesteneuropa
+		prerequisite = { focus = GER_festungwesteneuropa }
+		x = 0
+		y = 1
 			
-			cost =5
+		cost =5
 	
-			completion_reward = {
-				hidden_effect = {
-					load_oob = "GER_Form_SS"
-				}
-				custom_effect_tooltip = "Deploys 60 SS Divisions"
-				unlock_decision_category_tooltip = SS_recruitment_pfu
+		completion_reward = {
+			hidden_effect = {
+				load_oob = "GER_Form_SS"
+			}
+			custom_effect_tooltip = "Deploys 60 SS Divisions"
+			#unlock_decision_category_tooltip = SS_recruitment_pfu
+		}
+	}
+	focus = {
+		id = GER_ardennesoffensive
+		Text = "Ardennes Offensive"
+		icon = GFX_focus_hol_prepare_the_inundation_lines
+		prerequisite = { focus = GER_ss_focus }
+		x = 0
+		y = 1
+		relative_position_id = GER_ss_focus
+		cost = 5
+			ai_will_do = {
+			factor = 1
+		}
+				
+		available_if_capitulated = yes
+	
+		available = {
+			has_war_with = SOV
+		}
+	 
+		completion_reward = {
+			add_timed_idea = {
+				idea = GER_ardennenoffensive
+				days = 60
 			}
 		}
-		focus = {
-			id = GER_ardennesoffensive
-			icon = GFX_focus_hol_prepare_the_inundation_lines
-			prerequisite = { focus = GER_ss_focus }
-			x = 0
-			y = 1
-			relative_position_id = GER_ss_focus
-			cost = 5
-			 ai_will_do = {
-				factor = 1
-			}
-				
-			available_if_capitulated = yes
-	
-		  available = {
-				has_war_with = SOV
-			}
-	 
-			completion_reward = {
-				add_timed_idea = {
-					idea = GER_ardennenoffensive
-					days = 60
-				}
-				}
-			}
-			focus = {
-				id = GER_jaegerpogramm
-				icon = GFX_focus_generic_multi_role_aircraft
-				x = 0
-				y = 1
-				relative_position_id = GER_appointottoskorzeny
-				prerequisite = { focus = GER_appointottoskorzeny }
-				available = { 	 }
-				cost = 5
+	}
+	focus = {
+		id = GER_jaegerpogramm
+		Text = "Fund Jaegerprogramm"
+		icon = GFX_focus_generic_multi_role_aircraft
+		x = 0
+		y = 1
+		relative_position_id = GER_appointottoskorzeny
+		prerequisite = { focus = GER_appointottoskorzeny }
+		available = { 	
+
+		}
+		cost = 5
 		
-				completion_reward = {
-					add_timed_idea { idea = GER_jaegerprogramm days = 120 }
-				}
-			}
-			focus = {
-				id = GER_steinercounteroffensive
-				icon = GFX_focus_FIN_salvaged_and_retooled
-				prerequisite = { focus = GER_Trust_Steiner focus = GER_festungberlin focus = GER_festungdesdeutschenvaterland }
-				x = 0
-				y = 1
-				relative_position_id = GER_Trust_Steiner
-				cost = 5
-				available = {
-				surrender_progress > 0.4
-				}	
+		completion_reward = {
+			add_timed_idea = { idea = GER_jaegerprogramm days = 120 }
+		}
+	}
+	focus = {
+		id = GER_steinercounteroffensive
+		text = "Steiner's Offensive!"
+		icon = GFX_focus_FIN_salvaged_and_retooled
+		prerequisite = { focus = GER_Trust_Steiner focus = GER_festungberlin focus = GER_festungdesdeutschenvaterland }
+		x = 0
+		y = 1
+		relative_position_id = GER_Trust_Steiner
+		cost = 5
+		available = {
+			surrender_progress > 0.4
+		}	
 					
-				available_if_capitulated = yes
+		available_if_capitulated = yes
 		
-				completion_reward = {
-				add_timed_idea = {
-					idea = GER_steiner_idea
-					days = 60
-				}
+		completion_reward = {
+			add_timed_idea = {
+				idea = GER_steiner_idea
+				days = 60
 			}
-		}  
+		}
+	}  
 	
 	focus = {
 		id = GER_fall_blau
 		icon = GFX_focus_ger_stalingrad
-		prerequisite = { focus = GER_ussr_war_goal focus = GER_Reequip_Panzers }
+		prerequisite = { focus = GER_ussr_war_goal }
 
 		cancel = {
 			NOT = { country_exists = SOV }
 		}
-		x = 2
+		x = 0
 		y = 1
 		relative_position_id = GER_ussr_war_goal
 		cost = 2
@@ -3678,7 +3693,7 @@ activate_mission = GER_relocate_industry_from_friesland
 	focus = {
 		id = GER_prepare_high_castle
 		icon = GFX_goal_der_kriegsmarine
-		x = 25
+		x = 26
 		y = 8
 		cost = 10
 		ai_will_do = {
@@ -3801,8 +3816,9 @@ activate_mission = GER_relocate_industry_from_friesland
 		id = GER_plan_z
 		icon = GFX_german_goal_raeder_plan
 		prerequisite = { focus = GER_naval_effort }
+		prerequisite = { focus = GER_naval_air_effort }
 		relative_position_id = GER_naval_rearmament
-		x = -2
+		x = -1
 		y = 4
 		cost = 5
 		ai_will_do = {
@@ -3848,9 +3864,8 @@ activate_mission = GER_relocate_industry_from_friesland
 		id = GER_flugzeugtraeger
 		icon = GFX_ger_carrier
 		prerequisite = { focus = GER_plan_z }
-		prerequisite = { focus = GER_naval_air_effort }
 		relative_position_id = GER_plan_z
-		x = -1
+		x = 0
 		y = 2
 		cost = 5
 		ai_will_do = {
@@ -4025,7 +4040,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		icon = GFX_goal_ger_donitz_plan
 		relative_position_id = GER_naval_rearmament
 		prerequisite = { focus = GER_naval_effort }
-		x = 4
+		x = 3
 		y = 2
 		cost = 5
 		ai_will_do = {

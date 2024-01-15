@@ -2836,6 +2836,7 @@ focus_tree = {
 
 	focus = {
 		id = uk_malta_focus
+		text = "Fortify Mediterranean Islands"
 		prerequisite = { focus = uk_rock_focus }
 		available = {
 			116 = { is_owned_and_controlled_by = ENG }
@@ -2864,6 +2865,26 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = anti_air_building
+					level = 4
+					instant_build = yes
+				}
+			}
+			183 ={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = coastal_bunker
+					level = 4
+					province = 2569
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 4
+					province = 7193
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
 					level = 4
 					instant_build = yes
 				}
