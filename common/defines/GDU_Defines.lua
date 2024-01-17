@@ -32,7 +32,7 @@ NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT
 --- Letting people see some stuff on ledger
 NDefines.NGame.GAME_SPEED_SECONDS = { 6000.0, 0.06, 0.2, 0.05, 0.0 }	-- Previous { 1, 2, 3, 4, 5 } = { 6000.0, 0.4, 0.2, 0.05, 0.0 }	Consider Making Speed 3 Slower. 
 
-NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 15 --| less messages lying around at the top of your screen | CHANGE FOR CHECKSUMM
+NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 16 --| less messages lying around at the top of your screen | CHANGE FOR CHECKSUMM
 
 
 ------ Recently Added -----
@@ -394,10 +394,10 @@ NDefines.NMilitary.FUEL_CAPACITY_DEFAULT_HOURS = 200               -- default ca
 
 NDefines.NMilitary.DECRYPTION_ADVANTAGE_BONUS = 0.025 -- Reducing all combat modifiers across the board
 NDefines.NMilitary.BASE_FORT_PENALTY = -0.12 					   -- fort penalty 
-NDefines.NNavy.SHORE_BOMBARDMENT_CAP = 0.45
+NDefines.NNavy.SHORE_BOMBARDMENT_CAP = 0.40
 
-NDefines.NNavy.HEAVY_GUN_ATTACK_TO_SHORE_BOMBARDMENT							= 0.009 -- vanilla was 0.1 -- heavy gun attack value is divided by this value * 100 and added to shore bombardment modifier 
-NDefines.NNavy.LIGHT_GUN_ATTACK_TO_SHORE_BOMBARDMENT							= 0.003 -- vanilla was 0.05 -- light gun attack value is divided by this value * 100 and added to shore bombardment modifier 
+NDefines.NNavy.HEAVY_GUN_ATTACK_TO_SHORE_BOMBARDMENT							= 0.008 -- vanilla was 0.1 -- heavy gun attack value is divided by this value * 100 and added to shore bombardment modifier 
+NDefines.NNavy.LIGHT_GUN_ATTACK_TO_SHORE_BOMBARDMENT							= 0.002 -- vanilla was 0.05 -- light gun attack value is divided by this value * 100 and added to shore bombardment modifier 
 
 --- FUEL: We lower naval and air while increasing army 
 
