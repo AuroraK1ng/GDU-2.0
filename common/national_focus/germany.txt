@@ -3871,7 +3871,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		ai_will_do = {
 			factor = 0.25
 		}
-
+		
 		available_if_capitulated = yes
 
 		complete_tooltip = {
@@ -3879,6 +3879,70 @@ activate_mission = GER_relocate_industry_from_friesland
 		}
 
 		completion_reward = {
+			set_technology = {
+ 				basic_ship_hull_carrier = 1
+ 				early_ship_hull_carrier = 1
+ 			}
+			create_equipment_variant = {
+				name = "Graf Zeppelin"
+				type = ship_hull_carrier_1
+				parent_version = 0
+				modules = {
+					fixed_ship_deck_slot_1 = ship_deck_space
+					fixed_ship_deck_slot_2 = ship_deck_space
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = carrier_ship_engine_2
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					front_1_custom_slot = ship_deck_space
+				}
+			}
+			hidden_effect = {
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_carrier_1
+						creator = "GER"
+						version_name = "Graf Zeppelin"
+					}
+					name = "Graf Zeppelin"
+					requested_factories = 1
+					progress = 0.95
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_carrier_1
+						creator = "GER"
+						version_name = "Graf Zeppelin"
+					}
+					name = "Seydlitz"
+					requested_factories = 1
+					progress = 0.95
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_carrier_1
+						creator = "GER"
+						version_name = "Graf Zeppelin"
+					}
+					name = "Peter Strasser"
+					requested_factories = 1
+					progress = 0.95
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_carrier_1
+						creator = "GER"
+						version_name = "Graf Zeppelin"
+					}
+					name = "Otto Lilienthal"
+					requested_factories = 1
+					progress = 0.95
+					amount = 1
+				}
+			}
 			navy_experience = 50
 			add_tech_bonus = {
 				name = cv_bonus

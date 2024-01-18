@@ -2204,7 +2204,30 @@ foreign_politics = {
 				}
 			}
 			every_country = { country_event = { id = gduevents.11 days = 1 } }
-
+			IF = {
+  				limit = { has_start_date > 1936.1.1.12 }
+   				create_corps_commander = {
+					name = "Harold Alexander"
+					picture = "Portrait_Britain_Harold_Alexander.dds"
+					traits = {
+						old_guard
+						infantry_officer
+						politically_connected
+						bearer_of_artillery
+						organizer
+						naval_invader
+						infantry_leader
+						ranger
+						urban_assault_specialist
+						infantry_expert
+					}
+					skill = 8
+					attack_skill = 8
+					defense_skill = 6
+					planning_skill = 6
+					logistics_skill = 10
+				}
+			}
 		}
 
 	}
