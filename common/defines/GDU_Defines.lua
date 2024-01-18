@@ -772,3 +772,4 @@ NDefines.NDiplomacy.MIN_TRUST_VALUE = -500 							-- WAS -100 | Min trust value 
 NDefines.NDiplomacy.MIN_OPINION_VALUE = -500 							-- WAS -100 | Min opinion value cap.
 NDefines.NTrade.RELATION_TRADE_FACTOR = 2							-- 	WAS 1 | Trade factor is modified by Opinion value times this	
 NDefines.NTrade.BASE_TRADE_FACTOR = 100					-- WAS 150 | This is the base trade factor	
+NDefines.NRailwayGun.ATTACK_TO_FORTS_MODIFIER_FACTOR = 0.0 
