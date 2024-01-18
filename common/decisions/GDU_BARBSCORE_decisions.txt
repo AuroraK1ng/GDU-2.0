@@ -720,6 +720,38 @@ GDU_Barbscore_Score_Category = {
 		cost = 0
 
 		complete_effect = {
+		GER = {
+			if = {
+				limit = {
+					NOT = {
+						has_tech = railway_gun
+					}
+				}
+				set_technology = {
+					railway_gun = 1
+				}
+			}
+			create_railway_gun = {
+				equipment = railway_gun_equipment_1
+				name = "Dora"
+			}
+		}
+		SOV = {
+			if = {
+				limit = {
+					NOT = {
+						has_tech = railway_gun
+					}
+				}
+				set_technology = {
+					railway_gun = 1
+				}
+			}
+			create_railway_gun = {
+				equipment = railway_gun_equipment_1
+				name = "ТМ-3-12"
+			}
+		}
 			country_event = gduevents.96
 			set_country_flag = GER_order_sevastopol
 			SOV = {

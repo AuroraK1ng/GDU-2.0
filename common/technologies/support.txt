@@ -1535,6 +1535,26 @@ technologies = {
 
 
 
+	railway_gun = {
+		enable_equipments = {
+			railway_gun_equipment_1
+		}
+		allow_branch = {
+			always = no
+		}
+		research_cost = 1.5
+		start_year = 1936
+		folder = {
+			name = support_folder
+			position = { x = 6 y = 3 }
+		}
+		
+		categories = {
+			train_tech
+			artillery
+		}
+	}
+
 	wartime_train = {
 		enable_equipments = {
 			train_equipment_2
@@ -1588,22 +1608,15 @@ technologies = {
 			leads_to_tech = railway_gun
 			research_cost_coeff = 1
 		}
-		
-		allow_branch = {
-			has_dlc = "No Step Back"
-		}
-		
 		research_cost = 0.75
 		start_year = 1936
 		folder = {
 			name = support_folder
 			position = { x = 4 y = 3 }
 		}
-		
 		categories = {
 			train_tech
 		}
-		
 		ai_will_do = {
 			factor = 1
 			
