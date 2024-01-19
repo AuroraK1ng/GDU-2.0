@@ -2083,7 +2083,6 @@ focus_tree = {
 
 	focus = {
 		id = Victory_in_Papua
-		Text = "Break Australian Resistance!"
 		icon = GFX_focus_jap_strike_south
 		prerequisite = { focus = JAP_Begin_Exploitation_of_South_East_Asia }
 		prerequisite = { focus = JAP_strike_on_the_southern_resource_area }
@@ -2102,23 +2101,18 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				AND = {
-					669 = {
-						NOT = { is_controlled_by = AST }
-						NOT = { is_controlled_by = ENG }
-						NOT = { is_controlled_by = INS }
-					}
-					792 = {
-						NOT = { is_controlled_by = AST }
-						NOT = { is_controlled_by = ENG }
-					}
-					523 = {
-						NOT = { is_controlled_by = AST }
-						NOT = { is_controlled_by = ENG }
-					}
-				}
-				date > 1942.1.1
+			669 = {
+				NOT = { is_controlled_by = AST }
+				NOT = { is_controlled_by = ENG }
+				NOT = { is_controlled_by = INS }
+			}
+			792 = {
+				NOT = { is_controlled_by = AST }
+				NOT = { is_controlled_by = ENG }
+			}
+			523 = {
+				NOT = { is_controlled_by = AST }
+				NOT = { is_controlled_by = ENG }
 			}
 		}
 
