@@ -950,9 +950,11 @@ ideas = {
 			}
 			picture = Waffen_SS
 			modifier = {
-				conscription = 0.02
+				conscription = 0.015
 				industrial_capacity_factory = 0.10
-				production_speed_buildings_factor = 0.05
+				production_speed_buildings_factor = 0.10
+				stability_weekly = -0.002
+				war_support_weekly = -0.002
 			}
 		}
 		GER_volksturm = {
@@ -965,8 +967,10 @@ ideas = {
 			}
 			picture = Waffen_SS
 			modifier = {
-				conscription = 0.02
-				production_lack_of_resource_penalty_factor = -0.6 
+				conscription = 0.015
+				production_lack_of_resource_penalty_factor = -0.4 
+				stability_weekly = -0.002
+				war_support_weekly = -0.002
 			}
 		}
 		GER_foreign_ss2 = {
@@ -1006,7 +1010,7 @@ ideas = {
 			}
 			picture = Waffen_SS
 			modifier = {
-				conscription = 0.1
+				conscription = 0.05
 			}
 		}
 		GER_foreign_ss4 = {
@@ -1019,7 +1023,7 @@ ideas = {
 			}
 			picture = Waffen_SS
 			modifier = {
-				conscription = 0.05
+				conscription = 0.025
 			}
 		}
 		GDU_hitlerjugend = {
