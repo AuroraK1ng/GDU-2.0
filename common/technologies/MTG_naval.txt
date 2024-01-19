@@ -946,14 +946,43 @@ technologies = {
 			bc_tech
 		}
 	}
+	
+	ship_hull_super_heavy_cv = {
+
+		enable_equipments = {
+			ship_hull_super_heavy_carrier
+		}
+		allow {
+			always = no
+		}
+		
+		enable_equipment_modules = {
+			ship_armor_shbb
+		}
+
+		research_cost = 1.5
+
+		start_year = 1936
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 25
+				tag = JAP
+			}
+		}
+
+		categories = {
+			naval_equipment
+			cv_tech
+		}
+	}
+	
 	ship_hull_heavy_bismarcktech = {
 
 		enable_equipments = {
-			ship_hull_heavy_bismarck
-			
-			
-			
-			
+			ship_hull_heavy_bismarck		
 		}
 		allow {
 			always = no
