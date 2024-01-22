@@ -1,5 +1,39 @@
 political_actions = {
 
+	invest_in_civ_industries = { 
+
+    icon = GFX_decision_generic_construction
+		allowed = {
+		   is_playable_country = yes
+		}
+		fire_only_once = no 
+		days_re_enable = 180	
+
+		visible = {
+			always = yes
+		}
+		cost = 150 
+		complete_effect = {
+			add_offsite_building= { type = industrial_complex level = 2 }
+		}
+	}
+	
+	invest_in_arms_factory = { 
+		icon = GFX_decision_generic_construction
+		allowed = {
+		   is_playable_country = yes
+		}
+		fire_only_once = no 
+		days_re_enable = 180 
+		visible = {
+			always = yes
+		}
+		cost = 150 
+		complete_effect = {
+			add_offsite_building= { type = arms_factory level = 2 }
+		}
+	}
+
 	improved_worker_conditions = {
 
 		icon = GFX_decision_hol_exchange_intelligence_data

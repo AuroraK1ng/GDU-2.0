@@ -1049,9 +1049,12 @@ focus_tree = {
 			factor = 1
 		}
 		
+		bypass = {
+			has_idea = FRA_matignon_agreements 
+		}
+		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-		    custom_effect_tooltip = FRA_strikes_tt
 			add_ideas = { FRA_matignon_agreements }
 			if = {
 				limit = {
