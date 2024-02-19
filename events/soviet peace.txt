@@ -10,12 +10,17 @@ country_event = {
 		tag = YUG
 		SOV = {
 		   has_war_with = GER
-		   surrender_progress > 0.90
+		   surrender_progress > 0.75
+		
 		}
+		251={NOT={CONTROLLER = {original_tag=SOV}}}
+		219={NOT={CONTROLLER = {original_tag=SOV}}}
+		195={NOT={CONTROLLER = {original_tag=SOV}}}
+		217={NOT={CONTROLLER = {original_tag=SOV}}}
 		not = { has_global_flag = SOV_peacedeal }
 	}
 	
-	mean_time_to_happen = { days = 5 }
+	mean_time_to_happen = { days = 3 }
 
 	immediate = {
 		set_global_flag = SOV_peacedeal
@@ -313,7 +318,9 @@ country_event = {
 		transfer_state = 252
 		transfer_state = 822
 		transfer_state = 818
-		
+		transfer_state = 826
+		transfer_state = 830
+		transfer_state = 256
 		every_controlled_state = { add_core_of = BEL }
 		}
 	}

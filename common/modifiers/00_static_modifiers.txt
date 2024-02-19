@@ -395,8 +395,11 @@ air_wing_experience_bonus_max = {
 }
 
 pride_of_the_fleet = {
-	experience_gain_navy_unit_factor = 0.25
-	critical_receive_chance = -0.5
+	experience_gain_navy_unit_factor = 0.5
+	critical_receive_chance = -0.25
+	naval_hit_chance = 0.25
+	navy_submarine_detection_factor = 1.0
+	sortie_efficiency = 0.1
 }
 
 
@@ -436,7 +439,7 @@ ship_experience_malus_min = {
 }
 
 carrier_experience_bonus_max = {
-    fighter_sortie_efficiency = 0.2
+    sortie_efficiency = 0.05
 }
 
 carrier_experience_malus_min = {
