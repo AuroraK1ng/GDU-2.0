@@ -752,16 +752,11 @@ technologies = {
 
 	basic_torpedo = {
 
-		research_cost = 2.0
+		research_cost = 1.5
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
 		start_year = 1922
-
-		path = {
-			leads_to_tech = magnetic_detonator
-			research_cost_coeff = 1
-		}
 
 		path = {
 			leads_to_tech = improved_ship_torpedo_launcher
@@ -779,7 +774,7 @@ technologies = {
 
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 0 y = 1 }
+			position = { x = 1 y = 1 }
 		}
 
 		ai_will_do = {
@@ -804,18 +799,62 @@ technologies = {
 			cat_torpedoes
 		}
 	}
+	
+	improved_ship_torpedo_launcher = {
+
+		research_cost = 1.5
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		start_year = 1936
+
+		path = {
+			leads_to_tech = magnetic_detonator
+			research_cost_coeff = 1
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = torpedo_advice_tt
+		}
+
+		enable_equipment_modules = {
+			ship_torpedo_2
+			ship_modules_tech
+		}
+
+
+
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { x = 1 y = 5 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				tag = JAP
+				factor = 5
+			}
+		}
+
+		categories = {
+			naval_equipment
+			ship_modules_tech
+			cat_torpedoes
+		}
+	}
 
 	magnetic_detonator = {
 
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
-		research_cost = 2.5
+		research_cost = 1.5
 
 		start_year = 1936
 
 		path = {
-			leads_to_tech = homing_torpedo
+			leads_to_tech = advanced_ship_torpedo_launcher
 			research_cost_coeff = 1
 		}
 
@@ -841,7 +880,7 @@ technologies = {
 
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 2 y = 7 }
+			position = { x = 1 y = 7 }
 		}
 
 		ai_will_do = {
@@ -870,13 +909,61 @@ technologies = {
 			cat_torpedoes
 		}
 	}
+	
+	advanced_ship_torpedo_launcher = {
+
+		research_cost = 1.5
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		start_year = 1939
+
+		path = {
+			leads_to_tech = homing_torpedo
+			research_cost_coeff = 1
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = torpedo_advice_tt
+		}
+
+		enable_equipment_modules = {
+			ship_torpedo_3
+		}
+
+
+
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { x = 1 y = 11 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				tag = JAP
+				factor = 5
+			}
+		}
+
+		categories = {
+			naval_equipment
+			ship_modules_tech
+			cat_torpedoes
+		}
+	}
 
 	homing_torpedo = {
 
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
-		research_cost = 2.5
+		research_cost = 1.5
+		
+		path = {
+			leads_to_tech = modern_ship_torpedo_launcher	
+			research_cost_coeff = 1
+		}
 
 		start_year = 1942
 		destroyer = {
@@ -893,7 +980,7 @@ technologies = {
 		}
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 2 y = 16 }
+			position = { x = 1 y = 16 }
 		}
 
 		ai_will_do = {
@@ -924,9 +1011,9 @@ technologies = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
-		research_cost = 2.5
+		research_cost = 1.5
 
-		start_year = 1940
+		start_year = 1942
 
 
 		naval_torpedo_reveal_chance_factor = -0.25
@@ -934,7 +1021,7 @@ technologies = {
 
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 3 y = 13 }
+			position = { x = 3 y = 16 }
 		}
 
 		ai_will_do = {
@@ -955,91 +1042,7 @@ technologies = {
 			cat_torpedoes
 		}
 	}
-	improved_ship_torpedo_launcher = {
-
-		research_cost = 1.5
-		xp_research_type = navy
-		xp_boost_cost = 50
-		xp_research_bonus = 1.50
-		start_year = 1936
-
-		path = {
-			leads_to_tech = advanced_ship_torpedo_launcher
-			research_cost_coeff = 1
-		}
-
-		on_research_complete = {
-			custom_effect_tooltip = torpedo_advice_tt
-		}
-
-		enable_equipment_modules = {
-			ship_torpedo_2
-			ship_modules_tech
-		}
-
-
-
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 0 y = 7 }
-		}
-
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				tag = JAP
-				factor = 5
-			}
-		}
-
-		categories = {
-			naval_equipment
-			ship_modules_tech
-			cat_torpedoes
-		}
-	}
-	advanced_ship_torpedo_launcher = {
-
-		research_cost = 1.5
-		xp_research_type = navy
-		xp_boost_cost = 50
-		xp_research_bonus = 1.50
-		start_year = 1939
-
-		path = {
-			leads_to_tech = modern_ship_torpedo_launcher
-			research_cost_coeff = 1
-		}
-
-		on_research_complete = {
-			custom_effect_tooltip = torpedo_advice_tt
-		}
-
-		enable_equipment_modules = {
-			ship_torpedo_3
-		}
-
-
-
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 0 y = 13 }
-		}
-
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				tag = JAP
-				factor = 5
-			}
-		}
-
-		categories = {
-			naval_equipment
-			ship_modules_tech
-			cat_torpedoes
-		}
-	}
+	
 	modern_ship_torpedo_launcher = {
 
 		research_cost = 1.5
@@ -1061,7 +1064,7 @@ technologies = {
 
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 0 y = 19 }
+			position = { x = 1 y = 19 }
 		}
 
 		ai_will_do = {
