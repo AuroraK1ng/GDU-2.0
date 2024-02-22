@@ -367,29 +367,25 @@ adjacency_rule={
 #Adriatic
 adjacency_rule={
 	name = "Adriatic Strait"
-	contested =
-	{
+	contested = {
 		army = no
 		navy = yes
 		submarine = yes
 		trade = no
 	}
-	enemy =
-	{
+	enemy = {
 		army = no
 		navy = no
 		submarine = yes
 		trade = no
 	}
-	friend =
-	{
+	friend = {
 		army = yes
 		navy = yes
 		submarine = yes
 		trade = yes
 	}
-	neutral =
-	{
+	neutral = {
 		army = yes
 		navy = no
 		submarine = yes
@@ -523,30 +519,32 @@ adjacency_rule ={
 adjacency_rule ={
 	name = "TUNIS_STRAIT"
 
-	contested =	{
+	contested = {
 		army = no
-		navy = no
-		submarine = no
+		navy = yes
+		submarine = yes
 		trade = no
 	}
-	enemy =	{
+	enemy = {
 		army = no
 		navy = no
-		submarine = no
+		submarine = yes
 		trade = no
 	}
-	friend =	{
+	friend = {
 		army = yes
 		navy = yes
 		submarine = yes
 		trade = yes
 	}
-	neutral ={
+	neutral = {
 		army = yes
-		navy = yes
+		navy = no
 		submarine = yes
 		trade = yes
 	}
+	
+	required_provinces = { 2576 7059 5490 }
 	
 	is_disabled = {
 		AND = {
@@ -560,37 +558,35 @@ adjacency_rule ={
 		}
 		tooltip = disable_canal_tt2
 	}
-	
-	required_provinces = { 2576 7059 }
-	
-	icon = 2576	
-	offset = { 25.0 0.0 4.0 }
+
+	icon = 7054	
+	offset = { -10.0 0.0 10.0 }
 }
 #Italy Strait
 adjacency_rule ={
 	name = "ITALY_STRAIT"
 
-	contested =	{
+	contested = {
 		army = no
-		navy = no
-		submarine = no
+		navy = yes
+		submarine = yes
 		trade = no
 	}
-	enemy =	{
+	enemy = {
 		army = no
 		navy = no
-		submarine = no
+		submarine = yes
 		trade = no
 	}
-	friend =	{
+	friend = {
 		army = yes
 		navy = yes
 		submarine = yes
 		trade = yes
 	}
-	neutral ={
+	neutral = {
 		army = yes
-		navy = yes
+		navy = no
 		submarine = yes
 		trade = yes
 	}
@@ -610,8 +606,8 @@ adjacency_rule ={
 		tooltip = disable_canal_tt2
 	}
 	
-	icon = 4159
-	offset = { 5.0 0.0 0.0 }
+	icon = 5681
+	offset = { 0.0 0.0 0.0 }
 }
 #Cronverskiy Strait(Leningrad)
 adjacency_rule ={
