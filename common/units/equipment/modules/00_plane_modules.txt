@@ -594,7 +594,7 @@ equipment_modules = {
 
 	light_mg_2x = {
 		abbreviation = "lmg2"
-		category = fighter_weapon
+		category = fighter_weapon_light
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = { fighter heavy_fighter }
 
@@ -626,7 +626,7 @@ equipment_modules = {
 
 	light_mg_4x = {
 		abbreviation = "lmg4"
-		category = fighter_weapon
+		category = fighter_weapon_heavy
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = { fighter heavy_fighter }
 
@@ -661,7 +661,7 @@ equipment_modules = {
 
 	heavy_mg_2x = {
 		abbreviation = "hmg2"
-		category = fighter_weapon
+		category = fighter_weapon_light
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = { fighter heavy_fighter }
 
@@ -693,7 +693,7 @@ equipment_modules = {
 
 	heavy_mg_4x = {
 		abbreviation = "hmg4"
-		category = fighter_weapon
+		category = fighter_weapon_heavy
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = { fighter heavy_fighter }
 
@@ -727,7 +727,7 @@ equipment_modules = {
 
 	aircraft_cannon_1_1x = {
 		abbreviation = "ac11"
-		category = fighter_weapon
+		category = fighter_weapon_light
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = { fighter heavy_fighter }
 
@@ -760,7 +760,7 @@ equipment_modules = {
 
 	aircraft_cannon_1_2x = {
 		abbreviation = "ac12"
-		category = fighter_weapon
+		category = fighter_weapon_heavy
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = { fighter heavy_fighter }
 
@@ -796,7 +796,7 @@ equipment_modules = {
 
 	aircraft_cannon_2_1x = {
 		abbreviation = "ac31"
-		category = fighter_weapon
+		category = fighter_weapon_light
 		sfx = sfx_ui_sd_module_turret
 		parent = aircraft_cannon_1_1x
 		add_equipment_type = { fighter heavy_fighter }
@@ -829,7 +829,7 @@ equipment_modules = {
 
 	aircraft_cannon_2_2x = {
 		abbreviation = "ac32"
-		category = fighter_weapon
+		category = fighter_weapon_heavy
 		sfx = sfx_ui_sd_module_turret
 		parent = aircraft_cannon_1_2x
 		add_equipment_type = { fighter heavy_fighter }
@@ -865,7 +865,7 @@ equipment_modules = {
 
 	large_aircraft_cannon_1x = {
 		abbreviation = "ac21"
-		category = fighter_weapon
+		category = fighter_weapon_light
 		sfx = sfx_ui_sd_module_turret
 		parent = aircraft_cannon_1_1x
 		add_equipment_type = { fighter heavy_fighter }
@@ -884,7 +884,7 @@ equipment_modules = {
 
 	large_aircraft_cannon_2x = {
 		abbreviation = "ac22"
-		category = fighter_weapon
+		category = fighter_weapon_heavy
 		sfx = sfx_ui_sd_module_turret
 		parent = aircraft_cannon_1_2x
 		add_equipment_type = { fighter heavy_fighter }
