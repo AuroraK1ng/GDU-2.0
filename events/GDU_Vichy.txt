@@ -488,96 +488,10 @@ country_event = {
 				}
 			EFR = { transfer_state = 20 transfer_state = 33 transfer_state = 25 transfer_state = 31 transfer_state = 22 }
 				FRA = {
-
 					add_state_core = 539
-
 					transfer_state = 539
-
-					
-
 					add_ideas = FRA_FREE_army
 					set_cosmetic_tag = FRA_FREE
-
-					create_corps_commander = {
-						name = "Charles De Gaulle"
-						picture = "Portrait_France_Charles_De_Gaulle.dds"
-						traits = { career_officer trickster infantry_leader cavalry_officer panzer_leader skilled_staffer old_guard trait_cautious brilliant_strategist }
-						skill = 6
-						attack_skill = 7
-						defense_skill = 4
-						planning_skill = 5
-						logistics_skill = 4
-					}
-					create_corps_commander = {
-						name = "Charles De Gaulle AFRICANUS"
-						picture = "AFRICA_Portrait_France_Charles_De_Gaulle.dds"
-						traits = { desert_fox career_officer trickster infantry_leader urban_assault_specialist cavalry_officer panzer_leader  skilled_staffer old_guard trait_cautious brilliant_strategist }
-						skill = 6
-						attack_skill = 8
-						defense_skill = 4
-						planning_skill = 5
-						logistics_skill = 4
-					}					
-					create_field_marshal = {
-						name = "Philippe Leclerc"
-						picture = "portrait_france_philippe_leclerc.dds"
-						traits = { armor_officer trait_reckless career_officer politically_connected panzer_leader skilled_staffer organizer exiled_leader }
-						skill = 5
-						attack_skill = 3
-						defense_skill = 5
-						planning_skill = 3
-						logistics_skill = 5
-					}
-					create_corps_commander = {
-						name = "Marie-Pierre Koenig"
-						picture = "Portrait_France_Marie_Pierre_Koenig.dds"
-						traits = { trickster trait_mountaineer infantry_leader naval_invader infantry_officer career_officer harsh_leader exiled_leader hill_fighter}
-						skill = 5
-						attack_skill = 7
-						defense_skill = 5
-						planning_skill = 5
-						logistics_skill = 5
-					}
-					create_corps_commander = {
-						name = "Marie-Pierre Koenig AFRICANUS"
-						picture = "AFRICA_Portrait_France_Marie_Pierre_Koenig.dds"
-						traits = { trickster trait_mountaineer desert_fox naval_invader infantry_leader infantry_officer career_officer harsh_leader exiled_leader }
-						skill = 5
-						attack_skill = 8
-						defense_skill = 5
-						planning_skill = 5
-						logistics_skill = 5
-					}					
-					create_corps_commander = {
-						name = "Edgard de Larminat"
-						picture = "Portrait_France_Generic_land_4.dds"
-						traits = { career_officer trickster infantry_leader cavalry_officer panzer_leader skilled_staffer old_guard trait_cautious brilliant_strategist }
-						skill = 6
-						attack_skill = 7
-						defense_skill = 4
-						planning_skill = 5
-						logistics_skill = 4
-					}
-					create_corps_commander = {
-						name = "Edgard de Larminat AFRICANUS"
-						picture = "AFRICA_Portrait_France_Generic_land_4.dds"
-						traits = { desert_fox war_hero politically_connected trait_reckless panzer_leader armor_officer exiled_leader trait_engineer }
-						skill = 4
-						attack_skill = 6
-						defense_skill = 4
-						planning_skill = 1
-						logistics_skill = 4
-					}					
-					create_navy_leader = {
-						name = "Émile Muselier"
-						picture = "Portrait_France_Emile_Muselier.dds"
-						traits = { seawolf fleet_protector blockade_runner spotter }
-						skill = 5
-						attack_skill = 5
-						defense_skill = 5
-						maneuvering_skill = 3
-						coordination_skill = 3
-					}
 					set_country_flag = free_france
 					set_cosmetic_tag = FRA_FREE
 					set_capital = { state  = 539}
@@ -590,7 +504,6 @@ country_event = {
 					transfer_state = 768
 					transfer_state = 769
 					load_focus_tree = freefrench_focus
-
 				}
 
 				if = {
