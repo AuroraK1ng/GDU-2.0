@@ -540,19 +540,7 @@ generic_medium_tank_organization = {
 		}
 		
 		equipment_bonus = {
-			reliability = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_power_traverse
-		name = generic_mio_trait_power_traverse
-		icon = GFX_generic_mio_trait_icon_production_capacity
-
-		position = { x=1 y=0 }
-		
-		equipment_bonus = {
-			reliability = 0.05
+			reliability = 0.1
 		}
 	}
 
@@ -561,10 +549,7 @@ generic_medium_tank_organization = {
 		name = generic_mio_trait_all_round_cupola
 		icon = GFX_generic_mio_trait_icon_defense
 
-		position = { x=0 y=1 }
-		relative_position_id = generic_mio_trait_power_traverse
-
-		all_parents = { generic_mio_trait_power_traverse }
+		position = { x=1 y=0 }
 		
 		equipment_bonus = {
 			defense = 0.05
@@ -637,7 +622,7 @@ generic_medium_tank_organization = {
 		icon = GFX_generic_mio_trait_icon_armor_value
 
 		position = { x=4 y=0 }
-		relative_position_id = generic_mio_trait_power_traverse
+		relative_position_id = generic_mio_trait_all_round_cupola
 		
 		equipment_bonus = {
 			armor_value = 0.05

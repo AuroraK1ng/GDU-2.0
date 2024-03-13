@@ -184,7 +184,9 @@ ideas = {
 			visible = { OR = { has_tech = mobile_warfare tag = DEN }  }
 			ledger = army
 			modifier = {
-				army_armor_speed_factor = 0.025
+				motorized_attack_factor = 0.03
+				mechanized_attack_factor = 0.03
+				supply_consumption_factor = -0.05
 			}
 			cost = 50
 		}
