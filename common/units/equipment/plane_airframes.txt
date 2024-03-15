@@ -413,7 +413,6 @@ equipments = {
 		air_range = 1750
 		air_defence = 14.0
 		air_agility = 25
-		air_attack = -100
 		thrust = 20
 		maximum_speed = 200
 		##weight = 4
@@ -443,7 +442,6 @@ equipments = {
 				allowed_module_categories = {
 					recon_camera
 					fighter_weapon_light
-					fighter_weapon_heavy
 					cas_weapon
 					nav_bomber_weapon
 					mine_warfare_offense
@@ -872,7 +870,6 @@ equipments = {
 		air_range = 1750
 		air_defence = 13.0
 		air_agility = 15
-		air_attack = -100
 		thrust = 20
 		maximum_speed = 200
 		##weight = 4
@@ -891,6 +888,17 @@ equipments = {
 				allowed_module_categories = {
 					fighter_weapon_light
 					fighter_weapon_heavy
+					cas_weapon
+					nav_bomber_weapon
+					kamikaze_bomber_weapon
+				}
+			}
+			
+			fixed_auxiliary_weapon_slot_1 = { 
+				required = no
+				allowed_module_categories = {
+					recon_camera
+					fighter_weapon_light
 					cas_weapon
 					nav_bomber_weapon
 					kamikaze_bomber_weapon
@@ -1410,7 +1418,7 @@ equipments = {
 				required = no
 				allowed_module_categories = {
 					tac_weapon
-					fighter_weapon_heavy
+					fighter_weapon_light
 				}
 			}
 			fixed_auxiliary_weapon_slot_2 = { 
