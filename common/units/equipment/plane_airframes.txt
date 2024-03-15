@@ -414,6 +414,7 @@ equipments = {
 		air_defence = 14.0
 		air_agility = 25
 		air_attack = -100
+		thrust = 20
 		maximum_speed = 200
 		##weight = 4
 		naval_strike_attack = -1
@@ -421,9 +422,9 @@ equipments = {
 		build_cost_ic = 58
 		fuel_consumption = 0.26
 		resources = {
-			aluminium = 2
+			aluminium = 3
 			rubber = 1
-			tungsten = 3
+			tungsten = 2
 		}
 		module_slots = {
 			fixed_main_weapon_slot = {
@@ -472,6 +473,17 @@ equipments = {
 				}
 			}
 			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_small
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret
+				}
+			}
+			special_type_slot_3 = {
 				required = no
 				allowed_module_categories = {
 					plane_special_module_small
@@ -861,6 +873,7 @@ equipments = {
 		air_defence = 13.0
 		air_agility = 15
 		air_attack = -100
+		thrust = 20
 		maximum_speed = 200
 		##weight = 4
 		naval_strike_attack = -1
@@ -868,9 +881,9 @@ equipments = {
 		build_cost_ic = 63
 		fuel_consumption = 0.26
 		resources = {
-			aluminium = 2
+			aluminium = 3
 			rubber = 1
-			tungsten = 3
+			tungsten = 2
 		}
 		module_slots = {
 			fixed_main_weapon_slot = {
@@ -894,6 +907,18 @@ equipments = {
 			}
 
 			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_small
+					plane_special_module_defense_turret
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+				}
+			}
+			
+			special_type_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					plane_special_module_small
@@ -1363,6 +1388,7 @@ equipments = {
 		maximum_speed = 0
 		air_agility = 20
 		air_defence = 11
+		thrust = 30
 		##weight = 16
 		naval_strike_attack = 1
 		naval_strike_targetting = -5
@@ -1381,6 +1407,13 @@ equipments = {
 				}
 			}
 			fixed_auxiliary_weapon_slot_1 = { 
+				required = no
+				allowed_module_categories = {
+					tac_weapon
+					fighter_weapon_heavy
+				}
+			}
+			fixed_auxiliary_weapon_slot_2 = { 
 				required = no
 				allowed_module_categories = {
 					tac_weapon
