@@ -1,5 +1,35 @@
 political_actions = {
 
+	Civilian_Investment_Ongoing = {
+		icon = GFX_decision_generic_construction	
+		visible = {	has_active_mission = Civilian_Investment_Ongoing }	
+		available = { 
+			OR = {
+				NOT = { country_exists = GER } 
+				NOT = { country_exists = SOV } 
+			}
+		}
+		days_mission_timeout = 180
+		activation = {	has_country_flag = Civilian_Investment } 
+		fire_only_once = no
+		is_good = yes		
+	}
+	
+	Military_Investment_Ongoing = {
+		icon = GFX_decision_generic_construction	
+		visible = {	has_active_mission = Military_Investment_Ongoing }	
+		available = { 
+			OR = {
+				NOT = { country_exists = GER } 
+				NOT = { country_exists = SOV } 
+			}
+		}
+		days_mission_timeout = 180
+		activation = { has_country_flag = Military_Investment } 
+		fire_only_once = no
+		is_good = yes		
+	}
+
 	invest_in_civ_industries = { 
     icon = GFX_decision_generic_construction
 		allowed = {
@@ -28,6 +58,7 @@ political_actions = {
 		cost = 100 
 		complete_effect = {
 			add_offsite_building= { type = industrial_complex level = 1 }
+			set_country_flag = { flag = Civilian_Investment value = 1 days = 180 }
 		}
 	}
 	
@@ -53,6 +84,7 @@ political_actions = {
 		cost = 200 
 		complete_effect = {
 			add_offsite_building= { type = industrial_complex level = 3 }
+			set_country_flag = { flag = Civilian_Investment value = 1 days = 180 }
 		}
 	}
 	
@@ -82,6 +114,7 @@ political_actions = {
 		cost = 100 
 		complete_effect = {
 			add_offsite_building= { type = arms_factory level = 1 }
+			set_country_flag = { flag = Military_Investment value = 1 days = 180 }
 		}
 	}
 	
@@ -105,6 +138,7 @@ political_actions = {
 		cost = 200 
 		complete_effect = {
 			add_offsite_building= { type = arms_factory level = 3 }
+			set_country_flag = { flag = Military_Investment value = 1 days = 180 }
 		}
 	}
 
