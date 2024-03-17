@@ -803,3 +803,25 @@ country_event = {
 			load_oob = "SOV_Rear"
 		}	
 	}
+	
+	country_event = {
+		id = soviet.67
+		hidden = yes
+
+		is_triggered_only = yes
+		immediate = {
+		195 = { 
+			remove_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		742 = { 
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		}	
+	}
