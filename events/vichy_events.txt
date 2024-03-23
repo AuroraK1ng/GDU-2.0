@@ -88,9 +88,6 @@ country_event = {
 				instant_build = yes
 			}			
 		}
-		IF =  { limit = {has_start_date > 1936.1.1.12 } 
-			ENG = { country_event = { id = vichy.6 days = 3 } }
-		}
 	}
 }
 
@@ -143,27 +140,5 @@ country_event = {
 		}		
 
 		}
-}
-
-country_event = {
-	id = vichy.6
-	title = vichy.6.t
-	desc = vichy.6.desc
-	picture = GFX_report_event_vichy_neutrality
-	is_triggered_only = yes
-
-	hidden = yes
-	
-	option = {
-		name = vichy.6.a
-		if = { 
-			limit = { 461 = { is_controlled_by = USA } } 
-			ENG = { transfer_state = 461 }					
-		}		
-		if = { 
-			limit = { 462 = { is_controlled_by = USA } } 
-			ENG = { transfer_state = 462 }					
-		}
-	}
 }
 

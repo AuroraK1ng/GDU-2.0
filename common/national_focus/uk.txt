@@ -197,20 +197,6 @@ focus_tree = {
 				NOT = { has_government = democratic }
 				num_of_factories > 30
 			}
-			NOt = {
-				has_war_with = USA
-			}
-			USA = {
-				has_government = ROOT
-				has_war = no
-				NOT = {
-					OR = {
-						has_idea = undisturbed_isolation
-						has_idea = isolation
-					}
-				}
-			}
-
 		}
 		prerequisite = { focus = crypto_bomb_focus }
 		icon = GFX_ENG_tizard
@@ -229,7 +215,7 @@ focus_tree = {
 	}
 	focus = {
 		id = maud_focus
-		available = { is_in_faction_with = USA }
+		#available = { is_in_faction_with = USA }
 		prerequisite = { focus = tizard_mission_focus }
 		icon = GFX_focus_wonderweapons
 		x = 0
@@ -246,7 +232,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = maud_focus
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				category = nuclear
 			}
 			
