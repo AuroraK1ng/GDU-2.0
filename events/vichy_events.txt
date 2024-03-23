@@ -26,7 +26,18 @@ country_event = {
 	option = { # stay neutral & prepare to our defenses
 		name = vichy.2.a
 		ai_chance = { factor = 100 }
-		USA = { country_event = { id = vichy.3 } }
+		IF =  { 
+			limit = { 
+				NOT = {has_start_date > 1936.1.1.12 }
+			}
+			USA = { country_event = { id = vichy.3 } }
+		}
+		else_if = {
+			limit = { 
+				has_start_date > 1936.1.1.12 
+			}
+			ENG = { country_event = { id = vichy.6 } }
+		}
 		news_event = { hours = 6 id = pfu.30 }
 	}	
 }
@@ -138,7 +149,65 @@ country_event = {
 				give_resource_rights = { receiver = ITA state = 20 }
 			}				
 		}		
+	}
+}
 
+country_event = {
+	id = vichy.6
+	title = vichy.6.t
+	desc = vichy.6.desc
+	picture = GFX_report_event_vichy_neutrality
+	is_triggered_only = yes
+	
+	# Prepare for Torch
+	option = {
+		name = vichy.6.a
+		every_country = { 
+			limit = { 
+				is_in_faction_with = ENG  
+			}
+			declare_war_on = { 
+				target = EFR
+				type = annex_everything
+			}
+			if = { 
+				limit = { 461 = { is_controlled_by = EFR } } 
+				ENG = { transfer_state = 461 }					
+			}
+			if = { 
+				limit = { 462 = { is_controlled_by = EFR } } 
+				ENG = { transfer_state = 462 }					
+			}
+			if = { 
+				limit = { 460 = { is_controlled_by = EFR } } 
+				ITA = { transfer_state = 460 }					
+			}
+			if = { 
+				limit = { 459 = { is_controlled_by = EFR } } 
+				ITA = { transfer_state = 459 }					
+			}
+			if = { 
+				limit = { 513 = { is_controlled_by = EFR } } 
+				ITA = { transfer_state = 513 }					
+			}					
+			GER = { 
+				country_event = { id = vichy.5 } 
+			}
 		}
+		461 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}			
+		}
+		462 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}			
+		}
+	}
 }
 
