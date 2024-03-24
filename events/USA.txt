@@ -836,3 +836,24 @@ country_event = {
 		complete_national_focus = Nimitz
 	}
 }
+country_event = {
+	id = usa.67
+	hidden = yes
+
+	is_triggered_only = yes
+	immediate = {
+		372 = { 
+			remove_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		373 = { 
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
