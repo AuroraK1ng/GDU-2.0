@@ -2161,15 +2161,15 @@ foreign_politics = {
 
 		available = {
 			PER = { exists = yes }
-				NOT = {
-					447 = { is_fully_controlled_by = ENG }
-				}
-				NOT = {
-					454 = { is_fully_controlled_by = ENG }
-				}
 				IF = {
   					limit = { NOT = { has_start_date > 1936.1.1.12 } }
-   					 date > 1940.6.1
+   					date > 1940.6.1
+					NOT = {
+						447 = { is_fully_controlled_by = ENG }
+					}
+					NOT = {
+						454 = { is_fully_controlled_by = ENG }
+					}
 				}
 				else_if = {
     				limit = {
