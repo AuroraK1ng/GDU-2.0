@@ -287,8 +287,11 @@ ideas = {
 		}
 		tot_economic_mobilisation = {
 			available = {
-				NOT = {
-					tag = GER
+				OR = {
+					NOT = {
+						tag = GER
+					}
+					date > 1942.10.1
 				}
 				has_war = yes
 				threat > 0.2
