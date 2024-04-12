@@ -187,9 +187,21 @@ country_event = {
 				ITA = { transfer_state = 459 }					
 			}
 			if = { 
+				limit = { 458 = { is_controlled_by = EFR } } 
+				ITA = { transfer_state = 458 }					
+			}
+			if = { 
+				limit = { 805 = { is_controlled_by = EFR } } 
+				ITA = { transfer_state = 805 }					
+			}				
+			if = { 
+				limit = { 665 = { is_controlled_by = EFR } } 
+				ITA = { transfer_state = 665 }					
+			}				
+			if = { 
 				limit = { 513 = { is_controlled_by = EFR } } 
 				ITA = { transfer_state = 513 }					
-			}					
+			}									
 			GER = { 
 				country_event = { id = vichy.5 } 
 			}
