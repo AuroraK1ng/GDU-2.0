@@ -526,8 +526,8 @@ adjacency_rule ={
 		trade = yes
 	}
 	enemy ={
-		army = no
-		navy = no
+		army = yes
+		navy = yes
 		submarine = yes
 		trade = yes
 	}
@@ -547,12 +547,23 @@ adjacency_rule ={
 	required_provinces = { 2576 7059 5490 }
 	
 	is_disabled = {
-		AND = {
-			tag = USA
-			NOT = {
-				OR = {
-					458 ={ NOT = { CONTROLLER = { original_tag = ITA}}}
-					447 ={ NOT = { CONTROLLER = { original_tag = ITA}}}
+		OR = {
+			AND = {
+				tag = USA
+				NOT = {
+					OR = {
+						458 ={ NOT = { CONTROLLER = { original_tag = ITA}}}
+						447 ={ NOT = { CONTROLLER = { original_tag = ITA}}}
+					}
+				}
+			}
+			AND = {
+				tag = ENG
+				NOT = {
+					OR = {
+						458 ={ NOT = { CONTROLLER = { original_tag = ITA}}}
+						447 ={ NOT = { CONTROLLER = { original_tag = ITA}}}
+					}
 				}
 			}
 		}
@@ -573,8 +584,8 @@ adjacency_rule ={
 		trade = yes
 	}
 	enemy ={
-		army = no
-		navy = no
+		army = yes
+		navy = yes
 		submarine = yes
 		trade = yes
 	}
@@ -594,12 +605,23 @@ adjacency_rule ={
 	required_provinces = { 4159 5562 }
 	
 	is_disabled = {
-		AND = {
-			tag = USA
-			NOT = {
-				OR = {
-					458 ={ NOT = { CONTROLLER = { original_tag = ITA}}}
-					447 ={ NOT = { CONTROLLER = { original_tag = ITA}}}
+		OR = {
+			AND = {
+				tag = USA
+				NOT = {
+					OR = {
+						458 ={ NOT = { CONTROLLER = { original_tag = ITA}}}
+						447 ={ NOT = { CONTROLLER = { original_tag = ITA}}}
+					}
+				}
+			}
+			AND = {
+				tag = ENG
+				NOT = {
+					OR = {
+						458 ={ NOT = { CONTROLLER = { original_tag = ITA}}}
+						447 ={ NOT = { CONTROLLER = { original_tag = ITA}}}
+					}
 				}
 			}
 		}
