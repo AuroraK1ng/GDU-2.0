@@ -16,7 +16,6 @@ focus_tree = {
 	
 	focus = {
 		id = ITA_march_rome
-		text = "The March on Rome"
 		icon = GFX_ITA_Duce_scream
 		x = 9
 		y = 0
@@ -617,7 +616,6 @@ focus_tree = {
 	focus = {
 		id = ITA_Defense_Africa
 		icon = GFX_ITA_Defence_of_Africa
-		text = "Defense of Africa"
 		prerequisite = { focus = ITA_consolidate_egypt focus = ITA_consolidate_levant }
 		relative_position_id = ITA_victoryinETH
 		x = -1
@@ -652,7 +650,6 @@ focus_tree = {
 	focus = {
 		id = ITA_Defense_Africa_2
 		icon = GFX_ITA_Rommel
-		text = "Cairo Counter-Offensive"
 		prerequisite = { focus = ITA_consolidate_levant focus = ITA_consolidate_egypt }
 		relative_position_id = ITA_victoryinETH
 		x = 1
@@ -686,7 +683,6 @@ focus_tree = {
 	focus = {
 		id = ITA_Defense_Africa_3
 		icon = GFX_ITA_panzerIV
-		text = "The Roman Empire"
 		prerequisite = { focus = ITA_Defense_Africa }
 		prerequisite = { focus = ITA_Defense_Africa_2 }
 		relative_position_id = ITA_victoryinETH
@@ -1240,7 +1236,6 @@ focus_tree = {
 	focus = {
 		id = ITA_Africa_Lesson
 		icon = GFX_Italian_Shield
-		text = "Lessons of Tobruk"
 		prerequisite = { focus = ITA_victoryinETH }
 		relative_position_id = ITA_victoryinETH
 		x = 2
@@ -1428,7 +1423,6 @@ focus_tree = {
 	
 	focus = {
 		id = ITA_Invest_Docks
-		Text = "Shipyard Expansion"
 		icon = GFX_ITA_Shipyard
 		prerequisite = { focus = ITA_mare_nostrum }
 		relative_position_id = ITA_mare_nostrum
@@ -1449,7 +1443,6 @@ focus_tree = {
 	
 	focus = {
 		id = ITA_Build_Docks
-		Text = "Build New Dockyards"
 		icon = GFX_ITA_New_dockyards
 		prerequisite = { focus = ITA_mare_nostrum }
 		relative_position_id = ITA_mare_nostrum
@@ -1520,7 +1513,6 @@ focus_tree = {
 	
 	focus = {
 		id = ITA_join_ita_navy
-		text = "Appeal to Join Italian Navy"
 		icon = GFX_ITA_New_dockyards
 		prerequisite = { focus = ITA_mare_nostrum }
 		relative_position_id = ITA_mare_nostrum
@@ -1755,7 +1747,6 @@ focus_tree = {
 	focus = {
 		id = ITA_Mediterranean
 		icon = GFX_ITA_Dominance
-       text = "Dominance in the Mediterranean"
 		prerequisite = { focus = ITA_atlantic_fleet }
 		relative_position_id = ITA_mare_nostrum
 		x = -1
@@ -1998,7 +1989,7 @@ focus_tree = {
 	focus = {
 		id = ITA_bomber_effort
 		icon = GFX_goal_ita_savoia_marchetti_sm_79
-		#prerequisite = { focus = ITA_army_primacy }
+		#prerequisite = { focus = ITA_army_primacy } 
 		prerequisite = { focus = ITA_air_innovation }
 		relative_position_id = ITA_march_rome
 		x = 8
@@ -2059,7 +2050,7 @@ focus_tree = {
 	focus = {
 		id = ITA_air_innovation_2
 		icon = GFX_italy_fiat_g_50
-		text = air_innovation_2
+		text = air_innovation_2 
 		prerequisite = { focus = ITA_bomber_effort focus = ITA_naval_air_effort }
 		relative_position_id = ITA_march_rome
 		x = 9
@@ -2224,7 +2215,6 @@ focus_tree = {
 	focus = {
 		id = ITA_Blackshirts
     	icon = GFX_baionette
-		text = "Blackshirts"
 		prerequisite = { focus = ITA_albania_war_goal }
 		relative_position_id = ITA_albania_war_goal
 		x = -1
@@ -2243,7 +2233,6 @@ focus_tree = {
 	focus = {
 		id = ITA_Mass_Production
 		icon = GFX_JAP_mil_ind
-		text = "Mass Produced Equipment"
 		prerequisite = { focus = ITA_Blackshirts  }
 		prerequisite = { focus = ITA_modernized_army }
 		relative_position_id = ITA_Blackshirts
@@ -2290,7 +2279,6 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_Outreach_to_the_younger_generation
-		text = "Outreach to the Youths"
 		icon = GFX_Italian_Soldiers
 		prerequisite = { focus = ITA_albania_war_goal }
 		relative_position_id = ITA_march_rome
@@ -2336,7 +2324,6 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_africa_corps
-		text = "Africa Corps Improvement"
 		icon = GFX_ITA_panzerIV
 		prerequisite = { focus = ITA_victoryinETH }
 		relative_position_id = ITA_victoryinETH
@@ -2378,8 +2365,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ITA_africa_corps_to
-		text = "Italian-German Corps"
+		id = ITA_africa_corps_to 
 		icon = GFX_focus_ITA_africa_corp
 		prerequisite = { focus = ITA_imc_improve }
 		relative_position_id = ITA_victoryinETH
@@ -2411,7 +2397,6 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_imc_improve
-		text = "Italian Marine Corps Improvement"
 		icon = GFX_focus_ITA_stato_maggiore_italiano
 		prerequisite = { focus = ITA_special_forces }
 		prerequisite = { focus = ITA_pact_of_steel }
@@ -2537,7 +2522,6 @@ focus_tree = {
 	focus = {
 		id = ITA_german_navy_cooperation
 		icon = GFX_ITA_Ger_navy_cooperation
-		Text = "German Navy Cooperation"
 		prerequisite = { focus = ITA_german_millitary_cooperation }
         prerequisite = { focus = ITA_german_rd_treaty }
 		available = {
@@ -2615,7 +2599,6 @@ focus_tree = {
 	focus = {
 		id = ITA_Ger_coop
 		icon = GFX_goal_generic_scientific_exchange
-		text = "Expanded Military Cooperation"
 		prerequisite = { focus = ITA_german_millitary_cooperation  }
 		relative_position_id = ITA_march_rome
 		x = -2

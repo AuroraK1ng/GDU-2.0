@@ -13,7 +13,7 @@ focus_tree = {
 	default = no
 
 	focus = {
-		id = GER_rhineland
+		id = GER_rhineland    
 		icon = GFX_rhineland1a
 		x = 10
 		y = 0
@@ -974,7 +974,6 @@ activate_mission = GER_relocate_industry_from_friesland
 
 	focus = {
 		id = Victory_in_France 
-		text = "Victory in France"
 		icon = GFX_goal_strike_france
 		prerequisite = { focus = GER_german_war_economy }
 		x = 1
@@ -1297,7 +1296,6 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_Axis_power
-		Text = "Axis Power"
 		icon = GFX_European_Axis
 		prerequisite = { focus = GER_army_innovation_2 }
 		x = 0
@@ -1327,7 +1325,6 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_Luftwaffe
-		Text = "Goering's plan"
 		icon = GFX_goal_luftwaffe
 		prerequisite = { focus = GER_Axis_power }
 		x = 2
@@ -1361,7 +1358,6 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_war_in_the_east
-		Text = "War in the East"
 		icon = GFX_focus_ger_bulwark_against_bolshevism
 		prerequisite = { focus = GER_Axis_power }
 		x = 0
@@ -1381,7 +1377,6 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_Reequip_Opel_Blitz
-		Text = "Mobile Infantry"
 		icon = GFX_Generic_German_Soldiers2
 		prerequisite = { focus = GER_battle_russia  focus = GER_battle_russia2 }
 		x = 0
@@ -1662,7 +1657,6 @@ activate_mission = GER_relocate_industry_from_friesland
 	
 	focus = {
 		id = GER_Reequip_Panzers
-		Text = "Mass Panther Production"
 		icon = GFX_ger_goal_heavy_tank
 		prerequisite = { focus = GER_Reequip_Opel_Blitz focus = GER_Reequip_Luftwaffe focus = GER_ostarbeiter }
 		x = 1
@@ -1808,7 +1802,6 @@ activate_mission = GER_relocate_industry_from_friesland
 	
 	focus = {
 		id = GER_Reequip_Luftwaffe
-		Text = "Improvement of the Luftwaffe"
 		icon = GFX_goal_luftwaffe
 		prerequisite = { focus = GER_Luftwaffe }
 		x = 0
@@ -2552,7 +2545,6 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_Give_Hitler_a_Chance
-		text = "Support the Furher's Plan!"
 		icon = GFX_GER_hitlers_meddling
 		prerequisite = { focus = GER_Prepare_Endsieg  }
 		x = -1
@@ -2576,7 +2568,7 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_festungwesteneuropa
-		text = "Festung Westen Europa"
+	
 		icon = GFX_GER_festung_europa
 		prerequisite = { focus = GER_Give_Hitler_a_Chance }
 		x = -2
@@ -2690,7 +2682,7 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_festungosteuropa
-		text = "Festung Ost Europa"
+
 		icon = GFX_GER_festung_europa
 		prerequisite = { focus = GER_Give_Himmler_a_Chance  }
 		x = 2
@@ -2848,7 +2840,6 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_attack
-		text = "Counter Attack!"
 		icon = GFX_focus_SWE_attack_landsorganisationen
 		prerequisite = { focus = GER_festungosteuropa   }
 		x = 2
@@ -2870,7 +2861,6 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_defense
-		text = "Focus on Defense"
 		icon = GFX_focus_SOV_the_defense_of_moscow
 		prerequisite = { focus = GER_festungwesteneuropa  }
 		x = -2
@@ -2892,7 +2882,6 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_reorganizecivilianindustries
-		Text = "Reorganise Civilian Industry"
 		icon = GFX_focus_POL_warsaw_main_station
 		prerequisite = { focus = GER_Give_Himmler_a_Chance focus = GER_Give_Hitler_a_Chance }
 		x = 1
@@ -2964,7 +2953,6 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_appointottoskorzeny
-		Text = "Appoint Otto Skorzeny"
 		icon = GFX_focus_generic_armored_air_support 
 		prerequisite = { focus = GER_festungosteuropa }
 		x = 0
@@ -2981,7 +2969,7 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_festungberlin
-		Text = "Defend Berlin!"
+
 		icon = GFX_focus_SWE_hedgehog_defense
 		prerequisite = { focus = GER_Summon_Steiner }
 		x = -2
@@ -2994,7 +2982,6 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_festungdesdeutschenvaterland
-		text = "Last Stand..."
 		icon = GFX_focus_FIN_coastal_defense
 	
 		prerequisite = { focus = GER_Summon_Steiner }
@@ -3011,7 +2998,6 @@ activate_mission = GER_relocate_industry_from_friesland
 	} 
 	focus = {
 		id = GER_ss_focus
-		Text = "Further SS Recruitment"
 		icon = GFX_GER_Panzergrenadiers
 	
 		relative_position_id = GER_festungwesteneuropa
@@ -3031,7 +3017,6 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_ardennesoffensive
-		Text = "Ardennes Offensive"
 		icon = GFX_focus_hol_prepare_the_inundation_lines
 		prerequisite = { focus = GER_ss_focus }
 		x = 0
@@ -3057,7 +3042,6 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_jaegerpogramm
-		Text = "Fund Jaegerprogramm"
 		icon = GFX_focus_generic_multi_role_aircraft
 		x = 0
 		y = 1
@@ -3074,7 +3058,6 @@ activate_mission = GER_relocate_industry_from_friesland
 	}
 	focus = {
 		id = GER_steinercounteroffensive
-		text = "Steiner's Offensive!"
 		icon = GFX_focus_FIN_salvaged_and_retooled
 		prerequisite = { focus = GER_Trust_Steiner focus = GER_festungberlin focus = GER_festungdesdeutschenvaterland }
 		x = 0

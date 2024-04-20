@@ -367,7 +367,6 @@
 	focus = {
 		id = ROM_local_industries
 		icon = GFX_ROM_industrial4
-		text = "Support Local Industry"
 		prerequisite = { focus = ROM_civil_works focus = ROM_national_defense_industry }
 		x = 0
 		y = 1
@@ -467,7 +466,6 @@
 	}
 	focus = {
 		id = ROM_extract_steel
-		text = "New Railway "
 		icon = GFX_romania_infra
 		prerequisite = { focus = ROM_danubian_transport_network }
 		x = -2
@@ -511,7 +509,6 @@
 	}
 	focus = {
 		id = ROM_extract_aluminium
-		text = "Development of Aluminium Deposits"
 		icon = GFX_romania_infra
 		prerequisite = { focus = ROM_danubian_transport_network }
 		x = 2
@@ -1311,7 +1308,6 @@
 
 	focus = {
 		id = ROM_cas
-		text = "Romanian CAS"
 		icon = GFX_goal_generic_CAS
 		prerequisite = { focus = ROM_strategic_bomber_force }
 		x = 2
@@ -1399,7 +1395,6 @@
 	}
 	focus = {
 		id = ROM_air_ind_1
-		text = "Air Industry"
 		icon = GFX_ROM_industrial3
 		prerequisite = { focus = ROM_iar_80 }
 		prerequisite = { focus = ROM_cas }
@@ -1483,7 +1478,6 @@
 
 	focus = {
 		id = ROM_heavy_bombers
-		text = "Heavy Bombers Factories"
 		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = ROM_iar_80 }
 		prerequisite = { focus = ROM_cas }
@@ -1827,7 +1821,6 @@
 	focus = {
 		id = ROM_ITA_Weapons
 		icon = GFX_focus_ITA_stato_maggiore_italiano
-		text = "Purchase of Italian Weapons"
 		x = -2
 		y = 1
 		prerequisite = { focus = ROM_royal_guards_divisions }
@@ -1868,7 +1861,6 @@
 	focus = {
 		id = ROM_New_Weapons
 		icon = GFX_ROM_army
-		Text = "Weapons Improvements"
 		x = 2
 		y = 1
 		prerequisite = { focus = ROM_ITA_Weapons }
@@ -1900,7 +1892,6 @@
 	focus = {
 		id = ROM_Gen_Rearmament
 		icon = GFX_ROM_industrial3
-		text = "Rearmament of the army"
 		x = 0
 		y = 1
 		prerequisite = { focus = ROM_ITA_Weapons }
@@ -1935,7 +1926,6 @@
 	focus = {
 		id = ROM_Wargames
 		icon = GFX_ROM_axis
-		text = "Axis Wargames"
 		x = 0
 		y = 1
 		prerequisite = { focus = ROM_royal_guards_divisions }
@@ -1965,7 +1955,6 @@
 	focus = {
 		id = ROM_Military_Industry
 		icon = GFX_ROM_industrial4
-		text = "Military Industry"
 		x = 1
 		y = 1
 		prerequisite = { focus = ROM_Gen_Rearmament }
@@ -2272,7 +2261,6 @@
 
 	focus = {
 		id = ROM_modern_destroyers
-		Text = "Purchase of Italian Destroyers"
 		icon = GFX_ITA_Corpo_dei_marine
 		prerequisite = { focus = ROM_coastal_defense_navy  }
 		prerequisite = {  focus = ROM_black_sea_dominance }
@@ -2521,7 +2509,6 @@
 	}
 	focus = {
 		id = ROM_naval_effort2
-		text = "Expand Dockyard Facilities"
 		icon = GFX_goal_ger_bb
 		relative_position_id = ROM_capital_ships
 		prerequisite = { focus = ROM_capital_ships }
@@ -2551,7 +2538,6 @@
 	#NEW FOC:
 	focus = {
 		id = ROM_Total_Krieg
-		text = "Totalen Krieg"
 		icon = GFX_GER_total_war
 		x = 1
 		y = 2
@@ -2586,7 +2572,6 @@
 	}
 	focus = {
 		id = ROM_Mosin_Weapons
-		text = "Weapons for the East"
 		icon = GFX_ROM_weapons
 		prerequisite = { focus = ROM_Total_Krieg }
 		relative_position_id = ROM_Total_Krieg
@@ -2616,7 +2601,6 @@
 	}
 	focus = {
 		id = ROM_GRE_War
-		Text = "Lessons of Greek War"
 		icon = GFX_ROM_standing
 		prerequisite = { focus = ROM_Total_Krieg }
 		relative_position_id = ROM_Total_Krieg
@@ -2643,7 +2627,6 @@
 	}
 	focus = {
 		id = ROM_East_Revanchism
-		text = "Romanian Revanchism"
 		icon = GFX_focus_ger_bulwark_against_bolshevism
 		prerequisite = { focus = ROM_Total_Krieg }
 		relative_position_id = ROM_Total_Krieg
@@ -2728,7 +2711,6 @@
 	}
 	focus = {
 		id = ROM_Barb_War
-		Text = "War in the East"
 		icon = GFX_ROM_army
 		prerequisite = { focus = ROM_East_Revanchism }
 		x = -1
@@ -2748,7 +2730,6 @@
 	}
 	focus = {
 		id = ROM_Commi_War
-		Text = "Lessons of Barbarossa"
 		icon = GFX_ger_achtung_panzer
 		prerequisite = { focus = ROM_Ostarbeiters } 
 		prerequisite = { focus = ROM_Barb_War }
@@ -2777,7 +2758,6 @@
 	
 	focus = {
 		id = ROM_Italian_Investors
-		text = "Italian Investments"
 		icon = GFX_romania_infra
 		prerequisite = { focus = ROM_GRE_War }
 		prerequisite = { focus = ROM_Mosin_Weapons }
@@ -2818,7 +2798,6 @@
 	}
 	focus = {
 		id = ROM_Production_Fixer
-		text = "Expand Production"
 		icon = GFX_ROM_industrial3
 		prerequisite = { focus = ROM_Italian_Investors }
 		prerequisite = { focus = ROM_Autarky1 }
@@ -2850,7 +2829,6 @@
 	}
 	focus = {
 		id = ROM_Autarky1
-		text = "Own Enterprise"
 		icon = GFX_ROM_industrial2
 		prerequisite = { focus = ROM_Mosin_Weapons }
 		relative_position_id = ROM_Mosin_Weapons
@@ -2883,7 +2861,6 @@
 	}
 	focus = {
 		id = ROM_Expand_Marines_Corps
-		Text = "Marine Brigades"
 		icon = GFX_Generic_German_Soldiers2
 		prerequisite = { focus = ROM_Ostarbeiters }
 		prerequisite = { focus = ROM_Italian_Investors }
@@ -2926,7 +2903,6 @@
 	}
 	focus = {
 		id = ROM_Black_Sea_Dominance
-		Text = "Black Sea Dominance"
 		icon = GFX_battleship_ger1
 		prerequisite = { focus = ROM_Expand_Marines_Corps }
 		relative_position_id = ROM_Expand_Marines_Corps
@@ -2940,7 +2916,7 @@
 		}
 
 		bypass = {
-
+ 
 		}
 
 		cancel_if_invalid = no
@@ -2953,7 +2929,6 @@
 	}
 	focus = {
 		id = ROM_Autarky2
-		Text = "Romanian Autarky"
 		icon = GFX_focus_rom_preserve_romania
 		prerequisite = { focus = ROM_Expand_Marines_Corps }
 		relative_position_id = ROM_Expand_Marines_Corps
@@ -2989,7 +2964,6 @@
 	}
 	focus = {
 		id = ROM_Axis_Support
-		Text = "Axis Support"
 		icon = GFX_European_Axis
 		prerequisite = { focus = ROM_Expand_Marines_Corps }
 		relative_position_id = ROM_Expand_Marines_Corps
@@ -3042,7 +3016,6 @@
 	}
 	focus = {
 		id = ROM_Axis_Shadow
-		text = "In the Shadows"
 		icon = GFX_ROM_axis
 		prerequisite = { focus = ROM_Axis_Support }
 		x = 0
@@ -3084,7 +3057,6 @@
 	}
 	focus = {
 		id = ROM_Spread_Wings
-		text = "Spreading Wings"
 		icon = GFX_ROM_industrial4
 		prerequisite = { focus = ROM_Autarky2 }
 		x = 0
