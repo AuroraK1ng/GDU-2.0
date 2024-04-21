@@ -1312,11 +1312,11 @@ on_actions = {
 				array = global.medium_airbase_list
 				if = {
 					limit = {
-						air_base > 2
+						air_base > 3
 					}
-					remove_building = {
+					set_building_level = {
 						type = air_base
-						level = 1
+						level = 3
 					}
 					controller = {
 						PREV = { save_event_target_as = GDU_badairport2 }
