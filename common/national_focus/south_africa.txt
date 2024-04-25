@@ -1239,8 +1239,7 @@ focus_tree = {
 	focus = {
 		id = SAF_sa_engineer_corps
 		icon = GFX_goal_generic_allies_build_infantry
-		prerequisite = { focus = SAF_General_Staff }
-		prerequisite = { focus = SAF_new_rifle }
+		prerequisite = { focus = SAF_General_Staff focus = SAF_new_rifle }
 		x = -1
 		y = 1
 		relative_position_id = SAF_new_rifle
@@ -1999,7 +1998,7 @@ focus_tree = {
 	focus = {
 		id = SAF_desert_air_force
 		icon = GFX_goal_generic_CAS
-		prerequisite = { focus = SAF_perfect_the_cab_rank_technique }
+		prerequisite = { focus = SAF_perfect_the_cab_rank_technique focus = SAF_improve_the_hawker_hartbees }
 		x = -1
 		y = 3
 		relative_position_id = SAF_commit_to_the_five_year_plan
