@@ -832,7 +832,6 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_SF_Inf
-		text = "Special Forces Training"
 		icon = GFX_JAP_support_bat
 		prerequisite = { focus = JAP_army_expansion_law }
 		x = -1
@@ -871,7 +870,6 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_Support_Inf
-		Text = "Form Support Batallions"
 		icon = GFX_JAP_special_inf
 		prerequisite = { focus = JAP_army_expansion_law }
 		x = 1
@@ -909,7 +907,6 @@ focus_tree = {
 	focus = {
 		id = JAP_military_industry
 		icon = GFX_JAP_mil_ind
-		text = "Preparation of Military Warehouses"
 		prerequisite = { focus = JAP_Support_Inf focus = JAP_SF_Inf}
 		x = 1
 		y = 1
@@ -949,7 +946,6 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_Way_Samurai
-	    text = "Way of the Samurai"
 		icon = GFX_JAP_samurai
 		prerequisite = { focus = JAP_military_industry }
 		prerequisite = { focus = JAP_supremacy_of_will }
@@ -984,7 +980,6 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_emperor_ancestors
-	    text = "For the Emperor and the Ancestors!"
 		icon = GFX_JAP_Emperor
 		prerequisite = { focus = JAP_Way_Samurai }
 		x = 0
@@ -1090,7 +1085,6 @@ focus_tree = {
 	focus = {
 		id = JAP_modern_inf
 		icon = GFX_JAP_inf_modern
-		text = "Modern Weapons"
 		prerequisite = { focus =JAP_Support_Inf  }
 		x = 1
 		y = 1
