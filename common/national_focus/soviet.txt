@@ -2733,28 +2733,6 @@ focus_tree = {
 			custom_effect_tooltip = GDU_defense_of_moscow_tt
 			hidden_effect = {
 				create_field_marshal = {
-					name = "Georgy Zhukov"
-					id = 410
-					picture = "Portrait_Soviet_Gregory_Zhukov.dds"
-					traits = {
-						winter_specialist
-						career_officer
-						media_personality
-						brilliant_strategist
-						harsh_leader
-						politically_connected
-						organizer
-						panzer_leader
-						trait_engineer
-						ranger
-					}
-					skill = 6
-					attack_skill = 8
-					defense_skill = 5
-					planning_skill = 5
-					logistics_skill = 6
-				}
-				create_field_marshal = {
 					name = "Boris Shaposhnikov"
 					picture = "Portrait_Soviet_Boris_Shaposhnikov.dds"
 					traits = {
@@ -2775,6 +2753,28 @@ focus_tree = {
 					planning_skill = 3
 					logistics_skill = 7
 				}
+				create_field_marshal = {
+					name = "SOV_georgy_zhukov"
+					id = 410
+					picture = "Portrait_Soviet_Gregory_Zhukov.dds"
+					traits = {
+						winter_specialist
+                       			career_officer
+                        		media_personality
+                       		 	brilliant_strategist
+                       			harsh_leader
+                       		  	politically_connected
+                       			organizer
+                       		 	panzer_leader
+						trait_engineer
+						ranger
+					}
+					skill = 6
+                    		attack_skill = 8
+                    		defense_skill = 5
+                    		planning_skill = 5
+                    		logistics_skill = 6
+					}
 				create_corps_commander = {
 					name = "Ivan Konev"
 					id = 408
