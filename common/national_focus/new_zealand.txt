@@ -1895,14 +1895,14 @@ focus_tree = {
 		y = 1
 		relative_position_id = NZL_bob_semple_tank
 
-		cost = 10
+		cost = 25.8
 
 		ai_will_do = {
 			factor = 25
 		}
 
 		available = {
-
+       		date > 1942.1.1 
 		}
 
 		bypass = {
@@ -1918,12 +1918,30 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = NZL_big_bob_tank
-				bonus = 2.00 
-				uses = 1
-				technology = super_heavy_tank_chassis
-			}		
+			set_technology = { super_heavy_tank_chassis = 1 }
+			set_technology = { basic_heavy_tank_chassis = 1 }
+			set_technology = { improved_heavy_tank_chassis = 1 }
+			set_technology = { mechanised_infantry = 1 }
+			set_technology = { motorised_infantry = 1 }
+			NZL = {
+				create_equipment_variant = {
+				name = "BIG BOB" 	
+				type = super_heavy_tank_chassis_1
+					modules = {
+						main_armament_slot = tank_super_heavy_cannon
+						turret_type_slot = tank_super_heavy_four_man_tank_turret
+						special_type_slot_1 = wet_ammo_storage
+						special_type_slot_2 = wet_ammo_storage
+						special_type_slot_3 = wet_ammo_storage
+						special_type_slot_4 = wet_ammo_storage
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+					}
+				}	
+				add_equipment_to_stockpile = { type = super_heavy_tank_chassis_1 variant_name = "BIG BOB" amount = 200 producer = NZL } 
+				add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 400 producer = NZL }
+			}
 		}
 	}
 	focus = {
