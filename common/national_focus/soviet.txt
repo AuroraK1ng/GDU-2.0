@@ -37,7 +37,6 @@ focus_tree = {
 	focus = {
 		id = SOV_Church_Ban
 		icon = GFX_SOV_Stalin_purge
-		text = "Purge the Church!"
 		prerequisite = {
 			focus = SOV_stalin_constitution
 		}
@@ -62,7 +61,6 @@ focus_tree = {
 	focus = {
 		id = SOV_Gulag
 		icon = GFX_SOV_Giant
-		text = "The Gulags"
 		prerequisite = {
 			focus = SOV_Church_Ban
 		}
@@ -81,7 +79,6 @@ focus_tree = {
 	focus = {
 		id = SOV_Con_Workers
 		icon = GFX_GENERIC_SOV_Industry
-		text = "Convict Workers"
 		prerequisite = {
 			focus = SOV_Gulag
 		}
@@ -103,7 +100,6 @@ focus_tree = {
 	focus = {
 		id = SOV_Labour_Camps
 		icon = GFX_SOV_Increase_Military_Spending
-		text = "Increase Military Spending"
 		prerequisite = {
 			focus = SOV_Gulag
 		}
@@ -154,7 +150,6 @@ focus_tree = {
 	focus = {
 		id = SOV_Molotov
 		icon = GFX_SOV_Molotov
-		text = "Molotov"
 		prerequisite = {
 			focus = SOV_stalin_constitution
 		}
@@ -291,7 +286,6 @@ focus_tree = {
 	focus = {
 		id = SOV_positive_heroism
 		icon = GFX_SOV_Zhukov_research
-		text = "Army Reform"
 		prerequisite = {
 			focus = SOV_stalin_constitution
 		}
@@ -309,7 +303,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Rokossovsky
-		Text = "Rehabilitate Rokossovsky"
 		icon = GFX_SOV_Rokossovsky
 		prerequisite = {
 			focus = SOV_positive_heroism
@@ -328,7 +321,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Konev
-		Text = "Konev's Innovation"
 		icon = GFX_SOV_konev
 		prerequisite = {
 			focus = SOV_positive_heroism
@@ -358,7 +350,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Tank_Cult
-		text = "Tank Cult"
 		icon = GFX_SOV_kv1
 		prerequisite = {
 			focus = SOV_Rokossovsky
@@ -396,7 +387,6 @@ focus_tree = {
 	focus = {
 		id = SOV_Chuikov_Gun
 		icon = GFX_SOV_Chuikov
-		text = "Chuikov's Proposal"
 		prerequisite = {
 			focus = SOV_Tank_Cult
 		}
@@ -422,7 +412,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Military_Reorg
-		text = "Army Reorganization"
 		icon = GFX_SOV_solgier_Hero
 		prerequisite = {
 			focus = SOV_Rokossovsky
@@ -448,7 +437,6 @@ focus_tree = {
 	focus = {
 		id = SOV_Mass_Assault
 		icon = GFX_SOV_Zhukov_1
-		Text = "Mass Assault Doctrine"
 		prerequisite = {
 			focus = SOV_Military_Reorg
 		}
@@ -471,7 +459,6 @@ focus_tree = {
 	focus = {
 		id = SOV_New_Equipment
 		icon = GFX_SOV_equipment
-		Text = "New Equipment"
 		prerequisite = {
 			focus = SOV_Mass_Assault
 		}
@@ -498,7 +485,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_NKVD_Primacy
-		Text = "NKVD Commissars"
 		icon = GFX_Goal_NKVD_Primacy
 		prerequisite = {
 			focus = SOV_Konev
@@ -523,8 +509,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Expand_NKVD
-		text = "NKVD divisions"
-		icon = GFX_SOV_hat
+			icon = GFX_SOV_hat
 		prerequisite = {
 			focus = SOV_NKVD_Primacy
 		}
@@ -555,7 +540,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_lessons_of_war
-		text = "Lessons of War"
 		icon = GFX_SOV_Upgrade_inf
 		prerequisite = {
 			focus = SOV_Expand_NKVD 
@@ -781,7 +765,6 @@ focus_tree = {
 	}
 	focus = {
 		id = sov_new_def_dept
-		Text = "Stalin's Defense Department"
 		icon = GFX_SOV_Stalin_Note
 		prerequisite = {
 			focus = SOV_Chuikov_Gun
@@ -883,7 +866,6 @@ focus_tree = {
 	focus = {
 		id = SOV_improve_aviation
 		icon = GFX_SOV_Vasily_2
-		text = "New People in Aviation"
 		prerequisite = {
 			focus = SOV_stalin_constitution
 		}
@@ -951,7 +933,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_raskovas_aviation_group
-		Text = "Vasily Stalin's Proposals"
 		icon = GFX_SOV_Vasily_1
 		relative_position_id = SOV_aviation_cult
 		x = -1
@@ -1011,7 +992,6 @@ focus_tree = {
 			focus = SOV_raskovas_aviation_group
 		}
 		relative_position_id = SOV_women_pilots
-		text = "Yak-3"
 		x = -2
 		y = 1
 		cost = 5
@@ -1855,7 +1835,6 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_move_industry_to_urals
 		}
-		text = "Defense of Kiev"
 			relative_position_id = SOV_move_industry_to_urals
 		x = 0
 		y = 1
@@ -2905,7 +2884,6 @@ focus_tree = {
 	}
 	focus = {
 		id = Rzhev_offensive_operation
-		text = "Rzhev Offensive Operation"
 		icon = GFX_SOV_Rzhev
 		prerequisite = {
 			focus = SOV_Motherland_is_calling
@@ -3148,7 +3126,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Guards
-		text = "Red Guards"
 		icon = GFX_goal_sov_great_patriotic_war
 		prerequisite = {
 			focus = SOV_defense_of_stalingrad
@@ -3405,7 +3382,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Stalin_Organ
-		text = "Stalin's Organ"
 		icon = GFX_SOV_Katyusha
 		x = -1
 		y = 1
@@ -3436,7 +3412,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Tankograd
-		text = "Expand the Tankograd"
 		icon = GFX_SOV_t34_85
 		x = 1
 		y = 1
@@ -3465,7 +3440,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Workers_Peasants_Red_Army
-		text = "Workers and Peasants of the Red Army"
 		icon = GFX_Goal_Soviet_guns
 		prerequisite = {
 			focus = SOV_Tankograd
@@ -3640,7 +3614,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Marxism_Leninism
-		text = "Marxism-Leninism"
 		icon = GFX_SOV_Marksism
 		prerequisite = {
 			focus = SOV_socialist_realism
@@ -3681,7 +3654,6 @@ focus_tree = {
 	focus = {
 		id = SOV_Pioneers
 		icon = GFX_SOV_Pioners
-		text = "Pioneers Groups"
 		prerequisite = {
 			focus = SOV_socialist_science
 		}
@@ -3699,7 +3671,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Stalinism
-		text = "Stalinism"
 		icon = GFX_SOV_stalinization
 		prerequisite = {
 			focus = SOV_Marxism_Leninism
@@ -3718,7 +3689,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Palace_of_the_Soviets
-		Text = "House of Soviets"
 		icon = GFX_SOV_Palace_of_the_Soviets
 		prerequisite = {
 			focus = SOV_Stalinism
@@ -3744,7 +3714,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_politburo
-		text = "Politburo"
 		icon = GFX_SOV_Politburo
 		prerequisite = {
 			focus = SOV_Stalinism
@@ -3822,7 +3791,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Ideal_communism
-		text = "Towards Bright Future!"
 		icon = GFX_SOV_traditionalist_socialism
 		prerequisite = {
 			focus = SOV_militarized_schools
@@ -3846,7 +3814,6 @@ focus_tree = {
 	focus = {
 		id = SOV_Propaganda_Heroism
 		icon = GFX_SOV_Zhukov_Heroism
-		Text = "Heroism Propaganda"
 		mutually_exclusive = {
 			focus = SOV_collectivist_propaganda
 		}
@@ -3871,7 +3838,6 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_Propaganda_Heroism
 		}
-		text = "Heroes of Social Labor"
 		relative_position_id = SOV_politburo
 		x = -1
 		y = 2
@@ -3908,7 +3874,6 @@ focus_tree = {
 	focus = {
 		id = SOV_Heroes
 		icon = GFX_SOV_Heroes_SocLabor
-		Text = "Heroic Nation"
 		prerequisite = {
 			focus = SOV_Heroes_social_labor
 		}
@@ -3990,7 +3955,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Modern_Tanks
-		Text = "Develop Modern Tanks"
 		icon = GFX_SOV_IS2
 		relative_position_id = SOV_extra_tech_slot_2
 		x = 1
@@ -4026,7 +3990,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_NKVD
-		Text = "Order 227"
 		icon = GFX_SOV_NKVD_meme
 		relative_position_id = SOV_extra_tech_slot_2
 		x = -1
@@ -4874,7 +4837,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Strike_Axis
-		text = "Strike the Eagle Down!"
 		icon = GFX_focus_attack_germany
 		relative_position_id = SOV_move_industry_to_urals
 		x = 0
@@ -4959,7 +4921,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Kuznetsov
-		Text = "Kuznetsov's Plan"
 		icon = GFX_SOV_Kuznetsov
 		relative_position_id = SOV_stalin_constitution
 		x = 8
@@ -5033,7 +4994,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Fleet
-		text = "Sovietskyie Marines"
 		icon = GFX_SOV_Fleet_Rakov
 		relative_position_id = SOV_ocean_going_navy
 		x = -1
@@ -5061,7 +5021,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Fleet_2
-		text = "Naval Artillery for the Army"
 		icon = GFX_SOV_Rakov
 		relative_position_id = SOV_ocean_going_navy
 		x = 1
@@ -5107,7 +5066,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Motherland_is_calling
-		text = "Rodina is Calling"
 		icon = GFX_SOV_Motherland_calls
 		prerequisite = {
 			focus = SOV_wartime_propaganda
@@ -5130,7 +5088,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_Chieftain
-		text = "People's Vozhd"
 		icon = GFX_goal_sov_cult_of_stalin
 		prerequisite = {
 			focus = SOV_wartime_propaganda
