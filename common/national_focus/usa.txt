@@ -2219,44 +2219,14 @@ focus_tree = {
 			
 		}
 	}
-
-	focus = {
-		id = USA_main_battle_tanks
-		icon = GFX_mbt
-		x = 2
-		y = 3
-		prerequisite = { focus = USA_tank_experiments }
-		relative_position_id = USA_selective_training_act
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			custom_effect_tooltip = "Enables Tank Destroyer Board Military Industrial Organisation"	
-		}
-	}
 	focus = {
 		id = USA_armored_infantry
 		icon = GFX_usa_armored_infantry
 		x = 2
-		y = 4
-		prerequisite = { focus = USA_main_battle_tanks }
+		y = 3
+		prerequisite = { focus = USA_tank_experiments }
 		relative_position_id = USA_selective_training_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2281,6 +2251,35 @@ focus_tree = {
 				bonus = 1.0
 				category = motorized_equipment
 			}
+		}
+	}
+	focus = {
+		id = USA_main_battle_tanks
+		icon = GFX_mbt
+		x = 2
+		y = 4
+		prerequisite = { focus = USA_armored_infantry }
+		relative_position_id = USA_selective_training_act
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = "Enables Tank Destroyer Board Military Industrial Organisation"	
 		}
 	}
 	focus = {
@@ -2776,24 +2775,22 @@ focus_tree = {
 
 		completion_reward = {
 			navy_experience = 50
-			add_ideas = bureau_of_ships_focus
 			378 = {
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = dockyard
-						level = 2
-						instant_build = yes
-					}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
 				}
+			}
 			358 = {
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = dockyard
-						level = 2
-						instant_build = yes
-					}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
 				}
-
+			}
 		}
 	}
 
@@ -2840,7 +2837,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = USA_advanced_mahanian_doctrine
 				bonus = 1.0
-				category = cat_base_strike
+				category = naval_doctrine
 			}
 		}
 	}
@@ -3100,12 +3097,11 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			navy_experience = 25
 			add_tech_bonus = {
 				name = USA_convoy_tactics
 				bonus = 1.0
-				uses = 2
-				category = convoy_defense_tree
+				uses = 1
+				category = naval_doctrine
 			}
 		}
 	}
@@ -3166,12 +3162,19 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			378 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
 			add_tech_bonus = {
 				name = USA_fund_the_navy
 				uses = 3
 				bonus = 1.0
-				category = naval_doctrine
-						  
+				category = naval_doctrine				  
 			}
 		}
 	}
@@ -3191,6 +3194,14 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			358 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
 			add_tech_bonus = {
 				name = USA_expand_the_USMC
 				bonus = 1.0
@@ -3216,6 +3227,14 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			378 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
 			add_tech_bonus = {
 				name = USA_amphibious_operations
 				bonus = 1.0

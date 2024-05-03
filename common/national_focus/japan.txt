@@ -666,19 +666,18 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		288 = {
-					add_resource = {
-						type = steel
-						amount = 10
-					}
+			288 = {
+				add_resource = {
+					type = steel
+					amount = 25
+				}
 			}
-		640 = {
-					add_resource = {
-						type = steel
-						amount = 10
-					}
+			640 = {
+				add_resource = {
+					type = steel
+					amount = 25
+				}
 			}
-
 		}
 
 	}
@@ -1303,7 +1302,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = JAP_armored_divisions
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -1329,24 +1328,16 @@ focus_tree = {
 
             add_tech_bonus = {
 				name = JAP_armored_divisions
+				bonus = 3.0
+				uses = 1
+				technology = amphibious_mechanized_infantry_2
+			}
+			add_tech_bonus = {
+				name = JAP_armored_divisions
 				bonus = 5.0
-				uses = 1
-				technology = amphibious_tank
-			}
-			add_tech_bonus = {
-				name = JAP_armored_divisions
-				bonus = 4.0
-				uses = 1
-				technology = amphibious_tank_2
-			}
-			add_tech_bonus = {
-				name = JAP_armored_divisions
-				bonus = 2.0
 				uses = 1
 				technology = amphibious_mechanized_infantry
 			}
-
-
 		}
 	}
 
@@ -3270,7 +3261,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = JAP_fighter_modernization
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3451,6 +3442,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
+			add_ideas = bureau_of_ships_focus
 			random_state = {
 				limit = {
 					has_state_flag = JAP_new_naval_estimates_DY1
@@ -3481,6 +3473,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_ideas = bureau_of_ships_focus
 			random_owned_controlled_state = {
 				limit = {
 					ROOT = { has_full_control_of_state = PREV }
