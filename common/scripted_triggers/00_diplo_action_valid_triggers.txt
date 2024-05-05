@@ -24,6 +24,8 @@ is_diplomatic_action_valid_transfert_spymaster = { always = no }
 #is_diplomatic_action_valid_revoke_embargo = { always = no } #doesnt work
 #is_diplomatic_action_valid_embargo = { always = no } #wroks
 
+is_diplomatic_action_valid_REQUEST_INTERNATIONAL_MARKET_ACCESS = { always = no } 
+is_diplomatic_action_valid_REQUEST_INTERNATIONAL_MARKET_ACCESS_RIGHTS = { always = no } 
 
 
 is_diplomatic_action_valid_REQUEST_ACCESS_TO_LICENCE_PRODUCTION = { OR = { AND = { holnor = yes FROM = { normally_played_allies = yes }} AND = { normally_played_allies = yes FROM = { holnor = yes }}   AND = { finefr = yes FROM = { the_axis_no_finefr = yes }}  AND = { the_axis_no_finefr = yes FROM = { finefr = yes }} AND = { normally_played_allies = yes FROM = { tag = SOV }}} }
