@@ -1,0 +1,81 @@
+
+generic_fighter = {
+	category = air
+
+	basic_fighter_default = {
+		target_variant = {
+			type = small_plane_airframe_1
+			modules = {
+				fixed_main_weapon_slot = heavy_mg_4x
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = lmg_defense_turret
+				special_type_slot_2 = armor_plate_small
+			}
+		}
+	}
+
+
+	improved_fighter_default = {
+		target_variant = {
+			type = small_plane_airframe_2
+			modules = {
+				fixed_main_weapon_slot = aircraft_cannon_1_2x
+				engine_type_slot = engine_3_1x
+				special_type_slot_1 = hmg_defense_turret
+				special_type_slot_2 = armor_plate_small
+			}
+		}
+	}
+
+	advanced_fighter_default = {
+		target_variant = {
+			type = small_plane_airframe_3
+			modules = {
+				fixed_main_weapon_slot = aircraft_cannon_2_2x
+				engine_type_slot = engine_4_1x
+				special_type_slot_1 = cannon_defense_turret
+				special_type_slot_2 = armor_plate_small
+			}
+		}
+	}
+}
+
+generic_cas = {
+	category = air
+
+	cas_1 = {
+		target_variant = {
+			type = small_plane_cas_airframe_1
+			modules = {
+				fixed_main_weapon_slot = bomb_locks
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = armor_plate_small
+				special_type_slot_2 = dive_brakes_small
+			}
+		}
+	}
+	
+	cas_2 = {
+		target_variant = {
+			type = small_plane_cas_airframe_2
+			modules = {
+				fixed_main_weapon_slot = tank_buster_1
+				engine_type_slot = engine_3_1x
+				special_type_slot_1 = armor_plate_small
+				special_type_slot_2 = dive_brakes_small
+			}
+		}
+	}
+
+	cas_3 = {
+		target_variant = {
+			type = small_plane_cas_airframe_3
+			modules = {
+				fixed_main_weapon_slot = tank_buster_2
+				engine_type_slot = engine_4_1x
+				special_type_slot_1 = armor_plate_small
+				special_type_slot_2 = dive_brakes_small
+			}
+		}
+	}
+}
