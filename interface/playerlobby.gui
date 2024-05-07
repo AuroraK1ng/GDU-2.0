@@ -214,28 +214,39 @@ guiTypes = {
 					alwaystransparent = yes
 				}
 				
-				iconType = {
+				editBoxType = {
 					position = { x = -2 y = 7 }
 					name = "lobby_chat_edit"
-					#font = "hoi_16mbs"
-					#borderSize = {x =8 y = 0}	
-					#size = { x=420 y=32 }
-					#text = ""	
-					#instantTextBoxType = yes
-					#orientation = "UPPER_LEFT"
-					#cursor = { x = 0 y = 0 }
+					font = "hoi_16mbs"
+					borderSize = {x =8 y = 0}	
+					size = { x=0 y=0 }
+					text = ""	
+					instantTextBoxType = no
+					ignore_tab_navigation = yes
+					orientation = "UPPER_LEFT"
+					cursor = { x = 0 y = 0 }
 				}
 
-				iconType = {
+				editBoxType = {
 					position = { x = -2 y = 7 }
 					name = "largefont_lobby_chat_edit"
-					#font = "hoi_22chat"
-					#borderSize = {x =8 y = 0}	
-					#size = { x=420 y=32 }
-					#text = ""	
-					#instantTextBoxType = yes
-					#orientation = "UPPER_LEFT"
-					#cursor = { x = 0 y = 0 }
+					font = "hoi_22chat"
+					borderSize = {x =8 y = 0}	
+					size = { x=420 y=32 }
+					text = ""	
+					instantTextBoxType = no
+					ignore_tab_navigation = yes
+					orientation = "UPPER_LEFT"
+					cursor = { x = 0 y = 0 }
+				}
+
+				buttonType = {
+					name = "mic_button"
+					quadTextureSprite ="GFX_accessibility_mic"
+					font = "hoi_16mbs"
+					text = ""
+					position = { x= -32 y = -32 }
+					Orientation = "lower_right"
 				}
 			}
 		}
