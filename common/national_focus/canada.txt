@@ -3114,6 +3114,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_royal_Navy
+		text = "Canada Royal Navy"
 		icon = GFX_Noras_cockatoo_shipyards
 		x = 30
 		y = 0
@@ -3178,6 +3179,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAN_navy_spending
+		Text = "Increase Naval Spending "
 		icon = GFX_usa_fund_navy
 		relative_position_id = CAN_royal_Navy
 		x = -2
@@ -3216,6 +3218,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_Radar
+		Text = "Radio Detection Test"
 		icon = GFX_naval_radar
 		relative_position_id = CAN_navy_spending
 		x = 0
@@ -3258,6 +3261,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_protect_convoy
+		text = "Convoy Protection"
 		icon = GFX_goal_AST_state_of_RAN
 		prerequisite = { focus = CAN_royal_Navy }
 		
@@ -3314,6 +3318,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_doctrine
+		Text = "Naval Training"
 		icon = GFX_AST_Dock
 		prerequisite = { focus = CAN_royal_Navy }
 		x = 2
@@ -3355,6 +3360,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_destr
+		Text = "Make New Destroyers"
 		icon = GFX_goal_generic_navy_cruiser
 		prerequisite = { focus = CAN_protect_convoy }
 		x = 0
@@ -3401,6 +3407,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_royal_submarine_service
+		text = "Royal Submarine Service"
 		icon = GFX_goal_generic_wolf_pack
 		prerequisite = { focus = CAN_doctrine }
 		x = 2
@@ -3448,6 +3455,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_naval_patrol
+		Text = "Canadian Coastal Patrol"
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = CAN_royal_submarine_service focus = CAN_destr focus = CAN_Radar }
 		x = 0
@@ -3497,6 +3505,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_lessons_naval_war
+		Text = "Lessons Of Naval War"
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = CAN_naval_patrol }
 		x = 0
@@ -3541,6 +3550,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAN_dock
+		Text = "British Shipyards"
 		icon = GFX_AST_Dock
 		prerequisite = { focus = CAN_lessons_naval_war focus = CAN_pacific_area_navy focus = CAN_Heavy_ships }
 		x = 0
@@ -3588,6 +3598,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAN_pacific_area_navy
+		text = "Pacific Fleet"
 		icon = GFX_goal_base_strike
 		prerequisite = { focus = CAN_naval_patrol }
 		x = 2
@@ -3637,6 +3648,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAN_fleet_coop
+		Text = "Fleet Cooperation"
 		icon = GFX_usa_amphib
 		relative_position_id = CAN_pacific_area_navy
 		x = 0
@@ -3666,6 +3678,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAN_Heavy_ships
+		Text = "Prioritise Heavy Ships "
 		icon = GFX_america_goal_navy
 		relative_position_id = CAN_naval_patrol
 		x = -2
@@ -3705,6 +3718,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAN_guns
+		Text = "Naval Guns"
 		icon = GFX_ITA_Dominance
 		relative_position_id = CAN_Heavy_ships
 		x = 0
