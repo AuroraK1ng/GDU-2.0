@@ -227,8 +227,8 @@ scripted_gui = {
 				}
 			
 			triggers = {
-				observer_click_enabled = {owner = { is_ai=no}	}	
-				observer_visible = {	}		
+				observer_click_enabled = {always = yes	}	
+				observer_visible = { always = yes }		
 				add_cheat_click_enabled = {check_variable={Root.selected_cheat>0}}
 				
 					cb_red_visible ={	}
