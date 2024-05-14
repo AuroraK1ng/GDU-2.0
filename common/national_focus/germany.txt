@@ -2487,11 +2487,10 @@ activate_mission = GER_relocate_industry_from_friesland
 		}
 
 		completion_reward = {
-
-		add_war_support = 0.20
-		remove_ideas = sour_loser
-		add_ideas = triumphant_will
-		add_state_core = 839
+			add_war_support = 0.20
+			remove_ideas = sour_loser
+			add_ideas = triumphant_will
+			add_state_core = 839
 		}
 	}
 
@@ -2540,6 +2539,14 @@ activate_mission = GER_relocate_industry_from_friesland
 			SPR = {
 				add_ideas = GER_foreign_ss3
 				add_timed_idea = { idea = GDU_Endsieg_Spain days = 365 }
+			}
+			ITA = {
+				add_ideas = GER_foreign_ss3
+				add_timed_idea = { idea = GDU_Endsieg_Minors days = 365 }
+				swap_ideas = {
+					remove_idea = general_staff_ITA
+					add_idea = general_staff
+				}
 			}
 		}
 	}
@@ -2975,7 +2982,7 @@ activate_mission = GER_relocate_industry_from_friesland
 		x = -2
 		y = 1
 		relative_position_id = GER_Summon_Steiner
-		cost = 1
+		cost = 5
 		completion_reward = {		
 			64 = { add_dynamic_modifier = { modifier = GER_defend_berlin } }	
 		}
@@ -2993,7 +3000,9 @@ activate_mission = GER_relocate_industry_from_friesland
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = GER_last_stand
+			add_timed_idea = { 
+				idea = GER_last_stand days = 90 
+			}
 		}
 	} 
 	focus = {
