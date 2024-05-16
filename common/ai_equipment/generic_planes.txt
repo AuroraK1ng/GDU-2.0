@@ -47,9 +47,9 @@ generic_cas = {
 		target_variant = {
 			type = small_plane_cas_airframe_1
 			modules = {
-				fixed_main_weapon_slot = bomb_locks
+				fixed_main_weapon_slot = armor_piercing_bomb_locks
 				engine_type_slot = engine_2_1x
-				special_type_slot_1 = armor_plate_small
+				special_type_slot_1 = lmg_defense_turret
 				special_type_slot_2 = dive_brakes_small
 			}
 		}
@@ -61,7 +61,7 @@ generic_cas = {
 			modules = {
 				fixed_main_weapon_slot = tank_buster_1
 				engine_type_slot = engine_3_1x
-				special_type_slot_1 = armor_plate_small
+				special_type_slot_1 = hmg_defense_turret
 				special_type_slot_2 = dive_brakes_small
 			}
 		}
@@ -73,8 +73,119 @@ generic_cas = {
 			modules = {
 				fixed_main_weapon_slot = tank_buster_2
 				engine_type_slot = engine_4_1x
-				special_type_slot_1 = armor_plate_small
+				special_type_slot_1 = cannon_defense_turret
 				special_type_slot_2 = dive_brakes_small
+			}
+		}
+	}
+}
+
+generic_cv_naval_bomber = {
+	category = air
+
+	cv_naval_bomber_1 = {
+		target_variant = {
+			type = cv_small_plane_naval_bomber_airframe_1
+			modules = {
+				fixed_main_weapon_slot = torpedo_mounting
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = lmg_defense_turret
+			}
+		}
+	}
+	
+	cv_naval_bomber_2 = {
+		target_variant = {
+			type = cv_small_plane_naval_bomber_airframe_2
+			modules = {
+				fixed_main_weapon_slot = torpedo_mounting
+				engine_type_slot = engine_3_1x
+				special_type_slot_1 = hmg_defense_turret
+			}
+		}
+	}
+
+	cv_naval_bomber_3 = {
+		target_variant = {
+			type = cv_small_plane_naval_bomber_airframe_3
+			modules = {
+				fixed_main_weapon_slot = torpedo_mounting_2
+				engine_type_slot = engine_4_1x
+				special_type_slot_1 = cannon_defense_turret
+			}
+		}
+	}
+}
+
+generic_cv_cas = {
+	category = air
+
+	cv_naval_bomber_1 = {
+		target_variant = {
+			type = cv_small_plane_cas_airframe_1
+			modules = {
+				fixed_main_weapon_slot = armor_piercing_bomb_locks
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = dive_brakes_small
+			}
+		}
+	}
+	
+	cv_naval_bomber_2 = {
+		target_variant = {
+			type = cv_small_plane_cas_airframe_2
+			modules = {
+				fixed_main_weapon_slot = tank_buster_1
+				engine_type_slot = engine_3_1x
+				special_type_slot_1 = dive_brakes_small
+			}
+		}
+	}
+
+	cv_naval_bomber_3 = {
+		target_variant = {
+			type = cv_small_plane_cas_airframe_3
+			modules = {
+				fixed_main_weapon_slot = tank_buster_2
+				engine_type_slot = engine_4_1x
+				special_type_slot_1 = dive_brakes_small
+			}
+		}
+	}
+}
+
+generic_cv_fighter = {
+	category = air
+
+	cv_naval_bomber_1 = {
+		target_variant = {
+			type = cv_small_plane_fighter_airframe_1
+			modules = {
+				fixed_main_weapon_slot = heavy_mg_4x
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = lmg_defense_turret
+			}
+		}
+	}
+	
+	cv_naval_bomber_2 = {
+		target_variant = {
+			type = cv_small_plane_naval_bomber_airframe_2
+			modules = {
+				fixed_main_weapon_slot = aircraft_cannon_1_2x
+				engine_type_slot = engine_3_1x
+				special_type_slot_1 = hmg_defense_turret
+			}
+		}
+	}
+
+	cv_naval_bomber_3 = {
+		target_variant = {
+			type = cv_small_plane_naval_bomber_airframe_3
+			modules = {
+				fixed_main_weapon_slot = aircraft_cannon_2_2x
+				engine_type_slot = engine_4_1x
+				special_type_slot_1 = cannon_defense_turret
 			}
 		}
 	}
