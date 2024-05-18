@@ -617,7 +617,7 @@ equipments = {
 			}
 			front_2_custom_slot = front_1_custom_slot
 			mid_1_custom_slot = {
-				required = no
+				required = yes
 				allowed_module_categories = {
 					ship_super_heavy_battery
 					ship_airplane_launcher
@@ -629,22 +629,15 @@ equipments = {
 			mid_2_custom_slot = mid_1_custom_slot
 			mid_3_custom_slot = mid_1_custom_slot
 			rear_1_custom_slot = {
-				required = no
+				required = yes
 				allowed_module_categories = {
-					ship_secondaries
-					ship_dp_secondaries
 					ship_super_heavy_battery
-					ship_airplane_launcher
 				}
 			}
 			rear_2_custom_slot = {
 				required = no
 				allowed_module_categories = {
 					ship_super_heavy_battery
-					ship_torpedo
-					ship_airplane_launcher
-					ship_secondaries
-					ship_dp_secondaries
 				}
 			}
 		}
