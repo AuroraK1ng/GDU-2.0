@@ -2652,7 +2652,10 @@
 
 
 		completion_reward = {
-			add_ideas = ROM_Revanchism
+			swap_ideas = {
+				remove_idea = HUN_Totalen_Krieg
+				add_idea = ROM_Revanchism
+			}
 		}
 	}
 	focus = {
@@ -2725,7 +2728,7 @@
 		search_filters = {}
 
 		completion_reward = {
-		add_timed_idea = { idea = War_in_the_East days = 90 } 
+			add_timed_idea = { idea = War_in_the_East days = 90 } 
 		}
 	}
 	focus = {
@@ -2824,7 +2827,10 @@
 
 
 		completion_reward = {
-			add_ideas = Expand_production
+			swap_ideas = {
+				remove_idea = ROM_Revanchism
+				add_idea = Expand_production
+			}
 		}
 	}
 	focus = {

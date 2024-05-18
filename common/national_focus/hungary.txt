@@ -957,7 +957,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
 					level = 3
@@ -973,7 +973,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
 					level = 3
@@ -1125,10 +1125,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = HUN_synthetic_industry_AF1
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = synthetic_refinery
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -1147,10 +1147,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = synthetic_refinery
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = HUN_synthetic_industry_AF1
@@ -1543,6 +1543,14 @@ focus_tree = {
 				technology = heavy_bombs
 				technology = aa_cannon_1
 			}
+			45 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -1584,6 +1592,14 @@ focus_tree = {
 				uses = 1
 				technology = basic_medium_airframe
 				technology = improved_medium_airframe
+			}
+			45 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -2391,22 +2407,21 @@ focus_tree = {
 
 
 		completion_reward = {
-		45 = { add_extra_state_shared_building_slots = 2
+			45 = { add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
+			}
+			45 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
-				45 = {
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
-				}
-			
+			}
 		}
 	}
 	focus = {
@@ -2504,7 +2519,10 @@ focus_tree = {
 
 
 		completion_reward = {
-			add_ideas = HUN_ref_arm
+			swap_ideas = {
+				remove_idea = HUN_war_Yugo
+				add_idea = HUN_ref_arm
+			}
 		}
 	}
 	focus = {
@@ -2670,7 +2688,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_ideas = HUN_Spread_wings			
+			swap_ideas = {
+				remove_idea = HUN_war_commi
+				add_idea = HUN_Spread_wings
+			}			
 		}
 	}
 
