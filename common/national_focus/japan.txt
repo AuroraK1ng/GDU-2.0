@@ -1454,6 +1454,8 @@ focus_tree = {
 							OR = {
 								is_controlled_by = SAF
 								is_controlled_by = ENG
+								is_controlled_by = FRA
+								is_controlled_by = CAN
 							}
 						}
 					}
@@ -1462,6 +1464,8 @@ focus_tree = {
 							OR = {
 								is_controlled_by = SAF
 								is_controlled_by = ENG
+								is_controlled_by = FRA
+								is_controlled_by = CAN
 							}
 						}
 					}
@@ -1615,6 +1619,8 @@ focus_tree = {
 							OR = {
 								is_controlled_by = SAF
 								is_controlled_by = ENG
+								is_controlled_by = FRA
+								is_controlled_by = CAN
 							}
 						}
 					}
@@ -1623,6 +1629,8 @@ focus_tree = {
 							OR = {
 								is_controlled_by = SAF
 								is_controlled_by = ENG
+								is_controlled_by = FRA
+								is_controlled_by = CAN
 							}
 						}
 					}
@@ -1673,6 +1681,8 @@ focus_tree = {
 							OR = {
 								is_controlled_by = SAF
 								is_controlled_by = ENG
+								is_controlled_by = FRA
+								is_controlled_by = CAN
 							}
 						}
 					}
@@ -1681,6 +1691,8 @@ focus_tree = {
 							OR = {
 								is_controlled_by = SAF
 								is_controlled_by = ENG
+								is_controlled_by = FRA
+								is_controlled_by = CAN
 							}
 						}
 					}
@@ -1885,121 +1897,124 @@ focus_tree = {
 			date > 1943.1.1
 			JAP = { surrender_progress < 0.01 }
 			AND = {
-					NOT = {
-						275 = {
-							OR = {
-								is_controlled_by = SAF
-								is_controlled_by = ENG
-							}
+				NOT = {
+					275 = {
+						OR = {
+							is_controlled_by = SAF
+							is_controlled_by = ENG
+							is_controlled_by = FRA
+							is_controlled_by = CAN
 						}
 					}
-					NOT = {
-						681 = {
-							OR = {
-								is_controlled_by = SAF
-								is_controlled_by = ENG
-							}
+				}
+				NOT = {
+					681 = {
+						OR = {
+							is_controlled_by = SAF
+							is_controlled_by = ENG
+							is_controlled_by = FRA
+							is_controlled_by = CAN
 						}
 					}
-					NOT = {
-						439 = {
-							OR = {
-								is_controlled_by = RAJ
-								is_controlled_by = ENG
-							}
+				}
+				NOT = {
+					439 = {
+						OR = {
+							is_controlled_by = RAJ
+							is_controlled_by = ENG
 						}
 					}
-					NOT = {
-						443 = {
-							OR = {
-								is_controlled_by = RAJ
-								is_controlled_by = ENG
-							}
+				}
+				NOT = {
+					443 = {
+						OR = {
+							is_controlled_by = RAJ
+							is_controlled_by = ENG
 						}
 					}
-					NOT = {
-						429 = {
-							OR = {
-								is_controlled_by = RAJ
-								is_controlled_by = ENG
-							}
+				}
+				NOT = {
+					429 = {
+						OR = {
+							is_controlled_by = RAJ
+							is_controlled_by = ENG
 						}
 					}
-					NOT = {
-						423 = {
-							OR = {
-								is_controlled_by = RAJ
-								is_controlled_by = ENG
-							}
+				}
+				NOT = {
+					423 = {
+						OR = {
+							is_controlled_by = RAJ
+							is_controlled_by = ENG
 						}
 					}
-					NOT = {
-						430 = {
-							OR = {
-								is_controlled_by = RAJ
-								is_controlled_by = ENG
-							}
+				}
+				NOT = {
+					430 = {
+						OR = {
+							is_controlled_by = RAJ
+							is_controlled_by = ENG
 						}
 					}
-					NOT = {
-						674 = {
-							OR = {
-								is_controlled_by = AST
-								is_controlled_by = ENG
-							}
+				}
+				NOT = {
+					674 = {
+						OR = {
+							is_controlled_by = AST
+							is_controlled_by = ENG
 						}
 					}
-					NOT = {
-						285 = {
-							OR = {
-								is_controlled_by = AST
-								is_controlled_by = ENG
-							}
+				}
+				NOT = {
+					285 = {
+						OR = {
+							is_controlled_by = AST
+							is_controlled_by = ENG
 						}
 					}
-					NOT = {
-						517 = {
-							OR = {
-								is_controlled_by = AST
-								is_controlled_by = ENG
-							}
+				}
+				NOT = {
+					517 = {
+						OR = {
+							is_controlled_by = AST
+							is_controlled_by = ENG
 						}
 					}
-					NOT = {
-						521 = {
-							OR = {
-								is_controlled_by = AST
-								is_controlled_by = ENG
-							}
+				}
+				NOT = {
+					521 = {
+						OR = {
+							is_controlled_by = AST
+							is_controlled_by = ENG
 						}
 					}
-					NOT = {
-						522 = {
-							OR = {
-								is_controlled_by = AST
-								is_controlled_by = ENG
-							}
+				}
+				NOT = {
+					522 = {
+						OR = {
+							is_controlled_by = AST
+							is_controlled_by = ENG
 						}
 					}
-					NOT = {
-						284 = {
-							OR = {
-								is_controlled_by = AST
-								is_controlled_by = ENG
-								is_controlled_by = NZL
-							}
+				}
+				NOT = {
+					284 = {
+						OR = {
+							is_controlled_by = AST
+							is_controlled_by = ENG
+							is_controlled_by = NZL
 						}
 					}
-					NOT = {
-						723 = {
-							OR = {
-								is_controlled_by = AST
-								is_controlled_by = ENG
-								is_controlled_by = NZL
-							}
+				}
+				NOT = {
+					723 = {
+						OR = {
+							is_controlled_by = AST
+							is_controlled_by = ENG
+							is_controlled_by = NZL
 						}
 					}
-
+				}
 			}
 		}
 
