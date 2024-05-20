@@ -744,7 +744,6 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_defense_industry
-		text = "French Defense Industry"
 		icon = GFX_AST_Prepare_for_defense
 		prerequisite = { focus = FRA_modernize_our_equipment focus = FRA_modernize_our_armor_force }
 		x = 0
@@ -789,7 +788,6 @@ focus_tree = {
 		id = FRA_USAID
 		icon = GFX_military_construction
 		prerequisite = { focus = FRA_defense_industry }
-		text = "US AID Programme"
 		x = 0
 		y = 1
 		relative_position_id = FRA_defense_industry
@@ -826,7 +824,6 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_Jungle_warfare
-		Text = "Jungle Warfare"
 		prerequisite = { focus = FRA_modernize_our_equipment }
 		mutually_exclusive = { focus = FRA_Desert_warfare }
 		available = {
@@ -860,7 +857,6 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_Desert_warfare
-		Text = "Desert Warfare"
 		prerequisite = { focus = FRA_modernize_our_equipment }
 		mutually_exclusive = { focus = FRA_Jungle_warfare }
 		available = {
@@ -895,7 +891,6 @@ focus_tree = {
 	focus = {
 		id = FRA_Cheap_Inf
 		icon = GFX_JAP_mil_ind
-		text = "Invest in Equipment Production"
 		mutually_exclusive = { focus = FRA_Good_Inf }
 		prerequisite = { focus = FRA_Desert_warfare focus = FRA_Jungle_warfare }
 		
@@ -921,7 +916,6 @@ focus_tree = {
 	focus = {
 		id = FRA_Good_Inf
 		icon = GFX_Fra_Spec_Ops
-		text = "Invest in Special Forces Training"
 		mutually_exclusive = { focus = FRA_Cheap_Inf }
 		prerequisite = { focus = FRA_Desert_warfare focus = FRA_Jungle_warfare }
 		
@@ -945,33 +939,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = FRA_Improved_Supply
-		Text = "Invest in Better Supply"
-		icon = GFX_goal_ger_infrastructure
-		prerequisite = { focus = FRA_modernize_our_armor_force }
-		mutually_exclusive = { focus = FRA_New_Methods }
-		
-		x = 0
-		y = 1
-		
-		relative_position_id = FRA_modernize_our_armor_force
-		
-		cost = 5
-
-		available = {
-			
-		}
-		
-		search_filters = {}
-
-		completion_reward = {
-			add_ideas = { FRA_Supply_System }
-		}
-	}
-	
-	focus = {
 		id = FRA_New_Methods
-		text = "Rethink Our Methods"
 		prerequisite = { focus = FRA_modernize_our_armor_force }
 		mutually_exclusive = { focus = FRA_Improved_Supply }
 		
@@ -1004,8 +972,31 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = FRA_Improved_Supply
+		icon = GFX_goal_ger_infrastructure
+		prerequisite = { focus = FRA_modernize_our_armor_force }
+		mutually_exclusive = { focus = FRA_New_Methods }
+		
+		x = 0
+		y = 1
+		
+		relative_position_id = FRA_modernize_our_armor_force
+		
+		cost = 5
+
+		available = {
+			
+		}
+		
+		search_filters = {}
+
+		completion_reward = {
+			add_ideas = { FRA_Supply_System }
+		}
+	}
+	
+	focus = {
 		id = FRA_Tankograd
-		Text = "Import Tankograd from the Soviet Union"
 		icon = GFX_SOV_t34_85
 		prerequisite = { focus = FRA_Improved_Supply focus = FRA_New_Methods }
 		mutually_exclusive = { focus = FRA_Good_Tanks } 
@@ -1031,7 +1022,6 @@ focus_tree = {
 	focus = {
 		id = FRA_Good_Tanks
 		icon = GFX_Study_Blitzkreig
-		text = "Study the Blitzkrieg"
 		mutually_exclusive = { focus = FRA_Tankograd }
 		prerequisite = { focus = FRA_New_Methods focus = FRA_Improved_Supply }
 		
@@ -1057,7 +1047,6 @@ focus_tree = {
 	focus = {
 		id = FRA_Workers_Commune
 		icon = GFX_goal_generic_intelligence_exchange
-		text = "Skilled Workers"
 		prerequisite = {
 			focus = FRA_USAID
 		}
@@ -1281,10 +1270,9 @@ focus_tree = {
 		    add_ideas = free_french_fleet
 		}
 	}
-	
+
 	focus = {
 		id = FRA_destroyer_focus
-		text = "Build New Destroyers"
 		icon = GFX_focus_generic_destroyer
 	 	prerequisite = { focus = FRA_naval_two_doctrine	 }
 		x = 19
@@ -1298,11 +1286,10 @@ focus_tree = {
 			        improved_ship_hull_light = 1
 		    }
 		}
-	}
+	}	
 	
 	focus = {
 		id = FRA_destroyer_focus2
-		text = "Refit the Navy"
 		icon = GFX_focus_generic_destroyer
 	 	prerequisite = { focus = FRA_naval_two_doctrine	 }
 		x = 21
@@ -1314,7 +1301,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = FRA_expand_the_repair_yards
 		}
-	}	
+	}
 
 	focus = {
 		id = FRA_submarine_two
@@ -1475,7 +1462,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_Mech_focus
-		text = "Mechanised Effort"
+		Text = "Mechanised Focus"
 		icon = GFX_FRA_Mech_Effort
 		
 		prerequisite = { 
