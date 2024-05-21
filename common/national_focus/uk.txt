@@ -333,7 +333,6 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_lessons_of_war
-		text = "Lessons of the Great War"
 		prerequisite = { focus = limited_rearmament_focus }
 		icon = GFX_ENG_Lessons_of_war
 		x = 0
@@ -437,7 +436,6 @@ focus_tree = {
 	}
 	focus = {
 		id = uk_Parliamentary_elections
-		text = "Parliamentary Elections"
 		prerequisite = { focus = uk_empire_focus }
 		icon = GFX_ENG_Parliamentary
 		relative_position_id = uk_empire_focus
@@ -457,7 +455,6 @@ focus_tree = {
 	}
 	focus = {
 		id = uk_British_stoicism
-		text = "British Stoicism"
 		prerequisite = { focus = uk_Parliamentary_elections }
 		available = {
 				has_war = yes
@@ -479,7 +476,6 @@ focus_tree = {
 	}
 	focus = {
 		id = uk_British_Lion
-		text = "British Lion"
 		prerequisite = { focus = uk_British_stoicism }
 		icon = GFX_ENG_Lion
 		relative_position_id = uk_British_stoicism
@@ -1040,7 +1036,6 @@ focus_tree = {
 	
 	focus = {
 		id = uk_prepare_for_war
-		text = "Prepare for New War"
 		icon = GFX_ENG_Preppare_for_war
 		prerequisite = { focus = naval_rearmament_focus }
 		x = 7
@@ -1141,7 +1136,6 @@ focus_tree = {
 
 	focus = {
 		id = royal_dockyard_focus
-		text = "Royal Naval Dockyards"
 		mutually_exclusive = { focus = royal_ordinance_focus }
 		available = {
 
@@ -1263,7 +1257,6 @@ focus_tree = {
 	}
 	focus = {
 		id = Finish_rearmament
-		text = "Finish Rearmament"
 		available = {
 			    date > 1940.6.1
 		}
@@ -2891,7 +2884,6 @@ focus_tree = {
 	
 	focus = {
 		id = uk_strengthening_the_Commonwealth
-		text = "Strengthening the Commonwealth"
 		prerequisite = { focus = uk_empire_focus }
 		icon = GFX_ENG_Strengthening_Commonwealth
 		x = 1
@@ -4394,7 +4386,6 @@ focus_tree = {
 	# END IRAQ/IRAN/USSR INTERVENTION #
 focus = {
 		id = ENG_general_staff
-		text = "The General Staff"
 		available = {
 			
 		}
@@ -4486,7 +4477,6 @@ focus = {
 	}
 	focus = {
 		id = ENG_new_rifle
-		text = "EM-2 Rifle"
 		available = {
 			
 		}
@@ -4514,7 +4504,6 @@ focus = {
 	}
 	focus = {
 		id = ENG_women_in_army
-		text = "Women in the Army"
 		available = {
 			
 		}
@@ -4536,7 +4525,6 @@ focus = {
 	}
 	focus = {
 		id = ENG_Modern_warfare
-		text = "Modern Warfare"
 		available = {
 			
 		}
@@ -4567,7 +4555,6 @@ focus = {
 
 	focus = {
 		id = ENG_norwegian_intervention
-		text = "Annex Faroe Islands"
 		available = {
 			337 = { is_owned_and_controlled_by = NOR }
 			NOR = { is_ai = yes }
