@@ -706,7 +706,10 @@ focus_tree = {
 			date > 1942.6.1
 		}
 		completion_reward = {
-			add_ideas = ITA_Def_AFR_2
+			swap_ideas = {
+				remove_idea = Duce_Supremo
+				add_idea = ITA_Def_AFR_2
+			}
 			add_offsite_building = { 
 				type = arms_factory level = 4 
 			}
@@ -1209,9 +1212,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ITA_command
+		id = ITA_SMI
     	icon = GFX_focus_ITA_stato_maggiore_italiano
-		text = "Stato Maggiore Italiano"
 		prerequisite = { focus = ITA_africa_corps_to }
 		relative_position_id = ITA_victoryinETH
 		x = -3
@@ -1274,7 +1276,6 @@ focus_tree = {
 	focus = {
 		id = ITA_Holy_war
     	icon = GFX_focus_ITA_guerra_santa_4
-		text = "Guerra Santa"
 		prerequisite = { focus = ITA_march_rome }
 		relative_position_id = ITA_march_rome
 		x = 2
@@ -1934,7 +1935,6 @@ focus_tree = {
 	focus = {
 		id = ITA_effort_Marines
 		icon = GFX_ITA_Corpo_dei_marine
-        text = "Corpo dei Marines"
 		prerequisite = { focus = ITA_sea_wolves }
 		relative_position_id = ITA_mare_nostrum
 		x = 2
@@ -2256,7 +2256,6 @@ focus_tree = {
 	focus = {
 		id = ITA_Duce
     	icon = GFX_ITA_Duce_scream
-		text = "Duce Supremo"
 		#prerequisite = { focus = ITA_special_forces }
 		prerequisite = { focus = ITA_Mass_Production }
 		prerequisite = { focus = ITA_armored_effort }
