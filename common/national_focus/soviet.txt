@@ -2883,7 +2883,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = Rzhev_offensive_operation
+		id = SOV_Rzhev_offensive_operation
 		icon = GFX_SOV_Rzhev
 		prerequisite = {
 			focus = SOV_Motherland_is_calling
@@ -2916,7 +2916,7 @@ focus_tree = {
 		id = SOV_defense_of_stalingrad
 		icon = GFX_focus_ger_great_red_menace
 		prerequisite = {
-			focus = Rzhev_offensive_operation
+			focus = SOV_Rzhev_offensive_operation
 		}
 		available = {
 			OR = {
@@ -2935,7 +2935,7 @@ focus_tree = {
 				has_capitulated = yes
 			}
 		}
-		relative_position_id = Rzhev_offensive_operation
+		relative_position_id = SOV_Rzhev_offensive_operation
 		x = 0
 		y = 1
 		cost = 12.9
