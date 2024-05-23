@@ -27,7 +27,6 @@ focus_tree = {
 	############################
 	focus = {
 		id = AST_army
-		Text = "Memories of Gallipoli"
 		icon = GFX_AST_Gallipoli
 		x = 2
 		y = 0
@@ -66,7 +65,6 @@ focus_tree = {
 	}
 	focus = {
 		id = AST_Prepare_for_defense
-		text = "Prepare for defense"
 		icon = GFX_AST_Prepare_for_defense
 		prerequisite = { focus = AST_army }
 		x = -2
@@ -104,7 +102,6 @@ focus_tree = {
 	}
 	focus = {
 		id = AST_ANZAC
-		text = "ANZAC"
 		icon = GFX_AST_solgier
 		prerequisite = { focus = AST_army }
 		x = 2
@@ -147,7 +144,6 @@ focus_tree = {
 	}
 	focus = {
 		id = AST_ANZAC_1
-		text = "Victory in Unity!"
 		icon = GFX_AST_anzac
 		prerequisite = { focus = AST_ANZAC }
 		prerequisite = { focus = AST_cac_boomerang }
@@ -341,7 +337,6 @@ focus_tree = {
 	}
 	focus = {
 		id = AST_british_exp
-		text = "British Experience"
 		icon = GFX_AST_British_experience
 		prerequisite = { focus = AST_ANZAC }
 		x = 3
@@ -377,7 +372,6 @@ focus_tree = {
 	}
 	focus = {
 		id = AST_teamwork
-		Text = "Work Together!"
 		icon = GFX_AST_factories
 		prerequisite = { focus = AST_british_exp }
 		prerequisite = { focus = AST_ANZAC_1 }
@@ -1648,7 +1642,6 @@ focus_tree = {
 	}
 	focus = {
 		id = AST_navy_spending
-		Text = "Increase Naval Spending "
 		icon = GFX_usa_fund_navy
 		relative_position_id = AST_cockatoo_island_shipyards
 		x = -2
@@ -1687,7 +1680,6 @@ focus_tree = {
 
 	focus = {
 		id = AST_Radar
-		Text = "Radio Detection Test"
 		icon = GFX_naval_radar
 		relative_position_id = AST_navy_spending
 		x = 0
@@ -2026,7 +2018,6 @@ focus_tree = {
 	}
 	focus = {
 		id = AST_dock
-		Text = "British shipyards"
 		icon = GFX_AST_Dock
 		prerequisite = { focus = AST_cruisers focus = AST_pacific_area_navy focus = AST_Heavy_ships }
 		x = 0
@@ -2131,7 +2122,6 @@ focus_tree = {
 	}
 	focus = {
 		id = AST_fleet_coop
-		Text = "Fleet Cooperation"
 		icon = GFX_usa_amphib
 		relative_position_id = AST_pacific_area_navy
 		x = 0
@@ -2169,7 +2159,6 @@ focus_tree = {
 	}
 	focus = {
 		id = AST_Heavy_ships
-		Text = "Prioritise Heavy Ships "
 		icon = GFX_america_goal_navy
 		relative_position_id = AST_naval_auxiliary_patrol
 		x = -2
@@ -2218,7 +2207,6 @@ focus_tree = {
 	}
 	focus = {
 		id = AST_guns
-		Text = "Naval Guns"
 		icon = GFX_ITA_Dominance
 		relative_position_id = AST_Heavy_ships
 		x = 0
@@ -2506,7 +2494,6 @@ focus_tree = {
 		id = AST_Expand_Army
 		icon = GFX_military_construction
 		prerequisite = { focus = AST_department_of_supply_and_development }
-		text = "American Machines"
 		x = 4
 		y = 3
 		relative_position_id = AST_standard_gauge_railway
@@ -2542,10 +2529,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AST_Engineer
+		id = AST_Engineer_Focus
 		icon = GFX_Generic_Working_Women
 		prerequisite = { focus = AST_Expand_Army }
-		text = "Corps of Engineers"
 		x = 0
 		y = 1
 		relative_position_id = AST_Expand_Army
@@ -2865,7 +2851,6 @@ focus_tree = {
 	}
 	focus = {
 		id = AST_congratulate_Churchill
-		text = "Congratulate Churchill"
 		icon = GFX_AST_Churchill
 		prerequisite = { focus = AST_national_security_act }
 		x = 0
@@ -3076,7 +3061,6 @@ focus_tree = {
 		icon = GFX_AST_Coop
 		prerequisite = { focus = AST_classify_aliens }
 		prerequisite = { focus = AST_CSIR }
-		text = "Cooperation With USMC"
 		x = 0
 		y = 2
 		relative_position_id = AST_rats_of_tobruk

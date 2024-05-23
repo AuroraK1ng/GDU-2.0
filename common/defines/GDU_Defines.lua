@@ -32,7 +32,7 @@ NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT
 --- Letting people see some stuff on ledger
 NDefines.NGame.GAME_SPEED_SECONDS = { 6000.0, 0.06, 0.2, 0.05, 0.0 }	-- Previous { 1, 2, 3, 4, 5 } = { 6000.0, 0.4, 0.2, 0.05, 0.0 }	Consider Making Speed 3 Slower. 
 
-NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 13 --| less messages lying around at the top of your screen | CHANGE FOR CHECKSUMM
+NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 14 --| less messages lying around at the top of your screen | CHANGE FOR CHECKSUMM
 
 
 ------ Recently Added -----
