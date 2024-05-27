@@ -772,6 +772,11 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_Fleet_2
 		}
+		available = {
+			NOT = {
+				has_completed_focus = sov_new_def_dept
+			}
+		}
 		x = -1
 		y = 1
 		relative_position_id = SOV_Chuikov_Gun
@@ -5078,7 +5083,15 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			add_ideas = Motherland_is_calling
+			IF = { limit = { has_idea = Defense_departament } 
+				swap_ideas = {
+					remove_idea = Defense_departament
+					add_idea = Motherland_is_calling
+				}
+			}
+			IF = { limit = { NOT = { has_idea = Defense_departament } }
+				add_ideas = Motherland_is_calling
+			}
 		}
 		bypass = {
 			NOT = {
