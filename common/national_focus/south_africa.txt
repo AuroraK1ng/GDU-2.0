@@ -744,7 +744,6 @@ focus_tree = {
 		id = SAF_Expand_Aluminum_Mines
 		icon = GFX_SAF_industry
 		prerequisite = { focus = SAF_expand_the_mining_industry }
-		Text = "Expand Aluminum Mines"
 		x = -1
 		y = 1
 		relative_position_id = SAF_expand_the_mining_industry
@@ -830,7 +829,6 @@ focus_tree = {
 		id = SAF_New_Workplaces
 		icon = GFX_SAF_industry
 		prerequisite = { focus = SAF_heavy_engineering }
-		text = "New Workplaces"
 		x = 1
 		y = 1
 		relative_position_id = SAF_heavy_engineering
@@ -1157,7 +1155,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SAF_General_Staff
-		text = "Create a General Staff"
 		icon = GFX_ENG_General_staff
 		prerequisite = { focus = SAF_special_service_battalion }
 		x = -2
@@ -1197,7 +1194,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SAF_new_rifle
-		text = "Reider Rifle"
 		icon = GFX_ENG_new_Rifle
 		prerequisite = { focus = SAF_General_Staff }
 		prerequisite = { focus = SAF_improve_the_three_oh_three }
@@ -1278,7 +1274,6 @@ focus_tree = {
 	
 	focus = {
 		id = SAF_defense_industry
-		text = "Defense Industry"
 		icon = GFX_AST_Prepare_for_defense
 		prerequisite = { focus = SAF_new_rifle focus = SAF_expand_the_south_african_artillery }
 		x = 1
@@ -1328,7 +1323,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SAF_British_attache
-		Text = "British Attache"
 		icon = GFX_AST_British_experience
 		prerequisite = { focus = SAF_defense_industry }
 		x = -1
@@ -1368,7 +1362,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SAF_Africa_warfare
-		text = "Africa Warfare"
 		icon = GFX_goal_Generic_Scouts
 		prerequisite = { focus = SAF_British_attache focus = SAF_mechanization_effort }
 		x = 1

@@ -27,7 +27,6 @@ focus_tree = {
 
 	focus = {
 		id = NZL_royal_Navy
-		text = "New Zealand Royal Navy"
 		icon = GFX_Noras_cockatoo_shipyards
 		x = 7
 		y = 0
@@ -91,7 +90,6 @@ focus_tree = {
 	}
 	focus = {
 		id = NZL_navy_spending
-		Text = "Increase Naval Spending "
 		icon = GFX_usa_fund_navy
 		relative_position_id = NZL_royal_Navy
 		x = -2
@@ -130,7 +128,6 @@ focus_tree = {
 
 	focus = {
 		id = NZL_Radar
-		Text = "Radio Detection Test"
 		icon = GFX_naval_radar
 		relative_position_id = NZL_navy_spending
 		x = 0
@@ -165,15 +162,9 @@ focus_tree = {
 			}	
 		}
 	}
-
-	
-	
-	 
-	
 	
 	focus = {
 		id = NZL_protect_convoy
-		text = "Convoy Protection"
 		icon = GFX_goal_AST_state_of_RAN
 		prerequisite = { focus = NZL_royal_Navy }
 		
@@ -230,7 +221,6 @@ focus_tree = {
 
 	focus = {
 		id = NZL_doctrine
-		Text = "Naval Training"
 		icon = GFX_AST_Dock
 		prerequisite = { focus = NZL_royal_Navy }
 		x = 2
@@ -272,7 +262,6 @@ focus_tree = {
 
 	focus = {
 		id = NZL_destr
-		Text = "Make New Destroyers"
 		icon = GFX_goal_generic_navy_cruiser
 		prerequisite = { focus = NZL_protect_convoy }
 		x = 0
@@ -319,7 +308,6 @@ focus_tree = {
 
 	focus = {
 		id = NZL_royal_submarine_service
-		text = "Royal Submarine Service"
 		icon = GFX_goal_generic_wolf_pack
 		prerequisite = { focus = NZL_doctrine }
 		x = 2
@@ -366,7 +354,6 @@ focus_tree = {
 
 	focus = {
 		id = NZL_naval_patrol
-		Text = "New Zealand Coastal Patrol"
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = NZL_royal_submarine_service focus = NZL_destr focus = NZL_Radar }
 		x = 0
@@ -416,7 +403,6 @@ focus_tree = {
 
 	focus = {
 		id = NZL_lessons_naval_war
-		Text = "Lessons Of Naval War"
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = NZL_naval_patrol }
 		x = 0
@@ -461,7 +447,6 @@ focus_tree = {
 	}
 	focus = {
 		id = NZL_dock
-		Text = "British Shipyards"
 		icon = GFX_AST_Dock
 		prerequisite = { focus = NZL_lessons_naval_war focus = NZL_pacific_area_navy focus = NZL_Heavy_ships }
 		x = 0
@@ -509,7 +494,6 @@ focus_tree = {
 	}
 	focus = {
 		id = NZL_pacific_area_navy
-		text = "Pacific Fleet"
 		icon = GFX_goal_base_strike
 		prerequisite = { focus = NZL_naval_patrol }
 		x = 2
@@ -559,7 +543,6 @@ focus_tree = {
 	}
 	focus = {
 		id = NZL_fleet_coop
-		Text = "Fleet Cooperation"
 		icon = GFX_usa_amphib
 		relative_position_id = NZL_pacific_area_navy
 		x = 0
@@ -589,7 +572,6 @@ focus_tree = {
 	}
 	focus = {
 		id = NZL_Heavy_ships
-		Text = "Prioritise Heavy Ships "
 		icon = GFX_america_goal_navy
 		relative_position_id = NZL_naval_patrol
 		x = -2
@@ -629,7 +611,6 @@ focus_tree = {
 	}
 	focus = {
 		id = NZL_guns
-		Text = "Naval Guns"
 		icon = GFX_ITA_Dominance
 		relative_position_id = NZL_Heavy_ships
 		x = 0
@@ -858,7 +839,6 @@ focus_tree = {
 
 	focus = {
 		id = NZL_heavy_bombers_factory
-		Text = "Aircraft Factories"
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = NZL_fighter_focus }
 		prerequisite = { focus = NZL_new_zealand_aluminium }
@@ -990,7 +970,6 @@ focus_tree = {
 	}
 	focus = {
 		id = NZL_new_zealand_aluminium
-		Text = "New Zealand Aluminium"
 		icon = GFX_goal_generic_production2
 		prerequisite = { focus = NZL_new_zealand_steel }
 		x = -1
@@ -1099,7 +1078,6 @@ focus_tree = {
 	}
 	focus = {
 		id = NZL_Military_uniform_factories
-		text = "Military uniform factories"
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = NZL_wairarapa_sheep_farms }
 		x = 1
@@ -1141,7 +1119,7 @@ focus_tree = {
 	focus = {
 		id = NZL_central_department_of_industry
 		icon = GFX_goal_generic_production
-		prerequisite = { focus = NZL_new_zealand_steel focus = NZL_taranaki_oil }
+		prerequisite = { focus = NZL_new_zealand_steel }
 		x = -2
 		y = 2
 		relative_position_id = NZL_national_roads_board
@@ -1172,7 +1150,7 @@ focus_tree = {
 	focus = {
 		id = NZL_bureau_of_industry
 		icon = GFX_goal_generic_production
-		prerequisite = { focus = NZL_new_zealand_steel focus = NZL_taranaki_oil }
+		prerequisite = { focus = NZL_taranaki_oil }
 		x = 0
 		y = 2
 		relative_position_id = NZL_national_roads_board
@@ -1204,7 +1182,8 @@ focus_tree = {
 	focus = {
 		id = NZL_department_of_scientific_and_industrial_research
 		icon = GFX_focus_research
-		prerequisite = { focus = NZL_bureau_of_industry focus = NZL_central_department_of_industry}
+		prerequisite = { focus = NZL_bureau_of_industry }
+		prerequisite = { focus = NZL_central_department_of_industry }
 		x = -1
 		y = 3
 		relative_position_id = NZL_national_roads_board
@@ -1326,7 +1305,6 @@ focus_tree = {
 		id = NZL_Engineer
 		icon = GFX_Generic_Working_Women
 		prerequisite = { focus = NZL_think_big }
-		text = "Corps of Engineers"
 		x = 1
 		y = 1
 		relative_position_id = NZL_think_big
@@ -1428,7 +1406,6 @@ focus_tree = {
 	############################
 	focus = {
 		id = NZL_creation_army
-		text = "Creation Of An Elite Army"
 		icon = GFX_AST_solgier
 		x = 29
 		y = 0
@@ -1507,18 +1484,52 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NZL_Focus_on_quality
-		text = "Focus On Quality"
+		id = NZL_charlton_automatic_rifle
+		icon = GFX_ENG_new_Rifle
+		prerequisite = { focus = NZL_army_reforms }
+		x = -2
+		y = 1
+		relative_position_id = NZL_army_reforms
+
+		cost = 5
+
+	
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = NZL_charlton_automatic_rifle
+				bonus = 1.00
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = NZL_Quality_first
 		icon = GFX_AST_Promote
 		prerequisite = { focus = NZL_army_reforms }
-		x = -4
+		x = 4
 		y = 1
 		relative_position_id = NZL_army_reforms
 
 		cost = 10
-
-	
-
+		
 		available = {
 
 		}
@@ -1558,48 +1569,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = NZL_charlton_automatic_rifle
-		icon = GFX_ENG_new_Rifle
-		prerequisite = { focus = NZL_army_reforms }
-		x = -2
-		y = 1
-		relative_position_id = NZL_army_reforms
-
-		cost = 5
-
-	
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = NZL_charlton_automatic_rifle
-				bonus = 1.00
-				uses = 1
-				category = infantry_weapons
-			}
-		}
-	}
-	focus = {
 		id = NZL_Development_special_forces
-		text = "Development Of Special Forces Equipment"
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = NZL_charlton_automatic_rifle } 
-		prerequisite = { focus = NZL_Focus_on_quality }
+		prerequisite = { focus = NZL_bob_semple_tank }
 		x = -1
 		y = 1
 		relative_position_id = NZL_charlton_automatic_rifle
@@ -1644,7 +1617,7 @@ focus_tree = {
 		id = NZL_bob_semple_tank
 		icon = GFX_focus_NZL_bob_semple_tank		#VEHICLE OF GLORIOUS DESIGN BOB SEMPLE TANK MUST HAVE UNIQUE ICON
 		prerequisite = { focus = NZL_army_reforms }
-		x = 4
+		x = -4
 		y = 1
 		relative_position_id = NZL_army_reforms
 
@@ -1730,7 +1703,6 @@ focus_tree = {
 	}
 	focus = {
 		id = NZL_Ordering_from_UK_companies
-		text = "Ordering from UK companies"
 		icon = GFX_AST_Prepare_for_defense
 		prerequisite = { focus = NZL_domestic_arms_industry }
 		prerequisite = { focus = NZL_charlton_automatic_rifle }
@@ -1762,9 +1734,6 @@ focus_tree = {
 		add_offsite_building = { type = arms_factory level = 2 }
 		}
 	}
-
-	
-
 	focus = {
 		id = NZL_long_range_patrol
 		icon = GFX_AST_Coop
@@ -1808,7 +1777,6 @@ focus_tree = {
 	focus = {
 		id = NZL_equipment_improvement
 		icon = GFX_goal_generic_army_motorized
-		text = "Equipment Improvement"
 		prerequisite = { focus = NZL_army_reforms }
 		x = 2
 		y = 1
@@ -1837,7 +1805,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		add_tech_bonus = {
+			add_tech_bonus = {
 				name = motorized_bonus
 				bonus = 1.00
 				category = motorized_equipment
@@ -1848,10 +1816,10 @@ focus_tree = {
 		id = NZL_artillery_focus
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = NZL_equipment_improvement }
-		prerequisite = { focus = NZL_bob_semple_tank }
+		prerequisite = { focus = NZL_Quality_first }
 		x = -1
 		y = 1
-		relative_position_id = NZL_bob_semple_tank
+		relative_position_id = NZL_Quality_first
 
 		cost = 5
 
@@ -1891,7 +1859,8 @@ focus_tree = {
 		id = NZL_big_bob_tank
 		icon = GFX_goal_generic_build_tank
 		prerequisite = { focus = NZL_bob_semple_tank }
-		x = 1
+		prerequisite = { focus = NZL_Military_uniform_factories }
+		x = -1
 		y = 1
 		relative_position_id = NZL_bob_semple_tank
 
@@ -1946,7 +1915,6 @@ focus_tree = {
 	}
 	focus = {
 		id = NZL_support_bat
-		text = "Improvement Of Auxiliary Battalions"
 		icon = GFX_Generic_Chemical_Warfare
 		prerequisite = { focus = NZL_Ordering_from_UK_companies focus = NZL_Development_special_forces }
 		x = -1
@@ -1985,7 +1953,6 @@ focus_tree = {
 	}
 	focus = {
 		id = NZL_Lessons_of_war
-		text = "Lessons of Africa Warfare"
 		icon = GFX_ENG_Modern_Warfare
 		prerequisite = { focus = NZL_long_range_patrol focus = NZL_artillery_focus }
 		x = 1
@@ -2025,7 +1992,6 @@ focus_tree = {
 	}
 	focus = {
 		id = NZL_women_in_army
-		text = "Women in the Army"
 		available = {
 			
 		}
