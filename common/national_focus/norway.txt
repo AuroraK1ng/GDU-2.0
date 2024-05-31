@@ -14,13 +14,10 @@
 
 	#POLITICAL FOCUS#
 
-
-
 	focus = {
-		id = NOR_treaty_london
-		Text = " Treaty with London "
-		icon = GFX_ENG_Stoicism
-		x = 1
+		id = NOR_nygaardsvold_government
+		icon = GFX_focus_NOR_continue_nygaardsvold_government
+		x = 2
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -32,26 +29,243 @@
 			add_political_power = 150 
 		}
 	}
+
 	focus = {
-		id = NOR_speech_in_british
-		Text = "Speech in the British Parliament "
-		icon = GFX_ENG_Parliamentary
-		x = 3
-		y = 0
+		id = NOR_restore_public_trust
+		icon = GFX_focus_NOR_restore_public_trust_in_the_storting
+		x = 2
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
+
+		prerequisite = { focus = NOR_nygaardsvold_government }
+		
+		completion_reward = { 
+			add_stability = 0.10
+			add_war_support = 0.1
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = NOR_crush_the_communists
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		x = 2
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = NOR_restore_public_trust }
+		
+		completion_reward = { 
+			add_popularity = {
+				ideology = communism
+				popularity = -0.10
+			}
+		}
+	}
+	focus = {
+		id = NOR_fortify_nor
+		icon = GFX_focus_NOR_drobak_coastal_fort
+		x = -0
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = NOR_nygaardsvold_government }
 		
 		completion_reward = {
-		    add_stability = 0.10
+			110 = {
+				set_building_level = {
+					type = coastal_bunker
+					level = 3
+					province = 6115
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 1
+					province = 3171
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 1
+					province = 14
+					instant_build = yes
+				}
+			}
+			142 = {
+				set_building_level = {
+					type = coastal_bunker
+					level = 1
+					province = 6633
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 1
+					province = 6176
+					instant_build = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 2
+					province = 122
+					instant_build = yes
+				}
+			}
+			143 = {
+				set_building_level = {
+					type = coastal_bunker
+					level = 2
+					province = 3022
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = NOR_last_stand
+		icon = GFX_focus_SWE_varnplikt
+		x = 0
+		y = 3
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war = yes
+			NOT = {
+				has_capitulated = yes
+			}
+		}
+
+		prerequisite = { focus = NOR_fortify_nor }
+		
+		completion_reward = { 
+			add_timed_idea = {
+				idea = NOR_last_stand_idea
+				days = 60
+			}
+		}
+	}
+
+	focus = {
+		id = NOR_prepare_for_battle
+		icon = GFX_focus_generic_fortify_norway
+		x = 2
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = NOR_crush_the_communists }
+		
+		completion_reward = { 
 			add_war_support = 0.1
+			add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = NOR_cut_mil_budget
+		icon = GFX_focus_focus_fra_maquis
+		x = 4
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = NOR_nygaardsvold_government }
+		
+		completion_reward = { 
+			add_research_slot = 1
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = NOR_broken_gun
+		icon = GFX_focus_NOR_broken_gun_policies
+		x = 4
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = NOR_cut_mil_budget }
+		
+		completion_reward = { 
+			110 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = NOR_treaty_london
+		icon = GFX_ENG_Stoicism
+		x = 1
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_capitulated = yes
+		}
+
+		prerequisite = { focus = NOR_prepare_for_battle }
+		
+		completion_reward = { 
+		    add_stability = 0.10
 			add_political_power = 150 
 		}
 	}
 	focus = {
+		id = NOR_speech_in_british
+		icon = GFX_ENG_Parliamentary
+		x = 3
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_capitulated = yes
+		}
+
+		prerequisite = { focus = NOR_prepare_for_battle }
+		
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
 		id = NOR_National_unity
-		Text = "Invest in Victory"
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = NOR_treaty_london }
 		x = -1
@@ -72,7 +286,6 @@
 	}
 	focus = {
 		id = NOR_british_wing
-		Text = "Under Britain's wing"
 		icon = GFX_ENG_Strengthening_Commonwealth
 		prerequisite = { focus = NOR_National_unity }
 		x = 0
@@ -99,35 +312,33 @@
 		}
 	}
 	focus = {
-		id = NOR_research_slot
-		Text = "Invite French Scientists"
-		icon = GFX_focus_research
+		id = NOR_new_norway
+		icon = GFX_focus_NOR_establish_milorg
 		prerequisite = { focus = NOR_speech_in_british }
 		prerequisite = { focus = NOR_treaty_london }
 		x = -1
 		y = 1
 		relative_position_id = NOR_speech_in_british
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = { 
-		add_research_slot = 1
-		add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = industry
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+				add_war_support = 0.05
 			}
 		}
 	}
 	focus = {
 		id = NOR_UK_Experience
 		icon = GFX_AST_British_experience
-		prerequisite = { focus = NOR_research_slot }
+		prerequisite = { focus = NOR_new_norway }
 		x = 0
 		y = 1
-		relative_position_id = NOR_research_slot
+		relative_position_id = NOR_new_norway
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -144,7 +355,6 @@
 	}
 	focus = {
 		id = NOR_Trade_contract
-		Text = "Trade contract"
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = NOR_speech_in_british }
 		x = 1
@@ -172,7 +382,6 @@
 	}
 	focus = {
 		id = NOR_General_Corp
-		Text = "General Corp"
 		icon = GFX_ENG_General_staff
 		prerequisite = { focus = NOR_Trade_contract }
 		x = 0
@@ -306,7 +515,7 @@
 		id = NOR_Industry_improve
 		Text = "Industry Subsidies"
 		icon = GFX_goal_generic_positive_trade_relations
-		prerequisite = { focus = NOR_norwegian_road }
+		prerequisite = { focus = NOR_norwegian_road  }
 		x = -1
 		y = 1
 		relative_position_id = NOR_norwegian_road
@@ -1436,6 +1645,6 @@
 			}
 		}
 	}
-	
+}
 	
 	

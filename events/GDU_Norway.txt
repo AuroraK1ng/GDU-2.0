@@ -14,3 +14,31 @@ country_event = {
 		name = gdunorway.10.a
 	}
 }
+
+country_event = {
+	id = gdunorway.2
+	title = gdunorway.2.t
+	desc = gdunorway.2.d
+	picture = GFX_report_event_canadian_soldiers
+	hidden = yes
+	is_triggered_only = yes
+	option = {
+		name = gdunorway.2.a
+
+		GER = { 
+			transfer_state = 144 
+			transfer_state = 142 
+			transfer_state = 110 
+			transfer_state = 143 
+			transfer_state = 790 
+			hidden_effect = {
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 10000 producer = GER } 
+				add_equipment_to_stockpile = { type = support_equipment amount = 500 producer = GER } 
+				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 1200 producer = GER }
+				add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 1000 producer = GER }
+				add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 500 producer = GER }
+				add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 250 producer = GER }	
+			}
+		}
+	}
+}
