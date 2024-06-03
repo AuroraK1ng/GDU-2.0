@@ -400,18 +400,13 @@
 			}
 		}
 	}
-	
-
 
 
 	#INDUSTRY FOCUS#
 
-
-
 	
 	focus = {
 		id = NOR_Industrialisation
-		Text = "Industrialisation of Norway"
 		icon = GFX_goal_generic_construction
 		x = 8
 		y = 0
@@ -443,7 +438,6 @@
 	
 	focus = {
 		id = NOR_agreement_british_comp
-		Text = " Agreement With British Companies"
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		prerequisite = { focus = NOR_Industrialisation }
 		x = 0
@@ -477,7 +471,6 @@
 	}
 	focus = {
 		id = NOR_norwegian_road
-		Text = "Norwegian roads"
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = NOR_agreement_british_comp }
 		x = -1
@@ -513,7 +506,6 @@
 	}
 	focus = {
 		id = NOR_Industry_improve
-		Text = "Industry Subsidies"
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = NOR_norwegian_road  }
 		x = -1
@@ -543,7 +535,6 @@
 	}
 	focus = {
 		id = NOR_heavy_industry
-		Text = "Heavy Industry"
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = NOR_Industry_improve }
 		x = 0
@@ -575,7 +566,6 @@
 	}
 	focus = {
 		id = NOR_infra_dev
-		Text = "Infrastructure Development"
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = NOR_agreement_british_comp }
 		x = 1
@@ -623,7 +613,6 @@
 	}
 	focus = {
 		id = NOR_army_Industry_improve
-		Text = "Expand Military Contracts"
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = NOR_infra_dev }
 		x = 1
@@ -656,7 +645,6 @@
 	}
 	focus = {
 		id = NOR_army_facilities
-		Text = "New Army Facilities"
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = NOR_army_Industry_improve }
 		x = 0
@@ -689,7 +677,6 @@
 	}
 	focus = {
 		id = NOR_Bergen_mil_factories
-		Text = "Bergen Military Factories"
 		icon = GFX_AST_Prepare_for_defense
 		prerequisite = { focus = NOR_infra_dev focus = NOR_norwegian_road }
 		x = -1
@@ -726,7 +713,6 @@
 	}
 	focus = {
 		id = NOR_Industry_factories
-		Text = "Factory Development"
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = NOR_Bergen_mil_factories }
 		x = 0
@@ -780,7 +766,6 @@
 		id = NOR_American_machines
 		icon = GFX_military_construction
 		prerequisite = { focus = NOR_Industry_factories }
-		text = "American Machines"
 		x = 1
 		y = 1
 		relative_position_id = NOR_Industry_factories
@@ -816,7 +801,6 @@
 	}
 	focus = {
 		id = NOR_production_can
-		Text = "Set Up Production In Canada"
 		icon = GFX_AST_Prepare_for_defense
 		prerequisite = { focus = NOR_invest_mil focus = NOR_American_machines }
 		x = 1
@@ -840,9 +824,8 @@
 
 	focus = {
 		id = NOR_lessons_Of_war
-		Text = "Memory of the Great War"
 		icon = GFX_AST_Gallipoli
-		x = 14
+		x = 18
 		y = 0
 		cost = 5
 		ai_will_do = {
@@ -860,7 +843,6 @@
 	}
 	focus = {
 		id = NOR_engineer
-		Text = "Norwegian Engineering Corps"
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = NOR_lessons_Of_war }
 		x = 0
@@ -881,7 +863,6 @@
 	}
 	focus = {
 		id = NOR_motorised
-		Text = "Motorised Army"
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = NOR_engineer }
 		x = 0
@@ -926,7 +907,6 @@
 	}
 	focus = {
 		id = NOR_logistic
-		Text = "Logistic Company"
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = NOR_motorised }
 		x = 0
@@ -969,7 +949,6 @@
 	
 	focus = {
 		id = NOR_winter_Equipment
-		Text = "Winter Equipment"
 		icon = GFX_ENG_new_Rifle
 	    prerequisite = { focus = NOR_lessons_Of_war }
 		x = -2
@@ -991,14 +970,11 @@
 	}
 	focus = {
 		id = NOR_UK_Army_treaty
-		text = "Treaty With The British Armourers"
 		available = {
 			NOR = {
 				has_completed_focus = NOR_UK_Experience
 			}
 		}
-		
-		
 
 		prerequisite = { focus = NOR_winter_Equipment }
 		icon = GFX_Generic_Chemical_Warfare
@@ -1032,7 +1008,6 @@
 	}
 	focus = {
 		id = NOR_Betting_on_infantry
-		text = "Betting On Infantry"
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = NOR_UK_Army_treaty }
 		x = 0
@@ -1063,7 +1038,7 @@
 
 		completion_reward = {
 			add_tech_bonus = {
-				bonus = 2.00
+				bonus = 1.50
 				uses = 1
 				category = infantry_weapons
 				category = artillery
@@ -1072,7 +1047,6 @@
 	}
 	focus = {
 		id = Nor_artillery_development
-		text = "Artillery Development"
 		available = {
 			
 		}
@@ -1098,7 +1072,6 @@
 	}
 	focus = {
 		id = NOR_Modern_Artillery_Systems
-		Text = "Modern Artillery Systems"
 		icon = GFX_goal_generic_army_artillery2
 	    prerequisite = { focus = NOR_lessons_Of_war }
 		x = 2
@@ -1112,7 +1085,7 @@
 		completion_reward = { 
 		army_experience = 25
 		add_tech_bonus = {
-				bonus = 1.50 
+				bonus = 1.00
 				uses = 2
 				category = artillery
 			}
@@ -1126,9 +1099,8 @@
 
 	focus = {
 		id = NOR_army
-		Text = "Found A Modern Army"
 		icon = GFX_goal_Generic_Scouts
-		x = 22
+		x = 26
 		y = 0
 		cost = 5
 		ai_will_do = {
@@ -1150,7 +1122,6 @@
 	}
 	focus = {
 		id = Nor_women_in_army
-		text = "Women in the Army"
 		available = {
 			
 		}
@@ -1173,7 +1144,6 @@
 	}
 	focus = {
 		id = Nor_Military_production
-		text = "Military Production"
 		available = {
 			
 		}
@@ -1225,7 +1195,6 @@
 	}
 	focus = {
 		id = NOR_Army_propaganda
-		Text = "Army Propaganda"
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = Nor_Grandsons_Vikings }
 		x = 1
@@ -1245,7 +1214,6 @@
 	}
 	focus = {
 		id = NOR_Modern_warfare
-		text = "Modern Warfare"
 		available = {
 			
 		}
@@ -1276,7 +1244,6 @@
 	}
 	focus = {
 		id = NOR_UK_training
-		Text = "Army Training Treaty"
 		icon = GFX_focus_chi_british_cooperation
 		prerequisite = { focus = NOR_Army_propaganda }
 		x = 1
@@ -1296,7 +1263,6 @@
 	}
 	focus = {
 		id = NOR_africa_warfare
-		Text = "Africa Warfare"
 		icon = GFX_AST_Promote
 		prerequisite = { focus = NOR_Army_propaganda focus = NOR_Modern_warfare }
 		x = -1
@@ -1318,7 +1284,6 @@
 	}
 	focus = {
 		id = NOR_UK_commands
-		Text = "British Commanders"
 		icon = GFX_AST_British_experience
 		prerequisite = { focus = NOR_Modern_warfare }
 		x = -1
@@ -1337,7 +1302,6 @@
 	}
 	focus = {
 		id = NOR_Allied_aid
-		Text = "Allied Aid"
 		icon = GFX_america_goal_american_industry
 		prerequisite = { focus = NOR_UK_commands }
 		prerequisite = { focus = NOR_UK_training }
@@ -1358,7 +1322,6 @@
 	}
 	focus = {
 		id = NOR_unite_nation
-		Text = "Unite a Nation"
 		icon = GFX_focus_generic_support_the_left_right
 		prerequisite = { focus = NOR_Allied_aid }
 		x = 0
@@ -1381,7 +1344,6 @@
 	}
 	focus = {
 		id = Nor_Homeland
-		text = "Let's Go Back To Our Homeland"
 		available = {
 		}
 		available_if_capitulated = yes
@@ -1404,7 +1366,6 @@
 	}
 	focus = {
 		id = Nor_Bofors
-		text = "Contract with Bofors"
 		available = {
 			
 		}
@@ -1461,7 +1422,6 @@
 	}	
 	focus = {
 		id = Nor_army_tactics
-		text = "New Army Tactics"
 		available = {
 			
 		}
@@ -1487,7 +1447,6 @@
 	}
 	focus = {
 		id = Nor_port_raids
-		text = "Port Raids"
 		available = {
 			
 		}
@@ -1517,7 +1476,6 @@
 	}
 	focus = {
 		id = Nor_Special_Operations_Forces
-		text = "Special Operations Forces"
 		available = {
 			
 		}
@@ -1549,7 +1507,6 @@
 	}
 	focus = {
 		id = NOR_Special_Forces_gear
-		Text = "Special Forces Gear"
 		icon = GFX_ENG_new_Rifle
 	    prerequisite = { focus = Nor_Special_Operations_Forces }
 		x = -1
@@ -1572,7 +1529,6 @@
 	
 	focus = {
 		id = Nor_support_bat
-		text = "Support Batalion"
 		available = {
 			
 		}
@@ -1596,7 +1552,6 @@
 	}
 	focus = {
 		id = Nor_rocket
-		text = "Study Rocket Artillery "
 		available = {
 			
 		}
@@ -1621,7 +1576,6 @@
 	}
 	focus = {
 		id = Nor_special_army_training
-		text = "New Special Army training"
 		available = {
 			
 		}
@@ -1643,6 +1597,288 @@
 				technology = survival_training
 				technology = elite_forces
 			}
+		}
+	}
+	
+	#NAVY#
+	
+	focus = {
+		id = NOR_seaward_defence_force
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 13
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			navy_experience = 25
+			add_offsite_building = { type = dockyard level = 2 }
+			add_tech_bonus = {
+				name = NOR_seaward_defence_force
+				bonus = 1.00 
+				uses = 1
+				category = naval_doctrine
+			}				
+		}
+	}
+
+	focus = {
+		id = NOR_protect_the_trade
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = NOR_seaward_defence_force }
+		x = -1
+		y = 1
+		relative_position_id = NOR_seaward_defence_force
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0.8
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+
+		completion_reward = {	
+			add_tech_bonus = {
+				name = NOR_protect_the_trade
+				bonus = 1.00 
+				uses = 2
+				category = convoy_defense_tree
+			}			
+		}
+	}
+
+	focus = {
+		id = NOR_disrupt_the_trade
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = NOR_seaward_defence_force }
+		#mutually_exclusive = { focus = NOR_protect_the_trade }
+		x = 1
+		y = 1
+		relative_position_id = NOR_seaward_defence_force
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0.2
+			modifier = {
+				has_war_with = ENG
+				factor = 10
+			}
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+
+		completion_reward = {	
+			add_tech_bonus = {
+				name = NOR_disrupt_the_trade
+				bonus = 1.00 
+				uses = 2
+				category = cat_trade_interdiction
+			}				
+		}
+	}
+
+	focus = {
+		id = NOR_expand_naval_bases
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = NOR_protect_the_trade focus = NOR_disrupt_the_trade }
+		x = 0
+		y = 2
+		relative_position_id = NOR_seaward_defence_force
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = dockyard level = 5 }				
+		}
+	}
+
+	focus = {
+		id = NOR_anti_submarine_tactics
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = NOR_expand_naval_bases }
+		x = -1
+		y = 3
+		relative_position_id = NOR_seaward_defence_force
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1939.6.1
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = NOR_anti_submarine_tactics
+				bonus = 2.00 
+				uses = 1
+				technology = improved_ship_hull_cruiser
+			}						
+		}
+	}
+
+	focus = {
+		id = NOR_submarine_warfare
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = NOR_expand_naval_bases }
+		x = 1
+		y = 3
+		relative_position_id = NOR_seaward_defence_force
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_war_with = ENG
+				factor = 3
+			}
+		}
+
+		available = {
+			date > 1939.6.1
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = NOR_submarine_warfare
+				bonus = 2.00 
+				uses = 1
+				technology = improved_ship_hull_submarine
+			}				
+		}
+	}
+
+	focus = {
+		id = NOR_prepare_overseas_offensive
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = NOR_anti_submarine_tactics }
+		#mutually_exclusive = { focus = NOR_Finish_naval_rearm }
+		x = -1
+		y = 4
+		relative_position_id = NOR_seaward_defence_force
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {	
+			add_tech_bonus = {
+				name = NOR_prepare_overseas_offensive
+				bonus = 1.00 
+				uses = 1
+				category = naval_doctrine
+			}
+			add_offsite_building = { type = dockyard level = 2 }				
+		}
+	}
+
+	focus = {
+		id = NOR_Finish_naval_rearm
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = NOR_submarine_warfare }
+		x = 1
+		y = 4
+		relative_position_id = NOR_seaward_defence_force
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {	
+			add_tech_bonus = {
+				name = NOR_prepare_overseas_offensive
+				bonus = 1.00 
+				uses = 1
+				category = naval_doctrine
+			}
+			add_offsite_building = { type = dockyard level = 2 }				
 		}
 	}
 }

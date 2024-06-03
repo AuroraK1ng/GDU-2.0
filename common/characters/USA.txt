@@ -554,12 +554,19 @@ characters = {
 			}
 		}
 		corps_commander = {
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
+			traits = {
+				career_officer
+				trickster
+				panzer_leader
+				skilled_staffer
+				politically_connected
+				urban_assault_specialist
+			}
+			skill = 6
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 8
 		}
 	}
 	USA_jonathan_wainwright_AFRICA = {
@@ -573,8 +580,8 @@ characters = {
 			traits = {
 				desert_fox
 				career_officer
-				commando
-				infantry_leader
+				trickster
+				panzer_leader
 				skilled_staffer
 				politically_connected
 				urban_assault_specialist
