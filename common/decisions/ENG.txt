@@ -152,7 +152,6 @@ political_actions = {
 		complete_effect = {
 			ENG = {
 				annex_country = { target = CAN transfer_troops = yes }
-				add_ideas = annex_canada_idea
 				add_timed_idea = { idea = GDU_minor_annexation_efficiency days = 30 }				
 			}
 		}
@@ -175,7 +174,6 @@ political_actions = {
 		complete_effect = {
 			ENG = {
 				annex_country = { target = RAJ transfer_troops = yes }
-				add_ideas = annex_british_raj_idea
 				add_timed_idea = { idea = GDU_minor_annexation_efficiency days = 30 }
 			}
 		}
@@ -198,7 +196,6 @@ political_actions = {
 		complete_effect = {
 			ENG = {
 				annex_country = { target = SAF transfer_troops = yes }
-				add_ideas= annex_south_africa_idea
 				add_timed_idea = { idea = GDU_minor_annexation_efficiency days = 30 }
 			}
 		}
@@ -221,7 +218,6 @@ political_actions = {
 		complete_effect = {
 			ENG = {
 				annex_country = { target = AST transfer_troops = yes }
-				add_ideas = annex_australia_idea
 				add_timed_idea = { idea = GDU_minor_annexation_efficiency days = 30 }
 			}
 		}
@@ -244,7 +240,6 @@ political_actions = {
 		complete_effect = {
 			ENG = {
 				annex_country = { target = NZL transfer_troops = yes }
-				add_ideas= annex_new_zealand_idea
 				add_timed_idea = { idea = GDU_minor_annexation_efficiency days = 30 }
 			}
 		}
@@ -268,7 +263,6 @@ political_actions = {
 		complete_effect = {
 			ENG = {
 				annex_country = { target = FRA transfer_troops = yes }
-				add_ideas=annex_france_idea
 				add_timed_idea = { idea = GDU_minor_annexation_efficiency days = 30 }
 				
 			if = { 
@@ -469,16 +463,9 @@ political_actions = {
 				}
 				add_offsite_building = { type = arms_factory level = 1 }								
 			}				
-				
-				
-				
-				
-				
-				
-				
-			}
 		}
 	}
+}
 
 	ENG_Capital_London = {
 
