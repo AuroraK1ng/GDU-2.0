@@ -422,7 +422,7 @@ NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_ACCIDENT_FACTOR = 0.00
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 3.0 --makes redeployement of fighters faster vanilla is 0.02
 
 NDefines.NAir.AIR_MORE_GROUND_CREWS_COST = 500.0 -- Disables ground crews. They're cancerous. 
-NDefines.NAir.ACCIDENT_CHANCE_BASE = 0.025
+NDefines.NAir.ACCIDENT_CHANCE_BASE = 0.0
 NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.05 -- Vanilla = 1
 NDefines.NAir.COMBAT_DAMAGE_SCALE_CARRIER = 1.5
 

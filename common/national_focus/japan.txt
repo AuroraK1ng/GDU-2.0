@@ -3456,14 +3456,13 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-			add_ideas = bureau_of_ships_focus
 			random_state = {
 				limit = {
 					has_state_flag = JAP_new_naval_estimates_DY1
 				}
 				add_building_construction = {
 					type = dockyard
-					level = 3
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -3473,7 +3472,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = dockyard
-					level = 3
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -3487,7 +3486,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = bureau_of_ships_focus
 			random_owned_controlled_state = {
 				limit = {
 					ROOT = { has_full_control_of_state = PREV }
@@ -3498,10 +3496,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 3
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = JAP_new_naval_estimates_DY1
@@ -3516,10 +3514,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 3
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = JAP_new_naval_estimates_DY2
