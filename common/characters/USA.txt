@@ -1689,30 +1689,6 @@ characters = {
 			has_government = communism
 		}
 	}
-	USA_stonewall_campbell = {
-		name = USA_stonewall_campbell
-		advisor = {
-			slot = political_advisor
-			idea_token = stonewall_campbell
-			allowed = {
-				original_tag = USA
-			}
-			available = {
-				date > 1943.1.1
-			}
-			visible = {
-			}
-			traits = {
-				emergency_war_construction1
-			}
-			cost = 50
-			do_effect = {
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-	}
 	USA_whittaker_chambers = {
 		name = USA_whittaker_chambers
 		portraits = {
@@ -1765,15 +1741,15 @@ characters = {
 				original_tag = USA
 			}
 			available = {
-			}
-			visible = {
-				has_dlc = "Man the Guns"
+				date > 1943.1.1
 			}
 			traits = {
-				editor
+				emergency_war_construction1
 			}
-			cost = 50
+			cost = 150
+			
 			do_effect = {
+			
 			}
 			ai_will_do = {
 				factor = 1
