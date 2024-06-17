@@ -1,0 +1,915 @@
+technologies = {
+	special_forces_mountaineers = {
+		doctrine_name = "TITLE_SPECIAL_FORCES"
+		
+		# EFFECT ########
+		###########
+		
+		force_use_small_tech_layout = yes
+		
+		xp_research_type = army
+		
+		xor = { special_forces_marines special_forces_paratroopers }
+		
+		path = {
+			leads_to_tech = ski_troops
+			research_cost_coeff = 1
+		}	
+
+		path = {
+			leads_to_tech = rangers
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		allow = {
+			AND = {
+				has_tech = tech_mountaineers
+				date > 1941.01.01
+			}
+		}
+		
+		on_research_complete = {
+		}
+		
+		categories = {
+			special_forces_doctrine
+			mountaineers_tech
+			cat_mountaineers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 0 y = 0 }
+		}
+	}
+	
+	ski_troops = {
+
+		xp_research_type = army
+		
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = special_forces_recon
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 1
+
+		categories = {
+			special_forces_doctrine
+			mountaineers_tech
+			cat_mountaineers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 2 }
+		}
+	}
+	
+	rangers = {
+
+		xp_research_type = army
+		
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = special_forces_recon
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes	
+		research_cost = 1
+
+		categories = {
+			special_forces_doctrine
+			mountaineers_tech
+			cat_mountaineers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 2 }
+		}
+	}
+	
+	special_forces_recon = {
+
+		xp_research_type = army
+		
+		
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = mountaineers_combat_1
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = mountaineers_combat_2
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes	
+		research_cost = 1
+
+		categories = {
+			special_forces_doctrine
+			mountaineers_tech
+			cat_mountaineers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 0 y = 4 }
+		}
+	
+	}
+	
+	mountaineers_combat_1 = {
+
+		xp_research_type = army
+		
+		
+		force_use_small_tech_layout = yes
+		
+		
+		path = {
+			leads_to_tech = mountaineers_combat_3
+			research_cost_coeff = 1
+		}
+		
+		
+		doctrine = yes	
+		research_cost = 1
+
+		categories = {
+			special_forces_doctrine
+			mountaineers_tech
+			cat_mountaineers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 6 }
+		}
+	
+	}
+	
+	mountaineers_combat_2 = {
+
+		xp_research_type = army
+		
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = mountaineers_combat_3
+			research_cost_coeff = 1
+		}
+		
+		
+		doctrine = yes	
+		research_cost = 1
+
+		categories = {
+			special_forces_doctrine
+			mountaineers_tech
+			cat_mountaineers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 6 }
+		}
+		
+	}
+	
+	mountaineers_combat_3 = {
+
+		xp_research_type = army
+		
+		
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = mountaineers_keystone_1
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = mountaineers_keystone_2
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes	
+		research_cost = 1
+
+		categories = {
+			special_forces_doctrine
+			mountaineers_tech
+			cat_mountaineers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 0 y = 8 }
+		}
+		
+	}
+	
+	mountaineers_keystone_1 = {
+
+		xp_research_type = army
+		
+		
+		force_use_small_tech_layout = yes
+			
+				
+		doctrine = yes	
+		research_cost = 1
+
+		categories = {
+			special_forces_doctrine
+			mountaineers_tech
+			cat_mountaineers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 10 }
+		}
+		
+	}
+	
+	mountaineers_keystone_2 = {
+
+		xp_research_type = army
+		
+		
+		force_use_small_tech_layout = yes
+
+		
+		doctrine = yes	
+		research_cost = 1
+
+		categories = {
+			special_forces_doctrine
+			mountaineers_tech
+			cat_mountaineers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 10 }
+		}
+
+	}
+	
+	special_forces_marines = {
+		doctrine_name = "MARINES_DOCTRINE"
+		
+		xp_research_type = navy
+		
+		
+		xor = { special_forces_mountaineers special_forces_paratroopers }
+		
+		force_use_small_tech_layout = yes
+		
+		allow = { 
+			AND = {
+				has_tech = marines
+				date > 1941.01.01
+			}
+		}
+		
+		on_research_complete = {
+		}
+		
+		path = {
+			leads_to_tech = marines_jungle_troops 
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = marines_shore_parties
+			research_cost_coeff = 1
+		}
+		
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 0 y = 0 }
+		}
+	}
+	
+	marines_jungle_troops = {
+		
+		xp_research_type = navy
+		
+		
+		
+		force_use_small_tech_layout = yes
+
+		
+		path = {
+			leads_to_tech = marines_recon 
+			research_cost_coeff = 1
+		}
+			
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 2 }
+		}
+	}
+	
+	marines_shore_parties = {
+		
+		xp_research_type = navy
+		
+		
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = marines_recon 
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 2 }
+		}
+	
+	}
+	
+	marines_recon = {
+		
+		xp_research_type = navy
+		
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = marines_commandoes 
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = marines_expeditionary 
+			research_cost_coeff = 1
+		}
+			
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 0 y = 4 }
+		}
+		
+	}
+	
+	marines_commandoes = {
+		
+		xp_research_type = navy
+		
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = marines_commandos_demolition 
+			research_cost_coeff = 1
+		}
+		
+
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 6 }
+		}
+		
+	}
+	
+	marines_expeditionary = {
+		
+		xp_research_type = navy
+		
+		
+		force_use_small_tech_layout = yes
+
+		path = {
+			leads_to_tech = marines_commandoes_mechanised
+			research_cost_coeff = 1
+		}
+		
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 6 }
+		}
+		
+	}
+	
+	marines_commandos_demolition = {
+		
+		xp_research_type = navy
+		
+		
+		force_use_small_tech_layout = yes
+
+		path = {
+			leads_to_tech = marines_expeditionary_blowtorch 
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+		
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 8 }
+		}
+		
+	}
+	
+	marines_commandoes_mechanised = {
+		
+		xp_research_type = navy
+		
+		
+		force_use_small_tech_layout = yes
+		
+		
+		path = {
+			leads_to_tech = marines_expeditionary_support 
+			research_cost_coeff = 1
+		}
+			
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 8 }
+		}
+		
+	}
+	
+	marines_expeditionary_blowtorch = {
+		
+		xp_research_type = navy
+		
+		
+		force_use_small_tech_layout = yes
+		allow_branch = { has_dlc = "Man the Guns" }
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 10 }
+		}
+		
+	}
+	
+	marines_commandoes_mechanised_non_mtg = {
+		
+		xp_research_type = navy
+		
+		
+		force_use_small_tech_layout = yes
+		allow_branch = { not = { has_dlc = "Man the Guns" } }
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 10 }
+		}
+		
+	}
+	
+	marines_expeditionary_support = {
+		
+		xp_research_type = navy
+		
+		
+		force_use_small_tech_layout = yes
+			
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 10 }
+		}
+		
+	}
+	
+	###Paratroopers
+	
+	special_forces_paratroopers = {
+		doctrine_name = "PARATROOPERS_DOCTRINE"
+
+		xp_research_type = air
+		
+		
+		force_use_small_tech_layout = yes
+		
+		xor = { special_forces_mountaineers special_forces_marines } 
+	
+		
+		allow = { 
+			AND = {
+				has_tech = paratroopers 
+				date > 1941.01.01
+			}
+		}
+		
+		path = {
+			leads_to_tech = paras_dispersed_drop
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = paras_combat_drop
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			para_tech
+			cat_paratroopers_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 0 y = 0 }
+		}
+		
+	}
+	
+	paras_dispersed_drop = {
+
+		xp_research_type = air
+		
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = paras_airborne_light_armor
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		on_research_complete = {
+			custom_effect_tooltip = SF_PARAS_sabotage_effect_tt
+		}
+		
+		categories = {
+			special_forces_doctrine
+			para_tech
+			cat_paratroopers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 2 }
+		}
+		
+	}
+	
+	paras_combat_drop = {
+
+		xp_research_type = air
+		
+		
+		force_use_small_tech_layout = yes
+		
+		
+		path = {
+			leads_to_tech = paras_airborne_light_armor
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			para_tech
+			cat_paratroopers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 2 }
+		}
+		
+	}
+	
+	paras_airborne_light_armor = {
+
+		xp_research_type = air
+		
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = paras_keystone_2
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = paras_combat_2
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			para_tech
+			cat_paratroopers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 0 y = 4 }
+		}
+	}
+	
+	paras_keystone_2 = {
+		
+		xp_research_type = air
+		
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = paras_bonus_1 
+			research_cost_coeff = 1
+		}
+		
+			
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			para_tech
+			cat_paratroopers_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 6 }
+		}
+	}
+	
+	paras_combat_2 = {
+		
+		xp_research_type = air
+		
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = paras_bonus_2 
+			research_cost_coeff = 1
+		}
+				
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			para_tech
+			cat_paratroopers_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 6 }
+		}
+	}
+	
+	paras_bonus_1 = {
+		
+		xp_research_type = air
+		
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = paras_keystone_1 
+			research_cost_coeff = 1
+		}
+			
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			para_tech
+			cat_paratroopers_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 8 }
+		}
+	}
+	
+	paras_bonus_2 = {
+		
+		xp_research_type = air
+		
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = paras_combat_1 
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			para_tech
+			cat_paratroopers_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 8 }
+		}
+		
+	}
+	
+	paras_keystone_1 = {
+		
+		xp_research_type = air
+		
+		
+		force_use_small_tech_layout = yes
+			
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			para_tech
+			cat_paratroopers_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 10 }
+		}
+	
+	}
+	
+	paras_combat_1 = {
+		
+		xp_research_type = air
+		
+		
+		force_use_small_tech_layout = yes
+			
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			para_tech
+			cat_paratroopers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 10 }
+		}
+	}
+
+}
