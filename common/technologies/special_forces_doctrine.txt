@@ -4,10 +4,16 @@ technologies = {
 		
 		# EFFECT ########
 		###########
+
+		mountaineers = {
+			supply_consumption = -0.05
+			soft_attack = 0.03
+		}
 		
 		force_use_small_tech_layout = yes
 		
 		xp_research_type = army
+
 		
 		xor = { special_forces_marines special_forces_paratroopers }
 		
@@ -49,6 +55,13 @@ technologies = {
 	ski_troops = {
 
 		xp_research_type = army
+
+		mountaineers = {
+			mountain = {
+				movement = 0.05
+			}
+			acclimatization_cold_climate_gain_factor = 0.2
+		}
 		
 		
 		force_use_small_tech_layout = yes
@@ -77,6 +90,17 @@ technologies = {
 	rangers = {
 
 		xp_research_type = army
+
+		desertinfantry = {
+			desert = {
+				attack = 0.05
+				movement = 0.05
+			}
+			desert_africa = {
+				attack = 0.05
+				movement = 0.05
+			}			
+		}
 		
 		
 		force_use_small_tech_layout = yes
@@ -105,7 +129,12 @@ technologies = {
 
 		xp_research_type = army
 		
-		
+		desertinfantry = {
+			initiative = 0.05
+		}
+		mountaineers = {
+			initiative = 0.05
+		}
 		
 		force_use_small_tech_layout = yes
 		
@@ -138,6 +167,11 @@ technologies = {
 	mountaineers_combat_1 = {
 
 		xp_research_type = army
+
+		desertinfantry = {
+			max_organisation = 5
+			defense = 0.05
+		}
 		
 		
 		force_use_small_tech_layout = yes
@@ -169,6 +203,16 @@ technologies = {
 
 		xp_research_type = army
 		
+		artillery_brigade = {
+			mountain = {
+				attack = 0.075
+				movement = 0.05
+			}
+			mountain_africa = {
+				attack = 0.075
+				movement = 0.05
+			}
+		}
 		
 		force_use_small_tech_layout = yes
 		
@@ -198,7 +242,14 @@ technologies = {
 
 		xp_research_type = army
 		
-		
+		mountaineers = {
+			hard_attack = 0.05
+			soft_attack = 0.05
+		}
+		desertinfantry = {
+			hard_attack = 0.05
+			soft_attack = 0.05
+		}
 		
 		force_use_small_tech_layout = yes
 		
@@ -232,6 +283,10 @@ technologies = {
 
 		xp_research_type = army
 		
+		mountaineers = {
+			max_strength = 0.25
+			max_organisation = 5
+		}
 		
 		force_use_small_tech_layout = yes
 			
@@ -256,6 +311,10 @@ technologies = {
 
 		xp_research_type = army
 		
+		category_special_forces = {
+			hard_attack = 0.05
+			soft_attack = 0.05
+		}
 		
 		force_use_small_tech_layout = yes
 
@@ -281,6 +340,11 @@ technologies = {
 		
 		xp_research_type = navy
 		
+		naval_invasion_capacity = 15
+		marine = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
 		
 		xor = { special_forces_mountaineers special_forces_paratroopers }
 		
@@ -327,7 +391,12 @@ technologies = {
 		
 		xp_research_type = navy
 		
-		
+		jungletroop = {
+			jungle = {
+				attack = 0.05
+				movement = 0.05
+			}
+		}
 		
 		force_use_small_tech_layout = yes
 
@@ -357,7 +426,12 @@ technologies = {
 		
 		xp_research_type = navy
 		
-		
+		marine = {
+			amphibious = {
+				attack = 0.05
+				movement = 0.05
+			}
+		}
 		
 		force_use_small_tech_layout = yes
 		
@@ -387,7 +461,15 @@ technologies = {
 		
 		xp_research_type = navy
 		
-		
+		marine = {
+			max_strength = 0.1
+			max_organisation = 5
+		}
+		jungletroop = {
+			max_strength = 0.1
+			max_organisation = 5
+		}
+
 		force_use_small_tech_layout = yes
 		
 		path = {
@@ -421,7 +503,15 @@ technologies = {
 		
 		xp_research_type = navy
 		
+		marine = {
+			jungle = {
+				movement = 0.05
+				defence = 0.05
+			}
+			acclimatization_hot_climate_gain_factor = 0.1
+		}
 		
+
 		force_use_small_tech_layout = yes
 		
 		path = {
@@ -450,6 +540,11 @@ technologies = {
 	marines_expeditionary = {
 		
 		xp_research_type = navy
+
+		marine = {
+			initiative = 0.1
+		}
+		naval_invasion_planning_bonus_speed = 0.4
 		
 		
 		force_use_small_tech_layout = yes
@@ -481,6 +576,13 @@ technologies = {
 		
 		xp_research_type = navy
 		
+		jungletroop = {
+			breakthrough = 0.1
+		}
+		marine = {
+			breakthrough = 0.05
+		}
+		
 		
 		force_use_small_tech_layout = yes
 
@@ -511,6 +613,15 @@ technologies = {
 		
 		xp_research_type = navy
 		
+		amphibious_mechanized = {
+			 soft_attack = 0.05
+			 jungle = {
+				movement = 0.05
+			 }
+			 river = {
+				movement = 0.05
+			 }
+		}
 		
 		force_use_small_tech_layout = yes
 		
@@ -541,6 +652,13 @@ technologies = {
 		
 		xp_research_type = navy
 		
+		army_bonus_air_superiority_factor = 0.05
+		jungletroop = {
+			acclimatization_hot_climate_gain_factor = 0.2
+			hills = {
+				attack = 0.05
+			}
+		}
 		
 		force_use_small_tech_layout = yes
 		allow_branch = { has_dlc = "Man the Guns" }
@@ -591,6 +709,9 @@ technologies = {
 		
 		xp_research_type = navy
 		
+		shore_bombardment_bonus = 0.3
+		extra_marine_supply_grace = 48
+		naval_invasion_capacity = 15
 		
 		force_use_small_tech_layout = yes
 			
@@ -618,6 +739,10 @@ technologies = {
 
 		xp_research_type = air
 		
+		paratrooper = {
+			soft_attack = 0.05
+			max_organisation = 5
+		}
 		
 		force_use_small_tech_layout = yes
 		
@@ -662,6 +787,10 @@ technologies = {
 
 		xp_research_type = air
 		
+		jaeger = {
+			breakthrough = 0.1
+			soft_attack = 0.05
+		}
 		
 		force_use_small_tech_layout = yes
 		
@@ -673,10 +802,6 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 1
-		
-		on_research_complete = {
-			custom_effect_tooltip = SF_PARAS_sabotage_effect_tt
-		}
 		
 		categories = {
 			special_forces_doctrine
@@ -695,6 +820,9 @@ technologies = {
 
 		xp_research_type = air
 		
+		paratrooper = {
+			maximum_speed = 0.05
+		}
 		
 		force_use_small_tech_layout = yes
 		
@@ -724,6 +852,18 @@ technologies = {
 
 		xp_research_type = air
 		
+		category_assault_guns = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		armored_car_recon = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		light_tank_recon = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
 		
 		force_use_small_tech_layout = yes
 		
@@ -756,7 +896,13 @@ technologies = {
 		
 		xp_research_type = air
 		
-		
+		jaeger = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+		xor = { paras_combat_2 }
+
 		force_use_small_tech_layout = yes
 		
 		path = {
@@ -784,7 +930,13 @@ technologies = {
 	paras_combat_2 = {
 		
 		xp_research_type = air
+
+		xor = { paras_keystone_2 }
 		
+		paratrooper = {
+			max_strength = 0.1
+			defense = 0.05
+		}
 		
 		force_use_small_tech_layout = yes
 		
@@ -813,7 +965,13 @@ technologies = {
 		
 		xp_research_type = air
 		
-		
+		planning_speed = 0.1
+		jaeger = {
+			forest = {
+				defence = 0.05
+			}
+		}
+
 		force_use_small_tech_layout = yes
 		
 		path = {
@@ -841,6 +999,10 @@ technologies = {
 		
 		xp_research_type = air
 		
+		paratrooper = {
+			supply_consumption_factor = -0.1
+			max_strength = 0.05
+		}
 		
 		force_use_small_tech_layout = yes
 		
@@ -869,7 +1031,14 @@ technologies = {
 	paras_keystone_1 = {
 		
 		xp_research_type = air
-		
+
+		jaeger = {
+			max_strength = -5
+			max_organisation = -15
+			soft_attack = 0.1
+			hard_attack = 0.1
+			acclimatization_cold_climate_gain_factor = 0.4
+		}
 		
 		force_use_small_tech_layout = yes
 			
@@ -894,7 +1063,12 @@ technologies = {
 		
 		xp_research_type = air
 		
-		
+		army_bonus_air_superiority_factor = 0.05
+		paratrooper = {
+			initiative = 0.05
+
+		}
+
 		force_use_small_tech_layout = yes
 			
 		doctrine = yes	
