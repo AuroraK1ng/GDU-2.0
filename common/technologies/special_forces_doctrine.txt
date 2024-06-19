@@ -7,7 +7,9 @@ technologies = {
 
 		mountaineers = {
 			supply_consumption = -0.05
-			soft_attack = 0.03
+		}
+		desertinfantry = {
+			supply_consumption = -0.05
 		}
 		
 		force_use_small_tech_layout = yes
@@ -15,7 +17,6 @@ technologies = {
 		xp_research_type = army
 
 		
-		xor = { special_forces_marines special_forces_paratroopers }
 		
 		path = {
 			leads_to_tech = ski_troops
@@ -31,9 +32,9 @@ technologies = {
 		research_cost = 1
 		
 		allow = {
-			AND = {
+			OR = {
 				has_tech = tech_mountaineers
-				date > 1941.01.01
+				has_tech = desertinfantry_at
 			}
 		}
 		
@@ -171,6 +172,7 @@ technologies = {
 		desertinfantry = {
 			max_organisation = 5
 			defense = 0.05
+			max_strength = 0.5
 		}
 		
 		
@@ -242,10 +244,6 @@ technologies = {
 
 		xp_research_type = army
 		
-		mountaineers = {
-			hard_attack = 0.05
-			soft_attack = 0.05
-		}
 		desertinfantry = {
 			hard_attack = 0.05
 			soft_attack = 0.05
@@ -311,7 +309,7 @@ technologies = {
 
 		xp_research_type = army
 		
-		category_special_forces = {
+		mountaineers = {
 			hard_attack = 0.05
 			soft_attack = 0.05
 		}
@@ -346,14 +344,13 @@ technologies = {
 			hard_attack = 0.05
 		}
 		
-		xor = { special_forces_mountaineers special_forces_paratroopers }
 		
 		force_use_small_tech_layout = yes
 		
 		allow = { 
-			AND = {
+			OR = {
 				has_tech = marines
-				date > 1941.01.01
+				has_tech = jungletroops
 			}
 		}
 		
@@ -544,7 +541,7 @@ technologies = {
 		marine = {
 			initiative = 0.1
 		}
-		naval_invasion_planning_bonus_speed = 0.4
+		naval_invasion_planning_bonus_speed = 0.15
 		
 		
 		force_use_small_tech_layout = yes
@@ -614,13 +611,7 @@ technologies = {
 		xp_research_type = navy
 		
 		amphibious_mechanized = {
-			 soft_attack = 0.05
-			 jungle = {
-				movement = 0.05
-			 }
-			 river = {
-				movement = 0.05
-			 }
+			initiative = 0.05
 		}
 		
 		force_use_small_tech_layout = yes
@@ -746,13 +737,12 @@ technologies = {
 		
 		force_use_small_tech_layout = yes
 		
-		xor = { special_forces_mountaineers special_forces_marines } 
 	
 		
 		allow = { 
-			AND = {
+			OR = {
 				has_tech = paratroopers 
-				date > 1941.01.01
+				has_tech = jaegers
 			}
 		}
 		
@@ -788,8 +778,7 @@ technologies = {
 		xp_research_type = air
 		
 		jaeger = {
-			breakthrough = 0.1
-			soft_attack = 0.05
+			breakthrough = 0.05
 		}
 		
 		force_use_small_tech_layout = yes
@@ -852,10 +841,6 @@ technologies = {
 
 		xp_research_type = air
 		
-		category_assault_guns = {
-			soft_attack = 0.05
-			hard_attack = 0.05
-		}
 		armored_car_recon = {
 			soft_attack = 0.05
 			hard_attack = 0.05
@@ -898,7 +883,6 @@ technologies = {
 		
 		jaeger = {
 			soft_attack = 0.05
-			hard_attack = 0.05
 		}
 
 		xor = { paras_combat_2 }
@@ -965,7 +949,6 @@ technologies = {
 		
 		xp_research_type = air
 		
-		planning_speed = 0.1
 		jaeger = {
 			forest = {
 				defence = 0.05
@@ -1033,11 +1016,11 @@ technologies = {
 		xp_research_type = air
 
 		jaeger = {
-			max_strength = -5
+			max_strength = -7.5
 			max_organisation = -15
-			soft_attack = 0.1
-			hard_attack = 0.1
-			acclimatization_cold_climate_gain_factor = 0.4
+			soft_attack = 0.05
+			hard_attack = 0.05
+			acclimatization_cold_climate_gain_factor = 0.2
 		}
 		
 		force_use_small_tech_layout = yes
@@ -1063,7 +1046,6 @@ technologies = {
 		
 		xp_research_type = air
 		
-		army_bonus_air_superiority_factor = 0.05
 		paratrooper = {
 			initiative = 0.05
 
