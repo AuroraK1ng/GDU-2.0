@@ -103,6 +103,10 @@ technology_categories = {
 	cat_air_guns
 	cat_air_engine
 	cat_air_bombs
+	special_forces_doctrine
+	cat_paratroopers_doctrine
+	cat_marines_doctrine
+	cat_mountaineers_doctrine
 
 	mio_cat_tech_all_armor_and_modules #Includes modules and chassis (DOES NOT INCLUDE ARMORED CARS)
 	mio_cat_tech_light_armor_and_modules #Includes modules and stand-alone Amphibious Chassis
@@ -192,6 +196,12 @@ technology_folders = {
 	}
 	air_doctrine_folder = {
 		ledger = air
+	}
+	special_forces_doctrine_folder = {
+		available = {
+			has_dlc = "Arms Against Tyranny"
+		}
+		ledger = hidden #For now
 	}
 	
 	electronics_folder = {

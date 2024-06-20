@@ -1,0 +1,1086 @@
+technologies = {
+	special_forces_mountaineers = {
+		doctrine_name = "TITLE_SPECIAL_FORCES"
+		
+		# EFFECT ########
+		###########
+
+		mountaineers = {
+			supply_consumption = -0.05
+		}
+		desertinfantry = {
+			supply_consumption = -0.05
+		}
+		
+		force_use_small_tech_layout = yes
+		
+		xp_research_type = army
+
+		
+		
+		path = {
+			leads_to_tech = ski_troops
+			research_cost_coeff = 1
+		}	
+
+		path = {
+			leads_to_tech = rangers
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		allow = {
+			OR = {
+				has_tech = tech_mountaineers
+				has_tech = desertinfantry_at
+			}
+		}
+		
+		on_research_complete = {
+		}
+		
+		categories = {
+			special_forces_doctrine
+			mountaineers_tech
+			cat_mountaineers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 0 y = 0 }
+		}
+	}
+	
+	ski_troops = {
+
+		xp_research_type = army
+
+		mountaineers = {
+			mountain = {
+				movement = 0.05
+			}
+			hills = {
+				movement = 0.05
+			}
+			acclimatization_cold_climate_gain_factor = 0.2
+		}
+		
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = special_forces_recon
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 1
+
+		categories = {
+			special_forces_doctrine
+			mountaineers_tech
+			cat_mountaineers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 2 }
+		}
+	}
+	
+	rangers = {
+
+		xp_research_type = army
+
+		desertinfantry = {
+			desert = {
+				attack = 0.05
+				movement = 0.05
+			}
+			desert_africa = {
+				attack = 0.05
+				movement = 0.05
+			}			
+		}
+		
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = special_forces_recon
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes	
+		research_cost = 1
+
+		categories = {
+			special_forces_doctrine
+			mountaineers_tech
+			cat_mountaineers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 2 }
+		}
+	}
+	
+	special_forces_recon = {
+
+		xp_research_type = army
+		
+		desertinfantry = {
+			initiative = 0.05
+		}
+		mountaineers = {
+			initiative = 0.05
+		}
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = mountaineers_combat_1
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = mountaineers_combat_2
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes	
+		research_cost = 1
+
+		categories = {
+			special_forces_doctrine
+			mountaineers_tech
+			cat_mountaineers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 0 y = 4 }
+		}
+	
+	}
+	
+	mountaineers_combat_1 = {
+
+		xp_research_type = army
+
+		desertinfantry = {
+			max_organisation = 5
+			defense = 0.05
+			hard_attack = 0.05
+			soft_attack = 0.05
+		}
+		
+		
+		force_use_small_tech_layout = yes
+		
+		
+		path = {
+			leads_to_tech = mountaineers_combat_3
+			research_cost_coeff = 1
+		}
+		
+		
+		doctrine = yes	
+		research_cost = 1
+
+		categories = {
+			special_forces_doctrine
+			mountaineers_tech
+			cat_mountaineers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 6 }
+		}
+	
+	}
+	
+	mountaineers_combat_2 = {
+
+		xp_research_type = army
+		
+		artillery_brigade = {
+			mountain = {
+				attack = 0.075
+				movement = 0.05
+			}
+			mountain_africa = {
+				attack = 0.075
+				movement = 0.05
+			}
+			hills = {
+				attack = 0.075
+				movement = 0.05
+			}
+			hills_africa = {
+				attack = 0.075
+				movement = 0.05
+			}
+		}
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = mountaineers_combat_3
+			research_cost_coeff = 1
+		}
+		
+		
+		doctrine = yes	
+		research_cost = 1
+
+		categories = {
+			special_forces_doctrine
+			mountaineers_tech
+			cat_mountaineers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 6 }
+		}
+		
+	}
+	
+	mountaineers_combat_3 = {
+
+		xp_research_type = army
+		
+		desertinfantry = {
+			hard_attack = 0.05
+			soft_attack = 0.05
+		}
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = mountaineers_keystone_1
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = mountaineers_keystone_2
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes	
+		research_cost = 1
+
+		categories = {
+			special_forces_doctrine
+			mountaineers_tech
+			cat_mountaineers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 0 y = 8 }
+		}
+		
+	}
+	
+	mountaineers_keystone_1 = {
+
+		xp_research_type = army
+		
+		mountaineers = {
+			max_organisation = 5
+			breakthrough = 0.1
+		}
+		
+		force_use_small_tech_layout = yes
+			
+				
+		doctrine = yes	
+		research_cost = 1
+
+		categories = {
+			special_forces_doctrine
+			mountaineers_tech
+			cat_mountaineers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 10 }
+		}
+		
+	}
+	
+	mountaineers_keystone_2 = {
+
+		xp_research_type = army
+		
+		mountaineers = {
+			hard_attack = 0.05
+			soft_attack = 0.05
+		}
+		
+		force_use_small_tech_layout = yes
+
+		
+		doctrine = yes	
+		research_cost = 1
+
+		categories = {
+			special_forces_doctrine
+			mountaineers_tech
+			cat_mountaineers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 10 }
+		}
+
+	}
+	
+	special_forces_marines = {
+		doctrine_name = "MARINES_DOCTRINE"
+		
+		xp_research_type = navy
+		
+		naval_invasion_capacity = 15
+		marine = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		
+		
+		force_use_small_tech_layout = yes
+		
+		allow = { 
+			OR = {
+				has_tech = marines
+				has_tech = jungletroops
+			}
+		}
+		
+		on_research_complete = {
+		}
+		
+		path = {
+			leads_to_tech = marines_jungle_troops 
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = marines_shore_parties
+			research_cost_coeff = 1
+		}
+		
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 0 y = 0 }
+		}
+	}
+	
+	marines_jungle_troops = {
+		
+		xp_research_type = navy
+		
+		jungletroop = {
+			jungle = {
+				attack = 0.05
+				defence = 0.05
+				movement = 0.05
+			}
+		}
+		
+		force_use_small_tech_layout = yes
+
+		
+		path = {
+			leads_to_tech = marines_recon 
+			research_cost_coeff = 1
+		}
+			
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 2 }
+		}
+	}
+	
+	marines_shore_parties = {
+		
+		xp_research_type = navy
+		
+		marine = {
+			amphibious = {
+				attack = 0.05
+				movement = 0.05
+			}
+		}
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = marines_recon 
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 2 }
+		}
+	
+	}
+	
+	marines_recon = {
+		
+		xp_research_type = navy
+		
+		marine = {
+			max_organisation = 5
+		}
+		jungletroop = {
+			max_organisation = 5
+		}
+
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = marines_commandoes 
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = marines_expeditionary 
+			research_cost_coeff = 1
+		}
+			
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 0 y = 4 }
+		}
+		
+	}
+	
+	marines_commandoes = {
+		
+		xp_research_type = navy
+		
+		marine = {
+			jungle = {
+				movement = 0.05
+				defence = 0.05
+				attack = 0.05
+			}
+			acclimatization_hot_climate_gain_factor = 0.2
+		}
+		
+
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = marines_commandos_demolition 
+			research_cost_coeff = 1
+		}
+		
+
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 6 }
+		}
+		
+	}
+	
+	marines_expeditionary = {
+		
+		xp_research_type = navy
+
+		marine = {
+			initiative = 0.1
+		}
+		naval_invasion_planning_bonus_speed = 0.15
+		
+		
+		force_use_small_tech_layout = yes
+
+		path = {
+			leads_to_tech = marines_commandoes_mechanised
+			research_cost_coeff = 1
+		}
+		
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 6 }
+		}
+		
+	}
+	
+	marines_commandos_demolition = {
+		
+		xp_research_type = navy
+		
+		jungletroop = {
+			breakthrough = 0.10
+			max_organisation = 5
+		}
+		marine = {
+			breakthrough = 0.10
+		}
+		
+		
+		force_use_small_tech_layout = yes
+
+		path = {
+			leads_to_tech = marines_expeditionary_blowtorch 
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+		
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 8 }
+		}
+		
+	}
+	
+	marines_commandoes_mechanised = {
+		
+		xp_research_type = navy
+		
+		amphibious_mechanized = {
+			initiative = 0.05
+		}
+		
+		force_use_small_tech_layout = yes
+		
+		
+		path = {
+			leads_to_tech = marines_expeditionary_support 
+			research_cost_coeff = 1
+		}
+			
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 8 }
+		}
+		
+	}
+	
+	marines_expeditionary_blowtorch = {
+		
+		xp_research_type = navy
+		
+		army_bonus_air_superiority_factor = 0.05
+		jungletroop = {
+			acclimatization_hot_climate_gain_factor = 0.2
+			hills = {
+				movement = 0.05
+				defence = 0.05
+				attack = 0.05
+			}
+		}
+		
+		force_use_small_tech_layout = yes
+		allow_branch = { has_dlc = "Man the Guns" }
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 10 }
+		}
+		
+	}
+	
+	marines_commandoes_mechanised_non_mtg = {
+		
+		xp_research_type = navy
+		
+		
+		force_use_small_tech_layout = yes
+		allow_branch = { not = { has_dlc = "Man the Guns" } }
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 10 }
+		}
+		
+	}
+	
+	marines_expeditionary_support = {
+		
+		xp_research_type = navy
+		
+		shore_bombardment_bonus = 0.3
+		extra_marine_supply_grace = 48
+		naval_invasion_capacity = 15
+		
+		force_use_small_tech_layout = yes
+			
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			marine_tech
+			cat_marines_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 10 }
+		}
+		
+	}
+	
+	###Paratroopers
+	
+	special_forces_paratroopers = {
+		doctrine_name = "PARATROOPERS_DOCTRINE"
+
+		xp_research_type = air
+		
+		paratrooper = {
+			max_organisation = 5
+		}
+		
+		force_use_small_tech_layout = yes
+		
+	
+		
+		allow = { 
+			OR = {
+				has_tech = paratroopers 
+				has_tech = jaegers
+			}
+		}
+		
+		path = {
+			leads_to_tech = paras_dispersed_drop
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = paras_combat_drop
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			para_tech
+			cat_paratroopers_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 0 y = 0 }
+		}
+		
+	}
+	
+	paras_dispersed_drop = {
+
+		xp_research_type = air
+		
+		jaeger = {
+			breakthrough = 0.05
+			maximum_speed = 0.05
+		}
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = paras_airborne_light_armor
+			research_cost_coeff = 1
+		}
+
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			para_tech
+			cat_paratroopers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 2 }
+		}
+		
+	}
+	
+	paras_combat_drop = {
+
+		xp_research_type = air
+		
+		paratrooper = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		
+		force_use_small_tech_layout = yes
+		
+		
+		path = {
+			leads_to_tech = paras_airborne_light_armor
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			para_tech
+			cat_paratroopers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 2 }
+		}
+		
+	}
+	
+	paras_airborne_light_armor = {
+
+		xp_research_type = air
+		
+		armored_car_recon = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		light_tank_recon = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = paras_keystone_2
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = paras_combat_2
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			para_tech
+			cat_paratroopers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 0 y = 4 }
+		}
+	}
+	
+	paras_keystone_2 = {
+		
+		xp_research_type = air
+		
+		jaeger = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+		xor = { paras_combat_2 }
+
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = paras_bonus_1 
+			research_cost_coeff = 1
+		}
+		
+			
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			para_tech
+			cat_paratroopers_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 6 }
+		}
+	}
+	
+	paras_combat_2 = {
+		
+		xp_research_type = air
+
+		xor = { paras_keystone_2 }
+		
+		paratrooper = {
+			defense = 0.05
+		}
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = paras_bonus_2 
+			research_cost_coeff = 1
+		}
+				
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			para_tech
+			cat_paratroopers_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 6 }
+		}
+	}
+	
+	paras_bonus_1 = {
+		
+		xp_research_type = air
+		
+		jaeger = {
+			forest = {
+				movement = 0.05
+				defence = 0.05
+				attack = 0.05
+			}
+		}
+
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = paras_keystone_1 
+			research_cost_coeff = 1
+		}
+			
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			para_tech
+			cat_paratroopers_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 8 }
+		}
+	}
+	
+	paras_bonus_2 = {
+		
+		xp_research_type = air
+		
+		paratrooper = {
+			max_strength = 0.05
+			max_organisation = 5
+		}
+		
+		force_use_small_tech_layout = yes
+		
+		path = {
+			leads_to_tech = paras_combat_1 
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			para_tech
+			cat_paratroopers_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 8 }
+		}
+		
+	}
+	
+	paras_keystone_1 = {
+		
+		xp_research_type = air
+
+		jaeger = {
+			max_organisation = 5
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		
+		force_use_small_tech_layout = yes
+			
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			para_tech
+			cat_paratroopers_doctrine
+		}
+
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = -1 y = 10 }
+		}
+	}
+	
+	paras_combat_1 = {
+		
+		xp_research_type = air
+		
+		paratrooper = {
+			initiative = 0.1
+			breakthrough = 0.1
+		}
+
+		force_use_small_tech_layout = yes
+			
+		doctrine = yes	
+		research_cost = 1
+		
+		categories = {
+			special_forces_doctrine
+			para_tech
+			cat_paratroopers_doctrine
+		}
+		
+		folder = {
+			name = special_forces_doctrine_folder
+			position = { x = 1 y = 10 }
+		}
+	}
+
+}
