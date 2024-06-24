@@ -25,7 +25,10 @@ is_in_faction_with_allies = {
 }
 british_coastline_not_south = {
 	OR = { state = 129 state = 130 state = 131 state = 121 state = 136 state = 120 state = 133 state = 132 state = 122 state = 119 }
-     }
+}
+Finland_coast = {
+	OR = { state = 111 state = 148 state = 149 }
+}
 is_in_faction_with_axis = {
 	OR = {
 		is_in_array = { GER.allies = THIS }

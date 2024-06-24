@@ -9,14 +9,25 @@ on_actions = {
 	on_naval_invasion = { 
 		effect ={ 
 			if = { 
-				limit = { OR ={  british_coastline_not_south = yes   }  } 
-				teleport_armies = {limit = { is_in_faction_with_axis = yes  } to_state = 64 }     every_country = {  delete_unit = { state = 64 disband = yes  } } 
+				limit = {OR = {british_coastline_not_south = yes}} 
+				teleport_armies = {limit = { is_in_faction_with_axis = yes  } to_state = 64 } every_country = {  delete_unit = { state = 64 disband = yes  } } 
 				PREV = { 
-					if = { limit ={  NOT = { OR = { state = 582 state = 323 }}}  transfer_state_to = ENG   }  
-					if = { limit ={  state = 582 POL = { owns_state =  582 }  } transfer_state_to = POL }
+					if = { limit = { NOT = { OR = { state = 582 state = 323 }}}  transfer_state_to = ENG }  
+					if = { limit = { state = 582 POL = { owns_state =  582 }} transfer_state_to = POL }
 					else = { transfer_state_to = ENG }
-					if = { limit ={  state = 323 NOR = { owns_state =  323 }  } transfer_state_to = NOR }
+					if = { limit = { state = 323 NOR = { owns_state =  323 }} transfer_state_to = NOR }
 					else = { transfer_state_to = ENG }
+				} 	
+			}
+			if = { 
+				limit = {OR = {Finland_coast = yes}} 
+				teleport_armies = { to_state = 651 } every_country = { delete_unit = { state = 651 disband = yes  }} 
+				PREV = { 
+					if = { limit = { NOT = { OR = { state = 582 state = 323 }}}  transfer_state_to = ENG }  
+					if = { limit = { state = 582 POL = { owns_state =  582 }} transfer_state_to = POL }
+					else = { transfer_state_to = FIN }
+					if = { limit = { state = 323 NOR = { owns_state =  323 }} transfer_state_to = NOR }
+					else = { transfer_state_to = FIN }
 				} 	
 			}
 		}
