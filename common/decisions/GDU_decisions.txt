@@ -104,6 +104,17 @@ GDU_templates = {
 				}
 				support = { engineer = { x = 0 y = 0 } anti_air = { x = 0 y = 1 } artillery = { x = 0 y = 2 }   anti_tank = { x = 0 y = 4 } logistics_company = { x = 0 y = 5 } recon = { x = 0 y = 3 }    }
 			}
+			division_template = {
+				name = "Generalist Jaegers 40W"
+				regiments = {
+					jaeger = { x = 0 y = 0 } jaeger = { x = 1 y = 0 } jaeger = { x = 2 y = 0 } artillery_brigade = { x = 3 y = 0 } anti_tank_brigade = { x = 4 y = 0 } 
+					jaeger = { x = 0 y = 1 } jaeger = { x = 1 y = 1 } jaeger = { x = 2 y = 1 } artillery_brigade = { x = 3 y = 1 } anti_tank_brigade = { x = 4 y = 1 } 
+					jaeger = { x = 0 y = 2 } jaeger = { x = 1 y = 2 } jaeger = { x = 2 y = 2 } artillery_brigade = { x = 3 y = 2 } anti_tank_brigade = { x = 4 y = 2 }
+					jaeger = { x = 0 y = 3 } jaeger = { x = 1 y = 3 }  				   anti_air_brigade = { x = 3 y = 3 } anti_air_brigade = { x = 4 y = 3 }
+					jaeger = { x = 0 y = 4 } jaeger = { x = 1 y = 4 } 
+				}
+				support = { engineer = { x = 0 y = 0 } anti_air = { x = 0 y = 1 } artillery = { x = 0 y = 2 }   anti_tank = { x = 0 y = 4 } logistics_company = { x = 0 y = 5 } recon = { x = 0 y = 3 }    }
+			}
 		}
 	}
 	GDU_infantry = {
@@ -187,25 +198,25 @@ GDU_templates = {
 
 		complete_effect = {
 			division_template = {
-				name = "11/9 NO MEC + NO MOB WARFARE"
+				name = "12/8 NO MEC + NO MOB WARFARE"
 				regiments = {
 					medium_armor = { x = 0 y = 0 } medium_armor = { x = 1 y = 0 } medium_armor = { x = 2 y = 0 } motorized = { x = 3 y = 0 }            motorized = { x = 4 y = 0 }
-					medium_armor = { x = 0 y = 1 } medium_armor = { x = 1 y = 1 } mot_anti_air_brigade = { x = 2 y = 1 } motorized = { x = 3 y = 1 }	motorized = { x = 4 y = 1 }
-					medium_armor = { x = 0 y = 2 } medium_armor = { x = 1 y = 2 } mot_anti_air_brigade = { x = 2 y = 2 } motorized = { x = 3 y = 2 }	motorized = { x = 4 y = 2 }
-					medium_armor = { x = 0 y = 3 } medium_armor = { x = 1 y = 3 } 						     motorized = { x = 4 y = 3 }	motorized = { x = 4 y = 4 }				
-					medium_armor = { x = 0 y = 4 }											     motorized = { x = 3 y = 3 }
+					medium_armor = { x = 0 y = 1 } medium_armor = { x = 1 y = 1 } medium_sp_anti_air_brigade = { x = 2 y = 1 } motorized = { x = 3 y = 1 }	motorized = { x = 4 y = 1 }
+					medium_armor = { x = 0 y = 2 } medium_armor = { x = 1 y = 2 } medium_sp_anti_air_brigade = { x = 2 y = 2 } motorized = { x = 3 y = 2 }	motorized = { x = 4 y = 2 }
+					medium_armor = { x = 0 y = 3 } medium_armor = { x = 1 y = 3 } 						     motorized = { x = 4 y = 3 }			
+					medium_armor = { x = 0 y = 4 } medium_armor = { x = 1 y = 4 }							 motorized = { x = 3 y = 3 }
 					}											
 				support = { engineer = { x = 0 y = 0 } light_tank_recon = { x = 0 y = 1 }  logistics_company = { x = 0 y = 2 } maintenance_company = { x = 0 y = 3 }
 						field_hospital  = { x = 0 y = 4 } support_heavy_armor = { x = 0 y = 5 } flamethrower_inf = { x = 0 y = 6 }   }
 			}
 			division_template = {
-				name = "11/9 MEC/SPAA + NO MOB WARFARE"
+				name = "12/8 MEC/SPAA + NO MOB WARFARE"
 				regiments = {
-					medium_armor = { x = 0 y = 0 } medium_armor = { x = 1 y = 0 } medium_armor = { x = 2 y = 0 } mechanized = { x = 3 y = 0 }           		      mechanized = { x = 4 y = 0 }
+					medium_armor = { x = 0 y = 0 } medium_armor = { x = 1 y = 0 } medium_armor = { x = 2 y = 0 } 			   mechanized = { x = 3 y = 0 } mechanized = { x = 4 y = 0 }
 					medium_armor = { x = 0 y = 1 } medium_armor = { x = 1 y = 1 } medium_sp_anti_air_brigade = { x = 2 y = 1 } mechanized = { x = 3 y = 1 }	mechanized = { x = 4 y = 1 }
 					medium_armor = { x = 0 y = 2 } medium_armor = { x = 1 y = 2 } medium_sp_anti_air_brigade = { x = 2 y = 2 } mechanized = { x = 3 y = 2 }	mechanized = { x = 4 y = 2 }
-					medium_armor = { x = 0 y = 3 } medium_armor = { x = 1 y = 3 } 						     mechanized = { x = 4 y = 3 }	mechanized = { x = 4 y = 4 }				
-					medium_armor = { x = 0 y = 4 }											    mechanized = { x = 3 y = 3 }
+					medium_armor = { x = 0 y = 3 } medium_armor = { x = 1 y = 3 } 						     				   mechanized = { x = 4 y = 3 }				
+					medium_armor = { x = 0 y = 4 } medium_armor = { x = 1 y = 4 }							 				   mechanized = { x = 3 y = 3 }
 					}											
 				support = { engineer = { x = 0 y = 0 } light_tank_recon = { x = 0 y = 1 }  logistics_company = { x = 0 y = 2 } maintenance_company = { x = 0 y = 3 }
 						field_hospital  = { x = 0 y = 4 } support_heavy_armor = { x = 0 y = 5 } flamethrower_inf = { x = 0 y = 6 }   }
