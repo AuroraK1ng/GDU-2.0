@@ -3435,7 +3435,7 @@ activate_mission = GER_relocate_industry_from_friesland
 			}
 			if = {
 				limit = { NOT = { country_exists = CZE } }
-				SWE = { country_event = { id = super.3 hours = 6 } }
+				hidden_effect = { SWE = { country_event = { id = super.3 hours = 6 } } }
 			}
 			add_named_threat = { threat = 5 name = GER_end_of_czechoslovakia }
 			custom_effect_tooltip = end_of_czechoslovakia_mefo_bills_tt
