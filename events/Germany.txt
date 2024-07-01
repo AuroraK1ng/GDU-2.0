@@ -913,7 +913,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		GER = { country_event = germany.55 }
+		SWE = { country_event = super.3 }
 		custom_effect_tooltip = GAME_OVER_TT
 	}
 
@@ -1052,9 +1052,6 @@ country_event = {
 		every_state = { 
 			limit = { is_core_of = CZE } 
 			remove_core_of = CZE 
-		}
-		hidden_effect = {
-			country_event = { hours = 6 id = news.61 }
 		}
 	}
 }

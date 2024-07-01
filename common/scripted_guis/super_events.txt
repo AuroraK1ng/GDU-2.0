@@ -17,6 +17,11 @@ scripted_gui = {
 			Super_Event_Image_Sudetenland_visible = {
 				has_global_flag = GER_Sudetenland
 			}
+		}
+		triggers = {
+			Super_Event_Image_End_Of_Czechoslovakia_visible = {
+				has_global_flag = GER_End_Of_Czechoslovakia
+			}
 		}	
 	
 		############
@@ -39,6 +44,12 @@ scripted_gui = {
 						has_global_flag = GER_Sudetenland
 					}
 					clr_global_flag = GER_Sudetenland
+				}
+				if = {
+					limit = {
+						has_global_flag = GER_End_Of_Czechoslovakia
+					}
+					clr_global_flag = GER_End_Of_Czechoslovakia
 				}		
 			}
 		}

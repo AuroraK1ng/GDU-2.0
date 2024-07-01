@@ -28,7 +28,7 @@ country_event = {	#Anschluss
 		set_global_flag = Super_Event_Visible
 		sound_effect = sp_ger_wien
 		
-		#Sudetenland Flag
+		#Anschluss Flag
 		set_global_flag = Super_Anschluss
 	#####################################################
 		IF = {
@@ -175,5 +175,66 @@ country_event = {	#Sudetenland
 		hidden_effect = {
 		sound_effect = peace_europe
 		}
+	}
+}
+
+country_event = {	#End of Czechoslovakia
+	id = super.3
+	title = super.3.t
+	desc = super.3.d
+	picture = GFX_sp_event_End_Of_Czechoslovakia
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	
+	trigger = {
+		
+	}
+
+	option = {
+		
+		name = super.3.a
+       	set_global_flag = GER_End_Of_Czechoslovakia
+		set_global_flag = Super_Event_Visible
+		
+		#Sudetenland Flag
+		set_global_flag = Super_End_Of_Czechoslovakia
+	#####################################################
+		add_to_faction = HUN
+		add_equipment_to_stockpile = {
+			type = light_tank_chassis_2
+			amount = 500
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = medium_tank_chassis_1
+			amount = 200
+			producer = GER
+		}
+		ai_chance = { 
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		HUN = { country_event = germany.56 }
+		if = {
+			limit = {
+				72 = {
+					OR = {
+						is_owned_by = CZE
+						is_owned_by = GER
+					}
+				}
+				country_exists = POL
+			}
+			POL = { transfer_state = 72 } # Give Poland Zaolzie
+		}
+		custom_effect_tooltip = end_of_czechoslovakia_mefo_bills_tt
+		add_to_variable = { var = GER_mefo_bill_counter value = -5 }
 	}
 }

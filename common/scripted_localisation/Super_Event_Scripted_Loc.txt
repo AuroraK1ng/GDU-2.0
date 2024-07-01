@@ -14,6 +14,12 @@ defined_text = {
         }
         localization_key = "sp_event_Sudetenland"
     }
+    text = {
+        trigger = {
+            has_global_flag = GER_End_Of_Czechoslovakia
+        }
+        localization_key = "sp_event_End_Of_Czechoslovakia"
+    }
 }
 
 #Remarks
@@ -32,6 +38,12 @@ defined_text = {
         }
         localization_key = "sp_event_Sudetenland_REMARK"
     }
+    text = { 
+        trigger = {
+            has_global_flag = GER_End_Of_Czechoslovakia
+        }
+        localization_key = "sp_event_End_Of_Czechoslovakia_REMARK"
+    }
 }
 
 #Quotes
@@ -49,5 +61,11 @@ defined_text = {
             has_global_flag = GER_Sudetenland
         }
         localization_key = "sp_event_Sudetenland_QUOTE"
+    }
+    text = {
+        trigger = {
+            has_global_flag = GER_End_Of_Czechoslovakia
+        }
+        localization_key = "sp_event_End_Of_Czechoslovakia_QUOTE"
     }
 }
