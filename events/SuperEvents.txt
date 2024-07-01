@@ -28,7 +28,7 @@ country_event = {	#Anschluss
 		set_global_flag = Super_Event_Visible
 		sound_effect = sp_ger_wien
 		
-		#WW2 Flag
+		#Sudetenland Flag
 		set_global_flag = Super_Anschluss
 	#####################################################
 		IF = {
@@ -98,7 +98,6 @@ country_event = {	#Anschluss
 		hidden_effect = {
 			add_named_threat = { threat = 10 name = germany.4.t }
 			set_country_flag = AUS_annexed
-			news_event = { hours = 6 id = super.1 }
 			GER = {
 				add_equipment_to_stockpile = {
 					type = artillery_equipment_1
@@ -131,6 +130,50 @@ country_event = {	#Anschluss
 					producer = GER
 				} 				
 			}			
+		}
+	}
+}
+
+country_event = {	#Sudetenland
+	id = super.2
+	title = super.2.t
+	desc = super.2.d
+	picture = GFX_sp_event_Sudetenland
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	
+	trigger = {
+		
+	}
+
+	option = {
+		
+		name = super.2.a
+       	set_global_flag = GER_Sudetenland
+		set_global_flag = Super_Event_Visible
+		
+		#Sudetenland Flag
+		set_global_flag = Super_Sudetenland
+	#####################################################
+		69 = { add_core_of = GER }
+		GER = { transfer_state = 69 }
+		74 = { add_core_of = GER }
+		GER = { transfer_state = 74 }
+		set_country_flag = sudetenland_acquired
+
+		if = {
+			limit = {
+				88 = { is_owned_by = POL }
+			}
+			POL = {
+				country_event = { hours = 6 id = germany.52 }
+			}
+		}
+		hidden_effect = {
+		sound_effect = peace_europe
 		}
 	}
 }

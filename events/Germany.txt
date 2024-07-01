@@ -552,9 +552,6 @@ country_event = {
 				GER = { has_army_size = { size > 39 } }
 			}
 		}
-		GER = {
-			country_event = { hours = 2 id = super.1 }
-		}
 		custom_effect_tooltip = GAME_OVER_TT
 	}
 }
@@ -867,35 +864,7 @@ country_event = {
 				factor = 2.0
 			}
 		}
-		GER = { country_event = germany.50 }
-	}
-}
-
-# Germany (Czechoslovakia Surrenders Sudetenland)
-country_event = {
-	id = germany.50
-	title = germany.40.t
-	desc = germany.50.d
-	picture = GFX_report_event_german_politician_speech
-
-	is_triggered_only = yes
-
-	option = {
-		name = germany.50.a
-		69 = { add_core_of = GER }
-		GER = { transfer_state = 69 }
-		74 = { add_core_of = GER }
-		GER = { transfer_state = 74 }
-		set_country_flag = sudetenland_acquired
-
-		if = {
-			limit = {
-				88 = { is_owned_by = POL }
-			}
-			POL = {
-				country_event = { hours = 6 id = germany.52 }
-			}
-		}
+		SWE = { country_event = super.2 }
 	}
 }
 

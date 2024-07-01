@@ -2036,40 +2036,7 @@ activate_mission = GER_relocate_industry_from_friesland
 				}
 			}
 			hidden_effect = {
-				ENG = {
-					country_event = super.1
-				}
-				CAN = {
-					country_event = super.1
-				}
-				SAF = {
-					country_event = super.1
-				}
-				RAJ = {
-					country_event = super.1
-				}
-				AST = {
-					country_event = super.1
-				}
-				NZL = {
-					country_event = super.1
-				}
-				GER = {
-					country_event = super.1
-				}
-				ITA = {
-					country_event = super.1
-				}
-				SPR = {
-					country_event = super.1
-				}
-				HUN = {
-					country_event = super.1
-				}
-				ROM = {
-					country_event = super.1
-				}
-				BUL = {
+				SWE = {
 					country_event = super.1
 				}
 			}
@@ -3338,9 +3305,6 @@ activate_mission = GER_relocate_industry_from_friesland
 			factor = 10
 		}
 		completion_reward = {
-		hidden_effect = {
-			sound_effect = peace_europe
-		}
 			HUN = {
 				country_event = { id = germany.51 days = 30 }
 			}
@@ -3397,8 +3361,8 @@ activate_mission = GER_relocate_industry_from_friesland
 					CZE = { controls_state = 69 }
 
 				}
-				GER = {
-					country_event = germany.50
+				SWE = {
+					country_event = super.2
 				}
 				add_named_threat = { threat = 5 name = GER_demand_sudetenland_threat }
 			}

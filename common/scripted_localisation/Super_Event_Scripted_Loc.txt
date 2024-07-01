@@ -8,6 +8,12 @@ defined_text = {
         }
         localization_key = "sp_event_Anschluss"
     }
+    text = {
+        trigger = {
+            has_global_flag = GER_Sudetenland
+        }
+        localization_key = "sp_event_Sudetenland"
+    }
 }
 
 #Remarks
@@ -20,6 +26,12 @@ defined_text = {
         }
         localization_key = "sp_event_Anschluss_REMARK"
     }
+    text = { 
+        trigger = {
+            has_global_flag = GER_Sudetenland
+        }
+        localization_key = "sp_event_Sudetenland_REMARK"
+    }
 }
 
 #Quotes
@@ -31,5 +43,11 @@ defined_text = {
             has_global_flag = GER_Anschluss
         }
         localization_key = "sp_event_Anschluss_QUOTE"
+    }
+    text = {
+        trigger = {
+            has_global_flag = GER_Sudetenland
+        }
+        localization_key = "sp_event_Sudetenland_QUOTE"
     }
 }
