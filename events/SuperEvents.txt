@@ -238,3 +238,31 @@ country_event = {	#End of Czechoslovakia
 		add_to_variable = { var = GER_mefo_bill_counter value = -5 }
 	}
 }
+
+country_event = {	#Intervene in China
+	id = super.4
+	title = super.4.t
+	desc = super.4.d
+	picture = GFX_sp_event_Intervene_In_China
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	
+	trigger = {
+		
+	}
+
+	option = {
+		sound_effect = sino_japanese_war
+		name = super.4.a
+       	set_global_flag = JAP_intervene_in_china
+		set_global_flag = Super_Event_Visible
+		
+		#Intervene in China Flag
+		set_global_flag = Super_JAP_intervene_in_china
+	#####################################################
+		
+	}
+}

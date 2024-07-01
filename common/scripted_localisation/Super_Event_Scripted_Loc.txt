@@ -20,6 +20,12 @@ defined_text = {
         }
         localization_key = "sp_event_End_Of_Czechoslovakia"
     }
+    text = {
+        trigger = {
+            has_global_flag = JAP_intervene_in_china
+        }
+        localization_key = "sp_event_Intervene_In_China"
+    }
 }
 
 #Remarks
@@ -44,6 +50,12 @@ defined_text = {
         }
         localization_key = "sp_event_End_Of_Czechoslovakia_REMARK"
     }
+     text = { 
+        trigger = {
+            has_global_flag = JAP_intervene_in_china
+        }
+        localization_key = "sp_event_Intervene_In_China_REMARK"
+    }
 }
 
 #Quotes
@@ -67,5 +79,11 @@ defined_text = {
             has_global_flag = GER_End_Of_Czechoslovakia
         }
         localization_key = "sp_event_End_Of_Czechoslovakia_QUOTE"
+    }
+    text = {
+        trigger = {
+            has_global_flag = JAP_intervene_in_china
+        }
+        localization_key = "sp_event_Intervene_In_China_QUOTE"
     }
 }

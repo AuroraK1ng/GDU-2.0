@@ -22,8 +22,12 @@ scripted_gui = {
 			Super_Event_Image_End_Of_Czechoslovakia_visible = {
 				has_global_flag = GER_End_Of_Czechoslovakia
 			}
+		}
+		triggers = {
+			Super_Event_Image_Intervene_In_China_visible = {
+				has_global_flag = JAP_intervene_in_china
+			}
 		}	
-	
 		############
 		###BUTTON###
 		############
@@ -50,6 +54,12 @@ scripted_gui = {
 						has_global_flag = GER_End_Of_Czechoslovakia
 					}
 					clr_global_flag = GER_End_Of_Czechoslovakia
+				}
+				if = {
+					limit = {
+						has_global_flag = JAP_intervene_in_china
+					}
+					clr_global_flag = JAP_intervene_in_china
 				}		
 			}
 		}
