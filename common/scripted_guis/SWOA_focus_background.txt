@@ -15,7 +15,7 @@ scripted_gui = {
 			}
 		}
 	}
-	tool_open= {
+	bg_tool_open= {
 		context_type = player_context
 		parent_window_name = "nationalfocusview"
 		window_name = "focus_bg_container"
@@ -23,7 +23,7 @@ scripted_gui = {
 			always = yes
 		}
 		effects = {
-			tool_open_click = {
+			bg_tool_open_click = {
 				if = {
 					limit = { ROOT = { NOT = { has_country_flag = FOCUS_BG_background } } }
 					ROOT = { set_country_flag = FOCUS_BG_background }
@@ -34,7 +34,7 @@ scripted_gui = {
 			}
 		}
 		triggers = {
-			tool_open_click_enabled = {
+			bg_tool_open_click_enabled = {
 				always = yes
 			}
 		}
