@@ -9,8 +9,8 @@ scripted_gui = {
 		}
 		
 		triggers = {
-			Super_Event_Image_Second_World_War_visible = {
-				has_global_flag = GER_WW2
+			Super_Event_Image_Anschluss_visible = {
+				has_global_flag = GER_Anschluss
 			}
 		}	
 	
@@ -24,9 +24,9 @@ scripted_gui = {
 				
 				if = {
 					limit = {
-						has_global_flag = GER_WW2
+						has_global_flag = GER_Anschluss
 					}
-					clr_global_flag = GER_WW2
+					clr_global_flag = GER_Anschluss
 				}		
 			}
 		}

@@ -4,86 +4,6 @@
 
 add_namespace = germany
 
-# Austrian Anschluss Completed
-country_event = {
-	id = germany.4
-	title = germany.4.t
-	desc = germany.4.d
-	picture = GFX_report_event_german_speech
-
-	is_triggered_only = yes
-
-	option = {
-		name = germany.4.a
-		4 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = GER
-			}
-		}
-		152 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = GER
-			}
-		}
-		153 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = GER
-			}
-		}
-		hidden_effect = { 
-			4 = { remove_core_of = AUS }
-			152 = { remove_core_of = AUS }
-			153 = { remove_core_of = AUS } 
-			AUS = { remove_state_claim  = 39 } 
-		}
-		annex_country = { target = AUS transfer_troops = yes }
-		add_political_power = 75
-		custom_effect_tooltip = anschluss_mefo_bills_tt
-
-		custom_effect_tooltip = anschluss_mefo_bills_double_reduction
-		hidden_effect = {
-			add_named_threat = { threat = 10 name = germany.4.t }
-			set_country_flag = AUS_annexed
-			news_event = { hours = 6 id = news.36 }
-			GER = {
-				add_equipment_to_stockpile = {
-					type = artillery_equipment_1
-					amount = 2000
-					producer = GER
-				}  
-				add_equipment_to_stockpile = {
-					type = support_equipment
-					amount = 460
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = anti_air_equipment_1
-					amount = 2000
-					producer = GER
-				} 
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_1
-					amount = 35671
-					producer = GER
-				} 
-				add_equipment_to_stockpile = {
-					type = motorized_equipment_1
-					amount = 110
-					producer = GER
-				} 
-				add_equipment_to_stockpile = {
-					type = anti_tank_equipment_1
-					amount = 1500
-					producer = GER
-				} 				
-			}			
-		}
-}
-}
-
 #anti_comintern_pact
 # nations are asked to join pact, agreeing = relations with GER and hit with SOV
 
@@ -633,7 +553,7 @@ country_event = {
 			}
 		}
 		GER = {
-			country_event = { hours = 2 id = germany.4 }
+			country_event = { hours = 2 id = super.1 }
 		}
 		custom_effect_tooltip = GAME_OVER_TT
 	}

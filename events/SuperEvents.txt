@@ -6,39 +6,131 @@ add_namespace = super
 add_namespace = super_info
 
 
-country_event = {	#ww2
+country_event = {	#Anschluss
 	id = super.1
 	title = super.1.t
 	desc = super.1.d
-	picture = GFX_report_event_diplomatic_message
+	picture = GFX_sp_event_Anschluss
 
 	is_triggered_only = no
 	
 	fire_only_once = yes
 	
-	hidden = yes
 	
 	trigger = {
-		AND = {
-			GER = { has_government = fascism }
-			OR = {
-				GER = { has_offensive_war_with = ENG }
-				GER = { has_offensive_war_with = FRA }
-			}
-			NOT = {
-				has_global_flag = Super_WW2
-			}
-		}
+		
 	}
 
 	option = {
 		name = super.1.a
 		
-        set_global_flag = GER_WW2
+        set_global_flag = GER_Anschluss
 		set_global_flag = Super_Event_Visible
-		play_song = "super_ww2"
+		sound_effect = sp_ger_wien
 		
 		#WW2 Flag
-		set_global_flag = Super_WW2
+		set_global_flag = Super_Anschluss
+	#####################################################
+		IF = {
+			limit = { has_start_date > 1936.1.1.12 } 
+		SOV = {
+	  army_experience = 1000
+        air_experience  = 300
+                }
+        GER = {
+        air_experience  = 300
+                }
+        ITA = {
+        air_experience  = 300
+                }
+        BUL = {
+		army_experience = 125
+        }
+	  SPR = {
+		army_experience = 125
+        }
+         ROM = {
+        army_experience = 125
+                }
+        HUN = {
+        army_experience = 125
+                }
+        ENG = {
+        army_experience = 100
+                }
+        CAN = {
+        army_experience = 100
+                }
+        SAF = {
+        army_experience = 100
+                }
+		}
+	######################################################
+	4 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = GER
+			}
+		}
+		152 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = GER
+			}
+		}
+		153 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = GER
+			}
+		}
+		hidden_effect = { 
+			4 = { remove_core_of = AUS }
+			152 = { remove_core_of = AUS }
+			153 = { remove_core_of = AUS } 
+			AUS = { remove_state_claim  = 39 } 
+		}
+		GER = { annex_country = { target = AUS transfer_troops = yes } }
+		add_political_power = 75
+		custom_effect_tooltip = anschluss_mefo_bills_tt
+
+		custom_effect_tooltip = anschluss_mefo_bills_double_reduction
+		hidden_effect = {
+			add_named_threat = { threat = 10 name = germany.4.t }
+			set_country_flag = AUS_annexed
+			news_event = { hours = 6 id = super.1 }
+			GER = {
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 2000
+					producer = GER
+				}  
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 460
+					producer = GER
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 2000
+					producer = GER
+				} 
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 35671
+					producer = GER
+				} 
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 110
+					producer = GER
+				} 
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 1500
+					producer = GER
+				} 				
+			}			
+		}
 	}
 }
