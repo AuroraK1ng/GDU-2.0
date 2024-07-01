@@ -26,6 +26,12 @@ defined_text = {
         }
         localization_key = "sp_event_Intervene_In_China"
     }
+    text = {
+        trigger = {
+            has_global_flag = Armistice_Negotiations
+        }
+        localization_key = "sp_event_Armistice_Negotiations"
+    }
 }
 
 #Remarks
@@ -56,6 +62,12 @@ defined_text = {
         }
         localization_key = "sp_event_Intervene_In_China_REMARK"
     }
+     text = { 
+        trigger = {
+            has_global_flag = Armistice_Negotiations
+        }
+        localization_key = "sp_event_Armistice_Negotiations_REMARK"
+    }
 }
 
 #Quotes
@@ -85,5 +97,11 @@ defined_text = {
             has_global_flag = JAP_intervene_in_china
         }
         localization_key = "sp_event_Intervene_In_China_QUOTE"
+    }
+     text = {
+        trigger = {
+            has_global_flag = Armistice_Negotiations
+        }
+        localization_key = "sp_event_Armistice_Negotiations_QUOTE"
     }
 }
