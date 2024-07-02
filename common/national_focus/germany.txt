@@ -3413,6 +3413,13 @@ activate_mission = GER_relocate_industry_from_friesland
 
 
 		completion_reward = {
+				every_country = {
+					limit = {
+					is_ai = no
+				}
+				country_event = super.3
+			} 
+		
 			if = {
 				limit = {
 					country_exists = CZE
@@ -3441,14 +3448,6 @@ activate_mission = GER_relocate_industry_from_friesland
 			}
 			if = {
 				limit = { NOT = { country_exists = CZE } }
-				hidden_effect = { 
-				every_country = {
-					limit = {
-					is_ai = no
-				}
-				country_event = super.3
-			} 
-		}
 
 	}
 			add_named_threat = { threat = 5 name = GER_end_of_czechoslovakia }
