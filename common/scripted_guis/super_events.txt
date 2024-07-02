@@ -10,27 +10,27 @@ scripted_gui = {
 		
 		triggers = {
 			Super_Event_Image_Anschluss_visible = {
-				has_global_flag = GER_Anschluss
+				has_country_flag = GER_Anschluss
 			}
 		}
 		triggers = {
 			Super_Event_Image_Sudetenland_visible = {
-				has_global_flag = GER_Sudetenland
+				has_country_flag = GER_Sudetenland
 			}
 		}
 		triggers = {
 			Super_Event_Image_End_Of_Czechoslovakia_visible = {
-				has_global_flag = GER_End_Of_Czechoslovakia
+				has_country_flag = GER_End_Of_Czechoslovakia
 			}
 		}
 		triggers = {
 			Super_Event_Image_Intervene_In_China_visible = {
-				has_global_flag = JAP_intervene_in_china
+				has_country_flag = JAP_intervene_in_china
 			}
 		}
 		triggers = {
 			Super_Event_Image_Armistice_Negotiations_visible = {
-				has_global_flag = Armistice_Negotiations
+				has_country_flag = Armistice_Negotiations
 			}
 		}	
 		############
@@ -43,34 +43,34 @@ scripted_gui = {
 				
 				if = {
 					limit = {
-						has_global_flag = GER_Anschluss
+						has_country_flag = GER_Anschluss
 					}
-					clr_global_flag = GER_Anschluss
+					clr_country_flag = GER_Anschluss
 				}
 
 				if = {
 					limit = {
-						has_global_flag = GER_Sudetenland
+						has_country_flag = GER_Sudetenland
 					}
-					clr_global_flag = GER_Sudetenland
+					clr_country_flag = GER_Sudetenland
 				}
 				if = {
 					limit = {
-						has_global_flag = GER_End_Of_Czechoslovakia
+						has_country_flag = GER_End_Of_Czechoslovakia
 					}
-					clr_global_flag = GER_End_Of_Czechoslovakia
+					clr_country_flag = GER_End_Of_Czechoslovakia
 				}
 				if = {
 					limit = {
-						has_global_flag = JAP_intervene_in_china
+						has_country_flag = JAP_intervene_in_china
 					}
-					clr_global_flag = JAP_intervene_in_china
+					clr_country_flag = JAP_intervene_in_china
 				}
 				if = {
 					limit = {
-						has_global_flag = Armistice_Negotiations
+						has_country_flag = Armistice_Negotiations
 					}
-					clr_global_flag = Armistice_Negotiations
+					clr_country_flag = Armistice_Negotiations
 				}		
 			}
 		}

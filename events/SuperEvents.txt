@@ -30,11 +30,11 @@ country_event = {	#Anschluss
 		set_country_flag = Super_Event_Visible
 	}
 
-		set_global_flag = GER_Anschluss
+		set_country_flag = GER_Anschluss
 		sound_effect = sp_ger_wien
 		
 		#Anschluss Flag
-		set_global_flag = Super_Anschluss
+		set_country_flag = Super_Anschluss
 	
 	#####################################################
 		IF = {
@@ -158,7 +158,7 @@ country_event = {	#Sudetenland
 	option = {
 		
 		name = super.2.a
-       	set_global_flag = GER_Sudetenland
+       	set_country_flag = GER_Sudetenland
 		every_country = {
 			limit = {
 			is_ai = no
@@ -167,7 +167,7 @@ country_event = {	#Sudetenland
 	}
 		
 		#Sudetenland Flag
-		set_global_flag = Super_Sudetenland
+		set_country_flag = Super_Sudetenland
 	#####################################################
 		69 = { add_core_of = GER }
 		GER = { transfer_state = 69 }
@@ -207,7 +207,7 @@ country_event = {	#End of Czechoslovakia
 	option = {
 		
 		name = super.3.a
-       	set_global_flag = GER_End_Of_Czechoslovakia
+		set_country_flag = GER_End_Of_Czechoslovakia
 		every_country = {
 			limit = {
 			is_ai = no
@@ -216,7 +216,7 @@ country_event = {	#End of Czechoslovakia
 	}
 		
 		#Sudetenland Flag
-		set_global_flag = Super_End_Of_Czechoslovakia
+		set_country_flag = Super_End_Of_Czechoslovakia
 	#####################################################
 		add_to_faction = HUN
 		add_equipment_to_stockpile = {
@@ -273,7 +273,7 @@ country_event = {	#Intervene in China
 	option = {
 		sound_effect = sino_japanese_war
 		name = super.4.a
-       	set_global_flag = JAP_intervene_in_china
+		set_country_flag = JAP_intervene_in_china
 		every_country = {
 			limit = {
 			is_ai = no
@@ -282,7 +282,7 @@ country_event = {	#Intervene in China
 	}
 		
 		#Intervene in China Flag
-		set_global_flag = Super_JAP_intervene_in_china
+		set_country_flag = Super_JAP_intervene_in_china
 	#####################################################
 		
 	}
@@ -311,9 +311,9 @@ country_event = {	#Armistice_Negotiations
 		}
 		set_country_flag = Super_Event_Visible
 	}
-		set_global_flag = Armistice_Negotiations
+		set_country_flag = Armistice_Negotiations
 		#Armistice_Negotiations Flag
-		set_global_flag = Super_Armistice_Negotiations
+		set_country_flag = Super_Armistice_Negotiations
 	#####################################################
 		
 	}
