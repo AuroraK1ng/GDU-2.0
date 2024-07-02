@@ -2036,9 +2036,12 @@ activate_mission = GER_relocate_industry_from_friesland
 				}
 			}
 			hidden_effect = {
-				SWE = {
-					country_event = super.1
+				every_country = {
+					limit = {
+					is_ai = no
 				}
+				country_event = super.1
+			}
 			}
 			army_experience = 10
 			if = {
@@ -3361,9 +3364,12 @@ activate_mission = GER_relocate_industry_from_friesland
 					CZE = { controls_state = 69 }
 
 				}
-				SWE = {
-					country_event = super.2
+				every_country = {
+					limit = {
+					is_ai = no
 				}
+				country_event = super.2
+			}
 				add_named_threat = { threat = 5 name = GER_demand_sudetenland_threat }
 			}
 			69 = {
@@ -3435,8 +3441,16 @@ activate_mission = GER_relocate_industry_from_friesland
 			}
 			if = {
 				limit = { NOT = { country_exists = CZE } }
-				hidden_effect = { SWE = { country_event = { id = super.3 hours = 6 } } }
-			}
+				hidden_effect = { 
+				every_country = {
+					limit = {
+					is_ai = no
+				}
+				country_event = super.3
+			} 
+		}
+
+	}
 			add_named_threat = { threat = 5 name = GER_end_of_czechoslovakia }
 			custom_effect_tooltip = end_of_czechoslovakia_mefo_bills_tt
 			hidden_effect = {

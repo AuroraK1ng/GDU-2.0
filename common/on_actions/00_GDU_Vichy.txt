@@ -134,7 +134,12 @@ on_actions = {
 				
 
 				##### Super Event #####
-				SWE = { country_event = { id = super.5 } }
+				every_country = {
+					limit = {
+					is_ai = no
+				}
+				country_event = super.5
+			}
 				
 				# Finest Hour temporary buffs for UK/commonwealth. finest_hour is the air one, finest_hour_com is the land one.
 				ENG = { add_timed_idea = { idea = finest_hour days = 365 } }				
