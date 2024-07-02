@@ -14,7 +14,7 @@ country_event = {	#Anschluss
 
 	is_triggered_only = yes
 	
-	fire_only_once = yes
+	fire_only_once = no
 	
 	
 	trigger = {
@@ -23,13 +23,19 @@ country_event = {	#Anschluss
 
 	option = {
 		name = super.1.a
-		
-        set_global_flag = GER_Anschluss
-		set_global_flag = Super_Event_Visible
+		every_country = {
+			limit = {
+			is_ai = no
+		}
+		set_country_flag = Super_Event_Visible
+	}
+
+		set_global_flag = GER_Anschluss
 		sound_effect = sp_ger_wien
 		
 		#Anschluss Flag
 		set_global_flag = Super_Anschluss
+	
 	#####################################################
 		IF = {
 			limit = { has_start_date > 1936.1.1.12 } 
@@ -142,7 +148,7 @@ country_event = {	#Sudetenland
 
 	is_triggered_only = yes
 	
-	fire_only_once = yes
+	fire_only_once = no
 	
 	
 	trigger = {
@@ -153,7 +159,12 @@ country_event = {	#Sudetenland
 		
 		name = super.2.a
        	set_global_flag = GER_Sudetenland
-		set_global_flag = Super_Event_Visible
+		every_country = {
+			limit = {
+			is_ai = no
+		}
+		set_country_flag = Super_Event_Visible
+	}
 		
 		#Sudetenland Flag
 		set_global_flag = Super_Sudetenland
@@ -186,7 +197,7 @@ country_event = {	#End of Czechoslovakia
 
 	is_triggered_only = yes
 	
-	fire_only_once = yes
+	fire_only_once = no
 	
 	
 	trigger = {
@@ -197,7 +208,12 @@ country_event = {	#End of Czechoslovakia
 		
 		name = super.3.a
        	set_global_flag = GER_End_Of_Czechoslovakia
-		set_global_flag = Super_Event_Visible
+		every_country = {
+			limit = {
+			is_ai = no
+		}
+		set_country_flag = Super_Event_Visible
+	}
 		
 		#Sudetenland Flag
 		set_global_flag = Super_End_Of_Czechoslovakia
@@ -247,7 +263,7 @@ country_event = {	#Intervene in China
 
 	is_triggered_only = yes
 	
-	fire_only_once = yes
+	fire_only_once = no
 	
 	
 	trigger = {
@@ -258,7 +274,12 @@ country_event = {	#Intervene in China
 		sound_effect = sino_japanese_war
 		name = super.4.a
        	set_global_flag = JAP_intervene_in_china
-		set_global_flag = Super_Event_Visible
+		every_country = {
+			limit = {
+			is_ai = no
+		}
+		set_country_flag = Super_Event_Visible
+	}
 		
 		#Intervene in China Flag
 		set_global_flag = Super_JAP_intervene_in_china
@@ -275,7 +296,7 @@ country_event = {	#Armistice_Negotiations
 
 	is_triggered_only = yes
 	
-	fire_only_once = yes
+	fire_only_once = no
 	
 	
 	trigger = {
@@ -284,9 +305,13 @@ country_event = {	#Armistice_Negotiations
 	
 	option = {
 		name = super.5.a
-       	set_global_flag = Armistice_Negotiations
-		set_global_flag = Super_Event_Visible
-		
+		every_country = {
+			limit = {
+			is_ai = no
+		}
+		set_country_flag = Super_Event_Visible
+	}
+		set_global_flag = Armistice_Negotiations
 		#Armistice_Negotiations Flag
 		set_global_flag = Super_Armistice_Negotiations
 	#####################################################
