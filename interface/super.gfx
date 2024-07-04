@@ -4,6 +4,10 @@ spriteTypes = {
 		textureFile = "/gfx/super_events.dds"
 	}
 	spriteType = {
+		name = "GFX_super_event_animated"
+		textureFile = "/gfx/Super_Event_Animated.dds"
+	}
+	spriteType = {
 		name = "GFX_sp_event_window"
 		textureFile = "/gfx/Super_Event_Window.dds"
 	}
@@ -17,7 +21,10 @@ spriteTypes = {
 		name = "GFX_sp_event_underlay"
 		textureFile = "/gfx/Super_Event_Underlay.dds"
 	}
-	
+	spriteType = {
+		name = "GFX_sp_event_underlay_animated"
+		textureFile = "/gfx/Super_Event_Animated_Underlay.dds"
+	}
 	spriteType = {
 		name = "GFX_sp_event_Anschluss"
 		textureFile = "/gfx/sp_events/Super_Event_GER_Anschluss.tga"
@@ -38,4 +45,14 @@ spriteTypes = {
 		name = "GFX_sp_event_Armistice_Negotiations"
 		textureFile = "/gfx/sp_events/Super_Event_Armistice_Negotiations.dds"
 	}
+	frameAnimatedSpriteType = {
+		name = "GFX_sp_event_Asia_War"
+		texturefile = "/gfx/sp_events/Super_Event_Asia_War.dds"
+		noOfFrames = 40
+		loadType = "INGAME"
+		transparencecheck = no
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+	  }
 }

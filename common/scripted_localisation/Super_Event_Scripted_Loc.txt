@@ -32,6 +32,12 @@ defined_text = {
         }
         localization_key = "sp_event_Armistice_Negotiations"
     }
+    text = {
+        trigger = {
+            has_country_flag = Asia_War
+        }
+        localization_key = "sp_event_Asia_War"
+    }
 }
 
 #Remarks
@@ -68,6 +74,12 @@ defined_text = {
         }
         localization_key = "sp_event_Armistice_Negotiations_REMARK"
     }
+    text = { 
+        trigger = {
+            has_country_flag = Asia_War
+        }
+        localization_key = "sp_event_Asia_War_REMARK"
+    }
 }
 
 #Quotes
@@ -103,5 +115,11 @@ defined_text = {
             has_country_flag = Armistice_Negotiations
         }
         localization_key = "sp_event_Armistice_Negotiations_QUOTE"
+    }
+    text = {
+        trigger = {
+            has_country_flag = Asia_War
+        }
+        localization_key = "sp_event_Asia_War_QUOTE"
     }
 }

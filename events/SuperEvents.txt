@@ -318,3 +318,34 @@ country_event = {	#Armistice_Negotiations
 		
 	}
 }
+
+country_event = {	#Asia_War
+	id = super.6
+	title = super.6.t
+	desc = super.6.d
+	picture = GFX_sp_event_Asia_War
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	
+	trigger = {
+		
+	}
+	
+	option = {
+		sound_effect = russo_japanese_war
+		name = super.6.a
+		every_country = {
+			limit = {
+			is_ai = no
+		}
+		set_country_flag = Super_Event_Visible
+	}
+		set_country_flag = Asia_War
+		#Asia_War Flag
+		set_country_flag = Super_Asia_War
+	#####################################################
+		
+	}
+}
