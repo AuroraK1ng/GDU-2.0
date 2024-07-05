@@ -1829,7 +1829,7 @@ focus_tree = {
 	focus = {
 		id = uk_destroyer_focus
 		prerequisite = { focus = uk_prepare_for_war }
-		icon = GFX_focus_generic_destroyer
+		icon = GFX_esminec1
 		x = 1
 		y = 1
 		relative_position_id = uk_prepare_for_war
@@ -1853,7 +1853,7 @@ focus_tree = {
 	focus = {
 		id = ENG_a_s_warfare
 		prerequisite = { focus = uk_destroyer_focus }
-		icon = GFX_goal_generic_navy_anti_submarine
+		icon = GFX_anti_lodka
 		x = 2
 		y = 1
 		relative_position_id = ENG_secure_the_imperial_shipping_routes
@@ -1888,7 +1888,7 @@ focus_tree = {
 	focus = {
 		id = uk_convoy_focus
 		prerequisite = { focus = ENG_a_s_warfare }
-		icon = GFX_goal_generic_navy_cruiser
+		icon = GFX_escort1
 		x = 0
 		y = 2
 		relative_position_id = ENG_a_s_warfare
@@ -1914,7 +1914,7 @@ focus_tree = {
 	focus = {
 		id = uk_carrier_focus
 		prerequisite = { focus = uk_waves_focus }
-		icon = GFX_goal_generic_navy_carrier
+		icon = GFX_aircraft1
 		x = -1
 		y = 1
 		relative_position_id = uk_waves_focus
