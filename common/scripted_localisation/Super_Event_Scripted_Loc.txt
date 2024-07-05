@@ -44,6 +44,12 @@ defined_text = {
         }
         localization_key = "sp_event_Barbarossa"
     }
+    text = {
+        trigger = {
+            has_country_flag = WW2_Started
+        }
+        localization_key = "sp_event_WW2_Started"
+    }
 }
 
 #Remarks
@@ -92,6 +98,12 @@ defined_text = {
         }
         localization_key = "sp_event_Barbarossa_REMARK"
     }
+    text = { 
+        trigger = {
+            has_country_flag = WW2_Started
+        }
+        localization_key = "sp_event_WW2_Started_REMARK"
+    }
 }
 
 #Quotes
@@ -139,5 +151,11 @@ defined_text = {
             has_country_flag = Barbarossa_Started
         }
         localization_key = "sp_event_Barbarossa_QUOTE"
+    }
+    text = {
+        trigger = {
+            has_country_flag = WW2_Started
+        }
+        localization_key = "sp_event_WW2_Started_QUOTE"
     }
 }
