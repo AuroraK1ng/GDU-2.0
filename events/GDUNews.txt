@@ -1,5 +1,87 @@
 ﻿add_namespace = gdunews
 
+### Beginning of WW2 
+news_event = {
+	id = gdunews.1
+	title = gdunews.1.t
+	desc = gdunews.1.d
+	picture = GFX_news_event_polandinvasion
+	hidden = yes
+	major = yes
+
+	trigger = {
+		GER = {
+			has_war_with = FRA
+		}
+		GER = {
+			has_war_with = ENG
+		}
+		GER = {
+			has_war_with = POL
+		}
+		NOT = {
+			has_global_flag = war_is_hell
+		}
+		
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	immediate = {
+		set_global_flag = war_is_hell
+		every_country = {
+			limit = {
+			is_ai = no
+		}
+		country_event = super.8
+	}
+	}
+	option = {
+		name = gdunews.1.a
+		trigger = { tag = GER }
+	}
+	option = {
+		name = gdunews.1.b
+		trigger = {
+			OR = { 
+				#tag = IRE 
+				tag = HOL
+				tag = ENG
+				is_in_faction_with = ENG 
+			}
+			NOT = { tag = FRA }
+			NOT = { tag = USA }
+		}
+	}
+	option = { 
+		name = gdunews.1.c
+		trigger = { tag = USA } 
+	}
+	option = {
+		name = gdunews.1.de
+		trigger = { tag = SOV }
+	}
+	option = {
+		name = gdunews.1.e
+		trigger = {
+			NOT = {
+				tag = GER
+				tag = ENG
+				is_in_faction_with = ENG
+				tag = USA 
+				tag = SOV
+				tag = FRA
+				#tag = IRE 
+				tag = HOL
+				tag = POL
+			}
+		}
+	}
+	option = { 
+		name = gdunews.1.e
+		trigger = { tag = FRA } 
+	}
+}
 ### Note, in order not to have to cut on loc, these news events will be country events.
 #country_event = { ### Katyn Massacre 
 #	id = gdunews.2002
