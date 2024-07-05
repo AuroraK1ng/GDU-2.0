@@ -349,3 +349,34 @@ country_event = {	#Asia_War
 		
 	}
 }
+
+country_event = {	#Barbarossa_Started
+	id = super.7
+	title = super.7.t
+	desc = super.7.d
+	picture = GFX_sp_event_Barbarossa
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	
+	trigger = {
+		
+	}
+	
+	option = {
+		sound_effect = barbarossa
+		name = super.7.a
+		every_country = {
+			limit = {
+			is_ai = no
+		}
+		set_country_flag = Super_Event_Visible
+	}
+		set_country_flag = Barbarossa_Started
+		#Barbarossa_Started Flag
+		set_country_flag = Super_Barbarossa_Started
+	#####################################################
+		
+	}
+}

@@ -6,7 +6,7 @@ guiTypes = {
 		size = { width = 600 height = 510 }
 		orientation = center
 		origo = center
-		moveable = no
+		moveable = yes
 		click_to_front = no
 		clipping = no
 
@@ -39,11 +39,6 @@ guiTypes = {
 			spriteType = "GFX_sp_event_Armistice_Negotiations"
 			position = {x = 0 y = 0}
 		}
-		iconType = {
-			name = "Super_Event_Image_Asia_War"
-			spriteType = "GFX_sp_event_Asia_War"
-			position = {x = 102 y = 150}
-		}
 		###############
 		###INTERFACE###
 		###############
@@ -63,6 +58,16 @@ guiTypes = {
 			spriteType = "GFX_sp_event_underlay"
 			position = { x = 195 y = 332 }
 		}
+		iconType = {
+			name = "Super_Event_Image_Asia_War"
+			spriteType = "GFX_sp_event_Asia_War"
+			position = {x = 102 y = 150}
+		}
+		iconType = {
+			name = "Super_Event_Image_Barbarossa"
+			spriteType = "GFX_sp_event_Barbarossa"
+			position = {x = 102 y = 150}
+		}
 		instantTextBoxType = {
 			name = "super_quote"
 			position = { x = 225 y = 336 }
@@ -76,11 +81,11 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "super_quote_animated"
-			position = { x = 15 y = 355 }
+			position = { x = 50 y = 355 }
 			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			text = "[get_super_event_quote]"
-			maxWidth = 570
+			maxWidth = 500
 			maxHeight = 110
 			fixedsize = yes	
 			format = center
@@ -97,7 +102,17 @@ guiTypes = {
 			maxHeight = 50
 			fixedsize = yes
 		}
-		
+		instantTextboxType = {
+			name = "super_date"
+			position = { x = -52 y = 100 }
+			font = "hoi_24header"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "[GetDateText]"
+			maxWidth = 700
+			maxHeight = 50
+			fixedsize = yes
+		}
 		buttonType = {
 			name = "sp_event_close_button"
 			spriteType = "GFX_sp_event_close_button"

@@ -35,7 +35,10 @@ scripted_gui = {
 		}
 		triggers = {
 			sp_event_animated_event_visible = {
+				OR = {
 				has_country_flag = Asia_War
+				has_country_flag = Barbarossa_Started
+				}
 			}
 		}
 		triggers = {
@@ -44,24 +47,45 @@ scripted_gui = {
 			}
 		}
 		triggers = {
+			Super_Event_Image_Barbarossa_visible = {
+				has_country_flag = Barbarossa_Started
+			}
+		}
+		triggers = {
 			sp_event_text_underlay_animated_visible = {
+				OR = {
 				has_country_flag = Asia_War
+				has_country_flag = Barbarossa_Started
+				}
+
 			}
 		}	
-	
 		triggers = {
 			sp_event_text_underlay_visible = {
 				NOT = { has_country_flag = Asia_War }
+				NOT = { has_country_flag = Barbarossa_Started }
 			}
 		}
 		triggers = {
 			super_quote_visible = {
 				NOT = { has_country_flag = Asia_War }
+				NOT = { has_country_flag = Barbarossa_Started }
 			}
 		}
 		triggers = {
 			super_quote_animated_visible = {
+				OR = {
+					has_country_flag = Asia_War 
+					has_country_flag = Barbarossa_Started 
+				}
+			}
+		}
+		triggers = {
+			super_date_visible = {
+				OR = {
 				has_country_flag = Asia_War 
+				has_country_flag = Barbarossa_Started 
+				}
 			}
 		}
 		############
@@ -108,6 +132,12 @@ scripted_gui = {
 						has_country_flag = Asia_War
 					}
 					clr_country_flag = Asia_War
+				}
+				if = {
+					limit = {
+						has_country_flag = Barbarossa_Started
+					}
+					clr_country_flag = Barbarossa_Started
 				}		
 			}
 		}

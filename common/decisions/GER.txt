@@ -1449,6 +1449,12 @@ GER_foreign_politics = {
 		}
 
 		remove_effect = {
+			every_country = {
+				limit = {
+				is_ai = no
+			}
+			country_event = super.7
+		}
 			custom_effect_tooltip = GER_barbarossa_tooltip
 			GER = {
 				declare_war_on = {
