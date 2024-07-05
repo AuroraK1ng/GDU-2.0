@@ -387,7 +387,7 @@ country_event = {	#WW2_Started
 	desc = super.8.d
 	picture = GFX_sp_event_Barbarossa
 	hidden = yes
-
+	major = yes
 	fire_only_once = no
 	
 	
@@ -405,12 +405,12 @@ country_event = {	#WW2_Started
 			has_global_flag = war_is_hell
 		}
 	}
-	
+	mean_time_to_happen = {
+		days = 1
+	}
 	immediate = {
 		set_global_flag = war_is_hell
-	}
-	
-	option = {
+
 		sound_effect = ww2
 		name = super.8.a
 		every_country = {
@@ -419,10 +419,13 @@ country_event = {	#WW2_Started
 		}
 		set_country_flag = Super_Event_Visible
 	}
+		set_global_flag = war_is_hell
 		set_country_flag = WW2_Started
 		#WW2_Started Flag
 		set_country_flag = Super_WW2_Started
 	#####################################################
+	}
+	option = {
 		
 	}
 }
