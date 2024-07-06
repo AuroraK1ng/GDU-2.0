@@ -6,7 +6,6 @@ scripted_gui = {
 
 		visible = {
 			check_variable = { show_background > 0 }
-			has_country_flag = FOCUS_BG_background
 		}
 
 		properties = {
@@ -15,28 +14,3 @@ scripted_gui = {
 			}
 		}
 	}
-	bg_tool_open= {
-		context_type = player_context
-		parent_window_name = "nationalfocusview"
-		window_name = "focus_bg_container"
-		visible = {
-			always = yes
-		}
-		effects = {
-			bg_tool_open_click = {
-				if = {
-					limit = { ROOT = { NOT = { has_country_flag = FOCUS_BG_background } } }
-					ROOT = { set_country_flag = FOCUS_BG_background }
-				}
-				else = {
-					ROOT = { clr_country_flag = FOCUS_BG_background }
-				}
-			}
-		}
-		triggers = {
-			bg_tool_open_click_enabled = {
-				always = yes
-			}
-		}
-	}
-}

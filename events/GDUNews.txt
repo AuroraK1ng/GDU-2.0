@@ -6,7 +6,7 @@ news_event = {
 	title = gdunews.1.t
 	desc = gdunews.1.d
 	picture = GFX_news_event_polandinvasion
-	hidden = yes
+
 	major = yes
 
 	trigger = {
@@ -29,12 +29,6 @@ news_event = {
 	}
 	immediate = {
 		set_global_flag = war_is_hell
-		every_country = {
-			limit = {
-			is_ai = no
-		}
-		country_event = super.8
-	}
 	}
 	option = {
 		name = gdunews.1.a
@@ -344,7 +338,7 @@ news_event = {
 	desc = gdunews.6.d
 	picture = GFX_news_event_pearl_harbor
 	is_triggered_only = yes 
-	hidden = yes
+	
 	major = yes 
 	
 	option = {

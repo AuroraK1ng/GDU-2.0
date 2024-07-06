@@ -1,30 +1,5 @@
 guiTypes = {
-	containerWindowType = {
-		name = "focus_bg_container"
-		position = { x = -450 y = 18 }
-		Orientation = UPPER_RIGHT
-		buttonType = {
-			name = "bg_tool_open"
-			quadTextureSprite = "GFX_generic_box_96"
-			position = { x = 0 y = 0 }
-			scale=1.1
-			pdx_tooltip = "[FOCUS_BG_TOOLTIP]"
-			clicksound = click_ok
-			oversound = ui_menu_over
-			shortcut = "ctrl+b"
-		}
-		
-		instantTextboxType = {
-			name = "title"
-			#position = {x=22 y=5}
-			position = {x=3 y=4}
-			font = "hoi_18mbs"
-			text = "[focus_bg_toggle_tooltip]"
-			maxWidth = 200
-			maxHeight = 23
-			format = left
-		}
-	}
+
 	containerWindowType = {
 		name = "nationalfocusview"
 		position = { x=-3 y=78 }		

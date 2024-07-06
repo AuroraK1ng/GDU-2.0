@@ -2036,12 +2036,43 @@ activate_mission = GER_relocate_industry_from_friesland
 				}
 			}
 			hidden_effect = {
-				every_country = {
-					limit = {
-					is_ai = no
+				sound_effect = sp_ger_wien
+				ENG = {
+					country_event = gduevents.62
 				}
-				country_event = super.1
-			}
+				CAN = {
+					country_event = gduevents.62
+				}
+				SAF = {
+					country_event = gduevents.62
+				}
+				RAJ = {
+					country_event = gduevents.62
+				}
+				AST = {
+					country_event = gduevents.62
+				}
+				NZL = {
+					country_event = gduevents.62
+				}
+				GER = {
+					country_event = gduevents.62
+				}
+				ITA = {
+					country_event = gduevents.62
+				}
+				SPR = {
+					country_event = gduevents.62
+				}
+				HUN = {
+					country_event = gduevents.62
+				}
+				ROM = {
+					country_event = gduevents.62
+				}
+				BUL = {
+					country_event = gduevents.62
+				}
 			}
 			army_experience = 10
 			if = {
@@ -3308,6 +3339,9 @@ activate_mission = GER_relocate_industry_from_friesland
 			factor = 10
 		}
 		completion_reward = {
+		hidden_effect = {
+			sound_effect = peace_europe
+		}
 			HUN = {
 				country_event = { id = germany.51 days = 30 }
 			}
@@ -3364,12 +3398,9 @@ activate_mission = GER_relocate_industry_from_friesland
 					CZE = { controls_state = 69 }
 
 				}
-				every_country = {
-					limit = {
-					is_ai = no
+				GER = {
+					country_event = germany.50
 				}
-				country_event = super.2
-			}
 				add_named_threat = { threat = 5 name = GER_demand_sudetenland_threat }
 			}
 			69 = {
@@ -3413,13 +3444,6 @@ activate_mission = GER_relocate_industry_from_friesland
 
 
 		completion_reward = {
-				every_country = {
-					limit = {
-					is_ai = no
-				}
-				country_event = super.3
-			} 
-		
 			if = {
 				limit = {
 					country_exists = CZE
@@ -3448,12 +3472,12 @@ activate_mission = GER_relocate_industry_from_friesland
 			}
 			if = {
 				limit = { NOT = { country_exists = CZE } }
-
-	}
+				country_event = { id = germany.55 hours = 6 }
+			}
 			add_named_threat = { threat = 5 name = GER_end_of_czechoslovakia }
 			custom_effect_tooltip = end_of_czechoslovakia_mefo_bills_tt
 			hidden_effect = {
-				SWE = {
+				GER = {
 					country_event = { id = gduevents.24 }
 				}
 			}
