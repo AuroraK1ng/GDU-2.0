@@ -1336,8 +1336,44 @@ GER_foreign_politics = {
 				target = GRE
 				type = annex_everything
 			}
+			BUL = {
+				declare_war_on = {
+					target = GRE
+					type = annex_everything
+				}
+			}
+			ROM = {
+				declare_war_on = {
+					target = GRE
+					type = annex_everything
+				}
+			}
+			HUN = {
+				declare_war_on = {
+					target = GRE
+					type = annex_everything
+				}
+			}
+			SPR = {
+				declare_war_on = {
+					target = GRE
+					type = annex_everything
+				}
+			}
+			IF = {
+				limit = {
+					ITA = {
+						has_war = yes
+					}
+				}
+				ITA = {
+					declare_war_on = {
+						target = GRE
+						type = annex_everything
+					}
+				}
+			}
 		}
-
 	}
 
 	GER_fuhrer_directive_25 = {
@@ -1368,6 +1404,43 @@ GER_foreign_politics = {
 			declare_war_on = {
 				target = YUG
 				type = annex_everything
+			}
+			BUL = {
+				declare_war_on = {
+					target = YUG
+					type = annex_everything
+				}
+			}
+			ROM = {
+				declare_war_on = {
+					target = YUG
+					type = annex_everything
+				}
+			}
+			HUN = {
+				declare_war_on = {
+					target = YUG
+					type = annex_everything
+				}
+			}
+			SPR = {
+				declare_war_on = {
+					target = YUG
+					type = annex_everything
+				}
+			}
+			IF = {
+				limit = {
+					ITA = {
+						has_war = yes
+					}
+				}
+				ITA = {
+					declare_war_on = {
+						target = YUG
+						type = annex_everything
+					}
+				}
 			}
 		}
 
@@ -1449,6 +1522,12 @@ GER_foreign_politics = {
 		}
 
 		remove_effect = {
+			every_country = {
+				limit = {
+				is_ai = no
+			}
+			country_event = super.7
+		}
 			custom_effect_tooltip = GER_barbarossa_tooltip
 			GER = {
 				declare_war_on = {

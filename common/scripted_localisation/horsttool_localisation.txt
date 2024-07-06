@@ -40,6 +40,33 @@ defined_text = { # global
 	}
 }
 defined_text = { # global
+	name = focus_bg_toggle_tooltip
+
+	text = {
+		trigger = {
+			has_country_flag = FOCUS_BG_background
+		}
+		localization_key = focus_bg_off
+	}
+	text = {
+		localization_key = focus_bg_on
+	}
+}
+
+defined_text = { # global
+	name = FOCUS_BG_TOOLTIP
+
+	text = {
+		trigger = {
+			has_country_flag = FOCUS_BG_background
+		}
+		localization_key = FOCUS_BG_TOOLTIP_off
+	}
+	text = {
+		localization_key = FOCUS_BG_TOOLTIP_on
+	}
+}
+defined_text = { # global
 	name = command_limit_tooltip
 
 	text = {

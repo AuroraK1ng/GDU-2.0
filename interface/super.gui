@@ -1,0 +1,170 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "sp_event_window"	
+		position = { x = 0 y = 0 }	
+		size = { width = 600 height = 510 }
+		orientation = center
+		origo = center
+		moveable = no
+		click_to_front = no
+		clipping = no
+
+		background = {
+			name = "Background"	
+			spriteType = "GFX_sp_event_window"
+		}
+		iconType = {
+			name = "Super_Event_Image_Anschluss"
+			spriteType = "GFX_sp_event_Anschluss"
+			position = {x = 0 y = 0}
+		}
+		iconType = {
+			name = "Super_Event_Image_Sudetenland"
+			spriteType = "GFX_sp_event_Sudetenland"
+			position = {x = 0 y = 0}
+		}
+		iconType = {
+			name = "Super_Event_Image_End_Of_Czechoslovakia"
+			spriteType = "GFX_sp_event_End_Of_Czechoslovakia"
+			position = {x = 0 y = 0}
+		}
+		iconType = {
+			name = "Super_Event_Image_Intervene_In_China"
+			spriteType = "GFX_sp_event_Intervene_In_China"
+			position = {x = 0 y = 0}
+		}
+		iconType = {
+			name = "Super_Event_Image_Armistice_Negotiations"
+			spriteType = "GFX_sp_event_Armistice_Negotiations"
+			position = {x = 0 y = 0}
+		}
+		###############
+		###INTERFACE###
+		###############
+		
+		iconType = {
+			name = "sp_event_animated_event"
+			spriteType = "GFX_super_event_animated"
+			position = { x = 0 y = 0 }
+		}
+		iconType = {
+			name = "sp_event_text_underlay_animated"
+			spriteType = "GFX_sp_event_underlay_animated"
+			position = { x = -3 y = 332 }
+		}
+		iconType = {
+			name = "sp_event_text_underlay"
+			spriteType = "GFX_sp_event_underlay"
+			position = { x = 195 y = 332 }
+		}
+		iconType = {
+			name = "Super_Event_Image_Asia_War"
+			spriteType = "GFX_sp_event_Asia_War"
+			position = {x = 102 y = 150}
+		}
+		iconType = {
+			name = "Super_Event_Image_Barbarossa"
+			spriteType = "GFX_sp_event_Barbarossa"
+			position = {x = 102 y = 150}
+		}
+		iconType = {
+			name = "Super_Event_Image_WW2"
+			spriteType = "GFX_sp_event_WW2"
+			position = {x = 102 y = 150}
+		}
+		iconType = {
+			name = "Super_Event_Image_Consolidate_Egypt"
+			spriteType = "GFX_sp_event_Consolidate_Egypt"
+			position = {x = 102 y = 150}
+		}
+		iconType = {
+			name = "sp_ger_flag"
+			spriteType = "GFX_sp_ger"
+			position = {x = 21 y = 89 }
+		}
+		iconType = {
+			name = "sp_sov_flag"
+			spriteType = "GFX_sp_sov"
+			position = {x = 511 y = 89}
+		}
+		iconType = {
+			name = "sp_usa_flag"
+			spriteType = "GFX_sp_usa"
+			position = {x = 511 y = 89}
+		}
+		iconType = {
+			name = "sp_jap_flag"
+			spriteType = "GFX_sp_jap"
+			position = {x = 21 y = 89 } 
+		}
+		iconType = {
+			name = "sp_eng_flag"
+			spriteType = "GFX_sp_eng"
+			position = {x = 21 y = 89 } 
+		}
+		iconType = {
+			name = "sp_ger_flag_2"
+			spriteType = "GFX_sp_ger"
+			position = {x = 511 y = 89}
+		}
+		iconType = {
+			name = "sp_ita_flag"
+			spriteType = "GFX_sp_ita"
+			position = {x = 511 y = 89}
+		}
+		instantTextBoxType = {
+			name = "super_quote"
+			position = { x = 225 y = 336 }
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[get_super_event_quote]"
+			maxWidth = 348
+			maxHeight = 110
+			fixedsize = yes	
+			format = right
+		}
+		instantTextBoxType = {
+			name = "super_quote_animated"
+			position = { x = 50 y = 355 }
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[get_super_event_quote]"
+			maxWidth = 500
+			maxHeight = 110
+			fixedsize = yes	
+			format = center
+		}
+		
+		instantTextboxType = {
+			name = "super_title"
+			position = { x = -52 y = 40 }
+			font = "hoi_24header"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "[get_super_event_title]"
+			maxWidth = 700
+			maxHeight = 50
+			fixedsize = yes
+		}
+		instantTextboxType = {
+			name = "super_date"
+			position = { x = -52 y = 100 }
+			font = "hoi_24header"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "[GetDateText]"
+			maxWidth = 700
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType = {
+			name = "sp_event_close_button"
+			spriteType = "GFX_sp_event_close_button"
+			position = { x = 187 y = 475 }
+			clicksound = click_close
+			buttonText = "[get_super_event_remark]"
+			buttonFont = "hoi_20b"
+		}
+	}
+}
