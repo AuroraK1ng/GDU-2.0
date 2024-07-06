@@ -17,8 +17,8 @@ ideas = {
 
 			modifier = {
 				army_morale_factor = 0.10
-				army_core_attack_factor = 0.45
-				army_core_defence_factor = 0.45
+				army_core_attack_factor = 0.5
+				army_core_defence_factor = 0.5
 				max_planning = -0.1
 				planning_speed = 0.25
 				dig_in_speed_factor = 0.5
@@ -93,8 +93,6 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_sisu
-
 			modifier = {
 				army_morale_factor = 0.10
 				army_core_attack_factor = 1.2
@@ -157,84 +155,7 @@ ideas = {
 			}				
 			
 			
-		}
-		sisu2 = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				NOT = {
-					has_government = communism
-				}
-			}
-
-			removal_cost = -1
-
-			picture = sisu
-
-			modifier = {
-				army_morale_factor = 0.10
-				army_core_attack_factor = 0.3
-				army_core_defence_factor = 0.3
-				max_planning = -0.1
-				planning_speed = 0.25
-				dig_in_speed_factor = 0.5			
-				surrender_limit = 0.8
-				industrial_capacity_dockyard = -5
-				production_speed_naval_base_factor = -1.0	
-				acclimatization_cold_climate_gain_factor = 100.0 			
-			}
-			
-			targeted_modifier = {
-				tag = ENG
-				attack_bonus_against = -0.3
-				defense_bonus_against = -0.3
-			}
-			targeted_modifier = {
-				tag = USA
-				attack_bonus_against = -0.3
-				defense_bonus_against = -0.3
-			}
-			targeted_modifier = {
-				tag = CAN
-				attack_bonus_against = -0.3
-				defense_bonus_against = -0.3
-			}
-			targeted_modifier = {
-				tag = SAF
-				attack_bonus_against = -0.3
-				defense_bonus_against = -0.3
-			}
-			targeted_modifier = {
-				tag = RAJ
-				attack_bonus_against = -0.3
-				defense_bonus_against = -0.3
-			}
-			targeted_modifier = {
-				tag = AST
-				attack_bonus_against = -0.3
-				defense_bonus_against = -0.3
-			}
-			targeted_modifier = {
-				tag = NZL
-				attack_bonus_against = -0.3
-				defense_bonus_against = -0.3
-			}
-			targeted_modifier = {
-				tag = FRA
-				attack_bonus_against = -0.3
-				defense_bonus_against = -0.3
-			}
-			targeted_modifier = {
-				tag = NOR
-				attack_bonus_against = -0.3
-				defense_bonus_against = -0.3
-			}				
-			
-			
-		}
+		}		
 		
 		no_finnish_justification = {
 
@@ -253,183 +174,6 @@ ideas = {
 				generate_wargoal_tension = 2.00
 			}
 		}
-		FIN_fascism_banned = {
-			picture = chi_war_of_resistance3
-			allowed = {
-				always = no
-			}
 
-			allowed_civil_war = {
-				NOT = {
-					has_government = communism
-				}
-			}
-
-			modifier = {
-				fascism_drift = -0.15
-			}
-		}
-		FIN_for_the_fatherland = {
-
-			allowed = {
-				always = no
-			}
-
-			picture = FIN_lotta_svard
-
-			allowed_civil_war = {
-				NOT = {
-					has_government = communism
-				}
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				army_core_attack_factor = 0.1
-				army_core_defence_factor = 0.1
-			}
-		}
-		FIN_motitus_tactics = {
-		
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = SOV_scientist_defect
-			
-			modifier = {
-				winter_attrition_factor = -0.8
-				army_speed_factor = 0.1
-				out_of_supply_factor = -0.1	
-			}
-		}
-		
-		FIN_white_guard_idea = {
-		
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = generic_volunteer_expedition_bonus
-			
-			modifier = {
-				conscription = 0.05
-				conscription_factor = 0.1
-		
-			}
-		}
-	
-		FIN_mannerheim_legacy_idea = {
-		
-		picture = FRA_fortification_focus
-		
-			allowed = {
-				original_tag = FRA
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			modifier = {
-				production_speed_bunker_factor = 0.15
-			}
-		}
-		
-		
-		
-        civilian_kitchens_idea = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = generic_goods_red_bonus
-			
-			modifier = {
-				consumer_goods_expected_value = -0.05
-			}
-		}
-		
-		FIN_communism_banned = {
-			picture = anti_soviet_pact
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				NOT = {
-					has_government = communism
-				}
-			}
-
-			modifier = {
-				communism_drift = -0.15
-			}
-		}
-		GDU_victory_leningrad = {
-			picture = price_of_egypt
-			allowed = {
-				always = no
-			}
-			removal_cost = -1
-			modifier = {
-				stability_factor = 0.1
-				war_support_factor = 0.1
-				consumer_goods_expected_value = -0.02
-
-			}
-		}
-		FIN_militarized_society = {
-			picture = generic_reserve_divisions
-			allowed = {
-				always = no
-			}
-			removal_cost = -1
-			modifier = {
-				stability_weekly = 0.002
-				conscription_factor = 0.1
-			}
-		}
-		FIN_victorious_march = {
-			picture = FIN_finnish_march_of_conquest
-			allowed = {
-				always = no
-			}
-			removal_cost = -1
-			modifier = {
-				army_speed_factor = 0.05
-				army_attack_factor = 0.05
-			}
-		}
-		FIN_deterrence = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			picture = generic_production_bonus
-			modifier = {
-				production_speed_industrial_complex_factor = 0.15
-				production_speed_arms_factory_factor = 0.15
-			}
-		}
 	}
 }
