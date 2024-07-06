@@ -37,106 +37,6 @@ country_event = {	#Anschluss
 		set_country_flag = Super_Anschluss
 	
 	#####################################################
-		IF = {
-			limit = { has_start_date > 1936.1.1.12 } 
-		SOV = {
-	  army_experience = 1000
-        air_experience  = 300
-                }
-        GER = {
-        air_experience  = 300
-                }
-        ITA = {
-        air_experience  = 300
-                }
-        BUL = {
-		army_experience = 125
-        }
-	  SPR = {
-		army_experience = 125
-        }
-         ROM = {
-        army_experience = 125
-                }
-        HUN = {
-        army_experience = 125
-                }
-        ENG = {
-        army_experience = 100
-                }
-        CAN = {
-        army_experience = 100
-                }
-        SAF = {
-        army_experience = 100
-                }
-		}
-	######################################################
-	4 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = GER
-			}
-		}
-		152 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = GER
-			}
-		}
-		153 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = GER
-			}
-		}
-		hidden_effect = { 
-			4 = { remove_core_of = AUS }
-			152 = { remove_core_of = AUS }
-			153 = { remove_core_of = AUS } 
-			AUS = { remove_state_claim  = 39 } 
-		}
-		GER = { annex_country = { target = AUS transfer_troops = yes } }
-		add_political_power = 75
-		custom_effect_tooltip = anschluss_mefo_bills_tt
-
-		custom_effect_tooltip = anschluss_mefo_bills_double_reduction
-		hidden_effect = {
-			add_named_threat = { threat = 10 name = germany.4.t }
-			set_country_flag = AUS_annexed
-			GER = {
-				add_equipment_to_stockpile = {
-					type = artillery_equipment_1
-					amount = 2000
-					producer = GER
-				}  
-				add_equipment_to_stockpile = {
-					type = support_equipment
-					amount = 460
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = anti_air_equipment_1
-					amount = 2000
-					producer = GER
-				} 
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_1
-					amount = 35671
-					producer = GER
-				} 
-				add_equipment_to_stockpile = {
-					type = motorized_equipment_1
-					amount = 110
-					producer = GER
-				} 
-				add_equipment_to_stockpile = {
-					type = anti_tank_equipment_1
-					amount = 1500
-					producer = GER
-				} 				
-			}			
-		}
 	}
 }
 
@@ -169,23 +69,6 @@ country_event = {	#Sudetenland
 		#Sudetenland Flag
 		set_country_flag = Super_Sudetenland
 	#####################################################
-		69 = { add_core_of = GER }
-		GER = { transfer_state = 69 }
-		74 = { add_core_of = GER }
-		GER = { transfer_state = 74 }
-		set_country_flag = sudetenland_acquired
-
-		if = {
-			limit = {
-				88 = { is_owned_by = POL }
-			}
-			POL = {
-				country_event = { hours = 6 id = germany.52 }
-			}
-		}
-		hidden_effect = {
-		sound_effect = peace_europe
-		}
 	}
 }
 
@@ -218,40 +101,6 @@ country_event = {	#End of Czechoslovakia
 		#Sudetenland Flag
 		set_country_flag = Super_End_Of_Czechoslovakia
 	#####################################################
-		add_to_faction = HUN
-		add_equipment_to_stockpile = {
-			type = light_tank_chassis_2
-			amount = 500
-			producer = GER
-		}
-		add_equipment_to_stockpile = {
-			type = medium_tank_chassis_1
-			amount = 200
-			producer = GER
-		}
-		ai_chance = { 
-			factor = 10
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		
-		HUN = { country_event = germany.56 }
-		if = {
-			limit = {
-				72 = {
-					OR = {
-						is_owned_by = CZE
-						is_owned_by = GER
-					}
-				}
-				country_exists = POL
-			}
-			POL = { transfer_state = 72 } # Give Poland Zaolzie
-		}
-		custom_effect_tooltip = end_of_czechoslovakia_mefo_bills_tt
-		add_to_variable = { var = GER_mefo_bill_counter value = -5 }
 	}
 }
 
