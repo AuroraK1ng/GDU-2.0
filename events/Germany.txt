@@ -4,86 +4,6 @@
 
 add_namespace = germany
 
-# Austrian Anschluss Completed
-country_event = {
-	id = germany.4
-	title = germany.4.t
-	desc = germany.4.d
-	picture = GFX_report_event_german_speech
-
-	is_triggered_only = yes
-
-	option = {
-		name = germany.4.a
-		4 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = GER
-			}
-		}
-		152 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = GER
-			}
-		}
-		153 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = GER
-			}
-		}
-		hidden_effect = { 
-			4 = { remove_core_of = AUS }
-			152 = { remove_core_of = AUS }
-			153 = { remove_core_of = AUS } 
-			AUS = { remove_state_claim  = 39 } 
-		}
-		annex_country = { target = AUS transfer_troops = yes }
-		add_political_power = 75
-		custom_effect_tooltip = anschluss_mefo_bills_tt
-
-		custom_effect_tooltip = anschluss_mefo_bills_double_reduction
-		hidden_effect = {
-			add_named_threat = { threat = 10 name = germany.4.t }
-			set_country_flag = AUS_annexed
-			news_event = { hours = 6 id = news.36 }
-			GER = {
-				add_equipment_to_stockpile = {
-					type = artillery_equipment_1
-					amount = 2000
-					producer = GER
-				}  
-				add_equipment_to_stockpile = {
-					type = support_equipment
-					amount = 460
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = anti_air_equipment_1
-					amount = 2000
-					producer = GER
-				} 
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_1
-					amount = 35671
-					producer = GER
-				} 
-				add_equipment_to_stockpile = {
-					type = motorized_equipment_1
-					amount = 110
-					producer = GER
-				} 
-				add_equipment_to_stockpile = {
-					type = anti_tank_equipment_1
-					amount = 1500
-					producer = GER
-				} 				
-			}			
-		}
-}
-}
-
 #anti_comintern_pact
 # nations are asked to join pact, agreeing = relations with GER and hit with SOV
 
@@ -632,9 +552,6 @@ country_event = {
 				GER = { has_army_size = { size > 39 } }
 			}
 		}
-		GER = {
-			country_event = { hours = 2 id = germany.4 }
-		}
 		custom_effect_tooltip = GAME_OVER_TT
 	}
 }
@@ -947,35 +864,7 @@ country_event = {
 				factor = 2.0
 			}
 		}
-		GER = { country_event = germany.50 }
-	}
-}
-
-# Germany (Czechoslovakia Surrenders Sudetenland)
-country_event = {
-	id = germany.50
-	title = germany.40.t
-	desc = germany.50.d
-	picture = GFX_report_event_german_politician_speech
-
-	is_triggered_only = yes
-
-	option = {
-		name = germany.50.a
-		69 = { add_core_of = GER }
-		GER = { transfer_state = 69 }
-		74 = { add_core_of = GER }
-		GER = { transfer_state = 74 }
-		set_country_flag = sudetenland_acquired
-
-		if = {
-			limit = {
-				88 = { is_owned_by = POL }
-			}
-			POL = {
-				country_event = { hours = 6 id = germany.52 }
-			}
-		}
+		SWE = { country_event = super.2 }
 	}
 }
 
@@ -1024,7 +913,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		GER = { country_event = germany.55 }
+		hidden_effect = { SWE = { country_event = super.3 } }
 		custom_effect_tooltip = GAME_OVER_TT
 	}
 
@@ -1163,9 +1052,6 @@ country_event = {
 		every_state = { 
 			limit = { is_core_of = CZE } 
 			remove_core_of = CZE 
-		}
-		hidden_effect = {
-			country_event = { hours = 6 id = news.61 }
 		}
 	}
 }
