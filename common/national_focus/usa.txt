@@ -862,7 +862,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_scientist_haven
-		icon = GFX_focus_research
+		icon = GFX_usa_reserch
 		prerequisite = { focus = USA_USACE_projects focus = USA_wartime_industry }
 		x = 0
 		y = 3
@@ -1079,7 +1079,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_indirect_help
-		icon = GFX_focus_chi_british_cooperation
+		icon = GFX_usa_give
 		prerequisite = { focus = USA_neutrality_act }
 		prerequisite = { focus = USA_limited_intervention }
 		x = 1
@@ -1104,7 +1104,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_ships_for_victory
-		icon = GFX_usa_dockyard_output
+		icon = GFX_yards1
 		prerequisite = { focus = USA_guarantee_the_american_dream }
 		x = 0
 		y = 1
@@ -1255,7 +1255,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_wartime_industry
-		icon = GFX_Generic_Working_Women
+		icon = GFX_usa_propoganda
 		prerequisite = { focus = USA_the_giant_wakes }
 		x = 1
 		y = 2
@@ -1273,7 +1273,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_military_construction
-		icon = GFX_military_construction
+		icon = GFX_usa_mils
 		prerequisite = { focus = USA_arsenal_of_democracy }
 
 		available = {
@@ -1427,7 +1427,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_america_first
-		icon = GFX_america_first
+		icon = GFX_usa_first
 		x = 4
 		y = 1
 		prerequisite = { focus = USA_continue_the_new_deal }
@@ -1777,7 +1777,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_war_plan_black
-		icon = GFX_focus_usa_focus_on_europe1
+		icon = GFX_normandy
 		prerequisite = { focus = GDU_USA_torch	}
 
 		continue_if_invalid = yes
@@ -1854,7 +1854,7 @@ focus_tree = {
 	}
    	focus = {
    		id = USA_rubber_reserve_company
-   		icon = GFX_focus_generic_rubber
+   		icon = GFX_refka
    		prerequisite = { focus = USA_office_of_scientific_research_and_development }
    		available = {
 			has_war_with = JAP
@@ -1893,7 +1893,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_selective_training_act
-		icon = GFX_American_Service
+		icon = GFX_usa_selectiveact
 		x = -8
 		y = 1
 		prerequisite = { focus = USA_war_department }
@@ -1954,7 +1954,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_first_special_service_force
-		icon = GFX_goal_usa_sf
+		icon = GFX_usa_companys
 		prerequisite = { focus = USA_selective_training_act }
 		x = -2
 		y = 1
@@ -1987,7 +1987,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_louisiana_maneuvers
-		icon = GFX_Generic_American_Soldier2
+		icon = GFX_maneveringluis
 		x = 0
 		y = 1
 		prerequisite = { focus = USA_selective_training_act }
@@ -2088,7 +2088,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_womens_armed_service_integration_act
-		icon = GFX_Generic_Female_Soldier03
+		icon = GFX_girls_usa
 		x = 0
 		y = 3
 		prerequisite = { focus = USA_army_of_the_united_states }
