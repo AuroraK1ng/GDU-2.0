@@ -33,6 +33,12 @@ ITA_ll_germany = {
 			} }	
 		cost = 0		
 		complete_effect = {
+			every_country = {
+				limit = {
+				is_ai = no
+			}
+			country_event = super.9
+		}
 			complete_national_focus = ITA_consolidate_egypt
 		}	
 	}

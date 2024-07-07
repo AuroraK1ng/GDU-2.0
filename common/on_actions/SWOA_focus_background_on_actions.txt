@@ -1,13 +1,6 @@
 on_actions = {
 	on_startup = {
 		effect = {
-			every_country={
-				limit={
-					is_playable_country=yes
-				}
-				set_variable = { super_events_enabled = 2 }
-				set_variable = { speeches_enabled = 2 }
-			}
 			ENG = {
 				set_variable = { show_background = 1 }
 			}
@@ -17,8 +10,20 @@ on_actions = {
 			GER = {
 				set_variable = { show_background = 3 }
 			}
+			HUN = {
+				set_variable = { show_background = 14 }
+			}
 			ITA = {
 				set_variable = { show_background = 4 }
+			}
+			ROM = {
+				set_variable = { show_background = 19 }
+			}
+			BUL = {
+				set_variable = { show_background = 11 }
+			}
+			SPR = {
+				set_variable = { show_background = 20 }
 			}
 			JAP = {
 				set_variable = { show_background = 5 }
@@ -29,31 +34,22 @@ on_actions = {
 			USA = {
 				set_variable = { show_background = 7 }
 			}
-			HUN = {
-				set_variable = { show_background = 8 }
-			}
-			SPR = {
+			CAN = {
 				set_variable = { show_background = 9 }
 			}
-			ROM = {
-				set_variable = { show_background = 10 }
-			}
-			BUL = {
-				set_variable = { show_background = 11 }
-			}
-			CAN = {
-				set_variable = { show_background = 12 }
-			}
 			SAF = {
-				set_variable = { show_background = 12 }
+				set_variable = { show_background = 9 }
 			}
 			RAJ = {
-				set_variable = { show_background = 12 }
+				set_variable = { show_background = 9 }
 			}
 			AST = {
-				set_variable = { show_background = 12 }
+				set_variable = { show_background = 9 }
 			}
 			NZL = {
+				set_variable = { show_background = 9 }
+			}
+			FIN = {
 				set_variable = { show_background = 12 }
 			}
 		}

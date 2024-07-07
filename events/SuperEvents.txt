@@ -1,0 +1,291 @@
+################
+# SUPER EVENTS #
+################
+
+add_namespace = super
+add_namespace = super_info
+
+
+country_event = {	#Anschluss
+	id = super.1
+	title = super.1.t
+	desc = super.1.d
+	picture = GFX_sp_event_Anschluss
+	hidden = yes
+	is_triggered_only = yes
+	
+	fire_only_once = no
+	
+	
+	trigger = {
+		
+	}
+
+	option = {
+		name = super.1.a
+		every_country = {
+			limit = {
+			is_ai = no
+		}
+		set_country_flag = Super_Event_Visible
+	}
+
+		set_country_flag = GER_Anschluss
+		sound_effect = sp_ger_wien
+		
+		#Anschluss Flag
+		set_country_flag = Super_Anschluss
+	
+	#####################################################
+	}
+}
+
+country_event = {	#Sudetenland
+	id = super.2
+	title = super.2.t
+	desc = super.2.d
+	picture = GFX_sp_event_Sudetenland
+	hidden = yes
+	is_triggered_only = yes
+	
+	fire_only_once = no
+	
+	
+	trigger = {
+		
+	}
+
+	option = {
+		
+		name = super.2.a
+       	set_country_flag = GER_Sudetenland
+		every_country = {
+			limit = {
+			is_ai = no
+		}
+		set_country_flag = Super_Event_Visible
+	}
+		
+		#Sudetenland Flag
+		set_country_flag = Super_Sudetenland
+	#####################################################
+	}
+}
+
+country_event = {	#End of Czechoslovakia
+	id = super.3
+	title = super.3.t
+	desc = super.3.d
+	picture = GFX_sp_event_End_Of_Czechoslovakia
+	hidden = yes
+	is_triggered_only = yes
+	
+	fire_only_once = no
+	
+	
+	trigger = {
+		
+	}
+
+	option = {
+		
+		name = super.3.a
+		set_country_flag = GER_End_Of_Czechoslovakia
+		every_country = {
+			limit = {
+			is_ai = no
+		}
+		set_country_flag = Super_Event_Visible
+	}
+		
+		#Sudetenland Flag
+		set_country_flag = Super_End_Of_Czechoslovakia
+	#####################################################
+	}
+}
+
+country_event = {	#Intervene in China
+	id = super.4
+	title = super.4.t
+	desc = super.4.d
+	picture = GFX_sp_event_Intervene_In_China
+	hidden = yes
+	is_triggered_only = yes
+	
+	fire_only_once = no
+	
+	
+	trigger = {
+		
+	}
+
+	option = {
+		sound_effect = sino_japanese_war
+		name = super.4.a
+		set_country_flag = JAP_intervene_in_china
+		every_country = {
+			limit = {
+			is_ai = no
+		}
+		set_country_flag = Super_Event_Visible
+	}
+		
+		#Intervene in China Flag
+		set_country_flag = Super_JAP_intervene_in_china
+	#####################################################
+		
+	}
+}
+
+country_event = {	#Armistice_Negotiations
+	id = super.5
+	title = super.5.t
+	desc = super.5.d
+	picture = GFX_sp_event_Armistice_Negotiations
+	hidden = yes
+	is_triggered_only = yes
+	
+	fire_only_once = no
+	
+	
+	trigger = {
+		
+	}
+	
+	option = {
+		name = super.5.a
+		every_country = {
+			limit = {
+			is_ai = no
+		}
+		set_country_flag = Super_Event_Visible
+	}
+		set_country_flag = Armistice_Negotiations
+		#Armistice_Negotiations Flag
+		set_country_flag = Super_Armistice_Negotiations
+	#####################################################
+		
+	}
+}
+
+country_event = {	#Asia_War
+	id = super.6
+	title = super.6.t
+	desc = super.6.d
+	picture = GFX_sp_event_Asia_War
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	
+	trigger = {
+		
+	}
+	
+	option = {
+		sound_effect = russo_japanese_war
+		name = super.6.a
+		every_country = {
+			limit = {
+			is_ai = no
+		}
+		set_country_flag = Super_Event_Visible
+	}
+		set_country_flag = Asia_War
+		#Asia_War Flag
+		set_country_flag = Super_Asia_War
+	#####################################################
+		
+	}
+}
+
+country_event = {	#Barbarossa_Started
+	id = super.7
+	title = super.7.t
+	desc = super.7.d
+	picture = GFX_sp_event_Barbarossa
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	
+	trigger = {
+		
+	}
+	
+	option = {
+		sound_effect = barbarossa
+		name = super.7.a
+		every_country = {
+			limit = {
+			is_ai = no
+		}
+		set_country_flag = Super_Event_Visible
+	}
+		set_country_flag = Barbarossa_Started
+		#Barbarossa_Started Flag
+		set_country_flag = Super_Barbarossa_Started
+	#####################################################
+		
+	}
+}
+
+country_event = {	#WW2_Started
+	id = super.8
+	title = super.8.t
+	desc = super.8.d
+	picture = GFX_sp_event_WW2
+	hidden = yes
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+	
+	}
+	
+	option = {
+		sound_effect = ww2
+		name = super.8.a
+		every_country = {
+			limit = {
+			is_ai = no
+		}
+		set_country_flag = Super_Event_Visible
+	}
+
+		set_country_flag = WW2_Started
+		#WW2_Started Flag
+		set_country_flag = Super_WW2_Started
+	#####################################################
+	}
+}
+
+country_event = {	#Consolidate_Egypt
+	id = super.9
+	title = super.9.t
+	desc = super.9.d
+	picture = GFX_sp_event_Consolidate_Egypt
+	hidden = yes
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+	
+	}
+	
+	option = {
+		sound_effect = Mussolini
+		name = super.9.a
+		every_country = {
+			limit = {
+			is_ai = no
+		}
+		set_country_flag = Super_Event_Visible
+	}
+		set_country_flag = Consolidate_Egypt
+		#WW2_Started Flag
+		set_country_flag = Super_Consolidate_Egypt
+	#####################################################
+	}
+}
+

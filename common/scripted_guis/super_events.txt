@@ -1,0 +1,207 @@
+scripted_gui = {
+
+	sp_event_window = {
+		window_name = "sp_event_window"
+		context_type = player_context
+
+		visible = {
+			has_country_flag = Super_Event_Visible
+		}
+		
+		triggers = {
+			Super_Event_Image_Anschluss_visible = {
+				has_country_flag = GER_Anschluss
+			}
+		}
+		triggers = {
+			Super_Event_Image_Sudetenland_visible = {
+				has_country_flag = GER_Sudetenland
+			}
+		}
+		triggers = {
+			Super_Event_Image_End_Of_Czechoslovakia_visible = {
+				has_country_flag = GER_End_Of_Czechoslovakia
+			}
+		}
+		triggers = {
+			Super_Event_Image_Intervene_In_China_visible = {
+				has_country_flag = JAP_intervene_in_china
+			}
+		}
+		triggers = {
+			Super_Event_Image_Armistice_Negotiations_visible = {
+				has_country_flag = Armistice_Negotiations
+			}
+		}
+		triggers = {
+			Super_Event_Image_Asia_War_visible = {
+				has_country_flag = Asia_War
+			}
+		}
+		triggers = {
+			Super_Event_Image_Barbarossa_visible = {
+				has_country_flag = Barbarossa_Started
+			}
+		}
+		triggers = {
+			Super_Event_Image_WW2_visible = {
+				has_country_flag = WW2_Started
+			}
+		}
+		triggers = {
+			Super_Event_Image_Consolidate_Egypt_visible = {
+				has_country_flag = Consolidate_Egypt
+			}
+		}
+		triggers = {
+			sp_event_text_underlay_animated_visible = {
+				OR = {
+				has_country_flag = Asia_War
+				has_country_flag = Barbarossa_Started
+				has_country_flag = WW2_Started
+				has_country_flag = Consolidate_Egypt
+				}
+
+			}
+		}	
+		triggers = {
+			sp_event_text_underlay_visible = {
+				NOT = { has_country_flag = Asia_War }
+				NOT = { has_country_flag = Barbarossa_Started }
+				NOT = { has_country_flag = WW2_Started }
+				NOT = { has_country_flag = Consolidate_Egypt }
+			}
+		}
+		triggers = {
+			super_quote_visible = {
+				NOT = { has_country_flag = Asia_War }
+				NOT = { has_country_flag = Barbarossa_Started }
+				NOT = { has_country_flag = WW2_Started }
+				NOT = { has_country_flag = Consolidate_Egypt }
+			}
+		}
+		triggers = {
+			super_quote_animated_visible = {
+				OR = {
+					has_country_flag = Asia_War 
+					has_country_flag = Barbarossa_Started 
+					has_country_flag = WW2_Started
+					has_country_flag = Consolidate_Egypt
+				}
+			}
+		}
+		triggers = {
+			super_date_visible = {
+				OR = {
+				has_country_flag = Asia_War 
+				has_country_flag = Barbarossa_Started 
+				has_country_flag = WW2_Started
+				has_country_flag = Consolidate_Egypt
+				}
+			}
+		}
+		triggers = {
+			sp_ger_flag_visible = {
+				has_country_flag = Barbarossa_Started 
+			}
+		}
+		triggers = {
+			sp_sov_flag_visible = {
+				has_country_flag = Barbarossa_Started 
+			}
+		}
+		triggers = {
+			sp_jap_flag_visible = {
+				has_country_flag = Asia_War
+			}
+		}
+		triggers = {
+			sp_usa_flag_visible = {
+				has_country_flag = Asia_War
+			}
+		}
+		triggers = {
+			sp_eng_flag_visible = {
+				OR = {
+				has_country_flag = Consolidate_Egypt
+				has_country_flag = WW2_Started
+				}
+			}
+		}
+		triggers = {
+			sp_ger_flag_2_visible = {
+				has_country_flag = WW2_Started
+			}
+		}
+		triggers = {
+			sp_ita_flag_visible = {
+				has_country_flag = Consolidate_Egypt
+			}
+		}
+		############
+		###BUTTON###
+		############
+		
+		effects = {
+			sp_event_close_button_click = {
+				clr_country_flag = Super_Event_Visible
+				
+				if = {
+					limit = {
+						has_country_flag = GER_Anschluss
+					}
+					clr_country_flag = GER_Anschluss
+				}
+
+				if = {
+					limit = {
+						has_country_flag = GER_Sudetenland
+					}
+					clr_country_flag = GER_Sudetenland
+				}
+				if = {
+					limit = {
+						has_country_flag = GER_End_Of_Czechoslovakia
+					}
+					clr_country_flag = GER_End_Of_Czechoslovakia
+				}
+				if = {
+					limit = {
+						has_country_flag = JAP_intervene_in_china
+					}
+					clr_country_flag = JAP_intervene_in_china
+				}
+				if = {
+					limit = {
+						has_country_flag = Armistice_Negotiations
+					}
+					clr_country_flag = Armistice_Negotiations
+				}
+				if = {
+					limit = {
+						has_country_flag = Asia_War
+					}
+					clr_country_flag = Asia_War
+				}
+				if = {
+					limit = {
+						has_country_flag = Barbarossa_Started
+					}
+					clr_country_flag = Barbarossa_Started
+				}
+				if = {
+					limit = {
+						has_country_flag = WW2_Started
+					}
+					clr_country_flag = WW2_Started
+				}	
+				if = {
+					limit = {
+						has_country_flag = Consolidate_Egypt
+					}
+					clr_country_flag = Consolidate_Egypt
+				}	
+			}
+		}
+	}
+}
