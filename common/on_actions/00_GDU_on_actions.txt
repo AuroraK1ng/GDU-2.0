@@ -3,6 +3,7 @@ on_actions = {
 			effect = {
 				every_country = {
 					cross_faction_trade_disabled = yes
+					set_country_flag = FOCUS_BG_background
 				}
 			}
 		}
@@ -29,38 +30,6 @@ on_actions = {
 					if = { limit = { state = 323 NOR = { owns_state =  323 }} transfer_state_to = NOR }
 					else = { transfer_state_to = FIN }
 				} 	
-			}
-		}
-	}
-	on_paradrop = {
-	    effect = {
-			if = {  
-				limit = { 
-					OR = { 
-					is_owned_by = SPR 
-					is_owned_by = FIN 
-					is_owned_by = GER 
-					is_owned_by = ITA 
-					is_owned_by = ROM 
-					is_owned_by = HUN 
-					is_owned_by = BUL 
-					is_owned_by = USA 
-					is_owned_by = ENG 
-					is_owned_by = SOV 
-					is_owned_by = FRA 
-					is_owned_by = JAP 
-					is_owned_by = CAN 
-					is_owned_by = SAF 
-					is_owned_by = RAJ 
-					is_owned_by = AST 
-					is_owned_by = NZL
-					} 
-				} 
-				ROOT = { 
-					PREV = {  
-						teleport_armies = { to_state = FROM } 
-					} 
-				}	
 			}
 		}
 	}	
@@ -1158,6 +1127,7 @@ on_actions = {
 						activate_mission = SOV_relocate_industry_from_kiev
 						activate_mission = SOV_relocate_industry_from_kursk
 						activate_mission = SOV_relocate_industry_from_kurzeme
+						activate_mission = SOV_relocate_industry_from_karjala
 						activate_mission = SOV_relocate_industry_from_leningrad
 						activate_mission = SOV_relocate_industry_from_lvov
 						activate_mission = SOV_relocate_industry_from_minsk
