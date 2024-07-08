@@ -26,12 +26,8 @@ spriteTypes = {
 		textureFile = "/gfx/sp_events/Super_Event_GER_Anschluss.tga"
 	}
 	spriteType = {
-		name = "GFX_sp_event_Sudetenland"
-		textureFile = "/gfx/sp_events/Super_Event_GER_End_Of_Czechoslovakia.dds"
-	}
-	spriteType = {
 		name = "GFX_sp_event_End_Of_Czechoslovakia"
-		textureFile = "/gfx/sp_events/Super_Event_GER_Sudetenland.dds"
+		textureFile = "/gfx/sp_events/Super_Event_GER_End_Of_Czechoslovakia.dds"
 	}
 	spriteType = {
 		name = "GFX_sp_event_Intervene_In_China"
@@ -98,6 +94,16 @@ spriteTypes = {
 	frameAnimatedSpriteType = {
 		name = "GFX_sp_event_Consolidate_Egypt"
 		texturefile = "/gfx/sp_events/Super_Event_Consolidate_Egypt.dds"
+		noOfFrames = 40
+		loadType = "INGAME"
+		transparencecheck = no
+		animation_rate_fps = 10
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_sp_event_Speer"
+		textureFile = "/gfx/sp_events/Super_Event_Speer.dds"
 		noOfFrames = 40
 		loadType = "INGAME"
 		transparencecheck = no

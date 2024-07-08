@@ -14,8 +14,8 @@ scripted_gui = {
 			}
 		}
 		triggers = {
-			Super_Event_Image_Sudetenland_visible = {
-				has_country_flag = GER_Sudetenland
+			Super_Event_Image_Speer_visible = {
+				has_country_flag = GER_Speer
 			}
 		}
 		triggers = {
@@ -60,6 +60,8 @@ scripted_gui = {
 				has_country_flag = Barbarossa_Started
 				has_country_flag = WW2_Started
 				has_country_flag = Consolidate_Egypt
+				has_country_flag = GER_Speer 
+
 				}
 
 			}
@@ -70,6 +72,8 @@ scripted_gui = {
 				NOT = { has_country_flag = Barbarossa_Started }
 				NOT = { has_country_flag = WW2_Started }
 				NOT = { has_country_flag = Consolidate_Egypt }
+				NOT = { has_country_flag = GER_Speer }
+
 			}
 		}
 		triggers = {
@@ -78,6 +82,7 @@ scripted_gui = {
 				NOT = { has_country_flag = Barbarossa_Started }
 				NOT = { has_country_flag = WW2_Started }
 				NOT = { has_country_flag = Consolidate_Egypt }
+				NOT = { has_country_flag = GER_Speer }
 			}
 		}
 		triggers = {
@@ -87,6 +92,7 @@ scripted_gui = {
 					has_country_flag = Barbarossa_Started 
 					has_country_flag = WW2_Started
 					has_country_flag = Consolidate_Egypt
+					has_country_flag = GER_Speer
 				}
 			}
 		}
@@ -97,12 +103,16 @@ scripted_gui = {
 				has_country_flag = Barbarossa_Started 
 				has_country_flag = WW2_Started
 				has_country_flag = Consolidate_Egypt
+				has_country_flag = GER_Speer
 				}
 			}
 		}
 		triggers = {
 			sp_ger_flag_visible = {
+				OR = {
 				has_country_flag = Barbarossa_Started 
+				has_country_flag = GER_Speer
+				}
 			}
 		}
 		triggers = {
@@ -130,7 +140,10 @@ scripted_gui = {
 		}
 		triggers = {
 			sp_ger_flag_2_visible = {
+				OR = {
 				has_country_flag = WW2_Started
+				has_country_flag = GER_Speer
+				}
 			}
 		}
 		triggers = {
@@ -155,9 +168,9 @@ scripted_gui = {
 
 				if = {
 					limit = {
-						has_country_flag = GER_Sudetenland
+						has_country_flag = GER_Speer
 					}
-					clr_country_flag = GER_Sudetenland
+					clr_country_flag = GER_Speer
 				}
 				if = {
 					limit = {
