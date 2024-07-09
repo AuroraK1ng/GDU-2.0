@@ -32,7 +32,7 @@ NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT
 --- Letting people see some stuff on ledger
 NDefines.NGame.GAME_SPEED_SECONDS = { 6000.0, 0.06, 0.2, 0.05, 0.0 }	-- Previous { 1, 2, 3, 4, 5 } = { 6000.0, 0.4, 0.2, 0.05, 0.0 }	Consider Making Speed 3 Slower. 
 
-NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 16 --| less messages lying around at the top of your screen | CHANGE FOR CHECKSUMM
+NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 15 --| less messages lying around at the top of your screen | CHANGE FOR CHECKSUMM
 
 
 ------ Recently Added -----
@@ -236,7 +236,7 @@ NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 10				-- how many armies a field m
 
 NDefines.NMilitary.COMBAT_STACKING_START = 3						-- vanilla is 8 -- at what nr of divisions stacking penalty starts
 NDefines.NMilitary.COMBAT_STACKING_EXTRA = 1                      -- vanilla is 4 -- extra stacking from directions
-NDefines.NMilitary.COMBAT_STACKING_PENALTY = -0.08               -- vanilla is -0.02 -- how much stacking penalty per division
+NDefines.NMilitary.COMBAT_STACKING_PENALTY = -0.08                -- vanilla is -0.02 -- how much stacking penalty per division
 
 
 
