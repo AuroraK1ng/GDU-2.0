@@ -32,7 +32,7 @@ NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT
 --- Letting people see some stuff on ledger
 NDefines.NGame.GAME_SPEED_SECONDS = { 6000.0, 0.06, 0.2, 0.05, 0.0 }	-- Previous { 1, 2, 3, 4, 5 } = { 6000.0, 0.4, 0.2, 0.05, 0.0 }	Consider Making Speed 3 Slower. 
 
-NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 12 --| less messages lying around at the top of your screen | CHANGE FOR CHECKSUMM
+NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 14 --| less messages lying around at the top of your screen | CHANGE FOR CHECKSUMM
 
 
 ------ Recently Added -----
@@ -236,7 +236,7 @@ NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 10				-- how many armies a field m
 
 NDefines.NMilitary.COMBAT_STACKING_START = 3						-- vanilla is 8 -- at what nr of divisions stacking penalty starts
 NDefines.NMilitary.COMBAT_STACKING_EXTRA = 1                      -- vanilla is 4 -- extra stacking from directions
-NDefines.NMilitary.COMBAT_STACKING_PENALTY = -0.08                -- vanilla is -0.02 -- how much stacking penalty per division
+NDefines.NMilitary.COMBAT_STACKING_PENALTY = -0.08               -- vanilla is -0.02 -- how much stacking penalty per division
 
 
 
@@ -370,6 +370,7 @@ NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_FACTOR = 0.8 -- original 0.8 Anti Air Gun Da
 NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_CHANCE = 0.1 -- original 0.1 Anti Air Gun hit chance. DOES NOTHING 
 NDefines.NAir.ANTI_AIR_ATTACK_TO_DAMAGE_REDUCTION_FACTOR = 1 -- original 1.00 Balancing value to convert equipment stat anti_air_attack to the damage reduction modifier apply to incoming air attacks against units with AA.
 NDefines.NAir.ANTI_AIR_MAXIMUM_DAMAGE_REDUCTION_FACTOR = 0.8 -- .8 ( og GDU 0.75 ) Maximum damage reduction factor applied to incoming air attacks against units with AA.
+NDefines.NAir.BASE_UNIT_WEIGHT_IN_TRANSPORT_PLANES = 2000
 
 -- Convoy Priorities START --- this is edited from vanilla to make lend lease be the last priority with convoys, so that you don't get your trade for resources stopped if you are getting too much LL
 NDefines.NNavy.NAVAL_INVASION_PRIORITY = 1									-- Default convoy priority for naval invasions

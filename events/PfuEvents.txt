@@ -44,9 +44,16 @@ country_event = {
 		tag = GER
 		NOT = { has_global_flag = total_war }
 	}
-
+	hidden = yes
 	immediate = {
 		set_global_flag = total_war
+			every_country = {
+				limit = {
+				is_in_faction_with_axis = yes
+			}
+			country_event = super.2
+		}
+		
 	}
 
 	option = {

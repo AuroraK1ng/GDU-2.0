@@ -40,11 +40,11 @@ country_event = {	#Anschluss
 	}
 }
 
-country_event = {	#Sudetenland
+country_event = {	#Speer
 	id = super.2
 	title = super.2.t
 	desc = super.2.d
-	picture = GFX_sp_event_Sudetenland
+	picture = GFX_sp_event_Speer
 	hidden = yes
 	is_triggered_only = yes
 	
@@ -58,16 +58,16 @@ country_event = {	#Sudetenland
 	option = {
 		
 		name = super.2.a
-       	set_country_flag = GER_Sudetenland
+       	set_country_flag = GER_Speer
 		every_country = {
 			limit = {
-			is_ai = no
+			is_in_faction_with_axis = yes
 		}
 		set_country_flag = Super_Event_Visible
 	}
 		
-		#Sudetenland Flag
-		set_country_flag = Super_Sudetenland
+		#Speer Flag
+		set_country_flag = Super_Speer
 	#####################################################
 	}
 }
