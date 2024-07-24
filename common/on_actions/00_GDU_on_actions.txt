@@ -7,11 +7,51 @@ on_actions = {
 				}
 			}
 		}
+		on_nuke_drop = {
+
+			effect = {
+				set_global_flag = first_nuke_dropped
+				if = {
+					limit = { NOT = { has_global_flag = first_nuke_dropped } }
+					country_event = { id = generic.8 }
+				}
+				if = {
+					limit = { has_idea = race_for_the_bomb_outclassed }
+					remove_ideas = race_for_the_bomb_outclassed
+				}
+				if = {
+					limit = { NOT = { has_country_flag = achievement_has_dropped_nuke } }
+					goto_state = FROM
+					set_country_flag = achievement_has_dropped_nuke
+				}
+			}
+			random_events = {
+				100 = nuke_dropped.0
+			}
+		}
 	on_naval_invasion = { 
 		effect ={ 
 			if = { 
-				limit = {OR = {british_coastline_not_south = yes}} 
-				teleport_armies = {limit = { is_in_faction_with_axis = yes  } to_state = 64 } every_country = {  delete_unit = { state = 64 disband = yes  } } 
+				limit = {
+					OR = {
+						british_coastline_not_south = yes
+					}
+				} 
+				teleport_armies = {
+					limit = {
+						OR = {
+							tag = JAP
+							is_in_faction_with_axis = yes
+						}
+					}
+					to_state = 64 
+				} 
+				every_country = {
+					delete_unit = {
+						state = 64
+						disband = yes
+					} 
+				} 
 				PREV = { 
 					if = { limit = { NOT = { OR = { state = 582 state = 323 }}}  transfer_state_to = ENG }  
 					if = { limit = { state = 582 POL = { owns_state =  582 }} transfer_state_to = POL }
