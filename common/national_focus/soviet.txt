@@ -4868,6 +4868,61 @@ focus_tree = {
 				target = GER
 				type = annex_everything
 			}
+			add_tech_bonus = {
+				name = barb_landdoc_rush_disincentive_bonus
+				bonus = 99.9
+				uses = 1
+				technology = kampfgruppe
+				technology = concentrated_fire_plans
+				technology = centralized_fire_control
+				technology = branch_interoperation
+				technology = infiltration_assault
+				technology = vast_offensives
+				technology = human_wave_offensive
+
+				if = {
+					limit = {
+						has_tech = mechanised_offensive
+					}
+					set_technology = { kampfgruppe = 1 }
+				}
+				if = {
+					limit = {
+						has_tech = blitzkrieg
+					}
+					set_technology = { kampfgruppe = 1 }
+				}
+				if = {
+					limit = {
+						has_tech = sup_mechanized_offensive
+					}
+					set_technology = { concentrated_fire_plans = 1 }
+				}
+				if = {
+					limit = {
+						has_tech = armored_operations
+					}
+					set_technology = { infiltration_assault = 1 }
+				}
+				if = {
+					limit = {
+						has_tech = assault_concentration
+					}
+					set_technology = { branch_interoperation = 1 }
+				}
+				if = {
+					limit = {
+						has_tech = operational_concentration
+					}
+					set_technology = { vast_offensives = 1 }
+				}
+				if = {
+					limit = {
+						has_tech = large_front_offensive
+					}
+					set_technology = { human_wave_offensive = 1 }
+				}
+			}
 		}
 	}
 	focus = {
