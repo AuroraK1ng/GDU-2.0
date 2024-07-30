@@ -140,7 +140,7 @@ SOV_morozov_design_bureau_organization = {
 		#}
 
 		production_bonus = {
-			production_cost_factor = -0.05
+			production_cost_factor = -0.075
 		}
 	}
 
@@ -890,7 +890,7 @@ SOV_grabin_design_bureau_organization = {
 		}
 
 		production_bonus = {
-			production_cost_factor = -0.075
+			production_cost_factor = -0.1
 		}
 	}
 	
@@ -921,7 +921,7 @@ SOV_grabin_design_bureau_organization = {
 		#}
 
 		production_bonus = {
-			production_efficiency_cap_factor = 0.075
+			production_efficiency_cap_factor = 0.1
 		}
 	}
 
@@ -952,7 +952,7 @@ SOV_grabin_design_bureau_organization = {
 		#}
 
 		production_bonus = {
-			production_capacity_factor = 0.075
+			production_capacity_factor = 0.1
 		}
 	}
 }
@@ -996,7 +996,7 @@ SOV_tula_arms_plant_organization = {
 		}
 
 		production_bonus = {
-			production_cost_factor = -0.075
+			production_cost_factor = -0.1
 		}
 	}
 
@@ -1027,7 +1027,7 @@ SOV_tula_arms_plant_organization = {
 		#}
 
 		production_bonus = {
-			production_efficiency_cap_factor = 0.075
+			production_efficiency_cap_factor = 0.1
 		}
 	}
 
@@ -1058,7 +1058,7 @@ SOV_tula_arms_plant_organization = {
 		#}
 
 		production_bonus = {
-			production_capacity_factor = 0.075
+			production_capacity_factor = 0.1
 		}
 	}
 }
@@ -1103,6 +1103,34 @@ SOV_gaz_organization = {
 				
 		# 	}
 		# }
+	}
+	
+	add_trait = { 
+		token = SOV_mio_trait_merge_plant_no_28
+		name = SOV_merge_aircraft_plant_1
+		#icon = GFX_generic_mio_department_icon_facilities
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		special_trait_background = yes
+
+		position = { x=9 y=1 }
+		
+		visible = {
+			FROM = { original_tag = SOV }
+		}
+		
+		limit_to_equipment_type = { motorized_equipment }
+
+		available = {
+			FROM = {
+				has_completed_focus = SOV_Mechanise_the_Army
+			}
+		}
+
+		limit_to_equipment_type = { motorized_equipment }
+
+		equipment_bonus = {
+			build_cost_ic = -0.05
+		}
 	}
 
 	add_trait = { 
@@ -1196,6 +1224,117 @@ SOV_gaz_organization = {
 		equipment_bonus = {
 			soft_attack = 0.2
 			defense = 0.2
+		}
+	}
+}
+
+SOV_mytishchy_machine_building_plant_organization = {
+	include = generic_armored_car_organization
+	icon = GFX_idea_SOV_mytishchy_machine_building_plant
+	
+	allowed = {	
+		OR = {
+			tag = SOV 
+			# AND = {
+			# 	tag = BUL
+			# 	has_dlc = "Battle for the Bosporus"
+			# }
+		}
+	}
+
+	allowed = {
+		always = yes
+	}
+
+	equipment_type = { armored_car_equipment support_equipment }
+	research_categories = { cat_armored_cars }
+
+	tree_header_text = {
+		text = mio_header_design_and_production
+		x = 3
+	}
+
+	tree_header_text = {
+		text = mio_header_equipment_and_specialization
+		x = 7
+	}
+	
+	add_trait = { 
+		token = SOV_mio_trait_merge_plant_no_622
+		name = SOV_merge_materiel_plant_1_infantry
+		#icon = GFX_generic_mio_department_icon_facilities
+		icon = GFX_generic_mio_department_icon_infantry_production
+		special_trait_background = yes
+
+		position = { x=7 y=4 }
+		
+		visible = {
+			FROM = { original_tag = SOV }
+		}
+
+		available = {
+			FROM = {
+				has_completed_focus = SOV_Workers_Peasants_Red_Army
+			}
+			#Only exists in this MIO
+		}
+		
+		limit_to_equipment_type = { support_equipment }
+
+		production_bonus = {
+			production_cost_factor = -0.025
+		}
+	}
+
+	add_trait = { 
+		token = SOV_mio_trait_merge_nkmz_plant
+		name = SOV_merge_materiel_plant_2
+		#icon = GFX_generic_mio_department_icon_facilities
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+		special_trait_background = yes
+
+		position = { x=8 y=4 }
+		
+		visible = {
+			FROM = { original_tag = SOV }
+		}
+
+		available = {
+			FROM = {
+				has_completed_focus = SOV_Workers_Peasants_Red_Army
+			}
+		}
+		
+		limit_to_equipment_type = { support_equipment }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.025
+		}
+	}
+
+	add_trait = { 
+		token = SOV_mio_trait_merge_magnitogorsk_metallurgical_plant
+		name = SOV_merge_materiel_plant_3
+		#icon = GFX_generic_mio_department_icon_facilities
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x=9 y=4 }
+		
+		visible = {
+			FROM = { original_tag = SOV }
+		}
+
+		available = {
+			FROM = {
+				has_completed_focus = SOV_Workers_Peasants_Red_Army
+			}
+		}
+		
+		limit_to_equipment_type = { support_equipment }
+
+		production_bonus = {
+			production_capacity_factor = 0.025
 		}
 	}
 }
