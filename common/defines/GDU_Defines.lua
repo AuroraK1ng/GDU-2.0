@@ -281,8 +281,8 @@ NDefines.NMilitary.LAND_COMBAT_STR_DICE_SIZE = 2                 -- nr of damage
 NDefines.NMilitary.LAND_COMBAT_STR_ARMOR_ON_SOFT_DICE_SIZE = 2   -- extra damage dice if our armor outclasses enemy
 NDefines.NMilitary.LAND_COMBAT_ORG_ARMOR_ON_SOFT_DICE_SIZE = 5   -- extra damage dice if our armor outclasses enemy
 
-
-NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.12
+NDefines.NMilitary.RELIABILTY_RECOVERY = 0.0 -- Vanilla is 0.1, reduce because it's a broken in vanilla HOI4. Fix if ever fixed.
+NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.115 -- Was 0.12, reduced because reliability recovery is broken
 NDefines.NMilitary.LAND_COMBAT_ORG_DAMAGE_MODIFIER = 0.04
 NDefines.NMilitary.LAND_COMBAT_ORG_ARMOR_DEFLECTION_FACTOR = 0.5 -- damage reduction if armor outclassing enemy, will look at increasing if AT is too deadly to org. 
 NDefines.NMilitary.LAND_COMBAT_STR_ARMOR_DEFLECTION_FACTOR = 1.0 -- damage reduction if armor outclassing enemy

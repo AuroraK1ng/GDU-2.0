@@ -5239,7 +5239,12 @@ generic_armored_car_organization = {
 	icon = GFX_idea_FRA_panhard
 
 	allowed = {
-		always = yes
+		AND = {
+			always = yes
+			NOT = {
+				tag = SOV
+			}
+		}
 	}
 
 	equipment_type = { armored_car_equipment support_equipment }
