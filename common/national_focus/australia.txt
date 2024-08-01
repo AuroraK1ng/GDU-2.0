@@ -961,13 +961,6 @@ focus_tree = {
 			add_tech_bonus = {
 				name = AST_cac_boomerang
 				bonus = 1.00
-				ahead_reduction = 1
-				uses = 1
-				technology = fighter2
-			}
-			add_tech_bonus = {
-				name = AST_cac_boomerang
-				bonus = 1.00
 				uses = 1
 				technology = fighter2
 			}			
@@ -1351,14 +1344,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = AST_naval_bombers
-				bonus = 1.00
-				ahead_reduction = 1
-				uses = 1
-				technology = air_torpedoe_1
-
-			}
 			add_tech_bonus = {
 				name = AST_naval_bombers
 				bonus = 1.00
@@ -1854,7 +1839,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = AST_scrap_iron_flotilla
 				bonus = 1.00
-				ahead_reduction = 1
+				ahead_reduction = 0.5
 				uses = 2
 				category = dd_tech
 			}		
@@ -2199,7 +2184,7 @@ focus_tree = {
 		add_tech_bonus = {
 				name = AST_cruisers
 				bonus = 1.00
-				ahead_reduction = 2
+				ahead_reduction = 0.5
 				uses = 1
 				category = bb_tech
 			}	
