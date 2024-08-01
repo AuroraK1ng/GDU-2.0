@@ -445,12 +445,6 @@ foreign_politics = {
 			custom_effect_tooltip = GDU_Jap_pearlharbor_tt
 
 			hidden_effect = {
-				every_country = {
-					limit = {
-					is_ai = no
-				}
-				country_event = super.6
-			}
 				add_named_threat = { threat = 20 name = Pearl_Harbor }
 				JAP = { remove_ideas = GDU_JAP_No_Prewar_TradeBuff }
 				USA = { country_event = gdunews.6 }

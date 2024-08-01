@@ -1962,9 +1962,6 @@ activate_mission = GER_relocate_industry_from_friesland
 					nukes = 1
 				}
 			}
-			hidden_effect = {
-				sound_effect = wunderwaffe
-			}
 		}
 	}
 
@@ -2036,7 +2033,6 @@ activate_mission = GER_relocate_industry_from_friesland
 				}
 			}
 			hidden_effect = {
-				sound_effect = sp_ger_wien
 				ENG = {
 					country_event = gduevents.62
 				}
@@ -2918,7 +2914,6 @@ activate_mission = GER_relocate_industry_from_friesland
 		cost = 1
 
 		completion_reward = {
-			sound_effect = untergang
 			create_corps_commander = {
 				name = "Felix Steiner"
 				picture = "portrait_ger_felix_steiner.dds"
@@ -2945,7 +2940,6 @@ activate_mission = GER_relocate_industry_from_friesland
 			relative_position_id = 	GER_Summon_Steiner
 			cost = 5
 			completion_reward = {
-			sound_effect = artillerieberlin
 			GER = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_2 amount = 100000 producer = GER
@@ -3339,9 +3333,6 @@ activate_mission = GER_relocate_industry_from_friesland
 			factor = 10
 		}
 		completion_reward = {
-		hidden_effect = {
-			sound_effect = peace_europe
-		}
 			HUN = {
 				country_event = { id = germany.51 days = 30 }
 			}
@@ -4286,9 +4277,6 @@ activate_mission = GER_relocate_industry_from_friesland
 		completion_reward = {
 			add_ideas = GER_recruit_hitlerjugend
 			GER = { add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 20000 producer = GER } }
-			hidden_effect = {
-				sound_effect = hitlerjugend
-			}
 		}
 	}
 

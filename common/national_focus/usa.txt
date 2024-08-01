@@ -803,9 +803,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		hidden_effect = {
-			sound_effect = usa_war
-		}
 			add_political_power = 300
 			add_war_support = 0.25
 			add_ideas = tot_economic_mobilisation
@@ -1839,16 +1836,6 @@ focus_tree = {
 		completion_reward = {
 			JAP = {
 				add_opinion_modifier = { target = USA modifier = war_plan_orange }
-			}
-			create_corps_commander = {
-				name = "Alexander Vandegrift"
-				gfx = GFX_portrait_usa_alexander_vandegrift
-				skill = 3
-				attack_skill = 3
-				defense_skill = 1
-				planning_skill = 3
-				logistics_skill = 3
-				traits = { naval_invader }
 			}
 		}
 	}
