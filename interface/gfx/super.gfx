@@ -7,12 +7,10 @@ spriteTypes = {
 		name = "GFX_sp_event_window"
 		textureFile = "/gfx/Super_Event_Window.dds"
 	}
-	
 	spriteType = {
 		name = "GFX_sp_event_close_button"
 		textureFile = "/gfx/Super_Event_Close_Button.dds"
 	}
-	
 	spriteType = {
 		name = "GFX_sp_event_underlay"
 		textureFile = "/gfx/Super_Event_Underlay.dds"
@@ -23,7 +21,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_sp_event_Anschluss"
-		textureFile = "/gfx/sp_events/Super_Event_GER_Anschluss.tga"
+		textureFile = "/gfx/sp_events/Super_Event_GER_Anschluss.dds"
 	}
 	spriteType = {
 		name = "GFX_sp_event_End_Of_Czechoslovakia"
@@ -38,6 +36,18 @@ spriteTypes = {
 		textureFile = "/gfx/sp_events/Super_Event_Armistice_Negotiations.dds"
 	}
 	spriteType = {
+		name = "GFX_sp_event_Barbarossa"
+		textureFile = "/gfx/sp_events/Super_Event_Barbarossa.dds"
+	}
+	spriteType = {
+		name = "GFX_sp_event_Speer"
+		textureFile = "/gfx/sp_events/Super_Event_Speer.dds"
+	}
+	spriteType = {
+		name = "GFX_sp_event_WW2"
+		textureFile = "/gfx/sp_events/Super_Event_WW2.dds"
+	}
+	spriteType = {
 		name = "GFX_sp_ger"
 		textureFile = "/gfx/sp_events/sp_ger.tga"
 	}
@@ -50,16 +60,16 @@ spriteTypes = {
 		textureFile = "/gfx/sp_events/sp_usa.tga"
 	}
 	spriteType = {
+		name = "GFX_sp_ita"
+		textureFile = "/gfx/sp_events/sp_ita.tga"
+	}
+	spriteType = {
 		name = "GFX_sp_jap"
 		textureFile = "/gfx/sp_events/sp_jap.tga"
 	}
 	spriteType = {
 		name = "GFX_sp_eng"
 		textureFile = "/gfx/sp_events/sp_eng.tga"
-	}
-	spriteType = {
-		name = "GFX_sp_ita"
-		textureFile = "/gfx/sp_events/sp_ita.tga"
 	}
 	frameAnimatedSpriteType = {
 		name = "GFX_sp_event_Asia_War"
@@ -72,38 +82,8 @@ spriteTypes = {
 		play_on_show = yes
 	}
 	frameAnimatedSpriteType = {
-		name = "GFX_sp_event_Barbarossa"
-		texturefile = "/gfx/sp_events/Super_Event_Barbarossa.dds"
-		noOfFrames = 40
-		loadType = "INGAME"
-		transparencecheck = no
-		animation_rate_fps = 8
-		looping = yes
-		play_on_show = yes
-	}
-	frameAnimatedSpriteType = {
-		name = "GFX_sp_event_WW2"
-		texturefile = "/gfx/sp_events/Super_Event_WW2.dds"
-		noOfFrames = 40
-		loadType = "INGAME"
-		transparencecheck = no
-		animation_rate_fps = 8
-		looping = yes
-		play_on_show = yes
-	}
-	frameAnimatedSpriteType = {
 		name = "GFX_sp_event_Consolidate_Egypt"
 		texturefile = "/gfx/sp_events/Super_Event_Consolidate_Egypt.dds"
-		noOfFrames = 40
-		loadType = "INGAME"
-		transparencecheck = no
-		animation_rate_fps = 10
-		looping = yes
-		play_on_show = yes
-	}
-	frameAnimatedSpriteType = {
-		name = "GFX_sp_event_Speer"
-		textureFile = "/gfx/sp_events/Super_Event_Speer.dds"
 		noOfFrames = 40
 		loadType = "INGAME"
 		transparencecheck = no
