@@ -47,12 +47,6 @@ country_event = {
 	hidden = yes
 	immediate = {
 		set_global_flag = total_war
-			every_country = {
-				limit = {
-				is_in_faction_with_axis = yes
-			}
-			country_event = super.2
-		}
 		
 	}
 
@@ -64,6 +58,7 @@ country_event = {
 		hidden_effect = {
 			add_stability = 0.05
 			add_war_support = 0.05
+			
 		}
 		swap_ideas = {
 			remove_idea = GER_short_war
@@ -92,6 +87,7 @@ country_event = {
 		BUL = {
 			add_ideas = GER_total_war		
 		}
+		news_event = gdunews.10
 	}
 	mean_time_to_happen = { days = 2 }
 }
