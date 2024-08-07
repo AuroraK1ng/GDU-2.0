@@ -60,6 +60,30 @@ technologies = {
 		}
 	}
 
+
+	SPA_medium_tank_tech = {
+
+		research_cost = 0.75
+		
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+
+		#If you change these
+		#Change the custom tooltip too: HUN_light_infantry_divisions_doctrine_effect
+		armor = {
+			forest = {
+				attack = 0.05
+			}
+			forest_africa = {
+				attack = 0.05
+			}			
+		}
+	}
+
 	infantry_weapons = {
 
 		enable_equipments = {

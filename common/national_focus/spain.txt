@@ -198,12 +198,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			air_experience = 50
-			add_tech_bonus = {
-				name = SPA_expand_the_air_branch
-				bonus = 1.0
-				uses = 1
-				category = air_doctrine
+			
+			41 = { add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				
 			}
 		}
 	}
@@ -246,6 +248,63 @@ focus_tree = {
 			}
 		}
 	}
+
+
+
+
+
+
+		focus = {
+		id = SPA_Army_recovering
+		available = {
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPA_expand_the_special_forces }
+		
+		
+		x = 1
+		y = 9
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			
+			remove_ideas = SPA_Army_destroyed
+			168 = { add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	focus = {
 		id = SPA_motorization
@@ -1170,7 +1229,6 @@ focus_tree = {
 		bypass = {
 			has_global_flag = SPR_carlist_uprising_flag
 		}
-		prerequisite = { focus = SPA_caudillo_of_spain }
 		prerequisite = { focus = SPA_extol_the_martyrs_of_the_war }
 		prerequisite = { focus = SPA_martyrdom_for_primo_de_rivera }
 		
