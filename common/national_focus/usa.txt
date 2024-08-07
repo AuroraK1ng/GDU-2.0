@@ -2334,12 +2334,12 @@ focus_tree = {
 				name = USA_fighter_bonus
 				ahead_reduction = 0.5
 				bonus = 0.25
-				technology = improved_small_airframe
+				category = light_air
 			}
 			add_tech_bonus = {
 				name = USA_fighter_bonus
 				bonus = 0.25
-				technology = improved_small_airframe
+				category = light_air
 			}			
 		}
 	}
@@ -2365,13 +2365,13 @@ focus_tree = {
 				uses = 1
 				ahead_reduction = 0.5
 				bonus = 1.0
-				category = cas_bomber
+				technology = aa_cannon_1
 			}
 			add_tech_bonus = {
 				name = CAS_effort
 				uses = 1
 				bonus = 1.0
-				category = cas_bomber
+				technology = aa_cannon_2
 			}			
 		}
 	}
@@ -2427,17 +2427,17 @@ focus_tree = {
 		completion_reward = {
 			air_experience = 25
 			add_tech_bonus = {
-				name = USA_TAC
+				name = USA_escort_fighters
 				uses = 1
 				ahead_reduction = 0.5
-				bonus = 1.0
-				category = tactical_bomber
+				bonus = 2.5
+				category = medium_air
 			}
 			add_tech_bonus = {
-				name = USA_TAC
+				name = USA_escort_fighters
 				uses = 1
-				bonus = 1.0
-				category = tactical_bomber
+				bonus = 2.5
+				category = medium_air
 			}			
 		}
 	}
@@ -2470,50 +2470,6 @@ focus_tree = {
 		completion_reward = {
 			air_experience = 25
 			add_ideas = combined_bomber_offensive
-		}
-	}
-	focus = {
-		id = USA_escort_fighters
-		icon = GFX_avia1
-		x = 0
-		y = 2
-		prerequisite = { focus = USA_air_support focus = USA_strategic_bombing }
-		relative_position_id = USA_air_war_plans_division
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = USA_escort_fighters
-				bonus = 2.5
-				ahead_reduction = 0.5
-				uses = 1
-				technology = basic_medium_airframe
-				technology = improved_medium_airframe
-				technology = advanced_medium_airframe
-			}
-			add_tech_bonus = {
-				name = USA_escort_fighters
-				bonus = 2.5
-				uses = 1
-				technology = improved_medium_airframe
-				technology = advanced_medium_airframe
-			}			
 		}
 	}
 	focus = {
@@ -3214,7 +3170,7 @@ focus_tree = {
 		prerequisite = { focus = USA_air_war_plans_division }
 		relative_position_id = USA_air_war_plans_division
 		x = 0
-		y = 4
+		y = 2	
 		cost = 10
 		ai_will_do = {
 			factor = 1
