@@ -257,6 +257,10 @@ focus_tree = {
 		focus = {
 		id = SPA_Army_recovering
 		available = {
+			OR = {
+				date > 1940.10.1
+				
+			}
 		}
 		bypass = {
 		}
@@ -911,6 +915,40 @@ focus_tree = {
 		}		
 	}
 
+	
+	focus = {
+		id = SPA_gold_reserve
+		available = {
+		}
+		bypass = {
+			has_global_flag = SPR_carlist_uprising_flag
+		}
+		prerequisite = { focus = SPA_expand_the_axis_gold_trade }
+		icon = GFX_goal_generic_military_deal
+		x = 10
+		y = 9
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_SPA_CARLIST_UPRISING}
+		completion_reward = {
+			add_ideas = {
+				SPA_gold_reserve
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
 	focus = {
 		id = SPA_ensure_agricultural_self_sufficiency
 		available = {
@@ -1012,7 +1050,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_STABILITY}
 		completion_reward = {
 			add_stability = 0.1
-			add_ideas = partial_economic_mobilisation
+			add_ideas = low_economic_mobilisation
 		}
 	}
 
@@ -1042,17 +1080,17 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		prerequisite = { focus = SPA_unify_the_nationalist_front }
+		
 		
 		icon = GFX_focus_spa_caudillo_of_spain
-		x = 4
+		x = 17
 		y = 1
 		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_STABILITY}
 		completion_reward = { 
-			add_stability = 0.05
+			add_stability = 0.15
 			create_country_leader = {
 				name = "Francisco Franco"
 				desc = "POLITICS_FRANCISCO_FRANCO_DESC"
@@ -1073,6 +1111,99 @@ focus_tree = {
 			}
 		}
 	}
+
+
+
+	focus = {
+		id = SPA_distabilization_of_spain
+		available = {
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPA_caudillo_of_spain }
+		
+		x = 17
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_STABILITY}
+		completion_reward = { 
+		add_ideas = SPA_distabilization_of_spain_1
+		}
+	}
+
+
+	focus = {
+		id = SPA_strengthen_fascists
+		available = {
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPA_distabilization_of_spain }
+		
+		x = 17
+		y = 3
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_STABILITY}
+		completion_reward = { 
+		add_ideas = SPA_strengthen_fascists
+		}
+	}
+
+	focus = {
+		id = SPA_the_rise_of_the_fascists_to_power
+		available = {
+			OR = {
+				date > 1937.2.1
+			}
+
+
+
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPA_strengthen_fascists }
+		
+		x = 17
+		y = 4
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_STABILITY}
+		completion_reward = { 
+		set_politics = {
+            ruling_party = fascism
+        }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	focus = {
 		id = SPA_extol_the_martyrs_of_the_war
@@ -1172,6 +1303,33 @@ focus_tree = {
 	}
 
 
+	focus = {
+		id = SPA_compromise_with_the_fascists
+		available = {
+		}
+		bypass = {
+			has_global_flag = SPR_carlist_uprising_flag
+		}
+		prerequisite = { focus = SPA_foment_a_carlist_split }
+		prerequisite = { focus = SPA_banish_the_party_leaders }
+		icon = GFX_goal_generic_military_deal
+		x = 6
+		y = 3
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_SPA_CARLIST_UPRISING}
+		completion_reward = {
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+			}
+			swap_ideas = {
+				remove_idea = SPA_divided_nation
+				add_idea = SPA_divided_nation_1
+			}
+		}
+	}
 
 	focus = {
 		id = SPA_integrate_the_requetes
@@ -1265,11 +1423,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 		hidden_effect = {add_timed_idea = { idea = SPA_recovering_from_civil_war days = 800 } }
-		set_politics = {
-			ruling_party = fascism	
-		}
-			set_party_name = { ideology = fascism long_name = SPR_fascism_francoist_party_long name = SPR_fascism_francoist_party }
-			set_party_name = { ideology = neutrality long_name = SPR_fascism_francoist_party_long name = SPR_fascism_francoist_party }
+		
 			add_stability = 0.15
 		}
 	}
@@ -1295,14 +1449,7 @@ focus_tree = {
 			    ideology = fascism
 			    popularity = 0.1
 			}
-			if = {
-				limit = {
-					NOT = {
-						has_idea = war_economy
-					}
-				}
-				add_ideas = war_economy
-			}
+			
 			168 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1440,129 +1587,8 @@ focus_tree = {
 	}
 
 
-	focus = {
-		id = SPR_OIL_1
-		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = SPA_reduce_reliance_on_foreign_resources }
-		
-		x = 10
-		y = 8
-		cost = 5
-		ai_will_do = {
-			factor = 5
-		}
 
-			completion_reward = {
-				add_resource = {
-					type = steel
-					amount = 20
-					state = 41
-				}
-				add_resource = {
-					type = tungsten
-					amount = 5
-					state = 41
-				}
-			}
-		}
-
-	focus = {
-		id = SPR_OIL_2
-		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = SPR_OIL_1 }
-		x = 10
-		y = 9
-		cost = 10
-		ai_will_do = {
-			factor = 5
-		}
-
-		completion_reward = {
-				add_resource = {
-					type = steel
-					amount = 30
-					state = 174
-				}
-				add_resource = {
-					type = tungsten
-					amount = 5
-					state = 41
-				}
-		}
-	}
-
-	focus = {
-		id = SPR_OIL_3
-		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = SPR_OIL_2 }
-		x = 10
-		y = 10
-		cost = 10
-		ai_will_do = {
-			factor = 5
-		}
-
-		completion_reward = {
-			add_resource = {
-				type = steel
-				amount = 40
-				state = 175
-			}
-			add_resource = {
-				type = tungsten
-				amount = 10
-				state = 41
-			}
-		}
-	}
-	focus = {
-		id = SPA_a_great_spain
-		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = SPR_OIL_3 }
-		x = 10
-		y = 11
-		cost = 10
-		ai_will_do = {
-			factor = 5
-		}
-
-		completion_reward = {
-			add_resource = {
-				type = steel
-				amount = 75
-				state = 41
-			}
-			add_resource = {
-				type = tungsten
-				amount = 10
-				state = 41
-			}
-		}
-	}
-	focus = {
-		id = SPR_the_popular_front
-		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = SPA_a_great_spain }
-		x = 10
-		y = 12
-		cost = 5
-		ai_will_do = {
-			factor = 5
-		}
-
-		completion_reward = {
-			add_resource = {
-				type = steel
-				amount = 150
-				state = 175
-			}
-			add_resource = {
-				type = tungsten
-				amount = 20
-				state = 41
-			}
-		}
-	}
+	
 	
 
 }

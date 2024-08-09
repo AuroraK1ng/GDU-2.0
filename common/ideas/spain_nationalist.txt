@@ -19,6 +19,118 @@ ideas = {
 			}
 		}
 
+		SPA_distabilization_of_spain_1 = {
+			name = distabilization_of_spain_1
+			picture = distabilization_of_spain
+			allowed = {
+				original_tag = SPR
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_weekly = -0.005
+				neutrality_drift = 0.03
+			}
+		}
+
+		SPA_strengthen_fascists_1 = {
+
+			picture = generic_fascism_drift_2
+			
+			modifier = {
+				fascism_drift = 0.1
+			}
+		}
+
+
+
+		SPA_divided_nation = {
+			name = SPA_divided_nation
+			
+			allowed = {
+				original_tag = SPR
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				
+				industrial_capacity_factory = -0.20
+				industrial_capacity_dockyard = -0.20
+				political_power_cost = 0.3
+			}
+		}
+
+		SPA_divided_nation_1 = {
+			name = SPA_divided_nation
+			
+			allowed = {
+				original_tag = SPR
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				
+				industrial_capacity_factory = -0.20
+				industrial_capacity_dockyard = -0.20
+				
+			}
+		}
+
+
+		SPA_gold_reserve = {
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.05
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+		SPA_strengthen_fascists = {
+
+			
+			
+			modifier = {
+				fascism_drift = 0.1
+			}
+		}           									
+			
+
+		SPA_Fascism_support = {
+			name = SPA_Fascism_support
+			
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = democratic
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				fascism_drift = 0.05
+			}
+		}
+
+
+
+
 
 
 
@@ -131,7 +243,7 @@ ideas = {
 			}
 			modifier = {
 				stability_weekly = -0.003
-				neutrality_drift = 0.05
+				
 			}
 		}
 		SPA_carlism_2 = {
