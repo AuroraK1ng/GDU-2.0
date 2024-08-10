@@ -4227,27 +4227,87 @@ focus_tree = {
 					}
 					NOT = {
 						291 = {
-								is_controlled_by = ENG
+							is_controlled_by = ENG
 						}
 					}
 					NOT = {
 						454 = {
-								is_controlled_by = ENG
+							is_controlled_by = ENG
 						}
 					}
 					NOT = {
 						453 = {
-								is_controlled_by = ENG
+							is_controlled_by = ENG
 						}
 					}
 					NOT = {
 						446 = {
-								is_controlled_by = ENG
+							is_controlled_by = ENG
 						}
 					}
 					NOT = {
 						447 = {
-								is_controlled_by = ENG
+							is_controlled_by = ENG
+						}
+					}
+					OR = {
+						date > 1943.1.1
+						AND = {
+							NOT = {
+								517 = {
+									OR = {
+										is_controlled_by = AST
+										is_controlled_by = ENG
+									}
+								}
+							}NOT = {
+								519 = {
+									OR = {
+										is_controlled_by = AST
+										is_controlled_by = ENG
+									}
+								}
+							}
+							NOT = {
+								520 = {
+									OR = {
+										is_controlled_by = AST
+										is_controlled_by = ENG
+									}
+								}
+							}
+							NOT = {
+								521 = {
+									OR = {
+										is_controlled_by = AST
+										is_controlled_by = ENG
+									}
+								}
+							}
+							NOT = {
+								522 = {
+									OR = {
+										is_controlled_by = AST
+										is_controlled_by = ENG
+									}
+								}
+							}
+							NOT = {
+								285 = {
+									OR = {
+										is_controlled_by = AST
+										is_controlled_by = ENG
+									}
+								}
+							}
+							NOT = {
+								277 = {
+									OR = {
+										is_controlled_by = AST
+										is_controlled_by = ENG
+									}
+								}
+							}
 						}
 					}
 				}
