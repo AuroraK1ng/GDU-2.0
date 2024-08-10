@@ -14,7 +14,7 @@ ideas = {
 			equipment_bonus = {	
 				armor = {
 					instant = yes
-					build_cost_ic = 0.15
+					build_cost_ic = 0.1
 				}							
 			}
 		}
@@ -43,8 +43,6 @@ ideas = {
 				fascism_drift = 0.1
 			}
 		}
-
-
 
 		SPA_divided_nation = {
 			name = SPA_divided_nation
@@ -82,32 +80,32 @@ ideas = {
 			}
 		}
 
-
-		SPA_gold_reserve = {
-			removal_cost = -1
+		SPA_divided_nation_2 = {
+			name = SPA_divided_nation
+			
+			allowed = {
+				original_tag = SPR
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
 			modifier = {
-				consumer_goods_expected_value = -0.05
+				
+				industrial_capacity_factory = -0.10
+				industrial_capacity_dockyard = -0.10
+				
 			}
 		}
-
-
-
-
-
-
-
-
-
-
-		SPA_strengthen_fascists = {
-
-			
-			
+		
+		SPA_gold_reserve = {
+			name = GER_mefo_bills
+			removal_cost = -1
+			picture = ger_mefo_bills
 			modifier = {
-				fascism_drift = 0.1
-			}
-		}           									
-			
+				consumer_goods_expected_value = -0.05
+			}	          									
+	}		
 
 		SPA_Fascism_support = {
 			name = SPA_Fascism_support
@@ -128,20 +126,23 @@ ideas = {
 			}
 		}
 
+		SPA_mechanized_bonus = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = SOV_tankograd
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+			equipment_bonus = {	
+				mechanised_infantry = {
+					instant = yes
+					build_cost_ic = -0.05
+				}							
+			}
+		}
 
 		SPA_recovering_from_civil_war = {
 			name = SPA_recovering_from_civil_war

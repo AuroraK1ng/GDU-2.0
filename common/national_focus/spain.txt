@@ -48,7 +48,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_adopt_the_26_points}
 		
 		icon = GFX_focus_spa_strengthen_the_supreme_reality_of_spain
-		x = 14
+		x = 16
 		y = 5
 		cost = 5
 
@@ -60,16 +60,23 @@ focus_tree = {
 	}
 
 
+
+
+
+
+
+
+
+
 	focus = {
 		id = SPA_the_national_and_popular_army_of_spain
 		bypass = {
 		}
-		prerequisite = {focus = SPA_fuse_the_parties }
-		prerequisite = { focus = SPA_integrate_the_requetes }
+		
 		
 		icon = GFX_goal_generic_army_doctrines
-		x = 0
-		y = 4
+		x = 19
+		y = 1
 		cost = 10
 
 		available_if_capitulated = yes
@@ -115,8 +122,8 @@ focus_tree = {
 		prerequisite = { focus = SPA_the_national_and_popular_army_of_spain }
 		
 		icon = GFX_goal_generic_army_artillery
-		x = 0
-		y = 5
+		x = 19
+		y = 2
 		cost = 5
 
 		available_if_capitulated = yes
@@ -141,8 +148,8 @@ focus_tree = {
 		prerequisite = { focus = SPA_the_army_of_africa_model }
 		
 		icon = GFX_goal_spr_instalaza
-		x = 1
-		y = 6
+		x = 19
+		y = 3
 		cost = 5
 
 		available_if_capitulated = yes
@@ -166,8 +173,8 @@ focus_tree = {
 		prerequisite = { focus = SPA_equipment_modernization }
 		
 		icon = GFX_goal_generic_army_artillery2
-		x = 0
-		y = 7
+		x = 17
+		y = 4
 		cost = 5
 
 		available_if_capitulated = yes
@@ -188,11 +195,11 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		prerequisite = { focus = SPA_equipment_modernization }
+		prerequisite = { focus = SPA_motorization }
 		
 		icon = GFX_goal_spr_airforce
-		x = 2
-		y = 7
+		x = 21
+		y = 4
 		cost = 5
 
 		available_if_capitulated = yes
@@ -219,8 +226,8 @@ focus_tree = {
 		prerequisite = { focus = SPA_equipment_modernization }
 		
 		icon = GFX_goal_generic_special_forces
-		x = 1
-		y = 8
+		x = 19
+		y = 4
 		cost = 10
 
 		available_if_capitulated = yes
@@ -258,17 +265,17 @@ focus_tree = {
 		id = SPA_Army_recovering
 		available = {
 			OR = {
-				date > 1940.10.1
+				date > 1940.7.1
 				
 			}
 		}
 		bypass = {
 		}
 		prerequisite = { focus = SPA_expand_the_special_forces }
+		prerequisite = { focus = SPA_expand_the_air_branch }
 		
-		
-		x = 1
-		y = 9
+		x = 21
+		y = 5
 		cost = 10
 
 		available_if_capitulated = yes
@@ -286,30 +293,6 @@ focus_tree = {
 		}
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	focus = {
 		id = SPA_motorization
 		available = {
@@ -319,8 +302,8 @@ focus_tree = {
 		prerequisite = { focus = SPA_the_army_of_africa_model }
 		
 		icon = GFX_Noras_spr_motorized
-		x = -1
-		y = 6
+		x = 21
+		y = 3
 		cost = 5
 
 		available_if_capitulated = yes
@@ -342,16 +325,46 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SPA_motorization_bonus_1
+		available = {
+			OR = {
+				date > 1940.10.1
+				
+			}
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPA_motorization }
+		x = 23
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			
+			add_ideas = SPA_mechanized_bonus
+			168 = { add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = SPA_an_armored_corps
 		available = {
 		}
 		bypass = {
 		}
 		prerequisite = { focus = SPA_the_national_and_popular_army_of_spain }
-		prerequisite = { focus = SPA_join_the_axis }
+		prerequisite = { focus = SPA_expand_the_special_forces }
 		
 		icon = GFX_goal_generic_army_tanks
-		x = 2
+		x = 19
 		y = 5
 		cost = 5
 
@@ -399,7 +412,7 @@ focus_tree = {
 		}
 		
 		icon = GFX_goal_support_fascism
-		x = 4
+		x = 6
 		y = 4
 		cost = 5
 
@@ -407,6 +420,15 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 75
+
+		169 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -417,7 +439,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_join_the_axis }
 		
 		icon = GFX_goal_generic_construction
-		x = 4
+		x = 6
 		y = 5
 		cost = 10
 
@@ -441,6 +463,54 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SPA_more_civs
+		prerequisite = { focus = SPA_fascist_economic_aid }
+		prerequisite = { focus = SPA_autarky }
+		
+		icon = GFX_focus_generic_treaty
+		x = 8
+		y = 6
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			41 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_more_civs_1
+		prerequisite = { focus = SPA_more_civs }
+		
+		
+		icon = GFX_focus_generic_treaty
+		x = 8
+		y = 7
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			41 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = SPA_facilitate_pyrenees_freight_transports
 		available = {
 			has_full_control_of_state = 165
@@ -450,7 +520,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_fascist_economic_aid }
 		
 		icon = GFX_Noras_spr_infra
-		x = 4
+		x = 6
 		y = 6
 		cost = 10
 
@@ -527,13 +597,41 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SPA_compromise_with_protesters
+		available = {
+		}
+		bypass = {
+			has_global_flag = SPR_carlist_uprising_flag
+		}
+		
+		prerequisite = { focus = SPA_facilitate_pyrenees_freight_transports }
+		icon = GFX_goal_generic_military_deal
+		x = 4
+		y = 7
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_SPA_CARLIST_UPRISING}
+		completion_reward = {
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+			}
+			swap_ideas = {
+				remove_idea = SPA_divided_nation_1
+				add_idea = SPA_divided_nation_2
+			}
+		}
+	}
+
+	focus = {
 		id = SPA_improve_cross_country_railways
 		bypass = {
 		}
-		prerequisite = { focus = SPA_fascist_economic_aid }
+		prerequisite = { focus = SPA_facilitate_pyrenees_freight_transports }
 		
 		icon = GFX_Noras_Cross_Country_Infra
-		x = 5
+		x = 6
 		y = 7
 		cost = 5
 
@@ -566,10 +664,10 @@ focus_tree = {
 		id = SPA_support_the_war_industry
 		bypass = {
 		}
-		prerequisite = { focus = SPA_facilitate_pyrenees_freight_transports }
+		prerequisite = { focus = SPA_improve_cross_country_railways }
 		
 		icon = GFX_goal_generic_construct_civ_factory
-		x = 4
+		x = 6
 		y = 8
 		cost = 10
 
@@ -642,38 +740,14 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SPA_italian_shipbuilding_expertise
-		bypass = {
-		}
-		prerequisite = { focus = SPA_support_the_war_industry }
-		
-		icon = GFX_focus_generic_navy_battleship2
-		x = 3
-		y = 9
-		cost = 10
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-				add_resource = {
-				type = steel
-				amount = 35
-				state = 41
-				}
-		}
-		
-	}
-
-	focus = {
 		id = SPA_the_duty_to_work
 		bypass = {
 		}
 		prerequisite = { focus = SPA_support_the_war_industry }
 		
 		icon = GFX_goal_generic_construct_military
-		x = 4
-		y = 10
+		x = 6
+		y = 9
 		cost = 10
 
 		available_if_capitulated = yes
@@ -683,6 +757,28 @@ focus_tree = {
 			remove_ideas = SPR_national_strikes_3
 			}
 	}
+
+	focus = {
+		id = SPA_remove_divided_nation
+		available = {
+		}
+		bypass = {
+			has_global_flag = SPR_carlist_uprising_flag
+		}
+		
+		prerequisite = { focus = SPA_the_duty_to_work }
+		icon = GFX_goal_generic_military_deal
+		x = 5
+		y = 10
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_SPA_CARLIST_UPRISING}
+		completion_reward = {
+		remove_ideas = { SPA_divided_nation_2 }
+		}
+	}
+
 
 	focus = {
 		id = SPA_expand_the_war_industry
@@ -695,11 +791,11 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		prerequisite = { focus = SPA_support_the_war_industry }
-		
+		prerequisite = { focus = SPA_an_armored_corps }
+		prerequisite = { focus = SPA_Army_recovering }
 		icon = GFX_goal_generic_construct_mil_factory
-		x = 5
-		y = 9
+		x = 20
+		y = 6
 		cost = 10
 
 		available_if_capitulated = yes
@@ -758,7 +854,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_fuse_the_parties }
 		prerequisite = { focus = SPA_integrate_the_requetes }		
 		icon = GFX_goal_generic_consumer_goods
-		x = 8
+		x = 10
 		y = 4
 		cost = 10
 
@@ -805,7 +901,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_national_recovery }
 		
 		icon = GFX_goal_generic_oil_refinery
-		x = 8
+		x = 10
 		y = 5
 		cost = 10
 
@@ -844,7 +940,7 @@ focus_tree = {
 		}
 		
 		icon = GFX_goal_generic_construct_civilian
-		x = 8
+		x = 10
 		y = 6
 		cost = 10
 
@@ -871,7 +967,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_spanish_austerity }
 		
 		icon = GFX_goal_generic_construction2
-		x = 9
+		x = 11
 		y = 7
 		cost = 10
 
@@ -897,7 +993,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_spanish_austerity }
 		
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		x = 8
+		x = 10
 		y = 8
 		cost = 10
 
@@ -938,17 +1034,6 @@ focus_tree = {
 		}
 	}
 
-
-
-
-
-
-
-
-
-
-
-
 	focus = {
 		id = SPA_ensure_agricultural_self_sufficiency
 		available = {
@@ -956,7 +1041,7 @@ focus_tree = {
 		bypass = {
 		}
 		prerequisite = { focus = SPA_expand_the_axis_gold_trade }
-		
+		prerequisite = { focus = SPA_support_the_war_industry }
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 8
 		y = 9
@@ -1080,11 +1165,11 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		
+		prerequisite = { focus = SPA_fuse_the_parties }
 		
 		icon = GFX_focus_spa_caudillo_of_spain
-		x = 17
-		y = 1
+		x = 2
+		y = 4
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1100,19 +1185,8 @@ focus_tree = {
 				traits = {
 				}
 			}
-			create_country_leader = {
-				name = "Francisco Franco"
-				desc = "POLITICS_FRANCISCO_FRANCO_DESC"
-				picture = "GFX_portrait_spain_francisco_franco"
-				expire = "1965.1.1"
-				ideology = fascism_ideology
-				traits = {
-				}
-			}
 		}
 	}
-
-
 
 	focus = {
 		id = SPA_distabilization_of_spain
@@ -1122,17 +1196,48 @@ focus_tree = {
 		}
 		prerequisite = { focus = SPA_caudillo_of_spain }
 		
-		x = 17
-		y = 2
+		x = 2
+		y = 5
 		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_STABILITY}
 		completion_reward = { 
-		add_ideas = SPA_distabilization_of_spain_1
+			add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+			}
+			add_stability = -0.05
 		}
 	}
 
+	focus = {
+		id = SPA_compromise_with_the_fascists
+		available = {
+		}
+		bypass = {
+			has_global_flag = SPR_carlist_uprising_flag
+		}
+		
+		prerequisite = { focus = SPA_distabilization_of_spain }
+		icon = GFX_goal_generic_military_deal
+		x = 0
+		y = 6
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_SPA_CARLIST_UPRISING}
+		completion_reward = {
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+			}
+			swap_ideas = {
+				remove_idea = SPA_divided_nation
+				add_idea = SPA_divided_nation_1
+			}
+		}
+	}
 
 	focus = {
 		id = SPA_strengthen_fascists
@@ -1142,14 +1247,17 @@ focus_tree = {
 		}
 		prerequisite = { focus = SPA_distabilization_of_spain }
 		
-		x = 17
-		y = 3
+		x = 2
+		y = 6
 		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_STABILITY}
 		completion_reward = { 
-		add_ideas = SPA_strengthen_fascists
+		add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+			}
 		}
 	}
 
@@ -1160,15 +1268,13 @@ focus_tree = {
 				date > 1937.2.1
 			}
 
-
-
 		}
 		bypass = {
 		}
 		prerequisite = { focus = SPA_strengthen_fascists }
 		
-		x = 17
-		y = 4
+		x = 2
+		y = 7
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1179,32 +1285,7 @@ focus_tree = {
         }
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
 	focus = {
 		id = SPA_extol_the_martyrs_of_the_war
 		available = {
@@ -1302,35 +1383,6 @@ focus_tree = {
 		}
 	}
 
-
-	focus = {
-		id = SPA_compromise_with_the_fascists
-		available = {
-		}
-		bypass = {
-			has_global_flag = SPR_carlist_uprising_flag
-		}
-		prerequisite = { focus = SPA_foment_a_carlist_split }
-		prerequisite = { focus = SPA_banish_the_party_leaders }
-		icon = GFX_goal_generic_military_deal
-		x = 6
-		y = 3
-		cost = 5
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_SPA_CARLIST_UPRISING}
-		completion_reward = {
-			add_popularity = {
-			    ideology = fascism
-			    popularity = 0.05
-			}
-			swap_ideas = {
-				remove_idea = SPA_divided_nation
-				add_idea = SPA_divided_nation_1
-			}
-		}
-	}
-
 	focus = {
 		id = SPA_integrate_the_requetes
 		available = {
@@ -1377,8 +1429,6 @@ focus_tree = {
 			}
 		}
 	}
-
-
 
 	focus = {
 		id = SPA_banish_the_party_leaders
@@ -1428,17 +1478,13 @@ focus_tree = {
 		}
 	}
 
-	
-
-
-
 	focus = {
 		id = SPA_adopt_the_26_points
 		prerequisite = { focus = SPA_fuse_the_parties }
 		prerequisite = { focus = SPA_integrate_the_requetes }
 		
 		icon = GFX_focus_generic_treaty
-		x = 12
+		x = 14
 		y = 4
 		cost = 5
 
@@ -1471,7 +1517,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_adopt_the_26_points }
 		
 		icon = GFX_focus_research2
-		x = 10
+		x = 12
 		y = 5
 		cost = 10
 
@@ -1493,7 +1539,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_direct_the_universities }
 		
 		icon = GFX_focus_research2
-		x = 10
+		x = 12
 		y = 6
 		
 		cost = 5
@@ -1512,7 +1558,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_adopt_the_26_points }
 		
 		icon = GFX_Noras_Dictator_For_life
-		x = 12
+		x = 14
 		y = 5
 		cost = 5
 
@@ -1555,8 +1601,6 @@ focus_tree = {
 		}
 	}
 
-
-
 	focus = {
 		id = SPA_la_division_azul
 		available = {
@@ -1567,7 +1611,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_dictator_for_life}
 		
 		icon = GFX_goal_spr_blue_division
-		x = 12
+		x = 14
 		y = 6
 		cost = 5
 
@@ -1589,6 +1633,4 @@ focus_tree = {
 
 
 	
-	
-
 }
