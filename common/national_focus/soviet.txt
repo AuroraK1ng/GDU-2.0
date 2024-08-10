@@ -886,6 +886,8 @@ focus_tree = {
 			air_experience = 250
 		}
 	}
+
+	
 	focus = {
 		id = SOV_aviation_cult
 		icon = GFX_Noras_USSR_aviation_cult
@@ -1973,7 +1975,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_invade_Japan
-		icon = GFX_focus_AST_war_japan
+		icon = GFX_crashjapan
 		prerequisite = {
 			focus = SOV_defense_of_moscow
 		}
@@ -3153,7 +3155,7 @@ focus_tree = {
 	focus = {
 		id = SOV_production_effort
 		text = production_effort
-		icon = GFX_Soviet_War_Economy
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = {
 			focus = SOV_infrastructure_effort
 			focus = SOV_workers_culture
@@ -3467,7 +3469,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_infrastructure_effort
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_railway2
 		prerequisite = {
 			focus = SOV_finish_five_year_plan
 		}
@@ -4021,7 +4023,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_improve_railway
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_railway1
 		prerequisite = {
 			focus = SOV_finish_five_year_plan
 		}
@@ -4927,7 +4929,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_operation_countenance
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_iran1
 		relative_position_id = SOV_move_industry_to_urals
 		x = 4
 		y = 3
