@@ -1816,7 +1816,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_war_plan_orange
-		icon = GFX_focus_usa_focus_on_asia2
+		icon = GFX_focus_usa_focus_on_asia1
 		prerequisite = { focus = USA_war_plans_division }
 		available = {
 
@@ -1836,16 +1836,6 @@ focus_tree = {
 		completion_reward = {
 			JAP = {
 				add_opinion_modifier = { target = USA modifier = war_plan_orange }
-			}
-			create_corps_commander = {
-				name = "Alexander Vandegrift"
-				gfx = GFX_portrait_usa_alexander_vandegrift
-				skill = 3
-				attack_skill = 3
-				defense_skill = 1
-				planning_skill = 3
-				logistics_skill = 3
-				traits = { naval_invader }
 			}
 		}
 	}

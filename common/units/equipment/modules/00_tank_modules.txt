@@ -232,7 +232,7 @@ equipment_modules = {
 		abbreviation = "lfs"
 		category = tank_light_turret_type
 		sfx = sfx_ui_sd_module_turret
-		#forbid_equipment_type = armor
+		forbid_equipment_type_exact_match = armor
 		forbid_equipment_type = anti_air
 		forbid_equipment_type = amphibious
 
@@ -321,7 +321,7 @@ equipment_modules = {
 		category = tank_medium_turret_type
 		sfx = sfx_ui_sd_module_turret
 		forbid_equipment_type = anti_air
-		#forbid_equipment_type = armor
+		forbid_equipment_type_exact_match = armor
 		forbid_equipment_type = amphibious
 
 		allowed_module_categories = {
@@ -418,7 +418,7 @@ equipment_modules = {
 		category = tank_heavy_turret_type
 		sfx = sfx_ui_sd_module_turret
 		forbid_equipment_type = anti_air
-		#forbid_equipment_type_exact_match = armor
+		forbid_equipment_type_exact_match = armor
 		forbid_equipment_type = amphibious
 		
 		allowed_module_categories = {
@@ -825,12 +825,12 @@ equipment_modules = {
 		category = tank_medium_main_armament
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
-			soft_attack = 10.5
+			soft_attack = 11.5
 			hard_attack = 15.5
 			ap_attack = 66
 			maximum_speed = 0
 			reliability = -0.15
-			breakthrough = 9
+			breakthrough = 10
 		}
 		
 		multiply_stats = {
@@ -913,12 +913,12 @@ equipment_modules = {
 		allow_equipment_type = anti_tank
 
 		add_stats = {
-			soft_attack = 3
+			soft_attack = 4
 			hard_attack = 19
 			ap_attack = 66
 			maximum_speed = 0
 			reliability = -0.15
-			breakthrough = 9
+			breakthrough = 10
 		}
 		
 		multiply_stats = {

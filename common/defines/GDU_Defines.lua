@@ -32,7 +32,7 @@ NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT
 --- Letting people see some stuff on ledger
 NDefines.NGame.GAME_SPEED_SECONDS = { 6000.0, 0.06, 0.2, 0.05, 0.0 }	-- Previous { 1, 2, 3, 4, 5 } = { 6000.0, 0.4, 0.2, 0.05, 0.0 }	Consider Making Speed 3 Slower. 
 
-NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 14 --| less messages lying around at the top of your screen | CHANGE FOR CHECKSUMM
+NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 13 --| less messages lying around at the top of your screen | CHANGE FOR CHECKSUMM
 
 
 ------ Recently Added -----
@@ -281,8 +281,8 @@ NDefines.NMilitary.LAND_COMBAT_STR_DICE_SIZE = 2                 -- nr of damage
 NDefines.NMilitary.LAND_COMBAT_STR_ARMOR_ON_SOFT_DICE_SIZE = 2   -- extra damage dice if our armor outclasses enemy
 NDefines.NMilitary.LAND_COMBAT_ORG_ARMOR_ON_SOFT_DICE_SIZE = 5   -- extra damage dice if our armor outclasses enemy
 
-
-NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.12
+NDefines.NMilitary.RELIABILTY_RECOVERY = 0.0 -- Vanilla is 0.1, reduce because it's a broken in vanilla HOI4. Fix if ever fixed.
+NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.115 -- Was 0.12, reduced because reliability recovery is broken
 NDefines.NMilitary.LAND_COMBAT_ORG_DAMAGE_MODIFIER = 0.04
 NDefines.NMilitary.LAND_COMBAT_ORG_ARMOR_DEFLECTION_FACTOR = 0.5 -- damage reduction if armor outclassing enemy, will look at increasing if AT is too deadly to org. 
 NDefines.NMilitary.LAND_COMBAT_STR_ARMOR_DEFLECTION_FACTOR = 1.0 -- damage reduction if armor outclassing enemy

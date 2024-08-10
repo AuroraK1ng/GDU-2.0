@@ -2,7 +2,7 @@ add_namespace = japan_peace
 
 country_event = {
 	id = japan_peace.1
-	title =japan_peace.1.t
+	title = japan_peace.1.t
 	desc = japan_peace.1.d
 	picture = GFX_report_event_generic_battle	
 
@@ -16,7 +16,7 @@ country_event = {
 		not = { has_global_flag = JAP_peacedeal }
 	}
 	
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { days = 2 }
 
 	immediate = {
 		set_global_flag = JAP_peacedeal
