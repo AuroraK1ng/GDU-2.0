@@ -420,8 +420,8 @@ NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_ACCIDENT_FACTOR = 0.00
 
 -- air xp gain from training doubled from vanilla, since planes cost more so you get a decent amount of air XP from training air wings --Factor on country Air XP gained from wing training
 
-NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 3.0 --makes redeployement of fighters faster vanilla is 0.02
-
+NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 3.0 -- makes redeployement of fighters faster vanilla is 0.02
+NDefines.NAir.CAPACITY_PENALTY = 3.3 -- 33% Airfield overstack Penalty (from 20%)
 NDefines.NAir.AIR_MORE_GROUND_CREWS_COST = 500.0 -- Disables ground crews. They're cancerous. 
 NDefines.NAir.ACCIDENT_CHANCE_BASE = 0.0
 NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.05 -- Vanilla = 1
