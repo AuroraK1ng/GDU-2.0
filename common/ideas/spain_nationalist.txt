@@ -1,6 +1,111 @@
 ideas = {
 	country = {
 
+		SPA_civil_war_lessons = {
+
+			allowed_civil_war = {
+				
+			}
+			picture = general_staff
+			modifier = {
+				army_org_factor = 0.05
+			}
+		}
+
+		SPA_planning_buff = {
+
+			allowed_civil_war = {
+				
+			}
+			picture = general_staff
+			modifier = {
+				planning_speed = 0.05
+				max_planning = 0.05
+	
+			}
+		}
+			
+	
+		SPA_attack_sov = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+
+		SPA_attack_sov = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+
+		SPA_output = {
+
+			allowed_civil_war = {
+				
+			}
+			picture = tank_factory
+			modifier = {
+				industrial_capacity_factory = 0.025			
+			}
+		}
+
+		SPA_recovery_army = {
+
+			allowed_civil_war = {
+				
+			}
+			
+			modifier = {
+				army_morale_factor = 0.05
+			}
+		}
+
+		SPA_winter_defence = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.075
+			}
+		}
+
+		Expand_production = {
+		picture = generic_goods_red_bonus
+			allowed_civil_war = {
+				
+			}
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+
+
+
+
+
+
 		SPA_Army_destroyed = {
 			removal_cost = -1
 			allowed = {
@@ -417,3 +522,5 @@ ideas = {
 		}
 	}
 }
+
+		
