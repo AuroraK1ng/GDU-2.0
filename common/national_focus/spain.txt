@@ -1819,8 +1819,8 @@ focus_tree = {
 		bypass = {
 		}
 		prerequisite = { focus = SPA_recovery_rate }
-		
-		
+		prerequisite = { focus = SPA_factories }
+		prerequisite = { focus = SPA_winter_defence }
 		x = 30
 		y = 5
 		cost = 10
@@ -1856,7 +1856,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_ideas = Expand_production
+			add_ideas = Expand_production_1
 			
 		}
 	}
