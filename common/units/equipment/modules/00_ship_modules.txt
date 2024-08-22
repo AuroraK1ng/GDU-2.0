@@ -210,7 +210,7 @@ equipment_modules = {
 		
 		add_stats = {
 			
-			hg_attack = 11
+			hg_attack = 11.25
 			build_cost_ic = 1275
 		}
 		multiply_stats = {
@@ -235,7 +235,7 @@ equipment_modules = {
 		add_equipment_type = capital_ship
 		
 		add_stats = {
-			hg_attack = 12.5
+			hg_attack = 12.25
 			build_cost_ic = 1350
 		}
 		multiply_stats = {
@@ -327,7 +327,7 @@ equipment_modules = {
 		add_equipment_type = capital_ship
 		
 		add_stats = {
-			hg_attack = 16
+			hg_attack = 18.5
 			build_cost_ic = 1800
 		}
 		build_cost_resources = {
@@ -354,19 +354,19 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = capital_ship
 		add_stats = {
-			hg_attack = 4.0
-			lg_attack = 1.5
+			hg_attack = 2.0
+			lg_attack = 2.5
 			build_cost_ic = 750
 			surface_detection = 5
-			surface_visibility = 6.0
+			#surface_visibility = 3.5
 		}
 		multiply_stats = {
-			naval_speed = -0.04
-			#max_strength = -0.15
+			naval_speed = -0.02
+			max_strength = 0.25
 		}
 		add_average_stats = {
 			hg_armor_piercing = 16
-			lg_armor_piercing = 5.5			
+			lg_armor_piercing = 12.0			
 		}
 		can_convert_from = {
 			module_category = ship_light_battery
@@ -385,19 +385,18 @@ equipment_modules = {
 
 		add_equipment_type = capital_ship
 		add_stats = {
-			hg_attack = 4.5
-			lg_attack = 2.0
+			hg_attack = 2.5
+			lg_attack = 3.0
 			build_cost_ic = 800
 			surface_detection = 5
-			surface_visibility = 6.0
 		}
 		multiply_stats = {
-			naval_speed = -0.04
-			#max_strength = -0.05
+			naval_speed = -0.02
+			max_strength = 0.25
 		}
 		add_average_stats = {
 			hg_armor_piercing = 19
-			lg_armor_piercing = 7.0
+			lg_armor_piercing = 16.0
 		}
 		can_convert_from = {
 			module_category = ship_medium_battery
@@ -416,19 +415,18 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			hg_attack = 5.0
-			lg_attack = 2.5
+			hg_attack = 3.0
+			lg_attack = 3.5
 			build_cost_ic = 850
 			surface_detection = 5
-			surface_visibility = 6.0
 		}
 		multiply_stats = {
-			naval_speed = -0.04
-			#max_strength = 0.0
+			naval_speed = -0.02
+			max_strength = 0.25
 		}
 		add_average_stats = {
 			hg_armor_piercing = 23
-			lg_armor_piercing = 8.0			
+			lg_armor_piercing = 18.0			
 		}
 		can_convert_from = {
 			module_category = ship_medium_battery
@@ -447,19 +445,18 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			hg_attack = 5.5
-			lg_attack = 3.0
+			hg_attack = 4.5
+			lg_attack = 4.0
 			build_cost_ic = 900
 			surface_detection = 5
-			surface_visibility = 6.0
 		}
 		multiply_stats = {
-			naval_speed = -0.04
-			#max_strength = 0.0
+			naval_speed = -0.02
+			max_strength = 0.25
 		}
 		add_average_stats = {
 			hg_armor_piercing = 28
-			lg_armor_piercing = 9.0
+			lg_armor_piercing = 20.0
 		}
 		can_convert_from = {
 			module_category = ship_medium_battery
@@ -478,7 +475,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			lg_attack = 3
+			lg_attack = 4
 			build_cost_ic = 225
 		}
 		multiply_stats = {
@@ -501,7 +498,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {		
-			lg_attack = 4.5
+			lg_attack = 5.5
 			build_cost_ic = 275
 		}
 		multiply_stats = {
@@ -528,7 +525,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		
 		add_stats = {	
-			lg_attack = 6
+			lg_attack = 7
 			build_cost_ic = 300
 		}
 		multiply_stats = {
@@ -556,7 +553,7 @@ equipment_modules = {
 		gui_category = ship_light_battery
 		parent = ship_light_medium_battery_3
 		add_stats = {		
-			lg_attack = 7.5
+			lg_attack = 8.5
 			build_cost_ic = 350
 		}
 		multiply_stats = {
@@ -1897,7 +1894,7 @@ equipment_modules = {
 		add_stats = {
 			armor_value = 75
 			surface_visibility = 22
-			naval_torpedo_damage_reduction_factor = -12.5 #As vanilla screening is broken, torp damage to Capitals is increased.
+			naval_torpedo_damage_reduction_factor = -7.5 #As vanilla screening is broken, torp damage to Capitals is increased.
 		}
 		dismantle_cost_ic = 5500
 		
@@ -1918,7 +1915,7 @@ equipment_modules = {
 			armor_value = 52
 			surface_visibility = 20
 			surface_detection = 60
-			naval_torpedo_damage_reduction_factor = -10.0 #As vanilla screening is broken, torp damage to Capitals is increased.
+			naval_torpedo_damage_reduction_factor = -5 #As vanilla screening is broken, torp damage to Capitals is increased.
 		}
 		dismantle_cost_ic = 4500
 		
@@ -1937,7 +1934,7 @@ equipment_modules = {
 		add_stats = {
 			armor_value = 105
 			surface_visibility = 22
-			naval_torpedo_damage_reduction_factor = -12.5 #As vanilla screening is broken, torp damage to Capitals is increased.
+			naval_torpedo_damage_reduction_factor = -7.5 #As vanilla screening is broken, torp damage to Capitals is increased.
 		}
 		dismantle_cost_ic = 6000
 		
@@ -1959,7 +1956,7 @@ equipment_modules = {
 			armor_value = 65
 			surface_detection = 60
 			surface_visibility = 20
-			naval_torpedo_damage_reduction_factor = -10.0 #As vanilla screening is broken, torp damage to Capitals is increased.
+			naval_torpedo_damage_reduction_factor = -5 #As vanilla screening is broken, torp damage to Capitals is increased.
 		}
 		dismantle_cost_ic = 5500
 	}
@@ -1977,7 +1974,7 @@ equipment_modules = {
 		add_stats = {
 			armor_value = 150
 			surface_visibility = 22
-			naval_torpedo_damage_reduction_factor = -12.5 #As vanilla screening is broken, torp damage to Capitals is increased.
+			naval_torpedo_damage_reduction_factor = -7.5 #As vanilla screening is broken, torp damage to Capitals is increased.
 		}
 		dismantle_cost_ic = 7500
 		
@@ -1999,7 +1996,7 @@ equipment_modules = {
 			armor_value = 70
 			surface_detection = 60
 			surface_visibility = 20
-			naval_torpedo_damage_reduction_factor = -10.0 #As vanilla screening is broken, torp damage to Capitals is increased.
+			naval_torpedo_damage_reduction_factor = -5 #As vanilla screening is broken, torp damage to Capitals is increased.
 		}
 		dismantle_cost_ic = 6200
 		
@@ -2011,7 +2008,7 @@ equipment_modules = {
 		multiply_stats = {
 			build_cost_ic = 0.75
 			naval_speed = 0.0
-			max_strength = 0.1
+			max_strength = 0.25
 		}
 		build_cost_resources = {
 		}
