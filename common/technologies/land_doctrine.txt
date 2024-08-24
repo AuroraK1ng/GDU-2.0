@@ -3489,7 +3489,6 @@ land_reinforce_rate = 0.05
 
 		infantry = {
 			max_organisation = 5
-			max_strength = 7
 		}
 		
 		
@@ -3540,17 +3539,17 @@ land_reinforce_rate = 0.05
 			peoples_army
 		}
 
-		
-
 		logistics_company = {
 			supply_consumption_factor = -0.075
 		}
-
+		infantry = {
+			max_strength = 7
+		}			
 		anti_tank_brigade = {
 			max_strength = 3
 		}
 		artillery_brigade = {
-			max_strength = 9.75
+			max_strength = 10
 		}
 		mot_artillery_brigade = {
 			max_strength = 12
@@ -3559,14 +3558,12 @@ land_reinforce_rate = 0.05
 			max_strength = 3
 		}
 		rocket_artillery_brigade = {
-			max_strength = 9.75
-		}
-		
+			max_strength = 10
+		}		
 		anti_air_brigade = {
-			max_strength = 4.5
-			max_organisation = 2.5
+			max_strength = 5
+			max_organisation = 3
 		}
-
 		support_heavy_armor = {
 			max_strength = 8
 		}
