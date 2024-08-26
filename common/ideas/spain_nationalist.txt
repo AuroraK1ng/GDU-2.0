@@ -40,20 +40,6 @@ ideas = {
 			}
 		}
 
-		SPA_attack_sov = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			modifier = {
-				army_attack_factor = 0.05
-				army_defence_factor = 0.05
-			}
-		}
-
 		SPA_output = {
 
 			allowed_civil_war = {
@@ -242,7 +228,7 @@ ideas = {
 			picture = SOV_tankograd
 
 			equipment_bonus = {	
-				mechanised_infantry = {
+				mechanized_equipment = {
 					instant = yes
 					build_cost_ic = -0.05
 				}							
