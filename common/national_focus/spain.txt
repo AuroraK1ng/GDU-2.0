@@ -75,7 +75,7 @@ focus_tree = {
 		
 		
 		icon = GFX_goal_generic_army_doctrines
-		x = 19
+		x = 21
 		y = 0
 		cost = 10
 
@@ -232,10 +232,10 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			
-			41 = { add_extra_state_shared_building_slots = 4
+			41 = { add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 				
@@ -272,13 +272,6 @@ focus_tree = {
 				category = mountaineers_tech
 			}
 			add_ideas = SPR_SF_divisions
-			168 = { add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
 		}
 	}
 
@@ -303,6 +296,7 @@ focus_tree = {
 		x = 19
 		y = 4
 		cost = 5
+		#icon = GFX_goal_spr_blue_division
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -734,10 +728,10 @@ focus_tree = {
 			has_global_flag = SPR_carlist_uprising_flag
 		}
 		
-		prerequisite = { focus = SPA_the_duty_to_work }
+		prerequisite = { focus = SPA_the_rise_of_the_fascists_to_power }
 		icon = GFX_goal_generic_military_deal
-		x = 5
-		y = 10
+		x = 2
+		y = 8
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1576,26 +1570,27 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SPA_civil_war_lessons
+		id = SPA_blau_division
 		available = {
-			OR = {
-				date > 1941.4.1
-				
-			}
+			has_war_with = SOV
 		}
 		bypass = {
 		}
 	
 		
 		icon = GFX_goal_spr_blue_division
-		x = 30
-		y = 0
+		prerequisite = {focus = SPA_the_national_and_popular_army_of_spain}
+		x = 23
+		y = 1
 		cost = 10
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = SPA_civil_war_lessons
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = SPA_blau_division_modifier }
+				add_to_variable = { SPA_army_army_org_factor = 0.05}
+			}
 		}
 	}
 
@@ -1605,17 +1600,20 @@ focus_tree = {
 		}
 		bypass = {
 		}
-	prerequisite = { focus = SPA_civil_war_lessons }
+	prerequisite = { focus = SPA_blau_division }
 		
 		
-		x = 31
-		y = 1
+		x = 24
+		y = 2
 		cost = 5
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = SPA_planning_buff
+			hidden_effect = {
+				add_to_variable = { SPA_planning_speed = 0.05}
+				add_to_variable = { SPA_max_planning = 0.05}
+			}
 		}
 	}	
 
@@ -1625,11 +1623,11 @@ focus_tree = {
 		}
 		bypass = {
 		}
-	prerequisite = { focus = SPA_civil_war_lessons }
+	prerequisite = { focus = SPA_blau_division }
 		
 		
-		x = 29
-		y = 1
+		x = 22
+		y = 2
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1648,17 +1646,19 @@ focus_tree = {
 		}
 		bypass = {
 		}
-	prerequisite = { focus = SPA_attack_sov }
-	prerequisite = { focus = SPA_planning_buff }	
+		prerequisite = { focus = SPA_attack_sov }
+		prerequisite = { focus = SPA_planning_buff }	
 		
-		x = 30
-		y = 2
+		x = 23
+		y = 3
 		cost = 5
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = SPA_output
+			hidden_effect = {
+				add_to_variable = { SPA_industrial_capacity_factory = 0.025}
+			}
 		}
 	}		
 	
@@ -1668,72 +1668,22 @@ focus_tree = {
 		}
 		bypass = {
 		}
-	prerequisite = { focus = SPA_output }
+		prerequisite = { focus = SPA_output }
 
 		
-		x = 30
-		y = 3
+		x = 22
+		y = 4
 		cost = 5
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = SPA_recovery_army
+			hidden_effect = {
+				add_to_variable = { SPA_army_morale_factor = 0.05}
+			}
 		}
 	}	
 
-	focus = {
-		id = SPA_factories
-		prerequisite = { focus = SPA_output }
-		
-		icon = GFX_goal_generic_position_armies
-		x = 28
-		y = 3
-		cost = 10
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		completion_reward = {
-			169 = {
-				if = {
-					limit = {
-						172 = {
-							free_building_slots = {
-								building = arms_factory
-								size > 0
-								include_locked = yes
-							}
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			173 = {
-				if = {
-					limit = {
-						176 = {
-							free_building_slots = {
-								building = industrial_complex
-								size > 0
-								include_locked = yes
-							}
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-		}
-	}
 
 	focus = {
 		id = SPA_winter_defence
@@ -1758,8 +1708,8 @@ focus_tree = {
 		prerequisite = { focus = SPA_output }
 		
 		
-		x = 32
-		y = 3
+		x = 24
+		y = 4
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1774,29 +1724,22 @@ focus_tree = {
 
 
 		focus = {
-		id = SPA_more_mills
+		id = SPA_lessons_of_eastern_front
 		available = {
 		}
 		bypass = {
 		}
 		prerequisite = { focus = SPA_recovery_rate }
-		prerequisite = { focus = SPA_factories }
 		prerequisite = { focus = SPA_winter_defence }
-		x = 30
-		y = 4
+		x = 23
+		y = 5
 		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			
-			41 = { add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-				
+			hidden_effect = {
+				add_to_variable = { SPA_army_attack_factor = 0.025}
 			}
 		}
 	}
@@ -1807,18 +1750,19 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		prerequisite = { focus = SPA_more_mills }
+		prerequisite = { focus = SPA_lessons_of_eastern_front }
 		
 		
-		x = 30
-		y = 5
+		x = 23
+		y = 6
 		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_ideas = Expand_production_1
-			
+			hidden_effect = {
+				add_to_variable = { SPA_production_factory_efficiency_gain_factor = 0.05}
+			}
 		}
 	}
 
