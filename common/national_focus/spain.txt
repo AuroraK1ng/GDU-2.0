@@ -75,7 +75,7 @@ focus_tree = {
 		
 		
 		icon = GFX_goal_generic_army_doctrines
-		x = 19
+		x = 24
 		y = 1
 		cost = 10
 
@@ -122,7 +122,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_the_national_and_popular_army_of_spain }
 		
 		icon = GFX_goal_generic_army_artillery
-		x = 19
+		x = 24
 		y = 2
 		cost = 5
 
@@ -148,7 +148,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_the_army_of_africa_model }
 		
 		icon = GFX_goal_spr_instalaza
-		x = 19
+		x = 22
 		y = 3
 		cost = 5
 
@@ -165,31 +165,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SPA_artillery_modernization
-		available = {
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_equipment_modernization }
-		
-		icon = GFX_goal_generic_army_artillery2
-		x = 17
-		y = 4
-		cost = 5
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			add_tech_bonus = {
-				name = SPA_artillery_modernization
-				bonus = 1.0
-				uses = 2
-				category = artillery
-			}
-		}
-	}
-
-	focus = {
 		id = SPA_expand_the_air_branch
 		available = {
 		}
@@ -198,7 +173,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_motorization }
 		
 		icon = GFX_goal_spr_airforce
-		x = 21
+		x = 23
 		y = 4
 		cost = 5
 
@@ -226,7 +201,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_equipment_modernization }
 		
 		icon = GFX_goal_generic_special_forces
-		x = 19
+		x = 21
 		y = 4
 		cost = 10
 
@@ -274,7 +249,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_expand_the_special_forces }
 		prerequisite = { focus = SPA_expand_the_air_branch }
 		
-		x = 21
+		x = 23
 		y = 5
 		cost = 5
 
@@ -302,7 +277,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_the_army_of_africa_model }
 		
 		icon = GFX_Noras_spr_motorized
-		x = 21
+		x = 24
 		y = 3
 		cost = 5
 
@@ -335,7 +310,7 @@ focus_tree = {
 		bypass = {
 		}
 		prerequisite = { focus = SPA_motorization }
-		x = 23
+		x = 25
 		y = 4
 		cost = 10
 
@@ -360,11 +335,10 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		prerequisite = { focus = SPA_the_national_and_popular_army_of_spain }
 		prerequisite = { focus = SPA_expand_the_special_forces }
 		
 		icon = GFX_goal_generic_army_tanks
-		x = 19
+		x = 21
 		y = 5
 		cost = 5
 
@@ -400,8 +374,8 @@ focus_tree = {
 		available = {
 			
 		}
-		prerequisite = { focus= SPA_fuse_the_parties }
-		prerequisite = { focus = SPA_integrate_the_requetes }
+		prerequisite = { focus= SPA_national_recovery }
+		
 
 		ai_will_do = {
 			factor = 1
@@ -413,7 +387,7 @@ focus_tree = {
 		
 		icon = GFX_goal_support_fascism
 		x = 6
-		y = 4
+		y = 5
 		cost = 5
 
 		available_if_capitulated = yes
@@ -422,10 +396,10 @@ focus_tree = {
 			add_political_power = 75
 
 		169 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -436,11 +410,11 @@ focus_tree = {
 		id = SPA_fascist_economic_aid
 		bypass = {
 		}
-		prerequisite = { focus = SPA_join_the_axis }
+		prerequisite = { focus = SPA_facilitate_pyrenees_freight_transports }
 		
 		icon = GFX_goal_generic_construction
-		x = 6
-		y = 5
+		x = 9
+		y = 7
 		cost = 5
 
 		available_if_capitulated = yes
@@ -483,64 +457,16 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SPA_more_civs
-		prerequisite = { focus = SPA_fascist_economic_aid }
-		prerequisite = { focus = SPA_autarky }
-		
-		icon = GFX_focus_generic_treaty
-		x = 8
-		y = 6
-		cost = 5
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		completion_reward = {
-			41 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = SPA_more_civs_1
-		prerequisite = { focus = SPA_more_civs }
-		
-		
-		icon = GFX_focus_generic_treaty
-		x = 8
-		y = 7
-		cost = 5
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		completion_reward = {
-			41 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = SPA_facilitate_pyrenees_freight_transports
 		available = {
 			has_full_control_of_state = 165
 		}
 		bypass = {
 		}
-		prerequisite = { focus = SPA_fascist_economic_aid }
-		
+		prerequisite = { focus = SPA_join_the_axis }
+		prerequisite = { focus = SPA_autarky }
 		icon = GFX_Noras_spr_infra
-		x = 6
+		x = 7
 		y = 6
 		cost = 5
 
@@ -626,7 +552,7 @@ focus_tree = {
 		
 		prerequisite = { focus = SPA_facilitate_pyrenees_freight_transports }
 		icon = GFX_goal_generic_military_deal
-		x = 4
+		x = 5
 		y = 7
 		cost = 5
 
@@ -648,12 +574,12 @@ focus_tree = {
 		id = SPA_improve_cross_country_railways
 		bypass = {
 		}
-		prerequisite = { focus = SPA_facilitate_pyrenees_freight_transports }
+		prerequisite = { focus = SPA_compromise_with_protesters }
 		
 		icon = GFX_Noras_Cross_Country_Infra
-		x = 6
-		y = 7
-		cost = 5
+		x = 4
+		y = 8
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -684,7 +610,7 @@ focus_tree = {
 		id = SPA_support_the_war_industry
 		bypass = {
 		}
-		prerequisite = { focus = SPA_improve_cross_country_railways }
+		prerequisite = { focus = SPA_compromise_with_protesters }
 		
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 6
@@ -764,9 +690,9 @@ focus_tree = {
 		bypass = {
 		}
 		prerequisite = { focus = SPA_support_the_war_industry }
-		
+		prerequisite = { focus = SPA_improve_cross_country_railways }
 		icon = GFX_goal_generic_construct_military
-		x = 6
+		x = 5
 		y = 9
 		cost = 10
 
@@ -814,7 +740,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_an_armored_corps }
 		prerequisite = { focus = SPA_Army_recovering }
 		icon = GFX_goal_generic_construct_mil_factory
-		x = 20
+		x = 22
 		y = 6
 		cost = 10
 
@@ -874,7 +800,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_fuse_the_parties }
 		prerequisite = { focus = SPA_integrate_the_requetes }		
 		icon = GFX_goal_generic_consumer_goods
-		x = 10
+		x = 7
 		y = 4
 		cost = 10
 
@@ -921,9 +847,9 @@ focus_tree = {
 		prerequisite = { focus = SPA_national_recovery }
 		
 		icon = GFX_goal_generic_oil_refinery
-		x = 10
+		x = 8
 		y = 5
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -940,10 +866,10 @@ focus_tree = {
 				uses = 1
 				category = industry
 		173 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -961,8 +887,9 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		prerequisite = { focus = SPA_autarky }
-
+		prerequisite = { focus = SPA_ensure_agricultural_self_sufficiency }
+		prerequisite = { focus = SPA_gold_reserve }
+		prerequisite = { focus = SPA_reduce_reliance_on_foreign_resources }
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -973,7 +900,7 @@ focus_tree = {
 		
 		icon = GFX_goal_generic_construct_civilian
 		x = 10
-		y = 6
+		y = 10
 		cost = 5
 
 		available_if_capitulated = yes
@@ -996,11 +923,11 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		prerequisite = { focus = SPA_spanish_austerity }
+		prerequisite = { focus = SPA_expand_the_axis_gold_trade }
 		
 		icon = GFX_goal_generic_construction2
-		x = 11
-		y = 7
+		x = 12
+		y = 9
 		cost = 10
 
 		available_if_capitulated = yes
@@ -1022,7 +949,7 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		prerequisite = { focus = SPA_spanish_austerity }
+		prerequisite = { focus = SPA_fascist_economic_aid }
 		
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		x = 10
@@ -1073,7 +1000,7 @@ focus_tree = {
 		bypass = {
 		}
 		prerequisite = { focus = SPA_expand_the_axis_gold_trade }
-		prerequisite = { focus = SPA_support_the_war_industry }
+		
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 8
 		y = 9
@@ -1507,7 +1434,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_integrate_the_requetes }
 		
 		icon = GFX_focus_generic_treaty
-		x = 14
+		x = 13
 		y = 4
 		cost = 5
 
