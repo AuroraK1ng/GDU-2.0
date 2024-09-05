@@ -371,22 +371,9 @@ focus_tree = {
 		available = {	111 = {	is_owned_by = FIN }	}
 
 		bypass = {
-			111 = {
-				free_building_slots = {
-					building = anti_air_building
-					size < 2
-				}
-			}
 		}
 
 		completion_reward = {
-			111 = {
-				add_building_construction = {
-					type = anti_air_building
-					level = 5
-					instant_build = yes
-				}
-			}
 			add_tech_bonus = {
 				name = POL_anti_air_guns
 				bonus = 0.75 
