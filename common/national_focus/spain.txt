@@ -282,6 +282,7 @@ focus_tree = {
 
 		focus = {
 		id = SPA_Army_recovering
+		icon = GFX_focus_generic_tank_production
 		available = {
 			OR = {
 				date > 1940.3.1
@@ -436,23 +437,13 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-
 			add_ideas = SPA_fascist_economic_aid
-						add_tech_bonus = {
-				name = SPR_rubber
-				bonus = 1.50
-				uses = 2
-				technology = advanced_rubber_processing
-				technology = modern_rubber_processing
-				add_resource = {
+			add_resource = {
 				type = steel
 				amount = 25
 				state = 175
-
-			
-
-				}
-				167 = {
+			}
+			167 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -466,9 +457,8 @@ focus_tree = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
-					}
-				}				
-			}		
+				}
+			}						
 		}
 	}
 
@@ -723,6 +713,7 @@ focus_tree = {
 	focus = {
 		id = SPA_remove_divided_nation
 		available = {
+			has_completed_focus = SPA_compromise_with_protesters
 		}
 		bypass = {
 			has_global_flag = SPR_carlist_uprising_flag
@@ -870,28 +861,17 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
-				name = HOL_make_use_of_our_riches
-				bonus = 1.0
+				name = SPR_rubber
+				bonus = 1.50
 				uses = 2
-				category = excavation_tech
+				technology = advanced_rubber_processing
+				technology = modern_rubber_processing
 			}
 			add_tech_bonus = {
 				name = SPA_fascist_economic_aid
 				bonus = 1.0
 				uses = 1
 				category = industry
-		173 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-
-
-
-
 			}
 		}
 	}
@@ -994,7 +974,7 @@ focus_tree = {
 			has_global_flag = SPR_carlist_uprising_flag
 		}
 		prerequisite = { focus = SPA_expand_the_axis_gold_trade }
-		icon = GFX_goal_generic_military_deal
+		icon = GFX_focus_usa_reestablish_the_gold_standard
 		x = 10
 		y = 9
 		cost = 5
@@ -1002,9 +982,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_SPA_CARLIST_UPRISING}
 		completion_reward = {
-			add_ideas = {
-				SPA_gold_reserve
-			}
+			add_ideas = { SPA_gold_reserve_idea }
 		}
 	}
 
@@ -1587,10 +1565,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			hidden_effect = {
-				add_dynamic_modifier = { modifier = SPA_blau_division_modifier }
-				add_to_variable = { SPA_army_army_org_factor = 0.05}
-			}
+			add_dynamic_modifier = { modifier = SPA_blau_division_modifier }
 		}
 	}
 
@@ -1600,7 +1575,8 @@ focus_tree = {
 		}
 		bypass = {
 		}
-	prerequisite = { focus = SPA_blau_division }
+		prerequisite = { focus = SPA_blau_division }
+		icon = GFX_ENG_General_staff
 		
 		
 		x = 24
@@ -1610,10 +1586,9 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			hidden_effect = {
-				add_to_variable = { SPA_planning_speed = 0.05}
-				add_to_variable = { SPA_max_planning = 0.05}
-			}
+			custom_effect_tooltip = SPA_modify_blau_division_intro
+			add_to_variable = { SPA_planning_speed = 0.05 tooltip = planning_speed_factor_tt}
+			add_to_variable = { SPA_max_planning = 0.05 tooltip = max_planning_factor_tt }
 		}
 	}	
 
@@ -1623,7 +1598,8 @@ focus_tree = {
 		}
 		bypass = {
 		}
-	prerequisite = { focus = SPA_blau_division }
+		prerequisite = { focus = SPA_blau_division }
+		icon = GFX_focus_ger_stalingrad
 		
 		
 		x = 22
@@ -1648,6 +1624,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = SPA_attack_sov }
 		prerequisite = { focus = SPA_planning_buff }	
+		icon = GFX_focus_generic_license_production
 		
 		x = 23
 		y = 3
@@ -1656,14 +1633,14 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			hidden_effect = {
-				add_to_variable = { SPA_industrial_capacity_factory = 0.025}
-			}
+			custom_effect_tooltip = SPA_modify_blau_division_intro
+			add_to_variable = { SPA_industrial_capacity_factory = 0.025 tooltip = industrial_capacity_factory_tt}
 		}
 	}		
 	
 	focus = {
 		id = SPA_recovery_rate
+		icon = GFX_Generic_American_Soldier2
 		available = {
 		}
 		bypass = {
@@ -1678,15 +1655,15 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			hidden_effect = {
-				add_to_variable = { SPA_army_morale_factor = 0.05}
-			}
+			custom_effect_tooltip = SPA_modify_blau_division_intro
+			add_to_variable = { SPA_army_morale_factor = 0.05 tooltip = army_morale_factor_tt}
 		}
 	}	
 
 
 	focus = {
 		id = SPA_winter_defence
+		icon = GFX_goal_generic_construct_military
 		available = {
 			OR = {
 				AND = {
@@ -1724,7 +1701,8 @@ focus_tree = {
 
 
 		focus = {
-		id = SPA_lessons_of_eastern_front
+		id = SPA_lessons_of_the_eastern_front
+		icon = GFX_Generic_German_Soldiers2
 		available = {
 		}
 		bypass = {
@@ -1738,19 +1716,19 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			hidden_effect = {
-				add_to_variable = { SPA_army_attack_factor = 0.025}
-			}
+			custom_effect_tooltip = SPA_modify_blau_division_intro
+			add_to_variable = { SPA_army_attack_factor = 0.025 tooltip = army_attack_factor_tt}
 		}
 	}
 
 		focus = {
 		id = SPA_production
+		icon = GFX_focus_chi_mission_to_germany
 		available = {
 		}
 		bypass = {
 		}
-		prerequisite = { focus = SPA_lessons_of_eastern_front }
+		prerequisite = { focus = SPA_lessons_of_the_eastern_front }
 		
 		
 		x = 23
@@ -1760,9 +1738,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			hidden_effect = {
-				add_to_variable = { SPA_production_factory_efficiency_gain_factor = 0.05}
-			}
+			custom_effect_tooltip = SPA_modify_blau_division_intro
+			add_to_variable = { SPA_production_factory_efficiency_gain_factor = 0.05 tooltip = production_factory_efficiency_gain_factor_tt}
 		}
 	}
 
