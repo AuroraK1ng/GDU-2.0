@@ -132,6 +132,13 @@ guiTypes = {
 				fixedsize = yes
 				format = center
 			}
+			OverlappingElementsBoxType = {
+				name = "state_owners"
+				position = { x = 35 y = 63 }
+				size = { x = 60 y = 40 }
+				format = left
+				spacing = 1.0
+			}
 			
 			buttonType = {
 				name = "owner_flag"
@@ -272,6 +279,7 @@ guiTypes = {
 			}
 		}
 		
+		
 		containerWindowType = {
 			name = "province_info_window"
 			position = { x = 20 y = 539 }
@@ -299,6 +307,15 @@ guiTypes = {
 				maxWidth = 80
 				maxHeight = 30
 				format = left
+			}
+			iconType = {
+				name = "building_modifiers_icon"
+				position = { x = 342 y= -76 }
+				spriteType = "GFX_buildings_strip"
+				Orientation = "UPPER_LEFT"
+				frame = 21
+				scale = 0.8
+				hide = yes
 			}
 			
 			iconType = {
@@ -384,25 +401,14 @@ guiTypes = {
 				slotsize = { width = 109 height = 54 }
 				max_slots_horizontal = 4
 			}
-			
-			buttonType = {
-				name = "nuke_province"
-				quadTextureSprite ="GFX_nuke_button"
-				position = { x= 13 y = -11 }
+			gridBoxType = {
+				name = "province_custom_icon_building_entries"
+				position = { x = 10 y = 5}
+				size = { width = 480 height = 40 }
+				format = "UPPER_LEFT"
+				slotsize = { width = 61 height = 84}
+				max_slots_vertical = 1
 			}
-			
-			iconType = {
-				name = "nuclear_strike_bar"
-				spriteType = "GFX_nuke_progress"
-				position = { x=23 y= 27 }
-				rotation = 1.5708		
-			}	
-			
-			iconType = {
-				name = "nuke_progress_frame"
-				spriteType = "GFX_nuke_progress_frame"
-				position = { x=15 y= -6 }	
-			}				
 			
 		}	
 		buttonType = {
@@ -668,6 +674,41 @@ guiTypes = {
 			position = { x = 25 y = 25 }
 			quadTextureSprite ="GFX_mapicon_unit_flag_stripe"
 			orientation = "UPPER_LEFT"
+		}
+	}
+	windowType = {
+		name = "state_stakeholder_entry"
+		position = { x = 0 y = 0}	
+		size = { x = 40 y = 26 }
+
+		guibuttonType = {
+			name = "stakeholder_country_flag"
+			quadTextureSprite ="GFX_flag_small2"
+			position = { x= 0 y = 1 }
+			#Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name = "flag_border_thin"
+			quadTextureSprite = "GFX_small_flag_frame_thin"
+			position = { x= -3 y = -1 }
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "flag_border_thick"
+			quadTextureSprite = "GFX_diplo_countrylist_flag_frame"
+			position = { x= -5 y = -4 }
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "flag_exclamation_mark"
+			spriteType = "GFX_alerts_category"
+			position = {x = 0 y = 0}
+			frame = 2
+			alwaystransparent = yes
+			scale = 0.8
 		}
 	}
 }
