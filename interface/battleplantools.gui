@@ -298,6 +298,14 @@ guiTypes = {
 					oversound = ui_menu_over
 					pdx_tooltip = "GARRISON_CONF_AIRBASE"
 				}
+				buttonType = {
+					name = "btn_setting_borders"
+					position = {x=250 y=31}
+					spriteType = "GFX_garr_borders"
+					clicksound = click_battleplan
+					oversound = ui_menu_over
+					pdx_tooltip = "GARRISON_CONF_BORDERS"
+				}
 
 				buttonType = {
 					name = "btn_setting_forts"
@@ -316,6 +324,13 @@ guiTypes = {
 					oversound = ui_menu_over
 					pdx_tooltip = "GARRISON_CONF_RAIL"
 				}
+				buttonType = {
+					name = "btn_setting_facility"
+					position = {x=500 y=31}
+					spriteType = "GFX_garr_facility"
+					alwaystransparent = yes
+				}
+				
 
 				iconType = {
 					name = "selected_order_overlay"
