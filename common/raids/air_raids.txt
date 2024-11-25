@@ -1,0 +1,227 @@
+types = {
+		oilfield_raid = {
+			days_to_prepare = 10
+	
+			category = air_raids
+	
+			command_power = 20 # command power allocation cost
+	
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			# Raid Type is visible
+			visible = {
+	
+			}
+			# Specific Target is visible
+			show_target = {
+				NOT = {
+					is_in_faction_with = FROM
+				}
+			}
+	
+			# Can prepare
+			available = {
+	
+			}
+	
+	
+			# Can launch a raid
+			launchable = {
+				has_war_with = FROM
+			}
+	
+			target_type = {
+				state = {
+					# Resouce amount needed to be eligible as raid target
+					oil > 24
+					# If the site has been hit recently you can't target it again
+					NOT = {
+						OR = {
+							has_dynamic_modifier = {
+								modifier = refinery_damaged_modifier
+							}
+							has_dynamic_modifier = {
+								modifier = refinery_critically_damaged_modifier
+							}
+							has_dynamic_modifier = {
+								modifier = refinery_lightly_damaged_modifier
+							}
+						}
+					}
+				}
+			}
+			target_icon = GFX_oilfield_target_icon
+			target_loc_key = raid_target_name_oil_field
+			arrow = {
+				type = air
+			}
+			unit_model = {
+				type = equipment
+			}
+			launch_sound = raid_launch_air
+	
+			unit_requirements = {
+				equipment = {
+					type = { strategic_bomber }
+					amount = { min = 100 }
+				}
+			}
+	
+			starting_point = {
+				types = { air_base }
+			}
+	
+			success_factors = {
+				success = {
+					base = 0.6
+	
+					# Raiding unit modifiers
+					air_agility = {
+						reference = 100.0 # As air unit agility approaches 100 (as defined by the value above), increase chance by this value
+						weight = 0.15 # At 0 agility, the modifier will have negative effect.
+						start_weight = -0.15 # The modifier will scale linearly, meaning at 50 agility, the modifier will be 0.
+					}
+					reliability = {
+						reference = 1
+						weight = 0.15
+						start_weight = -0.1
+					}
+					air_defence = {
+						reference = 100
+						weight = 0.05
+						start_weight = -0.05
+					}
+					air_superiority = {
+						reference = 1
+						weight = 0.2
+						start_weight = -0.2
+					}
+	
+					### Target Modifiers
+					anti_air = {
+						reference = 5
+						weight = -0.15
+					}
+					interception = {
+						reference = 100 # More than 100 fighters won't really make any difference
+						weight = -0.1
+					}
+
+				}
+	
+				critical = {
+					base = 0.15
+				}
+			}
+	
+			success_levels = {
+				failure = {
+					victim_effects = {
+	
+					}
+					actor_effects = {
+						# Damage to raiding units
+						raid_damage_units = {
+							plane_loss = 0.95
+							ratio = yes
+						}
+
+					}
+					visual_effect = {
+						entity = "nuke_entity"
+						animation = "attack"
+					}
+					visual_effect = {
+						entity = "raid_failed_entity"
+						animation = "attack"
+						}
+				}
+				limited_success = {
+					victim_effects = {
+						# Damage to Target
+						var:target_state = {
+							add_dynamic_modifier = {
+								modifier = refinery_lightly_damaged_modifier
+								days = 90
+							}
+						}
+					}
+					actor_effects = {
+						# Damage to raiding units
+						raid_damage_units = {
+							plane_loss = 0.65
+							ratio = yes
+						}
+	
+						# XP etc
+
+					}
+					visual_effect = {
+						entity = "air_raids_2_limited_success_entity"
+						animation = "attack"
+					}
+				}
+				success = {
+					victim_effects = {
+						# Damage to Target
+						var:target_state = {
+							add_dynamic_modifier = {
+								modifier = refinery_damaged_modifier
+								days = 180
+							}
+						}
+					}
+					actor_effects = {
+						# Damage to raiding units
+						raid_damage_units = {
+							plane_loss = 0.25
+							ratio = yes
+						}
+	
+						# XP etc
+
+	
+						var:actor_country = {
+							air_experience = 10
+						}
+					}
+					visual_effect = {
+						entity = "air_raids_2_success_entity"
+						animation = "attack"
+					}
+				}
+				critical_success = {
+					victim_effects = {
+						# Damage to Target
+						var:target_state = {
+							add_dynamic_modifier = {
+								modifier = refinery_critically_damaged_modifier
+								days = 360
+							}
+						}
+					}
+					actor_effects = {
+						# Damage to raiding units
+						raid_damage_units = {
+							plane_loss = 0.1
+							ratio = yes
+						}
+	
+						# XP etc
+
+	
+						var:actor_country = {
+							air_experience = 20
+						}
+					}
+					visual_effect = {
+						entity = "air_raids_2_critical_success_entity"
+						animation = "attack"
+					}
+				}
+			}
+	
+		}
+	}
+	

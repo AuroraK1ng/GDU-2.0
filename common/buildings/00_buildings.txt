@@ -61,6 +61,7 @@ infrastructure = {
 		air_base = yes
 		level_cap = {
 			state_max = 50
+			shares_slots = no
 		}
 		value = 1
 		damage_factor = 0.0
@@ -168,7 +169,7 @@ infrastructure = {
 		disabled_in_dmz = yes
 		air_defence = 1
 		level_cap = {
-			shares_slots = yes
+			shares_slots = no
 			state_max = 5
 		} # This is the max unlock level
 		damage_factor = 0.03
@@ -229,6 +230,7 @@ infrastructure = {
 		#max_level = 0 # max: 5
 		level_cap = {
 			state_max = 6
+			shares_slots = no
 		} # This is the max unlock level
 		damage_factor = 0.5
 		value = 4
@@ -244,7 +246,7 @@ infrastructure = {
 		rocket_production = 5
 		rocket_launch_capacity = 1
 		level_cap = {
-			state_max = 5
+			state_max = 1
 			shares_slots = no
 		}
 		value = 1

@@ -82,6 +82,31 @@ ITA_novus_ordo = {
 	army_attack_factor = 0.25
 	army_defence_factor = 0.25
 }
+fallout_atomic = {
+	enable = { always = yes }
+	icon = GFX_modifiers_radiation
+	industry_repair_factor = -0.2
+	industry_free_repair_factor = -0.3
+	repair_speed_infrastructure_factor = -0.2
+	repair_speed_rail_way_factor = -0.15
+	local_resources_factor = -0.25
+	state_production_speed_buildings_factor = -0.25
+}
+refinery_damaged_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_sabotaged_resource	
+	state_resources_oil_factor = -0.2
+} 
+refinery_critically_damaged_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_sabotaged_resource	
+	state_resources_oil_factor = -0.3
+}
+refinery_lightly_damaged_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_sabotaged_resource	
+	state_resources_oil_factor = -0.1
+}  
 
 
 ###Great Patriotic War###
