@@ -1636,6 +1636,22 @@ focus_tree = {
 			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = arthur_harris
+			set_technology = {basic_large_airframe = 1}
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "Halifax"
+					type = large_plane_airframe_1
+					modules = {
+						fixed_main_weapon_slot = large_bomb_bay
+						engine_type_slot = engine_2_4x
+					}
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = large_plane_airframe_1
+				amount = 150
+				producer = ENG
+			}
 		}
 	}
 	focus = {

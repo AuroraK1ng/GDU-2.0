@@ -1167,6 +1167,22 @@ activate_mission = GER_relocate_industry_from_friesland
 				uses = 1
 				technology = improved_large_airframe
 			}
+			set_technology = {basic_large_airframe = 1}
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "Do 19"
+					type = large_plane_airframe_1
+					modules = {
+						fixed_main_weapon_slot = large_bomb_bay
+						engine_type_slot = engine_2_4x
+					}
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = large_plane_airframe_1
+				amount = 130
+				producer = GER
+			}
 		}
 	}
 
