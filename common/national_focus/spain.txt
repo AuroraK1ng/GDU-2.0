@@ -121,7 +121,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = SPA_the_national_and_popular_army_of_spain }
 		
-		icon = GFX_goal_generic_army_artillery
+		icon = GFX_focus_chi_army_reform
 		x = 19
 		y = 1
 		cost = 5
@@ -251,7 +251,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = SPA_equipment_modernization }
 		
-		icon = GFX_goal_generic_special_forces
+		icon = GFX_focus_AUS_osterreichische_gebirgsjager
 		x = 18
 		y = 3
 		cost = 10
@@ -282,7 +282,7 @@ focus_tree = {
 
 		focus = {
 		id = SPA_Army_recovering
-		icon = GFX_focus_generic_tank_production
+		icon = GFX_focus_generic_advanced_military_studies
 		available = {
 			OR = {
 				date > 1940.3.1
@@ -322,7 +322,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = SPA_the_army_of_africa_model }
 		
-		icon = GFX_Noras_spr_motorized
+		icon = GFX_focus_generic_mechanized
 		x = 20
 		y = 2
 		cost = 5
@@ -354,7 +354,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = SPA_motorization }
 		
-		icon = GFX_goal_generic_army_tanks
+		icon = GFX_focus_generic_tank_assault
 		x = 20
 		y = 3
 		cost = 5
@@ -429,7 +429,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = SPA_facilitate_pyrenees_freight_transports }
 		
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_generic_german_trade
 		x = 10
 		y = 7
 		cost = 5
@@ -557,7 +557,7 @@ focus_tree = {
 		}
 		
 		prerequisite = { focus = SPA_facilitate_pyrenees_freight_transports }
-		icon = GFX_goal_generic_military_deal
+		icon = GFX_focus_generic_university_2
 		x = 5
 		y = 7
 		cost = 5
@@ -697,7 +697,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = SPA_support_the_war_industry }
 		prerequisite = { focus = SPA_improve_cross_country_railways }
-		icon = GFX_goal_generic_construct_military
+		icon = GFX_focus_generic_mass_production
 		x = 5
 		y = 9
 		cost = 10
@@ -712,6 +712,7 @@ focus_tree = {
 
 	focus = {
 		id = SPA_remove_divided_nation
+		icon = GFX_focus_ARG_keep_it_in_the_party
 		available = {
 			has_completed_focus = SPA_compromise_with_protesters
 		}
@@ -720,7 +721,7 @@ focus_tree = {
 		}
 		
 		prerequisite = { focus = SPA_the_rise_of_the_fascists_to_power }
-		icon = GFX_goal_generic_military_deal
+		
 		x = 2
 		y = 8
 		cost = 5
@@ -745,7 +746,7 @@ focus_tree = {
 		bypass = {
 		}
 		prerequisite = { focus = SPA_Army_recovering }
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_generic_military_industry
 		x = 19
 		y = 5
 		cost = 10
@@ -805,7 +806,7 @@ focus_tree = {
 		id = SPA_national_recovery
 		prerequisite = { focus = SPA_fuse_the_parties }
 		prerequisite = { focus = SPA_integrate_the_requetes }		
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_generic_economic_recovery
 		x = 7
 		y = 4
 		cost = 10
@@ -852,7 +853,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = SPA_national_recovery }
 		
-		icon = GFX_goal_generic_oil_refinery
+		icon = GFX_focus_GER_autarky_ambitions
 		x = 8
 		y = 5
 		cost = 10
@@ -920,7 +921,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = SPA_expand_the_axis_gold_trade }
 		
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_mining_industry
 		x = 12
 		y = 9
 		cost = 10
@@ -946,7 +947,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = SPA_fascist_economic_aid }
 		
-		icon = GFX_focus_usa_reestablish_the_gold_standard
+		icon = GFX_focus_generic_welfare
 		x = 10
 		y = 8
 		cost = 10
@@ -1168,7 +1169,7 @@ focus_tree = {
 		}
 		
 		prerequisite = { focus = SPA_distabilization_of_spain }
-		icon = GFX_focus_eng_move_to_secure_the_dominions
+		icon = GFX_focus_GER_end_european_communism
 		x = 0
 		y = 6
 		cost = 5
@@ -1476,6 +1477,7 @@ focus_tree = {
 
 	focus = {
 		id = SPA_direct_the_universities2
+		icon = GFX_focus_generic_central_planning
 		available = {
 			num_of_factories > 35
 			date > 1942.8.1
@@ -1484,7 +1486,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = SPA_direct_the_universities }
 		
-		icon = GFX_focus_research2
+		
 		x = 11
 		y = 6
 		
@@ -1576,7 +1578,7 @@ focus_tree = {
 		bypass = {
 		}
 		prerequisite = { focus = SPA_blau_division }
-		icon = GFX_ENG_General_staff
+		icon = GFX_focus_GER_appease_the_wehrmacht
 		
 		
 		x = 24
@@ -1624,7 +1626,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = SPA_attack_sov }
 		prerequisite = { focus = SPA_planning_buff }	
-		icon = GFX_focus_generic_license_production
+		icon = GFX_focus_GER_kdf_wagen
 		
 		x = 23
 		y = 3
@@ -1663,20 +1665,20 @@ focus_tree = {
 
 	focus = {
 		id = SPA_winter_defence
-		icon = GFX_goal_generic_construct_military
+		icon = GFX_focus_GER_gebirgsjager
 		available = {
 			OR = {
 				AND = {
 					date > 1941.11.1
-					date < 1942.04.01
+					date < 1942.02.14
 				}
 				AND = {
 					date > 1942.11.1
-					date < 1943.04.01
+					date < 1943.02.14
 				}
 				AND = {
 					date > 1943.11.1
-					date < 1944.04.01
+					date < 1944.02.14
 				}
 			}
 		}
@@ -1723,7 +1725,7 @@ focus_tree = {
 
 		focus = {
 		id = SPA_production
-		icon = GFX_focus_chi_mission_to_germany
+		icon = GFX_focus_BRA_acquire_german_tanks
 		available = {
 		}
 		bypass = {
