@@ -725,8 +725,10 @@ focus_tree = {
 		id = SPA_remove_divided_nation
 		icon = GFX_focus_ARG_keep_it_in_the_party
 		available = {
-			has_completed_focus = SPA_compromise_with_protesters
-
+			AND = {
+				has_completed_focus = SPA_compromise_with_protesters
+				has_completed_focus = SPA_crush_the_communists
+			}
 		}
 		bypass = {
 			has_global_flag = SPR_carlist_uprising_flag
