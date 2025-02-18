@@ -1,11 +1,11 @@
 types = {
 
 	nuclear_strike = {
-		days_to_prepare = 30
+		days_to_prepare = 5
 
 		category = nuclear_raids
 
-		command_power = 20 # command power allocation cost
+		command_power = 0 # command power allocation cost
 
 		allowed = {
 			
@@ -37,10 +37,6 @@ types = {
 				type = { strategic_bomber }
 				amount = { min = 100 }
 			}
-			equipment = {
-				type = { guided_missile_equipment }
-				amount = { min = 100 }
-			}
 		}
 		essential_equipment = {
 			nukes = 1
@@ -59,7 +55,7 @@ types = {
 
 		success_factors = {
 			success = {
-				base = 0.6
+				base = 1
 				air_defence = {
 					reference = 100
 					start_weight = -0.05
@@ -79,7 +75,7 @@ types = {
 
 				air_superiority = {
 					reference = 1.0
-					start_weight = -0.25
+					start_weight = -1.5
 					weight = 0.25
 				}
 
@@ -87,11 +83,11 @@ types = {
 
 				# Target
 				interception = {
-					reference = 10
-					weight = -0.25
+					reference = 100
+					weight = -0.8
 				}
 				anti_air = {
-					weight = -0.05
+					weight = -0.2
 				}
 				radar = {
 					weight = -0.05

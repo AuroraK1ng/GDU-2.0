@@ -107,6 +107,36 @@ refinery_lightly_damaged_modifier = {
 	icon = GFX_modifiers_sabotaged_resource	
 	state_resources_oil_factor = -0.1
 }  
+tungsten_mine_damaged_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_sabotaged_resource	
+	state_resources_tungsten_factor = -0.2
+} 
+tungsten_mine_critically_damaged_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_sabotaged_resource	
+	state_resources_tungsten_factor = -0.3
+}
+tungsten_mine_lightly_damaged_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_sabotaged_resource	
+	state_resources_tungsten_factor = -0.1
+}
+chromium_mine_damaged_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_sabotaged_resource	
+	state_resources_chromium_factor = -0.2
+} 
+chromium_mine_critically_damaged_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_sabotaged_resource	
+	state_resources_chromium_factor = -0.3
+}
+chromium_mine_lightly_damaged_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_sabotaged_resource	
+	state_resources_chromium_factor = -0.1
+}
 
 
 ###Great Patriotic War###
@@ -126,6 +156,7 @@ great_patriotic_modifier_spirit = {
 	air_escort_efficiency = SOV.great_patriotic_war_air_buff
 	air_intercept_efficiency = SOV.great_patriotic_war_air_buff
 }
+###Great Patriotic War END###
 SPA_blau_division_modifier = {
 	enable = { always = yes }
 
@@ -138,4 +169,11 @@ SPA_blau_division_modifier = {
 	industrial_capacity_factory = SPA_industrial_capacity_factory
 	production_factory_efficiency_gain_factor = SPA_production_factory_efficiency_gain_factor
 	army_attack_factor = SPA_army_attack_factor
+}
+pathfinder_infiltration_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_FIN_motti_tactics_modifier	
+	disable_strategic_redeployment = yes 
+	no_supply_grace = 15
+	naval_invasion_penalty = -0.1
 }
