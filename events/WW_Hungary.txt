@@ -1,0 +1,1407 @@
+﻿################################
+### Hungarian Country Events ###
+################################
+
+add_namespace = WW_hungary
+add_namespace = wuw_HUN_news_events
+
+# Hungarian "Allied Manufacturing Programs" - event for faction leader
+country_event = {
+	id = WW_hungary.1
+	title = WW_hungary.1.t
+	desc = WW_hungary.1.desc
+	picture = GFX_report_event_bul_aircraft_repairs
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# A boon to our industrial capacity
+	option = { 
+		name = WW_hungary.1.a
+		ai_chance = {
+			factor = 100
+		}
+
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = air_equipment
+		}	
+		
+		add_offsite_building = {
+			type = industrial_complex
+			level = 2
+		}	
+
+	}
+}
+
+
+# Hungarian Weapon Shipments Arrive - event for FIN
+country_event = {
+	id = WW_hungary.2
+	title = WW_hungary.2.t
+	desc = WW_hungary.2.desc
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# Great!
+	option = { 
+		name = WW_hungary.2.a
+		ai_chance = {
+			factor = 100
+		}
+
+		add_equipment_to_stockpile = { 
+			type = infantry_equipment
+			amount = 500
+			producer = HUN
+		}	
+
+		add_equipment_to_stockpile = { 
+			type = support_equipment
+			amount = 250
+			producer = HUN
+		}
+		
+		add_offsite_building = {
+			type = arms_factory 
+			level = 1
+		}	
+
+	}
+}
+
+
+# PM Gyula Gömbös Dies - event for HUN
+country_event = {
+	id = WW_hungary.3
+	title = WW_hungary.3.t
+	desc = WW_hungary.3.desc
+	picture = GFX_report_event_europe_funeral
+
+	trigger = {
+		original_tag = HUN
+		
+		date > 1936.10.4
+
+		date < 1939.1.1
+
+		has_government = neutrality
+
+		has_completed_focus = wuw_HUN_strengthen_horthys_reign
+
+		has_dlc = "Gotterdammerung"
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	hidden = no
+
+	fire_only_once = yes
+
+	# Attempt to gain control of MOVE
+	option = {
+		name = WW_hungary.3.a
+		ai_chance = {
+			base = 100
+		}
+
+		IF = {
+			limit = {
+				has_idea = HUN_hungarian_national_defense_association
+			}
+			swap_ideas = {
+				remove_idea = HUN_hungarian_national_defense_association
+				add_idea = HUN_hungarian_national_defense_association_horthyist
+			}	
+		}
+
+		retire_character = HUN_gyula_gombos_de_jakfa
+
+		hidden_effect = {
+			set_country_flag = HUN_gombos_has_died_flag
+			set_country_flag = HUN_horthy_aligned_the_move_flag
+		}
+		
+	}
+
+	# Forcibly disband MOVE
+	option = {
+		name = WW_hungary.3.b
+		ai_chance = {
+			base = 0
+			
+			modifier = {
+				add = 50
+				is_historical_focus_on = no
+			}
+			
+		}
+
+		add_stability = 0.1
+
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.1
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		IF = {
+			limit = {
+				has_idea = HUN_hungarian_national_defense_association
+			}
+			remove_ideas = HUN_hungarian_national_defense_association
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		retire_character = HUN_gyula_gombos_de_jakfa
+
+		hidden_effect = {
+			set_country_flag = HUN_gombos_has_died_flag
+			set_country_flag = HUN_horthy_disbanded_the_move_flag
+		}
+
+	}
+
+	# Allow the MOVE to run free
+	option = {
+		name = WW_hungary.3.c
+		ai_chance = {
+			base = 0
+			
+			modifier = {
+				add = 30
+				is_historical_focus_on = no
+			}
+			
+		}
+
+		add_political_power = 75
+
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		retire_character = HUN_gyula_gombos_de_jakfa
+
+		hidden_effect = {
+			set_country_flag = HUN_gombos_has_died_flag
+			set_country_flag = HUN_horthy_allowed_the_move_to_roam_freely_flag
+		}
+
+	}
+
+}
+# The March on Budapest - event for HUN
+country_event = {
+	id = WW_hungary.102
+	title = WW_hungary.102.t 
+	desc = WW_hungary.102.desc
+	picture = GFX_report_event_fascists_posing
+	
+	is_triggered_only = yes
+
+	# Gömbös must take up emergency powers!
+	option = { 
+		name = WW_hungary.102.a
+		ai_chance = {
+			base = 30
+		}
+
+		add_country_leader_role = {
+		    character = HUN_gyula_gombos_de_jakfa
+		    promote_leader = yes
+		    country_leader = {
+		    	ideology = despotism
+		    	traits = { HUN_popular_among_paramilitaries }
+		    	expire = "1965.1.1.1"
+		    	id = -1
+		    }
+		}
+
+		add_political_power = 50
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_stability = -0.1
+
+		hidden_effect = {
+			remove_ideas = HUN_gyula_gombos_de_jakfa
+		}
+
+	}
+}
+
+# Ferenc Szálasi's coup d'etat - event for HUN
+country_event = {
+	id = WW_hungary.103
+	title = WW_hungary.103.t 
+	desc = WW_hungary.103.desc
+	picture = GFX_report_event_hungary_southern_slovakia
+	
+	is_triggered_only = yes
+
+	# We will agree to their terms, on a condition
+	option = { 
+		name = WW_hungary.103.a
+		ai_chance = {
+			base = 0
+		}
+		trigger = {
+			has_country_leader = {
+				ruling_only = yes
+				character = HUN_gyula_gombos_de_jakfa
+			}	
+		}
+
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_country_leader_role = {
+		    character = HUN_gyula_gombos_de_jakfa
+		    promote_leader = yes
+		    country_leader = {
+		    	ideology = fascism_ideology
+		    	traits = { HUN_popular_among_paramilitaries HUN_nemzetvezeto_trait }
+		    	expire = "1965.1.1.1"
+		    	id = -1
+		    }
+		}
+
+		add_stability = -0.15
+		add_war_support = -0.05
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_threat = 1
+		set_party_name = {
+			ideology = fascism
+			long_name = HUN_arrow_cross_party_hungarist_movement_long
+			name = HUN_arrow_cross_party_hungarist_movement
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		hidden_effect = {
+			news_event = { id = news.298 days = 1 }
+		}
+
+	}
+}
+
+
+
+# DISUSED!!!
+# Goering become king - HIDDEN event for HUN
+#country_event = {
+#	id = WW_hungary.107
+#	title = WW_hungary.107.t
+#	desc = WW_hungary.107.desc
+#	#picture = GFX_report_event_HUN_hungary_occupies_area
+#	
+#	is_triggered_only = yes
+#
+#	fire_only_once = yes
+#
+#	hidden = yes
+#
+#	immediate = {
+#		add_advisor_role = {
+#			character = GER_hermann_goring
+#			advisor = {
+#				slot = political_advisor
+#				cost = 150
+#				can_be_fired = no
+#				idea_token = GER_hermann_goring_king_of_hun
+#				traits = {
+#					HUN_apostolic_king_of_hungary_fascist_trait
+#				}
+#			}
+#			activate = yes
+#		}
+#	}
+#	
+#	# They will regret their decision
+#	option = { 
+#		name = WW_hungary.107.a
+#		ai_chance = {
+#			factor = 100
+#		}
+#
+#		
+#
+#	}
+#}
+
+# [FROM.GetNameDefCap] wants to Crown Hermann Goering King - event for GER
+country_event = {
+	id = WW_hungary.108
+	title = WW_hungary.108.t
+	desc = WW_hungary.108.desc
+	picture = GFX_report_event_hungary_parliament
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# We will allow it
+	option = { 
+		name = WW_hungary.108.a
+		ai_chance = {
+			base = 100
+		}
+
+		# They accept - event for HUN
+		FROM = { 
+			country_event = {
+				id = WW_hungary.109
+				days = 2
+				random_days = 3
+			}
+		} 
+
+	}
+
+	# It would not be appropriate
+	option = { 
+		name = WW_hungary.108.b
+		ai_chance = {
+			base = 0
+		}
+
+		# They reject - event for HUN
+		FROM = { 
+			country_event = {
+				id = WW_hungary.110
+				days = 2
+				random_days = 3
+			}
+		} 
+
+	}
+}
+
+# [FROM.GetLeader] Allows Goering to be Crowned - event for HUN
+country_event = {
+	id = WW_hungary.109
+	title = WW_hungary.109.t
+	desc = WW_hungary.109.desc
+	picture = GFX_report_event_hungary_parliament
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# We are grateful
+	option = { 
+		name = WW_hungary.109.a
+		ai_chance = {
+			factor = 100
+		}
+
+		custom_effect_tooltip = goering_as_king_tt
+
+		hidden_effect = {
+			set_country_flag = HUN_has_goering_as_king_flag
+			activate_advisor = GER_hermann_goring_king_of_hun
+		}
+
+	}
+}
+
+# [FROM.GetLeader] Disallows Goering being Crowned - event for HUN
+country_event = {
+	id = WW_hungary.110
+	title = WW_hungary.110.t
+	desc = WW_hungary.110.desc
+	picture = GFX_report_event_hungary_parliament
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# A Kingdom no more it seems
+	option = { 
+		name = WW_hungary.110.a
+		ai_chance = {
+			factor = 100
+		}
+
+		add_political_power = 50
+		add_stability = 0.05
+
+	}
+}
+
+# Referendum to join Hungary in South Slovakia - event for owner of Southern Slovakia
+country_event = {
+	id = WW_hungary.111
+	title = WW_hungary.111.t 
+	desc = WW_hungary.111.desc
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	# If it is what the people wish for
+	option = { 
+		name = WW_hungary.111.a
+
+		ai_chance = {
+			base = 95
+		}
+
+		effect_tooltip = {
+			IF = {
+
+				limit = {
+					ROOT = {	
+						OR = {		
+							owns_state = 664
+							any_subject_country = {
+								is_ai = yes
+								owns_state = 664
+							}
+						}
+					}
+				}
+
+				add_political_power = 50
+				add_stability = 0.05
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				FROM = {
+					transfer_state = 664
+				}
+
+			}
+		}
+
+		HUN = { 
+			country_event = {
+			    id = WW_hungary.112
+			    days = 1
+			    random = 2
+			}
+		}
+	}
+
+	# The referendum was fraudulent
+	option = { 
+		name = WW_hungary.111.b
+		trigger = {
+			NOT = {
+				is_subject_of = FROM
+			}
+		}
+
+		ai_chance = {
+			base = 5
+		}
+
+		HUN = {
+			country_event = {
+			    id = WW_hungary.113
+			    days = 1
+			    random = 2
+			}
+		}
+
+		hidden_effect = {
+			set_country_flag = HUN_from_refused_south_slovak_referendum_results
+		}
+	}
+}
+
+# X country accepts the referendum
+country_event = {
+	id = WW_hungary.112
+	title = WW_hungary.112.t 
+	desc = WW_hungary.112.desc
+	picture = GFX_report_event_generic_handshake
+	
+	is_triggered_only = yes
+
+	# A reasonable response
+	option = { 
+		name = WW_hungary.112.a
+
+		IF = {
+			limit = {
+				OR = {
+					FROM = {
+						owns_state = 664
+					}
+					FROM = {
+						any_subject_country = {
+							is_ai = yes
+							owns_state = 664
+						}
+					}
+				}
+			}
+			FROM = {
+				add_political_power = 50
+				add_stability = 0.05
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			664 = {
+				add_core_of = ROOT
+			}
+			ROOT = {
+				transfer_state = 664
+			}
+		}
+	}
+}
+
+# X country declares the referendum illegitimate
+country_event = {
+	id = WW_hungary.113
+	title = WW_hungary.113.t 
+	desc = WW_hungary.113.desc
+	picture = GFX_report_event_hungary_parliament
+	
+	is_triggered_only = yes
+
+	# We will have to accept it 
+	option = { 
+		name = WW_hungary.113.a
+
+		add_political_power = 75
+		664 = {
+			add_core_of = ROOT
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		ROOT = {
+			add_opinion_modifier = {
+				target = FROM
+				modifier = BUL_rejected_our_proposal
+			}
+		}
+		
+		hidden_effect = {
+			FROM = {
+				clr_country_flag = HUN_sent_banatian_demands
+			}
+		}
+	}
+}
+
+
+# Referendum to join Hungary in Carpathian Ruthenia - event for owner of Carpathian Ruthenia
+
+
+# X country accepts the referendum
+country_event = {
+	id = WW_hungary.115
+	title = WW_hungary.115.t 
+	desc = WW_hungary.115.desc
+	picture = GFX_report_event_generic_handshake
+	
+	is_triggered_only = yes
+
+	# A reasonable response
+	option = { 
+		name = WW_hungary.115.a
+
+		IF = {
+			limit = {
+				OR = {
+					FROM = {
+						owns_state = 73
+					}
+					FROM = {
+						any_subject_country = {
+							is_ai = yes
+							owns_state = 73
+						}
+					}
+				}
+			}
+			FROM = {
+				add_political_power = 50
+				add_stability = 0.05
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			73 = {
+				add_core_of = ROOT
+			}
+			ROOT = {
+				transfer_state = 73
+			}
+		}
+	}
+}
+
+# X country declares the referendum illegitimate
+country_event = {
+	id = WW_hungary.116
+	title = WW_hungary.116.t 
+	desc = WW_hungary.116.desc
+	picture = GFX_report_event_hungary_parliament
+	
+	is_triggered_only = yes
+
+	# We will have to accept it 
+	option = { 
+		name = WW_hungary.116.a
+
+		add_political_power = 75
+		73 = {
+			add_core_of = ROOT
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		ROOT = {
+			add_opinion_modifier = {
+				target = FROM
+				modifier = BUL_rejected_our_proposal
+			}
+		}
+		
+		hidden_effect = {
+			FROM = {
+				clr_country_flag = HUN_sent_banatian_demands
+			}
+		}
+	}
+}
+
+
+# Referendum to join Hungary in Vojvodina - event for owner of Vojvodina
+country_event = {
+	id = WW_hungary.117
+	title = WW_hungary.117.t 
+	desc = WW_hungary.117.desc
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	# If it is what the people wish for
+	option = { 
+		name = WW_hungary.117.a
+
+		ai_chance = {
+			base = 95
+		}
+
+		effect_tooltip = {
+			IF = {
+
+				limit = {
+					ROOT = {	
+						OR = {		
+							owns_state = 45
+							any_subject_country = {
+								is_ai = yes
+								owns_state = 45
+							}
+						}
+					}
+				}
+
+				add_political_power = 50
+				add_stability = 0.05
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				FROM = {
+					transfer_state = 45
+				}
+
+			}
+		}
+
+		HUN = { 
+			country_event = {
+			    id = WW_hungary.118
+			    days = 1
+			    random = 2
+			}
+		}
+	}
+
+	# The referendum was fraudulent
+	option = { 
+		name = WW_hungary.117.b
+		trigger = {
+			NOT = {
+				is_subject_of = FROM
+			}
+		}
+
+		ai_chance = {
+			base = 5
+		}
+
+		HUN = {
+			country_event = {
+			    id = WW_hungary.119
+			    days = 1
+			    random = 2
+			}
+		}
+
+		hidden_effect = {
+			set_country_flag = HUN_from_refused_vojvodinan_referendum_results
+		}
+	}
+}
+
+# X country accepts the referendum
+country_event = {
+	id = WW_hungary.118
+	title = WW_hungary.118.t 
+	desc = WW_hungary.118.desc
+	picture = GFX_report_event_generic_handshake
+	
+	is_triggered_only = yes
+
+	# A reasonable response
+	option = { 
+		name = WW_hungary.118.a
+
+		IF = {
+			limit = {
+				OR = {
+					FROM = {
+						owns_state = 45
+					}
+					FROM = {
+						any_subject_country = {
+							is_ai = yes
+							owns_state = 45
+						}
+					}
+				}
+			}
+			FROM = {
+				add_political_power = 50
+				add_stability = 0.05
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			45 = {
+				add_core_of = ROOT
+			}
+			ROOT = {
+				transfer_state = 45
+			}
+		}
+	}
+}
+
+# X country declares the referendum illegitimate
+country_event = {
+	id = WW_hungary.119
+	title = WW_hungary.119.t 
+	desc = WW_hungary.119.desc
+	picture = GFX_report_event_hungary_parliament
+	
+	is_triggered_only = yes
+
+	# We will have to accept it 
+	option = { 
+		name = WW_hungary.119.a
+
+		add_political_power = 75
+		45 = {
+			add_core_of = ROOT
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		ROOT = {
+			add_opinion_modifier = {
+				target = FROM
+				modifier = BUL_rejected_our_proposal
+			}
+		}
+		
+		hidden_effect = {
+			FROM = {
+				clr_country_flag = HUN_sent_banatian_demands
+			}
+		}
+	}
+}
+
+
+# Referendum to join Hungary in North Transylvania - event for owner of North Transylvania
+country_event = {
+	id = WW_hungary.120
+	title = WW_hungary.120.t 
+	desc = WW_hungary.120.desc
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	# If it is what the people wish for
+	option = { 
+		name = WW_hungary.120.a
+
+		ai_chance = {
+			base = 95
+		}
+
+		effect_tooltip = {
+			IF = {
+
+				limit = {
+					ROOT = {	
+						OR = {		
+							owns_state = 76
+							any_subject_country = {
+								is_ai = yes
+								owns_state = 76
+							}
+						}
+					}
+				}
+
+				add_political_power = 50
+				add_stability = 0.05
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				FROM = {
+					transfer_state = 76
+				}
+
+			}
+		}
+
+		HUN = { 
+			country_event = {
+			    id = WW_hungary.121
+			    days = 1
+			    random = 2
+			}
+		}
+	}
+
+	# The referendum was fraudulent
+	option = { 
+		name = WW_hungary.120.b
+		trigger = {
+			NOT = {
+				is_subject_of = FROM
+			}
+		}
+
+		ai_chance = {
+			base = 5
+		}
+
+		HUN = {
+			country_event = {
+			    id = WW_hungary.122
+			    days = 1
+			    random = 2
+			}
+		}
+
+		hidden_effect = {
+			set_country_flag = HUN_from_refused_north_transylvanian_referendum_results
+		}
+	}
+}
+
+# X country accepts the referendum
+country_event = {
+	id = WW_hungary.121
+	title = WW_hungary.121.t 
+	desc = WW_hungary.121.desc
+	picture = GFX_report_event_generic_handshake
+	
+	is_triggered_only = yes
+
+	# A reasonable response
+	option = { 
+		name = WW_hungary.121.a
+
+		IF = {
+			limit = {
+				OR = {
+					FROM = {
+						owns_state = 76
+					}
+					FROM = {
+						any_subject_country = {
+							is_ai = yes
+							owns_state = 76
+						}
+					}
+				}
+			}
+			FROM = {
+				add_political_power = 50
+				add_stability = 0.05
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			76 = {
+				add_core_of = ROOT
+			}
+			ROOT = {
+				transfer_state = 76
+			}
+		}
+	}
+}
+
+# X country declares the referendum illegitimate
+country_event = {
+	id = WW_hungary.122
+	title = WW_hungary.122.t 
+	desc = WW_hungary.122.desc
+	picture = GFX_report_event_hungary_parliament
+	
+	is_triggered_only = yes
+
+	# We will have to accept it 
+	option = { 
+		name = WW_hungary.122.a
+
+		add_political_power = 75
+		76 = {
+			add_core_of = ROOT
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		ROOT = {
+			add_opinion_modifier = {
+				target = FROM
+				modifier = BUL_rejected_our_proposal
+			}
+		}
+		
+		hidden_effect = {
+			FROM = {
+				clr_country_flag = HUN_sent_banatian_demands
+			}
+		}
+	}
+}
+
+# The Scythe Cross March on Budapest - event for HUN
+country_event = {
+	id = WW_hungary.123
+	title = WW_hungary.123.t
+	desc = WW_hungary.123.desc
+	picture = GFX_report_event_eng_blackshirt_march
+
+	trigger = {
+		original_tag = HUN
+		
+		date > 1936.4.25
+
+		date < 1939.1.1
+
+		has_civil_war = no
+
+		has_dlc = "Gotterdammerung"
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	hidden = no
+
+	fire_only_once = yes
+
+	# Disperse them and arrest their pathetic leader!
+	option = {
+		name = WW_hungary.123.a
+		ai_chance = {
+			base = 100
+		}
+
+		add_political_power = 25
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.03
+		}	
+
+		hidden_effect = {
+			set_country_flag = HUN_zoltan_boszormeny_arrested_flag
+		}
+		
+	}
+
+	# Open fire and scare them off
+	option = {
+		name = WW_hungary.123.b
+		ai_chance = {
+			base = 0
+			
+			modifier = {
+				add = 50
+				is_historical_focus_on = no
+			}
+			
+		}
+
+		add_stability = 0.01
+		add_war_support = 0.01
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}	
+
+		hidden_effect = {
+			set_country_flag = HUN_scythe_cross_in_hiding_flag
+		}
+
+	}
+}
+
+
+
+#############################
+### Hungarian News Events ###
+#############################
+
+
+# Hungary announces the Györ Program - news event for everybody
+news_event = {
+	id = wuw_HUN_news_events.1
+	title = wuw_HUN_news_events.1.t
+	desc = wuw_HUN_news_events.1.d
+	picture = GFX_news_event_HUN_gyor_program_announcement
+	
+	major = no
+	
+	is_triggered_only = yes
+	
+	# They are building up for something... (for everyone except HUN)
+	option = {
+		name = wuw_HUN_news_events.1.a
+		trigger = {
+			NOT = {
+				TAG = HUN
+			}
+		}
+	}
+
+	# This will secure our future! (for HUN)
+	option = {
+		name = wuw_HUN_news_events.1.b
+		trigger = { TAG = HUN }
+	}
+} 
+
+# Horthyist Hungary joins the Axis - news event for everybody
+news_event = {
+	id = wuw_HUN_news_events.2
+	title = wuw_HUN_news_events.2.t
+	desc = wuw_HUN_news_events.2.d
+	picture = GFX_news_event_HUN_alliance_with_germany
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	# They are building up for something... (for everyone except HUN and GER)
+	option = {
+		name = wuw_HUN_news_events.2.a
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = HUN
+					TAG = GER
+				}
+			}
+		}
+	}
+
+	# This will secure our future! (for HUN)
+	option = {
+		name = wuw_HUN_news_events.2.b
+		trigger = { TAG = HUN }
+	}
+
+	# This will secure our future! (for GER)
+	option = {
+		name = wuw_HUN_news_events.2.c
+		trigger = { TAG = GER }
+	}
+} 
+
+news_event = {  #Hungary reforms the Central Powers
+	id = wuw_HUN_news_events.3
+	title = wuw_HUN_news_events.3.t
+	desc = wuw_HUN_news_events.3.desc
+	picture = GFX_news_event_royal_visit
+	is_triggered_only = yes
+
+	major = yes 
+
+	option = { #It had to happen at some point
+		name = wuw_HUN_news_events.3.a
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = HUN
+					TAG = GER
+				}
+			}
+		}
+	}
+	option = {
+		name = wuw_HUN_news_events.3.b
+		trigger = {
+			original_tag = HUN
+		}
+	}
+	option = {
+		name = wuw_HUN_news_events.3.c
+		trigger = {
+			original_tag = GER
+		}
+	}
+}
+
+news_event = {  # Hungary declares global dominion
+	id = wuw_HUN_news_events.4
+	title = wuw_HUN_news_events.4.t
+	desc = wuw_HUN_news_events.4.desc
+	picture = GFX_news_event_german_speech
+	is_triggered_only = yes
+
+	major = yes 
+
+	option = { # They need to be destroyed
+		name = wuw_HUN_news_events.4.a
+		trigger = {
+			NOT = {
+				TAG = HUN	
+			}
+		}
+	}
+	option = { # The world is our oyster!
+		name = wuw_HUN_news_events.4.b
+		trigger = {
+			original_tag = HUN
+		}
+	}
+}
+
+#Hungary crowns a horthyist king
+news_event = {
+	id = wuw_HUN_news_events.5
+	title = wuw_HUN_news_events.5.t
+	desc = wuw_HUN_news_events.5.desc
+	picture = GFX_news_event_royal_visit
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wuw_HUN_news_events.5.a
+		trigger = {
+			TAG = HUN
+		}
+	}
+	option = {
+		name = wuw_HUN_news_events.5.b
+		trigger = { 
+			NOT = { TAG = HUN }
+			OR = {
+				has_government = democratic
+				has_government = communism
+				has_government = fascism
+			}
+		}
+	}
+	option = { 
+		name = wuw_HUN_news_events.5.c
+		trigger = { 
+			NOT = { TAG = HUN }
+			has_government = neutrality
+		}
+	}
+}
+
+#Hungary crowns a Habsburg king
+news_event = {
+	id = wuw_HUN_news_events.6
+	title = wuw_HUN_news_events.6.t
+	desc = wuw_HUN_news_events.6.desc
+	picture = GFX_news_event_royal_visit
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wuw_HUN_news_events.6.a
+		trigger = {
+			TAG = HUN
+		}
+	}
+	option = {
+		name = wuw_HUN_news_events.6.b
+		trigger = { 
+			NOT = { TAG = HUN }
+			OR = {
+				has_government = democratic
+				has_government = communism
+				has_government = fascism
+			}
+		}
+	}
+	option = { 
+		name = wuw_HUN_news_events.6.c
+		trigger = { 
+			NOT = { TAG = HUN }
+			has_government = neutrality
+		}
+	}
+}
+
+#Restoration of the Hungarian Soviet Republic 
+news_event = {
+	id = wuw_HUN_news_events.7
+	title = wuw_HUN_news_events.7.t
+	desc = wuw_HUN_news_events.7.desc
+	picture = GFX_news_event_HUN_bela_kun
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wuw_HUN_news_events.7.a
+		trigger = {
+			TAG = HUN
+		}
+	}
+	option = {
+		name = wuw_HUN_news_events.7.b
+		trigger = { 
+			NOT = { TAG = HUN }
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+				has_government = fascism
+			}
+		}
+	}
+	option = { 
+		name = wuw_HUN_news_events.7.c
+		trigger = { 
+			NOT = { TAG = HUN }
+			has_government = communism
+		}
+	}
+}
+
+#Proclamation of the Hungarian People's Republic
+news_event = {
+	id = wuw_HUN_news_events.8
+	title = wuw_HUN_news_events.8.t
+	desc = wuw_HUN_news_events.8.desc
+	picture = GFX_news_event_HUN_leninist_gathering
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wuw_HUN_news_events.8.a
+		trigger = {
+			TAG = HUN
+		}
+	}
+	option = {
+		name = wuw_HUN_news_events.8.b
+		trigger = { 
+			NOT = { TAG = HUN }
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+				has_government = fascism
+			}
+		}
+	}
+	option = { 
+		name = wuw_HUN_news_events.8.c
+		trigger = { 
+			NOT = { TAG = HUN }
+			has_government = communism
+		}
+	}
+}
+
+#Hungary Occupies Burgenland
+news_event = {
+	id = wuw_HUN_news_events.9 
+	title = wuw_HUN_news_events.9.t
+	desc = wuw_HUN_news_events.9.desc
+	picture = GFX_news_event_HUN_hungary_occupies_area
+	
+	major = no
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wuw_HUN_news_events.9.a
+		trigger = {
+			TAG = HUN
+		}
+	}
+	option = {
+		name = wuw_HUN_news_events.9.b
+		trigger = { 
+			TAG = AUS
+		}
+	}
+	option = { 
+		name = wuw_HUN_news_events.8.c
+		trigger = { 
+			NOT = { 
+				OR = {
+					TAG = HUN 
+					TAG = AUS
+				}
+			}
+		}
+	}
+}
+

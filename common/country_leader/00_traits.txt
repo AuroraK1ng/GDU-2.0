@@ -1090,7 +1090,7 @@ leader_traits = {
 	financial_expert = {
 		sprite = 10
 		random = yes
-		consumer_goods_expected_value = -0.03
+		consumer_goods_expected_value = -0.075
 		
 	}
 	economist = {
@@ -2673,5 +2673,74 @@ leader_traits = {
 		max_dig_in = 5
 		mobilization_speed = -0.05
 		
+	}
+	HUN_magyar_nemzeti_bank_president = {
+		random = no
+		sprite = 13
+		production_speed_buildings_factor = 0.05
+		consumer_goods_expected_value = -0.05 
+	}
+	HUN_scholary_politician = {
+		random = no
+		sprite = 13
+		research_speed_factor = 0.1
+		drift_defence_factor = 0.15
+		custom_modifier_tooltip = will_be_removed_upon_offensive_war_tt
+	}
+    HUN_moderate_lawyer = {
+		random = no
+		sprite = 13
+		drift_defence_factor = 0.2
+		political_power_factor = 0.1
+		stability_factor = 0.05
+	}
+	HUN_her_serene_highness = {
+		random = no
+		sprite = 13
+		stability_factor = 0.15
+	}
+	fortress_architecht = {
+		random = no
+		sprite = 13
+		production_speed_bunker_factor = 0.15
+		production_speed_coastal_bunker_factor = 0.15
+		production_speed_arms_factory_factor = 0.05
+		industrial_capacity_factory = 0.05
+	}
+	HUN_innovative_weapons_designer = {
+		random = no
+		sprite = 13
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.15
+			}
+		}
+	}
+	HUN_archbishop_of_esztergom = {
+		random = no
+		sprite = 13
+		research_speed_factor = -0.02
+		political_power_factor = 0.15
+		stability_factor = 0.05
+	}
+	HUN_the_national_socialist_count = {
+		random = no
+		sprite = 13
+		fascism_drift = 0.1
+		party_popularity_stability_factor = 0.3
+		political_power_factor = 0.1
+	}
+	HUN_popular_among_paramilitaries = {
+		random = no
+		sprite = 13
+		fascism_drift = 0.02
+		conscription_factor = 0.1
+		army_core_defence_factor = 0.15
+	}
+	HUN_nemzetvezeto_trait = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.1
+		stability_factor = 0.05
 	}
 }

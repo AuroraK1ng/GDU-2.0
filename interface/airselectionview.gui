@@ -1201,14 +1201,19 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "strategic_air_priorities_window"
-				position = { x = 4 y = -75 }
-				size = { width = 640 height = 84 }
+				position = {x=4 y=-75}
+				size = { width=600 height=280 }
+				#animation_time = 300
+				#Orientation = center_down
+				#clipping = yes
+				fade_time = 300
+				fade_type = linear
 				clipping = no
 
 				background = {
 					name = "Background"
-					quadTextureSprite = "GFX_air_priorities_tiled_bg"
-					position = { x = 0 y = 0 }
+					spriteType = "GFX_air_priorities_bg"
+					position = { x = 4 y = 2 }
 				}
 
 				instantTextboxType = {
@@ -1239,6 +1244,7 @@ guiTypes = {
 				}
 			}
 		}
+
 		containerWindowType = {
 			name = "air_wing_toolbar"
 			position = {x=2 y=60}

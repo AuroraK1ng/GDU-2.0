@@ -1,6 +1,6 @@
 types = {
 		oilfield_raid = {
-			days_to_prepare = 25
+			days_to_prepare = 45
 	
 			category = air_raids
 	
@@ -65,7 +65,7 @@ types = {
 			unit_requirements = {
 				equipment = {
 					type = { strategic_bomber }
-					amount = { min = 50 }
+					amount = { min = 100 }
 				}
 			}
 	
@@ -225,7 +225,7 @@ types = {
 	
 		}
 		mine_sabotage_raid = {
-			days_to_prepare = 25
+			days_to_prepare = 45
 	
 			category = air_raids
 	
@@ -262,13 +262,13 @@ types = {
 					NOT = {
 						OR = {
 							has_dynamic_modifier = {
-								modifier = tungsten_mine_damaged_modifier   
+								modifier = refinery_damaged_modifier   
 							}
 							has_dynamic_modifier = {
-								modifier = tungsten_mine_critically_damaged_modifier
+								modifier = refinery_critically_damaged_modifier
 							}
 							has_dynamic_modifier = {
-								modifier = tungsten_mine_lightly_damaged_modifier
+								modifier = refinery_lightly_damaged_modifier
 							}
 						}
 					}
@@ -288,7 +288,7 @@ types = {
 			unit_requirements = {
 				equipment = {
 					type = { strategic_bomber }
-					amount = { min = 50 }
+					amount = { min = 100 }
 				}
 			}
 	
@@ -448,7 +448,7 @@ types = {
 	
 		}
 		mine_chromium_sabotage_raid = {
-			days_to_prepare = 25
+			days_to_prepare = 45
 	
 			category = air_raids
 	
@@ -485,13 +485,13 @@ types = {
 					NOT = {
 						OR = {
 							has_dynamic_modifier = {
-								modifier = chromium_mine_damaged_modifier   
+								modifier = refinery_damaged_modifier   
 							}
 							has_dynamic_modifier = {
-								modifier = chromium_mine_critically_damaged_modifier
+								modifier = refinery_critically_damaged_modifier
 							}
 							has_dynamic_modifier = {
-								modifier = chromium_mine_lightly_damaged_modifier
+								modifier = refinery_lightly_damaged_modifier
 							}
 						}
 					}
@@ -512,7 +512,7 @@ types = {
 			unit_requirements = {
 				equipment = {
 					type = { strategic_bomber }
-					amount = { min = 50 }
+					amount = { min = 100 }
 				}
 			}
 	
@@ -672,7 +672,7 @@ types = {
 	
 		}
 		synthetic_refinery_sabotage_raid = {
-			days_to_prepare = 25
+			days_to_prepare = 45
 	
 			category = air_raids
 	
@@ -723,7 +723,7 @@ types = {
 			unit_requirements = {
 				equipment = {
 					type = { strategic_bomber }
-					amount = { min = 50 }
+					amount = { min = 100 }
 				}
 			}
 	
@@ -883,7 +883,7 @@ types = {
 	
 		}
 		pathfinder_raid = {
-			days_to_prepare = 10
+			days_to_prepare = 30
 	
 			category = air_raids
 	
@@ -939,7 +939,7 @@ types = {
 			unit_requirements = {
 				equipment = {
 					type = { strategic_bomber }
-					amount = { min = 50 }
+					amount = { min = 100 }
 				}
 			}
 	

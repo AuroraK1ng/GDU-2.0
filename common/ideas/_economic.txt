@@ -77,6 +77,7 @@ ideas = {
 		low_economic_mobilisation = {
 			available = {
 				OR = {
+					original_tag = HUN
 					has_government = fascism
 					has_government = communism
 					has_war = yes
@@ -90,7 +91,7 @@ ideas = {
 						has_dlc = "Death or Dishonor"
 					}
 					NOT = {
-						has_idea = HUN_treaty_of_triannon
+						has_idea = HUN_treaty_of_triannon_aat_wuw
 					}
 				}
 			}
@@ -127,6 +128,7 @@ ideas = {
 		partial_economic_mobilisation = {
 			available = {
 				OR = {
+					original_tag = HUN
 					has_government = fascism
 					has_government = communism
 					has_war = yes
@@ -140,9 +142,9 @@ ideas = {
 						has_dlc = "Death or Dishonor"
 					}
 					OR = {
-						has_completed_focus = HUN_secret_rearmament
+						has_completed_focus = wuw_HUN_secret_rearmament
 						NOT = {
-							has_idea = HUN_treaty_of_triannon
+							has_idea = HUN_treaty_of_triannon_aat_wuw
 						}
 					}
 				}
@@ -183,6 +185,7 @@ ideas = {
 					has_completed_focus = GER_anschluss
 				}
 				OR = {
+					original_tag = HUN
 					has_government = fascism
 					has_government = communism
 					custom_trigger_tooltip = {

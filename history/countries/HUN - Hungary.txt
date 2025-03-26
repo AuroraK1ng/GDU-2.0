@@ -1,80 +1,331 @@
-﻿capital = 43
+﻿capital = 43 # Budapest (Northern Hungary)
+
+set_oob = "HUN_1936"
+
+### SETUP THE CORRECT POLITICAL PARTIES ###
+
+IF = {
+	limit = {
+		has_dlc = "Gotterdammerung"
+	}
+	set_party_name = {
+	    ideology = fascism
+	    long_name = HUN_national_socialist_party_long
+	    name = HUN_national_socialist_party
+	}
+}
+
+set_research_slots = 4
+army_experience = 10
+### SETUP STABILITY AND WAR SUPPORT ###
+IF = {
+	limit = {
+		NOT = {
+			has_dlc = "Gotterdammerung"
+		}
+	}
+	set_stability = 0.7
+	set_war_support = 0.6
+	ELSE = {
+		set_stability = 0.3
+		set_war_support = 0.4
+	}
+}
+
+
+set_technology = {
+	iw_small_airframe = 1
+	iw_medium_airframe = 1
+	iw_large_airframe = 1
+	early_bombs = 1
+	air_superiority = 1
+	interwar_antiair = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	motorised_infantry = 1
+	tech_recon = 1
+	tech_support = 1
+	armor_tech_1 = 1
+	engine_tech_1 = 1
+	gwtank_chassis = 1
+	basic_train = 1
+	tech_engineers = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	synth_oil_experiments = 1
+	armored_car1 = 1
+	airfield_construction = 1
+	fort_construction = 1
+	fuel_silos = 1
+	iw_small_airframe = 1
+	tech_logistics_company = 1
+	basic_small_airframe = 1
+}
+### SETUP NATIONAL SPIRITS NO WW ###
+add_timed_idea = {
+	idea = airandnavy_idea
+	days = 1320
+	}
+
+add_timed_idea = {
+	idea = 	GER_mefo_bills_non_germany
+	days = 1370
+	}
+	add_ideas = GDU_scuffed_acclim
+	add_ideas = general_staff
+IF = {
+	limit = {
+		AND = {
+			has_dlc = "Death or Dishonor"
+			NOT = {
+				has_dlc = "Gotterdammerung"
+			}
+		}
+	}
+	add_ideas = {
+		disarmed_nation
+	}
+	IF = {
+		limit = { has_dlc = "Arms Against Tyranny" }
+		add_ideas = { HUN_treaty_of_triannon_aat }
+	}
+	IF = {
+		limit = {
+			NOT = { has_dlc = "Arms Against Tyranny" }
+		}
+		add_ideas = { HUN_treaty_of_triannon }
+	}
+}
+
+### SETUP HUNGARO-GERMAN RELATIONS AND NATIONAL SPIRITS ###
+IF = {
+	limit = {
+		AND = {
+			has_dlc = "Death or Dishonor"
+			has_dlc = "Gotterdammerung"
+		}
+	}
+
+	add_ideas = {
+		disarmed_nation
+		HUN_gombos_trade_treaty
+		HUN_hungarian_national_defense_association
+		HUN_levente_associations
+	}
+
+	### OPINION MODIFIERS ###
+
+	IF = {
+		limit = { has_dlc = "Arms Against Tyranny" }
+		add_ideas = { HUN_treaty_of_triannon_aat_wuw }
+	}
+
+	IF = {
+		limit = {
+			NOT = { has_dlc = "Arms Against Tyranny" }
+		}
+		add_ideas = { HUN_treaty_of_triannon_wuw }
+	}
+
+}
+
+# The Academy of Sciences Modifier
+set_variable = { HUN_academy_of_sciences_research_speed_factor = 0.03 }
+
+### AH DYNAMIC MODIFIERS ###
+
+IF = {
+	limit = {
+		has_dlc = "Gotterdammerung"
+	}
+
+	# JOINT ECONOMY SPIRIT
+	set_variable = { global.HABSBURG_economy_stability_factor = 0.05 }
+	set_variable = { global.HABSBURG_economy_power_factor = 0.1 }	
+	set_variable = { global.HABSBURG_economy_consumer_goods_factor = 0.0 }	
+	set_variable = { global.HABSBURG_economy_research_sharing_per_country_bonus_factor = 0.0 }	
+	set_variable = { global.HABSBURG_economy_production_speed_industrial_complex_factor = 0.0 }	
+	set_variable = { global.HABSBURG_economy_trade_laws_cost_factor = 0.0 }	
+	set_variable = { global.HABSBURG_economy_economy_cost_factor = 0.0 }	
+	set_variable = { global.HABSBURG_economy_license_purchase_cost = 0.0 }	
+	set_variable = { global.HABSBURG_economy_license_production_speed = 0.0 }	
+	set_variable = { global.HABSBURG_economy_special_project_speed_factor = 0.0 }	
+
+	# JOINT INDUSTRY SPIRIT
+	set_variable = { global.HABSBURG_industry_production_speed_industrial_complex_factor = 0.1 }	
+	set_variable = { global.HABSBURG_industry_industrial_capacity_factory = 0.05 }	
+	set_variable = { global.HABSBURG_industry_local_resources_factor = 0.00 }	
+	set_variable = { global.HABSBURG_industry_production_speed_rail_way_factor = 0.00 }	
+	set_variable = { global.HABSBURG_industry_production_speed_supply_node_factor = 0.00 }	
+	set_variable = { global.HABSBURG_industry_global_building_slots_factor = 0.00 }	
+	set_variable = { global.HABSBURG_industry_production_speed_arms_factory_factor = 0.00 }	
+	set_variable = { global.HABSBURG_industry_line_change_production_efficiency_factor = 0.00 }	
+	set_variable = { global.HABSBURG_industry_industry_free_repair_factor = 0.00 }	
+	set_variable = { global.HABSBURG_industry_industry_air_damage_factor = 0.00 }	
+	set_variable = { global.HABSBURG_industry_production_lack_of_resource_penalty_factor = 0.00 }	
+	set_variable = { global.HABSBURG_industry_production_factory_max_efficiency_factor = 0.00 }	
+
+	# JOINT ARMY SPIRIT
+	set_variable = { global.HABSBURG_army_war_stability_factor = 0.1 }	
+	set_variable = { global.HABSBURG_army_land_doctrine_cost_factor = -0.1 }	
+	set_variable = { global.HABSBURG_army_conscription_factor = 0.0 }	
+	set_variable = { global.HABSBURG_army_experience_gain_army_factor = 0.0 }	
+	set_variable = { global.HABSBURG_army_max_command_power = 0.0 }	
+	set_variable = { global.HABSBURG_army_planning_speed = 0.0 }	
+	set_variable = { global.HABSBURG_army_army_speed_factor = 0.0 }	
+	set_variable = { global.HABSBURG_army_org_loss_when_moving = 0.0 }	
+	set_variable = { global.HABSBURG_army_supply_consumption_factor = 0.0 }	
+	set_variable = { global.HABSBURG_army_supply_node_range = 0.0 }	
+	set_variable = { global.HABSBURG_army_army_core_attack_factor = 0.0 }	
+	set_variable = { global.HABSBURG_army_army_core_defence_factor = 0.0 }	
+	set_variable = { global.HABSBURG_army_motorized_attack_factor = 0.0 }	
+	set_variable = { global.HABSBURG_army_army_armor_attack_factor = 0.0 }	
+	set_variable = { global.HABSBURG_army_fuel_gain_factor = 0.0 }	
+	set_variable = { global.HABSBURG_army_army_attack_factor = 0.0 }	
+
+	# JOINT HUSSAR SPIRIT
+	set_variable = { global.HABSBURG_cavalry_cavalry_attack_factor = 0.05 }	
+	set_variable = { global.HABSBURG_cavalry_cavalry_defence_factor = 0.1 }	
+	set_variable = { global.HABSBURG_army_conscription = 0.01 }	
+	set_variable = { global.HABSBURG_cavalry_breakthrough_factor = 0.00 }	
+
+}
+
+add_opinion_modifier = { 
+	target = CZE
+	modifier = BFTB_incongruous_neighbors
+}
+add_opinion_modifier = { 
+	target = ROM
+	modifier = BFTB_incongruous_neighbors
+}
+add_opinion_modifier = { 
+	target = YUG
+	modifier = BFTB_incongruous_neighbors
+}
+
+# SETUP HUNGARIAN POLITICS
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1935.3.31"
 	election_frequency = 48
 	elections_allowed = yes
 }
-
 set_popularities = {
 	democratic = 25
 	fascism = 31
 	neutrality = 44
 }
 
-oob = "HUN_1936"
+# RECRUITING HUNGARIAN CHARACTERS
+IF = {
+	limit = {
+		NOT = {
+			has_dlc = "Gotterdammerung"
+		}
+	}
+	recruit_character = HUN_miklos_horthy
+	recruit_character = HUN_matyas_rakosi
+	recruit_character = HUN_arpad_szakasits
+	recruit_character = HUN_geza_lakatos
+	recruit_character = HUN_ivan_hindy
+	recruit_character = HUN_karoly_beregfy
+	recruit_character = HUN_lajos_veress
+	recruit_character = HUN_ferenc_feketehalmyczeydner
+	recruit_character = HUN_istvan_szechenyi
+	recruit_character = HUN_francois_deak
+	recruit_character = HUN_gyorgy_jendrassik
+	recruit_character = HUN_jeno_ratz
+	recruit_character = HUN_henrik_werth
+	recruit_character = HUN_hugo_sonyi
+	recruit_character = HUN_ferenc_szombathelyi
+	recruit_character = HUN_gusztav_jany
+	recruit_character = HUN_dezso_laszlo
+	recruit_character = HUN_reszo_kastner
+	recruit_character = HUN_shvoy_kalman
+	recruit_character = HUN_sandor_magyarossy
+	recruit_character = HUN_bela_rakosi
+	recruit_character = HUN_kalman_kanya
+	recruit_character = HUN_jozsef_szell
+	recruit_character = HUN_vilmos_roder
+	recruit_character = HUN_zoltan_tildy
+	recruit_character = HUN_laszlo_rajk
+	recruit_character = HUN_kalman_daranyi
+	recruit_character = HUN_lajos_remenyi_schneller
+	recruit_character = HUN_gusztav_gratz
+	recruit_character = HUN_gyula_gombos_de_jakfa
+	recruit_character = HUN_otto_von_habsburg
+	recruit_character = HUN_franz_friedrich
+	recruit_character = HUN_franz_anton_bach
+}
+IF = {
+	limit = {
+		has_dlc = "Gotterdammerung"
+	}
+	recruit_character = HUN_miklos_horthy
+	recruit_character = HUN_matyas_rakosi
+	recruit_character = HUN_arpad_szakasits
+	recruit_character = HUN_geza_lakatos
+	recruit_character = HUN_ivan_hindy
+	recruit_character = HUN_karoly_beregfy
+	recruit_character = HUN_lajos_veress
+	recruit_character = HUN_ferenc_feketehalmyczeydner
+	recruit_character = HUN_gyorgy_jendrassik
+	recruit_character = HUN_jeno_ratz
+	recruit_character = HUN_henrik_werth
+	recruit_character = HUN_hugo_sonyi
+	recruit_character = HUN_ferenc_szombathelyi
+	recruit_character = HUN_gusztav_jany
+	recruit_character = HUN_dezso_laszlo
+	recruit_character = HUN_shvoy_kalman
 
 
-set_research_slots = 4
-set_stability = 0.7
-set_war_support = 0.6
-add_ideas = {
-	limited_conscription
-	HUN_treaty_of_triannon
-	GDU_scuffed_acclim
-	general_staff
+	recruit_character = HUN_jozsef_szell
+	recruit_character = HUN_vilmos_roder
+
+
+
+	recruit_character = HUN_lajos_remenyi_schneller
+	recruit_character = HUN_gyula_gombos_de_jakfa
+
+	recruit_character = HUN_franz_friedrich
+	recruit_character = HUN_bela_kun
+	recruit_character = HUN_istvan_horthy
+
+	recruit_character = HUN_mihaly_karolyi
+	recruit_character = HUN_janos_zichy
+	recruit_character = HUN_carl_wilhelm
+	recruit_character = HUN_vilmos_nagy
+	recruit_character = HUN_jozsef_bajnoczy
+	recruit_character = HUN_karoly_bartha
+	recruit_character = HUN_dome_sztojay
+	recruit_character = HUN_laszlo_hary
+	recruit_character = HUN_jeno_oszkar_ruszkay
+	recruit_character = HUN_janos_voros
+	recruit_character = HUN_lajos_csatay
+	recruit_character = HUN_sandor_gyorffy_bengyel
+	recruit_character = HUN_zoltan_decleva
+	recruit_character = HUN_elemer_gorondy_novak
+	recruit_character = HUN_bela_miklos
+	recruit_character = HUN_kocsard_janky
+	recruit_character = HUN_antal_freiherr
+	recruit_character = HUN_bela_imredy
+
+	recruit_character = HUN_istvan_friedrich
+	recruit_character = HUN_magdolna_purgly
+	recruit_character = HUN_pal_kiraly
+	
+	recruit_character = HUN_jusztinian_seredi
+	recruit_character = HUN_vasyl_vyshyvanyi
+	recruit_character = HUN_dezso_magos
+	recruit_character = HUN_kalman_hardy
+
+ # Helis only exist if you have the dlc
 }
 
-add_timed_idea = {
-	idea = 	GER_mefo_bills_non_germany
-	days = 1370
-}
-
-add_timed_idea = {
-	idea = airandnavy_idea
-	days = 1320
-}
-
-set_technology = {
-	iw_small_airframe = 1
-	basic_small_airframe = 1
-	early_bombs = 1
-	heavy_bombs = 1 #cas 1 guns
-	airfield_construction = 1
-	fort_construction = 1
-	infantry_weapons = 1
-	infantry_weapons1 = 1
-	tech_support = 1
-	tech_recon = 1
-	gw_artillery = 1
-	armor_tech_1 = 1
-	engine_tech_1 = 1
-	basic_heavy_tank_chassis = 1
-	improved_light_tank_chassis = 1
-	basic_light_tank_chassis = 1
-	motorised_infantry = 1
-	fuel_silos = 1
-	basic_train = 1
-	fuel_silos = 1
-	interwar_antiair = 1
-	##transport = 1
-	gwtank_chassis = 1
-}
-
-add_opinion_modifier = {
-	target = CZE
-	modifier = BFTB_incongruous_neighbors
-}
-
-add_opinion_modifier = {
-	target = ROM
-	modifier = BFTB_incongruous_neighbors
-}
-
-add_opinion_modifier = {
-	target = YUG
-	modifier = BFTB_incongruous_neighbors
-}
+#Scientists always recruited
 
 add_equipment_to_stockpile = {
 	type = artillery_equipment_1
@@ -100,176 +351,16 @@ add_equipment_to_stockpile = {
 	producer = HUN
 }
 
-#afrıca leaders
-recruit_character = HUN_gusztav_denk_AFRICA
-#
-recruit_character = HUN_miklos_horthy
-recruit_character = HUN_albert_speer
-recruit_character = HUN_shvoy_kalman_highcommand
-recruit_character = HUN_francois_deak
-recruit_character = HUN_gyorgy_jendrassik
-recruit_character = HUN_jeno_ratz
-recruit_character = HUN_henrik_werth
-recruit_character = HUN_hugo_sonyi
-recruit_character = HUN_ferenc_szombathelyi
-recruit_character = HUN_gusztav_jany
-recruit_character = HUN_dezso_laszlo
-recruit_character = HUN_reszo_kastner
-recruit_character = HUN_geza_lakatos
-recruit_character = HUN_ivan_hindy
-recruit_character = HUN_shvoy_kalman
-recruit_character = HUN_sandor_magyarossy
-recruit_character = HUN_bela_rakosi
-recruit_character = HUN_kalman_kanya
-recruit_character = HUN_karoly_beregfy
-recruit_character = HUN_lajos_veress
-recruit_character = HUN_ferenc_feketehalmyczeydner
-recruit_character = HUN_vilmos_roder
-recruit_character = HUN_zoltan_tildy
-recruit_character = HUN_kalman_daranyi
-recruit_character = HUN_lajos_remenyi_schneller
-recruit_character = HUN_gyula_gombos_de_jakfa
-recruit_character = HUN_franz_friedrich
-add_intel = {
-	target = USA
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
+# HIRES THE STARTING PM
+IF = {
+	limit = {
+		has_dlc = "Gotterdammerung"
+	}
 }
 
-add_intel = {
-	target = SPR
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
 
-add_intel = {
-	target = BUl
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
 
-add_intel = {
-	target = ENG
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
 
-add_intel = {
-	target = SOV
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
 
-add_intel = {
-	target = RAJ
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
 
-add_intel = {
-	target = ITA
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
 
-add_intel = {
-	target = GER
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = ROM
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = HUN
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = JAP
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = CAN
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = FRA
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = SAF
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = AST
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = NZL
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = NOR
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}
-
-add_intel = {
-	target = FIN
-	civilian_intel = 200
-	army_intel = 200
-	navy_intel = 200
-	airforce_intel = 200
-}

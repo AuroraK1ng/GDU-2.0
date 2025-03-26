@@ -7,8 +7,31 @@
  #  #  # #  # # # ## 
 
  #################### 
-
-
+HUN_mavag_assault_guns_organization = {
+ 	include = generic_assault_guns_organization
+ 	icon = GFX_idea_HUN_mavag_assault_gun
+ 	
+ 	allowed = {	
+ 		original_tag = HUN
+ 		has_dlc = "Arms Against Tyranny"
+ 	}
+ 	
+ 	available = {
+ 		IF = {
+ 			limit = {
+ 				has_dlc = "Gotterdammerung"
+ 			}
+ 			FROM = {
+ 				has_completed_focus = wuw_HUN_establish_the_mavag_army_division
+ 			}
+ 		}
+ 		ELSE = {
+ 			FROM = {
+ 				has_completed_focus = wuw_HUN_assault_gun_focus
+ 			}
+ 		}
+ 	}
+ }
 
 #####################
 

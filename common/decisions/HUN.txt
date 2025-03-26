@@ -1,0 +1,516 @@
+# The National Academy of Sciences
+
+# Greater Hungarian Territorial Revision
+HUN_territorial_revision_category = {
+	
+	# Reintegrate Southern Slovakia
+	HUN_reintigrate_southern_slovakia  = {
+
+		priority = 40
+
+		icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 100
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 664
+			}
+		}
+
+		allowed = {  
+			original_tag = HUN
+		}
+
+		visible = { 
+			original_tag = HUN
+			OR = {
+				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
+			}
+			NOT = { has_country_flag = HUN_reintigrated_south_slovakia_flag }
+			664 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		} 
+
+		available = {
+			OR = {
+				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
+			}
+			controls_state = 664
+		}
+
+		days_remove = 35 
+
+		cost = 25
+
+		complete_effect = {
+		}
+
+		modifier = {
+			political_power_factor = -0.1
+		}
+
+		remove_effect = {
+			
+			IF = {
+				limit = {
+					664 = {
+						is_claimed_by = ROOT
+					}
+				}
+				664 = {
+					remove_claim_by = ROOT
+				}
+			}
+
+			IF = {
+				limit = {
+					664 = {
+						NOT = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				664 = {
+					add_core_of = ROOT
+				}
+			}
+
+			hidden_effect = {
+				set_country_flag = HUN_reintigrated_south_slovakia_flag 
+			}
+		}
+
+	}
+
+	# Reintegrate Western Slovakia
+	HUN_reintigrate_western_slovakia  = {
+
+		priority = 39
+
+		icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 80
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 70
+			}
+		}
+
+		allowed = {  
+			original_tag = HUN
+		}
+
+		visible = { 
+			original_tag = HUN
+			OR = {
+				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
+			}
+			NOT = { has_country_flag = HUN_reintigrated_west_slovakia_flag }
+			70 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		} 
+
+		available = {
+			OR = {
+				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
+			}
+			controls_state = 70
+		}
+
+		days_remove = 35 
+
+		cost = 25
+
+		complete_effect = {
+		}
+
+		modifier = {
+			political_power_factor = -0.1
+		}
+
+		remove_effect = {
+			
+			IF = {
+				limit = {
+					70 = {
+						is_claimed_by = ROOT
+					}
+				}
+				70 = {
+					remove_claim_by = ROOT
+				}
+			}
+
+			IF = {
+				limit = {
+					70 = {
+						NOT = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				70 = {
+					add_core_of = ROOT
+				}
+			}
+
+			hidden_effect = {
+				set_country_flag = HUN_reintigrated_west_slovakia_flag 
+			}
+		}
+
+	}
+
+	# Reintegrate Eastern Slovakia
+	HUN_reintigrate_eastern_slovakia  = {
+
+		priority = 38
+
+		icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 80
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 71
+			}
+		}
+
+		allowed = {  
+			original_tag = HUN
+		}
+
+		visible = { 
+			original_tag = HUN
+			OR = {
+				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
+			}
+			NOT = { has_country_flag = HUN_reintigrated_east_slovakia_flag }
+			71 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		} 
+
+		available = {
+			OR = {
+				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
+			}
+			controls_state = 71
+		}
+
+		days_remove = 35 
+
+		cost = 25
+
+		complete_effect = {
+		}
+
+		modifier = {
+			political_power_factor = -0.1
+		}
+
+		remove_effect = {
+			
+			IF = {
+				limit = {
+					71 = {
+						is_claimed_by = ROOT
+					}
+				}
+				71 = {
+					remove_claim_by = ROOT
+				}
+			}
+
+			IF = {
+				limit = {
+					71 = {
+						NOT = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				71 = {
+					add_core_of = ROOT
+				}
+			}
+
+			hidden_effect = {
+				set_country_flag = HUN_reintigrated_east_slovakia_flag 
+			}
+		}
+
+	}
+
+	# Reintegrate Carpathian Ruthenia
+	HUN_reintigrate_carpathian_ruthenia  = {
+
+		priority = 37
+
+		icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 100
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 73
+			}
+		}
+
+		allowed = {  
+			original_tag = HUN
+		}
+
+		visible = { 
+			original_tag = HUN
+			OR = {
+				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
+			}
+			NOT = { has_country_flag = HUN_reintigrated_carpathia_flag }
+			73 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		} 
+
+		available = {
+			OR = {
+				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
+			}
+			controls_state = 73
+		}
+
+		days_remove = 35 
+
+		cost = 25
+
+		complete_effect = {
+		}
+
+		modifier = {
+			political_power_factor = -0.1
+		}
+
+		remove_effect = {
+			
+			IF = {
+				limit = {
+					73 = {
+						is_claimed_by = ROOT
+					}
+				}
+				73 = {
+					remove_claim_by = ROOT
+				}
+			}
+
+			IF = {
+				limit = {
+					73 = {
+						NOT = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				73 = {
+					add_core_of = ROOT
+				}
+			}
+
+			hidden_effect = {
+				set_country_flag = HUN_reintigrated_carpathia_flag 
+			}
+		}
+
+	}
+
+	# Reintegrate North Transylvania
+	HUN_reintigrate_transylvania  = {
+
+		priority = 36
+
+		icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 100
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 76
+			}
+		}
+
+		allowed = {  
+			original_tag = HUN
+		}
+
+		visible = { 
+			original_tag = HUN
+			OR = {
+				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
+			}
+			NOT = { has_country_flag = HUN_reintigrated_north_transylvania_flag }
+			76 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		} 
+
+		available = {
+			OR = {
+				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
+			}
+			controls_state = 76
+		}
+
+		days_remove = 35 
+
+		cost = 25
+
+		complete_effect = {
+		}
+
+		modifier = {
+			political_power_factor = -0.1
+		}
+
+		remove_effect = {
+			
+			IF = {
+				limit = {
+					76 = {
+						is_claimed_by = ROOT
+					}
+				}
+				76 = {
+					remove_claim_by = ROOT
+				}
+			}
+
+			IF = {
+				limit = {
+					76 = {
+						NOT = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				76 = {
+					add_core_of = ROOT
+				}
+			}
+
+			hidden_effect = {
+				set_country_flag = HUN_reintigrated_north_transylvania_flag 
+			}
+		}
+
+	}
+
+	# Reintegrate Vojvodina
+	HUN_reintigrate_vojvodina = {
+
+		priority = 31
+
+		icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 100
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 45
+			}
+		}
+
+		allowed = {  
+			original_tag = HUN
+		}
+
+		visible = { 
+			original_tag = HUN
+			OR = {
+				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
+			}
+			NOT = { has_country_flag = HUN_reintigrated_vojvodina_flag }
+			45 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		} 
+
+		available = {
+			OR = {
+				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
+			}
+			controls_state = 45
+		}
+
+		days_remove = 35 
+
+		cost = 25
+
+		complete_effect = {
+		}
+
+		modifier = {
+			political_power_factor = -0.1
+		}
+
+		remove_effect = {
+			
+			IF = {
+				limit = {
+					45 = {
+						is_claimed_by = ROOT
+					}
+				}
+				45 = {
+					remove_claim_by = ROOT
+				}
+			}
+
+			IF = {
+				limit = {
+					45 = {
+						NOT = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				45 = {
+					add_core_of = ROOT
+				}
+			}
+
+			hidden_effect = {
+				set_country_flag = HUN_reintigrated_vojvodina_flag 
+			}
+		}
+
+	}
+
+}
