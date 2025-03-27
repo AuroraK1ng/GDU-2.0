@@ -1409,26 +1409,9 @@ focus_tree = {
 		completion_reward = {
 
 			hidden_effect = {
-				remove_trait = {
-				    character = HUN_fidel_palffy
-				    slot = political_advisor
-				    trait = nazi_sympathizer
-				}
-			}
-
-			add_trait = {
-			    character = HUN_fidel_palffy
-			    slot = political_advisor
-			    trait = HUN_the_national_socialist_count
-			}
-
-			hidden_effect = {
 
 				IF = {
 					limit = {
-						NOT = {
-							has_idea = HUN_fidel_palffy
-						}
 
 						amount_taken_ideas = {
 						    amount < 3
@@ -1437,7 +1420,6 @@ focus_tree = {
 						    }
 						}
 					}
-					add_ideas = HUN_fidel_palffy
 				}
 			}
 
@@ -1445,9 +1427,6 @@ focus_tree = {
 
 			IF = {
 				limit = {
-					NOT = {
-						has_idea = HUN_fidel_palffy
-					}
 
 					amount_taken_ideas = {
 					    amount < 3
