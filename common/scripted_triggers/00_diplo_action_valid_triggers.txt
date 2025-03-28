@@ -24,9 +24,6 @@ is_diplomatic_action_valid_transfert_spymaster = { always = no }
 #is_diplomatic_action_valid_revoke_embargo = { always = no } #doesnt work
 #is_diplomatic_action_valid_embargo = { always = no } #wroks
 
-is_diplomatic_action_valid_REQUEST_INTERNATIONAL_MARKET_ACCESS = { always = no } 
-is_diplomatic_action_valid_REQUEST_INTERNATIONAL_MARKET_ACCESS_RIGHTS = { always = no } 
-
 
 is_diplomatic_action_valid_REQUEST_ACCESS_TO_LICENCE_PRODUCTION = { OR = { AND = { holnor = yes FROM = { normally_played_allies = yes }} AND = { normally_played_allies = yes FROM = { holnor = yes }}   AND = { finefr = yes FROM = { the_axis_no_finefr = yes }}  AND = { the_axis_no_finefr = yes FROM = { finefr = yes }} AND = { normally_played_allies = yes FROM = { tag = SOV }}} }
 
@@ -44,7 +41,6 @@ is_diplomatic_action_valid_REQUEST_ACCESS_TO_LICENCE_PRODUCTION = { OR = { AND =
 #is_diplomatic_action_valid_join_ally_war = { always = no } #Nope
 #is_diplomatic_action_valid_join_ally = { always = no } #Nope
 
-is_diplomatic_action_valid_send_exp_force = { always = yes } #should be correct as send_exp_force can be used in diplomacy_scripted_triggers, but this does not work for diplo_action_valid_triggers
 #is_diplomatic_action_valid_RETURN_EXP_FORCE = { is_in_faction_with = yes     } #should be correct as RETURN_EXP_FORCE can be used in diplomacy_scripted_triggers, but this does not work for diplo_action_valid_triggers
 #is_diplomatic_action_valid_declare_war = { always = no } #will completely disable declare war and hide the button, not very useful
 #is_diplomatic_action_valid_send_volunteers = { always = no }  #should be correct as send_volunteers can be used in diplomacy_scripted_triggers, but this does not work for diplo_action_valid_triggers

@@ -1409,26 +1409,9 @@ focus_tree = {
 		completion_reward = {
 
 			hidden_effect = {
-				remove_trait = {
-				    character = HUN_fidel_palffy
-				    slot = political_advisor
-				    trait = nazi_sympathizer
-				}
-			}
-
-			add_trait = {
-			    character = HUN_fidel_palffy
-			    slot = political_advisor
-			    trait = HUN_the_national_socialist_count
-			}
-
-			hidden_effect = {
 
 				IF = {
 					limit = {
-						NOT = {
-							has_idea = HUN_fidel_palffy
-						}
 
 						amount_taken_ideas = {
 						    amount < 3
@@ -1437,7 +1420,6 @@ focus_tree = {
 						    }
 						}
 					}
-					add_ideas = HUN_fidel_palffy
 				}
 			}
 
@@ -1445,9 +1427,6 @@ focus_tree = {
 
 			IF = {
 				limit = {
-					NOT = {
-						has_idea = HUN_fidel_palffy
-					}
 
 					amount_taken_ideas = {
 					    amount < 3
@@ -1576,48 +1555,6 @@ focus_tree = {
 				ideology = fascism
 				popularity = 0.15
 			}
-
-			custom_effect_tooltip = POR_the_communist_threat_tt
-			every_country = {
-				limit = {
-					has_government = communism
-					NOT = { is_in_faction_with = ROOT }
-					OR = {
-						is_major = yes
-						is_neighbor_of = ROOT
-					}
-				}
-			}
-
-			hidden_effect = {
-				every_country = {
-					limit = {
-						has_government = communism
-						NOT = {
-							OR = {
-								is_in_faction_with = ROOT
-								is_subject_of = ROOT
-							}
-						}
-						OR = {
-							is_major = yes
-							is_neighbor_of = ROOT
-						}
-					}
-					ROOT = {
-						add_ai_strategy = {
-							type = declare_war
-							id = PREV
-							value = 100
-						}
-						create_wargoal = {
-							type = topple_government
-							target = PREV
-						}
-					}
-				}
-			}
-
 		}
 	}
 
@@ -3270,12 +3207,6 @@ focus_tree = {
 			add_research_slot = 1
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-
-			unlock_decision_tooltip = {
-				decision = HUN_establish_new_academy_of_sciences_branches_program_decision
-				show_effect_tooltip = no # default is no
-				show_modifiers = no # default is no
-			}
 
 		}
 	}
