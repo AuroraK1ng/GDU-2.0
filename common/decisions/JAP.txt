@@ -1,4 +1,16 @@
 JAP_interservice_rivalry = {
+
+	JAP_cooldown_time = {
+		icon = generic_political_discourse
+		allowed = { original_tag = JAP }	
+		visible = {	has_active_mission = JAP_cooldown_time	}	
+		available = {	NOT = { country_exists = JAP }	}
+		days_mission_timeout = 175
+		activation = {	has_country_flag = JAP_war_conferences_cd	} 
+		fire_only_once = no
+		is_good = yes		
+	}
+
 	JAP_steel_for_guns = {
 
 		icon = generic_tank
@@ -60,6 +72,10 @@ JAP_interservice_rivalry = {
 					level = 2
 					instant_build = yes
 				}
+			}
+			add_timed_idea = {
+				idea = JAP_balance_of_power
+				days = 180
 			}
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
 			JAP_interservice_rivalry_towards_army = yes
@@ -128,6 +144,11 @@ JAP_interservice_rivalry = {
 					instant_build = yes
 				}
 			}
+			add_timed_idea = {
+				idea = JAP_balance_of_power
+				days = 180
+			}
+			
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
 			JAP_interservice_rivalry_towards_navy = yes
 			set_country_flag = JAP_steel_for_ships
@@ -165,6 +186,10 @@ JAP_interservice_rivalry = {
 			add_ideas = JAP_prioritize_army_aircraft_construction
 			JAP_interservice_rivalry_towards_army = yes
 			set_country_flag = JAP_prioritize_army_aircraft_construction
+			add_timed_idea = {
+				idea = JAP_balance_of_power
+				days = 180
+			}
 		}
 	}
 	JAP_prioritize_naval_aircraft_construction = {
@@ -199,6 +224,10 @@ JAP_interservice_rivalry = {
 			add_ideas = JAP_prioritize_naval_aircraft_construction
 			JAP_interservice_rivalry_towards_navy = yes
 			set_country_flag = JAP_prioritize_naval_aircraft_construction
+			add_timed_idea = {
+				idea = JAP_balance_of_power
+				days = 180
+			}
 		}
 	}
 	JAP_everybody_serves = {
@@ -235,6 +264,10 @@ JAP_interservice_rivalry = {
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
 			JAP_interservice_rivalry_towards_army = yes
 			set_country_flag = JAP_everybody_serves
+			add_timed_idea = {
+				idea = JAP_balance_of_power
+				days = 180
+			}
 		}
 	}
 	JAP_draft_exemptions = {
@@ -272,6 +305,10 @@ JAP_interservice_rivalry = {
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
 			JAP_interservice_rivalry_towards_navy = yes
 			set_country_flag = JAP_draft_exemptions
+			add_timed_idea = {
+				idea = JAP_balance_of_power
+				days = 180
+			}
 		}
 	}
 	JAP_raiding_regiments = {
@@ -309,6 +346,10 @@ JAP_interservice_rivalry = {
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
 			set_country_flag = JAP_raiding_regiments
 			JAP_interservice_rivalry_towards_army = yes
+			add_timed_idea = {
+				idea = JAP_balance_of_power
+				days = 180
+			}
 		}
 	}
 	JAP_special_air_landing_force = {
@@ -346,6 +387,10 @@ JAP_interservice_rivalry = {
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
 			set_country_flag = JAP_special_air_landing_force
 			JAP_interservice_rivalry_towards_navy = yes
+			add_timed_idea = {
+				idea = JAP_balance_of_power
+				days = 180
+			}
 		}
 	}
 	JAP_favor_army = {
@@ -409,6 +454,10 @@ JAP_interservice_rivalry = {
 		complete_effect = {
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
 			JAP_interservice_rivalry_towards_army = yes
+			add_timed_idea = {
+				idea = JAP_balance_of_power
+				days = 180
+			}
 		}
 	}
 	JAP_favor_navy = {
@@ -472,6 +521,10 @@ JAP_interservice_rivalry = {
 		complete_effect = {
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
 			JAP_interservice_rivalry_towards_navy = yes
+			add_timed_idea = {
+				idea = JAP_balance_of_power
+				days = 180
+			}
 		}
 	}
 }
