@@ -2251,6 +2251,14 @@ foreign_politics = {
 					logistics_skill = 10
 				}
 			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = PER
+					}
+					remove_core_of = PER
+				}
+			}
 		}
 
 	}

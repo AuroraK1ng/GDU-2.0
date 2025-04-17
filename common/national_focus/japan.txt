@@ -264,6 +264,15 @@ focus_tree = {
 		air_experience = 1000
 		navy_experience = 1000
 
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = CHI
+				}
+				remove_core_of = CHI
+			}
+		}
+
 
 
 
@@ -2081,10 +2090,15 @@ focus_tree = {
 				target = SIA
 				transfer_troops = no
 			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = SIA
+					}
+					remove_core_of = SIA
+				}
+			}
 		}
-
-
-
 	}
 
 	focus = {
