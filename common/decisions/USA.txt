@@ -23,6 +23,7 @@ USA_foreign_politics = {
 
 		visible = {
 			has_war_with = JAP
+			has_completed_focus = USA_war_plan_orange
 		}
 
 		complete_effect = {
@@ -46,7 +47,6 @@ USA_foreign_politics = {
 			647 = { CONTROLLER = { is_in_faction_with_allies = yes } }
 			646 = { CONTROLLER = { is_in_faction_with_allies = yes } }
 			648 = { CONTROLLER = { is_in_faction_with_allies = yes } }
-			has_global_flag = Start_The_Island_Hoping_Campaign
 
 		}
 
@@ -58,6 +58,7 @@ USA_foreign_politics = {
 
 		visible = {
 			has_war_with = JAP
+			has_global_flag = Start_The_Island_Hoping_Campaign
 		}
 
 		complete_effect = {
@@ -84,7 +85,6 @@ USA_foreign_politics = {
 			645	= { CONTROLLER = { is_in_faction_with_allies = yes } }
 			526 = { CONTROLLER = { is_in_faction_with_allies = yes } }
 			327	= { CONTROLLER = { is_in_faction_with_allies = yes } }
-			has_global_flag = Continue_The_Island_Hoping_Campaign
 		}
 
 		cost = 0
@@ -95,6 +95,7 @@ USA_foreign_politics = {
 
 		visible = {
 			has_war_with = JAP
+			has_global_flag = Continue_The_Island_Hoping_Campaign
 		}
 
 		complete_effect = {
@@ -103,6 +104,179 @@ USA_foreign_politics = {
 			JAP = {
 			remove_ideas = JAP_militarism_2
 			add_ideas = JAP_militarism_3
+			}
+		}
+	}
+	USA_retake_hawaii = {
+		icon = GFX_decision_usa_congress
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			629	= { is_controlled_by = JAP }
+		}
+
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+
+		visible = {
+			has_war_with = JAP
+			629	= {
+				is_controlled_by = JAP
+			}
+			has_global_flag = JAP_hawaii_fortificated
+			has_completed_focus = USA_war_plan_orange
+		}
+		days_remove = 15
+
+		remove_effect = {
+			629 = {
+				remove_dynamic_modifier = {modifier = JAP_big_fortifications}
+			}
+		}
+	}
+	USA_retake_our_islands = {
+		icon = GFX_decision_usa_congress
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			631	= { is_controlled_by = JAP }
+			630	= { is_controlled_by = JAP }
+			727	= { is_controlled_by = JAP }
+			632	= { is_controlled_by = JAP }
+			NOT = {
+				629 = {is_controlled_by = JAP}
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+
+		visible = {
+			has_war_with = JAP
+			has_global_flag = JAP_american_islands_fortificated
+			has_completed_focus = USA_war_plan_orange
+		}
+		days_remove = 20
+
+		remove_effect = {
+			631 = {
+				remove_dynamic_modifier = {modifier = JAP_medium_fortifications}
+			}
+			custom_effect_tooltip = GDU_spacer
+			630 = {
+				remove_dynamic_modifier = {modifier = JAP_medium_fortifications}
+			}
+			custom_effect_tooltip = GDU_spacer
+			727 = {
+				remove_dynamic_modifier = {modifier = JAP_medium_fortifications}
+			}
+			custom_effect_tooltip = GDU_spacer
+			632 = {
+				remove_dynamic_modifier = {modifier = JAP_medium_fortifications}
+			}
+		}
+	}
+	USA_saipan_guam_marcus_islands_invasion = {
+		icon = GFX_decision_usa_congress
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			648	= { is_controlled_by = JAP }
+			646	= { is_controlled_by = JAP }
+			638	= { is_controlled_by = JAP }
+			NOT = {
+				631 = {
+					is_controlled_by = JAP
+				}
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+
+		visible = {
+			has_war_with = JAP
+			has_global_flag = JAP_saipan_guam_marcus_fortificated
+			has_completed_focus = USA_war_plan_orange
+		}
+		days_remove = 20
+
+		remove_effect = {
+			648 = {
+				remove_dynamic_modifier = {modifier = JAP_medium_fortifications}
+			}
+			custom_effect_tooltip = GDU_spacer
+			646 = {
+				remove_dynamic_modifier = {modifier = JAP_medium_fortifications}
+			}
+			custom_effect_tooltip = GDU_spacer
+			638 = {
+				remove_dynamic_modifier = {modifier = JAP_medium_fortifications}
+			}
+		}
+	}
+	USA_prepare_for_operation_downfall = {
+		icon = GFX_decision_usa_congress
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			645	= { is_controlled_by = JAP }
+			526	= { is_controlled_by = JAP }
+			524	= { is_controlled_by = JAP }
+			NOT = {
+				646 = {
+					is_controlled_by = JAP
+				}
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+
+		visible = {
+			has_war_with = JAP
+			has_global_flag = JAP_home_islands_fortificated
+		}
+		days_remove = 20
+
+		remove_effect = {
+			645 = {
+				remove_dynamic_modifier = {modifier = JAP_big_fortifications}
+				add_dynamic_modifier = {modifier = JAP_medium_fortifications}
+			}
+			custom_effect_tooltip = GDU_spacer
+			526 = {
+				remove_dynamic_modifier = {modifier = JAP_big_fortifications}
+				add_dynamic_modifier = {modifier = JAP_medium_fortifications}
+			}
+			custom_effect_tooltip = GDU_spacer
+			524 = {
+				remove_dynamic_modifier = {modifier = JAP_big_fortifications}
+				add_dynamic_modifier = {modifier = JAP_small_fortifications}
 			}
 		}
 	}

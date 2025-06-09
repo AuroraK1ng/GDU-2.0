@@ -701,7 +701,7 @@ focus_tree = {
 	focus = {
 		id = JAP_The_Greater_East_Asia_Co-Prosperity_Sphere
 		icon = GFX_focus_usa_focus_on_asia1
-		x = 10
+		x = 8
 		y = 5
 		prerequisite = { focus = JAP_Begin_Exploitation_of_South_East_Asia }
 
@@ -770,6 +770,41 @@ focus_tree = {
 
 		}
 
+	}
+	focus = {
+		id = JAP_fortify_the_asia
+		icon = GFX_goal_generic_construct_military
+		prerequisite = {
+			focus = JAP_The_Greater_East_Asia_Co-Prosperity_Sphere
+		}
+		x = 0
+		y = 1
+		relative_position_id = JAP_The_Greater_East_Asia_Co-Prosperity_Sphere
+
+		cost = 8
+
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			custom_effect_tooltip = JAP_protect_geacps_tooltip
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = JAP_protect_geacps_tooltip
+			hidden_effect = {
+				set_country_flag = JAP_fta_completed
+			}
+		}
 	}
 
 	focus = {
@@ -1410,19 +1445,21 @@ focus_tree = {
 		icon = GFX_JAP_tsunami2
 		prerequisite = { focus = JAP_Begin_Exploitation_of_South_East_Asia }
 		prerequisite = { focus = JAP_strike_on_the_southern_resource_area }
-		x = -3
+		x = -2
 		y = 3
 		relative_position_id = JAP_strike_south_doctrine
-
-		mutually_exclusive = { focus = JAP_attack_SOV_1of3 }
-		mutually_exclusive = { focus = JAP_attack_SOV_2of3 }
-		mutually_exclusive = { focus = JAP_attack_SOV_3of3 }
-		mutually_exclusive = { focus = JAP_attack_SOV_USA }
 
 		cost = 10
 
 		available = {
 			USA = { surrender_progress > 0.99 }
+			NOT = {
+				OR = {
+					has_completed_focus = JAP_attack_SOV_3of3
+					has_completed_focus = JAP_attack_SOV_1of3
+					has_completed_focus = JAP_attack_SOV_2of3
+				}	
+			}
 		}
 
 		will_lead_to_war_with = SOV
@@ -1448,14 +1485,10 @@ focus_tree = {
 		icon = GFX_JAP_tsunami2
 		prerequisite = { focus = JAP_Begin_Exploitation_of_South_East_Asia }
 		prerequisite = { focus = JAP_strike_on_the_southern_resource_area }
-		x = -1
-		y = 3
-		relative_position_id = JAP_strike_south_doctrine
+		x = 0
+		y = 1
+		relative_position_id = JAP_attack_SOV_USA
 
-		mutually_exclusive = { focus = JAP_attack_SOV_1of3 }
-		mutually_exclusive = { focus = JAP_attack_SOV_2of3 }
-		mutually_exclusive = { focus = JAP_attack_SOV_3of3 }
-		mutually_exclusive = { focus = JAP_attack_SOV_USA }
 
 		cost = 10
 
@@ -1588,6 +1621,13 @@ focus_tree = {
 					}
 				}
 			}
+			NOT = {
+				OR = {
+					has_completed_focus = JAP_attack_SOV_USA
+					has_completed_focus = JAP_attack_SOV_3of3
+					has_completed_focus = JAP_attack_SOV_2of3
+				}
+			}
 		}
 
 		will_lead_to_war_with = SOV
@@ -1613,14 +1653,10 @@ focus_tree = {
 		icon = GFX_JAP_tsunami2
 		prerequisite = { focus = JAP_Begin_Exploitation_of_South_East_Asia }
 		prerequisite = { focus = JAP_strike_on_the_southern_resource_area }
-		x = 1
-		y = 3
-		relative_position_id = JAP_strike_south_doctrine
+		x = 0
+		y = 2
+		relative_position_id = JAP_attack_SOV_USA
 
-		mutually_exclusive = { focus = JAP_attack_SOV_1of3 }
-		mutually_exclusive = { focus = JAP_attack_SOV_2of3 }
-		mutually_exclusive = { focus = JAP_attack_SOV_3of3 }
-		mutually_exclusive = { focus = JAP_attack_SOV_USA }
 
 		cost = 10
 
@@ -1871,6 +1907,14 @@ focus_tree = {
 					}
 				}
 			}
+			NOT = {
+				OR = {
+					has_completed_focus = JAP_attack_SOV_USA
+					has_completed_focus = JAP_attack_SOV_1of3
+					has_completed_focus = JAP_attack_SOV_3of3
+				}
+				
+			}
 		}
 
 		will_lead_to_war_with = SOV
@@ -1897,14 +1941,9 @@ focus_tree = {
 		icon = GFX_JAP_tsunami2
 		prerequisite = { focus = JAP_Begin_Exploitation_of_South_East_Asia }
 		prerequisite = { focus = JAP_strike_on_the_southern_resource_area }
-		x = 3
+		x = 0
 		y = 3
-		relative_position_id = JAP_strike_south_doctrine
-
-		mutually_exclusive = { focus = JAP_attack_SOV_1of3 }
-		mutually_exclusive = { focus = JAP_attack_SOV_2of3 }
-		mutually_exclusive = { focus = JAP_attack_SOV_3of3 }
-		mutually_exclusive = { focus = JAP_attack_SOV_USA }
+		relative_position_id = JAP_attack_SOV_USA
 
 		cost = 10
 
@@ -2030,6 +2069,14 @@ focus_tree = {
 						}
 					}
 				}
+			}
+			NOT = {
+				OR = {
+					has_completed_focus = JAP_attack_SOV_USA
+					has_completed_focus = JAP_attack_SOV_1of3
+					has_completed_focus = JAP_attack_SOV_2of3
+				}
+				
 			}
 		}
 
@@ -4010,8 +4057,8 @@ focus_tree = {
 	focus = {
 		id = JAP_nonavyallies
 		icon = GFX_goal_generic_occupy_start_war
-		x = 5
-		y = 7
+		x = 0
+		y = 8
 
 		cost = 0.1
 
@@ -4096,8 +4143,8 @@ focus_tree = {
 	focus = {
 		id = JAP_join_axis
 		icon = GFX_goal_anschluss
-		x = 4
-		y = 3
+		x = 0
+		y = 1
 		prerequisite = { focus = JAP_Begin_Exploitation_of_South_East_Asia }
 		prerequisite = { focus = JAP_strike_on_the_southern_resource_area }
 		relative_position_id = JAP_strike_on_the_southern_resource_area

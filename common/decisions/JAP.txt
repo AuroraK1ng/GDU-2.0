@@ -776,3 +776,376 @@ prospect_for_resources = {
 	}
 
 }
+
+JAP_protect_geacps = {
+	JAP_fortify_marshall_yap_gilber_nauru_islands = {
+		icon = generic_construction
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 633 
+				state = 725 
+				state = 639 
+				state = 797 
+			}
+		}
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_full_control_of_state = 633
+			has_full_control_of_state = 725
+			has_full_control_of_state = 639
+			has_full_control_of_state = 797
+			num_of_civilian_factories_available_for_projects > 5
+		}
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 30
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		remove_effect = {
+			633 = { add_dynamic_modifier = { modifier = JAP_small_fortifications } }
+			custom_effect_tooltip = GDU_spacer
+			725 = { add_dynamic_modifier = { modifier = JAP_small_fortifications } }
+			custom_effect_tooltip = GDU_spacer
+			639 = { add_dynamic_modifier = { modifier = JAP_small_fortifications } }
+			custom_effect_tooltip = GDU_spacer
+			797 = { add_dynamic_modifier = { modifier = JAP_small_fortifications } }
+		}	
+	}
+	JAP_fortify_saipan_guam = {
+		icon = generic_construction
+		
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 646 
+				state = 638
+				state = 648
+			}
+		}
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_full_control_of_state = 646
+			has_full_control_of_state = 638
+			has_full_control_of_state = 648
+			num_of_civilian_factories_available_for_projects > 10
+		}
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 30
+		days_remove = 35
+
+		modifier = {
+			civilian_factory_use = 10
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		remove_effect = {
+			646 = { add_dynamic_modifier = { modifier = JAP_medium_fortifications } }
+			custom_effect_tooltip = GDU_spacer
+			638 = { add_dynamic_modifier = { modifier = JAP_medium_fortifications } }
+			custom_effect_tooltip = GDU_spacer
+			639 = { add_dynamic_modifier = { modifier = JAP_medium_fortifications } }
+			hidden_effect = {
+				set_global_flag =  JAP_saipan_guam_marcus_fortificated
+			}
+		}	
+	}
+	JAP_fortify_american_islands = {
+		icon = generic_construction
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 631 
+				state = 630
+				state = 727
+				state = 632
+			}
+		}
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_full_control_of_state = 631
+			has_full_control_of_state = 630
+			has_full_control_of_state = 727
+			has_full_control_of_state = 632
+			num_of_civilian_factories_available_for_projects > 10
+		}
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 30
+		days_remove = 35
+
+		modifier = {
+			civilian_factory_use = 10
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		remove_effect = {
+			631 = { add_dynamic_modifier = { modifier = JAP_medium_fortifications } }
+			custom_effect_tooltip = GDU_spacer
+			630 = { add_dynamic_modifier = { modifier = JAP_medium_fortifications } }
+			custom_effect_tooltip = GDU_spacer
+			727 = { add_dynamic_modifier = { modifier = JAP_medium_fortifications } }
+			custom_effect_tooltip = GDU_spacer
+			632 = { add_dynamic_modifier = { modifier = JAP_medium_fortifications } }
+			hidden_effect = {
+				set_global_flag =  JAP_american_islands_fortificated
+			}
+		}	
+	}
+	JAP_fortify_fiji_tahiti_line = {
+		icon = generic_construction
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 636 
+				state = 726
+				state = 641
+				state = 643
+				state = 642
+			}
+		}
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_full_control_of_state = 636
+			has_full_control_of_state = 726
+			has_full_control_of_state = 641
+			has_full_control_of_state = 643
+			has_full_control_of_state = 642
+			num_of_civilian_factories_available_for_projects > 10
+		}
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 30
+		days_remove = 35
+
+		modifier = {
+			civilian_factory_use = 10
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		remove_effect = {
+			636 = { add_dynamic_modifier = { modifier = JAP_medium_fortifications } }
+			custom_effect_tooltip = GDU_spacer
+			726 = { add_dynamic_modifier = { modifier = JAP_medium_fortifications } }
+			custom_effect_tooltip = GDU_spacer
+			641 = { add_dynamic_modifier = { modifier = JAP_medium_fortifications } }
+			custom_effect_tooltip = GDU_spacer
+			643 = { add_dynamic_modifier = { modifier = JAP_medium_fortifications } }
+			custom_effect_tooltip = GDU_spacer
+			642 = { add_dynamic_modifier = { modifier = JAP_medium_fortifications } }
+
+		}	
+	}
+	JAP_fortify_solomon_new_caledonia_islands = {
+		icon = generic_construction
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 737 
+				state = 634
+				state = 635
+			}
+		}
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_full_control_of_state = 737
+			has_full_control_of_state = 634
+			has_full_control_of_state = 635
+			num_of_civilian_factories_available_for_projects > 10
+		}
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 30
+		days_remove = 35
+
+		modifier = {
+			civilian_factory_use = 10
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		remove_effect = {
+			737 = { add_dynamic_modifier = { modifier = JAP_medium_fortifications } }
+			custom_effect_tooltip = GDU_spacer
+			634 = { add_dynamic_modifier = { modifier = JAP_medium_fortifications } }
+			custom_effect_tooltip = GDU_spacer
+			635 = { add_dynamic_modifier = { modifier = JAP_medium_fortifications } }
+		}	
+	}
+	JAP_fortify_iwojima_taiwan_okinawa = {
+		icon = generic_construction
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 645 
+				state = 526
+				state = 524
+			}
+		}
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_full_control_of_state = 645
+			has_full_control_of_state = 526
+			has_full_control_of_state = 524
+			num_of_civilian_factories_available_for_projects > 15
+		}
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 40
+
+		modifier = {
+			civilian_factory_use = 15
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		remove_effect = {
+			645 = {
+				add_dynamic_modifier = { modifier = JAP_big_fortifications }
+				set_building_level = {
+					type = coastal_bunker
+					level = 5
+					province = 2608
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 5451
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 1123
+				}
+			}
+			custom_effect_tooltip = GDU_spacer
+			526 = {
+				 add_dynamic_modifier = { modifier = JAP_big_fortifications }
+				 set_building_level = {
+					type = coastal_bunker
+					level = 5
+					province = 1035
+				}
+			} 
+			custom_effect_tooltip = GDU_spacer
+			524 = { add_dynamic_modifier = { modifier = JAP_big_fortifications } }
+			hidden_effect = {
+				set_global_flag = JAP_home_islands_fortificated
+			}
+		}	
+	}
+	JAP_fortify_hawaii = {
+		icon = generic_construction
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 629 
+			}
+		}
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_full_control_of_state = 629
+			num_of_civilian_factories_available_for_projects > 20
+		}
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 70
+		days_remove = 40
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		remove_effect = {
+			629 = {
+				add_dynamic_modifier = { modifier = JAP_big_fortifications } 
+				custom_effect_tooltip = GDU_spacer
+				set_building_level = {
+					type = air_base
+					level = 15
+				}
+				set_building_level = {
+					type = anti_air_building
+					level = 5
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 7
+					province = 4180
+				}
+			}
+			hidden_effect = {
+				set_global_flag = JAP_hawaii_fortificated
+			}
+		}	
+	}
+}
