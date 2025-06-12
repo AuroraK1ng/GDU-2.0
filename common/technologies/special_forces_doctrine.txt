@@ -355,6 +355,10 @@ technologies = {
 			soft_attack = 0.05
 			hard_attack = 0.05
 		}
+		marine_commando = {
+			soft_attack = 0.025
+			hard_attack = 0.025
+		}
 		
 		
 		force_use_small_tech_layout = yes
@@ -442,6 +446,12 @@ technologies = {
 				movement = 0.05
 			}
 		}
+		marine_commando = {
+			amphibious = {
+				attack = 0.05
+				movement = 0.05
+			}
+		}
 		
 		force_use_small_tech_layout = yes
 		
@@ -473,6 +483,9 @@ technologies = {
 		
 		marine = {
 			max_organisation = 5
+		}
+		marine_commando = {
+			max_organisation = 2.5
 		}
 		jungletroop = {
 			max_organisation = 5
@@ -518,6 +531,14 @@ technologies = {
 				attack = 0.05
 			}
 			acclimatization_hot_climate_gain_factor = 0.2
+		}
+		marine_commando = {
+			jungle = {
+				movement = 0.05
+				defence = 0.025
+				attack = 0.025
+			}
+			acclimatization_hot_climate_gain_factor = 0.15
 		}
 		
 
@@ -591,6 +612,9 @@ technologies = {
 		}
 		marine = {
 			breakthrough = 0.10
+		}
+		marine_commando = {
+			breakthrough = 0.05
 		}
 		
 		

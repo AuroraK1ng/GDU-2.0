@@ -3719,6 +3719,23 @@ focus_tree = {
 			hidden_effect = {
 				add_to_variable = { ROOT.SpecOpsLimit = 385 }
 			}
+			custom_effect_tooltip = JAP_snlf_division_tt
+			division_template = {
+				name = "Kaigun-Tokubetsu-Rikusen-Tai" 
+				is_locked = yes
+				force_allow_recruiting = yes
+				division_cap = 20
+				regiments = { 
+					marine_commando = { x = 0 y = 0 } marine_commando = { x = 1 y = 0 } marine_commando = { x = 2 y = 0 } artillery_brigade = { x = 3 y = 0 } anti_air_brigade = { x = 4 y = 0 } 
+					marine_commando = { x = 0 y = 1 } marine_commando = { x = 1 y = 1 } marine_commando = { x = 2 y = 1 } artillery_brigade = { x = 3 y = 1 }
+					marine_commando = { x = 0 y = 2 } marine_commando = { x = 1 y = 2 } marine_commando = { x = 2 y = 2 } artillery_brigade = { x = 3 y = 2 } 
+					marine_commando = { x = 0 y = 3 } marine_commando = { x = 1 y = 3 } marine_commando = { x = 2 y = 3 } artillery_brigade = { x = 3 y = 3 } 	
+																														artillery_brigade = { x = 3 y = 4 }
+				}
+				support = { 
+					engineer = { x = 0 y = 0 } artillery = { x = 0 y = 1 } signal_company = { x = 0 y = 2 } anti_air = { x = 0 y = 3 } recon= { x = 0 y = 4 } logistics_company = { x = 0 y = 5 } flamethrower_inf = { x = 0 y = 6 }
+				}
+			}
 		}
 	}
 
