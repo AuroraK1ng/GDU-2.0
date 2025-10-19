@@ -2187,11 +2187,16 @@ foreign_politics = {
 				IF = {
   					limit = { NOT = { has_start_date > 1936.1.1.12 } }
    					date > 1940.6.1
-					NOT = {
-						447 = { is_fully_controlled_by = ENG }
-					}
-					NOT = {
-						454 = { is_fully_controlled_by = ENG }
+					OR = {
+						AND = {
+							NOT = {
+								447 = { is_fully_controlled_by = ENG }
+							}
+							NOT = {
+								454 = { is_fully_controlled_by = ENG }
+							}
+						}
+						date > 1941.06.1
 					}
 				}
 				else_if = {
