@@ -783,7 +783,31 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			remove_ideas = HUN_treaty_of_triannon_aat_wuw
+			if = {
+				limit={
+					has_idea = HUN_treaty_of_triannon_aat_wuw
+				}
+				remove_ideas = HUN_treaty_of_triannon_aat_wuw
+			}
+			if = {
+				limit={
+					has_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff
+				}
+				remove_ideas = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff
+			}
+			if = {
+				limit={
+					has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff
+				}
+				remove_ideas = HUN_treaty_of_triannon_aat_wuw_no_air_debuff
+			}
+			if = {
+				limit={
+					has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff
+				}
+				remove_ideas = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff
+			}
+			
 		}
 	}
 
@@ -2126,8 +2150,19 @@ focus_tree = {
 		}
 
 		bypass = {
-			NOT = {
-			has_idea = HUN_treaty_of_triannon_aat_wuw
+			AND = {
+				NOT = {
+					has_idea = HUN_treaty_of_triannon_aat_wuw
+				}
+				NOT = {
+					has_idea = HUN_treaty_of_triannon_wuw_no_air_debuff
+				}
+				NOT = {
+					has_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff
+				}
+				NOT = {
+					has_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff
+				}
 			}
 		}
 
@@ -2138,7 +2173,6 @@ focus_tree = {
 		completion_reward = {
 
 			add_ideas = HUN_secret_rearmament
-			custom_effect_tooltip = HUN_secret_rearmament_tt
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -2632,7 +2666,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_AIR_XP FOCUS_FILTER_HISTORICAL }
 
-		cost = 5
+		cost = 7
 
 		ai_will_do = {
 			factor = 5
@@ -2643,7 +2677,20 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			AND = {
+				NOT = {
+					has_idea = HUN_treaty_of_triannon_aat_wuw
+				}
+				NOT = {
+					has_idea = HUN_treaty_of_triannon_wuw_no_air_debuff
+				}
+				NOT = {
+					has_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff
+				}
+				NOT = {
+					has_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff
+				}
+			}
 		}
 
 		cancel_if_invalid = no
@@ -2726,7 +2773,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER }
 
-		cost = 5
+		cost = 7
 
 		ai_will_do = {
 			factor = 15
@@ -2737,7 +2784,20 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			AND = {
+				NOT = {
+					has_idea = HUN_treaty_of_triannon_aat_wuw
+				}
+				NOT = {
+					has_idea = HUN_treaty_of_triannon_wuw_no_air_debuff
+				}
+				NOT = {
+					has_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff
+				}
+				NOT = {
+					has_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff
+				}
+			}
 		}
 
 		cancel_if_invalid = no
@@ -2809,7 +2869,8 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_negotiate_the_restrictions
 		icon = GFX_focus_HUN_negotiate_the_restrictions
-		prerequisite = { focus = wuw_HUN_undercover_air_maneuvers focus = wuw_HUN_hold_war_games }
+		prerequisite = { focus = wuw_HUN_undercover_air_maneuvers }
+		prerequisite = { focus = wuw_HUN_hold_war_games }
 		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
 		x = 1
 		y = 1
@@ -2831,8 +2892,19 @@ focus_tree = {
 		}
 
 		bypass = {
-			NOT = {
-			has_idea = HUN_treaty_of_triannon_aat_wuw
+			AND = {
+				NOT = {
+					has_idea = HUN_treaty_of_triannon_aat_wuw
+				}
+				NOT = {
+					has_idea = HUN_treaty_of_triannon_wuw_no_air_debuff
+				}
+				NOT = {
+					has_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff
+				}
+				NOT = {
+					has_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff
+				}
 			}
 		}
 
@@ -2840,13 +2912,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			add_war_support = 0.05
-
+			custom_effect_tooltip = HUN_secret_rearmament_tt
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-
-			custom_effect_tooltip = HUN_bled_agreement_custom_effect_tooltip
+			add_war_support = 0.05
+			add_ideas = partial_economic_mobilisation
+			
 
 		}
 	}
