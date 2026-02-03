@@ -125,7 +125,7 @@ equipments = {
 			steel = 2
 		}
 		manpower = 600
-		naval_dominance_factor = 260
+		naval_dominance_factor = 30
 		naval_weather_penalty_factor = 1
 	}
 	ship_hull_cruiser_1 = {
@@ -134,6 +134,7 @@ equipments = {
 		archetype = ship_hull_cruiser
 		priority = 1900
 		module_slots = inherit
+		naval_dominance_factor = 30
 	}
 	ship_hull_cruiser_2 = {
 		year = 1936
@@ -142,6 +143,7 @@ equipments = {
 		priority = 1900
 		parent = ship_hull_cruiser_1
 		manpower = 800
+		naval_dominance_factor = 40
 		naval_speed = 31
 		reliability = 0.85
 		build_cost_ic = 1900
@@ -215,6 +217,7 @@ equipments = {
 		max_strength = 240
 		naval_range = 4000
 		manpower = 1200
+		naval_dominance_factor = 60
 		resources = {
 			steel = 3
 		}
@@ -293,6 +296,7 @@ equipments = {
 		naval_speed = 33
 		reliability = 0.95
 		manpower = 1400
+		naval_dominance_factor = 70
 		build_cost_ic = 2100
 		naval_range = 4500
 		max_strength = 260
@@ -610,6 +614,7 @@ equipments = {
 			steel = 3
 		}
 		manpower = 1500
+		naval_dominance_factor = 75
 	}
 	heavy_cruiser_2 = {
 		year = 1936
@@ -649,6 +654,7 @@ equipments = {
 			steel = 4
 		}
 		manpower = 1700
+		naval_dominance_factor = 85
 	}
 	heavy_cruiser_3 = {
 		year = 1940
@@ -689,6 +695,7 @@ equipments = {
 			steel = 4
 		}
 		manpower = 1900
+		naval_dominance_factor = 95
 	}
 	heavy_cruiser_4 = {
 		year = 1944
@@ -731,6 +738,7 @@ equipments = {
 			chromium = 1
 		}
 		manpower = 2200
+		naval_dominance_factor = 110
 	}
 	###### SPECIAL JAP TECH FROM FOCUS ######	
 	torpedo_cruiser = {
@@ -917,7 +925,8 @@ equipments = {
 		visual_level = 0
 		archetype = ship_hull_cruiser
 		priority = 1850
-		manpower = 1
+		manpower = 2000
+		naval_dominance_factor = 100
 		build_cost_ic = 3100
 		naval_speed = 25
 		surface_visibility = 25
@@ -978,6 +987,7 @@ equipments = {
 		archetype = ship_hull_cruiser
 		priority = 1850
 		manpower = 1800
+		naval_dominance_factor = 90
 		build_cost_ic = 3500
 		resources = {
 			steel = 3
