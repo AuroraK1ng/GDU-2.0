@@ -73,7 +73,7 @@ guiTypes = {
 				name = "leave_faction_button"
 				quadTextureSprite = "GFX_dismantle_faction_button"
 				orientation = UPPER_RIGHT
-				position = { x = -92 y = 20 }
+				position = { x = -10000 y = 20 }
 			}
 
 			instantTextboxType = {
@@ -212,7 +212,7 @@ guiTypes = {
 			buttonType = {
 				name = "member_countries"
 				quadTextureSprite = "GFX_diplo_filter_entry" 
-				position = { x=380 y=-85 }
+				position = { x=380 y=-105 }
 				buttonText = "FACTION_MEMBERS_LIST_BUTTON"
 				orientation = "lower_left"
 				font = "hoi_16mbs"
@@ -220,13 +220,15 @@ guiTypes = {
 			}
 
 			buttonType = {
+				
 				name = "become_leader"
 				quadTextureSprite = "GFX_diplo_filter_entry" 
-				position = { x=380 y=-120 }
-				buttonText = "FACTION_BECOME_LEADER_BUTTON"
+				position = { x=10000 y=-120 }
+				buttonText = ""
 				orientation = "lower_left"
 				font = "hoi_16mbs"
-				frame = 2
+				frame = 3
+				
 			}
 		}
 
