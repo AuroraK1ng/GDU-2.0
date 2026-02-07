@@ -1,4 +1,4 @@
-@manifest_fulfilled_value = 0.75
+@manifest_fulfilled_value = 1
 
 # Conquest of territory 
 faction_manifest_conquest_of_territory = {
@@ -6,26 +6,18 @@ faction_manifest_conquest_of_territory = {
 	description = conquest_of_territory_goal_desc
 	is_manifest = yes
 	ratio_progress = {
-		total_amount_collection = collection:faction_owned_core_states
-		completed_amount_collection = collection:faction_controlled_non_core_states
+		total_amount_collection = collection:world_uncapitulated_democratic_countries
+		completed_amount_collection = collection:world_uncapitulated_democratic_countries
 		range = { 
 			max = 1
 		}
 		
 		scale = {
-			offensive_war_stability_factor = 0.15
-			justify_war_goal_time = -0.25
+			
 		}
 		
 		progress_sections = {
-			manifest_fulfilled = {
-				min = @manifest_fulfilled_value
-	
-				modifier = { 
-					non_core_manpower = 0.03
-					generate_wargoal_tension = -0.25
-				}			
-			}
+			
 		}
 	}
 }
@@ -45,17 +37,11 @@ faction_manifest_strength_in_unity = {
 		}
 		
 		scale = {
-			trade_opinion_factor = 0.20
+			
 		}
 		
 		progress_sections = {
-			manifest_fulfilled = {
-				min = @manifest_fulfilled_value
-	
-				modifier = { 
-					political_power_factor = 0.1
-				}			
-			}
+			
 		}
 	}
 }
