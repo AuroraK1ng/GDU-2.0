@@ -32,8 +32,7 @@ war_declaration_rule_faction_leader_only = {
 		is_faction_leader = yes
 	}
 	modifier = {
-		war_support_factor = -0.05
-		stability_factor = -0.05
+
 	}
 }
 
@@ -46,8 +45,7 @@ war_declaration_rule_major_only = {
 		is_major = yes
 	}
 	modifier = {
-		war_support_factor = -0.05
-		stability_factor = -0.05
+
 	}
 }
 
@@ -64,7 +62,7 @@ war_declaration_generated_tension_10 = {
 		base = 0
 	}
 	modifier = {
-		mobilization_speed = 0.05
+
 	}
 	trigger = {
 		FROM = {
@@ -79,7 +77,7 @@ war_declaration_generated_tension_25 = {
 		base = 0
 	}
 	modifier = {
-		mobilization_speed = 0.15
+
 	}
 	trigger = {
 		FROM = {
@@ -138,8 +136,7 @@ generate_wargoal_threat_reduction_20 = {
 		}
 	}
 	modifier = {
-		generate_wargoal_tension = -0.2
-		stability_factor = -0.05
+
 	}
 	effect = {
 	}
@@ -156,8 +153,7 @@ generate_wargoal_threat_reduction_40 = {
 		}
 	}
 	modifier = {
-		generate_wargoal_tension = -0.4
-		stability_factor = -0.1
+
 	}
 	effect = {
 	}

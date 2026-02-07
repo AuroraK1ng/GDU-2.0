@@ -34,9 +34,7 @@ dismissal_rule_offensive_war = {
 	dismiss_member_trigger = {
 		has_offensive_war_without_friend = FROM
 	}
-	ai_will_do = {
-		base = 0
-	}
+
 }
 
 
@@ -50,9 +48,7 @@ dismissal_rule_offensive_war = {
 dismissal_rule_ideology_not_democratic = {
 	type = dismissal_rules
 	visible = { has_government = democratic }
-	ai_will_do = {
-		base = 0
-	}
+
 
 	dismiss_member_trigger = {
 		NOT = {
@@ -64,9 +60,7 @@ dismissal_rule_ideology_not_democratic = {
 dismissal_rule_ideology_not_communism = {
 	type = dismissal_rules
 	visible = { has_government = communism }
-	ai_will_do = {
-		base = 0
-	}
+
 
 	dismiss_member_trigger = {
 		NOT = {
@@ -78,9 +72,7 @@ dismissal_rule_ideology_not_communism = {
 dismissal_rule_ideology_communist = {
 	type = dismissal_rules
 	visible = { NOT = { has_government = communism } }
-	ai_will_do = {
-		base = 0
-	}
+
 
 	dismiss_member_trigger = {
 		has_government = communism
@@ -90,9 +82,7 @@ dismissal_rule_ideology_communist = {
 dismissal_rule_ideology_fascist = {
 	type = dismissal_rules
 	visible = { NOT = { has_government = fascism } }
-	ai_will_do = {
-		base = 0
-	}
+
 
 	dismiss_member_trigger = {
 		has_government = fascism
@@ -102,9 +92,7 @@ dismissal_rule_ideology_fascist = {
 dismissal_rule_ideology_democratic = {
 	type = dismissal_rules
 	visible = { NOT = { has_government = democratic } }
-	ai_will_do = {
-		base = 0
-	}
+
 
 	dismiss_member_trigger = {
 		has_government = democratic
