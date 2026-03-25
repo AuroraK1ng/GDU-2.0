@@ -1,45 +1,9 @@
-manpower_contribution_small = {
-	type = contribution_rule
-	ai_will_do = {
-		base = 0
-	}
-	available = {
-		always = no
-	}
-	effect = {
-		set_faction_member_upgrade_min = {
-			upgrade = faction_manpower_sharing1
-		}
-	}
-}
-
-manpower_contribution_medium = {
-	type = contribution_rule
-	ai_will_do = {
-		base = 0
-		modifier = {
-			add = 1
-			is_major = no 
-		}
-	}
-	available = {
-		always = no
-	}
-	effect = {
-		set_faction_member_upgrade_min = {
-			upgrade = faction_manpower_sharing1
-		}
-	}
-}
-
-manpower_contribution_high = {
+manpower_contribution_generic = {
 	type = contribution_rule
 	available = {
 		always = no
 	}
 	effect = {
-		set_faction_member_upgrade_min = {
-			upgrade = faction_manpower_sharing1
-		}
+		
 	}
 }

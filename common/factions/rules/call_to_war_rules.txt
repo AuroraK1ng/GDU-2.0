@@ -1,62 +1,6 @@
-call_to_war_rule_faction_leader_only = {
+call_to_war_rule_generic = {
 	type = call_to_war_rules
 	trigger = {
-		is_faction_leader = yes
-	}
-
-	modifier = {
-	}
-}
-
-call_to_war_rule_major_only = {
-	type = call_to_war_rules
-	trigger = {
-		is_major = yes
-	}
-	ai_will_do = {
-		base = 0
-		modifier = { 
-			add = 2
-			tag = GER 
-		}
-	}
-	modifier = {
-	}
-}
-
-call_to_war_rule_independent_only = {
-	type = call_to_war_rules
-	trigger = {
-		is_subject = no 
-	}
-}
-
-# World Tension
-
-guarantee_threat_reduction_15 = {
-	type = call_to_war_rules
-	ai_will_do = {
-		base = 0
-		modifier = { 
-			add = 2
-			has_government = democratic
-		}
-	}
-	modifier = {
-	}
-	effect = {
-	}
-	
-}
-
-guarantee_threat_reduction_40 = {
-	type = call_to_war_rules
-	ai_will_do = {
-		base = 0
-	}
-	modifier = {
-
-	}
-	effect = {
+		
 	}
 }
