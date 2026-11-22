@@ -18,7 +18,7 @@ NDefines.NCountry.POPULATION_YEARLY_GROWTH_BASE = 0               --Removed for 
 
 NDefines.NIntel.ARMY_INTEL_COMBAT_BONUS_MAX_BONUS = 0.0
 
-NDefines.NIntel.NAVAL_SUPREMACY_INTEL_LOW = 0.0								-- we need more intel than this to get any supremacy - should hopefully make naval invasions not be blocked by intel nonesense????
+NDefines.NIntel.NAVAL_DOMINANCE_INTEL_LOW = 0.0								-- we need more intel than this to get any supremacy - should hopefully make naval invasions not be blocked by intel nonesense????
 
 NDefines.NOperatives.AGENCY_CREATION_DAYS = 0			
 NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 0	
@@ -262,6 +262,8 @@ NDefines.NMilitary.CONSTANT_XP_RATIO_FOR_MULTIPLE_LEADERS_IN_SAME_COMBAT = 0.0 -
 NDefines.NMilitary.MULTIPLE_COMBATS_PENALTY = -0.35                -- defender penalty if attacked from multiple directions
 
 NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 7
+NDefines.NMilitary.MAX_REGIMENTAL_SUPPORT_WIDTH = 0
+NDefines.NMilitary.MAX_REGIMENTAL_SUPPORT_HEIGHT = 0
 NDefines.NMilitary.MIN_DIVISION_BRIGADE_HEIGHT = 5		-- Min height of regiments in division designer.
 
 NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 1.5
@@ -492,11 +494,7 @@ NDefines.NNavy.CAPITAL_RATIO_FOR_FULL_SCREENING_FOR_CARRIERS = 2.0
 NDefines.NNavy.NAVAL_COMBAT_AIR_CAPITAL_TARGET_SCORE = 250
 NDefines.NNavy.NAVAL_COMBAT_AIR_CARRIER_TARGET_SCORE = 1
 
-NDefines.NNavy.SUPREMACY_PER_SHIP_PER_MANPOWER = 0.0							-- supremacy of a ship is calculated using its IC, manpower and a base define
-NDefines.NNavy.SUPREMACY_PER_SHIP_PER_IC = 0.1
-NDefines.NNavy.SUPREMACY_PER_SHIP_BASE = 0.0
-
-NDefines.NNavy.NAVAL_SUPREMACY_CAN_INVADE = 0.60
+NDefines.NNavy.DOMINANCE_CONTROLLED_THRESHOLD_RATIO = 0.60
 NDefines.NNavy.NAVAL_TRANSFER_BASE_SPEED = 12
 NDefines.NNavy.NAVAL_INVASION_PREPARE_HOURS = 72 
 	
@@ -508,7 +506,7 @@ NDefines.NNavy.ANTI_AIR_POW_ON_INCOMING_AIR_DAMAGE = 0.8 -- (0.2 -> 0.75) -- Sil
 NDefines.NNavy.ANTI_AIR_MULT_ON_INCOMING_AIR_DAMAGE = 0.07 -- (0.15 -> 0.04) -- These ones are a bit harder to explain but in essence it makes ship aa much more important and fleet aa less important. Low aa takes more damage and higher takes less, here's a spreadsheet to make it clearer what it does (should be editable so you can test some values yourself) -- SilentLegion#1356, MTG  https://docs.google.com/spreadsheets/d/1gILOpO6VzPlscVmSTEeHuEPUKPh2Y2_bQ2ky67gxUmI/edit?usp=sharing
 NDefines.NNavy.MAX_ANTI_AIR_REDUCTION_EFFECT_ON_INCOMING_AIR_DAMAGE = 0.7 -- (0.5 -> 0.75) -- SilentLegion#1356, MTG 
 
-NDefines.NNavy.MISSION_SUPREMACY_RATIOS = { -- supremacy multipliers for different mission types
+NDefines.NNavy.MISSION_DOMINANCE_RATIOS = { -- dominance multipliers for different mission types
 		0.0, -- HOLD
 		1.0, -- PATROL		
 		0.0, -- STRIKE FORCE 
@@ -776,3 +774,41 @@ NDefines.NTrade.BASE_TRADE_FACTOR = 100					-- WAS 150 | This is the base trade 
 NDefines.NRailwayGun.ATTACK_TO_FORTS_MODIFIER_FACTOR = 0.0 
 
 NDefines.NRaids.RAID_UNIT_SPEED_MULTIPLIER = 0.4
+
+-- Keep GDU factory output independent of energy and use the existing oil resource.
+NDefines.NGame.ENERGY_RESOURCE = "oil"
+NDefines.NProduction.BASE_ENERGY_COST = 0
+NDefines.NProduction.ENERGY_SCALING_COST_BY_FACTORY_COUNT = 0
+NDefines.NProduction.ENERGY_COST_CAP = 0
+NDefines.NProduction.BASE_FACTORY_SPEED = 5
+NDefines.NProduction.POWERED_FACTORY_SPEED = NDefines.NProduction.BASE_FACTORY_SPEED
+NDefines.NProduction.POWERED_FACTORY_SPEED_MIL = NDefines.NProduction.BASE_FACTORY_SPEED_MIL
+NDefines.NProduction.POWERED_FACTORY_SPEED_NAV = NDefines.NProduction.BASE_FACTORY_SPEED_NAV
+
+-- shortcut: Dominance uses legacy hull IC, include variant module IC if the engine exposes a cost-based rule.
+NDefines.NNavy.CONVOY_BLOCKED_BY_ENEMY_CONTROLLED_REGION = false
+NDefines.NNavy.AIR_BASE_DOMINANCE_FACTOR = 0
+NDefines.NNavy.RADAR_DOMINANCE_FACTOR = 0
+NDefines.NNavy.NAVAL_BASE_DOMINANCE_FACTOR = 0
+NDefines.NNavy.DOMINANCE_EFFECT_ON_POSITIONING_FOR_CONVOY_ESCORT = 0
+NDefines.NNavy.DOMINANCE_PER_SHIP_PER_RANGE_NEUTRAL = 0
+NDefines.NNavy.DOMINANCE_PER_SHIP_PER_SPEED_NEUTRAL = 0
+NDefines.NNavy.DOMINANCE_PER_SHIP_PER_CARRIER_SIZE = 0
+NDefines.NNavy.DOMINANCE_PER_SHIP_PER_HEAVY_GUN_ATTACK = 0
+NDefines.NNavy.DOMINANCE_DAILY_GAIN_FACTOR = 1
+NDefines.NNavy.DOMINANCE_DAILY_LOSS_FACTOR = 1
+NDefines.NNavy.NAVAL_DOMINANCE_STRIKE_FORCE_FRACTION = 0
+NDefines.NNavy.NAVAL_DOMINANCE_STRIKE_FORCE_MULTIREGION_DECAY = 0
+NDefines.NNavy.NAVAL_DOMINANCE_SPOTTING_BONUS = 0
+NDefines.NNavy.NAVAL_DOMINANCE_ORG_RECOVERY = 0
+NDefines.NNavy.NAVAL_DOMINANCE_SHIP_RECOVERY_CHANCE = 0
+NDefines.NNavy.NAVAL_DOMINANCE_MINES_PLANTING_BONUS = 0
+NDefines.NNavy.NAVAL_DOMINANCE_MINES_SWEEPING_BONUS = 0
+NDefines.NNavy.NAVAL_DOMINANCE_CHANCE_OF_ACCIDENT_REDUCTION = 0
+
+-- Legacy GDU factions have no goals or initiative.
+NDefines.NFactions.MAX_NUM_SHORT_TERM_GOALS = 0
+NDefines.NFactions.MAX_NUM_MEDIUM_TERM_GOALS = 0
+NDefines.NFactions.MAX_NUM_LONG_TERM_GOALS = 0
+NDefines.NFactions.PASSIVE_INITIATIVE_GENERATION = 0
+NDefines.NFactions.PEACE_CONFERENCE_MAX_DISCOUNT = 0

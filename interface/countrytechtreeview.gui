@@ -59,7 +59,7 @@ guiTypes = {
 			quadTextureSprite ="GFX_tiled_plain_bg2"
 		}
 		containerWindowType = {
-			name = "land_doctrine_folder"
+			name = "gdu_land_doctrine_folder"
 			position = { x=0 y=47 }
 			size = { width = 100%% height = 100%% }
 			margin = { top = 13 left = 13 bottom = 24 right = 25}
@@ -500,7 +500,12 @@ guiTypes = {
 			}
 		}
 		containerWindowType = {
-			name = "special_forces_doctrine_folder"
+			name = "special_forces_doctrine_folder_no_aat"
+			size = { width = 100%% height = 100%% }
+		}
+
+		containerWindowType = {
+			name = "gdu_special_forces_doctrine_folder"
 			position = { x=0 y=47 }
 			size = { width = 100%% height = 100%% }
 			margin = { top = 13 left = 13 bottom = 24 right = 25}
@@ -663,7 +668,7 @@ guiTypes = {
 			}	 
 		}
 		containerWindowType = {
-			name = "air_doctrine_folder"
+			name = "gdu_air_doctrine_folder"
 			position = { x=0 y=47 }
 			size = { width = 100%% height = 100%% }
 			margin = { top = 13 left = 13 bottom = 24 right = 25}
@@ -812,7 +817,7 @@ guiTypes = {
 			}
 		}
 		containerWindowType = {
-			name = "naval_doctrine_folder"
+			name = "gdu_naval_doctrine_folder"
 			position = { x=0 y=47 }
 			size = { width = 100%% height = 100%% }
 			margin = { top = 13 left = 13 bottom = 24 right = 25}
@@ -4389,23 +4394,23 @@ guiTypes = {
 			size = { width = 100%% height = 30 }
 			
 			buttonType = {
-				name = "land_doctrine_folder_tab"
-				position = { x = 1000 y = 0 }
+				name = "gdu_land_doctrine_folder_tab"
+				position = { x = 796 y = 0 }
 				quadTextureSprite = "GFX_land_doctrine_folder_tab"
 				frame = 1
 				clicksound = ui_research_tab_armor
 			}
 			buttonType = {
-				name = "special_forces_doctrine_folder_tab"
-				position = { x = 1300 y = 0 }
-				quadTextureSprite = "GFX_support_folder_tab"
+				name = "gdu_special_forces_doctrine_folder_tab"
+				position = { x = 1054 y = 0 }
+				quadTextureSprite = "GFX_specialforcesdoctrine_tab_large"
 				frame = 1
 				clicksound = ui_doctrine_tab_air
 			}
 			instantTextBoxType = {
-				name = "special_forces_doctrine_folder_title"
-				#text = "special_forces"
-				position = { x=1356 y=18}
+				name = "gdu_special_forces_doctrine_folder_title"
+				text = "gdu_special_forces_doctrine_folder"
+				position = { x=1112 y=15}
 				font = "hoi_20bs"
 				maxWidth = 160
 				maxHeight = 20
@@ -4414,15 +4419,15 @@ guiTypes = {
 			}
 			
 			buttonType = {
-				name = "air_doctrine_folder_tab"
-				position = { x = 1100 y = 0 }
+				name = "gdu_air_doctrine_folder_tab"
+				position = { x = 882 y = 0 }
 				quadTextureSprite = "GFX_air_doctrine_folder_tab"
 				frame = 1
 				clicksound = click_default
 			}
 			buttonType = {
-				name = "naval_doctrine_folder_tab"
-				position = { x = 1205 y = 0 }
+				name = "gdu_naval_doctrine_folder_tab"
+				position = { x = 968 y = 0 }
 				quadTextureSprite = "GFX_naval_doctrine_folder_tab"
 				frame = 1
 				clicksound = ui_research_tab_naval
@@ -4445,14 +4450,14 @@ guiTypes = {
 
 			buttonType = {
 				name = "support_folder_tab"
-				position = { x = 111 y = 0 }
+				position = { x = 108 y = 0 }
 				quadTextureSprite = "GFX_support_folder_tab"
 				frame = 1
 				clicksound = ui_research_tab_support
 			}
 			buttonType = {
 				name = "armour_folder_tab"
-				position = { x = 200 y = 0 }
+				position = { x = 194 y = 0 }
 				quadTextureSprite = "GFX_armour_folder_tab"
 				frame = 1
 				clicksound = ui_research_tab_armor
@@ -4460,7 +4465,7 @@ guiTypes = {
 
 			buttonType = {
 				name = "nsb_armour_folder_tab"
-				position = { x = 200 y = 0 }
+				position = { x = 194 y = 0 }
 				quadTextureSprite = "GFX_armour_folder_tab"
 				frame = 1
 				clicksound = ui_research_tab_armor
@@ -4468,7 +4473,7 @@ guiTypes = {
 
 			buttonType = {
 				name = "artillery_folder_tab"
-				position = { x = 289 y = 0 }
+				position = { x = 280 y = 0 }
 				quadTextureSprite = "GFX_artillery_folder_tab"
 				frame = 1
 				clicksound = ui_research_tab_artillery
@@ -4476,41 +4481,41 @@ guiTypes = {
 
 			buttonType = {
 				name = "naval_folder_tab"
-				position = { x = 580 y = 0 }
+				position = { x = 452 y = 0 }
 				quadTextureSprite = "GFX_naval_folder_tab"
 				frame = 1
 				clicksound = ui_research_tab_naval
 			}
 			buttonType = {
 				name = "mtgnavalfolder_tab"
-				position = { x = 480 y = 0 }
+				position = { x = 452 y = 0 }
 				quadTextureSprite = "GFX_naval_folder_tab"
 				frame = 1
 				clicksound = ui_research_tab_naval
 			}
 			buttonType = {
 				name = "mtgnavalsupportfolder_tab"
-				position = { x = 580 y = 0 }
+				position = { x = 538 y = 0 }
 				quadTextureSprite = "GFX_naval_support_tab"
 				frame = 1
 				clicksound = ui_research_tab_naval
 			}
 			buttonType = {
 				name = "air_techs_folder_tab"
-				position = { x = 900 y = 0 }
+				position = { x = 366 y = 0 }
 				quadTextureSprite = "GFX_air_techs_folder_tab"
 				frame = 1
 				clicksound = ui_research_tab_air
 			}
 			buttonType = {
 				name = "bba_air_techs_folder_tab"
-				position = { x = 390 y = 0 }
+				position = { x = 366 y = 0 }
 				quadTextureSprite = "GFX_air_techs_folder_tab"
 				frame = 1
 				clicksound = ui_research_tab_air
 			}
 			buttonType = {
-				position = { x = 680 y = 0 }
+				position = { x = 624 y = 0 }
 				name = "electronics_folder_tab"
 				quadTextureSprite = "GFX_techtree_engineering_tab"
 				frame = 1
@@ -4520,13 +4525,13 @@ guiTypes = {
 			iconType = {
 				name = "highlight_engineering_folder"
 				spriteType = "GFX_tutorial_research_folder_icon_glow"
-				position = { x=680 y=0}
+				position = { x=624 y=0}
 				hide = yes
 				alwaystransparent = yes
 			}
 
 			buttonType = {
-				position = { x = 780 y = 0 }
+				position = { x = 710 y = 0 }
 				name = "industry_folder_tab"
 				quadTextureSprite = "GFX_industry_folder_tab"
 				frame = 1
@@ -4536,7 +4541,7 @@ guiTypes = {
 			iconType = {
 				name = "highlight_industry_folder"
 				spriteType = "GFX_tutorial_research_folder_icon_glow"
-				position = { x=780 y=0}
+				position = { x=710 y=0}
 				hide = yes
 				alwaystransparent = yes
 			}
@@ -6831,7 +6836,7 @@ guiTypes = {
 		size = { width=1 height=1 }
 	}
 	containerWindowType = {
-		name = "techtree_land_doctrine_folder_item"
+		name = "techtree_gdu_land_doctrine_folder_item"
 		position = { x=0 y=5 }
 		size = { width = 72 height = 72 }
 		clipping = no
@@ -6864,10 +6869,17 @@ guiTypes = {
 			maxHeight = 20
 			format = center
 		}
+
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x = 0 y = 52 }
+			spriteType = "GFX_design_team_icon"
+			hide = yes
+		}
 	}
 
 	containerWindowType = {
-		name = "techtree_naval_doctrine_folder_item"
+		name = "techtree_gdu_naval_doctrine_folder_item"
 		position = { x=0 y=5 }
 		size = { width = 72 height = 72 }
 		clipping = no
@@ -6900,10 +6912,17 @@ guiTypes = {
 			maxHeight = 20
 			format = center
 		}
+
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x = 0 y = 52 }
+			spriteType = "GFX_design_team_icon"
+			hide = yes
+		}
 	}
 
 	containerWindowType = {
-		name = "techtree_air_doctrine_folder_item"
+		name = "techtree_gdu_air_doctrine_folder_item"
 		position = { x=0 y=5 }
 		size = { width = 72 height = 72 }
 		clipping = no
@@ -6936,10 +6955,60 @@ guiTypes = {
 			maxHeight = 20
 			format = center
 		}
+
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x = 0 y = 52 }
+			spriteType = "GFX_design_team_icon"
+			hide = yes
+		}
 	}
 
 	containerWindowType = {
-		name = "technology_air_mission_entry"
+		name = "techtree_gdu_special_forces_doctrine_folder_item"
+		position = { x=0 y=5 }
+		size = { width = 72 height = 72 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_technology_unavailable_item_bg"
+		}
+
+		iconType = {
+			name = "Icon"
+			position = { x=0 y=3 }
+			spriteType = "GFX_technology_medium"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "bonus_icon"
+			position = { x=-1 y=-22 }
+			spriteType = "GFX_tech_bonus"
+		}
+
+		instantTextBoxType = {
+			name = "bonus"
+			position = { x = -1 y = -22 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 4 y = 4}
+			text = "lol boat"
+			maxWidth = 80
+			maxHeight = 20
+			format = center
+		}
+
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x = 0 y = 52 }
+			spriteType = "GFX_design_team_icon"
+			hide = yes
+		}
+	}
+
+	containerWindowType = {
+name = "technology_air_mission_entry"
 		position = { x=5 y=22 }
 		size = { width = 40 height = 40 }	
 		clipping = no

@@ -18,6 +18,8 @@ categories = {
 		}
 		movement_cost = 1
 		naval_terrain = yes
+		# 1.20 requires a positive minimum for an empty zone to remain uncontrolled.
+		minimum_seazone_dominance = 1
 		is_water = yes
 		sound_type = sea
 		submarine = {
@@ -356,6 +358,7 @@ categories = {
 	}
 	water_fjords = {
 		naval_terrain = yes
+		minimum_seazone_dominance = 1
 		color = {
 			75
 			162
@@ -420,6 +423,7 @@ categories = {
 	}
 	water_shallow_sea = {
 		naval_terrain = yes
+		minimum_seazone_dominance = 1
 		color = {
 			56
 			118
@@ -451,6 +455,7 @@ categories = {
 	}
 	water_med = {
 		naval_terrain = yes
+		minimum_seazone_dominance = 1
 		color = {
 			56
 			118
@@ -477,6 +482,7 @@ categories = {
 	}
 	water_deep_ocean = {
 		naval_terrain = yes
+		minimum_seazone_dominance = 1
 		color = {
 			2
 			38

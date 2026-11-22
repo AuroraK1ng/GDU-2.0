@@ -1,0 +1,19 @@
+# 1.20 faction rules reference these triggers even in campaigns using the GDU factions.
+WTT_is_chinese_country = {
+    OR = {
+        original_tag = CHI
+        original_tag = PRC
+        original_tag = MAN
+        original_tag = MEN
+        original_tag = GXC
+        original_tag = YUN
+        original_tag = XSM
+        original_tag = SIK
+        original_tag = SHX
+    }
+}
+
+# GDU does not use the vanilla mandate objectives or their strategic-region IDs.
+CHI_northern_mandate_states = { always = no }
+CHI_southern_mandate_states = { always = no }
+CHI_greater_game_states = { always = no }

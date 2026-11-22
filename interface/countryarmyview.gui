@@ -21,7 +21,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "ships_count"
 			position = {x=4 y=0}
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			maxWidth = 30
 			maxHeight = 23
 			format = left
@@ -60,7 +60,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "count"
 			position = {x=6 y=2}
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			maxWidth = 40
 			maxHeight = 23
 			format = left
@@ -70,7 +70,7 @@ guiTypes = {
 		iconType = {
 			name = "icon"
 			spriteType = "GFX_air_overview_plane_strip"
-            position = {x=-2 y=16} 
+            position = {x=-2 y=16}
             Orientation = "Upper_Right"
             centerposition = yes
             scale = 0.9
@@ -87,17 +87,19 @@ guiTypes = {
 
 		iconType = {
 			name = "navy_overview_ship_entry_bg"
-			position = {x=-14 y=6} 
+			position = {x=-14 y=6}
 			spriteType = "GFX_overview_filter_entry"
+			alwaystransparent = yes
 		}
 
 		instantTextboxType = {
-			name = "sub_units_count" 
+			name = "sub_units_count"
 			position = {x=-4 y=5}
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			maxWidth = 30
 			maxHeight = 23
 			format = left
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "sub_unit_icon"
@@ -105,6 +107,21 @@ guiTypes = {
 			spriteType = "GFX_navalcombat_ship_icon_unknown"
 			centerposition = yes
 			scale = 0.7
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "filter_button"
+			position = {x=-14 y=6}
+			size = {x=80 y=29}
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			clicksound = click_default
+		}
+
+		iconType = {
+			name = "highlight"
+			position = {x=-14 y=6}
+			spriteType = "GFX_overview_filter_entry_highlight"
+			alwaystransparent = yes
 		}
 	}
 
@@ -129,7 +146,7 @@ guiTypes = {
 		}
 
 		instantTextboxType = {
-			name = "modifier_value" 
+			name = "modifier_value"
 			position = { x = 30 y = 9 }
 			font = "hoi_16mbs"
 			maxWidth = 39
@@ -145,7 +162,7 @@ guiTypes = {
 		show_position = { x=-6 y =78 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
-		animation_time = 1
+		animation_time = 300
 		size = { width=550 height=100%% }
 
 		#hide_sound = ui_window_hide
@@ -183,6 +200,15 @@ guiTypes = {
 			Orientation = "UPPER_RIGHT"
 			clicksound = click_close
 			pdx_tooltip = "CLOSE"
+		}
+
+		buttonType = {
+			name = "naval_hq_open"
+			position = {x=-171 y=8}
+			spriteType = "GFX_naval_hq_button"
+			orientation = "UPPER_RIGHT"
+			clicksound = click_default
+			pdx_tooltip = "naval_headquarters"
 		}
 
 		buttonType = {
@@ -252,7 +278,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "unit_count"
 				position = { x = 170 y = 13 }
-				font = "hoi_16mbs"
+				font = "hoi_18mbs"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 140
 				maxHeight = 20
@@ -262,7 +288,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "battalion_count"
 				position = { x = 170 y = 30 }
-				font = "hoi_16mbs"
+				font = "hoi_18mbs"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 140
 				maxHeight = 20
@@ -280,7 +306,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "special_forces_cap"
 				position = { x = 298 y = 30 }
-				font = "hoi_16mbs"
+				font = "hoi_18mbs"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 25
 				maxHeight = 20
@@ -577,7 +603,7 @@ guiTypes = {
 			name = "theatres_count"
 			position = { x = 26 y = -36 }
 			orientation = "LOWER_LEFT"
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 490
 			maxHeight = 20
@@ -637,13 +663,13 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 
-		iconType = { 
+		iconType = {
 			name = "level"
 			spriteType = "GFX_unit_level"
 			position = { x=93 y=4 }
 		}
 
-		iconType = { 
+		iconType = {
 			name = "icon"
 			spriteType = "GFX_unit_infantry_icon_medium" # <- Replaced in code
 			position = { x=6 y=1 }
@@ -756,7 +782,7 @@ guiTypes = {
 			spriteType = "GFX_NV_all_missions"
 		}
 
-		iconType = { 
+		iconType = {
 			name = "icon"
 			spriteType = "GFX_unit_infantry_icon_medium" # <- Replaced in code
 			position = { x=9 y=9 }
@@ -801,7 +827,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "unit_count"
 			position = { x=450 y=0 }
-			font = "hoi_16mbs"
+			font = "hoi_18mbs"
 			text = "0"
 			maxWidth = 40
 			maxHeight = 18
@@ -868,7 +894,7 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 
-		iconType = { 
+		iconType = {
 			name = "icon"
 			spriteType = "GFX_unit_infantry_icon_medium" # <- Replaced in code
 			position = { x=4 y=4 }
@@ -882,7 +908,7 @@ guiTypes = {
 			rotation = 1.5708
 		}
 
-		iconType = { 
+		iconType = {
 			name = "ace"
 			spriteType = "GFX_ace_none" # <- Replaced in code
 			position = { x=100 y=-1 }

@@ -2850,8 +2850,8 @@ country_event = {
 					is_leading_army = yes
 					has_trait = desert_fox
 				}
-				add_temporary_buff_to_units = {
-					str_damage_multiplier = -0.6
+				add_dynamic_modifier = {
+					modifier = GDU_desert_fox_strength_damage
 					days = 10
 				}
 			}
@@ -3620,8 +3620,8 @@ country_event = {
 					is_leading_army = yes
 					has_trait = desert_fox
 				}
-				add_temporary_buff_to_units = {
-					str_damage_multiplier = -0.6
+				add_dynamic_modifier = {
+					modifier = GDU_desert_fox_strength_damage
 					days = 10
 				}
 			}
