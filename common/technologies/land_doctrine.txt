@@ -21,7 +21,8 @@ technologies = {
 
 		planning_speed = 0.5
 		army_speed_factor = 0.10
-		enable_tactic = tactic_unexpected_thrust
+		on_research_complete = {unlock_tactic = tactic_unexpected_thrust}
+
 		org_loss_when_moving = -0.1
 
 		research_cost = 0.01
@@ -62,7 +63,7 @@ technologies = {
 		}
 		
 		
-		enable_tactic = tactic_delay
+		on_research_complete = {unlock_tactic = tactic_delay}
 		
 		path = {
 			leads_to_tech = elastic_defence 
@@ -114,7 +115,7 @@ technologies = {
 		}
 		
 	
-		enable_tactic = tactic_elastic_defense
+		on_research_complete = {unlock_tactic = tactic_elastic_defense}
 		
 		path = {
 			leads_to_tech = mobile_infantry 
@@ -382,7 +383,7 @@ technologies = {
 		}
 	
 
-		enable_tactic = tactic_blitz
+		on_research_complete = {unlock_tactic = tactic_blitz}
 		
 		
 		path = {
@@ -439,7 +440,7 @@ technologies = {
 			breakthrough = 0.20
 		}
 		
-		enable_tactic = tactic_blitz
+		on_research_complete = {unlock_tactic = tactic_blitz}
 		
 	
 		xor = {
@@ -572,7 +573,7 @@ technologies = {
 			default_morale = 0.1
 		}
 
-		enable_tactic = tactic_breakthrough
+		on_research_complete = {unlock_tactic = tactic_breakthrough}
 		
 			motorized = {
 			max_organisation = 5
@@ -662,7 +663,7 @@ technologies = {
 			initiative = 0.05
 		}
 		
-		enable_tactic = tactic_overwhelming_fire
+		on_research_complete = {unlock_tactic = tactic_overwhelming_fire}
 		
 		path = {
 			leads_to_tech = firebrigades 
@@ -1044,7 +1045,7 @@ technologies = {
 		xp_research_bonus = 0.5
 		xp_research_type = army
 		
-		enable_tactic = tactic_backhand_blow
+		on_research_complete = {unlock_tactic = tactic_backhand_blow}
 
 		motorized = {
 			combat_width = -0.5
@@ -1355,8 +1356,8 @@ technologies = {
 			default_morale = 0.10
 		}
 
-		enable_tactic = tactic_backhand_blow
-		enable_tactic = tactic_default_backhand_blow
+		on_research_complete = {unlock_tactic = tactic_backhand_blow}
+		on_research_complete = {unlock_tactic = tactic_default_backhand_blow}
 		
 		research_cost = 3.6
 		
@@ -1409,7 +1410,7 @@ technologies = {
 amphibious_invasion_defence = 0.15
 land_reinforce_rate = 0.05
 		
-		enable_tactic = tactic_barrage
+		on_research_complete = {unlock_tactic = tactic_barrage}
 			
 		research_cost = 0.01
 		
@@ -1452,7 +1453,7 @@ land_reinforce_rate = 0.05
 			default_morale = 0.05
 		}
 		
-		enable_tactic = tactic_delay
+		on_research_complete = {unlock_tactic = tactic_delay}
 		
 		path = {
 			leads_to_tech = mobile_defence 
@@ -1498,7 +1499,7 @@ land_reinforce_rate = 0.05
 			defense = 0.20
 		}
 		
-		enable_tactic = tactic_elastic_defense
+		on_research_complete = {unlock_tactic = tactic_elastic_defense}
 		
 		
 		path = {
@@ -1624,7 +1625,7 @@ land_reinforce_rate = 0.05
 			soft_attack = 0.25
 		}
 		
-		enable_tactic = tactic_overwhelming_fire
+		on_research_complete = {unlock_tactic = tactic_overwhelming_fire}
 		
 		path = {
 			leads_to_tech = sup_mechanized_offensive 
@@ -1746,7 +1747,7 @@ land_reinforce_rate = 0.05
 		}
 
 		coordination_bonus = 0.05
-		enable_tactic = tactic_overwhelming_fire
+		on_research_complete = {unlock_tactic = tactic_overwhelming_fire}
 		
 		path = {
 			leads_to_tech = sup_mechanized_offensive 
@@ -1800,7 +1801,7 @@ land_reinforce_rate = 0.05
 		}
 		
 		
-		enable_tactic = tactic_blitz
+		on_research_complete = {unlock_tactic = tactic_blitz}
 		
 		
 		path = {
@@ -1915,7 +1916,7 @@ land_reinforce_rate = 0.05
 			soft_attack = 0.10
 		}
 		
-		enable_tactic = tactic_breakthrough
+		on_research_complete = {unlock_tactic = tactic_breakthrough}
 		
 		path = {
 			leads_to_tech = tactical_control 
@@ -1966,7 +1967,7 @@ land_reinforce_rate = 0.05
 		
 		land_reinforce_rate = 0.05
 	
-		enable_tactic = tactic_tactical_withdrawal
+		on_research_complete = {unlock_tactic = tactic_tactical_withdrawal}
 		
 		path = {
 			leads_to_tech = air_land_battle 
@@ -2185,7 +2186,7 @@ land_reinforce_rate = 0.05
 			default_morale = 0.05
 		}
 		
-		enable_tactic = tactic_tactical_withdrawal
+		on_research_complete = {unlock_tactic = tactic_tactical_withdrawal}
 		
 		path = {
 			leads_to_tech = shock_and_awe 
@@ -2443,7 +2444,7 @@ land_reinforce_rate = 0.05
 			breakthrough = 0.05
 		}
 		
-		enable_tactic = tactic_planned_attack
+		on_research_complete = {unlock_tactic = tactic_planned_attack}
 		
 		path = {
 			leads_to_tech = grand_mechanized_offensive 
@@ -2537,8 +2538,8 @@ land_reinforce_rate = 0.05
 				movement = 0.10
 			}			
 		}
-		enable_tactic = tactic_blitz
-		enable_tactic = tactic_elastic_defense
+		on_research_complete = {unlock_tactic = tactic_blitz}
+		on_research_complete = {unlock_tactic = tactic_elastic_defense}
 		
 		
 		path = {
@@ -2622,7 +2623,7 @@ land_reinforce_rate = 0.05
 			soft_attack = 0.05
 		}
 
-		enable_tactic = tactic_overwhelming_fire
+		on_research_complete = {unlock_tactic = tactic_overwhelming_fire}
 		
 		path = {
 			leads_to_tech = branch_interoperation 
@@ -2744,7 +2745,7 @@ land_reinforce_rate = 0.05
 			breakthrough = 0.35
 		}
 		
-		enable_tactic = tactic_breakthrough
+		on_research_complete = {unlock_tactic = tactic_breakthrough}
 	
 
 		path = {
@@ -2943,7 +2944,7 @@ land_reinforce_rate = 0.05
 			max_organisation = 5
 		}
 		
-		enable_tactic = tactic_infantry_charge
+		on_research_complete = {unlock_tactic = tactic_infantry_charge}
 		
 		path = {
 			leads_to_tech = armored_operations 
@@ -3005,8 +3006,8 @@ land_reinforce_rate = 0.05
 			hard_attack = 0.05
 		}
 		
-		enable_tactic = tactic_blitz
-		enable_tactic = tactic_elastic_defense
+		on_research_complete = {unlock_tactic = tactic_blitz}
+		on_research_complete = {unlock_tactic = tactic_elastic_defense}
 		
 		
 		path = {
@@ -3514,10 +3515,10 @@ land_reinforce_rate = 0.05
 			max_strength = 8
 		}
 
-		enable_tactic = tactic_relentless_assault
-		enable_tactic = tactic_default_relentless_assault
-		enable_tactic = tactic_human_wave_tactics
-		enable_tactic = tactic_default_human_wave_tactics
+		on_research_complete = {unlock_tactic = tactic_relentless_assault}
+		on_research_complete = {unlock_tactic = tactic_default_relentless_assault}
+		on_research_complete = {unlock_tactic = tactic_human_wave_tactics}
+		on_research_complete = {unlock_tactic = tactic_default_human_wave_tactics}
 		
 		path = {
 			leads_to_tech = deep_operations
@@ -3596,8 +3597,8 @@ land_reinforce_rate = 0.05
 		xp_research_bonus = 0.5
 		xp_research_type = army
 		
-		enable_tactic = tactic_blitz
-		enable_tactic = tactic_default_blitz
+		on_research_complete = {unlock_tactic = tactic_blitz}
+		on_research_complete = {unlock_tactic = tactic_default_blitz}
 		
 		
 		path = {
@@ -3664,8 +3665,8 @@ land_reinforce_rate = 0.05
 			default_morale = 0.2
 		}
 	
-		enable_tactic = tactic_elastic_defense
-		enable_tactic = tactic_default_elastic_defense
+		on_research_complete = {unlock_tactic = tactic_elastic_defense}
+		on_research_complete = {unlock_tactic = tactic_default_elastic_defense}
 		
 		path = {
 			leads_to_tech = vast_offensives
@@ -3739,8 +3740,8 @@ land_reinforce_rate = 0.05
 		}
 
 		
-		enable_tactic = tactic_overwhelming_fire
-		enable_tactic = tactic_default_overwhelming_fire
+		on_research_complete = {unlock_tactic = tactic_overwhelming_fire}
+		on_research_complete = {unlock_tactic = tactic_default_overwhelming_fire}
 		
 		path = {
 			leads_to_tech = breakthrough_priority
@@ -3803,8 +3804,8 @@ land_reinforce_rate = 0.05
 		}
 
 
-		enable_tactic = tactic_breakthrough
-		enable_tactic = tactic_default_breakthrough
+		on_research_complete = {unlock_tactic = tactic_breakthrough}
+		on_research_complete = {unlock_tactic = tactic_default_breakthrough}
 		
 		path = {
 			leads_to_tech = mechanized_wave
@@ -3928,8 +3929,8 @@ land_reinforce_rate = 0.05
 			hard_attack = 0.10
 		}
 
-		enable_tactic = tactic_backhand_blow
-		enable_tactic = tactic_default_backhand_blow
+		on_research_complete = {unlock_tactic = tactic_backhand_blow}
+		on_research_complete = {unlock_tactic = tactic_default_backhand_blow}
 
 		research_cost = 3.6
 		
@@ -3978,8 +3979,8 @@ land_reinforce_rate = 0.05
 		
 		attrition = -0.10 #take 10% less attrition losses
 		land_reinforce_rate = 0.1
-		enable_tactic = tactic_human_wave_tactics
-		enable_tactic = tactic_default_human_wave_tactics
+		on_research_complete = {unlock_tactic = tactic_human_wave_tactics}
+		on_research_complete = {unlock_tactic = tactic_default_human_wave_tactics}
 
 		category_all_infantry = {
 			hard_attack = 0.1
@@ -4197,8 +4198,8 @@ land_reinforce_rate = 0.05
 
 		#partisan_effect = 0.2
 
-		enable_tactic = tactic_backhand_blow
-		enable_tactic = tactic_default_backhand_blow
+		on_research_complete = {unlock_tactic = tactic_backhand_blow}
+		on_research_complete = {unlock_tactic = tactic_default_backhand_blow}
 		
 		research_cost = 3.6
 		
@@ -4228,7 +4229,7 @@ land_reinforce_rate = 0.05
 	}
 
 	masterful_blitz = {
-		enable_tactic = tactic_masterful_blitz
+		on_research_complete = {unlock_tactic = tactic_masterful_blitz}
 
 		research_cost = 1
 
