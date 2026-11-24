@@ -210,7 +210,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "countrydivisiondesignerview"
 		position = { x=0 y=0}	
-		size = { width = 1200 height = 800 }
+		size = { width = 1200 height = 720 }
 		moveable = yes
 		fade_time = 500
 		fade_type = linear
@@ -346,14 +346,14 @@ guiTypes = {
 
 		iconType = {
 			name = "select_model"
-			position = { x=1500 y=366 }	
+			position = { x=938 y=366 }	
 			quadTextureSprite = "GFX_3d_view_placeholder"
 		}		
 		
 		buttonType = {
 			name = "toggle_model_selector_button"
-			position = { x=800 y=344 }
-			size = { x = 250 y = 150 }
+			position = { x=936 y=363 }
+			size = { x = 249 y = 249 }
 			quadTextureSprite ="GFX_division_3d_bg"	
 			pdx_tooltip = "TOGGLE_MODEL_SELECTOR"
 			clicksound = click_default
@@ -363,7 +363,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "hardness_stat"
 			size = { width = 100 height = 24 }
-			position = { x=50 y=192 }
+			position = { x=86 y=192 }
 
 			background = {
 				name = "hardness_stat_bg"
@@ -390,7 +390,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "org_stat"
 			size = { width = 80 height = 24 }
-			position = { x=160 y=192 }
+			position = { x=216 y=192 }
 
 			background = {
 				name = "org_stat_bg"
@@ -417,7 +417,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "strength_stat"
 			size = { width = 80 height = 24 }
-			position = { x=280 y=192 }
+			position = { x=326 y=192 }
 
 			background = {
 				name = "strength_stat_bg"
@@ -444,7 +444,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "speed_stat"
 			size = { width = 115 height = 24 }
-			position = { x=370 y=192 }
+			position = { x=436 y=192 }
 
 			background = {
 				name = "speed_stat_bg"
@@ -470,7 +470,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "combat_width_view"
-			position = { x = 260 y = 220 }
+			position = { x = 290 y = 230 }
 
 			instantTextboxType = {
 				position = { x = 0 y = 10 }
@@ -485,7 +485,7 @@ guiTypes = {
 				
 		instantTextboxType = {
 			name = "division_composition_label"
-			position = { x = 50 y = 160 }
+			position = { x = 60 y = 160 }
 			font = "hoi_18mbs"
 			text = "DESIGNER_DIVISIONAL_COMPOSITION"
 			maxWidth = 200
@@ -528,7 +528,7 @@ guiTypes = {
 
 			instantTextboxType = {
 				name = "support_header_label"
-				position = { x = 445 y = 40 }
+				position = { x = 530 y = 90 }
 				font = "hoi_16mbs"
 				text = "SUPPORT_HEADER"
 				maxWidth = 110
@@ -618,7 +618,7 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "base_stats"
-				position = { x = -115 y = 55 }
+				position = { x = 7 y = 55 }
 				size = { width = 172 height = 244 }
 				clipping = yes
 				
@@ -641,7 +641,7 @@ guiTypes = {
 			
 			instantTextboxType = {
 					name = "base_stats_label"
-					position = { x = -70 y = 32 }
+					position = { x = 14 y = 32 }
 					font = "hoi4_typewriter22"
 					text = "DESIGNER_BASE_STATS_LABEL"
 					maxWidth = 165
@@ -652,7 +652,7 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "combat_stats"
-				position = { x = 60 y = 55 }
+				position = { x = 181 y = 55 }
 				size = { width = 172 height = 244 }
 				clipping = yes
 				
@@ -675,7 +675,7 @@ guiTypes = {
 			
 			instantTextboxType = {
 					name = "combat_stats_label"
-					position = { x = 90 y = 32 }
+					position = { x = 187 y = 32 }
 					font = "hoi4_typewriter22"
 					text = "DESIGNER_COMBAT_STATS_LABEL"
 					maxWidth = 165
@@ -686,7 +686,7 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "equipment_stats"
-				position = { x = 235 y = 55 }
+				position = { x = 353 y = 55 }
 				size = { width = 198 height = 244 }
 				clipping = yes
 				scroll_wheel_factor = 20
@@ -712,7 +712,7 @@ guiTypes = {
 			
 			instantTextboxType = {
 				name = "equipment_stats_label"
-				position = { x = 250 y = 32 }
+				position = { x = 362 y = 32 }
 				font = "hoi4_typewriter22"
 				text = "DESIGNER_EQUIPMENT_STATS_LABEL"
 				maxWidth = 165
@@ -723,8 +723,8 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "adjuster_stats"
-				position = { x = -120 y = 330 }
-				size = { width = 262 height = 150 }
+				position = { x = 9 y = 357 }
+				size = { width = 262 height = 236 }
 				scroll_wheel_factor = 62
 				smooth_scrolling = yes
 				
@@ -748,7 +748,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "cost"
 			size = { width = 70 height = 29 }
-			position = { x=285 y=-295 }
+			position = { x=285 y=-96 }
 			orientation = lower_left
 			
 			background = {
@@ -761,7 +761,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "experience"
-			position = { x = 297 y = -290 }
+			position = { x = 297 y = -92 }
 			font = "hoi_18mbs"
 			maxWidth = 70
 			maxHeight = 20
@@ -773,7 +773,7 @@ guiTypes = {
 		
 		ButtonType = {
 			name = "duplicate_button"
-			position = { x=150 y=-300 }
+			position = { x=150 y=-100 }
 			quadTextureSprite ="GFX_button_123x34"
 			buttonText = "DESIGNER_DUPLICATE"
 			buttonFont = "hoi_18mbs"
@@ -783,7 +783,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "reset_button"
-			position = { x= 15 y=-300 }
+			position = { x=20 y=-100 }
 			quadTextureSprite ="GFX_button_reset_123x34"
 			buttonText = "DESIGNER_RESET"
 			pdx_tooltip = "DESIGNER_RESET_DESC"
@@ -794,7 +794,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "save_button"
-			position = { x=400 y=-298 }
+			position = { x=487 y=-53 }
 			quadTextureSprite ="GFX_button_221x34"
 			buttonText = "DESIGNER_ARMY_SAVE"
 			buttonFont = "hoi_18mbs"
@@ -802,7 +802,15 @@ guiTypes = {
 			orientation = "LOWER_LEFT"
 		}
 
-	
+		ButtonType = {
+			name = "save_and_deploy_button"
+			position = { x=722 y=-53 }
+			quadTextureSprite ="GFX_button_221x34"
+			buttonText = "DESIGNER_HQ_SAVE_AND_DEPLOY"
+			buttonFont = "hoi_18mbs"
+			clicksound = click_default
+			orientation = "LOWER_LEFT"
+		}
 
 
 		containerWindowType = {
@@ -973,7 +981,7 @@ guiTypes = {
 		
 		buttonType = {
 			name = "close_button"
-			position = { x = -155 y = 6 }
+			position = { x = -44 y = 6 }
 			quadTextureSprite ="GFX_closebutton"
 			buttonFont = "Main_14_black"
 			shortcut = "ESCAPE"
@@ -984,7 +992,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "production_resources"
-			position = { x= 630 y= -290 }
+			position = { x= 548 y= -92 }
 			font = "hoi_18mbs"
 			maxWidth = 350
 			maxHeight = 25
@@ -995,7 +1003,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "production_value"
-			position = { x= 700 y=-290 }
+			position = { x= 700 y=-92 }
 			font = "hoi_18mbs"
 			maxWidth = 350
 			maxHeight = 25
@@ -1339,7 +1347,7 @@ guiTypes = {
 
 			buttonType = {
 				name = "division_equipment_btn"
-				position = { x = 400 y = 52 }
+				position = { x = 511 y = 52 }
 				quadTextureSprite = "GFX_button_123x34_alt"
 				buttonText = "DIVISION_EQUIPMENT"
 				buttonFont = "hoi_16mbs"
@@ -1375,26 +1383,26 @@ guiTypes = {
 			iconType = {
 				name = "division_priority_bg"
 				spriteType = "GFX_division_priority_bg"
-				position = { x = 400 y = 107 }
+				position = { x = 508 y = 107 }
 			}
 
 			buttonType = {
 				name = "priority_button_1"
-				position = { x = 410 y = 110 }
+				position = { x = 517 y = 110 }
 				quadTextureSprite = "GFX_div_priority_strip"
 				clicksound = click_default
 			}
 
 			buttonType = {
 				name = "priority_button_2"
-				position = { x = 445 y = 110 }
+				position = { x = 553 y = 110 }
 				quadTextureSprite = "GFX_div_priority_strip"
 				clicksound = click_default
 			}
 
 			buttonType = {
 				name = "priority_button_3"
-				position = { x = 482 y = 109 }
+				position = { x = 589 y = 109 }
 				quadTextureSprite = "GFX_div_priority_strip"
 				clicksound = click_default
 			}
@@ -1426,13 +1434,13 @@ guiTypes = {
 			iconType = {
 				name = "can_paradrop_icon"
 				spriteType = "GFX_can_paradrop_icon_small"
-				position = { x = 430 y = 160 }
+				position = { x = 427 y = 60 }
 			}
 
 			iconType = {
 				name = "special_forces_icon"
 				spriteType = "GFX_special_forces_icon"
-				position = { x = 460 y = 160 }
+				position = { x = 452 y = 60 }
 			}
 
 			dropDownBoxType = {
@@ -1728,13 +1736,13 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "designer_division_regiment_slot_entry"
-		position = { x=-30 y=-40}	
+		position = { x=0 y=0}	
 		size = { width=76 height=53 }
 		clipping = no
 
 		background = {
 			name = "Background"
-			position = { x = -13 y = 11 }
+			position = { x = -12 y = 11 }
 			spriteType ="GFX_div_unit_item_bg_wide"
 		}
 		
@@ -1785,7 +1793,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "designer_division_support_slot_entry"
-		position = { x=-55 y=-60}	
+		position = { x=0 y=0}	
 		size = { width=64 height=53 }
 		clipping = no
 		
