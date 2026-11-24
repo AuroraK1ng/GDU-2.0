@@ -262,8 +262,8 @@ NDefines.NMilitary.CONSTANT_XP_RATIO_FOR_MULTIPLE_LEADERS_IN_SAME_COMBAT = 0.0 -
 NDefines.NMilitary.MULTIPLE_COMBATS_PENALTY = -0.35                -- defender penalty if attacked from multiple directions
 
 NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 7
-NDefines.NMilitary.MAX_REGIMENTAL_SUPPORT_WIDTH = 0
-NDefines.NMilitary.MAX_REGIMENTAL_SUPPORT_HEIGHT = 0
+NDefines.NMilitary.MAX_REGIMENTAL_SUPPORT_WIDTH = 5
+NDefines.NMilitary.MAX_REGIMENTAL_SUPPORT_HEIGHT = 1
 NDefines.NMilitary.MIN_DIVISION_BRIGADE_HEIGHT = 5		-- Min height of regiments in division designer.
 
 NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 1.5
